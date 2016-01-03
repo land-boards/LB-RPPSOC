@@ -1,0 +1,467 @@
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.main,"ax",%progbits
+  19              		.align	2
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /******************************************************************************
+   2:.\main.c      **** * Project Name		: CE95352 Blinking LED
+   3:.\main.c      **** * File Name			: main.c
+   4:.\main.c      **** * Version 			: **
+   5:.\main.c      **** * Device Used		: CY8C5888LTI-LP097
+   6:.\main.c      **** * Software Used		: PSoC Creator 3.1 SP2
+   7:.\main.c      **** * Compiler    		: ARM GCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
+   8:.\main.c      **** * Related Hardware	: CY8CKIT059 PSoC 5 LP Prototyping Kit 
+   9:.\main.c      **** * Owner				: KLMZ
+  10:.\main.c      **** *
+  11:.\main.c      **** ********************************************************************************
+  12:.\main.c      **** * Copyright (2015), Cypress Semiconductor Corporation. All Rights Reserved.
+  13:.\main.c      **** ********************************************************************************
+  14:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  15:.\main.c      **** * and is protected by and subject to worldwide patent protection (United
+  16:.\main.c      **** * States and foreign), United States copyright laws and international treaty
+  17:.\main.c      **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  18:.\main.c      **** * non-transferable license to copy, use, modify, create derivative works of,
+  19:.\main.c      **** * and compile the Cypress Source Code and derivative works for the sole
+  20:.\main.c      **** * purpose of creating custom software in support of licensee product to be
+  21:.\main.c      **** * used only in conjunction with a Cypress integrated circuit as specified in
+  22:.\main.c      **** * the applicable agreement. Any reproduction, modification, translation,
+  23:.\main.c      **** * compilation, or representation of this software except as specified above 
+  24:.\main.c      **** * is prohibited without the express written permission of Cypress.
+  25:.\main.c      **** *
+  26:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+  27:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  28:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  29:.\main.c      **** * Cypress reserves the right to make changes without further notice to the 
+  30:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out 
+  31:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress 
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 2
+
+
+  32:.\main.c      **** * does not authorize its products for use as critical components in life-support 
+  33:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in 
+  34:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  35:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of 
+  36:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. 
+  37:.\main.c      **** *
+  38:.\main.c      **** * Use of this Software may be limited by and subject to the applicable Cypress
+  39:.\main.c      **** * software license agreement. 
+  40:.\main.c      **** *******************************************************************************/
+  41:.\main.c      **** 
+  42:.\main.c      **** #include <device.h>
+  43:.\main.c      **** 
+  44:.\main.c      **** /*******************************************************************************
+  45:.\main.c      **** * Function Name: main
+  46:.\main.c      **** ********************************************************************************
+  47:.\main.c      **** *
+  48:.\main.c      **** * Summary:
+  49:.\main.c      **** *  The PWM is configured and started in the PWM_1_Start() function.
+  50:.\main.c      **** *  The firmware then enters an idle loop, leaving control of the project
+  51:.\main.c      **** *  to the fixed function PWM peripheral.
+  52:.\main.c      **** *
+  53:.\main.c      **** * Parameters:
+  54:.\main.c      **** *  None.
+  55:.\main.c      **** *
+  56:.\main.c      **** * Return:
+  57:.\main.c      **** *  None.
+  58:.\main.c      **** *
+  59:.\main.c      **** *******************************************************************************/
+  60:.\main.c      **** void main()
+  61:.\main.c      **** {
+  27              		.loc 1 61 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  62:.\main.c      ****     /* Prepare components */
+  63:.\main.c      ****     PWM_1_Start();    
+  37              		.loc 1 63 0
+  38 0004 FFF7FEFF 		bl	PWM_1_Start
+  39              	.L2:
+  64:.\main.c      ****     
+  65:.\main.c      ****     for (;;)
+  66:.\main.c      ****     {}
+  40              		.loc 1 66 0 discriminator 1
+  41 0008 FEE7     		b	.L2
+  42              		.cfi_endproc
+  43              	.LFE63:
+  44              		.size	main, .-main
+  45 000a 00BF     		.text
+  46              	.Letext0:
+  47              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  48              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 3
+
+
+  49              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+  50              		.section	.debug_info,"",%progbits
+  51              	.Ldebug_info0:
+  52 0000 BC000000 		.4byte	0xbc
+  53 0004 0400     		.2byte	0x4
+  54 0006 00000000 		.4byte	.Ldebug_abbrev0
+  55 000a 04       		.byte	0x4
+  56 000b 01       		.uleb128 0x1
+  57 000c D3000000 		.4byte	.LASF15
+  58 0010 01       		.byte	0x1
+  59 0011 61010000 		.4byte	.LASF16
+  60 0015 33000000 		.4byte	.LASF17
+  61 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  62 001d 00000000 		.4byte	0
+  63 0021 00000000 		.4byte	.Ldebug_line0
+  64 0025 02       		.uleb128 0x2
+  65 0026 01       		.byte	0x1
+  66 0027 06       		.byte	0x6
+  67 0028 7E010000 		.4byte	.LASF0
+  68 002c 02       		.uleb128 0x2
+  69 002d 01       		.byte	0x1
+  70 002e 08       		.byte	0x8
+  71 002f B7000000 		.4byte	.LASF1
+  72 0033 02       		.uleb128 0x2
+  73 0034 02       		.byte	0x2
+  74 0035 05       		.byte	0x5
+  75 0036 9A010000 		.4byte	.LASF2
+  76 003a 02       		.uleb128 0x2
+  77 003b 02       		.byte	0x2
+  78 003c 07       		.byte	0x7
+  79 003d 0E000000 		.4byte	.LASF3
+  80 0041 03       		.uleb128 0x3
+  81 0042 8A010000 		.4byte	.LASF9
+  82 0046 02       		.byte	0x2
+  83 0047 3F       		.byte	0x3f
+  84 0048 4C000000 		.4byte	0x4c
+  85 004c 02       		.uleb128 0x2
+  86 004d 04       		.byte	0x4
+  87 004e 05       		.byte	0x5
+  88 004f CA000000 		.4byte	.LASF4
+  89 0053 02       		.uleb128 0x2
+  90 0054 04       		.byte	0x4
+  91 0055 07       		.byte	0x7
+  92 0056 8E000000 		.4byte	.LASF5
+  93 005a 02       		.uleb128 0x2
+  94 005b 08       		.byte	0x8
+  95 005c 05       		.byte	0x5
+  96 005d 00000000 		.4byte	.LASF6
+  97 0061 02       		.uleb128 0x2
+  98 0062 08       		.byte	0x8
+  99 0063 07       		.byte	0x7
+ 100 0064 A0000000 		.4byte	.LASF7
+ 101 0068 04       		.uleb128 0x4
+ 102 0069 04       		.byte	0x4
+ 103 006a 05       		.byte	0x5
+ 104 006b 696E7400 		.ascii	"int\000"
+ 105 006f 02       		.uleb128 0x2
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 4
+
+
+ 106 0070 04       		.byte	0x4
+ 107 0071 07       		.byte	0x7
+ 108 0072 21000000 		.4byte	.LASF8
+ 109 0076 03       		.uleb128 0x3
+ 110 0077 A4010000 		.4byte	.LASF10
+ 111 007b 03       		.byte	0x3
+ 112 007c 2C       		.byte	0x2c
+ 113 007d 41000000 		.4byte	0x41
+ 114 0081 02       		.uleb128 0x2
+ 115 0082 04       		.byte	0x4
+ 116 0083 04       		.byte	0x4
+ 117 0084 94010000 		.4byte	.LASF11
+ 118 0088 02       		.uleb128 0x2
+ 119 0089 08       		.byte	0x8
+ 120 008a 04       		.byte	0x4
+ 121 008b 6A010000 		.4byte	.LASF12
+ 122 008f 02       		.uleb128 0x2
+ 123 0090 01       		.byte	0x1
+ 124 0091 08       		.byte	0x8
+ 125 0092 C5000000 		.4byte	.LASF13
+ 126 0096 02       		.uleb128 0x2
+ 127 0097 04       		.byte	0x4
+ 128 0098 07       		.byte	0x7
+ 129 0099 AC010000 		.4byte	.LASF14
+ 130 009d 05       		.uleb128 0x5
+ 131 009e 2E000000 		.4byte	.LASF18
+ 132 00a2 01       		.byte	0x1
+ 133 00a3 3C       		.byte	0x3c
+ 134 00a4 00000000 		.4byte	.LFB63
+ 135 00a8 0A000000 		.4byte	.LFE63-.LFB63
+ 136 00ac 01       		.uleb128 0x1
+ 137 00ad 9C       		.byte	0x9c
+ 138 00ae 06       		.uleb128 0x6
+ 139 00af 71010000 		.4byte	.LASF19
+ 140 00b3 04       		.byte	0x4
+ 141 00b4 2A06     		.2byte	0x62a
+ 142 00b6 BA000000 		.4byte	0xba
+ 143 00ba 07       		.uleb128 0x7
+ 144 00bb 76000000 		.4byte	0x76
+ 145 00bf 00       		.byte	0
+ 146              		.section	.debug_abbrev,"",%progbits
+ 147              	.Ldebug_abbrev0:
+ 148 0000 01       		.uleb128 0x1
+ 149 0001 11       		.uleb128 0x11
+ 150 0002 01       		.byte	0x1
+ 151 0003 25       		.uleb128 0x25
+ 152 0004 0E       		.uleb128 0xe
+ 153 0005 13       		.uleb128 0x13
+ 154 0006 0B       		.uleb128 0xb
+ 155 0007 03       		.uleb128 0x3
+ 156 0008 0E       		.uleb128 0xe
+ 157 0009 1B       		.uleb128 0x1b
+ 158 000a 0E       		.uleb128 0xe
+ 159 000b 55       		.uleb128 0x55
+ 160 000c 17       		.uleb128 0x17
+ 161 000d 11       		.uleb128 0x11
+ 162 000e 01       		.uleb128 0x1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 5
+
+
+ 163 000f 10       		.uleb128 0x10
+ 164 0010 17       		.uleb128 0x17
+ 165 0011 00       		.byte	0
+ 166 0012 00       		.byte	0
+ 167 0013 02       		.uleb128 0x2
+ 168 0014 24       		.uleb128 0x24
+ 169 0015 00       		.byte	0
+ 170 0016 0B       		.uleb128 0xb
+ 171 0017 0B       		.uleb128 0xb
+ 172 0018 3E       		.uleb128 0x3e
+ 173 0019 0B       		.uleb128 0xb
+ 174 001a 03       		.uleb128 0x3
+ 175 001b 0E       		.uleb128 0xe
+ 176 001c 00       		.byte	0
+ 177 001d 00       		.byte	0
+ 178 001e 03       		.uleb128 0x3
+ 179 001f 16       		.uleb128 0x16
+ 180 0020 00       		.byte	0
+ 181 0021 03       		.uleb128 0x3
+ 182 0022 0E       		.uleb128 0xe
+ 183 0023 3A       		.uleb128 0x3a
+ 184 0024 0B       		.uleb128 0xb
+ 185 0025 3B       		.uleb128 0x3b
+ 186 0026 0B       		.uleb128 0xb
+ 187 0027 49       		.uleb128 0x49
+ 188 0028 13       		.uleb128 0x13
+ 189 0029 00       		.byte	0
+ 190 002a 00       		.byte	0
+ 191 002b 04       		.uleb128 0x4
+ 192 002c 24       		.uleb128 0x24
+ 193 002d 00       		.byte	0
+ 194 002e 0B       		.uleb128 0xb
+ 195 002f 0B       		.uleb128 0xb
+ 196 0030 3E       		.uleb128 0x3e
+ 197 0031 0B       		.uleb128 0xb
+ 198 0032 03       		.uleb128 0x3
+ 199 0033 08       		.uleb128 0x8
+ 200 0034 00       		.byte	0
+ 201 0035 00       		.byte	0
+ 202 0036 05       		.uleb128 0x5
+ 203 0037 2E       		.uleb128 0x2e
+ 204 0038 00       		.byte	0
+ 205 0039 3F       		.uleb128 0x3f
+ 206 003a 19       		.uleb128 0x19
+ 207 003b 03       		.uleb128 0x3
+ 208 003c 0E       		.uleb128 0xe
+ 209 003d 3A       		.uleb128 0x3a
+ 210 003e 0B       		.uleb128 0xb
+ 211 003f 3B       		.uleb128 0x3b
+ 212 0040 0B       		.uleb128 0xb
+ 213 0041 11       		.uleb128 0x11
+ 214 0042 01       		.uleb128 0x1
+ 215 0043 12       		.uleb128 0x12
+ 216 0044 06       		.uleb128 0x6
+ 217 0045 40       		.uleb128 0x40
+ 218 0046 18       		.uleb128 0x18
+ 219 0047 9642     		.uleb128 0x2116
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 6
+
+
+ 220 0049 19       		.uleb128 0x19
+ 221 004a 00       		.byte	0
+ 222 004b 00       		.byte	0
+ 223 004c 06       		.uleb128 0x6
+ 224 004d 34       		.uleb128 0x34
+ 225 004e 00       		.byte	0
+ 226 004f 03       		.uleb128 0x3
+ 227 0050 0E       		.uleb128 0xe
+ 228 0051 3A       		.uleb128 0x3a
+ 229 0052 0B       		.uleb128 0xb
+ 230 0053 3B       		.uleb128 0x3b
+ 231 0054 05       		.uleb128 0x5
+ 232 0055 49       		.uleb128 0x49
+ 233 0056 13       		.uleb128 0x13
+ 234 0057 3F       		.uleb128 0x3f
+ 235 0058 19       		.uleb128 0x19
+ 236 0059 3C       		.uleb128 0x3c
+ 237 005a 19       		.uleb128 0x19
+ 238 005b 00       		.byte	0
+ 239 005c 00       		.byte	0
+ 240 005d 07       		.uleb128 0x7
+ 241 005e 35       		.uleb128 0x35
+ 242 005f 00       		.byte	0
+ 243 0060 49       		.uleb128 0x49
+ 244 0061 13       		.uleb128 0x13
+ 245 0062 00       		.byte	0
+ 246 0063 00       		.byte	0
+ 247 0064 00       		.byte	0
+ 248              		.section	.debug_aranges,"",%progbits
+ 249 0000 1C000000 		.4byte	0x1c
+ 250 0004 0200     		.2byte	0x2
+ 251 0006 00000000 		.4byte	.Ldebug_info0
+ 252 000a 04       		.byte	0x4
+ 253 000b 00       		.byte	0
+ 254 000c 0000     		.2byte	0
+ 255 000e 0000     		.2byte	0
+ 256 0010 00000000 		.4byte	.LFB63
+ 257 0014 0A000000 		.4byte	.LFE63-.LFB63
+ 258 0018 00000000 		.4byte	0
+ 259 001c 00000000 		.4byte	0
+ 260              		.section	.debug_ranges,"",%progbits
+ 261              	.Ldebug_ranges0:
+ 262 0000 00000000 		.4byte	.LFB63
+ 263 0004 0A000000 		.4byte	.LFE63
+ 264 0008 00000000 		.4byte	0
+ 265 000c 00000000 		.4byte	0
+ 266              		.section	.debug_line,"",%progbits
+ 267              	.Ldebug_line0:
+ 268 0000 57010000 		.section	.debug_str,"MS",%progbits,1
+ 268      02003C01 
+ 268      00000201 
+ 268      FB0E0D00 
+ 268      01010101 
+ 269              	.LASF6:
+ 270 0000 6C6F6E67 		.ascii	"long long int\000"
+ 270      206C6F6E 
+ 270      6720696E 
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 7
+
+
+ 270      7400
+ 271              	.LASF3:
+ 272 000e 73686F72 		.ascii	"short unsigned int\000"
+ 272      7420756E 
+ 272      7369676E 
+ 272      65642069 
+ 272      6E7400
+ 273              	.LASF8:
+ 274 0021 756E7369 		.ascii	"unsigned int\000"
+ 274      676E6564 
+ 274      20696E74 
+ 274      00
+ 275              	.LASF18:
+ 276 002e 6D61696E 		.ascii	"main\000"
+ 276      00
+ 277              	.LASF17:
+ 278 0033 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\PSOC5LP\\CE"
+ 278      73657273 
+ 278      5C646F75 
+ 278      675F3030 
+ 278      305C446F 
+ 279 0060 39353335 		.ascii	"95352 Blinking LED\\CE95352 Blinking LED.cydsn\000"
+ 279      3220426C 
+ 279      696E6B69 
+ 279      6E67204C 
+ 279      45445C43 
+ 280              	.LASF5:
+ 281 008e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 281      20756E73 
+ 281      69676E65 
+ 281      6420696E 
+ 281      7400
+ 282              	.LASF7:
+ 283 00a0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 283      206C6F6E 
+ 283      6720756E 
+ 283      7369676E 
+ 283      65642069 
+ 284              	.LASF1:
+ 285 00b7 756E7369 		.ascii	"unsigned char\000"
+ 285      676E6564 
+ 285      20636861 
+ 285      7200
+ 286              	.LASF13:
+ 287 00c5 63686172 		.ascii	"char\000"
+ 287      00
+ 288              	.LASF4:
+ 289 00ca 6C6F6E67 		.ascii	"long int\000"
+ 289      20696E74 
+ 289      00
+ 290              	.LASF15:
+ 291 00d3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 291      4320342E 
+ 291      392E3320 
+ 291      32303135 
+ 291      30333033 
+ 292 0106 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccTUrbuY.s 			page 8
+
+
+ 292      20726576 
+ 292      6973696F 
+ 292      6E203232 
+ 292      31323230 
+ 293 0139 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 293      66756E63 
+ 293      74696F6E 
+ 293      2D736563 
+ 293      74696F6E 
+ 294              	.LASF16:
+ 295 0161 2E5C6D61 		.ascii	".\\main.c\000"
+ 295      696E2E63 
+ 295      00
+ 296              	.LASF12:
+ 297 016a 646F7562 		.ascii	"double\000"
+ 297      6C6500
+ 298              	.LASF19:
+ 299 0171 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 299      52784275 
+ 299      66666572 
+ 299      00
+ 300              	.LASF0:
+ 301 017e 7369676E 		.ascii	"signed char\000"
+ 301      65642063 
+ 301      68617200 
+ 302              	.LASF9:
+ 303 018a 5F5F696E 		.ascii	"__int32_t\000"
+ 303      7433325F 
+ 303      7400
+ 304              	.LASF11:
+ 305 0194 666C6F61 		.ascii	"float\000"
+ 305      7400
+ 306              	.LASF2:
+ 307 019a 73686F72 		.ascii	"short int\000"
+ 307      7420696E 
+ 307      7400
+ 308              	.LASF10:
+ 309 01a4 696E7433 		.ascii	"int32_t\000"
+ 309      325F7400 
+ 310              	.LASF14:
+ 311 01ac 73697A65 		.ascii	"sizetype\000"
+ 311      74797065 
+ 311      00
+ 312              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

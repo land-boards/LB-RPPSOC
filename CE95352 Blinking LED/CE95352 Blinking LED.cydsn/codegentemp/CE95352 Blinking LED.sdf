@@ -1,0 +1,28 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2015-10-21T17:53:11Z")
+ (DESIGN "CE95352 Blinking LED")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "CE95352 Blinking LED")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb Kill_Switch\(0\).in_clock (0.000:0.000:0.000))
+    (INTERCONNECT \\PWM_1\:PWMHW\\.cmp PWM_Out\(0\).pin_input (8.670:8.670:8.670))
+    (INTERCONNECT Net_267.q \\PWM_1\:PWMHW\\.kill (8.205:8.205:8.205))
+    (INTERCONNECT Kill_Switch\(0\).fb Net_267.main_0 (4.657:4.657:4.657))
+    (INTERCONNECT PWM_Out\(0\).pad_out PWM_Out\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT __ONE__.q \\PWM_1\:PWMHW\\.enable (8.227:8.227:8.227))
+    (INTERCONNECT ClockBlock.dclk_glb_ff_0 \\PWM_1\:PWMHW\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT PWM_Out\(0\).pad_out PWM_Out\(0\)_PAD (0.000:0.000:0.000))
+    (INTERCONNECT PWM_Out\(0\)_PAD PWM_Out\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Kill_Switch\(0\)_PAD Kill_Switch\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

@@ -1,0 +1,6 @@
+C:\Users\doug_000\Documents\GitHub\PSOC5LP\CE95352 Blinking LED\CE95352 Blinking LED.cydsn\CE95352 Blinking LED.cyprj|3e122000-8545-4f77-ad9c-9d821e11a3ea
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d48b5a5f-52f7-4876-9cc8-d17cbffb891a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|130c2f03-4256-48ba-b00d-0c9f53f71868
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|503641c3-987c-472d-8066-3ed7ad8d2389
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|70470175-69e5-4dce-b5af-de1ea371f6e1
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2c41a4e2-faa6-433e-854a-b2cfed1e6da4

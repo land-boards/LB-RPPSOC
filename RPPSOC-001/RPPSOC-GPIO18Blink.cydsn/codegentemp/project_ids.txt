@@ -1,0 +1,5 @@
+C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\RPPSOC-GPIO18Blink.cyprj|0e6d1b79-c764-4032-b2e8-3f156cda3118
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9f6ed785-90e3-4e45-baaa-ecbfefbaa9d3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7576c930-fa4d-43ec-b281-6622ef52ba99
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e3120969-22de-41ac-9742-7497e7b8a982
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|1e92f4fb-2975-457c-9088-5d9c3bbb8445

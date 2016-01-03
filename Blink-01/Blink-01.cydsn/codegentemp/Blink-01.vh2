@@ -1,0 +1,816 @@
+--
+--	Conversion of Blink-01.v to vh2:
+--
+--	Cypress Semiconductor - WARP Version 6.3 IR 41
+--	Fri Oct 02 20:05:31 2015
+--
+
+USE cypress.cypress.all;
+USE cypress.rtlpkg.all;
+ENTITY top_RTL IS
+ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
+END top_RTL;
+--------------------------------------------------------
+ARCHITECTURE R_T_L OF top_RTL IS
+SIGNAL tmpOE__Button_Pin_net_0 : bit;
+SIGNAL zero : bit;
+SIGNAL Net_12 : bit;
+SIGNAL tmpIO_0__Button_Pin_net_0 : bit;
+TERMINAL tmpSIOVREF__Button_Pin_net_0 : bit;
+SIGNAL one : bit;
+SIGNAL tmpINTERRUPT_0__Button_Pin_net_0 : bit;
+SIGNAL tmpOE__LED_Pin_net_0 : bit;
+SIGNAL Net_218 : bit;
+SIGNAL tmpFB_0__LED_Pin_net_0 : bit;
+SIGNAL tmpIO_0__LED_Pin_net_0 : bit;
+TERMINAL tmpSIOVREF__LED_Pin_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__LED_Pin_net_0 : bit;
+TERMINAL Net_3 : bit;
+TERMINAL Net_4 : bit;
+TERMINAL Net_45 : bit;
+TERMINAL Net_8 : bit;
+SIGNAL Net_110 : bit;
+SIGNAL Net_16 : bit;
+SIGNAL \Control_Reg_1:clk\ : bit;
+SIGNAL \Control_Reg_1:rst\ : bit;
+SIGNAL Net_108 : bit;
+SIGNAL \Control_Reg_1:control_out_0\ : bit;
+SIGNAL Net_191 : bit;
+SIGNAL \Control_Reg_1:control_out_1\ : bit;
+SIGNAL Net_192 : bit;
+SIGNAL \Control_Reg_1:control_out_2\ : bit;
+SIGNAL Net_193 : bit;
+SIGNAL \Control_Reg_1:control_out_3\ : bit;
+SIGNAL Net_195 : bit;
+SIGNAL \Control_Reg_1:control_out_4\ : bit;
+SIGNAL Net_196 : bit;
+SIGNAL \Control_Reg_1:control_out_5\ : bit;
+SIGNAL Net_197 : bit;
+SIGNAL \Control_Reg_1:control_out_6\ : bit;
+SIGNAL Net_198 : bit;
+SIGNAL \Control_Reg_1:control_out_7\ : bit;
+SIGNAL \Control_Reg_1:control_7\ : bit;
+SIGNAL \Control_Reg_1:control_6\ : bit;
+SIGNAL \Control_Reg_1:control_5\ : bit;
+SIGNAL \Control_Reg_1:control_4\ : bit;
+SIGNAL \Control_Reg_1:control_3\ : bit;
+SIGNAL \Control_Reg_1:control_2\ : bit;
+SIGNAL \Control_Reg_1:control_1\ : bit;
+SIGNAL \Control_Reg_1:control_0\ : bit;
+SIGNAL \FreqDiv_1:not_last_reset\ : bit;
+SIGNAL \FreqDiv_1:count_9\ : bit;
+SIGNAL \FreqDiv_1:count_8\ : bit;
+SIGNAL \FreqDiv_1:count_7\ : bit;
+SIGNAL \FreqDiv_1:count_6\ : bit;
+SIGNAL \FreqDiv_1:count_5\ : bit;
+SIGNAL \FreqDiv_1:count_4\ : bit;
+SIGNAL \FreqDiv_1:count_3\ : bit;
+SIGNAL \FreqDiv_1:count_2\ : bit;
+SIGNAL \FreqDiv_1:count_1\ : bit;
+SIGNAL \FreqDiv_1:count_0\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_9\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_8\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_7\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_6\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_5\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_4\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_3\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_2\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_1\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_0\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_31\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_30\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_29\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_28\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_27\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_26\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_25\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_24\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_23\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_22\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_21\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_20\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_19\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_18\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_17\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_16\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_15\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_14\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_13\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_12\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_11\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_10\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_9\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_8\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_7\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_6\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_5\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_4\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_3\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_2\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_1\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:b_0\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_31\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_30\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_29\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_28\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_27\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_26\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_25\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_24\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_23\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_22\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_21\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_20\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_19\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_18\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_17\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_16\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_15\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_14\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_13\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_12\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_11\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_10\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_9\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_9\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_8\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_8\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_7\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_7\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_6\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_6\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_5\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_5\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_4\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_4\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_3\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_3\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_2\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_2\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_1\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_1\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_0\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_0\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_31\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_30\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_29\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_28\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_27\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_26\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_25\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_24\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_23\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_22\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_21\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_20\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_19\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_18\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_17\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_16\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_15\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_14\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_13\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_12\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_11\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_10\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_9\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_8\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_7\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_6\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_5\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_4\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_3\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_2\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_1\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:b_0\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_31\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_31\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_30\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_30\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_29\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_29\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_28\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_28\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_27\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_27\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_26\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_26\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_25\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_25\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_24\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_24\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_23\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_23\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_22\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_22\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_21\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_21\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_20\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_20\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_19\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_19\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_18\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_18\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_17\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_17\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_16\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_16\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_15\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_15\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_14\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_14\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_13\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_13\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_12\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_12\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_11\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_11\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_10\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_10\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_9\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_8\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_7\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_6\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_5\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_4\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_3\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_2\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_1\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_0\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+TERMINAL \WaveDAC8_1:Net_211\ : bit;
+SIGNAL \WaveDAC8_1:Net_279\ : bit;
+TERMINAL \WaveDAC8_1:Net_189\ : bit;
+TERMINAL \WaveDAC8_1:Net_256\ : bit;
+TERMINAL \WaveDAC8_1:Net_190\ : bit;
+TERMINAL \WaveDAC8_1:Net_254\ : bit;
+SIGNAL \WaveDAC8_1:Net_183\ : bit;
+SIGNAL Net_428 : bit;
+SIGNAL \WaveDAC8_1:Net_107\ : bit;
+SIGNAL Net_429 : bit;
+SIGNAL \WaveDAC8_1:demux:tmp__demux_0_reg\ : bit;
+SIGNAL \WaveDAC8_1:Net_134\ : bit;
+SIGNAL \WaveDAC8_1:Net_336\ : bit;
+SIGNAL \WaveDAC8_1:demux:tmp__demux_1_reg\ : bit;
+SIGNAL \WaveDAC8_1:VDAC8:Net_83\ : bit;
+SIGNAL \WaveDAC8_1:VDAC8:Net_81\ : bit;
+SIGNAL \WaveDAC8_1:VDAC8:Net_82\ : bit;
+TERMINAL \WaveDAC8_1:VDAC8:Net_77\ : bit;
+TERMINAL Net_371 : bit;
+SIGNAL \WaveDAC8_1:Net_280\ : bit;
+SIGNAL \WaveDAC8_1:Net_80\ : bit;
+SIGNAL \WaveDAC8_1:cydff_1\ : bit;
+SIGNAL Net_283 : bit;
+SIGNAL tmpOE__Vout_1_net_0 : bit;
+SIGNAL tmpFB_0__Vout_1_net_0 : bit;
+SIGNAL tmpIO_0__Vout_1_net_0 : bit;
+TERMINAL tmpSIOVREF__Vout_1_net_0 : bit;
+TERMINAL Net_398 : bit;
+SIGNAL tmpINTERRUPT_0__Vout_1_net_0 : bit;
+SIGNAL Net_218D : bit;
+SIGNAL \FreqDiv_1:not_last_reset\\D\ : bit;
+SIGNAL \FreqDiv_1:count_9\\D\ : bit;
+SIGNAL \FreqDiv_1:count_8\\D\ : bit;
+SIGNAL \FreqDiv_1:count_7\\D\ : bit;
+SIGNAL \FreqDiv_1:count_6\\D\ : bit;
+SIGNAL \FreqDiv_1:count_5\\D\ : bit;
+SIGNAL \FreqDiv_1:count_4\\D\ : bit;
+SIGNAL \FreqDiv_1:count_3\\D\ : bit;
+SIGNAL \FreqDiv_1:count_2\\D\ : bit;
+SIGNAL \FreqDiv_1:count_1\\D\ : bit;
+SIGNAL \FreqDiv_1:count_0\\D\ : bit;
+SIGNAL \WaveDAC8_1:cydff_1\\D\ : bit;
+BEGIN
+
+zero <=  ('0') ;
+
+tmpOE__Button_Pin_net_0 <=  ('1') ;
+
+\FreqDiv_1:not_last_reset\\D\ <= (\FreqDiv_1:not_last_reset\
+	OR Net_108);
+
+Net_218D <= ((not \FreqDiv_1:count_4\ and not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:count_9\ and \FreqDiv_1:count_8\ and \FreqDiv_1:count_7\ and \FreqDiv_1:count_6\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:not_last_reset\ and Net_108)
+	OR (not \FreqDiv_1:count_0\ and Net_218)
+	OR (not \FreqDiv_1:count_1\ and Net_218)
+	OR (Net_218 and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_5\ and Net_218)
+	OR (not \FreqDiv_1:count_6\ and Net_218)
+	OR (not \FreqDiv_1:count_7\ and Net_218)
+	OR (not \FreqDiv_1:count_8\ and Net_218)
+	OR (not Net_108 and Net_218)
+	OR (Net_218 and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_4\ and Net_218)
+	OR (Net_218 and \FreqDiv_1:count_9\));
+
+\FreqDiv_1:count_9\\D\ <= ((not \FreqDiv_1:count_9\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_8\ and \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\)
+	OR (not \FreqDiv_1:count_0\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:count_1\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:count_2\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_5\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:count_6\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:count_7\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:count_8\ and \FreqDiv_1:count_9\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_9\)
+	OR (not Net_108 and \FreqDiv_1:count_9\));
+
+\FreqDiv_1:count_8\\D\ <= ((not \FreqDiv_1:count_8\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\)
+	OR (not \FreqDiv_1:count_0\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:count_1\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:count_2\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_5\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:count_6\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:count_7\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:count_9\ and not \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and \FreqDiv_1:count_8\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_8\)
+	OR (not Net_108 and \FreqDiv_1:count_8\));
+
+\FreqDiv_1:count_7\\D\ <= ((not \FreqDiv_1:count_9\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:count_8\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:count_7\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_6\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_4\ and \FreqDiv_1:count_7\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_7\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:count_5\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:count_6\ and \FreqDiv_1:count_7\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_7\)
+	OR (not Net_108 and \FreqDiv_1:count_7\));
+
+\FreqDiv_1:count_6\\D\ <= ((not \FreqDiv_1:count_9\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:count_8\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:count_7\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:count_6\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_4\ and \FreqDiv_1:count_6\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_6\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:count_5\ and \FreqDiv_1:count_6\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_6\)
+	OR (not Net_108 and \FreqDiv_1:count_6\));
+
+\FreqDiv_1:count_5\\D\ <= ((not \FreqDiv_1:count_9\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_8\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_7\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_6\ and not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_5\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_4\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_5\)
+	OR (not Net_108 and \FreqDiv_1:count_5\));
+
+\FreqDiv_1:count_4\\D\ <= ((not \FreqDiv_1:count_4\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_4\)
+	OR (not Net_108 and \FreqDiv_1:count_4\));
+
+\FreqDiv_1:count_3\\D\ <= ((not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_5\ and not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_6\ and not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_7\ and not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_8\ and not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_9\ and not \FreqDiv_1:count_3\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_3\)
+	OR (not Net_108 and \FreqDiv_1:count_3\));
+
+\FreqDiv_1:count_2\\D\ <= ((not \FreqDiv_1:count_2\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\)
+	OR (not Net_108 and \FreqDiv_1:count_2\));
+
+\FreqDiv_1:count_1\\D\ <= ((not \FreqDiv_1:count_1\ and Net_108 and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_1\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_1\)
+	OR (not Net_108 and \FreqDiv_1:count_1\));
+
+\FreqDiv_1:count_0\\D\ <= ((not \FreqDiv_1:count_0\ and Net_108 and \FreqDiv_1:not_last_reset\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_0\)
+	OR (not Net_108 and \FreqDiv_1:count_0\));
+
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ <= ((\FreqDiv_1:count_7\ and \FreqDiv_1:count_6\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+\WaveDAC8_1:Net_183\ <= ((not \WaveDAC8_1:Net_134\ and \WaveDAC8_1:Net_279\));
+
+\WaveDAC8_1:Net_107\ <= ((\WaveDAC8_1:Net_279\ and \WaveDAC8_1:Net_134\));
+
+Button_Pin:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
+		drive_mode=>"010",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Button_Pin_net_0),
+		y=>(zero),
+		fb=>Net_12,
+		analog=>(open),
+		io=>(tmpIO_0__Button_Pin_net_0),
+		siovref=>(tmpSIOVREF__Button_Pin_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Button_Pin_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Button_Pin_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Button_Pin_net_0);
+LED_Pin:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"1",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"O",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Button_Pin_net_0),
+		y=>Net_218,
+		fb=>(tmpFB_0__LED_Pin_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__LED_Pin_net_0),
+		siovref=>(tmpSIOVREF__LED_Pin_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Button_Pin_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Button_Pin_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__LED_Pin_net_0);
+SW_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_3, Net_4));
+GND_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_3);
+D_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"LED_v1_0",
+		port_names=>"A, K",
+		width=>2)
+	PORT MAP(connect=>(Net_45, Net_8));
+GND_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_8);
+Clock_1:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"88a23396-9e9a-4053-b809-8ada48653370",
+		source_clock_id=>"315365C3-2E3E-4f04-84A2-BB564A173261",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_16,
+		dig_domain_out=>open);
+\Control_Reg_1:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\Control_Reg_1:control_7\, \Control_Reg_1:control_6\, \Control_Reg_1:control_5\, \Control_Reg_1:control_4\,
+			\Control_Reg_1:control_3\, \Control_Reg_1:control_2\, \Control_Reg_1:control_1\, Net_108));
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\);
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\);
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
+	PORT MAP(x=>\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\,
+		y=>\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\);
+\WaveDAC8_1:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC8_1:Net_211\);
+\WaveDAC8_1:DacClk\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"cf3ee508-d985-435c-a493-618c53bcbc21/77086516-855e-4b7b-abbe-47b22f8543de",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"10000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>\WaveDAC8_1:Net_279\,
+		dig_domain_out=>open);
+\WaveDAC8_1:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\WaveDAC8_1:Net_189\,
+		signal2=>\WaveDAC8_1:Net_256\);
+\WaveDAC8_1:cy_analog_virtualmux_2_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\WaveDAC8_1:Net_190\,
+		signal2=>\WaveDAC8_1:Net_211\);
+\WaveDAC8_1:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC8_1:Net_254\);
+\WaveDAC8_1:Wave1_DMA\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>\WaveDAC8_1:Net_183\,
+		trq=>zero,
+		nrq=>Net_428);
+\WaveDAC8_1:Wave2_DMA\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>\WaveDAC8_1:Net_107\,
+		trq=>zero,
+		nrq=>Net_429);
+\WaveDAC8_1:VDAC8:viDAC8\:cy_psoc3_vidac8_v1_0
+	GENERIC MAP(cy_registers=>"",
+		reg_data=>'0',
+		is_all_if_any=>'0')
+	PORT MAP(reset=>zero,
+		idir=>zero,
+		ioff=>zero,
+		data=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		strobe=>\WaveDAC8_1:Net_279\,
+		strobe_udb=>\WaveDAC8_1:Net_279\,
+		vout=>\WaveDAC8_1:Net_189\,
+		iout=>\WaveDAC8_1:VDAC8:Net_77\);
+\WaveDAC8_1:VDAC8:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC8_1:VDAC8:Net_77\);
+\WaveDAC8_1:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>Net_371,
+		signal2=>\WaveDAC8_1:Net_256\);
+Vout_1:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"cc3bcd7e-5dc0-48ea-9bf6-6aa082be1ada",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"NONCONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'1',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"1",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Button_Pin_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Vout_1_net_0),
+		analog=>Net_371,
+		io=>(tmpIO_0__Vout_1_net_0),
+		siovref=>(tmpSIOVREF__Vout_1_net_0),
+		annotation=>Net_398,
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Button_Pin_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Button_Pin_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Vout_1_net_0);
+Net_218:cy_dff
+	PORT MAP(d=>Net_218D,
+		clk=>Net_16,
+		q=>Net_218);
+\FreqDiv_1:not_last_reset\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:not_last_reset\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:not_last_reset\);
+\FreqDiv_1:count_9\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_9\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_9\);
+\FreqDiv_1:count_8\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_8\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_8\);
+\FreqDiv_1:count_7\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_7\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_7\);
+\FreqDiv_1:count_6\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_6\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_6\);
+\FreqDiv_1:count_5\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_5\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_5\);
+\FreqDiv_1:count_4\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_4\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_4\);
+\FreqDiv_1:count_3\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_3\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_3\);
+\FreqDiv_1:count_2\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_2\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_2\);
+\FreqDiv_1:count_1\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_1\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_1\);
+\FreqDiv_1:count_0\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_0\\D\,
+		clk=>Net_16,
+		q=>\FreqDiv_1:count_0\);
+\WaveDAC8_1:cydff_1\:cy_dff
+	PORT MAP(d=>zero,
+		clk=>\WaveDAC8_1:Net_279\,
+		q=>\WaveDAC8_1:Net_134\);
+
+END R_T_L;

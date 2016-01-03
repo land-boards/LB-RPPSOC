@@ -1,0 +1,3467 @@
+##################################################################### 
+                    Table of Contents
+===================================================================== 
+	1::Clock Frequency Summary
+	2::Clock Relationship Summary
+	3::Datasheet Report
+		3.1::Setup to Clock
+		3.2::Clock to Out
+		3.3::Pad to Pad
+	4::Path Details for Clock Frequency Summary
+		4.1::Critical Path Report for Clock_1
+		4.2::Critical Path Report for CyBUS_CLK
+	5::Path Details for Clock Relationship Summary
+		5.1::Critical Path Report for (CyBUS_CLK:R vs. Clock_1:R)
+		5.2::Critical Path Report for (Clock_1:R vs. Clock_1:R)
+===================================================================== 
+                    End of Table of Contents
+##################################################################### 
+
+##################################################################### 
+                    1::Clock Frequency Summary
+===================================================================== 
+Number of clocks: 8
+Clock: Clock_1                    | Frequency: 42.91 MHz  | Target: 0.00 MHz   | 
+Clock: CyBUS_CLK                  | Frequency: 60.59 MHz  | Target: 24.00 MHz  | 
+Clock: CyILO                      | N/A                   | Target: 0.00 MHz   | 
+Clock: CyIMO                      | N/A                   | Target: 3.00 MHz   | 
+Clock: CyMASTER_CLK               | N/A                   | Target: 24.00 MHz  | 
+Clock: CyPLL_OUT                  | N/A                   | Target: 24.00 MHz  | 
+Clock: WaveDAC8_1_DacClk          | N/A                   | Target: 0.10 MHz   | 
+Clock: WaveDAC8_1_DacClk(routed)  | N/A                   | Target: 0.10 MHz   | 
+
+ =====================================================================
+                    End of Clock Frequency Summary
+ #####################################################################
+
+
+ #####################################################################
+                    2::Clock Relationship Summary
+ =====================================================================
+
+Launch Clock  Capture Clock  Constraint(R-R)  Slack(R-R)  Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
+------------  -------------  ---------------  ----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
+Clock_1       Clock_1        1e+009           999976695   N/A              N/A         N/A              N/A         N/A              N/A         
+CyBUS_CLK     Clock_1        41666.7          25161       N/A              N/A         N/A              N/A         N/A              N/A         
+
+ =====================================================================
+                    End of Clock Relationship Summary
+ #####################################################################
+
+
+ #####################################################################
+                    3::Datasheet Report
+
+All values are in Picoseconds
+ =====================================================================
+
+3.1::Setup to Clock                     
+-------------------                     
+
+Port Name  Setup to Clk  Clock Name:Phase  
+---------  ------------  ----------------  
+
+
+-----------------------3.2::Clock to Out
+----------------------------------------
+
+Port Name       Clock to Out  Clock Name:Phase  
+--------------  ------------  ----------------  
+LED_Pin(0)_PAD  22732         Clock_1:R         
+
+
+                         3.3::Pad to Pad
+                         ---------------
+
+Port Name (Source)  Port Name (Destination)  Delay  
+------------------  -----------------------  -----  
+
+===================================================================== 
+                    End of Datasheet Report
+##################################################################### 
+##################################################################### 
+                    4::Path Details for Clock Frequency Summary
+===================================================================== 
+4.1::Critical Path Report for Clock_1
+*************************************
+Clock: Clock_1
+Frequency: 42.91 MHz | Target: 0.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : Net_218/main_3
+Capture Clock  : Net_218/clock_0
+Path slack     : 999976695p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       19795
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           19795
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+Net_218_split/main_0          macrocell1    6634   7884  999976695  RISE       1
+Net_218_split/q               macrocell1    3350  11234  999976695  RISE       1
+Net_218_split_1/main_11       macrocell17   2298  13532  999976695  RISE       1
+Net_218_split_1/q             macrocell17   3350  16882  999976695  RISE       1
+Net_218/main_3                macrocell5    2913  19795  999976695  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+===================================================================== 
+4.2::Critical Path Report for CyBUS_CLK
+***************************************
+Clock: CyBUS_CLK
+Frequency: 60.59 MHz | Target: 24.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : Net_218/main_3
+Capture Clock  : Net_218/clock_0
+Path slack     : 25161p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       12995
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           12995
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+Net_218_split_1/main_1                   macrocell17    4683   6733  25161  RISE       1
+Net_218_split_1/q                        macrocell17    3350  10083  25161  RISE       1
+Net_218/main_3                           macrocell5     2913  12995  25161  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+===================================================================== 
+                    End of Path Details for Clock Frequency Summary
+##################################################################### 
+
+
+##################################################################### 
+                    5::Path Details for Clock Relationship Summary
+===================================================================== 
+
+5.1::Critical Path Report for (CyBUS_CLK:R vs. Clock_1:R)
+*********************************************************
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : Net_218/main_3
+Capture Clock  : Net_218/clock_0
+Path slack     : 25161p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       12995
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           12995
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+Net_218_split_1/main_1                   macrocell17    4683   6733  25161  RISE       1
+Net_218_split_1/q                        macrocell17    3350  10083  25161  RISE       1
+Net_218/main_3                           macrocell5     2913  12995  25161  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+5.2::Critical Path Report for (Clock_1:R vs. Clock_1:R)
+*******************************************************
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : Net_218/main_3
+Capture Clock  : Net_218/clock_0
+Path slack     : 999976695p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       19795
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           19795
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+Net_218_split/main_0          macrocell1    6634   7884  999976695  RISE       1
+Net_218_split/q               macrocell1    3350  11234  999976695  RISE       1
+Net_218_split_1/main_11       macrocell17   2298  13532  999976695  RISE       1
+Net_218_split_1/q             macrocell17   3350  16882  999976695  RISE       1
+Net_218/main_3                macrocell5    2913  19795  999976695  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+===================================================================== 
+                    End of Path Details for Clock Relationship Summary
+##################################################################### 
+
+##################################################################### 
+                    Detailed Report for all timing paths 
+===================================================================== 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : Net_218/main_3
+Capture Clock  : Net_218/clock_0
+Path slack     : 25161p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       12995
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           12995
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+Net_218_split_1/main_1                   macrocell17    4683   6733  25161  RISE       1
+Net_218_split_1/q                        macrocell17    3350  10083  25161  RISE       1
+Net_218/main_3                           macrocell5     2913  12995  25161  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_9\/main_4
+Capture Clock  : \FreqDiv_1:count_9\/clock_0
+Path slack     : 26861p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11295
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11295
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_8_split\/main_0         macrocell3     3606   5656  26861  RISE       1
+\FreqDiv_1:count_8_split\/q              macrocell3     3350   9006  26861  RISE       1
+\FreqDiv_1:count_9\/main_4               macrocell7     2289  11295  26861  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_8\/main_3
+Capture Clock  : \FreqDiv_1:count_8\/clock_0
+Path slack     : 26861p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11295
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11295
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_8_split\/main_0         macrocell3     3606   5656  26861  RISE       1
+\FreqDiv_1:count_8_split\/q              macrocell3     3350   9006  26861  RISE       1
+\FreqDiv_1:count_8\/main_3               macrocell8     2289  11295  26861  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : Net_218/main_4
+Capture Clock  : Net_218/clock_0
+Path slack     : 27037p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11119
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11119
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+Net_218_split_2/main_1                   macrocell4     3422   5472  27037  RISE       1
+Net_218_split_2/q                        macrocell4     3350   8822  27037  RISE       1
+Net_218/main_4                           macrocell5     2298  11119  27037  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_5\/main_0
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 31406p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6751
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6751
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_5\/main_0               macrocell11    4701   6751  31406  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_6\/main_0
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 31414p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6743
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6743
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_6\/main_0               macrocell10    4693   6743  31414  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_7\/main_0
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 32500p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5656
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5656
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_7\/main_0               macrocell9     3606   5656  32500  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_3\/main_0
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 32500p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5656
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5656
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_3\/main_0               macrocell13    3606   5656  32500  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:not_last_reset\/main_0
+Capture Clock  : \FreqDiv_1:not_last_reset\/clock_0
+Path slack     : 32511p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5646
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5646
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:not_last_reset\/main_0        macrocell6     3596   5646  32511  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_9\/main_0
+Capture Clock  : \FreqDiv_1:count_9\/clock_0
+Path slack     : 32511p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5646
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5646
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_9\/main_0               macrocell7     3596   5646  32511  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+
+
+++++ Path 11 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_8\/main_0
+Capture Clock  : \FreqDiv_1:count_8\/clock_0
+Path slack     : 32511p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5646
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5646
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_8\/main_0               macrocell8     3596   5646  32511  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+
+
+++++ Path 12 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_0\/main_0
+Capture Clock  : \FreqDiv_1:count_0\/clock_0
+Path slack     : 32511p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5646
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5646
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_0\/main_0               macrocell16    3596   5646  32511  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+
+
+++++ Path 13 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : Net_218/main_1
+Capture Clock  : Net_218/clock_0
+Path slack     : 32667p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5490
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5490
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+Net_218/main_1                           macrocell5     3440   5490  32667  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+++++ Path 14 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_4\/main_0
+Capture Clock  : \FreqDiv_1:count_4\/clock_0
+Path slack     : 32667p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5490
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5490
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_4\/main_0               macrocell12    3440   5490  32667  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+
+
+++++ Path 15 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_2\/main_0
+Capture Clock  : \FreqDiv_1:count_2\/clock_0
+Path slack     : 32667p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5490
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5490
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_2\/main_0               macrocell14    3440   5490  32667  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+
+
+++++ Path 16 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Control_Reg_1:Sync:ctrl_reg\/control_0
+Path End       : \FreqDiv_1:count_1\/main_0
+Capture Clock  : \FreqDiv_1:count_1\/clock_0
+Path slack     : 32667p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                       0
++ Cycle adjust (CyBUS_CLK:R#24000 vs. Clock_1:R#2)   41667
+- Setup time                                         -3510
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       38157
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5490
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5490
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Control_Reg_1:Sync:ctrl_reg\/busclk                        controlcell1        0      0  RISE       1
+
+Data path
+pin name                                 model name    delay     AT  slack  edge  Fanout
+---------------------------------------  ------------  -----  -----  -----  ----  ------
+\Control_Reg_1:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  25161  RISE       1
+\FreqDiv_1:count_1\/main_0               macrocell15    3440   5490  32667  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+
+
+++++ Path 17 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_9\/main_3
+Capture Clock  : \FreqDiv_1:count_9\/clock_0
+Path slack     : 999980995p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       15495
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           15495
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                                              model name   delay     AT      slack  edge  Fanout
+----------------------------------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q                                 macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\/main_5  macrocell2    7977   9227  999980995  RISE       1
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\/q       macrocell2    3350  12577  999980995  RISE       1
+\FreqDiv_1:count_9\/main_3                            macrocell7    2918  15495  999980995  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+
+
+++++ Path 18 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_8\/main_2
+Capture Clock  : \FreqDiv_1:count_8\/clock_0
+Path slack     : 999980995p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       15495
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           15495
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                                              model name   delay     AT      slack  edge  Fanout
+----------------------------------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q                                 macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\/main_5  macrocell2    7977   9227  999980995  RISE       1
+\FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\/q       macrocell2    3350  12577  999980995  RISE       1
+\FreqDiv_1:count_8\/main_2                            macrocell8    2918  15495  999980995  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+
+
+++++ Path 19 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_5\/main_1
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999986629p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       9861
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           9861
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_5\/main_1    macrocell11   8611   9861  999986629  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 20 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_6\/main_1
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999987192p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       9298
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           9298
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_6\/main_1    macrocell10   8048   9298  999987192  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 21 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_6\/main_9
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999987209p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       9281
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           9281
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q       macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:count_6\/main_9  macrocell10   8031   9281  999987209  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 22 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_7\/q
+Path End       : \FreqDiv_1:count_6\/main_4
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999987255p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       9235
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           9235
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_7\/q       macrocell9    1250   1250  999981605  RISE       1
+\FreqDiv_1:count_6\/main_4  macrocell10   7985   9235  999987255  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 23 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_5\/main_9
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999987263p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       9227
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           9227
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q       macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:count_5\/main_9  macrocell11   7977   9227  999987263  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 24 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_7\/main_9
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999988187p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8303
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8303
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q       macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:count_7\/main_9  macrocell9    7053   8303  999988187  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 25 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_3\/main_9
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999988187p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8303
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8303
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q       macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:count_3\/main_9  macrocell13   7053   8303  999988187  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 26 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_2\/q
+Path End       : \FreqDiv_1:count_4\/main_3
+Capture Clock  : \FreqDiv_1:count_4\/clock_0
+Path slack     : 999988311p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8179
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8179
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_2\/q       macrocell14   1250   1250  999980949  RISE       1
+\FreqDiv_1:count_4\/main_3  macrocell12   6929   8179  999988311  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+
+
+++++ Path 27 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_7\/q
+Path End       : \FreqDiv_1:count_5\/main_4
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999988428p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8062
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8062
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_7\/q       macrocell9    1250   1250  999981605  RISE       1
+\FreqDiv_1:count_5\/main_4  macrocell11   6812   8062  999988428  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 28 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:not_last_reset\/main_1
+Capture Clock  : \FreqDiv_1:not_last_reset\/clock_0
+Path slack     : 999988441p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8049
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8049
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                           model name   delay     AT      slack  edge  Fanout
+---------------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q       macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:not_last_reset\/main_1  macrocell6    6799   8049  999988441  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+
+
+++++ Path 29 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_9\/main_1
+Capture Clock  : \FreqDiv_1:count_9\/clock_0
+Path slack     : 999988441p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8049
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8049
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_9\/main_1    macrocell7    6799   8049  999988441  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+
+
+++++ Path 30 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_8\/main_1
+Capture Clock  : \FreqDiv_1:count_8\/clock_0
+Path slack     : 999988441p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8049
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8049
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_8\/main_1    macrocell8    6799   8049  999988441  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+
+
+++++ Path 31 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_0\/main_1
+Capture Clock  : \FreqDiv_1:count_0\/clock_0
+Path slack     : 999988441p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8049
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8049
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_0\/main_1    macrocell16   6799   8049  999988441  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+
+
+++++ Path 32 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_7\/main_1
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999988460p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8030
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8030
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_7\/main_1    macrocell9    6780   8030  999988460  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 33 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_3\/main_1
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999988460p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8030
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8030
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_3\/main_1    macrocell13   6780   8030  999988460  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 34 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_9\/q
+Path End       : \FreqDiv_1:count_7\/main_2
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999988493p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7997
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7997
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_9\/q       macrocell7    1250   1250  999976994  RISE       1
+\FreqDiv_1:count_7\/main_2  macrocell9    6747   7997  999988493  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 35 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_9\/q
+Path End       : \FreqDiv_1:count_3\/main_2
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999988493p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7997
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7997
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_9\/q       macrocell7    1250   1250  999976994  RISE       1
+\FreqDiv_1:count_3\/main_2  macrocell13   6747   7997  999988493  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 36 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_9\/q
+Path End       : \FreqDiv_1:count_5\/main_2
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999988911p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7579
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7579
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_9\/q       macrocell7    1250   1250  999976994  RISE       1
+\FreqDiv_1:count_5\/main_2  macrocell11   6329   7579  999988911  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 37 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_3\/q
+Path End       : \FreqDiv_1:count_5\/main_8
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999989020p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7470
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7470
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_3\/q       macrocell13   1250   1250  999982199  RISE       1
+\FreqDiv_1:count_5\/main_8  macrocell11   6220   7470  999989020  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_3\/q
+Path End       : \FreqDiv_1:count_6\/main_8
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999989461p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7029
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7029
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_3\/q       macrocell13   1250   1250  999982199  RISE       1
+\FreqDiv_1:count_6\/main_8  macrocell10   5779   7029  999989461  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 39 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_4\/q
+Path End       : \FreqDiv_1:count_6\/main_7
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999989840p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6650
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6650
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_4\/q       macrocell12   1250   1250  999984132  RISE       1
+\FreqDiv_1:count_6\/main_7  macrocell10   5400   6650  999989840  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 40 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_3\/q
+Path End       : \FreqDiv_1:count_7\/main_8
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999990042p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6448
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6448
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_3\/q       macrocell13   1250   1250  999982199  RISE       1
+\FreqDiv_1:count_7\/main_8  macrocell9    5198   6448  999990042  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 41 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_3\/q
+Path End       : \FreqDiv_1:count_3\/main_8
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999990042p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6448
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6448
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_3\/q       macrocell13   1250   1250  999982199  RISE       1
+\FreqDiv_1:count_3\/main_8  macrocell13   5198   6448  999990042  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 42 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : Net_218/main_2
+Capture Clock  : Net_218/clock_0
+Path slack     : 999990179p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6311
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6311
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+Net_218/main_2                macrocell5    5061   6311  999990179  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+++++ Path 43 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_4\/main_1
+Capture Clock  : \FreqDiv_1:count_4\/clock_0
+Path slack     : 999990179p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6311
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6311
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_4\/main_1    macrocell12   5061   6311  999990179  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+
+
+++++ Path 44 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_2\/main_1
+Capture Clock  : \FreqDiv_1:count_2\/clock_0
+Path slack     : 999990179p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6311
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6311
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_2\/main_1    macrocell14   5061   6311  999990179  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+
+
+++++ Path 45 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:not_last_reset\/q
+Path End       : \FreqDiv_1:count_1\/main_1
+Capture Clock  : \FreqDiv_1:count_1\/clock_0
+Path slack     : 999990179p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6311
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6311
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:not_last_reset\/clock_0                         macrocell6          0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT      slack  edge  Fanout
+----------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:not_last_reset\/q  macrocell6    1250   1250  999976695  RISE       1
+\FreqDiv_1:count_1\/main_1    macrocell15   5061   6311  999990179  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+
+
+++++ Path 46 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_9\/q
+Path End       : \FreqDiv_1:count_6\/main_2
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999990222p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6268
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6268
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_9\/q       macrocell7    1250   1250  999976994  RISE       1
+\FreqDiv_1:count_6\/main_2  macrocell10   5018   6268  999990222  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 47 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_4\/q
+Path End       : \FreqDiv_1:count_5\/main_7
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999990400p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6090
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6090
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_4\/q       macrocell12   1250   1250  999984132  RISE       1
+\FreqDiv_1:count_5\/main_7  macrocell11   4840   6090  999990400  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 48 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_1\/q
+Path End       : \FreqDiv_1:count_5\/main_10
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999990493p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5997
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5997
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_1\/q        macrocell15   1250   1250  999984225  RISE       1
+\FreqDiv_1:count_5\/main_10  macrocell11   4747   5997  999990493  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 49 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_1\/q
+Path End       : \FreqDiv_1:count_6\/main_10
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999990508p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5982
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5982
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_1\/q        macrocell15   1250   1250  999984225  RISE       1
+\FreqDiv_1:count_6\/main_10  macrocell10   4732   5982  999990508  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 50 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_6\/q
+Path End       : \FreqDiv_1:count_7\/main_5
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999990631p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5859
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5859
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_6\/q       macrocell10   1250   1250  999984272  RISE       1
+\FreqDiv_1:count_7\/main_5  macrocell9    4609   5859  999990631  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 51 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_6\/q
+Path End       : \FreqDiv_1:count_3\/main_5
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999990631p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5859
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5859
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_6\/q       macrocell10   1250   1250  999984272  RISE       1
+\FreqDiv_1:count_3\/main_5  macrocell13   4609   5859  999990631  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_5\/q
+Path End       : \FreqDiv_1:count_7\/main_6
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999991080p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5410
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5410
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_5\/q       macrocell11   1250   1250  999985441  RISE       1
+\FreqDiv_1:count_7\/main_6  macrocell9    4160   5410  999991080  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 53 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_5\/q
+Path End       : \FreqDiv_1:count_3\/main_6
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999991080p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5410
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5410
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_5\/q       macrocell11   1250   1250  999985441  RISE       1
+\FreqDiv_1:count_3\/main_6  macrocell13   4160   5410  999991080  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_5\/main_11
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999991083p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5407
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5407
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q        macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_5\/main_11  macrocell11   4157   5407  999991083  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 55 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_8\/q
+Path End       : \FreqDiv_1:count_5\/main_3
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999991089p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5401
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5401
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_8\/q       macrocell8    1250   1250  999984831  RISE       1
+\FreqDiv_1:count_5\/main_3  macrocell11   4151   5401  999991089  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_6\/q
+Path End       : \FreqDiv_1:count_5\/main_5
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999991091p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5399
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5399
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_6\/q       macrocell10   1250   1250  999984272  RISE       1
+\FreqDiv_1:count_5\/main_5  macrocell11   4149   5399  999991091  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 57 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_6\/main_11
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999991096p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5394
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5394
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q        macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_6\/main_11  macrocell10   4144   5394  999991096  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_8\/q
+Path End       : \FreqDiv_1:count_6\/main_3
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999991098p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5392
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5392
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_8\/q       macrocell8    1250   1250  999984831  RISE       1
+\FreqDiv_1:count_6\/main_3  macrocell10   4142   5392  999991098  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 59 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_1\/q
+Path End       : \FreqDiv_1:count_4\/main_4
+Capture Clock  : \FreqDiv_1:count_4\/clock_0
+Path slack     : 999991347p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5143
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5143
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_1\/q       macrocell15   1250   1250  999984225  RISE       1
+\FreqDiv_1:count_4\/main_4  macrocell12   3893   5143  999991347  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+
+
+++++ Path 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_1\/q
+Path End       : \FreqDiv_1:count_2\/main_2
+Capture Clock  : \FreqDiv_1:count_2\/clock_0
+Path slack     : 999991347p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5143
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5143
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_1\/q       macrocell15   1250   1250  999984225  RISE       1
+\FreqDiv_1:count_2\/main_2  macrocell14   3893   5143  999991347  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+
+
+++++ Path 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : Net_218/q
+Path End       : Net_218/main_0
+Capture Clock  : Net_218/clock_0
+Path slack     : 999991406p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5084
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5084
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+Data path
+pin name        model name   delay     AT      slack  edge  Fanout
+--------------  -----------  -----  -----  ---------  ----  ------
+Net_218/q       macrocell5    1250   1250  999984252  RISE       1
+Net_218/main_0  macrocell5    3834   5084  999991406  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+Net_218/clock_0                                            macrocell5          0      0  RISE       1
+
+
+
+++++ Path 62 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_3\/q
+Path End       : \FreqDiv_1:count_4\/main_2
+Capture Clock  : \FreqDiv_1:count_4\/clock_0
+Path slack     : 999991476p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5014
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5014
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_3\/q       macrocell13   1250   1250  999982199  RISE       1
+\FreqDiv_1:count_4\/main_2  macrocell12   3764   5014  999991476  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+
+
+++++ Path 63 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_7\/q
+Path End       : \FreqDiv_1:count_7\/main_4
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999991744p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4746
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4746
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_7\/q       macrocell9    1250   1250  999981605  RISE       1
+\FreqDiv_1:count_7\/main_4  macrocell9    3496   4746  999991744  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 64 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_7\/q
+Path End       : \FreqDiv_1:count_3\/main_4
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999991744p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4746
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4746
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_7\/q       macrocell9    1250   1250  999981605  RISE       1
+\FreqDiv_1:count_3\/main_4  macrocell13   3496   4746  999991744  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 65 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_1\/q
+Path End       : \FreqDiv_1:count_7\/main_10
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999991764p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4726
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4726
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_1\/q        macrocell15   1250   1250  999984225  RISE       1
+\FreqDiv_1:count_7\/main_10  macrocell9    3476   4726  999991764  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 66 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_1\/q
+Path End       : \FreqDiv_1:count_3\/main_10
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999991764p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4726
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4726
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_1\/q        macrocell15   1250   1250  999984225  RISE       1
+\FreqDiv_1:count_3\/main_10  macrocell13   3476   4726  999991764  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 67 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_5\/q
+Path End       : \FreqDiv_1:count_6\/main_6
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999991852p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4638
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4638
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_5\/q       macrocell11   1250   1250  999985441  RISE       1
+\FreqDiv_1:count_6\/main_6  macrocell10   3388   4638  999991852  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_6\/q
+Path End       : \FreqDiv_1:count_6\/main_5
+Capture Clock  : \FreqDiv_1:count_6\/clock_0
+Path slack     : 999991934p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4556
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4556
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_6\/q       macrocell10   1250   1250  999984272  RISE       1
+\FreqDiv_1:count_6\/main_5  macrocell10   3306   4556  999991934  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_6\/clock_0                                macrocell10         0      0  RISE       1
+
+
+
+++++ Path 69 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_5\/q
+Path End       : \FreqDiv_1:count_5\/main_6
+Capture Clock  : \FreqDiv_1:count_5\/clock_0
+Path slack     : 999991981p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4509
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4509
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_5\/q       macrocell11   1250   1250  999985441  RISE       1
+\FreqDiv_1:count_5\/main_6  macrocell11   3259   4509  999991981  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_5\/clock_0                                macrocell11         0      0  RISE       1
+
+
+
+++++ Path 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_7\/main_11
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999992359p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4131
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4131
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q        macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_7\/main_11  macrocell9    2881   4131  999992359  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 71 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_3\/main_11
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999992359p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4131
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4131
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT      slack  edge  Fanout
+---------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q        macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_3\/main_11  macrocell13   2881   4131  999992359  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 72 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_8\/q
+Path End       : \FreqDiv_1:count_7\/main_3
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999992364p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4126
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4126
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_8\/q       macrocell8    1250   1250  999984831  RISE       1
+\FreqDiv_1:count_7\/main_3  macrocell9    2876   4126  999992364  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 73 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_8\/q
+Path End       : \FreqDiv_1:count_3\/main_3
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999992364p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4126
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4126
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_8\/q       macrocell8    1250   1250  999984831  RISE       1
+\FreqDiv_1:count_3\/main_3  macrocell13   2876   4126  999992364  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+
+++++ Path 74 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_8\/q
+Path End       : \FreqDiv_1:count_9\/main_2
+Capture Clock  : \FreqDiv_1:count_9\/clock_0
+Path slack     : 999992366p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4124
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4124
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_8\/clock_0                                macrocell8          0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_8\/q       macrocell8    1250   1250  999984831  RISE       1
+\FreqDiv_1:count_9\/main_2  macrocell7    2874   4124  999992366  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_9\/clock_0                                macrocell7          0      0  RISE       1
+
+
+
+++++ Path 75 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_4\/main_5
+Capture Clock  : \FreqDiv_1:count_4\/clock_0
+Path slack     : 999992367p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4123
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4123
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q       macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_4\/main_5  macrocell12   2873   4123  999992367  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+
+
+++++ Path 76 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_2\/main_3
+Capture Clock  : \FreqDiv_1:count_2\/clock_0
+Path slack     : 999992367p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4123
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4123
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q       macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_2\/main_3  macrocell14   2873   4123  999992367  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_2\/clock_0                                macrocell14         0      0  RISE       1
+
+
+
+++++ Path 77 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_0\/q
+Path End       : \FreqDiv_1:count_1\/main_2
+Capture Clock  : \FreqDiv_1:count_1\/clock_0
+Path slack     : 999992367p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4123
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4123
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_0\/clock_0                                macrocell16         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_0\/q       macrocell16   1250   1250  999984815  RISE       1
+\FreqDiv_1:count_1\/main_2  macrocell15   2873   4123  999992367  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_1\/clock_0                                macrocell15         0      0  RISE       1
+
+
+
+++++ Path 78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_4\/q
+Path End       : \FreqDiv_1:count_7\/main_7
+Capture Clock  : \FreqDiv_1:count_7\/clock_0
+Path slack     : 999992458p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4032
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4032
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_4\/q       macrocell12   1250   1250  999984132  RISE       1
+\FreqDiv_1:count_7\/main_7  macrocell9    2782   4032  999992458  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_7\/clock_0                                macrocell9          0      0  RISE       1
+
+
+
+++++ Path 79 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \FreqDiv_1:count_4\/q
+Path End       : \FreqDiv_1:count_3\/main_7
+Capture Clock  : \FreqDiv_1:count_3\/clock_0
+Path slack     : 999992458p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000000
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                  999996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4032
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4032
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_4\/clock_0                                macrocell12         0      0  RISE       1
+
+Data path
+pin name                    model name   delay     AT      slack  edge  Fanout
+--------------------------  -----------  -----  -----  ---------  ----  ------
+\FreqDiv_1:count_4\/q       macrocell12   1250   1250  999984132  RISE       1
+\FreqDiv_1:count_3\/main_7  macrocell13   2782   4032  999992458  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\FreqDiv_1:count_3\/clock_0                                macrocell13         0      0  RISE       1
+
+
+===================================================================== 
+                    End of Detailed Report for all timing paths 
+##################################################################### 
+
+##################################################################### 
+                    End of Timing Report 
+##################################################################### 
+
