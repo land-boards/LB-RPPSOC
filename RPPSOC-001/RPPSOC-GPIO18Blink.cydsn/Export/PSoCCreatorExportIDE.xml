@@ -199,6 +199,30 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_5_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_5.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_5.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_6_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_6.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_6.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_12_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_12.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_12.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_13_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_13.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_13.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_19_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_19.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_19.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_16_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_16.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_16.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_26_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_26.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_26.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_20_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_20.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_20.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_21_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_21.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_21.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\Export\ARM_GCC_Generic">

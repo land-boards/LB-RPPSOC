@@ -1,5 +1,5 @@
 # RPPSOC-GPIO18Blink
-# 2016-01-03 19:11:58Z
+# 2016-01-04 18:40:55Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -60,3 +60,11 @@ set_io "RP_GPIO_23(0)" iocell 5 2
 set_io "RP_GPIO_24(0)" iocell 5 1
 set_io "RP_GPIO_25(0)" iocell 5 0
 set_io "RP_GPIO_5(0)" iocell 5 6
+set_io "RP_GPIO_6(0)" iocell 2 7
+set_io "RP_GPIO_12(0)" iocell 2 6
+set_io "RP_GPIO_13(0)" iocell 2 5
+set_io "RP_GPIO_19(0)" iocell 2 3
+set_io "RP_GPIO_16(0)" iocell 2 4
+set_io "RP_GPIO_26(0)" iocell 2 1
+set_io "RP_GPIO_20(0)" iocell 2 2
+set_io "RP_GPIO_21(0)" iocell 2 0

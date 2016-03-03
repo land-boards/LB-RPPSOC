@@ -139,6 +139,30 @@
   <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_5_aliases.h" value="NONE;RP_GPIO_5" />
   <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_5.c" value="ARM_C_FILE;RP_GPIO_5" />
   <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_5.h" value="NONE;RP_GPIO_5" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_6_aliases.h" value="NONE;RP_GPIO_6" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_6.c" value="ARM_C_FILE;RP_GPIO_6" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_6.h" value="NONE;RP_GPIO_6" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_12_aliases.h" value="NONE;RP_GPIO_12" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_12.c" value="ARM_C_FILE;RP_GPIO_12" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_12.h" value="NONE;RP_GPIO_12" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_13_aliases.h" value="NONE;RP_GPIO_13" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_13.c" value="ARM_C_FILE;RP_GPIO_13" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_13.h" value="NONE;RP_GPIO_13" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_19_aliases.h" value="NONE;RP_GPIO_19" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_19.c" value="ARM_C_FILE;RP_GPIO_19" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_19.h" value="NONE;RP_GPIO_19" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_16_aliases.h" value="NONE;RP_GPIO_16" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_16.c" value="ARM_C_FILE;RP_GPIO_16" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_16.h" value="NONE;RP_GPIO_16" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_26_aliases.h" value="NONE;RP_GPIO_26" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_26.c" value="ARM_C_FILE;RP_GPIO_26" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_26.h" value="NONE;RP_GPIO_26" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_20_aliases.h" value="NONE;RP_GPIO_20" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_20.c" value="ARM_C_FILE;RP_GPIO_20" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_20.h" value="NONE;RP_GPIO_20" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_21_aliases.h" value="NONE;RP_GPIO_21" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_21.c" value="ARM_C_FILE;RP_GPIO_21" />
+  <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\RP_GPIO_21.h" value="NONE;RP_GPIO_21" />
   <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
   <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />
   <file name="C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\codegentemp\cm3gcc.ld" value="NONE;cy_boot" />
