@@ -1,6 +1,6 @@
 -- Project:   RPPSOC-GPIO18Blink
--- Generated: 01/04/2016 13:41:00
--- PSoC Creator  3.3 CP1
+-- Generated: 05/09/2016 13:13:47
+-- PSoC Creator  3.3
 
 ENTITY \RPPSOC-GPIO18Blink\ IS
     PORT(

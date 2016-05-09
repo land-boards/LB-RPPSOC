@@ -1,6 +1,6 @@
--- Project:   C:\Users\doug_000\Documents\GitHub\PSOC5LP\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\RPPSOC-GPIO18Blink.cyprj
--- Generated: 01/04/2016 13:41:09
--- PSoC Creator  3.3 CP1
+-- Project:   C:\Users\DGilliland\Documents\GitHub\LB-RPPSOC\RPPSOC-001\RPPSOC-GPIO18Blink.cydsn\RPPSOC-GPIO18Blink.cyprj
+-- Generated: 05/09/2016 13:13:52
+-- PSoC Creator  3.3
 
 ENTITY \RPPSOC-GPIO18Blink\ IS
     PORT(
