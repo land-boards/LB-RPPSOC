@@ -1,0 +1,22 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2016-05-20T19:34:18Z")
+ (DESIGN "RPPSOC-Blink1")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3 CP2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "RPPSOC-Blink1")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT LED5_4\(0\).pad_out LED5_4\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_0 LED5_4\(0\).pin_input (7.834:7.834:7.834))
+    (INTERCONNECT LED5_4\(0\).pad_out LED5_4\(0\)_PAD (0.000:0.000:0.000))
+    (INTERCONNECT LED5_4\(0\)_PAD LED5_4\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
