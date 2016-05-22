@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 1
 
 
    1              		.syntax unified
@@ -26,507 +26,2913 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 1
   23              		.section	.cyconfigecc,"a",%progbits
   24              		.align	2
   25              		.type	cy_meta_configecc, %object
-  26              		.size	cy_meta_configecc, 44
+  26              		.size	cy_meta_configecc, 2304
   27              	cy_meta_configecc:
-  28 0000 03       		.byte	3
+  28 0000 0E       		.byte	14
   29 0001 52       		.byte	82
   30 0002 00       		.byte	0
   31 0003 40       		.byte	64
-  32 0004 02       		.byte	2
-  33 0005 4C       		.byte	76
+  32 0004 05       		.byte	5
+  33 0005 03       		.byte	3
   34 0006 01       		.byte	1
   35 0007 40       		.byte	64
-  36 0008 03       		.byte	3
-  37 0009 4D       		.byte	77
+  36 0008 40       		.byte	64
+  37 0009 04       		.byte	4
   38 000a 01       		.byte	1
   39 000b 40       		.byte	64
-  40 000c 0C       		.byte	12
-  41 000d 40       		.byte	64
-  42 000e 28       		.byte	40
-  43 000f 10       		.byte	16
-  44 0010 29       		.byte	41
-  45 0011 10       		.byte	16
-  46 0012 08       		.byte	8
-  47 0013 10       		.byte	16
-  48 0014 C2       		.byte	-62
-  49 0015 02       		.byte	2
-  50 0016 64       		.byte	100
-  51 0017 10       		.byte	16
-  52 0018 98       		.byte	-104
-  53 0019 10       		.byte	16
-  54 001a D8       		.byte	-40
-  55 001b 01       		.byte	1
-  56 001c 40       		.byte	64
-  57 001d 00       		.byte	0
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 2
+  40 000c 34       		.byte	52
+  41 000d 05       		.byte	5
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 3D       		.byte	61
+  45 0011 06       		.byte	6
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 42       		.byte	66
+  49 0015 07       		.byte	7
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 42       		.byte	66
+  53 0019 08       		.byte	8
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 3F       		.byte	63
+  57 001d 09       		.byte	9
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 2
 
 
-  58 001e 00       		.byte	0
-  59 001f 00       		.byte	0
-  60 0020 00       		.byte	0
-  61 0021 00       		.byte	0
-  62 0022 00       		.byte	0
-  63 0023 00       		.byte	0
-  64 0024 00       		.byte	0
-  65 0025 10       		.byte	16
-  66 0026 10       		.byte	16
-  67 0027 00       		.byte	0
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 3A       		.byte	58
+  61 0021 0A       		.byte	10
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 31       		.byte	49
+  65 0025 0B       		.byte	11
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
   68 0028 10       		.byte	16
-  69 0029 00       		.byte	0
-  70 002a 00       		.byte	0
-  71 002b 00       		.byte	0
-  72              		.section	.cywolatch,"a",%progbits
-  73              		.align	2
-  74              		.type	cy_meta_wonvl, %object
-  75              		.size	cy_meta_wonvl, 4
-  76              	cy_meta_wonvl:
-  77 0000 BC       		.byte	-68
-  78 0001 90       		.byte	-112
-  79 0002 AC       		.byte	-84
-  80 0003 AF       		.byte	-81
-  81              		.section	.cycustnvl,"a",%progbits
-  82              		.align	2
-  83              		.type	cy_meta_custnvl, %object
-  84              		.size	cy_meta_custnvl, 4
-  85              	cy_meta_custnvl:
-  86 0000 00       		.byte	0
-  87 0001 00       		.byte	0
-  88 0002 40       		.byte	64
-  89 0003 05       		.byte	5
-  90              		.section	.cymeta,"a",%progbits
-  91              		.align	2
-  92              		.type	cy_metadata, %object
-  93              		.size	cy_metadata, 12
-  94              	cy_metadata:
-  95 0000 00       		.byte	0
-  96 0001 01       		.byte	1
-  97 0002 2E       		.byte	46
-  98 0003 13       		.byte	19
-  99 0004 30       		.byte	48
- 100 0005 69       		.byte	105
- 101 0006 00       		.byte	0
- 102 0007 01       		.byte	1
- 103 0008 00       		.byte	0
- 104 0009 00       		.byte	0
- 105 000a 00       		.byte	0
- 106 000b 00       		.byte	0
- 107              		.section	.cyflashprotect,"a",%progbits
- 108              		.align	2
- 109              		.type	cy_meta_flashprotect, %object
- 110              		.size	cy_meta_flashprotect, 128
- 111              	cy_meta_flashprotect:
- 112 0000 00000000 		.space	128
- 112      00000000 
- 112      00000000 
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 3
+  69 0029 15       		.byte	21
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 3F       		.byte	63
+  73 002d 16       		.byte	22
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 45       		.byte	69
+  77 0031 17       		.byte	23
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 38       		.byte	56
+  81 0035 18       		.byte	24
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 41       		.byte	65
+  85 0039 19       		.byte	25
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 39       		.byte	57
+  89 003d 1A       		.byte	26
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 3B       		.byte	59
+  93 0041 1B       		.byte	27
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 09       		.byte	9
+  97 0045 40       		.byte	64
+  98 0046 01       		.byte	1
+  99 0047 40       		.byte	64
+ 100 0048 12       		.byte	18
+ 101 0049 41       		.byte	65
+ 102 004a 01       		.byte	1
+ 103 004b 40       		.byte	64
+ 104 004c 11       		.byte	17
+ 105 004d 42       		.byte	66
+ 106 004e 01       		.byte	1
+ 107 004f 40       		.byte	64
+ 108 0050 12       		.byte	18
+ 109 0051 43       		.byte	67
+ 110 0052 01       		.byte	1
+ 111 0053 40       		.byte	64
+ 112 0054 09       		.byte	9
+ 113 0055 45       		.byte	69
+ 114 0056 01       		.byte	1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 3
 
 
- 112      00000000 
- 112      00000000 
- 113              		.text
- 114              	.Letext0:
- 115              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
- 116              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
- 117              		.section	.debug_info,"",%progbits
- 118              	.Ldebug_info0:
- 119 0000 35010000 		.4byte	0x135
- 120 0004 0400     		.2byte	0x4
- 121 0006 00000000 		.4byte	.Ldebug_abbrev0
- 122 000a 04       		.byte	0x4
- 123 000b 01       		.uleb128 0x1
- 124 000c 94000000 		.4byte	.LASF18
- 125 0010 01       		.byte	0x1
- 126 0011 00000000 		.4byte	.LASF19
- 127 0015 46010000 		.4byte	.LASF20
- 128 0019 00000000 		.4byte	.Ldebug_line0
- 129 001d 02       		.uleb128 0x2
- 130 001e 01       		.byte	0x1
- 131 001f 06       		.byte	0x6
- 132 0020 E3010000 		.4byte	.LASF0
- 133 0024 02       		.uleb128 0x2
- 134 0025 01       		.byte	0x1
- 135 0026 08       		.byte	0x8
- 136 0027 38000000 		.4byte	.LASF1
- 137 002b 02       		.uleb128 0x2
- 138 002c 02       		.byte	0x2
- 139 002d 05       		.byte	0x5
- 140 002e CA010000 		.4byte	.LASF2
- 141 0032 02       		.uleb128 0x2
- 142 0033 02       		.byte	0x2
- 143 0034 07       		.byte	0x7
- 144 0035 58000000 		.4byte	.LASF3
- 145 0039 02       		.uleb128 0x2
- 146 003a 04       		.byte	0x4
- 147 003b 05       		.byte	0x5
- 148 003c DA010000 		.4byte	.LASF4
- 149 0040 02       		.uleb128 0x2
- 150 0041 04       		.byte	0x4
- 151 0042 07       		.byte	0x7
- 152 0043 46000000 		.4byte	.LASF5
- 153 0047 02       		.uleb128 0x2
- 154 0048 08       		.byte	0x8
- 155 0049 05       		.byte	0x5
- 156 004a B7010000 		.4byte	.LASF6
- 157 004e 02       		.uleb128 0x2
- 158 004f 08       		.byte	0x8
- 159 0050 07       		.byte	0x7
- 160 0051 2F010000 		.4byte	.LASF7
- 161 0055 03       		.uleb128 0x3
- 162 0056 04       		.byte	0x4
- 163 0057 05       		.byte	0x5
- 164 0058 696E7400 		.ascii	"int\000"
- 165 005c 02       		.uleb128 0x2
- 166 005d 04       		.byte	0x4
- 167 005e 07       		.byte	0x7
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 4
+ 115 0057 40       		.byte	64
+ 116 0058 09       		.byte	9
+ 117 0059 46       		.byte	70
+ 118 005a 01       		.byte	1
+ 119 005b 40       		.byte	64
+ 120 005c 09       		.byte	9
+ 121 005d 47       		.byte	71
+ 122 005e 01       		.byte	1
+ 123 005f 40       		.byte	64
+ 124 0060 13       		.byte	19
+ 125 0061 48       		.byte	72
+ 126 0062 01       		.byte	1
+ 127 0063 40       		.byte	64
+ 128 0064 1E       		.byte	30
+ 129 0065 49       		.byte	73
+ 130 0066 01       		.byte	1
+ 131 0067 40       		.byte	64
+ 132 0068 0E       		.byte	14
+ 133 0069 4C       		.byte	76
+ 134 006a 01       		.byte	1
+ 135 006b 40       		.byte	64
+ 136 006c 11       		.byte	17
+ 137 006d 4D       		.byte	77
+ 138 006e 01       		.byte	1
+ 139 006f 40       		.byte	64
+ 140 0070 04       		.byte	4
+ 141 0071 50       		.byte	80
+ 142 0072 01       		.byte	1
+ 143 0073 40       		.byte	64
+ 144 0074 00       		.byte	0
+ 145 0075 C9       		.byte	-55
+ 146 0076 01       		.byte	1
+ 147 0077 55       		.byte	85
+ 148 0078 0C       		.byte	12
+ 149 0079 E0       		.byte	-32
+ 150 007a 14       		.byte	20
+ 151 007b FF       		.byte	-1
+ 152 007c 18       		.byte	24
+ 153 007d 93       		.byte	-109
+ 154 007e 19       		.byte	25
+ 155 007f 55       		.byte	85
+ 156 0080 20       		.byte	32
+ 157 0081 15       		.byte	21
+ 158 0082 21       		.byte	33
+ 159 0083 19       		.byte	25
+ 160 0084 29       		.byte	41
+ 161 0085 10       		.byte	16
+ 162 0086 2C       		.byte	44
+ 163 0087 4F       		.byte	79
+ 164 0088 60       		.byte	96
+ 165 0089 03       		.byte	3
+ 166 008a 61       		.byte	97
+ 167 008b 05       		.byte	5
+ 168 008c 78       		.byte	120
+ 169 008d 05       		.byte	5
+ 170 008e 79       		.byte	121
+ 171 008f 0C       		.byte	12
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 4
 
 
- 168 005f 22010000 		.4byte	.LASF8
- 169 0063 04       		.uleb128 0x4
- 170 0064 D4010000 		.4byte	.LASF21
- 171 0068 02       		.byte	0x2
- 172 0069 C2       		.byte	0xc2
- 173 006a 24000000 		.4byte	0x24
- 174 006e 02       		.uleb128 0x2
- 175 006f 04       		.byte	0x4
- 176 0070 04       		.byte	0x4
- 177 0071 32000000 		.4byte	.LASF9
- 178 0075 02       		.uleb128 0x2
- 179 0076 08       		.byte	0x8
- 180 0077 04       		.byte	0x4
- 181 0078 6B000000 		.4byte	.LASF10
- 182 007c 02       		.uleb128 0x2
- 183 007d 01       		.byte	0x1
- 184 007e 08       		.byte	0x8
- 185 007f C5010000 		.4byte	.LASF11
- 186 0083 05       		.uleb128 0x5
- 187 0084 63000000 		.4byte	0x63
- 188 0088 93000000 		.4byte	0x93
- 189 008c 06       		.uleb128 0x6
- 190 008d 93000000 		.4byte	0x93
- 191 0091 2B       		.byte	0x2b
- 192 0092 00       		.byte	0
- 193 0093 02       		.uleb128 0x2
- 194 0094 04       		.byte	0x4
- 195 0095 07       		.byte	0x7
- 196 0096 AE010000 		.4byte	.LASF12
- 197 009a 07       		.uleb128 0x7
- 198 009b 82000000 		.4byte	.LASF13
- 199 009f 01       		.byte	0x1
- 200 00a0 1C       		.byte	0x1c
- 201 00a1 AB000000 		.4byte	0xab
- 202 00a5 05       		.uleb128 0x5
- 203 00a6 03       		.byte	0x3
- 204 00a7 00000000 		.4byte	cy_meta_configecc
- 205 00ab 08       		.uleb128 0x8
- 206 00ac 83000000 		.4byte	0x83
- 207 00b0 05       		.uleb128 0x5
- 208 00b1 63000000 		.4byte	0x63
- 209 00b5 C0000000 		.4byte	0xc0
- 210 00b9 06       		.uleb128 0x6
- 211 00ba 93000000 		.4byte	0x93
- 212 00be 03       		.byte	0x3
- 213 00bf 00       		.byte	0
- 214 00c0 07       		.uleb128 0x7
- 215 00c1 72000000 		.4byte	.LASF14
- 216 00c5 01       		.byte	0x1
- 217 00c6 2C       		.byte	0x2c
- 218 00c7 D1000000 		.4byte	0xd1
- 219 00cb 05       		.uleb128 0x5
- 220 00cc 03       		.byte	0x3
- 221 00cd 00000000 		.4byte	cy_meta_custnvl
- 222 00d1 08       		.uleb128 0x8
- 223 00d2 B0000000 		.4byte	0xb0
- 224 00d6 07       		.uleb128 0x7
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 5
+ 172 0090 81       		.byte	-127
+ 173 0091 04       		.byte	4
+ 174 0092 87       		.byte	-121
+ 175 0093 40       		.byte	64
+ 176 0094 94       		.byte	-108
+ 177 0095 04       		.byte	4
+ 178 0096 B4       		.byte	-76
+ 179 0097 04       		.byte	4
+ 180 0098 EE       		.byte	-18
+ 181 0099 40       		.byte	64
+ 182 009a 05       		.byte	5
+ 183 009b 33       		.byte	51
+ 184 009c 07       		.byte	7
+ 185 009d CC       		.byte	-52
+ 186 009e 09       		.byte	9
+ 187 009f 0F       		.byte	15
+ 188 00a0 0B       		.byte	11
+ 189 00a1 F0       		.byte	-16
+ 190 00a2 0C       		.byte	12
+ 191 00a3 01       		.byte	1
+ 192 00a4 0E       		.byte	14
+ 193 00a5 02       		.byte	2
+ 194 00a6 10       		.byte	16
+ 195 00a7 01       		.byte	1
+ 196 00a8 12       		.byte	18
+ 197 00a9 02       		.byte	2
+ 198 00aa 13       		.byte	19
+ 199 00ab FF       		.byte	-1
+ 200 00ac 15       		.byte	21
+ 201 00ad FF       		.byte	-1
+ 202 00ae 18       		.byte	24
+ 203 00af 02       		.byte	2
+ 204 00b0 19       		.byte	25
+ 205 00b1 55       		.byte	85
+ 206 00b2 1A       		.byte	26
+ 207 00b3 01       		.byte	1
+ 208 00b4 1B       		.byte	27
+ 209 00b5 AA       		.byte	-86
+ 210 00b6 1D       		.byte	29
+ 211 00b7 69       		.byte	105
+ 212 00b8 1E       		.byte	30
+ 213 00b9 04       		.byte	4
+ 214 00ba 1F       		.byte	31
+ 215 00bb 96       		.byte	-106
+ 216 00bc 21       		.byte	33
+ 217 00bd FF       		.byte	-1
+ 218 00be 22       		.byte	34
+ 219 00bf 04       		.byte	4
+ 220 00c0 28       		.byte	40
+ 221 00c1 01       		.byte	1
+ 222 00c2 2A       		.byte	42
+ 223 00c3 06       		.byte	6
+ 224 00c4 2C       		.byte	44
+ 225 00c5 04       		.byte	4
+ 226 00c6 30       		.byte	48
+ 227 00c7 04       		.byte	4
+ 228 00c8 31       		.byte	49
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 5
 
 
- 225 00d7 A0010000 		.4byte	.LASF15
- 226 00db 01       		.byte	0x1
- 227 00dc 37       		.byte	0x37
- 228 00dd E7000000 		.4byte	0xe7
- 229 00e1 05       		.uleb128 0x5
- 230 00e2 03       		.byte	0x3
- 231 00e3 00000000 		.4byte	cy_meta_wonvl
- 232 00e7 08       		.uleb128 0x8
- 233 00e8 B0000000 		.4byte	0xb0
- 234 00ec 05       		.uleb128 0x5
- 235 00ed 63000000 		.4byte	0x63
- 236 00f1 FC000000 		.4byte	0xfc
- 237 00f5 06       		.uleb128 0x6
- 238 00f6 93000000 		.4byte	0x93
- 239 00fa 7F       		.byte	0x7f
- 240 00fb 00       		.byte	0
- 241 00fc 07       		.uleb128 0x7
- 242 00fd 8B010000 		.4byte	.LASF16
- 243 0101 01       		.byte	0x1
- 244 0102 42       		.byte	0x42
- 245 0103 0D010000 		.4byte	0x10d
- 246 0107 05       		.uleb128 0x5
- 247 0108 03       		.byte	0x3
- 248 0109 00000000 		.4byte	cy_meta_flashprotect
- 249 010d 08       		.uleb128 0x8
- 250 010e EC000000 		.4byte	0xec
- 251 0112 05       		.uleb128 0x5
- 252 0113 63000000 		.4byte	0x63
- 253 0117 22010000 		.4byte	0x122
- 254 011b 06       		.uleb128 0x6
- 255 011c 93000000 		.4byte	0x93
- 256 0120 0B       		.byte	0xb
- 257 0121 00       		.byte	0
- 258 0122 07       		.uleb128 0x7
- 259 0123 26000000 		.4byte	.LASF17
- 260 0127 01       		.byte	0x1
- 261 0128 5C       		.byte	0x5c
- 262 0129 33010000 		.4byte	0x133
- 263 012d 05       		.uleb128 0x5
- 264 012e 03       		.byte	0x3
- 265 012f 00000000 		.4byte	cy_metadata
- 266 0133 08       		.uleb128 0x8
- 267 0134 12010000 		.4byte	0x112
- 268 0138 00       		.byte	0
- 269              		.section	.debug_abbrev,"",%progbits
- 270              	.Ldebug_abbrev0:
- 271 0000 01       		.uleb128 0x1
- 272 0001 11       		.uleb128 0x11
- 273 0002 01       		.byte	0x1
- 274 0003 25       		.uleb128 0x25
- 275 0004 0E       		.uleb128 0xe
- 276 0005 13       		.uleb128 0x13
- 277 0006 0B       		.uleb128 0xb
- 278 0007 03       		.uleb128 0x3
- 279 0008 0E       		.uleb128 0xe
- 280 0009 1B       		.uleb128 0x1b
- 281 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 6
+ 229 00c9 FF       		.byte	-1
+ 230 00ca 34       		.byte	52
+ 231 00cb 01       		.byte	1
+ 232 00cc 36       		.byte	54
+ 233 00cd 02       		.byte	2
+ 234 00ce 3E       		.byte	62
+ 235 00cf 51       		.byte	81
+ 236 00d0 3F       		.byte	63
+ 237 00d1 01       		.byte	1
+ 238 00d2 58       		.byte	88
+ 239 00d3 04       		.byte	4
+ 240 00d4 59       		.byte	89
+ 241 00d5 04       		.byte	4
+ 242 00d6 5F       		.byte	95
+ 243 00d7 01       		.byte	1
+ 244 00d8 81       		.byte	-127
+ 245 00d9 08       		.byte	8
+ 246 00da 85       		.byte	-123
+ 247 00db 06       		.byte	6
+ 248 00dc 87       		.byte	-121
+ 249 00dd 01       		.byte	1
+ 250 00de 8B       		.byte	-117
+ 251 00df 0F       		.byte	15
+ 252 00e0 8C       		.byte	-116
+ 253 00e1 08       		.byte	8
+ 254 00e2 90       		.byte	-112
+ 255 00e3 04       		.byte	4
+ 256 00e4 92       		.byte	-110
+ 257 00e5 03       		.byte	3
+ 258 00e6 93       		.byte	-109
+ 259 00e7 08       		.byte	8
+ 260 00e8 94       		.byte	-108
+ 261 00e9 0F       		.byte	15
+ 262 00ea 98       		.byte	-104
+ 263 00eb 05       		.byte	5
+ 264 00ec 99       		.byte	-103
+ 265 00ed 05       		.byte	5
+ 266 00ee 9A       		.byte	-102
+ 267 00ef 02       		.byte	2
+ 268 00f0 9B       		.byte	-101
+ 269 00f1 02       		.byte	2
+ 270 00f2 9D       		.byte	-99
+ 271 00f3 08       		.byte	8
+ 272 00f4 A2       		.byte	-94
+ 273 00f5 08       		.byte	8
+ 274 00f6 A4       		.byte	-92
+ 275 00f7 05       		.byte	5
+ 276 00f8 A6       		.byte	-90
+ 277 00f9 02       		.byte	2
+ 278 00fa AD       		.byte	-83
+ 279 00fb 01       		.byte	1
+ 280 00fc AE       		.byte	-82
+ 281 00fd 08       		.byte	8
+ 282 00fe AF       		.byte	-81
+ 283 00ff 06       		.byte	6
+ 284 0100 B0       		.byte	-80
+ 285 0101 08       		.byte	8
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 6
 
 
- 282 000b 10       		.uleb128 0x10
- 283 000c 17       		.uleb128 0x17
- 284 000d 00       		.byte	0
- 285 000e 00       		.byte	0
- 286 000f 02       		.uleb128 0x2
- 287 0010 24       		.uleb128 0x24
- 288 0011 00       		.byte	0
- 289 0012 0B       		.uleb128 0xb
- 290 0013 0B       		.uleb128 0xb
- 291 0014 3E       		.uleb128 0x3e
- 292 0015 0B       		.uleb128 0xb
- 293 0016 03       		.uleb128 0x3
- 294 0017 0E       		.uleb128 0xe
- 295 0018 00       		.byte	0
- 296 0019 00       		.byte	0
- 297 001a 03       		.uleb128 0x3
- 298 001b 24       		.uleb128 0x24
- 299 001c 00       		.byte	0
- 300 001d 0B       		.uleb128 0xb
- 301 001e 0B       		.uleb128 0xb
- 302 001f 3E       		.uleb128 0x3e
- 303 0020 0B       		.uleb128 0xb
- 304 0021 03       		.uleb128 0x3
- 305 0022 08       		.uleb128 0x8
- 306 0023 00       		.byte	0
- 307 0024 00       		.byte	0
- 308 0025 04       		.uleb128 0x4
- 309 0026 16       		.uleb128 0x16
- 310 0027 00       		.byte	0
- 311 0028 03       		.uleb128 0x3
- 312 0029 0E       		.uleb128 0xe
- 313 002a 3A       		.uleb128 0x3a
- 314 002b 0B       		.uleb128 0xb
- 315 002c 3B       		.uleb128 0x3b
- 316 002d 0B       		.uleb128 0xb
- 317 002e 49       		.uleb128 0x49
- 318 002f 13       		.uleb128 0x13
- 319 0030 00       		.byte	0
- 320 0031 00       		.byte	0
- 321 0032 05       		.uleb128 0x5
- 322 0033 01       		.uleb128 0x1
- 323 0034 01       		.byte	0x1
- 324 0035 49       		.uleb128 0x49
- 325 0036 13       		.uleb128 0x13
- 326 0037 01       		.uleb128 0x1
- 327 0038 13       		.uleb128 0x13
- 328 0039 00       		.byte	0
- 329 003a 00       		.byte	0
- 330 003b 06       		.uleb128 0x6
- 331 003c 21       		.uleb128 0x21
- 332 003d 00       		.byte	0
- 333 003e 49       		.uleb128 0x49
- 334 003f 13       		.uleb128 0x13
- 335 0040 2F       		.uleb128 0x2f
- 336 0041 0B       		.uleb128 0xb
- 337 0042 00       		.byte	0
- 338 0043 00       		.byte	0
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 7
+ 286 0102 B1       		.byte	-79
+ 287 0103 08       		.byte	8
+ 288 0104 B2       		.byte	-78
+ 289 0105 01       		.byte	1
+ 290 0106 B3       		.byte	-77
+ 291 0107 04       		.byte	4
+ 292 0108 B4       		.byte	-76
+ 293 0109 02       		.byte	2
+ 294 010a B5       		.byte	-75
+ 295 010b 01       		.byte	1
+ 296 010c B6       		.byte	-74
+ 297 010d 04       		.byte	4
+ 298 010e B7       		.byte	-73
+ 299 010f 02       		.byte	2
+ 300 0110 BE       		.byte	-66
+ 301 0111 55       		.byte	85
+ 302 0112 BF       		.byte	-65
+ 303 0113 55       		.byte	85
+ 304 0114 D8       		.byte	-40
+ 305 0115 04       		.byte	4
+ 306 0116 D9       		.byte	-39
+ 307 0117 04       		.byte	4
+ 308 0118 DF       		.byte	-33
+ 309 0119 01       		.byte	1
+ 310 011a 01       		.byte	1
+ 311 011b 40       		.byte	64
+ 312 011c 06       		.byte	6
+ 313 011d 02       		.byte	2
+ 314 011e 08       		.byte	8
+ 315 011f 60       		.byte	96
+ 316 0120 0A       		.byte	10
+ 317 0121 40       		.byte	64
+ 318 0122 0E       		.byte	14
+ 319 0123 40       		.byte	64
+ 320 0124 0F       		.byte	15
+ 321 0125 18       		.byte	24
+ 322 0126 10       		.byte	16
+ 323 0127 01       		.byte	1
+ 324 0128 11       		.byte	17
+ 325 0129 02       		.byte	2
+ 326 012a 13       		.byte	19
+ 327 012b 10       		.byte	16
+ 328 012c 14       		.byte	20
+ 329 012d 61       		.byte	97
+ 330 012e 19       		.byte	25
+ 331 012f 40       		.byte	64
+ 332 0130 1A       		.byte	26
+ 333 0131 88       		.byte	-120
+ 334 0132 1C       		.byte	28
+ 335 0133 24       		.byte	36
+ 336 0134 1E       		.byte	30
+ 337 0135 01       		.byte	1
+ 338 0136 1F       		.byte	31
+ 339 0137 02       		.byte	2
+ 340 0138 21       		.byte	33
+ 341 0139 01       		.byte	1
+ 342 013a 25       		.byte	37
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 7
 
 
- 339 0044 07       		.uleb128 0x7
- 340 0045 34       		.uleb128 0x34
- 341 0046 00       		.byte	0
- 342 0047 03       		.uleb128 0x3
- 343 0048 0E       		.uleb128 0xe
- 344 0049 3A       		.uleb128 0x3a
- 345 004a 0B       		.uleb128 0xb
- 346 004b 3B       		.uleb128 0x3b
- 347 004c 0B       		.uleb128 0xb
- 348 004d 49       		.uleb128 0x49
- 349 004e 13       		.uleb128 0x13
- 350 004f 3F       		.uleb128 0x3f
- 351 0050 19       		.uleb128 0x19
- 352 0051 02       		.uleb128 0x2
- 353 0052 18       		.uleb128 0x18
- 354 0053 00       		.byte	0
- 355 0054 00       		.byte	0
- 356 0055 08       		.uleb128 0x8
- 357 0056 26       		.uleb128 0x26
- 358 0057 00       		.byte	0
- 359 0058 49       		.uleb128 0x49
- 360 0059 13       		.uleb128 0x13
- 361 005a 00       		.byte	0
- 362 005b 00       		.byte	0
- 363 005c 00       		.byte	0
- 364              		.section	.debug_aranges,"",%progbits
- 365 0000 14000000 		.4byte	0x14
- 366 0004 0200     		.2byte	0x2
- 367 0006 00000000 		.4byte	.Ldebug_info0
- 368 000a 04       		.byte	0x4
- 369 000b 00       		.byte	0
- 370 000c 0000     		.2byte	0
- 371 000e 0000     		.2byte	0
- 372 0010 00000000 		.4byte	0
- 373 0014 00000000 		.4byte	0
- 374              		.section	.debug_line,"",%progbits
- 375              	.Ldebug_line0:
- 376 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
- 376      02004900 
- 376      00000201 
- 376      FB0E0D00 
- 376      01010101 
- 377              	.LASF19:
- 378 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
- 378      6E657261 
- 378      7465645F 
- 378      536F7572 
- 378      63655C50 
- 379              	.LASF17:
- 380 0026 63795F6D 		.ascii	"cy_metadata\000"
- 380      65746164 
- 380      61746100 
- 381              	.LASF9:
- 382 0032 666C6F61 		.ascii	"float\000"
- 382      7400
- 383              	.LASF1:
- 384 0038 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 8
+ 343 013b 84       		.byte	-124
+ 344 013c 27       		.byte	39
+ 345 013d 44       		.byte	68
+ 346 013e 2A       		.byte	42
+ 347 013f 01       		.byte	1
+ 348 0140 2E       		.byte	46
+ 349 0141 40       		.byte	64
+ 350 0142 31       		.byte	49
+ 351 0143 08       		.byte	8
+ 352 0144 32       		.byte	50
+ 353 0145 A1       		.byte	-95
+ 354 0146 34       		.byte	52
+ 355 0147 61       		.byte	97
+ 356 0148 39       		.byte	57
+ 357 0149 10       		.byte	16
+ 358 014a 3A       		.byte	58
+ 359 014b 04       		.byte	4
+ 360 014c 3D       		.byte	61
+ 361 014d 02       		.byte	2
+ 362 014e 3E       		.byte	62
+ 363 014f 02       		.byte	2
+ 364 0150 3F       		.byte	63
+ 365 0151 18       		.byte	24
+ 366 0152 83       		.byte	-125
+ 367 0153 40       		.byte	64
+ 368 0154 86       		.byte	-122
+ 369 0155 07       		.byte	7
+ 370 0156 88       		.byte	-120
+ 371 0157 30       		.byte	48
+ 372 0158 8D       		.byte	-115
+ 373 0159 40       		.byte	64
+ 374 015a 8E       		.byte	-114
+ 375 015b 41       		.byte	65
+ 376 015c 8F       		.byte	-113
+ 377 015d 04       		.byte	4
+ 378 015e 94       		.byte	-108
+ 379 015f 04       		.byte	4
+ 380 0160 97       		.byte	-105
+ 381 0161 80       		.byte	-128
+ 382 0162 9D       		.byte	-99
+ 383 0163 40       		.byte	64
+ 384 0164 A2       		.byte	-94
+ 385 0165 28       		.byte	40
+ 386 0166 A5       		.byte	-91
+ 387 0167 04       		.byte	4
+ 388 0168 AE       		.byte	-82
+ 389 0169 28       		.byte	40
+ 390 016a B1       		.byte	-79
+ 391 016b 40       		.byte	64
+ 392 016c C0       		.byte	-64
+ 393 016d 81       		.byte	-127
+ 394 016e C2       		.byte	-62
+ 395 016f 7B       		.byte	123
+ 396 0170 C4       		.byte	-60
+ 397 0171 BB       		.byte	-69
+ 398 0172 CA       		.byte	-54
+ 399 0173 11       		.byte	17
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 8
 
 
- 384      676E6564 
- 384      20636861 
- 384      7200
- 385              	.LASF5:
- 386 0046 6C6F6E67 		.ascii	"long unsigned int\000"
- 386      20756E73 
- 386      69676E65 
- 386      6420696E 
- 386      7400
- 387              	.LASF3:
- 388 0058 73686F72 		.ascii	"short unsigned int\000"
- 388      7420756E 
- 388      7369676E 
- 388      65642069 
- 388      6E7400
- 389              	.LASF10:
- 390 006b 646F7562 		.ascii	"double\000"
- 390      6C6500
- 391              	.LASF14:
- 392 0072 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 392      6574615F 
- 392      63757374 
- 392      6E766C00 
- 393              	.LASF13:
- 394 0082 63795F6D 		.ascii	"cy_meta_configecc\000"
- 394      6574615F 
- 394      636F6E66 
- 394      69676563 
- 394      6300
- 395              	.LASF18:
- 396 0094 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 396      4320342E 
- 396      392E3320 
- 396      32303135 
- 396      30333033 
- 397 00c7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 397      20726576 
- 397      6973696F 
- 397      6E203232 
- 397      31323230 
- 398 00fa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 398      66756E63 
- 398      74696F6E 
- 398      2D736563 
- 398      74696F6E 
- 399              	.LASF8:
- 400 0122 756E7369 		.ascii	"unsigned int\000"
- 400      676E6564 
- 400      20696E74 
- 400      00
- 401              	.LASF7:
- 402 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 402      206C6F6E 
- 402      6720756E 
- 402      7369676E 
- 402      65642069 
- 403              	.LASF20:
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccesSAs0.s 			page 9
+ 400 0174 CC       		.byte	-52
+ 401 0175 BF       		.byte	-65
+ 402 0176 CE       		.byte	-50
+ 403 0177 E6       		.byte	-26
+ 404 0178 E0       		.byte	-32
+ 405 0179 02       		.byte	2
+ 406 017a E2       		.byte	-30
+ 407 017b 10       		.byte	16
+ 408 017c E6       		.byte	-26
+ 409 017d 82       		.byte	-126
+ 410 017e EA       		.byte	-22
+ 411 017f 88       		.byte	-120
+ 412 0180 EE       		.byte	-18
+ 413 0181 02       		.byte	2
+ 414 0182 05       		.byte	5
+ 415 0183 03       		.byte	3
+ 416 0184 08       		.byte	8
+ 417 0185 02       		.byte	2
+ 418 0186 09       		.byte	9
+ 419 0187 06       		.byte	6
+ 420 0188 0B       		.byte	11
+ 421 0189 01       		.byte	1
+ 422 018a 0D       		.byte	13
+ 423 018b 01       		.byte	1
+ 424 018c 0F       		.byte	15
+ 425 018d 02       		.byte	2
+ 426 018e 10       		.byte	16
+ 427 018f 05       		.byte	5
+ 428 0190 11       		.byte	17
+ 429 0191 04       		.byte	4
+ 430 0192 14       		.byte	20
+ 431 0193 03       		.byte	3
+ 432 0194 16       		.byte	22
+ 433 0195 04       		.byte	4
+ 434 0196 19       		.byte	25
+ 435 0197 01       		.byte	1
+ 436 0198 1A       		.byte	26
+ 437 0199 05       		.byte	5
+ 438 019a 1B       		.byte	27
+ 439 019b 02       		.byte	2
+ 440 019c 1E       		.byte	30
+ 441 019d 02       		.byte	2
+ 442 019e 21       		.byte	33
+ 443 019f 04       		.byte	4
+ 444 01a0 26       		.byte	38
+ 445 01a1 05       		.byte	5
+ 446 01a2 2B       		.byte	43
+ 447 01a3 04       		.byte	4
+ 448 01a4 2C       		.byte	44
+ 449 01a5 02       		.byte	2
+ 450 01a6 30       		.byte	48
+ 451 01a7 02       		.byte	2
+ 452 01a8 32       		.byte	50
+ 453 01a9 04       		.byte	4
+ 454 01aa 33       		.byte	51
+ 455 01ab 04       		.byte	4
+ 456 01ac 35       		.byte	53
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 9
 
 
- 404 0146 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\PSoC Creator\\RPPSO"
- 404      73657273 
- 404      5C646F75 
- 404      675F3030 
- 404      305C446F 
- 405 0174 432D3030 		.ascii	"C-001\\RPPSOC-001.cydsn\000"
- 405      315C5250 
- 405      50534F43 
- 405      2D303031 
- 405      2E637964 
- 406              	.LASF16:
- 407 018b 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 407      6574615F 
- 407      666C6173 
- 407      6870726F 
- 407      74656374 
- 408              	.LASF15:
- 409 01a0 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 409      6574615F 
- 409      776F6E76 
- 409      6C00
- 410              	.LASF12:
- 411 01ae 73697A65 		.ascii	"sizetype\000"
- 411      74797065 
- 411      00
- 412              	.LASF6:
- 413 01b7 6C6F6E67 		.ascii	"long long int\000"
- 413      206C6F6E 
- 413      6720696E 
- 413      7400
- 414              	.LASF11:
- 415 01c5 63686172 		.ascii	"char\000"
- 415      00
- 416              	.LASF2:
- 417 01ca 73686F72 		.ascii	"short int\000"
- 417      7420696E 
- 417      7400
- 418              	.LASF21:
- 419 01d4 75696E74 		.ascii	"uint8\000"
- 419      3800
- 420              	.LASF4:
- 421 01da 6C6F6E67 		.ascii	"long int\000"
- 421      20696E74 
- 421      00
- 422              	.LASF0:
- 423 01e3 7369676E 		.ascii	"signed char\000"
- 423      65642063 
- 423      68617200 
- 424              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 457 01ad 01       		.byte	1
+ 458 01ae 36       		.byte	54
+ 459 01af 01       		.byte	1
+ 460 01b0 37       		.byte	55
+ 461 01b1 02       		.byte	2
+ 462 01b2 3E       		.byte	62
+ 463 01b3 45       		.byte	69
+ 464 01b4 3F       		.byte	63
+ 465 01b5 54       		.byte	84
+ 466 01b6 58       		.byte	88
+ 467 01b7 04       		.byte	4
+ 468 01b8 59       		.byte	89
+ 469 01b9 04       		.byte	4
+ 470 01ba 5F       		.byte	95
+ 471 01bb 01       		.byte	1
+ 472 01bc 80       		.byte	-128
+ 473 01bd 96       		.byte	-106
+ 474 01be 81       		.byte	-127
+ 475 01bf 01       		.byte	1
+ 476 01c0 82       		.byte	-126
+ 477 01c1 69       		.byte	105
+ 478 01c2 85       		.byte	-123
+ 479 01c3 01       		.byte	1
+ 480 01c4 88       		.byte	-120
+ 481 01c5 33       		.byte	51
+ 482 01c6 8A       		.byte	-118
+ 483 01c7 CC       		.byte	-52
+ 484 01c8 8B       		.byte	-117
+ 485 01c9 02       		.byte	2
+ 486 01ca 8C       		.byte	-116
+ 487 01cb FF       		.byte	-1
+ 488 01cc 8D       		.byte	-115
+ 489 01cd 02       		.byte	2
+ 490 01ce 91       		.byte	-111
+ 491 01cf 01       		.byte	1
+ 492 01d0 96       		.byte	-106
+ 493 01d1 FF       		.byte	-1
+ 494 01d2 97       		.byte	-105
+ 495 01d3 02       		.byte	2
+ 496 01d4 99       		.byte	-103
+ 497 01d5 01       		.byte	1
+ 498 01d6 9D       		.byte	-99
+ 499 01d7 01       		.byte	1
+ 500 01d8 9E       		.byte	-98
+ 501 01d9 FF       		.byte	-1
+ 502 01da A1       		.byte	-95
+ 503 01db 02       		.byte	2
+ 504 01dc A4       		.byte	-92
+ 505 01dd 55       		.byte	85
+ 506 01de A5       		.byte	-91
+ 507 01df 01       		.byte	1
+ 508 01e0 A6       		.byte	-90
+ 509 01e1 AA       		.byte	-86
+ 510 01e2 A8       		.byte	-88
+ 511 01e3 0F       		.byte	15
+ 512 01e4 A9       		.byte	-87
+ 513 01e5 01       		.byte	1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 10
+
+
+ 514 01e6 AA       		.byte	-86
+ 515 01e7 F0       		.byte	-16
+ 516 01e8 AD       		.byte	-83
+ 517 01e9 01       		.byte	1
+ 518 01ea B0       		.byte	-80
+ 519 01eb FF       		.byte	-1
+ 520 01ec B1       		.byte	-79
+ 521 01ed 01       		.byte	1
+ 522 01ee B7       		.byte	-73
+ 523 01ef 02       		.byte	2
+ 524 01f0 B9       		.byte	-71
+ 525 01f1 02       		.byte	2
+ 526 01f2 BE       		.byte	-66
+ 527 01f3 01       		.byte	1
+ 528 01f4 BF       		.byte	-65
+ 529 01f5 41       		.byte	65
+ 530 01f6 D8       		.byte	-40
+ 531 01f7 04       		.byte	4
+ 532 01f8 D9       		.byte	-39
+ 533 01f9 04       		.byte	4
+ 534 01fa DF       		.byte	-33
+ 535 01fb 01       		.byte	1
+ 536 01fc 02       		.byte	2
+ 537 01fd 85       		.byte	-123
+ 538 01fe 03       		.byte	3
+ 539 01ff 04       		.byte	4
+ 540 0200 05       		.byte	5
+ 541 0201 20       		.byte	32
+ 542 0202 08       		.byte	8
+ 543 0203 20       		.byte	32
+ 544 0204 09       		.byte	9
+ 545 0205 08       		.byte	8
+ 546 0206 0A       		.byte	10
+ 547 0207 0A       		.byte	10
+ 548 0208 0C       		.byte	12
+ 549 0209 40       		.byte	64
+ 550 020a 0E       		.byte	14
+ 551 020b 40       		.byte	64
+ 552 020c 0F       		.byte	15
+ 553 020d 18       		.byte	24
+ 554 020e 11       		.byte	17
+ 555 020f 10       		.byte	16
+ 556 0210 12       		.byte	18
+ 557 0211 28       		.byte	40
+ 558 0212 14       		.byte	20
+ 559 0213 21       		.byte	33
+ 560 0214 1A       		.byte	26
+ 561 0215 80       		.byte	-128
+ 562 0216 1C       		.byte	28
+ 563 0217 40       		.byte	64
+ 564 0218 1E       		.byte	30
+ 565 0219 20       		.byte	32
+ 566 021a 1F       		.byte	31
+ 567 021b 40       		.byte	64
+ 568 021c 22       		.byte	34
+ 569 021d 02       		.byte	2
+ 570 021e 23       		.byte	35
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 11
+
+
+ 571 021f 02       		.byte	2
+ 572 0220 24       		.byte	36
+ 573 0221 04       		.byte	4
+ 574 0222 25       		.byte	37
+ 575 0223 40       		.byte	64
+ 576 0224 27       		.byte	39
+ 577 0225 10       		.byte	16
+ 578 0226 29       		.byte	41
+ 579 0227 44       		.byte	68
+ 580 0228 2A       		.byte	42
+ 581 0229 20       		.byte	32
+ 582 022a 2B       		.byte	43
+ 583 022b 40       		.byte	64
+ 584 022c 2C       		.byte	44
+ 585 022d 40       		.byte	64
+ 586 022e 2D       		.byte	45
+ 587 022f 20       		.byte	32
+ 588 0230 31       		.byte	49
+ 589 0231 22       		.byte	34
+ 590 0232 32       		.byte	50
+ 591 0233 44       		.byte	68
+ 592 0234 34       		.byte	52
+ 593 0235 21       		.byte	33
+ 594 0236 39       		.byte	57
+ 595 0237 4A       		.byte	74
+ 596 0238 3B       		.byte	59
+ 597 0239 10       		.byte	16
+ 598 023a 3E       		.byte	62
+ 599 023b 40       		.byte	64
+ 600 023c 3F       		.byte	63
+ 601 023d 98       		.byte	-104
+ 602 023e 87       		.byte	-121
+ 603 023f 02       		.byte	2
+ 604 0240 89       		.byte	-119
+ 605 0241 60       		.byte	96
+ 606 0242 8C       		.byte	-116
+ 607 0243 44       		.byte	68
+ 608 0244 8F       		.byte	-113
+ 609 0245 04       		.byte	4
+ 610 0246 91       		.byte	-111
+ 611 0247 42       		.byte	66
+ 612 0248 92       		.byte	-110
+ 613 0249 02       		.byte	2
+ 614 024a 95       		.byte	-107
+ 615 024b 10       		.byte	16
+ 616 024c 96       		.byte	-106
+ 617 024d 40       		.byte	64
+ 618 024e 97       		.byte	-105
+ 619 024f 90       		.byte	-112
+ 620 0250 98       		.byte	-104
+ 621 0251 20       		.byte	32
+ 622 0252 9A       		.byte	-102
+ 623 0253 01       		.byte	1
+ 624 0254 9C       		.byte	-100
+ 625 0255 41       		.byte	65
+ 626 0256 9E       		.byte	-98
+ 627 0257 04       		.byte	4
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 12
+
+
+ 628 0258 A1       		.byte	-95
+ 629 0259 08       		.byte	8
+ 630 025a A2       		.byte	-94
+ 631 025b A8       		.byte	-88
+ 632 025c A3       		.byte	-93
+ 633 025d 04       		.byte	4
+ 634 025e A5       		.byte	-91
+ 635 025f 01       		.byte	1
+ 636 0260 A6       		.byte	-90
+ 637 0261 02       		.byte	2
+ 638 0262 AE       		.byte	-82
+ 639 0263 01       		.byte	1
+ 640 0264 B1       		.byte	-79
+ 641 0265 08       		.byte	8
+ 642 0266 B5       		.byte	-75
+ 643 0267 80       		.byte	-128
+ 644 0268 B6       		.byte	-74
+ 645 0269 80       		.byte	-128
+ 646 026a B7       		.byte	-73
+ 647 026b 06       		.byte	6
+ 648 026c C0       		.byte	-64
+ 649 026d 4B       		.byte	75
+ 650 026e C2       		.byte	-62
+ 651 026f F5       		.byte	-11
+ 652 0270 C4       		.byte	-60
+ 653 0271 A6       		.byte	-90
+ 654 0272 CA       		.byte	-54
+ 655 0273 AF       		.byte	-81
+ 656 0274 CC       		.byte	-52
+ 657 0275 AF       		.byte	-81
+ 658 0276 CE       		.byte	-50
+ 659 0277 7F       		.byte	127
+ 660 0278 E2       		.byte	-30
+ 661 0279 40       		.byte	64
+ 662 027a E6       		.byte	-26
+ 663 027b 60       		.byte	96
+ 664 027c EA       		.byte	-22
+ 665 027d 10       		.byte	16
+ 666 027e EE       		.byte	-18
+ 667 027f 50       		.byte	80
+ 668 0280 00       		.byte	0
+ 669 0281 01       		.byte	1
+ 670 0282 01       		.byte	1
+ 671 0283 0F       		.byte	15
+ 672 0284 03       		.byte	3
+ 673 0285 F0       		.byte	-16
+ 674 0286 04       		.byte	4
+ 675 0287 01       		.byte	1
+ 676 0288 05       		.byte	5
+ 677 0289 69       		.byte	105
+ 678 028a 07       		.byte	7
+ 679 028b 96       		.byte	-106
+ 680 028c 08       		.byte	8
+ 681 028d 01       		.byte	1
+ 682 028e 0C       		.byte	12
+ 683 028f 10       		.byte	16
+ 684 0290 0E       		.byte	14
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 13
+
+
+ 685 0291 26       		.byte	38
+ 686 0292 10       		.byte	16
+ 687 0293 01       		.byte	1
+ 688 0294 11       		.byte	17
+ 689 0295 55       		.byte	85
+ 690 0296 13       		.byte	19
+ 691 0297 AA       		.byte	-86
+ 692 0298 14       		.byte	20
+ 693 0299 08       		.byte	8
+ 694 029a 15       		.byte	21
+ 695 029b FF       		.byte	-1
+ 696 029c 16       		.byte	22
+ 697 029d 24       		.byte	36
+ 698 029e 19       		.byte	25
+ 699 029f FF       		.byte	-1
+ 700 02a0 1A       		.byte	26
+ 701 02a1 2A       		.byte	42
+ 702 02a2 1E       		.byte	30
+ 703 02a3 0A       		.byte	10
+ 704 02a4 20       		.byte	32
+ 705 02a5 01       		.byte	1
+ 706 02a6 23       		.byte	35
+ 707 02a7 FF       		.byte	-1
+ 708 02a8 24       		.byte	36
+ 709 02a9 01       		.byte	1
+ 710 02aa 28       		.byte	40
+ 711 02ab 01       		.byte	1
+ 712 02ac 29       		.byte	41
+ 713 02ad 33       		.byte	51
+ 714 02ae 2B       		.byte	43
+ 715 02af CC       		.byte	-52
+ 716 02b0 2C       		.byte	44
+ 717 02b1 01       		.byte	1
+ 718 02b2 30       		.byte	48
+ 719 02b3 01       		.byte	1
+ 720 02b4 32       		.byte	50
+ 721 02b5 18       		.byte	24
+ 722 02b6 33       		.byte	51
+ 723 02b7 FF       		.byte	-1
+ 724 02b8 34       		.byte	52
+ 725 02b9 06       		.byte	6
+ 726 02ba 36       		.byte	54
+ 727 02bb 22       		.byte	34
+ 728 02bc 38       		.byte	56
+ 729 02bd 02       		.byte	2
+ 730 02be 3A       		.byte	58
+ 731 02bf AC       		.byte	-84
+ 732 02c0 3E       		.byte	62
+ 733 02c1 01       		.byte	1
+ 734 02c2 3F       		.byte	63
+ 735 02c3 04       		.byte	4
+ 736 02c4 58       		.byte	88
+ 737 02c5 04       		.byte	4
+ 738 02c6 59       		.byte	89
+ 739 02c7 04       		.byte	4
+ 740 02c8 5F       		.byte	95
+ 741 02c9 01       		.byte	1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 14
+
+
+ 742 02ca 81       		.byte	-127
+ 743 02cb 0F       		.byte	15
+ 744 02cc 83       		.byte	-125
+ 745 02cd F0       		.byte	-16
+ 746 02ce 86       		.byte	-122
+ 747 02cf FF       		.byte	-1
+ 748 02d0 89       		.byte	-119
+ 749 02d1 69       		.byte	105
+ 750 02d2 8A       		.byte	-118
+ 751 02d3 FF       		.byte	-1
+ 752 02d4 8B       		.byte	-117
+ 753 02d5 96       		.byte	-106
+ 754 02d6 8C       		.byte	-116
+ 755 02d7 FF       		.byte	-1
+ 756 02d8 90       		.byte	-112
+ 757 02d9 0F       		.byte	15
+ 758 02da 91       		.byte	-111
+ 759 02db 55       		.byte	85
+ 760 02dc 92       		.byte	-110
+ 761 02dd F0       		.byte	-16
+ 762 02de 93       		.byte	-109
+ 763 02df AA       		.byte	-86
+ 764 02e0 95       		.byte	-107
+ 765 02e1 33       		.byte	51
+ 766 02e2 97       		.byte	-105
+ 767 02e3 CC       		.byte	-52
+ 768 02e4 99       		.byte	-103
+ 769 02e5 FF       		.byte	-1
+ 770 02e6 9C       		.byte	-100
+ 771 02e7 33       		.byte	51
+ 772 02e8 9E       		.byte	-98
+ 773 02e9 CC       		.byte	-52
+ 774 02ea A0       		.byte	-96
+ 775 02eb 55       		.byte	85
+ 776 02ec A1       		.byte	-95
+ 777 02ed FF       		.byte	-1
+ 778 02ee A2       		.byte	-94
+ 779 02ef AA       		.byte	-86
+ 780 02f0 AB       		.byte	-85
+ 781 02f1 FF       		.byte	-1
+ 782 02f2 AC       		.byte	-84
+ 783 02f3 96       		.byte	-106
+ 784 02f4 AE       		.byte	-82
+ 785 02f5 69       		.byte	105
+ 786 02f6 B3       		.byte	-77
+ 787 02f7 FF       		.byte	-1
+ 788 02f8 B6       		.byte	-74
+ 789 02f9 FF       		.byte	-1
+ 790 02fa BE       		.byte	-66
+ 791 02fb 40       		.byte	64
+ 792 02fc BF       		.byte	-65
+ 793 02fd 04       		.byte	4
+ 794 02fe D8       		.byte	-40
+ 795 02ff 04       		.byte	4
+ 796 0300 D9       		.byte	-39
+ 797 0301 04       		.byte	4
+ 798 0302 DF       		.byte	-33
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 15
+
+
+ 799 0303 01       		.byte	1
+ 800 0304 00       		.byte	0
+ 801 0305 80       		.byte	-128
+ 802 0306 01       		.byte	1
+ 803 0307 20       		.byte	32
+ 804 0308 03       		.byte	3
+ 805 0309 10       		.byte	16
+ 806 030a 04       		.byte	4
+ 807 030b 10       		.byte	16
+ 808 030c 05       		.byte	5
+ 809 030d 46       		.byte	70
+ 810 030e 0B       		.byte	11
+ 811 030f 81       		.byte	-127
+ 812 0310 0E       		.byte	14
+ 813 0311 26       		.byte	38
+ 814 0312 0F       		.byte	15
+ 815 0313 80       		.byte	-128
+ 816 0314 10       		.byte	16
+ 817 0315 02       		.byte	2
+ 818 0316 11       		.byte	17
+ 819 0317 02       		.byte	2
+ 820 0318 15       		.byte	21
+ 821 0319 0A       		.byte	10
+ 822 031a 17       		.byte	23
+ 823 031b 60       		.byte	96
+ 824 031c 19       		.byte	25
+ 825 031d 80       		.byte	-128
+ 826 031e 1D       		.byte	29
+ 827 031f 02       		.byte	2
+ 828 0320 1E       		.byte	30
+ 829 0321 26       		.byte	38
+ 830 0322 21       		.byte	33
+ 831 0323 04       		.byte	4
+ 832 0324 27       		.byte	39
+ 833 0325 20       		.byte	32
+ 834 0326 28       		.byte	40
+ 835 0327 48       		.byte	72
+ 836 0328 2C       		.byte	44
+ 837 0329 48       		.byte	72
+ 838 032a 30       		.byte	48
+ 839 032b 08       		.byte	8
+ 840 032c 31       		.byte	49
+ 841 032d 10       		.byte	16
+ 842 032e 33       		.byte	51
+ 843 032f 01       		.byte	1
+ 844 0330 34       		.byte	52
+ 845 0331 08       		.byte	8
+ 846 0332 35       		.byte	53
+ 847 0333 10       		.byte	16
+ 848 0334 37       		.byte	55
+ 849 0335 01       		.byte	1
+ 850 0336 39       		.byte	57
+ 851 0337 20       		.byte	32
+ 852 0338 3A       		.byte	58
+ 853 0339 02       		.byte	2
+ 854 033a 3E       		.byte	62
+ 855 033b 02       		.byte	2
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 16
+
+
+ 856 033c 3F       		.byte	63
+ 857 033d 08       		.byte	8
+ 858 033e 81       		.byte	-127
+ 859 033f 10       		.byte	16
+ 860 0340 84       		.byte	-124
+ 861 0341 40       		.byte	64
+ 862 0342 89       		.byte	-119
+ 863 0343 80       		.byte	-128
+ 864 0344 8E       		.byte	-114
+ 865 0345 06       		.byte	6
+ 866 0346 8F       		.byte	-113
+ 867 0347 01       		.byte	1
+ 868 0348 90       		.byte	-112
+ 869 0349 10       		.byte	16
+ 870 034a 91       		.byte	-111
+ 871 034b 22       		.byte	34
+ 872 034c 93       		.byte	-109
+ 873 034d 81       		.byte	-127
+ 874 034e 94       		.byte	-108
+ 875 034f 40       		.byte	64
+ 876 0350 9A       		.byte	-102
+ 877 0351 80       		.byte	-128
+ 878 0352 9B       		.byte	-101
+ 879 0353 11       		.byte	17
+ 880 0354 9C       		.byte	-100
+ 881 0355 48       		.byte	72
+ 882 0356 9D       		.byte	-99
+ 883 0357 10       		.byte	16
+ 884 0358 9E       		.byte	-98
+ 885 0359 02       		.byte	2
+ 886 035a A0       		.byte	-96
+ 887 035b 42       		.byte	66
+ 888 035c A2       		.byte	-94
+ 889 035d 08       		.byte	8
+ 890 035e A3       		.byte	-93
+ 891 035f 44       		.byte	68
+ 892 0360 A4       		.byte	-92
+ 893 0361 08       		.byte	8
+ 894 0362 A6       		.byte	-90
+ 895 0363 80       		.byte	-128
+ 896 0364 B0       		.byte	-80
+ 897 0365 40       		.byte	64
+ 898 0366 B1       		.byte	-79
+ 899 0367 40       		.byte	64
+ 900 0368 B2       		.byte	-78
+ 901 0369 80       		.byte	-128
+ 902 036a B3       		.byte	-77
+ 903 036b 04       		.byte	4
+ 904 036c B5       		.byte	-75
+ 905 036d 40       		.byte	64
+ 906 036e B7       		.byte	-73
+ 907 036f 01       		.byte	1
+ 908 0370 C0       		.byte	-64
+ 909 0371 F7       		.byte	-9
+ 910 0372 C2       		.byte	-62
+ 911 0373 F9       		.byte	-7
+ 912 0374 C4       		.byte	-60
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 17
+
+
+ 913 0375 F9       		.byte	-7
+ 914 0376 CA       		.byte	-54
+ 915 0377 A5       		.byte	-91
+ 916 0378 CC       		.byte	-52
+ 917 0379 E7       		.byte	-25
+ 918 037a CE       		.byte	-50
+ 919 037b C5       		.byte	-59
+ 920 037c E6       		.byte	-26
+ 921 037d 9C       		.byte	-100
+ 922 037e EA       		.byte	-22
+ 923 037f 40       		.byte	64
+ 924 0380 EE       		.byte	-18
+ 925 0381 20       		.byte	32
+ 926 0382 01       		.byte	1
+ 927 0383 0F       		.byte	15
+ 928 0384 03       		.byte	3
+ 929 0385 F0       		.byte	-16
+ 930 0386 05       		.byte	5
+ 931 0387 55       		.byte	85
+ 932 0388 07       		.byte	7
+ 933 0389 AA       		.byte	-86
+ 934 038a 09       		.byte	9
+ 935 038b 96       		.byte	-106
+ 936 038c 0B       		.byte	11
+ 937 038d 69       		.byte	105
+ 938 038e 0C       		.byte	12
+ 939 038f 0F       		.byte	15
+ 940 0390 0E       		.byte	14
+ 941 0391 F0       		.byte	-16
+ 942 0392 10       		.byte	16
+ 943 0393 96       		.byte	-106
+ 944 0394 12       		.byte	18
+ 945 0395 69       		.byte	105
+ 946 0396 14       		.byte	20
+ 947 0397 33       		.byte	51
+ 948 0398 15       		.byte	21
+ 949 0399 33       		.byte	51
+ 950 039a 16       		.byte	22
+ 951 039b CC       		.byte	-52
+ 952 039c 17       		.byte	23
+ 953 039d CC       		.byte	-52
+ 954 039e 18       		.byte	24
+ 955 039f 55       		.byte	85
+ 956 03a0 19       		.byte	25
+ 957 03a1 FF       		.byte	-1
+ 958 03a2 1A       		.byte	26
+ 959 03a3 AA       		.byte	-86
+ 960 03a4 1C       		.byte	28
+ 961 03a5 FF       		.byte	-1
+ 962 03a6 23       		.byte	35
+ 963 03a7 FF       		.byte	-1
+ 964 03a8 26       		.byte	38
+ 965 03a9 FF       		.byte	-1
+ 966 03aa 2A       		.byte	42
+ 967 03ab FF       		.byte	-1
+ 968 03ac 2B       		.byte	43
+ 969 03ad FF       		.byte	-1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 18
+
+
+ 970 03ae 31       		.byte	49
+ 971 03af FF       		.byte	-1
+ 972 03b0 36       		.byte	54
+ 973 03b1 FF       		.byte	-1
+ 974 03b2 3E       		.byte	62
+ 975 03b3 40       		.byte	64
+ 976 03b4 3F       		.byte	63
+ 977 03b5 01       		.byte	1
+ 978 03b6 58       		.byte	88
+ 979 03b7 04       		.byte	4
+ 980 03b8 59       		.byte	89
+ 981 03b9 04       		.byte	4
+ 982 03ba 5F       		.byte	95
+ 983 03bb 01       		.byte	1
+ 984 03bc 81       		.byte	-127
+ 985 03bd 33       		.byte	51
+ 986 03be 83       		.byte	-125
+ 987 03bf CC       		.byte	-52
+ 988 03c0 85       		.byte	-123
+ 989 03c1 55       		.byte	85
+ 990 03c2 87       		.byte	-121
+ 991 03c3 AA       		.byte	-86
+ 992 03c4 8A       		.byte	-118
+ 993 03c5 FF       		.byte	-1
+ 994 03c6 8C       		.byte	-116
+ 995 03c7 55       		.byte	85
+ 996 03c8 8E       		.byte	-114
+ 997 03c9 AA       		.byte	-86
+ 998 03ca 8F       		.byte	-113
+ 999 03cb FF       		.byte	-1
+ 1000 03cc 94       		.byte	-108
+ 1001 03cd 33       		.byte	51
+ 1002 03ce 96       		.byte	-106
+ 1003 03cf CC       		.byte	-52
+ 1004 03d0 98       		.byte	-104
+ 1005 03d1 69       		.byte	105
+ 1006 03d2 9A       		.byte	-102
+ 1007 03d3 96       		.byte	-106
+ 1008 03d4 9B       		.byte	-101
+ 1009 03d5 FF       		.byte	-1
+ 1010 03d6 9E       		.byte	-98
+ 1011 03d7 FF       		.byte	-1
+ 1012 03d8 9F       		.byte	-97
+ 1013 03d9 FF       		.byte	-1
+ 1014 03da A1       		.byte	-95
+ 1015 03db 0F       		.byte	15
+ 1016 03dc A3       		.byte	-93
+ 1017 03dd F0       		.byte	-16
+ 1018 03de AA       		.byte	-86
+ 1019 03df FF       		.byte	-1
+ 1020 03e0 AC       		.byte	-84
+ 1021 03e1 0F       		.byte	15
+ 1022 03e2 AD       		.byte	-83
+ 1023 03e3 69       		.byte	105
+ 1024 03e4 AE       		.byte	-82
+ 1025 03e5 F0       		.byte	-16
+ 1026 03e6 AF       		.byte	-81
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 19
+
+
+ 1027 03e7 96       		.byte	-106
+ 1028 03e8 B2       		.byte	-78
+ 1029 03e9 FF       		.byte	-1
+ 1030 03ea B3       		.byte	-77
+ 1031 03eb FF       		.byte	-1
+ 1032 03ec BE       		.byte	-66
+ 1033 03ed 04       		.byte	4
+ 1034 03ee BF       		.byte	-65
+ 1035 03ef 04       		.byte	4
+ 1036 03f0 D8       		.byte	-40
+ 1037 03f1 04       		.byte	4
+ 1038 03f2 D9       		.byte	-39
+ 1039 03f3 04       		.byte	4
+ 1040 03f4 DF       		.byte	-33
+ 1041 03f5 01       		.byte	1
+ 1042 03f6 02       		.byte	2
+ 1043 03f7 01       		.byte	1
+ 1044 03f8 05       		.byte	5
+ 1045 03f9 50       		.byte	80
+ 1046 03fa 07       		.byte	7
+ 1047 03fb 09       		.byte	9
+ 1048 03fc 08       		.byte	8
+ 1049 03fd 40       		.byte	64
+ 1050 03fe 09       		.byte	9
+ 1051 03ff 0A       		.byte	10
+ 1052 0400 0B       		.byte	11
+ 1053 0401 08       		.byte	8
+ 1054 0402 0C       		.byte	12
+ 1055 0403 48       		.byte	72
+ 1056 0404 0D       		.byte	13
+ 1057 0405 18       		.byte	24
+ 1058 0406 0F       		.byte	15
+ 1059 0407 08       		.byte	8
+ 1060 0408 13       		.byte	19
+ 1061 0409 28       		.byte	40
+ 1062 040a 14       		.byte	20
+ 1063 040b 08       		.byte	8
+ 1064 040c 16       		.byte	22
+ 1065 040d 03       		.byte	3
+ 1066 040e 17       		.byte	23
+ 1067 040f 20       		.byte	32
+ 1068 0410 1B       		.byte	27
+ 1069 0411 40       		.byte	64
+ 1070 0412 1C       		.byte	28
+ 1071 0413 10       		.byte	16
+ 1072 0414 21       		.byte	33
+ 1073 0415 01       		.byte	1
+ 1074 0416 26       		.byte	38
+ 1075 0417 08       		.byte	8
+ 1076 0418 28       		.byte	40
+ 1077 0419 48       		.byte	72
+ 1078 041a 2C       		.byte	44
+ 1079 041b 02       		.byte	2
+ 1080 041c 2D       		.byte	45
+ 1081 041d 40       		.byte	64
+ 1082 041e 2F       		.byte	47
+ 1083 041f 40       		.byte	64
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 20
+
+
+ 1084 0420 30       		.byte	48
+ 1085 0421 08       		.byte	8
+ 1086 0422 31       		.byte	49
+ 1087 0423 10       		.byte	16
+ 1088 0424 36       		.byte	54
+ 1089 0425 40       		.byte	64
+ 1090 0426 37       		.byte	55
+ 1091 0427 10       		.byte	16
+ 1092 0428 39       		.byte	57
+ 1093 0429 20       		.byte	32
+ 1094 042a 3A       		.byte	58
+ 1095 042b 02       		.byte	2
+ 1096 042c 3B       		.byte	59
+ 1097 042d 08       		.byte	8
+ 1098 042e 3C       		.byte	60
+ 1099 042f 88       		.byte	-120
+ 1100 0430 3F       		.byte	63
+ 1101 0431 01       		.byte	1
+ 1102 0432 85       		.byte	-123
+ 1103 0433 12       		.byte	18
+ 1104 0434 86       		.byte	-122
+ 1105 0435 40       		.byte	64
+ 1106 0436 8A       		.byte	-118
+ 1107 0437 80       		.byte	-128
+ 1108 0438 8C       		.byte	-116
+ 1109 0439 40       		.byte	64
+ 1110 043a 8F       		.byte	-113
+ 1111 043b 10       		.byte	16
+ 1112 043c 93       		.byte	-109
+ 1113 043d 80       		.byte	-128
+ 1114 043e A0       		.byte	-96
+ 1115 043f 04       		.byte	4
+ 1116 0440 AC       		.byte	-84
+ 1117 0441 04       		.byte	4
+ 1118 0442 AF       		.byte	-81
+ 1119 0443 40       		.byte	64
+ 1120 0444 C0       		.byte	-64
+ 1121 0445 C1       		.byte	-63
+ 1122 0446 C2       		.byte	-62
+ 1123 0447 EF       		.byte	-17
+ 1124 0448 C4       		.byte	-60
+ 1125 0449 C6       		.byte	-58
+ 1126 044a CA       		.byte	-54
+ 1127 044b 95       		.byte	-107
+ 1128 044c CC       		.byte	-52
+ 1129 044d 36       		.byte	54
+ 1130 044e CE       		.byte	-50
+ 1131 044f D7       		.byte	-41
+ 1132 0450 E2       		.byte	-30
+ 1133 0451 C0       		.byte	-64
+ 1134 0452 E6       		.byte	-26
+ 1135 0453 42       		.byte	66
+ 1136 0454 EA       		.byte	-22
+ 1137 0455 08       		.byte	8
+ 1138 0456 EE       		.byte	-18
+ 1139 0457 02       		.byte	2
+ 1140 0458 85       		.byte	-123
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 21
+
+
+ 1141 0459 40       		.byte	64
+ 1142 045a 86       		.byte	-122
+ 1143 045b 40       		.byte	64
+ 1144 045c 9D       		.byte	-99
+ 1145 045d 40       		.byte	64
+ 1146 045e A2       		.byte	-94
+ 1147 045f 40       		.byte	64
+ 1148 0460 A8       		.byte	-88
+ 1149 0461 04       		.byte	4
+ 1150 0462 A9       		.byte	-87
+ 1151 0463 10       		.byte	16
+ 1152 0464 AB       		.byte	-85
+ 1153 0465 40       		.byte	64
+ 1154 0466 AF       		.byte	-81
+ 1155 0467 10       		.byte	16
+ 1156 0468 B1       		.byte	-79
+ 1157 0469 80       		.byte	-128
+ 1158 046a B2       		.byte	-78
+ 1159 046b 08       		.byte	8
+ 1160 046c B5       		.byte	-75
+ 1161 046d 04       		.byte	4
+ 1162 046e B6       		.byte	-74
+ 1163 046f 40       		.byte	64
+ 1164 0470 E2       		.byte	-30
+ 1165 0471 04       		.byte	4
+ 1166 0472 E6       		.byte	-26
+ 1167 0473 08       		.byte	8
+ 1168 0474 EA       		.byte	-22
+ 1169 0475 20       		.byte	32
+ 1170 0476 EE       		.byte	-18
+ 1171 0477 80       		.byte	-128
+ 1172 0478 03       		.byte	3
+ 1173 0479 0B       		.byte	11
+ 1174 047a 07       		.byte	7
+ 1175 047b 04       		.byte	4
+ 1176 047c 09       		.byte	9
+ 1177 047d 0D       		.byte	13
+ 1178 047e 0B       		.byte	11
+ 1179 047f 02       		.byte	2
+ 1180 0480 0C       		.byte	12
+ 1181 0481 0D       		.byte	13
+ 1182 0482 0F       		.byte	15
+ 1183 0483 04       		.byte	4
+ 1184 0484 10       		.byte	16
+ 1185 0485 02       		.byte	2
+ 1186 0486 11       		.byte	17
+ 1187 0487 03       		.byte	3
+ 1188 0488 13       		.byte	19
+ 1189 0489 08       		.byte	8
+ 1190 048a 14       		.byte	20
+ 1191 048b 06       		.byte	6
+ 1192 048c 16       		.byte	22
+ 1193 048d 09       		.byte	9
+ 1194 048e 19       		.byte	25
+ 1195 048f 04       		.byte	4
+ 1196 0490 1A       		.byte	26
+ 1197 0491 02       		.byte	2
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 22
+
+
+ 1198 0492 1C       		.byte	28
+ 1199 0493 05       		.byte	5
+ 1200 0494 1D       		.byte	29
+ 1201 0495 0A       		.byte	10
+ 1202 0496 1E       		.byte	30
+ 1203 0497 08       		.byte	8
+ 1204 0498 1F       		.byte	31
+ 1205 0499 01       		.byte	1
+ 1206 049a 24       		.byte	36
+ 1207 049b 02       		.byte	2
+ 1208 049c 2C       		.byte	44
+ 1209 049d 01       		.byte	1
+ 1210 049e 2E       		.byte	46
+ 1211 049f 0C       		.byte	12
+ 1212 04a0 30       		.byte	48
+ 1213 04a1 04       		.byte	4
+ 1214 04a2 31       		.byte	49
+ 1215 04a3 04       		.byte	4
+ 1216 04a4 32       		.byte	50
+ 1217 04a5 02       		.byte	2
+ 1218 04a6 33       		.byte	51
+ 1219 04a7 08       		.byte	8
+ 1220 04a8 34       		.byte	52
+ 1221 04a9 08       		.byte	8
+ 1222 04aa 35       		.byte	53
+ 1223 04ab 02       		.byte	2
+ 1224 04ac 36       		.byte	54
+ 1225 04ad 01       		.byte	1
+ 1226 04ae 37       		.byte	55
+ 1227 04af 01       		.byte	1
+ 1228 04b0 3E       		.byte	62
+ 1229 04b1 55       		.byte	85
+ 1230 04b2 3F       		.byte	63
+ 1231 04b3 55       		.byte	85
+ 1232 04b4 58       		.byte	88
+ 1233 04b5 04       		.byte	4
+ 1234 04b6 59       		.byte	89
+ 1235 04b7 04       		.byte	4
+ 1236 04b8 5F       		.byte	95
+ 1237 04b9 01       		.byte	1
+ 1238 04ba 84       		.byte	-124
+ 1239 04bb 05       		.byte	5
+ 1240 04bc 85       		.byte	-123
+ 1241 04bd 33       		.byte	51
+ 1242 04be 87       		.byte	-121
+ 1243 04bf CC       		.byte	-52
+ 1244 04c0 89       		.byte	-119
+ 1245 04c1 0F       		.byte	15
+ 1246 04c2 8A       		.byte	-118
+ 1247 04c3 02       		.byte	2
+ 1248 04c4 8B       		.byte	-117
+ 1249 04c5 F0       		.byte	-16
+ 1250 04c6 8C       		.byte	-116
+ 1251 04c7 01       		.byte	1
+ 1252 04c8 8E       		.byte	-114
+ 1253 04c9 04       		.byte	4
+ 1254 04ca 91       		.byte	-111
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 23
+
+
+ 1255 04cb FF       		.byte	-1
+ 1256 04cc 92       		.byte	-110
+ 1257 04cd 02       		.byte	2
+ 1258 04ce 94       		.byte	-108
+ 1259 04cf 01       		.byte	1
+ 1260 04d0 96       		.byte	-106
+ 1261 04d1 06       		.byte	6
+ 1262 04d2 97       		.byte	-105
+ 1263 04d3 FF       		.byte	-1
+ 1264 04d4 99       		.byte	-103
+ 1265 04d5 55       		.byte	85
+ 1266 04d6 9B       		.byte	-101
+ 1267 04d7 AA       		.byte	-86
+ 1268 04d8 9D       		.byte	-99
+ 1269 04d9 96       		.byte	-106
+ 1270 04da 9F       		.byte	-97
+ 1271 04db 69       		.byte	105
+ 1272 04dc A0       		.byte	-96
+ 1273 04dd 01       		.byte	1
+ 1274 04de A2       		.byte	-94
+ 1275 04df 04       		.byte	4
+ 1276 04e0 A3       		.byte	-93
+ 1277 04e1 FF       		.byte	-1
+ 1278 04e2 AE       		.byte	-82
+ 1279 04e3 02       		.byte	2
+ 1280 04e4 B0       		.byte	-80
+ 1281 04e5 02       		.byte	2
+ 1282 04e6 B1       		.byte	-79
+ 1283 04e7 FF       		.byte	-1
+ 1284 04e8 B4       		.byte	-76
+ 1285 04e9 04       		.byte	4
+ 1286 04ea B6       		.byte	-74
+ 1287 04eb 01       		.byte	1
+ 1288 04ec BE       		.byte	-66
+ 1289 04ed 51       		.byte	81
+ 1290 04ee BF       		.byte	-65
+ 1291 04ef 01       		.byte	1
+ 1292 04f0 D8       		.byte	-40
+ 1293 04f1 04       		.byte	4
+ 1294 04f2 D9       		.byte	-39
+ 1295 04f3 04       		.byte	4
+ 1296 04f4 DF       		.byte	-33
+ 1297 04f5 01       		.byte	1
+ 1298 04f6 02       		.byte	2
+ 1299 04f7 02       		.byte	2
+ 1300 04f8 03       		.byte	3
+ 1301 04f9 24       		.byte	36
+ 1302 04fa 07       		.byte	7
+ 1303 04fb 02       		.byte	2
+ 1304 04fc 0A       		.byte	10
+ 1305 04fd 40       		.byte	64
+ 1306 04fe 0B       		.byte	11
+ 1307 04ff 10       		.byte	16
+ 1308 0500 0C       		.byte	12
+ 1309 0501 40       		.byte	64
+ 1310 0502 0E       		.byte	14
+ 1311 0503 40       		.byte	64
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 24
+
+
+ 1312 0504 0F       		.byte	15
+ 1313 0505 18       		.byte	24
+ 1314 0506 11       		.byte	17
+ 1315 0507 42       		.byte	66
+ 1316 0508 13       		.byte	19
+ 1317 0509 02       		.byte	2
+ 1318 050a 14       		.byte	20
+ 1319 050b 21       		.byte	33
+ 1320 050c 17       		.byte	23
+ 1321 050d 04       		.byte	4
+ 1322 050e 18       		.byte	24
+ 1323 050f 08       		.byte	8
+ 1324 0510 1A       		.byte	26
+ 1325 0511 80       		.byte	-128
+ 1326 0512 1B       		.byte	27
+ 1327 0513 40       		.byte	64
+ 1328 0514 1D       		.byte	29
+ 1329 0515 80       		.byte	-128
+ 1330 0516 1E       		.byte	30
+ 1331 0517 A0       		.byte	-96
+ 1332 0518 1F       		.byte	31
+ 1333 0519 10       		.byte	16
+ 1334 051a 21       		.byte	33
+ 1335 051b 02       		.byte	2
+ 1336 051c 24       		.byte	36
+ 1337 051d 40       		.byte	64
+ 1338 051e 25       		.byte	37
+ 1339 051f 10       		.byte	16
+ 1340 0520 26       		.byte	38
+ 1341 0521 08       		.byte	8
+ 1342 0522 27       		.byte	39
+ 1343 0523 01       		.byte	1
+ 1344 0524 2A       		.byte	42
+ 1345 0525 01       		.byte	1
+ 1346 0526 31       		.byte	49
+ 1347 0527 08       		.byte	8
+ 1348 0528 32       		.byte	50
+ 1349 0529 A1       		.byte	-95
+ 1350 052a 34       		.byte	52
+ 1351 052b 60       		.byte	96
+ 1352 052c 36       		.byte	54
+ 1353 052d 02       		.byte	2
+ 1354 052e 39       		.byte	57
+ 1355 052f 10       		.byte	16
+ 1356 0530 3A       		.byte	58
+ 1357 0531 04       		.byte	4
+ 1358 0532 3D       		.byte	61
+ 1359 0533 02       		.byte	2
+ 1360 0534 3E       		.byte	62
+ 1361 0535 40       		.byte	64
+ 1362 0536 3F       		.byte	63
+ 1363 0537 18       		.byte	24
+ 1364 0538 80       		.byte	-128
+ 1365 0539 40       		.byte	64
+ 1366 053a 82       		.byte	-126
+ 1367 053b 20       		.byte	32
+ 1368 053c 83       		.byte	-125
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 25
+
+
+ 1369 053d 10       		.byte	16
+ 1370 053e 84       		.byte	-124
+ 1371 053f 41       		.byte	65
+ 1372 0540 86       		.byte	-122
+ 1373 0541 03       		.byte	3
+ 1374 0542 87       		.byte	-121
+ 1375 0543 30       		.byte	48
+ 1376 0544 8A       		.byte	-118
+ 1377 0545 10       		.byte	16
+ 1378 0546 8B       		.byte	-117
+ 1379 0547 01       		.byte	1
+ 1380 0548 8E       		.byte	-114
+ 1381 0549 60       		.byte	96
+ 1382 054a 91       		.byte	-111
+ 1383 054b 50       		.byte	80
+ 1384 054c 92       		.byte	-110
+ 1385 054d 02       		.byte	2
+ 1386 054e 96       		.byte	-106
+ 1387 054f 40       		.byte	64
+ 1388 0550 97       		.byte	-105
+ 1389 0551 10       		.byte	16
+ 1390 0552 98       		.byte	-104
+ 1391 0553 20       		.byte	32
+ 1392 0554 9A       		.byte	-102
+ 1393 0555 05       		.byte	5
+ 1394 0556 9B       		.byte	-101
+ 1395 0557 10       		.byte	16
+ 1396 0558 9C       		.byte	-100
+ 1397 0559 41       		.byte	65
+ 1398 055a 9D       		.byte	-99
+ 1399 055b 44       		.byte	68
+ 1400 055c 9E       		.byte	-98
+ 1401 055d 20       		.byte	32
+ 1402 055e A1       		.byte	-95
+ 1403 055f 09       		.byte	9
+ 1404 0560 A2       		.byte	-94
+ 1405 0561 A0       		.byte	-96
+ 1406 0562 A3       		.byte	-93
+ 1407 0563 04       		.byte	4
+ 1408 0564 A5       		.byte	-91
+ 1409 0565 02       		.byte	2
+ 1410 0566 B1       		.byte	-79
+ 1411 0567 04       		.byte	4
+ 1412 0568 B2       		.byte	-78
+ 1413 0569 10       		.byte	16
+ 1414 056a B5       		.byte	-75
+ 1415 056b 21       		.byte	33
+ 1416 056c C0       		.byte	-64
+ 1417 056d 87       		.byte	-121
+ 1418 056e C2       		.byte	-62
+ 1419 056f FC       		.byte	-4
+ 1420 0570 C4       		.byte	-60
+ 1421 0571 A9       		.byte	-87
+ 1422 0572 CA       		.byte	-54
+ 1423 0573 01       		.byte	1
+ 1424 0574 CC       		.byte	-52
+ 1425 0575 BF       		.byte	-65
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 26
+
+
+ 1426 0576 CE       		.byte	-50
+ 1427 0577 F6       		.byte	-10
+ 1428 0578 E2       		.byte	-30
+ 1429 0579 9A       		.byte	-102
+ 1430 057a E4       		.byte	-28
+ 1431 057b 03       		.byte	3
+ 1432 057c E6       		.byte	-26
+ 1433 057d 28       		.byte	40
+ 1434 057e EA       		.byte	-22
+ 1435 057f 80       		.byte	-128
+ 1436 0580 01       		.byte	1
+ 1437 0581 0F       		.byte	15
+ 1438 0582 03       		.byte	3
+ 1439 0583 F0       		.byte	-16
+ 1440 0584 05       		.byte	5
+ 1441 0585 96       		.byte	-106
+ 1442 0586 07       		.byte	7
+ 1443 0587 69       		.byte	105
+ 1444 0588 0A       		.byte	10
+ 1445 0589 FF       		.byte	-1
+ 1446 058a 0C       		.byte	12
+ 1447 058b 55       		.byte	85
+ 1448 058c 0E       		.byte	14
+ 1449 058d AA       		.byte	-86
+ 1450 058e 11       		.byte	17
+ 1451 058f 55       		.byte	85
+ 1452 0590 13       		.byte	19
+ 1453 0591 AA       		.byte	-86
+ 1454 0592 14       		.byte	20
+ 1455 0593 33       		.byte	51
+ 1456 0594 15       		.byte	21
+ 1457 0595 FF       		.byte	-1
+ 1458 0596 16       		.byte	22
+ 1459 0597 CC       		.byte	-52
+ 1460 0598 18       		.byte	24
+ 1461 0599 96       		.byte	-106
+ 1462 059a 19       		.byte	25
+ 1463 059b FF       		.byte	-1
+ 1464 059c 1A       		.byte	26
+ 1465 059d 69       		.byte	105
+ 1466 059e 21       		.byte	33
+ 1467 059f FF       		.byte	-1
+ 1468 05a0 22       		.byte	34
+ 1469 05a1 FF       		.byte	-1
+ 1470 05a2 28       		.byte	40
+ 1471 05a3 FF       		.byte	-1
+ 1472 05a4 29       		.byte	41
+ 1473 05a5 33       		.byte	51
+ 1474 05a6 2B       		.byte	43
+ 1475 05a7 CC       		.byte	-52
+ 1476 05a8 2C       		.byte	44
+ 1477 05a9 0F       		.byte	15
+ 1478 05aa 2E       		.byte	46
+ 1479 05ab F0       		.byte	-16
+ 1480 05ac 31       		.byte	49
+ 1481 05ad FF       		.byte	-1
+ 1482 05ae 32       		.byte	50
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 27
+
+
+ 1483 05af FF       		.byte	-1
+ 1484 05b0 3A       		.byte	58
+ 1485 05b1 C0       		.byte	-64
+ 1486 05b2 3E       		.byte	62
+ 1487 05b3 04       		.byte	4
+ 1488 05b4 3F       		.byte	63
+ 1489 05b5 01       		.byte	1
+ 1490 05b6 58       		.byte	88
+ 1491 05b7 04       		.byte	4
+ 1492 05b8 59       		.byte	89
+ 1493 05b9 04       		.byte	4
+ 1494 05ba 5F       		.byte	95
+ 1495 05bb 01       		.byte	1
+ 1496 05bc 81       		.byte	-127
+ 1497 05bd 0F       		.byte	15
+ 1498 05be 83       		.byte	-125
+ 1499 05bf F0       		.byte	-16
+ 1500 05c0 85       		.byte	-123
+ 1501 05c1 96       		.byte	-106
+ 1502 05c2 86       		.byte	-122
+ 1503 05c3 FF       		.byte	-1
+ 1504 05c4 87       		.byte	-121
+ 1505 05c5 69       		.byte	105
+ 1506 05c6 8C       		.byte	-116
+ 1507 05c7 55       		.byte	85
+ 1508 05c8 8E       		.byte	-114
+ 1509 05c9 AA       		.byte	-86
+ 1510 05ca 91       		.byte	-111
+ 1511 05cb 55       		.byte	85
+ 1512 05cc 93       		.byte	-109
+ 1513 05cd AA       		.byte	-86
+ 1514 05ce 94       		.byte	-108
+ 1515 05cf FF       		.byte	-1
+ 1516 05d0 95       		.byte	-107
+ 1517 05d1 33       		.byte	51
+ 1518 05d2 97       		.byte	-105
+ 1519 05d3 CC       		.byte	-52
+ 1520 05d4 9C       		.byte	-100
+ 1521 05d5 FF       		.byte	-1
+ 1522 05d6 A0       		.byte	-96
+ 1523 05d7 0F       		.byte	15
+ 1524 05d8 A2       		.byte	-94
+ 1525 05d9 F0       		.byte	-16
+ 1526 05da A4       		.byte	-92
+ 1527 05db 69       		.byte	105
+ 1528 05dc A6       		.byte	-90
+ 1529 05dd 96       		.byte	-106
+ 1530 05de A8       		.byte	-88
+ 1531 05df 33       		.byte	51
+ 1532 05e0 AA       		.byte	-86
+ 1533 05e1 CC       		.byte	-52
+ 1534 05e2 B0       		.byte	-80
+ 1535 05e3 FF       		.byte	-1
+ 1536 05e4 B3       		.byte	-77
+ 1537 05e5 FF       		.byte	-1
+ 1538 05e6 BE       		.byte	-66
+ 1539 05e7 01       		.byte	1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 28
+
+
+ 1540 05e8 BF       		.byte	-65
+ 1541 05e9 04       		.byte	4
+ 1542 05ea D8       		.byte	-40
+ 1543 05eb 04       		.byte	4
+ 1544 05ec D9       		.byte	-39
+ 1545 05ed 04       		.byte	4
+ 1546 05ee DF       		.byte	-33
+ 1547 05ef 01       		.byte	1
+ 1548 05f0 02       		.byte	2
+ 1549 05f1 20       		.byte	32
+ 1550 05f2 03       		.byte	3
+ 1551 05f3 01       		.byte	1
+ 1552 05f4 05       		.byte	5
+ 1553 05f5 10       		.byte	16
+ 1554 05f6 07       		.byte	7
+ 1555 05f7 01       		.byte	1
+ 1556 05f8 08       		.byte	8
+ 1557 05f9 48       		.byte	72
+ 1558 05fa 0C       		.byte	12
+ 1559 05fb 08       		.byte	8
+ 1560 05fc 0F       		.byte	15
+ 1561 05fd 08       		.byte	8
+ 1562 05fe 10       		.byte	16
+ 1563 05ff 08       		.byte	8
+ 1564 0600 11       		.byte	17
+ 1565 0601 05       		.byte	5
+ 1566 0602 14       		.byte	20
+ 1567 0603 48       		.byte	72
+ 1568 0604 16       		.byte	22
+ 1569 0605 02       		.byte	2
+ 1570 0606 19       		.byte	25
+ 1571 0607 02       		.byte	2
+ 1572 0608 1D       		.byte	29
+ 1573 0609 44       		.byte	68
+ 1574 060a 1E       		.byte	30
+ 1575 060b 01       		.byte	1
+ 1576 060c 21       		.byte	33
+ 1577 060d 08       		.byte	8
+ 1578 060e 27       		.byte	39
+ 1579 060f 40       		.byte	64
+ 1580 0610 2C       		.byte	44
+ 1581 0611 48       		.byte	72
+ 1582 0612 31       		.byte	49
+ 1583 0613 02       		.byte	2
+ 1584 0614 32       		.byte	50
+ 1585 0615 08       		.byte	8
+ 1586 0616 34       		.byte	52
+ 1587 0617 08       		.byte	8
+ 1588 0618 35       		.byte	53
+ 1589 0619 10       		.byte	16
+ 1590 061a 36       		.byte	54
+ 1591 061b 20       		.byte	32
+ 1592 061c 37       		.byte	55
+ 1593 061d 01       		.byte	1
+ 1594 061e 39       		.byte	57
+ 1595 061f 08       		.byte	8
+ 1596 0620 3A       		.byte	58
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 29
+
+
+ 1597 0621 01       		.byte	1
+ 1598 0622 3D       		.byte	61
+ 1599 0623 05       		.byte	5
+ 1600 0624 3E       		.byte	62
+ 1601 0625 02       		.byte	2
+ 1602 0626 3F       		.byte	63
+ 1603 0627 08       		.byte	8
+ 1604 0628 81       		.byte	-127
+ 1605 0629 01       		.byte	1
+ 1606 062a 82       		.byte	-126
+ 1607 062b 01       		.byte	1
+ 1608 062c 83       		.byte	-125
+ 1609 062d 10       		.byte	16
+ 1610 062e 85       		.byte	-123
+ 1611 062f 20       		.byte	32
+ 1612 0630 86       		.byte	-122
+ 1613 0631 15       		.byte	21
+ 1614 0632 89       		.byte	-119
+ 1615 0633 08       		.byte	8
+ 1616 0634 8A       		.byte	-118
+ 1617 0635 08       		.byte	8
+ 1618 0636 8D       		.byte	-115
+ 1619 0637 20       		.byte	32
+ 1620 0638 92       		.byte	-110
+ 1621 0639 04       		.byte	4
+ 1622 063a 93       		.byte	-109
+ 1623 063b 80       		.byte	-128
+ 1624 063c 94       		.byte	-108
+ 1625 063d 40       		.byte	64
+ 1626 063e 98       		.byte	-104
+ 1627 063f 40       		.byte	64
+ 1628 0640 99       		.byte	-103
+ 1629 0641 10       		.byte	16
+ 1630 0642 9A       		.byte	-102
+ 1631 0643 86       		.byte	-122
+ 1632 0644 9B       		.byte	-101
+ 1633 0645 11       		.byte	17
+ 1634 0646 9C       		.byte	-100
+ 1635 0647 08       		.byte	8
+ 1636 0648 9D       		.byte	-99
+ 1637 0649 66       		.byte	102
+ 1638 064a 9F       		.byte	-97
+ 1639 064b 40       		.byte	64
+ 1640 064c A0       		.byte	-96
+ 1641 064d 0A       		.byte	10
+ 1642 064e A1       		.byte	-95
+ 1643 064f 02       		.byte	2
+ 1644 0650 A2       		.byte	-94
+ 1645 0651 11       		.byte	17
+ 1646 0652 A3       		.byte	-93
+ 1647 0653 04       		.byte	4
+ 1648 0654 A5       		.byte	-91
+ 1649 0655 01       		.byte	1
+ 1650 0656 A6       		.byte	-90
+ 1651 0657 80       		.byte	-128
+ 1652 0658 AC       		.byte	-84
+ 1653 0659 08       		.byte	8
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 30
+
+
+ 1654 065a B2       		.byte	-78
+ 1655 065b 08       		.byte	8
+ 1656 065c B6       		.byte	-74
+ 1657 065d 01       		.byte	1
+ 1658 065e C0       		.byte	-64
+ 1659 065f C5       		.byte	-59
+ 1660 0660 C2       		.byte	-62
+ 1661 0661 65       		.byte	101
+ 1662 0662 C4       		.byte	-60
+ 1663 0663 DE       		.byte	-34
+ 1664 0664 CA       		.byte	-54
+ 1665 0665 A0       		.byte	-96
+ 1666 0666 CC       		.byte	-52
+ 1667 0667 E3       		.byte	-29
+ 1668 0668 CE       		.byte	-50
+ 1669 0669 C3       		.byte	-61
+ 1670 066a E2       		.byte	-30
+ 1671 066b 04       		.byte	4
+ 1672 066c E6       		.byte	-26
+ 1673 066d 40       		.byte	64
+ 1674 066e EA       		.byte	-22
+ 1675 066f 12       		.byte	18
+ 1676 0670 EE       		.byte	-18
+ 1677 0671 80       		.byte	-128
+ 1678 0672 05       		.byte	5
+ 1679 0673 33       		.byte	51
+ 1680 0674 06       		.byte	6
+ 1681 0675 FF       		.byte	-1
+ 1682 0676 07       		.byte	7
+ 1683 0677 CC       		.byte	-52
+ 1684 0678 08       		.byte	8
+ 1685 0679 FF       		.byte	-1
+ 1686 067a 0C       		.byte	12
+ 1687 067b FF       		.byte	-1
+ 1688 067c 0D       		.byte	13
+ 1689 067d 0F       		.byte	15
+ 1690 067e 0F       		.byte	15
+ 1691 067f F0       		.byte	-16
+ 1692 0680 10       		.byte	16
+ 1693 0681 0F       		.byte	15
+ 1694 0682 11       		.byte	17
+ 1695 0683 69       		.byte	105
+ 1696 0684 12       		.byte	18
+ 1697 0685 F0       		.byte	-16
+ 1698 0686 13       		.byte	19
+ 1699 0687 96       		.byte	-106
+ 1700 0688 19       		.byte	25
+ 1701 0689 FF       		.byte	-1
+ 1702 068a 1C       		.byte	28
+ 1703 068b 69       		.byte	105
+ 1704 068c 1E       		.byte	30
+ 1705 068d 96       		.byte	-106
+ 1706 068e 24       		.byte	36
+ 1707 068f 55       		.byte	85
+ 1708 0690 25       		.byte	37
+ 1709 0691 55       		.byte	85
+ 1710 0692 26       		.byte	38
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 31
+
+
+ 1711 0693 AA       		.byte	-86
+ 1712 0694 27       		.byte	39
+ 1713 0695 AA       		.byte	-86
+ 1714 0696 28       		.byte	40
+ 1715 0697 33       		.byte	51
+ 1716 0698 29       		.byte	41
+ 1717 0699 FF       		.byte	-1
+ 1718 069a 2A       		.byte	42
+ 1719 069b CC       		.byte	-52
+ 1720 069c 2F       		.byte	47
+ 1721 069d FF       		.byte	-1
+ 1722 069e 34       		.byte	52
+ 1723 069f FF       		.byte	-1
+ 1724 06a0 37       		.byte	55
+ 1725 06a1 FF       		.byte	-1
+ 1726 06a2 3E       		.byte	62
+ 1727 06a3 10       		.byte	16
+ 1728 06a4 3F       		.byte	63
+ 1729 06a5 40       		.byte	64
+ 1730 06a6 58       		.byte	88
+ 1731 06a7 04       		.byte	4
+ 1732 06a8 59       		.byte	89
+ 1733 06a9 04       		.byte	4
+ 1734 06aa 5F       		.byte	95
+ 1735 06ab 01       		.byte	1
+ 1736 06ac 83       		.byte	-125
+ 1737 06ad 0F       		.byte	15
+ 1738 06ae 84       		.byte	-124
+ 1739 06af FF       		.byte	-1
+ 1740 06b0 85       		.byte	-123
+ 1741 06b1 02       		.byte	2
+ 1742 06b2 88       		.byte	-120
+ 1743 06b3 33       		.byte	51
+ 1744 06b4 8A       		.byte	-118
+ 1745 06b5 CC       		.byte	-52
+ 1746 06b6 8C       		.byte	-116
+ 1747 06b7 0F       		.byte	15
+ 1748 06b8 8E       		.byte	-114
+ 1749 06b9 F0       		.byte	-16
+ 1750 06ba 8F       		.byte	-113
+ 1751 06bb 09       		.byte	9
+ 1752 06bc 90       		.byte	-112
+ 1753 06bd 96       		.byte	-106
+ 1754 06be 91       		.byte	-111
+ 1755 06bf 02       		.byte	2
+ 1756 06c0 92       		.byte	-110
+ 1757 06c1 69       		.byte	105
+ 1758 06c2 94       		.byte	-108
+ 1759 06c3 55       		.byte	85
+ 1760 06c4 96       		.byte	-106
+ 1761 06c5 AA       		.byte	-86
+ 1762 06c6 9B       		.byte	-101
+ 1763 06c7 02       		.byte	2
+ 1764 06c8 9F       		.byte	-97
+ 1765 06c9 01       		.byte	1
+ 1766 06ca A0       		.byte	-96
+ 1767 06cb FF       		.byte	-1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 32
+
+
+ 1768 06cc A4       		.byte	-92
+ 1769 06cd FF       		.byte	-1
+ 1770 06ce B1       		.byte	-79
+ 1771 06cf 04       		.byte	4
+ 1772 06d0 B3       		.byte	-77
+ 1773 06d1 01       		.byte	1
+ 1774 06d2 B4       		.byte	-76
+ 1775 06d3 FF       		.byte	-1
+ 1776 06d4 B5       		.byte	-75
+ 1777 06d5 02       		.byte	2
+ 1778 06d6 B7       		.byte	-73
+ 1779 06d7 08       		.byte	8
+ 1780 06d8 BB       		.byte	-69
+ 1781 06d9 8A       		.byte	-118
+ 1782 06da BE       		.byte	-66
+ 1783 06db 10       		.byte	16
+ 1784 06dc BF       		.byte	-65
+ 1785 06dd 10       		.byte	16
+ 1786 06de D8       		.byte	-40
+ 1787 06df 04       		.byte	4
+ 1788 06e0 D9       		.byte	-39
+ 1789 06e1 04       		.byte	4
+ 1790 06e2 DF       		.byte	-33
+ 1791 06e3 01       		.byte	1
+ 1792 06e4 01       		.byte	1
+ 1793 06e5 20       		.byte	32
+ 1794 06e6 03       		.byte	3
+ 1795 06e7 16       		.byte	22
+ 1796 06e8 04       		.byte	4
+ 1797 06e9 80       		.byte	-128
+ 1798 06ea 06       		.byte	6
+ 1799 06eb 04       		.byte	4
+ 1800 06ec 07       		.byte	7
+ 1801 06ed 10       		.byte	16
+ 1802 06ee 0A       		.byte	10
+ 1803 06ef 02       		.byte	2
+ 1804 06f0 0B       		.byte	11
+ 1805 06f1 80       		.byte	-128
+ 1806 06f2 0C       		.byte	12
+ 1807 06f3 02       		.byte	2
+ 1808 06f4 0F       		.byte	15
+ 1809 06f5 20       		.byte	32
+ 1810 06f6 10       		.byte	16
+ 1811 06f7 10       		.byte	16
+ 1812 06f8 12       		.byte	18
+ 1813 06f9 04       		.byte	4
+ 1814 06fa 16       		.byte	22
+ 1815 06fb 80       		.byte	-128
+ 1816 06fc 17       		.byte	23
+ 1817 06fd 04       		.byte	4
+ 1818 06fe 1A       		.byte	26
+ 1819 06ff 08       		.byte	8
+ 1820 0700 1D       		.byte	29
+ 1821 0701 20       		.byte	32
+ 1822 0702 23       		.byte	35
+ 1823 0703 02       		.byte	2
+ 1824 0704 24       		.byte	36
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 33
+
+
+ 1825 0705 44       		.byte	68
+ 1826 0706 25       		.byte	37
+ 1827 0707 04       		.byte	4
+ 1828 0708 26       		.byte	38
+ 1829 0709 80       		.byte	-128
+ 1830 070a 28       		.byte	40
+ 1831 070b 10       		.byte	16
+ 1832 070c 29       		.byte	41
+ 1833 070d 20       		.byte	32
+ 1834 070e 2A       		.byte	42
+ 1835 070f 80       		.byte	-128
+ 1836 0710 2B       		.byte	43
+ 1837 0711 12       		.byte	18
+ 1838 0712 30       		.byte	48
+ 1839 0713 02       		.byte	2
+ 1840 0714 32       		.byte	50
+ 1841 0715 01       		.byte	1
+ 1842 0716 33       		.byte	51
+ 1843 0717 10       		.byte	16
+ 1844 0718 36       		.byte	54
+ 1845 0719 91       		.byte	-111
+ 1846 071a 38       		.byte	56
+ 1847 071b 80       		.byte	-128
+ 1848 071c 3A       		.byte	58
+ 1849 071d 04       		.byte	4
+ 1850 071e 3B       		.byte	59
+ 1851 071f 80       		.byte	-128
+ 1852 0720 3C       		.byte	60
+ 1853 0721 40       		.byte	64
+ 1854 0722 3E       		.byte	62
+ 1855 0723 05       		.byte	5
+ 1856 0724 80       		.byte	-128
+ 1857 0725 0C       		.byte	12
+ 1858 0726 86       		.byte	-122
+ 1859 0727 04       		.byte	4
+ 1860 0728 92       		.byte	-110
+ 1861 0729 05       		.byte	5
+ 1862 072a 93       		.byte	-109
+ 1863 072b 80       		.byte	-128
+ 1864 072c 94       		.byte	-108
+ 1865 072d 40       		.byte	64
+ 1866 072e 99       		.byte	-103
+ 1867 072f 20       		.byte	32
+ 1868 0730 9A       		.byte	-102
+ 1869 0731 84       		.byte	-124
+ 1870 0732 9B       		.byte	-101
+ 1871 0733 10       		.byte	16
+ 1872 0734 9C       		.byte	-100
+ 1873 0735 08       		.byte	8
+ 1874 0736 9F       		.byte	-97
+ 1875 0737 02       		.byte	2
+ 1876 0738 A0       		.byte	-96
+ 1877 0739 02       		.byte	2
+ 1878 073a A2       		.byte	-94
+ 1879 073b 11       		.byte	17
+ 1880 073c A3       		.byte	-93
+ 1881 073d 10       		.byte	16
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 34
+
+
+ 1882 073e A5       		.byte	-91
+ 1883 073f 24       		.byte	36
+ 1884 0740 A6       		.byte	-90
+ 1885 0741 80       		.byte	-128
+ 1886 0742 B1       		.byte	-79
+ 1887 0743 04       		.byte	4
+ 1888 0744 B5       		.byte	-75
+ 1889 0745 04       		.byte	4
+ 1890 0746 B7       		.byte	-73
+ 1891 0747 02       		.byte	2
+ 1892 0748 C0       		.byte	-64
+ 1893 0749 E7       		.byte	-25
+ 1894 074a C2       		.byte	-62
+ 1895 074b 39       		.byte	57
+ 1896 074c C4       		.byte	-60
+ 1897 074d 36       		.byte	54
+ 1898 074e CA       		.byte	-54
+ 1899 074f 0E       		.byte	14
+ 1900 0750 CC       		.byte	-52
+ 1901 0751 B5       		.byte	-75
+ 1902 0752 CE       		.byte	-50
+ 1903 0753 DA       		.byte	-38
+ 1904 0754 E6       		.byte	-26
+ 1905 0755 04       		.byte	4
+ 1906 0756 EA       		.byte	-22
+ 1907 0757 10       		.byte	16
+ 1908 0758 EE       		.byte	-18
+ 1909 0759 40       		.byte	64
+ 1910 075a 50       		.byte	80
+ 1911 075b 10       		.byte	16
+ 1912 075c 53       		.byte	83
+ 1913 075d 02       		.byte	2
+ 1914 075e 55       		.byte	85
+ 1915 075f 20       		.byte	32
+ 1916 0760 56       		.byte	86
+ 1917 0761 01       		.byte	1
+ 1918 0762 58       		.byte	88
+ 1919 0763 04       		.byte	4
+ 1920 0764 64       		.byte	100
+ 1921 0765 40       		.byte	64
+ 1922 0766 D4       		.byte	-44
+ 1923 0767 E0       		.byte	-32
+ 1924 0768 D6       		.byte	-42
+ 1925 0769 60       		.byte	96
+ 1926 076a D8       		.byte	-40
+ 1927 076b 80       		.byte	-128
+ 1928 076c 50       		.byte	80
+ 1929 076d 04       		.byte	4
+ 1930 076e 54       		.byte	84
+ 1931 076f 40       		.byte	64
+ 1932 0770 5B       		.byte	91
+ 1933 0771 20       		.byte	32
+ 1934 0772 5D       		.byte	93
+ 1935 0773 18       		.byte	24
+ 1936 0774 60       		.byte	96
+ 1937 0775 20       		.byte	32
+ 1938 0776 63       		.byte	99
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 35
+
+
+ 1939 0777 02       		.byte	2
+ 1940 0778 67       		.byte	103
+ 1941 0779 40       		.byte	64
+ 1942 077a 83       		.byte	-125
+ 1943 077b 02       		.byte	2
+ 1944 077c 85       		.byte	-123
+ 1945 077d 20       		.byte	32
+ 1946 077e 9C       		.byte	-100
+ 1947 077f 44       		.byte	68
+ 1948 0780 9E       		.byte	-98
+ 1949 0781 01       		.byte	1
+ 1950 0782 A5       		.byte	-91
+ 1951 0783 20       		.byte	32
+ 1952 0784 A7       		.byte	-89
+ 1953 0785 02       		.byte	2
+ 1954 0786 B4       		.byte	-76
+ 1955 0787 10       		.byte	16
+ 1956 0788 D4       		.byte	-44
+ 1957 0789 E0       		.byte	-32
+ 1958 078a D6       		.byte	-42
+ 1959 078b E0       		.byte	-32
+ 1960 078c D8       		.byte	-40
+ 1961 078d C0       		.byte	-64
+ 1962 078e E2       		.byte	-30
+ 1963 078f 30       		.byte	48
+ 1964 0790 52       		.byte	82
+ 1965 0791 40       		.byte	64
+ 1966 0792 56       		.byte	86
+ 1967 0793 08       		.byte	8
+ 1968 0794 82       		.byte	-126
+ 1969 0795 08       		.byte	8
+ 1970 0796 84       		.byte	-124
+ 1971 0797 20       		.byte	32
+ 1972 0798 88       		.byte	-120
+ 1973 0799 04       		.byte	4
+ 1974 079a 8E       		.byte	-114
+ 1975 079b 20       		.byte	32
+ 1976 079c 94       		.byte	-108
+ 1977 079d 08       		.byte	8
+ 1978 079e 95       		.byte	-107
+ 1979 079f 10       		.byte	16
+ 1980 07a0 97       		.byte	-105
+ 1981 07a1 40       		.byte	64
+ 1982 07a2 9C       		.byte	-100
+ 1983 07a3 64       		.byte	100
+ 1984 07a4 9D       		.byte	-99
+ 1985 07a5 08       		.byte	8
+ 1986 07a6 9E       		.byte	-98
+ 1987 07a7 01       		.byte	1
+ 1988 07a8 9F       		.byte	-97
+ 1989 07a9 20       		.byte	32
+ 1990 07aa A4       		.byte	-92
+ 1991 07ab 40       		.byte	64
+ 1992 07ac B3       		.byte	-77
+ 1993 07ad 01       		.byte	1
+ 1994 07ae D4       		.byte	-44
+ 1995 07af 60       		.byte	96
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 36
+
+
+ 1996 07b0 E6       		.byte	-26
+ 1997 07b1 90       		.byte	-112
+ 1998 07b2 87       		.byte	-121
+ 1999 07b3 40       		.byte	64
+ 2000 07b4 88       		.byte	-120
+ 2001 07b5 40       		.byte	64
+ 2002 07b6 8C       		.byte	-116
+ 2003 07b7 20       		.byte	32
+ 2004 07b8 8E       		.byte	-114
+ 2005 07b9 01       		.byte	1
+ 2006 07ba 95       		.byte	-107
+ 2007 07bb 10       		.byte	16
+ 2008 07bc 97       		.byte	-105
+ 2009 07bd 40       		.byte	64
+ 2010 07be 99       		.byte	-103
+ 2011 07bf 80       		.byte	-128
+ 2012 07c0 9C       		.byte	-100
+ 2013 07c1 40       		.byte	64
+ 2014 07c2 9D       		.byte	-99
+ 2015 07c3 08       		.byte	8
+ 2016 07c4 9E       		.byte	-98
+ 2017 07c5 01       		.byte	1
+ 2018 07c6 A2       		.byte	-94
+ 2019 07c7 20       		.byte	32
+ 2020 07c8 A4       		.byte	-92
+ 2021 07c9 40       		.byte	64
+ 2022 07ca AE       		.byte	-82
+ 2023 07cb 40       		.byte	64
+ 2024 07cc B4       		.byte	-76
+ 2025 07cd 04       		.byte	4
+ 2026 07ce B5       		.byte	-75
+ 2027 07cf 80       		.byte	-128
+ 2028 07d0 B7       		.byte	-73
+ 2029 07d1 20       		.byte	32
+ 2030 07d2 E6       		.byte	-26
+ 2031 07d3 40       		.byte	64
+ 2032 07d4 EA       		.byte	-22
+ 2033 07d5 10       		.byte	16
+ 2034 07d6 00       		.byte	0
+ 2035 07d7 40       		.byte	64
+ 2036 07d8 01       		.byte	1
+ 2037 07d9 04       		.byte	4
+ 2038 07da 04       		.byte	4
+ 2039 07db 20       		.byte	32
+ 2040 07dc 07       		.byte	7
+ 2041 07dd 80       		.byte	-128
+ 2042 07de 08       		.byte	8
+ 2043 07df 04       		.byte	4
+ 2044 07e0 0B       		.byte	11
+ 2045 07e1 04       		.byte	4
+ 2046 07e2 0F       		.byte	15
+ 2047 07e3 42       		.byte	66
+ 2048 07e4 C0       		.byte	-64
+ 2049 07e5 0F       		.byte	15
+ 2050 07e6 C2       		.byte	-62
+ 2051 07e7 0F       		.byte	15
+ 2052 07e8 87       		.byte	-121
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 37
+
+
+ 2053 07e9 40       		.byte	64
+ 2054 07ea 8C       		.byte	-116
+ 2055 07eb 10       		.byte	16
+ 2056 07ec 90       		.byte	-112
+ 2057 07ed 60       		.byte	96
+ 2058 07ee 93       		.byte	-109
+ 2059 07ef 44       		.byte	68
+ 2060 07f0 9B       		.byte	-101
+ 2061 07f1 80       		.byte	-128
+ 2062 07f2 A3       		.byte	-93
+ 2063 07f3 01       		.byte	1
+ 2064 07f4 AC       		.byte	-84
+ 2065 07f5 04       		.byte	4
+ 2066 07f6 AD       		.byte	-83
+ 2067 07f7 04       		.byte	4
+ 2068 07f8 E6       		.byte	-26
+ 2069 07f9 02       		.byte	2
+ 2070 07fa 81       		.byte	-127
+ 2071 07fb 40       		.byte	64
+ 2072 07fc 86       		.byte	-122
+ 2073 07fd 02       		.byte	2
+ 2074 07fe 8F       		.byte	-113
+ 2075 07ff 20       		.byte	32
+ 2076 0800 B3       		.byte	-77
+ 2077 0801 05       		.byte	5
+ 2078 0802 B4       		.byte	-76
+ 2079 0803 40       		.byte	64
+ 2080 0804 B7       		.byte	-73
+ 2081 0805 80       		.byte	-128
+ 2082 0806 E2       		.byte	-30
+ 2083 0807 02       		.byte	2
+ 2084 0808 EA       		.byte	-22
+ 2085 0809 03       		.byte	3
+ 2086 080a EE       		.byte	-18
+ 2087 080b 0C       		.byte	12
+ 2088 080c 53       		.byte	83
+ 2089 080d 08       		.byte	8
+ 2090 080e 54       		.byte	84
+ 2091 080f 80       		.byte	-128
+ 2092 0810 58       		.byte	88
+ 2093 0811 10       		.byte	16
+ 2094 0812 5D       		.byte	93
+ 2095 0813 80       		.byte	-128
+ 2096 0814 80       		.byte	-128
+ 2097 0815 02       		.byte	2
+ 2098 0816 81       		.byte	-127
+ 2099 0817 08       		.byte	8
+ 2100 0818 88       		.byte	-120
+ 2101 0819 01       		.byte	1
+ 2102 081a 89       		.byte	-119
+ 2103 081b 10       		.byte	16
+ 2104 081c 8D       		.byte	-115
+ 2105 081d 04       		.byte	4
+ 2106 081e 95       		.byte	-107
+ 2107 081f 10       		.byte	16
+ 2108 0820 98       		.byte	-104
+ 2109 0821 20       		.byte	32
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 38
+
+
+ 2110 0822 99       		.byte	-103
+ 2111 0823 80       		.byte	-128
+ 2112 0824 9D       		.byte	-99
+ 2113 0825 08       		.byte	8
+ 2114 0826 A2       		.byte	-94
+ 2115 0827 20       		.byte	32
+ 2116 0828 B0       		.byte	-80
+ 2117 0829 40       		.byte	64
+ 2118 082a D4       		.byte	-44
+ 2119 082b E0       		.byte	-32
+ 2120 082c D6       		.byte	-42
+ 2121 082d 20       		.byte	32
+ 2122 082e E2       		.byte	-30
+ 2123 082f 20       		.byte	32
+ 2124 0830 E6       		.byte	-26
+ 2125 0831 20       		.byte	32
+ 2126 0832 52       		.byte	82
+ 2127 0833 20       		.byte	32
+ 2128 0834 56       		.byte	86
+ 2129 0835 20       		.byte	32
+ 2130 0836 58       		.byte	88
+ 2131 0837 21       		.byte	33
+ 2132 0838 5C       		.byte	92
+ 2133 0839 01       		.byte	1
+ 2134 083a 5E       		.byte	94
+ 2135 083b 80       		.byte	-128
+ 2136 083c 63       		.byte	99
+ 2137 083d 40       		.byte	64
+ 2138 083e 65       		.byte	101
+ 2139 083f 01       		.byte	1
+ 2140 0840 71       		.byte	113
+ 2141 0841 04       		.byte	4
+ 2142 0842 74       		.byte	116
+ 2143 0843 02       		.byte	2
+ 2144 0844 81       		.byte	-127
+ 2145 0845 01       		.byte	1
+ 2146 0846 87       		.byte	-121
+ 2147 0847 40       		.byte	64
+ 2148 0848 90       		.byte	-112
+ 2149 0849 01       		.byte	1
+ 2150 084a 98       		.byte	-104
+ 2151 084b 21       		.byte	33
+ 2152 084c 99       		.byte	-103
+ 2153 084d 04       		.byte	4
+ 2154 084e 9A       		.byte	-102
+ 2155 084f 20       		.byte	32
+ 2156 0850 A0       		.byte	-96
+ 2157 0851 02       		.byte	2
+ 2158 0852 A2       		.byte	-94
+ 2159 0853 60       		.byte	96
+ 2160 0854 A8       		.byte	-88
+ 2161 0855 81       		.byte	-127
+ 2162 0856 AB       		.byte	-85
+ 2163 0857 08       		.byte	8
+ 2164 0858 AC       		.byte	-84
+ 2165 0859 10       		.byte	16
+ 2166 085a B2       		.byte	-78
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 39
+
+
+ 2167 085b 60       		.byte	96
+ 2168 085c D4       		.byte	-44
+ 2169 085d E0       		.byte	-32
+ 2170 085e D6       		.byte	-42
+ 2171 085f E0       		.byte	-32
+ 2172 0860 D8       		.byte	-40
+ 2173 0861 C0       		.byte	-64
+ 2174 0862 DC       		.byte	-36
+ 2175 0863 80       		.byte	-128
+ 2176 0864 DE       		.byte	-34
+ 2177 0865 20       		.byte	32
+ 2178 0866 E2       		.byte	-30
+ 2179 0867 20       		.byte	32
+ 2180 0868 E6       		.byte	-26
+ 2181 0869 40       		.byte	64
+ 2182 086a EA       		.byte	-22
+ 2183 086b A0       		.byte	-96
+ 2184 086c EE       		.byte	-18
+ 2185 086d C0       		.byte	-64
+ 2186 086e 09       		.byte	9
+ 2187 086f 20       		.byte	32
+ 2188 0870 0E       		.byte	14
+ 2189 0871 01       		.byte	1
+ 2190 0872 0F       		.byte	15
+ 2191 0873 10       		.byte	16
+ 2192 0874 81       		.byte	-127
+ 2193 0875 20       		.byte	32
+ 2194 0876 89       		.byte	-119
+ 2195 0877 02       		.byte	2
+ 2196 0878 8A       		.byte	-118
+ 2197 0879 01       		.byte	1
+ 2198 087a 95       		.byte	-107
+ 2199 087b 40       		.byte	64
+ 2200 087c 97       		.byte	-105
+ 2201 087d 04       		.byte	4
+ 2202 087e 9E       		.byte	-98
+ 2203 087f 02       		.byte	2
+ 2204 0880 A7       		.byte	-89
+ 2205 0881 20       		.byte	32
+ 2206 0882 AF       		.byte	-81
+ 2207 0883 04       		.byte	4
+ 2208 0884 C2       		.byte	-62
+ 2209 0885 07       		.byte	7
+ 2210 0886 E4       		.byte	-28
+ 2211 0887 04       		.byte	4
+ 2212 0888 E6       		.byte	-26
+ 2213 0889 01       		.byte	1
+ 2214 088a 01       		.byte	1
+ 2215 088b 40       		.byte	64
+ 2216 088c 03       		.byte	3
+ 2217 088d 20       		.byte	32
+ 2218 088e 05       		.byte	5
+ 2219 088f 08       		.byte	8
+ 2220 0890 06       		.byte	6
+ 2221 0891 02       		.byte	2
+ 2222 0892 0B       		.byte	11
+ 2223 0893 04       		.byte	4
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 40
+
+
+ 2224 0894 61       		.byte	97
+ 2225 0895 02       		.byte	2
+ 2226 0896 81       		.byte	-127
+ 2227 0897 08       		.byte	8
+ 2228 0898 95       		.byte	-107
+ 2229 0899 40       		.byte	64
+ 2230 089a 97       		.byte	-105
+ 2231 089b 04       		.byte	4
+ 2232 089c 9E       		.byte	-98
+ 2233 089d 02       		.byte	2
+ 2234 089e A1       		.byte	-95
+ 2235 089f 02       		.byte	2
+ 2236 08a0 A7       		.byte	-89
+ 2237 08a1 20       		.byte	32
+ 2238 08a2 B3       		.byte	-77
+ 2239 08a3 10       		.byte	16
+ 2240 08a4 C0       		.byte	-64
+ 2241 08a5 0F       		.byte	15
+ 2242 08a6 C2       		.byte	-62
+ 2243 08a7 02       		.byte	2
+ 2244 08a8 D8       		.byte	-40
+ 2245 08a9 02       		.byte	2
+ 2246 08aa EE       		.byte	-18
+ 2247 08ab 01       		.byte	1
+ 2248 08ac 00       		.byte	0
+ 2249 08ad 01       		.byte	1
+ 2250 08ae 0C       		.byte	12
+ 2251 08af 01       		.byte	1
+ 2252 08b0 10       		.byte	16
+ 2253 08b1 01       		.byte	1
+ 2254 08b2 1C       		.byte	28
+ 2255 08b3 01       		.byte	1
+ 2256 08b4 00       		.byte	0
+ 2257 08b5 FF       		.byte	-1
+ 2258 08b6 FF       		.byte	-1
+ 2259 08b7 00       		.byte	0
+ 2260 08b8 FF       		.byte	-1
+ 2261 08b9 00       		.byte	0
+ 2262 08ba 00       		.byte	0
+ 2263 08bb 00       		.byte	0
+ 2264 08bc 00       		.byte	0
+ 2265 08bd 0F       		.byte	15
+ 2266 08be 0F       		.byte	15
+ 2267 08bf 00       		.byte	0
+ 2268 08c0 0F       		.byte	15
+ 2269 08c1 00       		.byte	0
+ 2270 08c2 00       		.byte	0
+ 2271 08c3 00       		.byte	0
+ 2272 08c4 00       		.byte	0
+ 2273 08c5 0F       		.byte	15
+ 2274 08c6 0F       		.byte	15
+ 2275 08c7 00       		.byte	0
+ 2276 08c8 0F       		.byte	15
+ 2277 08c9 00       		.byte	0
+ 2278 08ca 00       		.byte	0
+ 2279 08cb 00       		.byte	0
+ 2280 08cc E0       		.byte	-32
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 41
+
+
+ 2281 08cd 00       		.byte	0
+ 2282 08ce 00       		.byte	0
+ 2283 08cf E0       		.byte	-32
+ 2284 08d0 00       		.byte	0
+ 2285 08d1 00       		.byte	0
+ 2286 08d2 00       		.byte	0
+ 2287 08d3 00       		.byte	0
+ 2288 08d4 00       		.byte	0
+ 2289 08d5 00       		.byte	0
+ 2290 08d6 00       		.byte	0
+ 2291 08d7 00       		.byte	0
+ 2292 08d8 FF       		.byte	-1
+ 2293 08d9 00       		.byte	0
+ 2294 08da 80       		.byte	-128
+ 2295 08db FF       		.byte	-1
+ 2296 08dc 80       		.byte	-128
+ 2297 08dd 00       		.byte	0
+ 2298 08de 00       		.byte	0
+ 2299 08df 00       		.byte	0
+ 2300 08e0 00       		.byte	0
+ 2301 08e1 00       		.byte	0
+ 2302 08e2 00       		.byte	0
+ 2303 08e3 00       		.byte	0
+ 2304 08e4 00       		.byte	0
+ 2305 08e5 FF       		.byte	-1
+ 2306 08e6 FF       		.byte	-1
+ 2307 08e7 00       		.byte	0
+ 2308 08e8 FF       		.byte	-1
+ 2309 08e9 00       		.byte	0
+ 2310 08ea 00       		.byte	0
+ 2311 08eb 00       		.byte	0
+ 2312 08ec 00       		.byte	0
+ 2313 08ed 3F       		.byte	63
+ 2314 08ee 3F       		.byte	63
+ 2315 08ef 00       		.byte	0
+ 2316 08f0 3F       		.byte	63
+ 2317 08f1 00       		.byte	0
+ 2318 08f2 00       		.byte	0
+ 2319 08f3 00       		.byte	0
+ 2320 08f4 0D       		.byte	13
+ 2321 08f5 00       		.byte	0
+ 2322 08f6 42       		.byte	66
+ 2323 08f7 1D       		.byte	29
+ 2324 08f8 10       		.byte	16
+ 2325 08f9 00       		.byte	0
+ 2326 08fa 10       		.byte	16
+ 2327 08fb 00       		.byte	0
+ 2328 08fc 00       		.byte	0
+ 2329 08fd 00       		.byte	0
+ 2330 08fe 00       		.byte	0
+ 2331 08ff 00       		.byte	0
+ 2332              		.section	.cywolatch,"a",%progbits
+ 2333              		.align	2
+ 2334              		.type	cy_meta_wonvl, %object
+ 2335              		.size	cy_meta_wonvl, 4
+ 2336              	cy_meta_wonvl:
+ 2337 0000 BC       		.byte	-68
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 42
+
+
+ 2338 0001 90       		.byte	-112
+ 2339 0002 AC       		.byte	-84
+ 2340 0003 AF       		.byte	-81
+ 2341              		.section	.cycustnvl,"a",%progbits
+ 2342              		.align	2
+ 2343              		.type	cy_meta_custnvl, %object
+ 2344              		.size	cy_meta_custnvl, 4
+ 2345              	cy_meta_custnvl:
+ 2346 0000 00       		.byte	0
+ 2347 0001 00       		.byte	0
+ 2348 0002 40       		.byte	64
+ 2349 0003 05       		.byte	5
+ 2350              		.section	.cymeta,"a",%progbits
+ 2351              		.align	2
+ 2352              		.type	cy_metadata, %object
+ 2353              		.size	cy_metadata, 12
+ 2354              	cy_metadata:
+ 2355 0000 00       		.byte	0
+ 2356 0001 01       		.byte	1
+ 2357 0002 2E       		.byte	46
+ 2358 0003 13       		.byte	19
+ 2359 0004 30       		.byte	48
+ 2360 0005 69       		.byte	105
+ 2361 0006 00       		.byte	0
+ 2362 0007 01       		.byte	1
+ 2363 0008 00       		.byte	0
+ 2364 0009 00       		.byte	0
+ 2365 000a 00       		.byte	0
+ 2366 000b 00       		.byte	0
+ 2367              		.section	.cyflashprotect,"a",%progbits
+ 2368              		.align	2
+ 2369              		.type	cy_meta_flashprotect, %object
+ 2370              		.size	cy_meta_flashprotect, 128
+ 2371              	cy_meta_flashprotect:
+ 2372 0000 00000000 		.space	128
+ 2372      00000000 
+ 2372      00000000 
+ 2372      00000000 
+ 2372      00000000 
+ 2373              		.text
+ 2374              	.Letext0:
+ 2375              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ 2376              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 2377              		.section	.debug_info,"",%progbits
+ 2378              	.Ldebug_info0:
+ 2379 0000 3A010000 		.4byte	0x13a
+ 2380 0004 0400     		.2byte	0x4
+ 2381 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2382 000a 04       		.byte	0x4
+ 2383 000b 01       		.uleb128 0x1
+ 2384 000c 94000000 		.4byte	.LASF18
+ 2385 0010 01       		.byte	0x1
+ 2386 0011 00000000 		.4byte	.LASF19
+ 2387 0015 9E010000 		.4byte	.LASF20
+ 2388 0019 00000000 		.4byte	.Ldebug_line0
+ 2389 001d 02       		.uleb128 0x2
+ 2390 001e 01       		.byte	0x1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 43
+
+
+ 2391 001f 06       		.byte	0x6
+ 2392 0020 DF010000 		.4byte	.LASF0
+ 2393 0024 02       		.uleb128 0x2
+ 2394 0025 01       		.byte	0x1
+ 2395 0026 08       		.byte	0x8
+ 2396 0027 38000000 		.4byte	.LASF1
+ 2397 002b 02       		.uleb128 0x2
+ 2398 002c 02       		.byte	0x2
+ 2399 002d 05       		.byte	0x5
+ 2400 002e 85010000 		.4byte	.LASF2
+ 2401 0032 02       		.uleb128 0x2
+ 2402 0033 02       		.byte	0x2
+ 2403 0034 07       		.byte	0x7
+ 2404 0035 58000000 		.4byte	.LASF3
+ 2405 0039 02       		.uleb128 0x2
+ 2406 003a 04       		.byte	0x4
+ 2407 003b 05       		.byte	0x5
+ 2408 003c 95010000 		.4byte	.LASF4
+ 2409 0040 02       		.uleb128 0x2
+ 2410 0041 04       		.byte	0x4
+ 2411 0042 07       		.byte	0x7
+ 2412 0043 46000000 		.4byte	.LASF5
+ 2413 0047 02       		.uleb128 0x2
+ 2414 0048 08       		.byte	0x8
+ 2415 0049 05       		.byte	0x5
+ 2416 004a 72010000 		.4byte	.LASF6
+ 2417 004e 02       		.uleb128 0x2
+ 2418 004f 08       		.byte	0x8
+ 2419 0050 07       		.byte	0x7
+ 2420 0051 2F010000 		.4byte	.LASF7
+ 2421 0055 03       		.uleb128 0x3
+ 2422 0056 04       		.byte	0x4
+ 2423 0057 05       		.byte	0x5
+ 2424 0058 696E7400 		.ascii	"int\000"
+ 2425 005c 02       		.uleb128 0x2
+ 2426 005d 04       		.byte	0x4
+ 2427 005e 07       		.byte	0x7
+ 2428 005f 22010000 		.4byte	.LASF8
+ 2429 0063 04       		.uleb128 0x4
+ 2430 0064 8F010000 		.4byte	.LASF21
+ 2431 0068 02       		.byte	0x2
+ 2432 0069 C2       		.byte	0xc2
+ 2433 006a 24000000 		.4byte	0x24
+ 2434 006e 02       		.uleb128 0x2
+ 2435 006f 04       		.byte	0x4
+ 2436 0070 04       		.byte	0x4
+ 2437 0071 32000000 		.4byte	.LASF9
+ 2438 0075 02       		.uleb128 0x2
+ 2439 0076 08       		.byte	0x8
+ 2440 0077 04       		.byte	0x4
+ 2441 0078 6B000000 		.4byte	.LASF10
+ 2442 007c 02       		.uleb128 0x2
+ 2443 007d 01       		.byte	0x1
+ 2444 007e 08       		.byte	0x8
+ 2445 007f 80010000 		.4byte	.LASF11
+ 2446 0083 05       		.uleb128 0x5
+ 2447 0084 63000000 		.4byte	0x63
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 44
+
+
+ 2448 0088 94000000 		.4byte	0x94
+ 2449 008c 06       		.uleb128 0x6
+ 2450 008d 94000000 		.4byte	0x94
+ 2451 0091 FF08     		.2byte	0x8ff
+ 2452 0093 00       		.byte	0
+ 2453 0094 02       		.uleb128 0x2
+ 2454 0095 04       		.byte	0x4
+ 2455 0096 07       		.byte	0x7
+ 2456 0097 69010000 		.4byte	.LASF12
+ 2457 009b 07       		.uleb128 0x7
+ 2458 009c 82000000 		.4byte	.LASF13
+ 2459 00a0 01       		.byte	0x1
+ 2460 00a1 1F       		.byte	0x1f
+ 2461 00a2 AC000000 		.4byte	0xac
+ 2462 00a6 05       		.uleb128 0x5
+ 2463 00a7 03       		.byte	0x3
+ 2464 00a8 00000000 		.4byte	cy_meta_configecc
+ 2465 00ac 08       		.uleb128 0x8
+ 2466 00ad 83000000 		.4byte	0x83
+ 2467 00b1 05       		.uleb128 0x5
+ 2468 00b2 63000000 		.4byte	0x63
+ 2469 00b6 C1000000 		.4byte	0xc1
+ 2470 00ba 09       		.uleb128 0x9
+ 2471 00bb 94000000 		.4byte	0x94
+ 2472 00bf 03       		.byte	0x3
+ 2473 00c0 00       		.byte	0
+ 2474 00c1 0A       		.uleb128 0xa
+ 2475 00c2 72000000 		.4byte	.LASF14
+ 2476 00c6 01       		.byte	0x1
+ 2477 00c7 4C01     		.2byte	0x14c
+ 2478 00c9 D3000000 		.4byte	0xd3
+ 2479 00cd 05       		.uleb128 0x5
+ 2480 00ce 03       		.byte	0x3
+ 2481 00cf 00000000 		.4byte	cy_meta_custnvl
+ 2482 00d3 08       		.uleb128 0x8
+ 2483 00d4 B1000000 		.4byte	0xb1
+ 2484 00d8 0A       		.uleb128 0xa
+ 2485 00d9 5B010000 		.4byte	.LASF15
+ 2486 00dd 01       		.byte	0x1
+ 2487 00de 5A01     		.2byte	0x15a
+ 2488 00e0 EA000000 		.4byte	0xea
+ 2489 00e4 05       		.uleb128 0x5
+ 2490 00e5 03       		.byte	0x3
+ 2491 00e6 00000000 		.4byte	cy_meta_wonvl
+ 2492 00ea 08       		.uleb128 0x8
+ 2493 00eb B1000000 		.4byte	0xb1
+ 2494 00ef 05       		.uleb128 0x5
+ 2495 00f0 63000000 		.4byte	0x63
+ 2496 00f4 FF000000 		.4byte	0xff
+ 2497 00f8 09       		.uleb128 0x9
+ 2498 00f9 94000000 		.4byte	0x94
+ 2499 00fd 7F       		.byte	0x7f
+ 2500 00fe 00       		.byte	0
+ 2501 00ff 0A       		.uleb128 0xa
+ 2502 0100 46010000 		.4byte	.LASF16
+ 2503 0104 01       		.byte	0x1
+ 2504 0105 6801     		.2byte	0x168
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 45
+
+
+ 2505 0107 11010000 		.4byte	0x111
+ 2506 010b 05       		.uleb128 0x5
+ 2507 010c 03       		.byte	0x3
+ 2508 010d 00000000 		.4byte	cy_meta_flashprotect
+ 2509 0111 08       		.uleb128 0x8
+ 2510 0112 EF000000 		.4byte	0xef
+ 2511 0116 05       		.uleb128 0x5
+ 2512 0117 63000000 		.4byte	0x63
+ 2513 011b 26010000 		.4byte	0x126
+ 2514 011f 09       		.uleb128 0x9
+ 2515 0120 94000000 		.4byte	0x94
+ 2516 0124 0B       		.byte	0xb
+ 2517 0125 00       		.byte	0
+ 2518 0126 0A       		.uleb128 0xa
+ 2519 0127 26000000 		.4byte	.LASF17
+ 2520 012b 01       		.byte	0x1
+ 2521 012c 8501     		.2byte	0x185
+ 2522 012e 38010000 		.4byte	0x138
+ 2523 0132 05       		.uleb128 0x5
+ 2524 0133 03       		.byte	0x3
+ 2525 0134 00000000 		.4byte	cy_metadata
+ 2526 0138 08       		.uleb128 0x8
+ 2527 0139 16010000 		.4byte	0x116
+ 2528 013d 00       		.byte	0
+ 2529              		.section	.debug_abbrev,"",%progbits
+ 2530              	.Ldebug_abbrev0:
+ 2531 0000 01       		.uleb128 0x1
+ 2532 0001 11       		.uleb128 0x11
+ 2533 0002 01       		.byte	0x1
+ 2534 0003 25       		.uleb128 0x25
+ 2535 0004 0E       		.uleb128 0xe
+ 2536 0005 13       		.uleb128 0x13
+ 2537 0006 0B       		.uleb128 0xb
+ 2538 0007 03       		.uleb128 0x3
+ 2539 0008 0E       		.uleb128 0xe
+ 2540 0009 1B       		.uleb128 0x1b
+ 2541 000a 0E       		.uleb128 0xe
+ 2542 000b 10       		.uleb128 0x10
+ 2543 000c 17       		.uleb128 0x17
+ 2544 000d 00       		.byte	0
+ 2545 000e 00       		.byte	0
+ 2546 000f 02       		.uleb128 0x2
+ 2547 0010 24       		.uleb128 0x24
+ 2548 0011 00       		.byte	0
+ 2549 0012 0B       		.uleb128 0xb
+ 2550 0013 0B       		.uleb128 0xb
+ 2551 0014 3E       		.uleb128 0x3e
+ 2552 0015 0B       		.uleb128 0xb
+ 2553 0016 03       		.uleb128 0x3
+ 2554 0017 0E       		.uleb128 0xe
+ 2555 0018 00       		.byte	0
+ 2556 0019 00       		.byte	0
+ 2557 001a 03       		.uleb128 0x3
+ 2558 001b 24       		.uleb128 0x24
+ 2559 001c 00       		.byte	0
+ 2560 001d 0B       		.uleb128 0xb
+ 2561 001e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 46
+
+
+ 2562 001f 3E       		.uleb128 0x3e
+ 2563 0020 0B       		.uleb128 0xb
+ 2564 0021 03       		.uleb128 0x3
+ 2565 0022 08       		.uleb128 0x8
+ 2566 0023 00       		.byte	0
+ 2567 0024 00       		.byte	0
+ 2568 0025 04       		.uleb128 0x4
+ 2569 0026 16       		.uleb128 0x16
+ 2570 0027 00       		.byte	0
+ 2571 0028 03       		.uleb128 0x3
+ 2572 0029 0E       		.uleb128 0xe
+ 2573 002a 3A       		.uleb128 0x3a
+ 2574 002b 0B       		.uleb128 0xb
+ 2575 002c 3B       		.uleb128 0x3b
+ 2576 002d 0B       		.uleb128 0xb
+ 2577 002e 49       		.uleb128 0x49
+ 2578 002f 13       		.uleb128 0x13
+ 2579 0030 00       		.byte	0
+ 2580 0031 00       		.byte	0
+ 2581 0032 05       		.uleb128 0x5
+ 2582 0033 01       		.uleb128 0x1
+ 2583 0034 01       		.byte	0x1
+ 2584 0035 49       		.uleb128 0x49
+ 2585 0036 13       		.uleb128 0x13
+ 2586 0037 01       		.uleb128 0x1
+ 2587 0038 13       		.uleb128 0x13
+ 2588 0039 00       		.byte	0
+ 2589 003a 00       		.byte	0
+ 2590 003b 06       		.uleb128 0x6
+ 2591 003c 21       		.uleb128 0x21
+ 2592 003d 00       		.byte	0
+ 2593 003e 49       		.uleb128 0x49
+ 2594 003f 13       		.uleb128 0x13
+ 2595 0040 2F       		.uleb128 0x2f
+ 2596 0041 05       		.uleb128 0x5
+ 2597 0042 00       		.byte	0
+ 2598 0043 00       		.byte	0
+ 2599 0044 07       		.uleb128 0x7
+ 2600 0045 34       		.uleb128 0x34
+ 2601 0046 00       		.byte	0
+ 2602 0047 03       		.uleb128 0x3
+ 2603 0048 0E       		.uleb128 0xe
+ 2604 0049 3A       		.uleb128 0x3a
+ 2605 004a 0B       		.uleb128 0xb
+ 2606 004b 3B       		.uleb128 0x3b
+ 2607 004c 0B       		.uleb128 0xb
+ 2608 004d 49       		.uleb128 0x49
+ 2609 004e 13       		.uleb128 0x13
+ 2610 004f 3F       		.uleb128 0x3f
+ 2611 0050 19       		.uleb128 0x19
+ 2612 0051 02       		.uleb128 0x2
+ 2613 0052 18       		.uleb128 0x18
+ 2614 0053 00       		.byte	0
+ 2615 0054 00       		.byte	0
+ 2616 0055 08       		.uleb128 0x8
+ 2617 0056 26       		.uleb128 0x26
+ 2618 0057 00       		.byte	0
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 47
+
+
+ 2619 0058 49       		.uleb128 0x49
+ 2620 0059 13       		.uleb128 0x13
+ 2621 005a 00       		.byte	0
+ 2622 005b 00       		.byte	0
+ 2623 005c 09       		.uleb128 0x9
+ 2624 005d 21       		.uleb128 0x21
+ 2625 005e 00       		.byte	0
+ 2626 005f 49       		.uleb128 0x49
+ 2627 0060 13       		.uleb128 0x13
+ 2628 0061 2F       		.uleb128 0x2f
+ 2629 0062 0B       		.uleb128 0xb
+ 2630 0063 00       		.byte	0
+ 2631 0064 00       		.byte	0
+ 2632 0065 0A       		.uleb128 0xa
+ 2633 0066 34       		.uleb128 0x34
+ 2634 0067 00       		.byte	0
+ 2635 0068 03       		.uleb128 0x3
+ 2636 0069 0E       		.uleb128 0xe
+ 2637 006a 3A       		.uleb128 0x3a
+ 2638 006b 0B       		.uleb128 0xb
+ 2639 006c 3B       		.uleb128 0x3b
+ 2640 006d 05       		.uleb128 0x5
+ 2641 006e 49       		.uleb128 0x49
+ 2642 006f 13       		.uleb128 0x13
+ 2643 0070 3F       		.uleb128 0x3f
+ 2644 0071 19       		.uleb128 0x19
+ 2645 0072 02       		.uleb128 0x2
+ 2646 0073 18       		.uleb128 0x18
+ 2647 0074 00       		.byte	0
+ 2648 0075 00       		.byte	0
+ 2649 0076 00       		.byte	0
+ 2650              		.section	.debug_aranges,"",%progbits
+ 2651 0000 14000000 		.4byte	0x14
+ 2652 0004 0200     		.2byte	0x2
+ 2653 0006 00000000 		.4byte	.Ldebug_info0
+ 2654 000a 04       		.byte	0x4
+ 2655 000b 00       		.byte	0
+ 2656 000c 0000     		.2byte	0
+ 2657 000e 0000     		.2byte	0
+ 2658 0010 00000000 		.4byte	0
+ 2659 0014 00000000 		.4byte	0
+ 2660              		.section	.debug_line,"",%progbits
+ 2661              	.Ldebug_line0:
+ 2662 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 2662      02004900 
+ 2662      00000201 
+ 2662      FB0E0D00 
+ 2662      01010101 
+ 2663              	.LASF19:
+ 2664 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2664      6E657261 
+ 2664      7465645F 
+ 2664      536F7572 
+ 2664      63655C50 
+ 2665              	.LASF17:
+ 2666 0026 63795F6D 		.ascii	"cy_metadata\000"
+ 2666      65746164 
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 48
+
+
+ 2666      61746100 
+ 2667              	.LASF9:
+ 2668 0032 666C6F61 		.ascii	"float\000"
+ 2668      7400
+ 2669              	.LASF1:
+ 2670 0038 756E7369 		.ascii	"unsigned char\000"
+ 2670      676E6564 
+ 2670      20636861 
+ 2670      7200
+ 2671              	.LASF5:
+ 2672 0046 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2672      20756E73 
+ 2672      69676E65 
+ 2672      6420696E 
+ 2672      7400
+ 2673              	.LASF3:
+ 2674 0058 73686F72 		.ascii	"short unsigned int\000"
+ 2674      7420756E 
+ 2674      7369676E 
+ 2674      65642069 
+ 2674      6E7400
+ 2675              	.LASF10:
+ 2676 006b 646F7562 		.ascii	"double\000"
+ 2676      6C6500
+ 2677              	.LASF14:
+ 2678 0072 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2678      6574615F 
+ 2678      63757374 
+ 2678      6E766C00 
+ 2679              	.LASF13:
+ 2680 0082 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2680      6574615F 
+ 2680      636F6E66 
+ 2680      69676563 
+ 2680      6300
+ 2681              	.LASF18:
+ 2682 0094 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2682      4320342E 
+ 2682      392E3320 
+ 2682      32303135 
+ 2682      30333033 
+ 2683 00c7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2683      20726576 
+ 2683      6973696F 
+ 2683      6E203232 
+ 2683      31323230 
+ 2684 00fa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2684      66756E63 
+ 2684      74696F6E 
+ 2684      2D736563 
+ 2684      74696F6E 
+ 2685              	.LASF8:
+ 2686 0122 756E7369 		.ascii	"unsigned int\000"
+ 2686      676E6564 
+ 2686      20696E74 
+ 2686      00
+ 2687              	.LASF7:
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccs6aUHq.s 			page 49
+
+
+ 2688 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2688      206C6F6E 
+ 2688      6720756E 
+ 2688      7369676E 
+ 2688      65642069 
+ 2689              	.LASF16:
+ 2690 0146 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2690      6574615F 
+ 2690      666C6173 
+ 2690      6870726F 
+ 2690      74656374 
+ 2691              	.LASF15:
+ 2692 015b 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2692      6574615F 
+ 2692      776F6E76 
+ 2692      6C00
+ 2693              	.LASF12:
+ 2694 0169 73697A65 		.ascii	"sizetype\000"
+ 2694      74797065 
+ 2694      00
+ 2695              	.LASF6:
+ 2696 0172 6C6F6E67 		.ascii	"long long int\000"
+ 2696      206C6F6E 
+ 2696      6720696E 
+ 2696      7400
+ 2697              	.LASF11:
+ 2698 0180 63686172 		.ascii	"char\000"
+ 2698      00
+ 2699              	.LASF2:
+ 2700 0185 73686F72 		.ascii	"short int\000"
+ 2700      7420696E 
+ 2700      7400
+ 2701              	.LASF21:
+ 2702 018f 75696E74 		.ascii	"uint8\000"
+ 2702      3800
+ 2703              	.LASF4:
+ 2704 0195 6C6F6E67 		.ascii	"long int\000"
+ 2704      20696E74 
+ 2704      00
+ 2705              	.LASF20:
+ 2706 019e 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
+ 2706      73657273 
+ 2706      5C646F75 
+ 2706      675F3030 
+ 2706      305C446F 
+ 2707 01cb 52505053 		.ascii	"RPPSOC-Blink4.cydsn\000"
+ 2707      4F432D42 
+ 2707      6C696E6B 
+ 2707      342E6379 
+ 2707      64736E00 
+ 2708              	.LASF0:
+ 2709 01df 7369676E 		.ascii	"signed char\000"
+ 2709      65642063 
+ 2709      68617200 
+ 2710              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

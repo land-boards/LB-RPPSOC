@@ -1,6 +1,6 @@
 -- Project:   C:\Users\doug_000\Documents\GitHub\LB-RPPSOC\RPPSOC-Blink1.cydsn\RPPSOC-Blink1.cyprj
--- Generated: 05/20/2016 15:34:17
--- PSoC Creator  3.3 CP2
+-- Generated: 05/22/2016 16:03:49
+-- PSoC Creator  3.3 SP2
 
 ENTITY \RPPSOC-Blink1\ IS
     PORT(

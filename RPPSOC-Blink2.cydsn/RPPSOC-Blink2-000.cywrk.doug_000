@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RPPSOC-Blink2-000\RPPSOC-Blink2\Generated_Source\PSoC5">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RPPSOC-Blink2-000\RPPSOC-Blink2\TopDesign">
 <ExpandedNodeIds>
 <v>RPPSOC-Blink2-000</v>
 <v>RPPSOC-Blink2-000\RPPSOC-Blink2</v>
@@ -135,28 +135,6 @@
 <VisibleNodeIds>
 <v>RPPSOC-Blink2-000</v>
 <v>RPPSOC-Blink2-000\RPPSOC-Blink2</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1_PM.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\LED5_4.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink2.elf</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink2.hex</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink2.map</v>
-<v>RPPSOC-Blink2-000\RPPSOC-Blink2\RPPSOC-Blink2.gpdsc</v>
 <v>RPPSOC-Blink2-000\RPPSOC-Blink2\RPPSOC-Blink2.rpt</v>
 <v>RPPSOC-Blink2-000\RPPSOC-Blink2\RPPSOC-Blink2_timing.html</v>
 </VisibleNodeIds>
@@ -199,7 +177,10 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\main.c" />
+</OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

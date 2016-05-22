@@ -1,6 +1,6 @@
 -- Project:   RPPSOC-Blink1
--- Generated: 05/20/2016 15:34:11
--- PSoC Creator  3.3 CP2
+-- Generated: 05/22/2016 16:03:41
+-- PSoC Creator  3.3 SP2
 
 ENTITY \RPPSOC-Blink1\ IS
     PORT(
