@@ -1,0 +1,28 @@
+# RPPSOC-Blink5
+# 2016-05-22 21:38:20Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+dont_use_location comparatorcell -1 -1 1
+dont_use_location comparatorcell -1 -1 3
+dont_use_location sccell -1 -1 0
+dont_use_location sccell -1 -1 1
+dont_use_location sccell -1 -1 2
+dont_use_location sccell -1 -1 3
+dont_use_location vidaccell -1 -1 1
+dont_use_location vidaccell -1 -1 2
+dont_use_location vidaccell -1 -1 3
+dont_use_location sarcell -1 -1 1
+dont_use_location abufcell -1 -1 0
+dont_use_location abufcell -1 -1 2
+dont_use_location abufcell -1 -1 1
+dont_use_location abufcell -1 -1 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "LED5_4(0)" iocell 5 4
+set_io "RP_GPIO_18(0)" iocell 1 6
+set_location "\Control_Reg_1:Sync:ctrl_reg\" 0 0 6
+set_location "\Status_Reg_1:sts:sts_reg\" 0 0 3

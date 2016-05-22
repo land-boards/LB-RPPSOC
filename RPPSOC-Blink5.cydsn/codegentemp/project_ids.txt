@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|1fdfe6e4-921c-46af-b134-26dbc5f8e9a3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|527c0f17-344a-43fa-8413-515813481e9e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|40d93ff2-1a9a-40c4-97b4-4e20b0d8df4f
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8da8e81c-20cb-4462-9a8d-2ab738d57958
+C:\Users\doug_000\Documents\GitHub\LB-RPPSOC\RPPSOC-Blink5.cydsn\RPPSOC-Blink5.cyprj|5900dfba-dafa-424f-a0c4-335a7dd1a3f6

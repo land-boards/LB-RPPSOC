@@ -19,6 +19,7 @@ int main()
 
     for(;;)
     {
+        Control_Reg_1_Write(Status_Reg_1_Read());
     }
 }
 

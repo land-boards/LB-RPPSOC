@@ -1,0 +1,34 @@
+net ClockBlock_BUS_CLK
+	term   ":clockblockcell.clk_bus_glb"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(0,0)]:controlcell.busclk"
+	term   ":udb@[UDB=(0,0)]:controlcell.busclk"
+end ClockBlock_BUS_CLK
+net Net_37
+	term   ":udb@[UDB=(0,0)]:controlcell.control_0"
+	switch ":udb@[UDB=(0,0)]:controlcell.control_0==>:udb@[UDB=(0,0)]:controlcell_control_0_permute.in_0"
+	switch ":udb@[UDB=(0,0)]:controlcell_control_0_permute.controlcell_control_0==>Stub-:udbswitch@[UDB=(0,0)][side=top]:v104"
+	switch "OStub-:udbswitch@[UDB=(0,0)][side=top]:v104"
+	switch ":udbswitch@[UDB=(0,0)][side=top]:104,2"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:8,2_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:vseg_8_bot_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:8,10_b"
+	switch ":dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:99,10_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v101+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v103+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v99"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v101+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v103+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v99==>:ioport5:inputs2_mux.in_3"
+	switch ":ioport5:inputs2_mux.pin4__pin_input==>:ioport5:pin4.pin_input"
+	term   ":ioport5:pin4.pin_input"
+end Net_37
+net Net_55
+	term   ":ioport1:pin6.fb"
+	switch ":ioport1:pin6.fb==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v12+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v14"
+	switch "OStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v12+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v14"
+	switch ":dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:12,13"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:26,13_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:vseg_26_bot_b"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:26,22_b"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:hseg_22_b"
+	switch ":udbswitch@[UDB=(0,0)][side=top]:88,22_f"
+	switch "IStub-:udbswitch@[UDB=(0,0)][side=top]:v88"
+	switch "Stub-:udbswitch@[UDB=(0,0)][side=top]:v88==>:udb@[UDB=(0,0)]:statuscell.status_0"
+	term   ":udb@[UDB=(0,0)]:statuscell.status_0"
+end Net_55
