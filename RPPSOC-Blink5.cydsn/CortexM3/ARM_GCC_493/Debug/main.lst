@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 1
 
 
    1              		.syntax unified
@@ -29,20 +29,28 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
   26              		.file 1 ".\\main.c"
    1:.\main.c      **** /* ========================================
    2:.\main.c      ****  *
-   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
-   4:.\main.c      ****  * All Rights Reserved
-   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
-   6:.\main.c      ****  *
-   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
-   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
-   9:.\main.c      ****  *
-  10:.\main.c      ****  * ========================================
-  11:.\main.c      **** */
-  12:.\main.c      **** #include <project.h>
-  13:.\main.c      **** 
-  14:.\main.c      **** int main()
-  15:.\main.c      **** {
-  27              		.loc 1 15 0
+   3:.\main.c      ****  * RPPSOC Example 5 Code
+   4:.\main.c      ****  *
+   5:.\main.c      ****  * Copyright Land Boards, LLC, 2016
+   6:.\main.c      ****  * All Rights Reserved
+   7:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   8:.\main.c      ****  *
+   9:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  10:.\main.c      ****  * WHICH IS THE PROPERTY OF LAND BOARDS.
+  11:.\main.c      ****  * MAY BE USED FOR ANY RPPSOC DEVELOPMENT.
+  12:.\main.c      ****  * 
+  13:.\main.c      ****  * This code reads a line from the Raspberry PI
+  14:.\main.c      ****  * and reflects that line to the control register.
+  15:.\main.c      ****  * The control register connects to the LED.
+  16:.\main.c      ****  *
+  17:.\main.c      ****  * ========================================
+  18:.\main.c      **** */
+  19:.\main.c      **** 
+  20:.\main.c      **** #include <project.h>
+  21:.\main.c      **** 
+  22:.\main.c      **** int main()
+  23:.\main.c      **** {
+  27              		.loc 1 23 0
   28              		.cfi_startproc
   29              		@ Volatile: function does not return.
   30              		@ args = 0, pretend = 0, frame = 0
@@ -50,30 +58,30 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
   32 0000 08B5     		push	{r3, lr}
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 2
+
+
   35              		.cfi_offset 14, -4
-  16:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  36              		.loc 1 16 0
-  37              	@ 16 ".\main.c" 1
+  24:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  36              		.loc 1 24 0
+  37              	@ 24 ".\main.c" 1
   38 0002 62B6     		CPSIE   i
   39              	@ 0 "" 2
   40              		.thumb
   41              	.L2:
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 2
-
-
-  17:.\main.c      **** 
-  18:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  19:.\main.c      **** 
-  20:.\main.c      ****     for(;;)
-  21:.\main.c      ****     {
-  22:.\main.c      ****         Control_Reg_1_Write(Status_Reg_1_Read());
-  42              		.loc 1 22 0 discriminator 1
+  25:.\main.c      **** 
+  26:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  27:.\main.c      **** 
+  28:.\main.c      ****     for(;;)
+  29:.\main.c      ****     {
+  30:.\main.c      ****         Control_Reg_1_Write(Status_Reg_1_Read());
+  42              		.loc 1 30 0 discriminator 1
   43 0004 FFF7FEFF 		bl	Status_Reg_1_Read
   44              	.LVL0:
   45 0008 FFF7FEFF 		bl	Control_Reg_1_Write
   46              	.LVL1:
-  23:.\main.c      ****     }
-  47              		.loc 1 23 0 discriminator 1
+  31:.\main.c      ****     }
+  47              		.loc 1 31 0 discriminator 1
   48 000c FAE7     		b	.L2
   49              		.cfi_endproc
   50              	.LFE63:
@@ -93,41 +101,41 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
   64 0006 00000000 		.4byte	.Ldebug_abbrev0
   65 000a 04       		.byte	0x4
   66 000b 01       		.uleb128 0x1
-  67 000c 84000000 		.4byte	.LASF16
+  67 000c 8D000000 		.4byte	.LASF16
   68 0010 01       		.byte	0x1
-  69 0011 32010000 		.4byte	.LASF17
-  70 0015 7D010000 		.4byte	.LASF18
+  69 0011 6D000000 		.4byte	.LASF17
+  70 0015 42010000 		.4byte	.LASF18
   71 0019 00000000 		.4byte	.Ldebug_ranges0+0
   72 001d 00000000 		.4byte	0
   73 0021 00000000 		.4byte	.Ldebug_line0
   74 0025 02       		.uleb128 0x2
   75 0026 01       		.byte	0x1
   76 0027 06       		.byte	0x6
-  77 0028 4F010000 		.4byte	.LASF0
+  77 0028 92010000 		.4byte	.LASF0
   78 002c 02       		.uleb128 0x2
   79 002d 01       		.byte	0x1
   80 002e 08       		.byte	0x8
   81 002f 2E000000 		.4byte	.LASF1
   82 0033 02       		.uleb128 0x2
   83 0034 02       		.byte	0x2
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 3
+
+
   84 0035 05       		.byte	0x5
-  85 0036 6B010000 		.4byte	.LASF2
+  85 0036 AE010000 		.4byte	.LASF2
   86 003a 02       		.uleb128 0x2
   87 003b 02       		.byte	0x2
   88 003c 07       		.byte	0x7
   89 003d 0E000000 		.4byte	.LASF3
   90 0041 03       		.uleb128 0x3
-  91 0042 5B010000 		.4byte	.LASF9
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 3
-
-
+  91 0042 9E010000 		.4byte	.LASF9
   92 0046 02       		.byte	0x2
   93 0047 3F       		.byte	0x3f
   94 0048 4C000000 		.4byte	0x4c
   95 004c 02       		.uleb128 0x2
   96 004d 04       		.byte	0x4
   97 004e 05       		.byte	0x5
-  98 004f 29010000 		.4byte	.LASF4
+  98 004f 32010000 		.4byte	.LASF4
   99 0053 02       		.uleb128 0x2
  100 0054 04       		.byte	0x4
  101 0055 07       		.byte	0x7
@@ -139,7 +147,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  107 0061 02       		.uleb128 0x2
  108 0062 08       		.byte	0x8
  109 0063 07       		.byte	0x7
- 110 0064 6D000000 		.4byte	.LASF7
+ 110 0064 76000000 		.4byte	.LASF7
  111 0068 04       		.uleb128 0x4
  112 0069 04       		.byte	0x4
  113 006a 05       		.byte	0x5
@@ -149,7 +157,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  117 0071 07       		.byte	0x7
  118 0072 21000000 		.4byte	.LASF8
  119 0076 03       		.uleb128 0x3
- 120 0077 75010000 		.4byte	.LASF10
+ 120 0077 B8010000 		.4byte	.LASF10
  121 007b 03       		.byte	0x3
  122 007c 2C       		.byte	0x2c
  123 007d 41000000 		.4byte	0x41
@@ -161,7 +169,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  129 008c 02       		.uleb128 0x2
  130 008d 04       		.byte	0x4
  131 008e 04       		.byte	0x4
- 132 008f 65010000 		.4byte	.LASF12
+ 132 008f A8010000 		.4byte	.LASF12
  133 0093 02       		.uleb128 0x2
  134 0094 08       		.byte	0x8
  135 0095 04       		.byte	0x4
@@ -169,18 +177,18 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  137 009a 02       		.uleb128 0x2
  138 009b 01       		.byte	0x1
  139 009c 08       		.byte	0x8
- 140 009d 24010000 		.4byte	.LASF14
+ 140 009d 2D010000 		.4byte	.LASF14
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 4
+
+
  141 00a1 02       		.uleb128 0x2
  142 00a2 04       		.byte	0x4
  143 00a3 07       		.byte	0x7
- 144 00a4 BE010000 		.4byte	.LASF15
+ 144 00a4 C0010000 		.4byte	.LASF15
  145 00a8 05       		.uleb128 0x5
  146 00a9 3C000000 		.4byte	.LASF19
  147 00ad 01       		.byte	0x1
- 148 00ae 0E       		.byte	0xe
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 4
-
-
+ 148 00ae 16       		.byte	0x16
  149 00af 68000000 		.4byte	0x68
  150 00b3 00000000 		.4byte	.LFB63
  151 00b7 0E000000 		.4byte	.LFE63-.LFB63
@@ -195,14 +203,14 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  160 00cf F0000000 		.4byte	0xf0
  161 00d3 00       		.byte	0
  162 00d4 07       		.uleb128 0x7
- 163 00d5 42010000 		.4byte	.LASF20
+ 163 00d5 85010000 		.4byte	.LASF20
  164 00d9 05       		.byte	0x5
  165 00da 2A06     		.2byte	0x62a
  166 00dc E0000000 		.4byte	0xe0
  167 00e0 08       		.uleb128 0x8
  168 00e1 76000000 		.4byte	0x76
  169 00e5 09       		.uleb128 0x9
- 170 00e6 12010000 		.4byte	.LASF21
+ 170 00e6 1B010000 		.4byte	.LASF21
  171 00ea 06       		.byte	0x6
  172 00eb 28       		.byte	0x28
  173 00ec 81000000 		.4byte	0x81
@@ -230,6 +238,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  195 000b 55       		.uleb128 0x55
  196 000c 17       		.uleb128 0x17
  197 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 5
+
+
  198 000e 01       		.uleb128 0x1
  199 000f 10       		.uleb128 0x10
  200 0010 17       		.uleb128 0x17
@@ -238,9 +249,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  203 0013 02       		.uleb128 0x2
  204 0014 24       		.uleb128 0x24
  205 0015 00       		.byte	0
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 5
-
-
  206 0016 0B       		.uleb128 0xb
  207 0017 0B       		.uleb128 0xb
  208 0018 3E       		.uleb128 0x3e
@@ -290,6 +298,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  252 0044 01       		.uleb128 0x1
  253 0045 12       		.uleb128 0x12
  254 0046 06       		.uleb128 0x6
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 6
+
+
  255 0047 40       		.uleb128 0x40
  256 0048 18       		.uleb128 0x18
  257 0049 9742     		.uleb128 0x2117
@@ -298,9 +309,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  260 004d 13       		.uleb128 0x13
  261 004e 00       		.byte	0
  262 004f 00       		.byte	0
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 6
-
-
  263 0050 06       		.uleb128 0x6
  264 0051 898201   		.uleb128 0x4109
  265 0054 00       		.byte	0
@@ -350,6 +358,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  309 0080 49       		.uleb128 0x49
  310 0081 13       		.uleb128 0x13
  311 0082 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 7
+
+
  312 0083 19       		.uleb128 0x19
  313 0084 00       		.byte	0
  314 0085 00       		.byte	0
@@ -358,9 +369,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  317 0088 01       		.byte	0x1
  318 0089 3F       		.uleb128 0x3f
  319 008a 19       		.uleb128 0x19
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 7
-
-
  320 008b 03       		.uleb128 0x3
  321 008c 0E       		.uleb128 0xe
  322 008d 3A       		.uleb128 0x3a
@@ -410,6 +418,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  362 0000 6C6F6E67 		.ascii	"long long int\000"
  362      206C6F6E 
  362      6720696E 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 8
+
+
  362      7400
  363              	.LASF3:
  364 000e 73686F72 		.ascii	"short unsigned int\000"
@@ -418,9 +429,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  364      65642069 
  364      6E7400
  365              	.LASF8:
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 8
-
-
  366 0021 756E7369 		.ascii	"unsigned int\000"
  366      676E6564 
  366      20696E74 
@@ -448,87 +456,90 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 1
  376      69676E65 
  376      6420696E 
  376      7400
- 377              	.LASF7:
- 378 006d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 378      206C6F6E 
- 378      6720756E 
- 378      7369676E 
- 378      65642069 
- 379              	.LASF16:
- 380 0084 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 380      4320342E 
- 380      392E3320 
- 380      32303135 
- 380      30333033 
- 381 00b7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 381      20726576 
- 381      6973696F 
- 381      6E203232 
- 381      31323230 
- 382 00ea 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 382      66756E63 
- 382      74696F6E 
- 382      2D736563 
- 382      74696F6E 
- 383              	.LASF21:
- 384 0112 53746174 		.ascii	"Status_Reg_1_Read\000"
- 384      75735F52 
- 384      65675F31 
- 384      5F526561 
- 384      6400
- 385              	.LASF14:
- 386 0124 63686172 		.ascii	"char\000"
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwISYcj.s 			page 9
+ 377              	.LASF17:
+ 378 006d 2E5C6D61 		.ascii	".\\main.c\000"
+ 378      696E2E63 
+ 378      00
+ 379              	.LASF7:
+ 380 0076 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 380      206C6F6E 
+ 380      6720756E 
+ 380      7369676E 
+ 380      65642069 
+ 381              	.LASF16:
+ 382 008d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 382      4320342E 
+ 382      392E3320 
+ 382      32303135 
+ 382      30333033 
+ 383 00c0 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 383      20726576 
+ 383      6973696F 
+ 383      6E203232 
+ 383      31323230 
+ 384 00f3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 9
 
 
- 386      00
- 387              	.LASF4:
- 388 0129 6C6F6E67 		.ascii	"long int\000"
- 388      20696E74 
+ 384      66756E63 
+ 384      74696F6E 
+ 384      2D736563 
+ 384      74696F6E 
+ 385              	.LASF21:
+ 386 011b 53746174 		.ascii	"Status_Reg_1_Read\000"
+ 386      75735F52 
+ 386      65675F31 
+ 386      5F526561 
+ 386      6400
+ 387              	.LASF14:
+ 388 012d 63686172 		.ascii	"char\000"
  388      00
- 389              	.LASF17:
- 390 0132 2E5C6D61 		.ascii	".\\main.c\000"
- 390      696E2E63 
+ 389              	.LASF4:
+ 390 0132 6C6F6E67 		.ascii	"long int\000"
+ 390      20696E74 
  390      00
  391              	.LASF13:
  392 013b 646F7562 		.ascii	"double\000"
  392      6C6500
- 393              	.LASF20:
- 394 0142 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 394      52784275 
- 394      66666572 
- 394      00
- 395              	.LASF0:
- 396 014f 7369676E 		.ascii	"signed char\000"
- 396      65642063 
- 396      68617200 
- 397              	.LASF9:
- 398 015b 5F5F696E 		.ascii	"__int32_t\000"
- 398      7433325F 
- 398      7400
- 399              	.LASF12:
- 400 0165 666C6F61 		.ascii	"float\000"
- 400      7400
- 401              	.LASF2:
- 402 016b 73686F72 		.ascii	"short int\000"
- 402      7420696E 
- 402      7400
- 403              	.LASF10:
- 404 0175 696E7433 		.ascii	"int32_t\000"
- 404      325F7400 
- 405              	.LASF18:
- 406 017d 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
- 406      73657273 
- 406      5C646F75 
- 406      675F3030 
- 406      305C446F 
- 407 01aa 52505053 		.ascii	"RPPSOC-Blink5.cydsn\000"
- 407      4F432D42 
- 407      6C696E6B 
- 407      352E6379 
- 407      64736E00 
+ 393              	.LASF18:
+ 394 0142 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 394      73657273 
+ 394      5C444769 
+ 394      6C6C696C 
+ 394      616E645C 
+ 395 0170 5C525050 		.ascii	"\\RPPSOC-Blink5.cydsn\000"
+ 395      534F432D 
+ 395      426C696E 
+ 395      6B352E63 
+ 395      7964736E 
+ 396              	.LASF20:
+ 397 0185 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 397      52784275 
+ 397      66666572 
+ 397      00
+ 398              	.LASF0:
+ 399 0192 7369676E 		.ascii	"signed char\000"
+ 399      65642063 
+ 399      68617200 
+ 400              	.LASF9:
+ 401 019e 5F5F696E 		.ascii	"__int32_t\000"
+ 401      7433325F 
+ 401      7400
+ 402              	.LASF12:
+ 403 01a8 666C6F61 		.ascii	"float\000"
+ 403      7400
+ 404              	.LASF2:
+ 405 01ae 73686F72 		.ascii	"short int\000"
+ 405      7420696E 
+ 405      7400
+ 406              	.LASF10:
+ 407 01b8 696E7433 		.ascii	"int32_t\000"
+ 407      325F7400 
  408              	.LASF15:
- 409 01be 73697A65 		.ascii	"sizetype\000"
+ 409 01c0 73697A65 		.ascii	"sizetype\000"
  409      74797065 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccOa6OLa.s 			page 10
+
+
  409      00
  410              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

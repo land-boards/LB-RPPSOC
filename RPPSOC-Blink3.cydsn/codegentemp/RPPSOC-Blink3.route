@@ -1,3 +1,8 @@
+net ClockBlock_BUS_CLK
+	term   ":clockblockcell.clk_bus_glb"
+	switch ":clockblockcell.clk_bus_glb==>:ioport1:pin6.in_clock"
+	term   ":ioport1:pin6.in_clock"
+end ClockBlock_BUS_CLK
 net Net_33
 	term   ":ioport1:pin6.fb"
 	switch ":ioport1:pin6.fb==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v12+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v14"

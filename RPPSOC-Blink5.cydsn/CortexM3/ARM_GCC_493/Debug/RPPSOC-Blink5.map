@@ -719,19 +719,19 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x361a
+.debug_info     0x00000000     0x361c
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0xfe .\CortexM3\ARM_GCC_493\Debug\main.o
  .debug_info    0x000000fe      0x139 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
  .debug_info    0x00000237      0x3a3 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
  .debug_info    0x000005da      0x4ab .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyfitter_cfg.o)
- .debug_info    0x00000a85       0x91 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyBootAsmGnu.o)
- .debug_info    0x00000b16     0x136c .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyLib.o)
- .debug_info    0x00001e82      0xa55 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyPm.o)
- .debug_info    0x000028d7       0xd5 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Control_Reg_1.o)
- .debug_info    0x000029ac      0x179 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Status_Reg_1.o)
- .debug_info    0x00002b25      0x608 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyFlash.o)
- .debug_info    0x0000312d      0x4ed .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CySpc.o)
+ .debug_info    0x00000a85       0x93 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyBootAsmGnu.o)
+ .debug_info    0x00000b18     0x136c .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyLib.o)
+ .debug_info    0x00001e84      0xa55 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyPm.o)
+ .debug_info    0x000028d9       0xd5 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Control_Reg_1.o)
+ .debug_info    0x000029ae      0x179 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Status_Reg_1.o)
+ .debug_info    0x00002b27      0x608 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyFlash.o)
+ .debug_info    0x0000312f      0x4ed .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CySpc.o)
 
 .debug_abbrev   0x00000000      0xebf
  *(.debug_abbrev)
@@ -778,28 +778,28 @@ END GROUP
  .debug_frame   0x00000ecc       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
  .debug_frame   0x00000ef4       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x137f
+.debug_str      0x00000000     0x1381
  *(.debug_str)
- .debug_str     0x00000000      0x186 .\CortexM3\ARM_GCC_493\Debug\main.o
-                                0x1c7 (size before relaxing)
- .debug_str     0x00000186       0x77 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
-                                0x1eb (size before relaxing)
- .debug_str     0x000001fd      0x16c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                                0x2ff (size before relaxing)
- .debug_str     0x00000369      0x15d .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyfitter_cfg.o)
-                                0x304 (size before relaxing)
- .debug_str     0x000004c6      0x83e .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyLib.o)
-                                0xa24 (size before relaxing)
- .debug_str     0x00000d04      0x35b .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyPm.o)
-                                0x71c (size before relaxing)
- .debug_str     0x0000105f       0x44 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Control_Reg_1.o)
-                                0x1c8 (size before relaxing)
- .debug_str     0x000010a3       0x90 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Status_Reg_1.o)
-                                0x25c (size before relaxing)
- .debug_str     0x00001133      0x19e .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyFlash.o)
-                                0x396 (size before relaxing)
- .debug_str     0x000012d1       0xae .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CySpc.o)
-                                0x31f (size before relaxing)
+ .debug_str     0x00000000      0x188 .\CortexM3\ARM_GCC_493\Debug\main.o
+                                0x1c9 (size before relaxing)
+ .debug_str     0x00000188       0x77 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+                                0x1ed (size before relaxing)
+ .debug_str     0x000001ff      0x16c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                                0x301 (size before relaxing)
+ .debug_str     0x0000036b      0x15d .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyfitter_cfg.o)
+                                0x306 (size before relaxing)
+ .debug_str     0x000004c8      0x83e .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyLib.o)
+                                0xa26 (size before relaxing)
+ .debug_str     0x00000d06      0x35b .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(cyPm.o)
+                                0x71e (size before relaxing)
+ .debug_str     0x00001061       0x44 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Control_Reg_1.o)
+                                0x1ca (size before relaxing)
+ .debug_str     0x000010a5       0x90 .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(Status_Reg_1.o)
+                                0x25e (size before relaxing)
+ .debug_str     0x00001135      0x19e .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CyFlash.o)
+                                0x398 (size before relaxing)
+ .debug_str     0x000012d3       0xae .\CortexM3\ARM_GCC_493\Debug\RPPSOC-Blink5.a(CySpc.o)
+                                0x321 (size before relaxing)
 
 .debug_loc      0x00000000     0x18a1
  *(.debug_loc)

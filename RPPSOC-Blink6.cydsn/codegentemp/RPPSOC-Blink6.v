@@ -1,6 +1,6 @@
 // ======================================================================
 // RPPSOC-Blink6.v generated from TopDesign.cysch
-// 05/23/2016 at 12:57
+// 05/23/2016 at 16:52
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -145,6 +145,12 @@ module top ;
           wire  Net_95;
           wire  Net_215;
           wire  Net_214;
+          wire  Net_216;
+          wire  Net_51;
+          wire  Net_33;
+          wire [3:0] Net_50;
+          wire  Net_52;
+          wire [3:0] Net_220;
           wire  Net_251;
           wire  Net_250;
           wire  Net_249;
@@ -175,11 +181,6 @@ module top ;
           wire  Net_101;
           wire  Net_100;
           wire  Net_99;
-          wire  Net_52;
-          wire  Net_216;
-          wire  Net_51;
-          wire  Net_33;
-          wire [3:0] Net_220;
           wire  Net_85;
           wire  Net_191;
           wire  Net_192;
@@ -211,7 +212,6 @@ module top ;
           wire  Net_186;
           wire  Net_92;
           wire  Net_115;
-          wire [3:0] Net_50;
 
 	wire [0:0] tmpOE__LED5_4_net;
 	wire [0:0] tmpFB_0__LED5_4_net;

@@ -37,7 +37,7 @@ Clock: CyPLL_OUT     | N/A                    | Target: 24.00 MHz  |
 
 Launch Clock  Capture Clock  Constraint(R-R)  Slack(R-R)   Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
 ------------  -------------  ---------------  -----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
-Clock_1       Clock_1        2.5e+011         -2147483648  N/A              N/A         N/A              N/A         N/A              N/A         
+Clock_1       Clock_1        2.73067e+009     -2147483648  N/A              N/A         N/A              N/A         N/A              N/A         
 
  =====================================================================
                     End of Clock Relationship Summary
@@ -117,14 +117,14 @@ Frequency: 124.92 MHz | Target: 0.00 MHz
 Path Begin     : Net_220_0/q
 Path End       : Net_50_2/main_0
 Capture Clock  : Net_50_2/clock_0
-Path slack     : 249999991995p
+Path slack     : 2730658662p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -139,10 +139,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q      macrocell47   1250   1250  249999991995  RISE       1
-Net_50_2/main_0  macrocell49   3245   4495  249999991995  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q      macrocell47   1250   1250  2730658662  RISE       1
+Net_50_2/main_0  macrocell49   3245   4495  2730658662  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -169,14 +169,14 @@ Net_50_2/clock_0                                           macrocell49         0
 Path Begin     : Net_220_0/q
 Path End       : Net_50_2/main_0
 Capture Clock  : Net_50_2/clock_0
-Path slack     : 249999991995p
+Path slack     : 2730658662p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -191,10 +191,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q      macrocell47   1250   1250  249999991995  RISE       1
-Net_50_2/main_0  macrocell49   3245   4495  249999991995  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q      macrocell47   1250   1250  2730658662  RISE       1
+Net_50_2/main_0  macrocell49   3245   4495  2730658662  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -217,14 +217,14 @@ Net_50_2/clock_0                                           macrocell49         0
 Path Begin     : Net_220_0/q
 Path End       : Net_50_2/main_0
 Capture Clock  : Net_50_2/clock_0
-Path slack     : 249999991995p
+Path slack     : 2730658662p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -239,10 +239,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q      macrocell47   1250   1250  249999991995  RISE       1
-Net_50_2/main_0  macrocell49   3245   4495  249999991995  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q      macrocell47   1250   1250  2730658662  RISE       1
+Net_50_2/main_0  macrocell49   3245   4495  2730658662  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -257,14 +257,14 @@ Net_50_2/clock_0                                           macrocell49         0
 Path Begin     : Net_220_0/q
 Path End       : Net_50_1/main_0
 Capture Clock  : Net_50_1/clock_0
-Path slack     : 249999991995p
+Path slack     : 2730658662p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -279,10 +279,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q      macrocell47   1250   1250  249999991995  RISE       1
-Net_50_1/main_0  macrocell50   3245   4495  249999991995  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q      macrocell47   1250   1250  2730658662  RISE       1
+Net_50_1/main_0  macrocell50   3245   4495  2730658662  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -297,14 +297,14 @@ Net_50_1/clock_0                                           macrocell50         0
 Path Begin     : Net_220_0/q
 Path End       : Net_220_3/main_3
 Capture Clock  : Net_220_3/clock_0
-Path slack     : 249999991997p
+Path slack     : 2730658663p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -319,10 +319,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q       macrocell47   1250   1250  249999991995  RISE       1
-Net_220_3/main_3  macrocell44   3243   4493  249999991997  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q       macrocell47   1250   1250  2730658662  RISE       1
+Net_220_3/main_3  macrocell44   3243   4493  2730658663  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -337,14 +337,14 @@ Net_220_3/clock_0                                          macrocell44         0
 Path Begin     : Net_220_0/q
 Path End       : Net_220_2/main_3
 Capture Clock  : Net_220_2/clock_0
-Path slack     : 249999991997p
+Path slack     : 2730658663p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -359,10 +359,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q       macrocell47   1250   1250  249999991995  RISE       1
-Net_220_2/main_3  macrocell45   3243   4493  249999991997  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q       macrocell47   1250   1250  2730658662  RISE       1
+Net_220_2/main_3  macrocell45   3243   4493  2730658663  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -377,14 +377,14 @@ Net_220_2/clock_0                                          macrocell45         0
 Path Begin     : Net_220_0/q
 Path End       : Net_220_1/main_3
 Capture Clock  : Net_220_1/clock_0
-Path slack     : 249999991997p
+Path slack     : 2730658663p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -399,10 +399,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q       macrocell47   1250   1250  249999991995  RISE       1
-Net_220_1/main_3  macrocell46   3243   4493  249999991997  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q       macrocell47   1250   1250  2730658662  RISE       1
+Net_220_1/main_3  macrocell46   3243   4493  2730658663  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -417,14 +417,14 @@ Net_220_1/clock_0                                          macrocell46         0
 Path Begin     : Net_220_0/q
 Path End       : Net_50_3/main_0
 Capture Clock  : Net_50_3/clock_0
-Path slack     : 249999991999p
+Path slack     : 2730658666p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -439,10 +439,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_0/clock_0                                          macrocell47         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_0/q      macrocell47   1250   1250  249999991995  RISE       1
-Net_50_3/main_0  macrocell48   3241   4491  249999991999  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_220_0/q      macrocell47   1250   1250  2730658662  RISE       1
+Net_50_3/main_0  macrocell48   3241   4491  2730658666  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -457,14 +457,14 @@ Net_50_3/clock_0                                           macrocell48         0
 Path Begin     : Net_220_1/q
 Path End       : Net_220_3/main_2
 Capture Clock  : Net_220_3/clock_0
-Path slack     : 249999992281p
+Path slack     : 2730658948p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -479,10 +479,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_1/clock_0                                          macrocell46         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_1/q       macrocell46   1250   1250  249999992281  RISE       1
-Net_220_3/main_2  macrocell44   2959   4209  249999992281  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_1/q       macrocell46   1250   1250  2730658948  RISE       1
+Net_220_3/main_2  macrocell44   2959   4209  2730658948  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -497,14 +497,14 @@ Net_220_3/clock_0                                          macrocell44         0
 Path Begin     : Net_220_1/q
 Path End       : Net_220_2/main_2
 Capture Clock  : Net_220_2/clock_0
-Path slack     : 249999992281p
+Path slack     : 2730658948p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -519,10 +519,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_1/clock_0                                          macrocell46         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_1/q       macrocell46   1250   1250  249999992281  RISE       1
-Net_220_2/main_2  macrocell45   2959   4209  249999992281  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_1/q       macrocell46   1250   1250  2730658948  RISE       1
+Net_220_2/main_2  macrocell45   2959   4209  2730658948  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -537,14 +537,14 @@ Net_220_2/clock_0                                          macrocell45         0
 Path Begin     : Net_220_1/q
 Path End       : Net_220_1/main_2
 Capture Clock  : Net_220_1/clock_0
-Path slack     : 249999992281p
+Path slack     : 2730658948p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -559,10 +559,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_1/clock_0                                          macrocell46         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_1/q       macrocell46   1250   1250  249999992281  RISE       1
-Net_220_1/main_2  macrocell46   2959   4209  249999992281  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_1/q       macrocell46   1250   1250  2730658948  RISE       1
+Net_220_1/main_2  macrocell46   2959   4209  2730658948  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -577,14 +577,14 @@ Net_220_1/clock_0                                          macrocell46         0
 Path Begin     : Net_220_2/q
 Path End       : Net_220_3/main_1
 Capture Clock  : Net_220_3/clock_0
-Path slack     : 249999992602p
+Path slack     : 2730659268p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -599,10 +599,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_2/clock_0                                          macrocell45         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_2/q       macrocell45   1250   1250  249999992602  RISE       1
-Net_220_3/main_1  macrocell44   2638   3888  249999992602  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_2/q       macrocell45   1250   1250  2730659268  RISE       1
+Net_220_3/main_1  macrocell44   2638   3888  2730659268  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -617,14 +617,14 @@ Net_220_3/clock_0                                          macrocell44         0
 Path Begin     : Net_220_2/q
 Path End       : Net_220_2/main_1
 Capture Clock  : Net_220_2/clock_0
-Path slack     : 249999992602p
+Path slack     : 2730659268p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -639,10 +639,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_2/clock_0                                          macrocell45         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_2/q       macrocell45   1250   1250  249999992602  RISE       1
-Net_220_2/main_1  macrocell45   2638   3888  249999992602  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_2/q       macrocell45   1250   1250  2730659268  RISE       1
+Net_220_2/main_1  macrocell45   2638   3888  2730659268  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -657,14 +657,14 @@ Net_220_2/clock_0                                          macrocell45         0
 Path Begin     : Net_220_2/q
 Path End       : Net_220_1/main_1
 Capture Clock  : Net_220_1/clock_0
-Path slack     : 249999992602p
+Path slack     : 2730659268p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -679,10 +679,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_2/clock_0                                          macrocell45         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_2/q       macrocell45   1250   1250  249999992602  RISE       1
-Net_220_1/main_1  macrocell46   2638   3888  249999992602  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_2/q       macrocell45   1250   1250  2730659268  RISE       1
+Net_220_1/main_1  macrocell46   2638   3888  2730659268  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -697,14 +697,14 @@ Net_220_1/clock_0                                          macrocell46         0
 Path Begin     : Net_50_1/q
 Path End       : Net_50_2/main_1
 Capture Clock  : Net_50_2/clock_0
-Path slack     : 249999992656p
+Path slack     : 2730659323p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -719,10 +719,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_50_1/clock_0                                           macrocell50         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_50_1/q       macrocell50   1250   1250  249999992656  RISE       1
-Net_50_2/main_1  macrocell49   2584   3834  249999992656  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_50_1/q       macrocell50   1250   1250  2730659323  RISE       1
+Net_50_2/main_1  macrocell49   2584   3834  2730659323  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -737,14 +737,14 @@ Net_50_2/clock_0                                           macrocell49         0
 Path Begin     : Net_50_1/q
 Path End       : Net_50_3/main_2
 Capture Clock  : Net_50_3/clock_0
-Path slack     : 249999992659p
+Path slack     : 2730659326p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -759,10 +759,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_50_1/clock_0                                           macrocell50         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_50_1/q       macrocell50   1250   1250  249999992656  RISE       1
-Net_50_3/main_2  macrocell48   2581   3831  249999992659  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_50_1/q       macrocell50   1250   1250  2730659323  RISE       1
+Net_50_3/main_2  macrocell48   2581   3831  2730659326  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -777,14 +777,14 @@ Net_50_3/clock_0                                           macrocell48         0
 Path Begin     : Net_50_2/q
 Path End       : Net_50_3/main_1
 Capture Clock  : Net_50_3/clock_0
-Path slack     : 249999992660p
+Path slack     : 2730659327p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -799,10 +799,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_50_2/clock_0                                           macrocell49         0      0  RISE       1
 
 Data path
-pin name         model name   delay     AT         slack  edge  Fanout
----------------  -----------  -----  -----  ------------  ----  ------
-Net_50_2/q       macrocell49   1250   1250  249999992660  RISE       1
-Net_50_3/main_1  macrocell48   2580   3830  249999992660  RISE       1
+pin name         model name   delay     AT       slack  edge  Fanout
+---------------  -----------  -----  -----  ----------  ----  ------
+Net_50_2/q       macrocell49   1250   1250  2730659327  RISE       1
+Net_50_3/main_1  macrocell48   2580   3830  2730659327  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -817,14 +817,14 @@ Net_50_3/clock_0                                           macrocell48         0
 Path Begin     : Net_220_3/q
 Path End       : Net_220_3/main_0
 Capture Clock  : Net_220_3/clock_0
-Path slack     : 249999992939p
+Path slack     : 2730659606p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -839,10 +839,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_3/clock_0                                          macrocell44         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_3/q       macrocell44   1250   1250  249999992939  RISE       1
-Net_220_3/main_0  macrocell44   2301   3551  249999992939  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_3/q       macrocell44   1250   1250  2730659606  RISE       1
+Net_220_3/main_0  macrocell44   2301   3551  2730659606  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -857,14 +857,14 @@ Net_220_3/clock_0                                          macrocell44         0
 Path Begin     : Net_220_3/q
 Path End       : Net_220_2/main_0
 Capture Clock  : Net_220_2/clock_0
-Path slack     : 249999992939p
+Path slack     : 2730659606p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -879,10 +879,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_3/clock_0                                          macrocell44         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_3/q       macrocell44   1250   1250  249999992939  RISE       1
-Net_220_2/main_0  macrocell45   2301   3551  249999992939  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_3/q       macrocell44   1250   1250  2730659606  RISE       1
+Net_220_2/main_0  macrocell45   2301   3551  2730659606  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -897,14 +897,14 @@ Net_220_2/clock_0                                          macrocell45         0
 Path Begin     : Net_220_3/q
 Path End       : Net_220_1/main_0
 Capture Clock  : Net_220_1/clock_0
-Path slack     : 249999992939p
+Path slack     : 2730659606p
 
-Capture Clock Arrival Time                                0
-+ Clock path delay                                        0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   250000000000
-- Setup time                                          -3510
---------------------------------------------   ------------ 
-End-of-path required time (ps)                 249999996490
+Capture Clock Arrival Time                              0
++ Clock path delay                                      0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   2730666667
+- Setup time                                        -3510
+--------------------------------------------   ---------- 
+End-of-path required time (ps)                 2730663157
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
@@ -919,10 +919,10 @@ ClockBlock/dclk_glb_0                                      clockblockcell      0
 Net_220_3/clock_0                                          macrocell44         0      0  RISE       1
 
 Data path
-pin name          model name   delay     AT         slack  edge  Fanout
-----------------  -----------  -----  -----  ------------  ----  ------
-Net_220_3/q       macrocell44   1250   1250  249999992939  RISE       1
-Net_220_1/main_0  macrocell46   2301   3551  249999992939  RISE       1
+pin name          model name   delay     AT       slack  edge  Fanout
+----------------  -----------  -----  -----  ----------  ----  ------
+Net_220_3/q       macrocell44   1250   1250  2730659606  RISE       1
+Net_220_1/main_0  macrocell46   2301   3551  2730659606  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout

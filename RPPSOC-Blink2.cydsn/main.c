@@ -1,14 +1,22 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
+ * RPPSOC Example 2 Code
+ *
+ * Copyright Land Boards, LLC, 2016
  * All Rights Reserved
  * UNPUBLISHED, LICENSED SOFTWARE.
  *
  * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
+ * WHICH IS THE PROPERTY OF LAND BOARDS.
+ * MAY BE USED FOR ANY RPPSOC DEVELOPMENT.
+ * 
+ * This code blinks an LED connected to a
+ * Control Register.
+ * LED is blinked every other half second.
  *
  * ========================================
 */
+
 #include <project.h>
 
 int main()

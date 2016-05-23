@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 1
 
 
    1              		.syntax unified
@@ -29,42 +29,50 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
   26              		.file 1 ".\\main.c"
    1:.\main.c      **** /* ========================================
    2:.\main.c      ****  *
-   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
-   4:.\main.c      ****  * All Rights Reserved
-   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
-   6:.\main.c      ****  *
-   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
-   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
-   9:.\main.c      ****  *
-  10:.\main.c      ****  * ========================================
-  11:.\main.c      **** */
-  12:.\main.c      **** #include <project.h>
-  13:.\main.c      **** 
-  14:.\main.c      **** int main()
-  15:.\main.c      **** {
-  27              		.loc 1 15 0
+   3:.\main.c      ****  * RPPSOC Example 3 Code
+   4:.\main.c      ****  *
+   5:.\main.c      ****  * Copyright Land Boards, LLC, 2016
+   6:.\main.c      ****  * All Rights Reserved
+   7:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   8:.\main.c      ****  *
+   9:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  10:.\main.c      ****  * WHICH IS THE PROPERTY OF LAND BOARDS.
+  11:.\main.c      ****  * MAY BE USED FOR ANY RPPSOC DEVELOPMENT.
+  12:.\main.c      ****  * 
+  13:.\main.c      ****  * This code does next to nothing.
+  14:.\main.c      ****  * It is intended to be used where there is
+  15:.\main.c      ****  * no code running on the processor.
+  16:.\main.c      ****  *
+  17:.\main.c      ****  * ========================================
+  18:.\main.c      **** */
+  19:.\main.c      **** 
+  20:.\main.c      **** #include <project.h>
+  21:.\main.c      **** 
+  22:.\main.c      **** int main()
+  23:.\main.c      **** {
+  27              		.loc 1 23 0
   28              		.cfi_startproc
   29              		@ Volatile: function does not return.
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
-  16:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  33              		.loc 1 16 0
-  34              	@ 16 ".\main.c" 1
+  24:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  33              		.loc 1 24 0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 2
+
+
+  34              	@ 24 ".\main.c" 1
   35 0000 62B6     		CPSIE   i
   36              	@ 0 "" 2
   37              		.thumb
   38              	.L2:
-  17:.\main.c      **** 
-  18:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  19:.\main.c      **** 
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 2
-
-
-  20:.\main.c      ****     for(;;)
-  21:.\main.c      ****     {
-  22:.\main.c      ****     }
-  39              		.loc 1 22 0 discriminator 1
+  25:.\main.c      **** 
+  26:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  27:.\main.c      **** 
+  28:.\main.c      ****     for(;;)
+  29:.\main.c      ****     {
+  30:.\main.c      ****     }
+  39              		.loc 1 30 0 discriminator 1
   40 0002 FEE7     		b	.L2
   41              		.cfi_endproc
   42              	.LFE63:
@@ -81,53 +89,53 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
   53 0006 00000000 		.4byte	.Ldebug_abbrev0
   54 000a 04       		.byte	0x4
   55 000b 01       		.uleb128 0x1
-  56 000c 5C000000 		.4byte	.LASF15
+  56 000c 9F000000 		.4byte	.LASF15
   57 0010 01       		.byte	0x1
-  58 0011 47010000 		.4byte	.LASF16
-  59 0015 F8000000 		.4byte	.LASF17
+  58 0011 49010000 		.4byte	.LASF16
+  59 0015 33000000 		.4byte	.LASF17
   60 0019 00000000 		.4byte	.Ldebug_ranges0+0
   61 001d 00000000 		.4byte	0
   62 0021 00000000 		.4byte	.Ldebug_line0
   63 0025 02       		.uleb128 0x2
   64 0026 01       		.byte	0x1
   65 0027 06       		.byte	0x6
-  66 0028 64010000 		.4byte	.LASF0
+  66 0028 66010000 		.4byte	.LASF0
   67 002c 02       		.uleb128 0x2
   68 002d 01       		.byte	0x1
   69 002e 08       		.byte	0x8
-  70 002f EA000000 		.4byte	.LASF1
+  70 002f 2D010000 		.4byte	.LASF1
   71 0033 02       		.uleb128 0x2
   72 0034 02       		.byte	0x2
   73 0035 05       		.byte	0x5
-  74 0036 80010000 		.4byte	.LASF2
+  74 0036 82010000 		.4byte	.LASF2
   75 003a 02       		.uleb128 0x2
   76 003b 02       		.byte	0x2
   77 003c 07       		.byte	0x7
   78 003d 0E000000 		.4byte	.LASF3
   79 0041 03       		.uleb128 0x3
-  80 0042 70010000 		.4byte	.LASF9
+  80 0042 72010000 		.4byte	.LASF9
   81 0046 02       		.byte	0x2
   82 0047 3F       		.byte	0x3f
   83 0048 4C000000 		.4byte	0x4c
   84 004c 02       		.uleb128 0x2
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 3
+
+
   85 004d 04       		.byte	0x4
   86 004e 05       		.byte	0x5
-  87 004f 3E010000 		.4byte	.LASF4
+  87 004f 40010000 		.4byte	.LASF4
   88 0053 02       		.uleb128 0x2
   89 0054 04       		.byte	0x4
   90 0055 07       		.byte	0x7
-  91 0056 33000000 		.4byte	.LASF5
+  91 0056 76000000 		.4byte	.LASF5
   92 005a 02       		.uleb128 0x2
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 3
-
-
   93 005b 08       		.byte	0x8
   94 005c 05       		.byte	0x5
   95 005d 00000000 		.4byte	.LASF6
   96 0061 02       		.uleb128 0x2
   97 0062 08       		.byte	0x8
   98 0063 07       		.byte	0x7
-  99 0064 45000000 		.4byte	.LASF7
+  99 0064 88000000 		.4byte	.LASF7
  100 0068 04       		.uleb128 0x4
  101 0069 04       		.byte	0x4
  102 006a 05       		.byte	0x5
@@ -137,39 +145,42 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  106 0071 07       		.byte	0x7
  107 0072 21000000 		.4byte	.LASF8
  108 0076 03       		.uleb128 0x3
- 109 0077 8A010000 		.4byte	.LASF10
+ 109 0077 8C010000 		.4byte	.LASF10
  110 007b 03       		.byte	0x3
  111 007c 2C       		.byte	0x2c
  112 007d 41000000 		.4byte	0x41
  113 0081 02       		.uleb128 0x2
  114 0082 04       		.byte	0x4
  115 0083 04       		.byte	0x4
- 116 0084 7A010000 		.4byte	.LASF11
+ 116 0084 7C010000 		.4byte	.LASF11
  117 0088 02       		.uleb128 0x2
  118 0089 08       		.byte	0x8
  119 008a 04       		.byte	0x4
- 120 008b 50010000 		.4byte	.LASF12
+ 120 008b 52010000 		.4byte	.LASF12
  121 008f 02       		.uleb128 0x2
  122 0090 01       		.byte	0x1
  123 0091 08       		.byte	0x8
- 124 0092 39010000 		.4byte	.LASF13
+ 124 0092 3B010000 		.4byte	.LASF13
  125 0096 02       		.uleb128 0x2
  126 0097 04       		.byte	0x4
  127 0098 07       		.byte	0x7
- 128 0099 92010000 		.4byte	.LASF14
+ 128 0099 94010000 		.4byte	.LASF14
  129 009d 05       		.uleb128 0x5
  130 009e 2E000000 		.4byte	.LASF18
  131 00a2 01       		.byte	0x1
- 132 00a3 0E       		.byte	0xe
+ 132 00a3 16       		.byte	0x16
  133 00a4 68000000 		.4byte	0x68
  134 00a8 00000000 		.4byte	.LFB63
  135 00ac 04000000 		.4byte	.LFE63-.LFB63
  136 00b0 01       		.uleb128 0x1
  137 00b1 9C       		.byte	0x9c
  138 00b2 06       		.uleb128 0x6
- 139 00b3 57010000 		.4byte	.LASF19
+ 139 00b3 59010000 		.4byte	.LASF19
  140 00b7 04       		.byte	0x4
  141 00b8 2A06     		.2byte	0x62a
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 4
+
+
  142 00ba BE000000 		.4byte	0xbe
  143 00be 07       		.uleb128 0x7
  144 00bf 76000000 		.4byte	0x76
@@ -178,9 +189,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  147              	.Ldebug_abbrev0:
  148 0000 01       		.uleb128 0x1
  149 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 4
-
-
  150 0002 01       		.byte	0x1
  151 0003 25       		.uleb128 0x25
  152 0004 0E       		.uleb128 0xe
@@ -230,6 +238,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  196 0030 3E       		.uleb128 0x3e
  197 0031 0B       		.uleb128 0xb
  198 0032 03       		.uleb128 0x3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 5
+
+
  199 0033 08       		.uleb128 0x8
  200 0034 00       		.byte	0
  201 0035 00       		.byte	0
@@ -238,9 +249,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  204 0038 00       		.byte	0
  205 0039 3F       		.uleb128 0x3f
  206 003a 19       		.uleb128 0x19
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 5
-
-
  207 003b 03       		.uleb128 0x3
  208 003c 0E       		.uleb128 0xe
  209 003d 3A       		.uleb128 0x3a
@@ -290,6 +298,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  253 0006 00000000 		.4byte	.Ldebug_info0
  254 000a 04       		.byte	0x4
  255 000b 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 6
+
+
  256 000c 0000     		.2byte	0
  257 000e 0000     		.2byte	0
  258 0010 00000000 		.4byte	.LFB63
@@ -298,9 +309,6 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  261 001c 00000000 		.4byte	0
  262              		.section	.debug_ranges,"",%progbits
  263              	.Ldebug_ranges0:
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 6
-
-
  264 0000 00000000 		.4byte	.LFB63
  265 0004 04000000 		.4byte	.LFE63
  266 0008 00000000 		.4byte	0
@@ -331,95 +339,95 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 1
  277              	.LASF18:
  278 002e 6D61696E 		.ascii	"main\000"
  278      00
- 279              	.LASF5:
- 280 0033 6C6F6E67 		.ascii	"long unsigned int\000"
- 280      20756E73 
- 280      69676E65 
- 280      6420696E 
- 280      7400
- 281              	.LASF7:
- 282 0045 6C6F6E67 		.ascii	"long long unsigned int\000"
- 282      206C6F6E 
- 282      6720756E 
- 282      7369676E 
- 282      65642069 
- 283              	.LASF15:
- 284 005c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 284      4320342E 
- 284      392E3320 
- 284      32303135 
- 284      30333033 
- 285 008f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 285      20726576 
- 285      6973696F 
- 285      6E203232 
- 285      31323230 
- 286 00c2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 286      66756E63 
- 286      74696F6E 
- 286      2D736563 
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 7
+ 279              	.LASF17:
+ 280 0033 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 280      73657273 
+ 280      5C444769 
+ 280      6C6C696C 
+ 280      616E645C 
+ 281 0061 5C525050 		.ascii	"\\RPPSOC-Blink3.cydsn\000"
+ 281      534F432D 
+ 281      426C696E 
+ 281      6B332E63 
+ 281      7964736E 
+ 282              	.LASF5:
+ 283 0076 6C6F6E67 		.ascii	"long unsigned int\000"
+ 283      20756E73 
+ 283      69676E65 
+ 283      6420696E 
+ 283      7400
+ 284              	.LASF7:
+ 285 0088 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 7
 
 
- 286      74696F6E 
- 287              	.LASF1:
- 288 00ea 756E7369 		.ascii	"unsigned char\000"
- 288      676E6564 
- 288      20636861 
- 288      7200
- 289              	.LASF17:
- 290 00f8 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
- 290      73657273 
- 290      5C646F75 
- 290      675F3030 
- 290      305C446F 
- 291 0125 52505053 		.ascii	"RPPSOC-Blink3.cydsn\000"
- 291      4F432D42 
- 291      6C696E6B 
- 291      332E6379 
- 291      64736E00 
+ 285      206C6F6E 
+ 285      6720756E 
+ 285      7369676E 
+ 285      65642069 
+ 286              	.LASF15:
+ 287 009f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 287      4320342E 
+ 287      392E3320 
+ 287      32303135 
+ 287      30333033 
+ 288 00d2 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 288      20726576 
+ 288      6973696F 
+ 288      6E203232 
+ 288      31323230 
+ 289 0105 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 289      66756E63 
+ 289      74696F6E 
+ 289      2D736563 
+ 289      74696F6E 
+ 290              	.LASF1:
+ 291 012d 756E7369 		.ascii	"unsigned char\000"
+ 291      676E6564 
+ 291      20636861 
+ 291      7200
  292              	.LASF13:
- 293 0139 63686172 		.ascii	"char\000"
+ 293 013b 63686172 		.ascii	"char\000"
  293      00
  294              	.LASF4:
- 295 013e 6C6F6E67 		.ascii	"long int\000"
+ 295 0140 6C6F6E67 		.ascii	"long int\000"
  295      20696E74 
  295      00
  296              	.LASF16:
- 297 0147 2E5C6D61 		.ascii	".\\main.c\000"
+ 297 0149 2E5C6D61 		.ascii	".\\main.c\000"
  297      696E2E63 
  297      00
  298              	.LASF12:
- 299 0150 646F7562 		.ascii	"double\000"
+ 299 0152 646F7562 		.ascii	"double\000"
  299      6C6500
  300              	.LASF19:
- 301 0157 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 301 0159 49544D5F 		.ascii	"ITM_RxBuffer\000"
  301      52784275 
  301      66666572 
  301      00
  302              	.LASF0:
- 303 0164 7369676E 		.ascii	"signed char\000"
+ 303 0166 7369676E 		.ascii	"signed char\000"
  303      65642063 
  303      68617200 
  304              	.LASF9:
- 305 0170 5F5F696E 		.ascii	"__int32_t\000"
+ 305 0172 5F5F696E 		.ascii	"__int32_t\000"
  305      7433325F 
  305      7400
  306              	.LASF11:
- 307 017a 666C6F61 		.ascii	"float\000"
+ 307 017c 666C6F61 		.ascii	"float\000"
  307      7400
  308              	.LASF2:
- 309 0180 73686F72 		.ascii	"short int\000"
+ 309 0182 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccGgeeRR.s 			page 8
+
+
  309      7420696E 
  309      7400
  310              	.LASF10:
- 311 018a 696E7433 		.ascii	"int32_t\000"
+ 311 018c 696E7433 		.ascii	"int32_t\000"
  311      325F7400 
  312              	.LASF14:
- 313 0192 73697A65 		.ascii	"sizetype\000"
+ 313 0194 73697A65 		.ascii	"sizetype\000"
  313      74797065 
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccBVxf9d.s 			page 8
-
-
  313      00
  314              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

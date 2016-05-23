@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: P3_18.c  
+* File Name: P4_17.c  
 * Version 2.10
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "P3_18.h"
+#include "P4_17.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 P3_18__PORT == 15 && ((P3_18__MASK & 0xC0) != 0))
+	 P4_17__PORT == 15 && ((P4_17__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: P3_18_Write
+* Function Name: P4_17_Write
 ********************************************************************************
 *
 * Summary:
@@ -36,15 +36,15 @@
 *  None
 *  
 *******************************************************************************/
-void P3_18_Write(uint8 value) 
+void P4_17_Write(uint8 value) 
 {
-    uint8 staticBits = (P3_18_DR & (uint8)(~P3_18_MASK));
-    P3_18_DR = staticBits | ((uint8)(value << P3_18_SHIFT) & P3_18_MASK);
+    uint8 staticBits = (P4_17_DR & (uint8)(~P4_17_MASK));
+    P4_17_DR = staticBits | ((uint8)(value << P4_17_SHIFT) & P4_17_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: P3_18_SetDriveMode
+* Function Name: P4_17_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -53,27 +53,27 @@ void P3_18_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  P3_18_DM_STRONG     Strong Drive 
-*  P3_18_DM_OD_HI      Open Drain, Drives High 
-*  P3_18_DM_OD_LO      Open Drain, Drives Low 
-*  P3_18_DM_RES_UP     Resistive Pull Up 
-*  P3_18_DM_RES_DWN    Resistive Pull Down 
-*  P3_18_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  P3_18_DM_DIG_HIZ    High Impedance Digital 
-*  P3_18_DM_ALG_HIZ    High Impedance Analog 
+*  P4_17_DM_STRONG     Strong Drive 
+*  P4_17_DM_OD_HI      Open Drain, Drives High 
+*  P4_17_DM_OD_LO      Open Drain, Drives Low 
+*  P4_17_DM_RES_UP     Resistive Pull Up 
+*  P4_17_DM_RES_DWN    Resistive Pull Down 
+*  P4_17_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  P4_17_DM_DIG_HIZ    High Impedance Digital 
+*  P4_17_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void P3_18_SetDriveMode(uint8 mode) 
+void P4_17_SetDriveMode(uint8 mode) 
 {
-	CyPins_SetPinDriveMode(P3_18_0, mode);
+	CyPins_SetPinDriveMode(P4_17_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: P3_18_Read
+* Function Name: P4_17_Read
 ********************************************************************************
 *
 * Summary:
@@ -87,17 +87,17 @@ void P3_18_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro P3_18_ReadPS calls this function. 
+*  Macro P4_17_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 P3_18_Read(void) 
+uint8 P4_17_Read(void) 
 {
-    return (P3_18_PS & P3_18_MASK) >> P3_18_SHIFT;
+    return (P4_17_PS & P4_17_MASK) >> P4_17_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: P3_18_ReadDataReg
+* Function Name: P4_17_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -110,17 +110,17 @@ uint8 P3_18_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 P3_18_ReadDataReg(void) 
+uint8 P4_17_ReadDataReg(void) 
 {
-    return (P3_18_DR & P3_18_MASK) >> P3_18_SHIFT;
+    return (P4_17_DR & P4_17_MASK) >> P4_17_SHIFT;
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(P3_18_INTSTAT) 
+#if defined(P4_17_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: P3_18_ClearInterrupt
+    * Function Name: P4_17_ClearInterrupt
     ********************************************************************************
     * Summary:
     *  Clears any active interrupts attached to port and returns the value of the 
@@ -133,9 +133,9 @@ uint8 P3_18_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 P3_18_ClearInterrupt(void) 
+    uint8 P4_17_ClearInterrupt(void) 
     {
-        return (P3_18_INTSTAT & P3_18_MASK) >> P3_18_SHIFT;
+        return (P4_17_INTSTAT & P4_17_MASK) >> P4_17_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

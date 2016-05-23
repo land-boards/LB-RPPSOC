@@ -4,9 +4,9 @@
 
 #Version:            1.1
 
-#Build Date:         Apr 25 2016 12:55:34
+#Build Date:         Aug 18 2015 10:30:14
 
-#File Generated:     May 22 2016 16:41:40
+#File Generated:     May 23 2016 15:14:16
 
 #Purpose:            
 
@@ -18,7 +18,7 @@ Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\bin/sjp
 
 		Softjin Techologies Placer, Version 1.1
 
-Build Date : Apr 25 2016	12:53:53
+Build Date : Aug 18 2015	10:29:37
 
 D2004: Option and Settings Summary
 =============================================================
@@ -72,5 +72,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.6 sec.
+I2076: Total run-time: 0.5 sec.
 

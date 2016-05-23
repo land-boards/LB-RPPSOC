@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: P3_17.h  
+* File Name: P4_17.h  
 * Version 2.10
 *
 * Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_P3_17_ALIASES_H) /* Pins P3_17_ALIASES_H */
-#define CY_PINS_P3_17_ALIASES_H
+#if !defined(CY_PINS_P4_17_ALIASES_H) /* Pins P4_17_ALIASES_H */
+#define CY_PINS_P4_17_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,8 +25,8 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define P3_17_0		(P3_17__0__PC)
+#define P4_17_0		(P4_17__0__PC)
 
-#endif /* End Pins P3_17_ALIASES_H */
+#endif /* End Pins P4_17_ALIASES_H */
 
 /* [] END OF FILE */

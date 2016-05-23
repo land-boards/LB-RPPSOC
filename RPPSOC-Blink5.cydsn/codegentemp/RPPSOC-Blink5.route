@@ -1,5 +1,7 @@
 net ClockBlock_BUS_CLK
 	term   ":clockblockcell.clk_bus_glb"
+	switch ":clockblockcell.clk_bus_glb==>:ioport1:pin6.in_clock"
+	term   ":ioport1:pin6.in_clock"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(0,0)]:controlcell.busclk"
 	term   ":udb@[UDB=(0,0)]:controlcell.busclk"
 end ClockBlock_BUS_CLK

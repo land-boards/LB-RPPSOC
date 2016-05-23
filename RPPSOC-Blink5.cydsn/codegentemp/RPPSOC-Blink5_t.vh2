@@ -1,6 +1,6 @@
--- Project:   C:\Users\doug_000\Documents\GitHub\LB-RPPSOC\RPPSOC-Blink5.cydsn\RPPSOC-Blink5.cyprj
--- Generated: 05/22/2016 17:38:23
--- PSoC Creator  3.3 SP2
+-- Project:   C:\Users\DGilliland\Documents\GitHub\LB-RPPSOC\RPPSOC-Blink5.cydsn\RPPSOC-Blink5.cyprj
+-- Generated: 05/23/2016 16:37:27
+-- PSoC Creator  3.3
 
 ENTITY \RPPSOC-Blink5\ IS
     PORT(
@@ -8,8 +8,8 @@ ENTITY \RPPSOC-Blink5\ IS
         RP_GPIO_18(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
-    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 5e0;
