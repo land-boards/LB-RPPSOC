@@ -1,0 +1,2847 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.global	cy_meta_wonvl
+  21              		.global	cy_meta_custnvl
+  22              		.global	cy_meta_configecc
+  23              		.section	.cyconfigecc,"a",%progbits
+  24              		.align	2
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 2216
+  27              	cy_meta_configecc:
+  28 0000 0E       		.byte	14
+  29 0001 52       		.byte	82
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 03       		.byte	3
+  33 0005 03       		.byte	3
+  34 0006 01       		.byte	1
+  35 0007 40       		.byte	64
+  36 0008 3C       		.byte	60
+  37 0009 04       		.byte	4
+  38 000a 01       		.byte	1
+  39 000b 40       		.byte	64
+  40 000c 35       		.byte	53
+  41 000d 05       		.byte	5
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 42       		.byte	66
+  45 0011 06       		.byte	6
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 38       		.byte	56
+  49 0015 07       		.byte	7
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 3A       		.byte	58
+  53 0019 08       		.byte	8
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 3C       		.byte	60
+  57 001d 09       		.byte	9
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 3A       		.byte	58
+  61 0021 0A       		.byte	10
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 2E       		.byte	46
+  65 0025 0B       		.byte	11
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 03       		.byte	3
+  69 0029 0D       		.byte	13
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 12       		.byte	18
+  73 002d 15       		.byte	21
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 41       		.byte	65
+  77 0031 16       		.byte	22
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 3F       		.byte	63
+  81 0035 17       		.byte	23
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 3A       		.byte	58
+  85 0039 18       		.byte	24
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 3C       		.byte	60
+  89 003d 19       		.byte	25
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 3A       		.byte	58
+  93 0041 1A       		.byte	26
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 33       		.byte	51
+  97 0045 1B       		.byte	27
+  98 0046 01       		.byte	1
+  99 0047 40       		.byte	64
+ 100 0048 08       		.byte	8
+ 101 0049 40       		.byte	64
+ 102 004a 01       		.byte	1
+ 103 004b 40       		.byte	64
+ 104 004c 12       		.byte	18
+ 105 004d 41       		.byte	65
+ 106 004e 01       		.byte	1
+ 107 004f 40       		.byte	64
+ 108 0050 13       		.byte	19
+ 109 0051 42       		.byte	66
+ 110 0052 01       		.byte	1
+ 111 0053 40       		.byte	64
+ 112 0054 0E       		.byte	14
+ 113 0055 43       		.byte	67
+ 114 0056 01       		.byte	1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 3
+
+
+ 115 0057 40       		.byte	64
+ 116 0058 0B       		.byte	11
+ 117 0059 45       		.byte	69
+ 118 005a 01       		.byte	1
+ 119 005b 40       		.byte	64
+ 120 005c 06       		.byte	6
+ 121 005d 46       		.byte	70
+ 122 005e 01       		.byte	1
+ 123 005f 40       		.byte	64
+ 124 0060 05       		.byte	5
+ 125 0061 47       		.byte	71
+ 126 0062 01       		.byte	1
+ 127 0063 40       		.byte	64
+ 128 0064 10       		.byte	16
+ 129 0065 48       		.byte	72
+ 130 0066 01       		.byte	1
+ 131 0067 40       		.byte	64
+ 132 0068 1D       		.byte	29
+ 133 0069 49       		.byte	73
+ 134 006a 01       		.byte	1
+ 135 006b 40       		.byte	64
+ 136 006c 0B       		.byte	11
+ 137 006d 4C       		.byte	76
+ 138 006e 01       		.byte	1
+ 139 006f 40       		.byte	64
+ 140 0070 15       		.byte	21
+ 141 0071 4D       		.byte	77
+ 142 0072 01       		.byte	1
+ 143 0073 40       		.byte	64
+ 144 0074 02       		.byte	2
+ 145 0075 50       		.byte	80
+ 146 0076 01       		.byte	1
+ 147 0077 40       		.byte	64
+ 148 0078 00       		.byte	0
+ 149 0079 65       		.byte	101
+ 150 007a 01       		.byte	1
+ 151 007b 3C       		.byte	60
+ 152 007c 0C       		.byte	12
+ 153 007d E0       		.byte	-32
+ 154 007e 14       		.byte	20
+ 155 007f FF       		.byte	-1
+ 156 0080 18       		.byte	24
+ 157 0081 C9       		.byte	-55
+ 158 0082 19       		.byte	25
+ 159 0083 95       		.byte	-107
+ 160 0084 20       		.byte	32
+ 161 0085 19       		.byte	25
+ 162 0086 21       		.byte	33
+ 163 0087 25       		.byte	37
+ 164 0088 29       		.byte	41
+ 165 0089 10       		.byte	16
+ 166 008a 2C       		.byte	44
+ 167 008b 4F       		.byte	79
+ 168 008c 60       		.byte	96
+ 169 008d 05       		.byte	5
+ 170 008e 61       		.byte	97
+ 171 008f 0C       		.byte	12
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 4
+
+
+ 172 0090 78       		.byte	120
+ 173 0091 05       		.byte	5
+ 174 0092 79       		.byte	121
+ 175 0093 03       		.byte	3
+ 176 0094 84       		.byte	-124
+ 177 0095 40       		.byte	64
+ 178 0096 A7       		.byte	-89
+ 179 0097 10       		.byte	16
+ 180 0098 AB       		.byte	-85
+ 181 0099 10       		.byte	16
+ 182 009a 01       		.byte	1
+ 183 009b 03       		.byte	3
+ 184 009c 06       		.byte	6
+ 185 009d 06       		.byte	6
+ 186 009e 07       		.byte	7
+ 187 009f 01       		.byte	1
+ 188 00a0 0A       		.byte	10
+ 189 00a1 01       		.byte	1
+ 190 00a2 0C       		.byte	12
+ 191 00a3 01       		.byte	1
+ 192 00a4 10       		.byte	16
+ 193 00a5 01       		.byte	1
+ 194 00a6 13       		.byte	19
+ 195 00a7 02       		.byte	2
+ 196 00a8 15       		.byte	21
+ 197 00a9 02       		.byte	2
+ 198 00aa 1B       		.byte	27
+ 199 00ab 01       		.byte	1
+ 200 00ac 20       		.byte	32
+ 201 00ad 04       		.byte	4
+ 202 00ae 21       		.byte	33
+ 203 00af 02       		.byte	2
+ 204 00b0 22       		.byte	34
+ 205 00b1 03       		.byte	3
+ 206 00b2 24       		.byte	36
+ 207 00b3 04       		.byte	4
+ 208 00b4 26       		.byte	38
+ 209 00b5 02       		.byte	2
+ 210 00b6 2C       		.byte	44
+ 211 00b7 06       		.byte	6
+ 212 00b8 2F       		.byte	47
+ 213 00b9 01       		.byte	1
+ 214 00ba 30       		.byte	48
+ 215 00bb 01       		.byte	1
+ 216 00bc 34       		.byte	52
+ 217 00bd 02       		.byte	2
+ 218 00be 35       		.byte	53
+ 219 00bf 02       		.byte	2
+ 220 00c0 36       		.byte	54
+ 221 00c1 04       		.byte	4
+ 222 00c2 37       		.byte	55
+ 223 00c3 01       		.byte	1
+ 224 00c4 3E       		.byte	62
+ 225 00c5 51       		.byte	81
+ 226 00c6 3F       		.byte	63
+ 227 00c7 50       		.byte	80
+ 228 00c8 58       		.byte	88
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 5
+
+
+ 229 00c9 04       		.byte	4
+ 230 00ca 59       		.byte	89
+ 231 00cb 04       		.byte	4
+ 232 00cc 5F       		.byte	95
+ 233 00cd 01       		.byte	1
+ 234 00ce 81       		.byte	-127
+ 235 00cf 05       		.byte	5
+ 236 00d0 83       		.byte	-125
+ 237 00d1 0A       		.byte	10
+ 238 00d2 88       		.byte	-120
+ 239 00d3 02       		.byte	2
+ 240 00d4 8A       		.byte	-118
+ 241 00d5 05       		.byte	5
+ 242 00d6 8D       		.byte	-115
+ 243 00d7 02       		.byte	2
+ 244 00d8 91       		.byte	-111
+ 245 00d9 04       		.byte	4
+ 246 00da 92       		.byte	-110
+ 247 00db 08       		.byte	8
+ 248 00dc 93       		.byte	-109
+ 249 00dd 09       		.byte	9
+ 250 00de 95       		.byte	-107
+ 251 00df 0C       		.byte	12
+ 252 00e0 97       		.byte	-105
+ 253 00e1 01       		.byte	1
+ 254 00e2 99       		.byte	-103
+ 255 00e3 05       		.byte	5
+ 256 00e4 9B       		.byte	-101
+ 257 00e5 08       		.byte	8
+ 258 00e6 9C       		.byte	-100
+ 259 00e7 09       		.byte	9
+ 260 00e8 9D       		.byte	-99
+ 261 00e9 02       		.byte	2
+ 262 00ea 9E       		.byte	-98
+ 263 00eb 06       		.byte	6
+ 264 00ec A0       		.byte	-96
+ 265 00ed 03       		.byte	3
+ 266 00ee A2       		.byte	-94
+ 267 00ef 04       		.byte	4
+ 268 00f0 A6       		.byte	-90
+ 269 00f1 08       		.byte	8
+ 270 00f2 A9       		.byte	-87
+ 271 00f3 02       		.byte	2
+ 272 00f4 AA       		.byte	-86
+ 273 00f5 07       		.byte	7
+ 274 00f6 AC       		.byte	-84
+ 275 00f7 08       		.byte	8
+ 276 00f8 B0       		.byte	-80
+ 277 00f9 01       		.byte	1
+ 278 00fa B1       		.byte	-79
+ 279 00fb 04       		.byte	4
+ 280 00fc B2       		.byte	-78
+ 281 00fd 04       		.byte	4
+ 282 00fe B3       		.byte	-77
+ 283 00ff 02       		.byte	2
+ 284 0100 B4       		.byte	-76
+ 285 0101 02       		.byte	2
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 6
+
+
+ 286 0102 B5       		.byte	-75
+ 287 0103 01       		.byte	1
+ 288 0104 B6       		.byte	-74
+ 289 0105 08       		.byte	8
+ 290 0106 B7       		.byte	-73
+ 291 0107 08       		.byte	8
+ 292 0108 BE       		.byte	-66
+ 293 0109 55       		.byte	85
+ 294 010a BF       		.byte	-65
+ 295 010b 55       		.byte	85
+ 296 010c D8       		.byte	-40
+ 297 010d 04       		.byte	4
+ 298 010e D9       		.byte	-39
+ 299 010f 04       		.byte	4
+ 300 0110 DF       		.byte	-33
+ 301 0111 01       		.byte	1
+ 302 0112 01       		.byte	1
+ 303 0113 80       		.byte	-128
+ 304 0114 02       		.byte	2
+ 305 0115 01       		.byte	1
+ 306 0116 03       		.byte	3
+ 307 0117 1C       		.byte	28
+ 308 0118 07       		.byte	7
+ 309 0119 08       		.byte	8
+ 310 011a 0A       		.byte	10
+ 311 011b 40       		.byte	64
+ 312 011c 0E       		.byte	14
+ 313 011d 40       		.byte	64
+ 314 011e 0F       		.byte	15
+ 315 011f 01       		.byte	1
+ 316 0120 10       		.byte	16
+ 317 0121 01       		.byte	1
+ 318 0122 11       		.byte	17
+ 319 0123 04       		.byte	4
+ 320 0124 13       		.byte	19
+ 321 0125 09       		.byte	9
+ 322 0126 16       		.byte	22
+ 323 0127 01       		.byte	1
+ 324 0128 17       		.byte	23
+ 325 0129 15       		.byte	21
+ 326 012a 1B       		.byte	27
+ 327 012b 51       		.byte	81
+ 328 012c 1C       		.byte	28
+ 329 012d 80       		.byte	-128
+ 330 012e 1D       		.byte	29
+ 331 012f 08       		.byte	8
+ 332 0130 1E       		.byte	30
+ 333 0131 01       		.byte	1
+ 334 0132 1F       		.byte	31
+ 335 0133 10       		.byte	16
+ 336 0134 20       		.byte	32
+ 337 0135 04       		.byte	4
+ 338 0136 21       		.byte	33
+ 339 0137 40       		.byte	64
+ 340 0138 24       		.byte	36
+ 341 0139 10       		.byte	16
+ 342 013a 25       		.byte	37
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 7
+
+
+ 343 013b 40       		.byte	64
+ 344 013c 26       		.byte	38
+ 345 013d 20       		.byte	32
+ 346 013e 27       		.byte	39
+ 347 013f 40       		.byte	64
+ 348 0140 28       		.byte	40
+ 349 0141 01       		.byte	1
+ 350 0142 2A       		.byte	42
+ 351 0143 01       		.byte	1
+ 352 0144 2F       		.byte	47
+ 353 0145 08       		.byte	8
+ 354 0146 33       		.byte	51
+ 355 0147 1A       		.byte	26
+ 356 0148 34       		.byte	52
+ 357 0149 01       		.byte	1
+ 358 014a 35       		.byte	53
+ 359 014b 81       		.byte	-127
+ 360 014c 37       		.byte	55
+ 361 014d 19       		.byte	25
+ 362 014e 39       		.byte	57
+ 363 014f 04       		.byte	4
+ 364 0150 3B       		.byte	59
+ 365 0151 01       		.byte	1
+ 366 0152 3E       		.byte	62
+ 367 0153 40       		.byte	64
+ 368 0154 3F       		.byte	63
+ 369 0155 01       		.byte	1
+ 370 0156 81       		.byte	-127
+ 371 0157 08       		.byte	8
+ 372 0158 83       		.byte	-125
+ 373 0159 40       		.byte	64
+ 374 015a 85       		.byte	-123
+ 375 015b 40       		.byte	64
+ 376 015c 8B       		.byte	-117
+ 377 015d 10       		.byte	16
+ 378 015e 8D       		.byte	-115
+ 379 015f 01       		.byte	1
+ 380 0160 8E       		.byte	-114
+ 381 0161 04       		.byte	4
+ 382 0162 95       		.byte	-107
+ 383 0163 80       		.byte	-128
+ 384 0164 A4       		.byte	-92
+ 385 0165 40       		.byte	64
+ 386 0166 A7       		.byte	-89
+ 387 0167 50       		.byte	80
+ 388 0168 A9       		.byte	-87
+ 389 0169 40       		.byte	64
+ 390 016a B7       		.byte	-73
+ 391 016b 40       		.byte	64
+ 392 016c C0       		.byte	-64
+ 393 016d 47       		.byte	71
+ 394 016e C2       		.byte	-62
+ 395 016f 98       		.byte	-104
+ 396 0170 C4       		.byte	-60
+ 397 0171 FD       		.byte	-3
+ 398 0172 CA       		.byte	-54
+ 399 0173 29       		.byte	41
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 8
+
+
+ 400 0174 CC       		.byte	-52
+ 401 0175 F7       		.byte	-9
+ 402 0176 CE       		.byte	-50
+ 403 0177 93       		.byte	-109
+ 404 0178 E2       		.byte	-30
+ 405 0179 30       		.byte	48
+ 406 017a EE       		.byte	-18
+ 407 017b 40       		.byte	64
+ 408 017c 00       		.byte	0
+ 409 017d 04       		.byte	4
+ 410 017e 01       		.byte	1
+ 411 017f 01       		.byte	1
+ 412 0180 02       		.byte	2
+ 413 0181 09       		.byte	9
+ 414 0182 03       		.byte	3
+ 415 0183 06       		.byte	6
+ 416 0184 13       		.byte	19
+ 417 0185 01       		.byte	1
+ 418 0186 15       		.byte	21
+ 419 0187 01       		.byte	1
+ 420 0188 17       		.byte	23
+ 421 0189 04       		.byte	4
+ 422 018a 19       		.byte	25
+ 423 018b 01       		.byte	1
+ 424 018c 1C       		.byte	28
+ 425 018d 0C       		.byte	12
+ 426 018e 1E       		.byte	30
+ 427 018f 03       		.byte	3
+ 428 0190 24       		.byte	36
+ 429 0191 08       		.byte	8
+ 430 0192 26       		.byte	38
+ 431 0193 07       		.byte	7
+ 432 0194 28       		.byte	40
+ 433 0195 05       		.byte	5
+ 434 0196 2A       		.byte	42
+ 435 0197 0A       		.byte	10
+ 436 0198 30       		.byte	48
+ 437 0199 02       		.byte	2
+ 438 019a 32       		.byte	50
+ 439 019b 01       		.byte	1
+ 440 019c 33       		.byte	51
+ 441 019d 04       		.byte	4
+ 442 019e 34       		.byte	52
+ 443 019f 08       		.byte	8
+ 444 01a0 35       		.byte	53
+ 445 01a1 02       		.byte	2
+ 446 01a2 36       		.byte	54
+ 447 01a3 04       		.byte	4
+ 448 01a4 37       		.byte	55
+ 449 01a5 01       		.byte	1
+ 450 01a6 3A       		.byte	58
+ 451 01a7 02       		.byte	2
+ 452 01a8 3B       		.byte	59
+ 453 01a9 28       		.byte	40
+ 454 01aa 3E       		.byte	62
+ 455 01ab 54       		.byte	84
+ 456 01ac 3F       		.byte	63
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 9
+
+
+ 457 01ad 40       		.byte	64
+ 458 01ae 58       		.byte	88
+ 459 01af 04       		.byte	4
+ 460 01b0 59       		.byte	89
+ 461 01b1 04       		.byte	4
+ 462 01b2 5F       		.byte	95
+ 463 01b3 01       		.byte	1
+ 464 01b4 80       		.byte	-128
+ 465 01b5 01       		.byte	1
+ 466 01b6 84       		.byte	-124
+ 467 01b7 01       		.byte	1
+ 468 01b8 88       		.byte	-120
+ 469 01b9 01       		.byte	1
+ 470 01ba 8E       		.byte	-114
+ 471 01bb 0A       		.byte	10
+ 472 01bc 8F       		.byte	-113
+ 473 01bd FF       		.byte	-1
+ 474 01be 91       		.byte	-111
+ 475 01bf 55       		.byte	85
+ 476 01c0 92       		.byte	-110
+ 477 01c1 2A       		.byte	42
+ 478 01c2 93       		.byte	-109
+ 479 01c3 AA       		.byte	-86
+ 480 01c4 94       		.byte	-108
+ 481 01c5 08       		.byte	8
+ 482 01c6 95       		.byte	-107
+ 483 01c7 33       		.byte	51
+ 484 01c8 96       		.byte	-106
+ 485 01c9 24       		.byte	36
+ 486 01ca 97       		.byte	-105
+ 487 01cb CC       		.byte	-52
+ 488 01cc 98       		.byte	-104
+ 489 01cd 01       		.byte	1
+ 490 01ce 99       		.byte	-103
+ 491 01cf FF       		.byte	-1
+ 492 01d0 9C       		.byte	-100
+ 493 01d1 10       		.byte	16
+ 494 01d2 9D       		.byte	-99
+ 495 01d3 0F       		.byte	15
+ 496 01d4 9E       		.byte	-98
+ 497 01d5 26       		.byte	38
+ 498 01d6 9F       		.byte	-97
+ 499 01d7 F0       		.byte	-16
+ 500 01d8 A0       		.byte	-96
+ 501 01d9 01       		.byte	1
+ 502 01da A1       		.byte	-95
+ 503 01db FF       		.byte	-1
+ 504 01dc A4       		.byte	-92
+ 505 01dd 01       		.byte	1
+ 506 01de A8       		.byte	-88
+ 507 01df 01       		.byte	1
+ 508 01e0 A9       		.byte	-87
+ 509 01e1 69       		.byte	105
+ 510 01e2 AB       		.byte	-85
+ 511 01e3 96       		.byte	-106
+ 512 01e4 AC       		.byte	-84
+ 513 01e5 01       		.byte	1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 10
+
+
+ 514 01e6 B0       		.byte	-80
+ 515 01e7 06       		.byte	6
+ 516 01e8 B2       		.byte	-78
+ 517 01e9 18       		.byte	24
+ 518 01ea B3       		.byte	-77
+ 519 01eb FF       		.byte	-1
+ 520 01ec B4       		.byte	-76
+ 521 01ed 01       		.byte	1
+ 522 01ee B6       		.byte	-74
+ 523 01ef 22       		.byte	34
+ 524 01f0 B8       		.byte	-72
+ 525 01f1 20       		.byte	32
+ 526 01f2 BA       		.byte	-70
+ 527 01f3 8E       		.byte	-114
+ 528 01f4 BB       		.byte	-69
+ 529 01f5 C0       		.byte	-64
+ 530 01f6 BE       		.byte	-66
+ 531 01f7 10       		.byte	16
+ 532 01f8 BF       		.byte	-65
+ 533 01f9 04       		.byte	4
+ 534 01fa D8       		.byte	-40
+ 535 01fb 04       		.byte	4
+ 536 01fc D9       		.byte	-39
+ 537 01fd 04       		.byte	4
+ 538 01fe DF       		.byte	-33
+ 539 01ff 01       		.byte	1
+ 540 0200 00       		.byte	0
+ 541 0201 04       		.byte	4
+ 542 0202 01       		.byte	1
+ 543 0203 81       		.byte	-127
+ 544 0204 02       		.byte	2
+ 545 0205 04       		.byte	4
+ 546 0206 05       		.byte	5
+ 547 0207 01       		.byte	1
+ 548 0208 0A       		.byte	10
+ 549 0209 68       		.byte	104
+ 550 020a 0B       		.byte	11
+ 551 020b 01       		.byte	1
+ 552 020c 0F       		.byte	15
+ 553 020d 01       		.byte	1
+ 554 020e 10       		.byte	16
+ 555 020f 40       		.byte	64
+ 556 0210 12       		.byte	18
+ 557 0211 1A       		.byte	26
+ 558 0212 17       		.byte	23
+ 559 0213 18       		.byte	24
+ 560 0214 18       		.byte	24
+ 561 0215 20       		.byte	32
+ 562 0216 19       		.byte	25
+ 563 0217 A0       		.byte	-96
+ 564 0218 1A       		.byte	26
+ 565 0219 60       		.byte	96
+ 566 021a 1B       		.byte	27
+ 567 021b 0A       		.byte	10
+ 568 021c 1D       		.byte	29
+ 569 021d 01       		.byte	1
+ 570 021e 1E       		.byte	30
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 11
+
+
+ 571 021f 12       		.byte	18
+ 572 0220 1F       		.byte	31
+ 573 0221 10       		.byte	16
+ 574 0222 22       		.byte	34
+ 575 0223 44       		.byte	68
+ 576 0224 23       		.byte	35
+ 577 0225 01       		.byte	1
+ 578 0226 26       		.byte	38
+ 579 0227 80       		.byte	-128
+ 580 0228 27       		.byte	39
+ 581 0229 18       		.byte	24
+ 582 022a 28       		.byte	40
+ 583 022b 88       		.byte	-120
+ 584 022c 30       		.byte	48
+ 585 022d A8       		.byte	-88
+ 586 022e 32       		.byte	50
+ 587 022f 01       		.byte	1
+ 588 0230 35       		.byte	53
+ 589 0231 01       		.byte	1
+ 590 0232 37       		.byte	55
+ 591 0233 18       		.byte	24
+ 592 0234 39       		.byte	57
+ 593 0235 40       		.byte	64
+ 594 0236 3F       		.byte	63
+ 595 0237 01       		.byte	1
+ 596 0238 87       		.byte	-121
+ 597 0239 10       		.byte	16
+ 598 023a 88       		.byte	-120
+ 599 023b 40       		.byte	64
+ 600 023c 89       		.byte	-119
+ 601 023d 01       		.byte	1
+ 602 023e 8E       		.byte	-114
+ 603 023f 11       		.byte	17
+ 604 0240 96       		.byte	-106
+ 605 0241 40       		.byte	64
+ 606 0242 97       		.byte	-105
+ 607 0243 01       		.byte	1
+ 608 0244 9A       		.byte	-102
+ 609 0245 04       		.byte	4
+ 610 0246 9D       		.byte	-99
+ 611 0247 81       		.byte	-127
+ 612 0248 9F       		.byte	-97
+ 613 0249 18       		.byte	24
+ 614 024a A2       		.byte	-94
+ 615 024b 02       		.byte	2
+ 616 024c A3       		.byte	-93
+ 617 024d 01       		.byte	1
+ 618 024e A5       		.byte	-91
+ 619 024f 01       		.byte	1
+ 620 0250 A6       		.byte	-90
+ 621 0251 04       		.byte	4
+ 622 0252 A7       		.byte	-89
+ 623 0253 0A       		.byte	10
+ 624 0254 AE       		.byte	-82
+ 625 0255 01       		.byte	1
+ 626 0256 B2       		.byte	-78
+ 627 0257 22       		.byte	34
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 12
+
+
+ 628 0258 B4       		.byte	-76
+ 629 0259 14       		.byte	20
+ 630 025a B6       		.byte	-74
+ 631 025b 04       		.byte	4
+ 632 025c C0       		.byte	-64
+ 633 025d 1F       		.byte	31
+ 634 025e C2       		.byte	-62
+ 635 025f 8F       		.byte	-113
+ 636 0260 C4       		.byte	-60
+ 637 0261 6F       		.byte	111
+ 638 0262 CA       		.byte	-54
+ 639 0263 05       		.byte	5
+ 640 0264 CC       		.byte	-52
+ 641 0265 EF       		.byte	-17
+ 642 0266 CE       		.byte	-50
+ 643 0267 88       		.byte	-120
+ 644 0268 E2       		.byte	-30
+ 645 0269 10       		.byte	16
+ 646 026a E6       		.byte	-26
+ 647 026b 10       		.byte	16
+ 648 026c EA       		.byte	-22
+ 649 026d 70       		.byte	112
+ 650 026e EE       		.byte	-18
+ 651 026f 40       		.byte	64
+ 652 0270 05       		.byte	5
+ 653 0271 55       		.byte	85
+ 654 0272 07       		.byte	7
+ 655 0273 AA       		.byte	-86
+ 656 0274 08       		.byte	8
+ 657 0275 FF       		.byte	-1
+ 658 0276 09       		.byte	9
+ 659 0277 96       		.byte	-106
+ 660 0278 0B       		.byte	11
+ 661 0279 69       		.byte	105
+ 662 027a 0C       		.byte	12
+ 663 027b 0F       		.byte	15
+ 664 027c 0D       		.byte	13
+ 665 027d 0F       		.byte	15
+ 666 027e 0E       		.byte	14
+ 667 027f F0       		.byte	-16
+ 668 0280 0F       		.byte	15
+ 669 0281 F0       		.byte	-16
+ 670 0282 13       		.byte	19
+ 671 0283 FF       		.byte	-1
+ 672 0284 14       		.byte	20
+ 673 0285 FF       		.byte	-1
+ 674 0286 15       		.byte	21
+ 675 0287 33       		.byte	51
+ 676 0288 17       		.byte	23
+ 677 0289 CC       		.byte	-52
+ 678 028a 18       		.byte	24
+ 679 028b 96       		.byte	-106
+ 680 028c 1A       		.byte	26
+ 681 028d 69       		.byte	105
+ 682 028e 1B       		.byte	27
+ 683 028f FF       		.byte	-1
+ 684 0290 24       		.byte	36
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 13
+
+
+ 685 0291 33       		.byte	51
+ 686 0292 26       		.byte	38
+ 687 0293 CC       		.byte	-52
+ 688 0294 28       		.byte	40
+ 689 0295 55       		.byte	85
+ 690 0296 29       		.byte	41
+ 691 0297 FF       		.byte	-1
+ 692 0298 2A       		.byte	42
+ 693 0299 AA       		.byte	-86
+ 694 029a 2C       		.byte	44
+ 695 029b FF       		.byte	-1
+ 696 029c 32       		.byte	50
+ 697 029d FF       		.byte	-1
+ 698 029e 35       		.byte	53
+ 699 029f FF       		.byte	-1
+ 700 02a0 3E       		.byte	62
+ 701 02a1 04       		.byte	4
+ 702 02a2 3F       		.byte	63
+ 703 02a3 10       		.byte	16
+ 704 02a4 58       		.byte	88
+ 705 02a5 04       		.byte	4
+ 706 02a6 59       		.byte	89
+ 707 02a7 04       		.byte	4
+ 708 02a8 5F       		.byte	95
+ 709 02a9 01       		.byte	1
+ 710 02aa 84       		.byte	-124
+ 711 02ab FF       		.byte	-1
+ 712 02ac 85       		.byte	-123
+ 713 02ad 55       		.byte	85
+ 714 02ae 87       		.byte	-121
+ 715 02af AA       		.byte	-86
+ 716 02b0 88       		.byte	-120
+ 717 02b1 33       		.byte	51
+ 718 02b2 89       		.byte	-119
+ 719 02b3 33       		.byte	51
+ 720 02b4 8A       		.byte	-118
+ 721 02b5 CC       		.byte	-52
+ 722 02b6 8B       		.byte	-117
+ 723 02b7 CC       		.byte	-52
+ 724 02b8 8F       		.byte	-113
+ 725 02b9 FF       		.byte	-1
+ 726 02ba 92       		.byte	-110
+ 727 02bb FF       		.byte	-1
+ 728 02bc 95       		.byte	-107
+ 729 02bd FF       		.byte	-1
+ 730 02be 96       		.byte	-106
+ 731 02bf FF       		.byte	-1
+ 732 02c0 98       		.byte	-104
+ 733 02c1 55       		.byte	85
+ 734 02c2 99       		.byte	-103
+ 735 02c3 FF       		.byte	-1
+ 736 02c4 9A       		.byte	-102
+ 737 02c5 AA       		.byte	-86
+ 738 02c6 A1       		.byte	-95
+ 739 02c7 0F       		.byte	15
+ 740 02c8 A3       		.byte	-93
+ 741 02c9 F0       		.byte	-16
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 14
+
+
+ 742 02ca A8       		.byte	-88
+ 743 02cb 96       		.byte	-106
+ 744 02cc A9       		.byte	-87
+ 745 02cd 69       		.byte	105
+ 746 02ce AA       		.byte	-86
+ 747 02cf 69       		.byte	105
+ 748 02d0 AB       		.byte	-85
+ 749 02d1 96       		.byte	-106
+ 750 02d2 AC       		.byte	-84
+ 751 02d3 0F       		.byte	15
+ 752 02d4 AE       		.byte	-82
+ 753 02d5 F0       		.byte	-16
+ 754 02d6 B1       		.byte	-79
+ 755 02d7 FF       		.byte	-1
+ 756 02d8 B2       		.byte	-78
+ 757 02d9 FF       		.byte	-1
+ 758 02da BE       		.byte	-66
+ 759 02db 04       		.byte	4
+ 760 02dc BF       		.byte	-65
+ 761 02dd 01       		.byte	1
+ 762 02de D8       		.byte	-40
+ 763 02df 04       		.byte	4
+ 764 02e0 D9       		.byte	-39
+ 765 02e1 04       		.byte	4
+ 766 02e2 DF       		.byte	-33
+ 767 02e3 01       		.byte	1
+ 768 02e4 03       		.byte	3
+ 769 02e5 24       		.byte	36
+ 770 02e6 05       		.byte	5
+ 771 02e7 10       		.byte	16
+ 772 02e8 06       		.byte	6
+ 773 02e9 01       		.byte	1
+ 774 02ea 08       		.byte	8
+ 775 02eb 02       		.byte	2
+ 776 02ec 09       		.byte	9
+ 777 02ed 08       		.byte	8
+ 778 02ee 0A       		.byte	10
+ 779 02ef 04       		.byte	4
+ 780 02f0 0C       		.byte	12
+ 781 02f1 08       		.byte	8
+ 782 02f2 0D       		.byte	13
+ 783 02f3 08       		.byte	8
+ 784 02f4 0F       		.byte	15
+ 785 02f5 08       		.byte	8
+ 786 02f6 12       		.byte	18
+ 787 02f7 01       		.byte	1
+ 788 02f8 13       		.byte	19
+ 789 02f9 10       		.byte	16
+ 790 02fa 14       		.byte	20
+ 791 02fb 02       		.byte	2
+ 792 02fc 15       		.byte	21
+ 793 02fd 80       		.byte	-128
+ 794 02fe 16       		.byte	22
+ 795 02ff 18       		.byte	24
+ 796 0300 17       		.byte	23
+ 797 0301 04       		.byte	4
+ 798 0302 18       		.byte	24
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 15
+
+
+ 799 0303 20       		.byte	32
+ 800 0304 1C       		.byte	28
+ 801 0305 20       		.byte	32
+ 802 0306 20       		.byte	32
+ 803 0307 80       		.byte	-128
+ 804 0308 26       		.byte	38
+ 805 0309 10       		.byte	16
+ 806 030a 2A       		.byte	42
+ 807 030b 21       		.byte	33
+ 808 030c 2B       		.byte	43
+ 809 030d 44       		.byte	68
+ 810 030e 2C       		.byte	44
+ 811 030f 08       		.byte	8
+ 812 0310 30       		.byte	48
+ 813 0311 08       		.byte	8
+ 814 0312 31       		.byte	49
+ 815 0313 10       		.byte	16
+ 816 0314 34       		.byte	52
+ 817 0315 02       		.byte	2
+ 818 0316 35       		.byte	53
+ 819 0317 10       		.byte	16
+ 820 0318 37       		.byte	55
+ 821 0319 04       		.byte	4
+ 822 031a 39       		.byte	57
+ 823 031b 80       		.byte	-128
+ 824 031c 3A       		.byte	58
+ 825 031d 18       		.byte	24
+ 826 031e 3E       		.byte	62
+ 827 031f 2C       		.byte	44
+ 828 0320 3F       		.byte	63
+ 829 0321 90       		.byte	-112
+ 830 0322 88       		.byte	-120
+ 831 0323 10       		.byte	16
+ 832 0324 8A       		.byte	-118
+ 833 0325 10       		.byte	16
+ 834 0326 91       		.byte	-111
+ 835 0327 10       		.byte	16
+ 836 0328 95       		.byte	-107
+ 837 0329 80       		.byte	-128
+ 838 032a 98       		.byte	-104
+ 839 032b 10       		.byte	16
+ 840 032c 9A       		.byte	-102
+ 841 032d 82       		.byte	-126
+ 842 032e 9B       		.byte	-101
+ 843 032f 21       		.byte	33
+ 844 0330 9C       		.byte	-100
+ 845 0331 02       		.byte	2
+ 846 0332 9D       		.byte	-99
+ 847 0333 10       		.byte	16
+ 848 0334 9E       		.byte	-98
+ 849 0335 19       		.byte	25
+ 850 0336 A0       		.byte	-96
+ 851 0337 80       		.byte	-128
+ 852 0338 A2       		.byte	-94
+ 853 0339 40       		.byte	64
+ 854 033a A3       		.byte	-93
+ 855 033b 30       		.byte	48
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 16
+
+
+ 856 033c A4       		.byte	-92
+ 857 033d 08       		.byte	8
+ 858 033e A7       		.byte	-89
+ 859 033f 04       		.byte	4
+ 860 0340 AC       		.byte	-84
+ 861 0341 10       		.byte	16
+ 862 0342 B2       		.byte	-78
+ 863 0343 04       		.byte	4
+ 864 0344 B5       		.byte	-75
+ 865 0345 01       		.byte	1
+ 866 0346 B6       		.byte	-74
+ 867 0347 80       		.byte	-128
+ 868 0348 B7       		.byte	-73
+ 869 0349 10       		.byte	16
+ 870 034a C0       		.byte	-64
+ 871 034b C6       		.byte	-58
+ 872 034c C2       		.byte	-62
+ 873 034d 6E       		.byte	110
+ 874 034e C4       		.byte	-60
+ 875 034f E3       		.byte	-29
+ 876 0350 CA       		.byte	-54
+ 877 0351 25       		.byte	37
+ 878 0352 CC       		.byte	-52
+ 879 0353 E6       		.byte	-26
+ 880 0354 CE       		.byte	-50
+ 881 0355 7E       		.byte	126
+ 882 0356 E2       		.byte	-30
+ 883 0357 80       		.byte	-128
+ 884 0358 E6       		.byte	-26
+ 885 0359 80       		.byte	-128
+ 886 035a EE       		.byte	-18
+ 887 035b 22       		.byte	34
+ 888 035c 05       		.byte	5
+ 889 035d 55       		.byte	85
+ 890 035e 06       		.byte	6
+ 891 035f FF       		.byte	-1
+ 892 0360 07       		.byte	7
+ 893 0361 AA       		.byte	-86
+ 894 0362 09       		.byte	9
+ 895 0363 33       		.byte	51
+ 896 0364 0A       		.byte	10
+ 897 0365 FF       		.byte	-1
+ 898 0366 0B       		.byte	11
+ 899 0367 CC       		.byte	-52
+ 900 0368 0C       		.byte	12
+ 901 0369 0F       		.byte	15
+ 902 036a 0D       		.byte	13
+ 903 036b FF       		.byte	-1
+ 904 036c 0E       		.byte	14
+ 905 036d F0       		.byte	-16
+ 906 036e 10       		.byte	16
+ 907 036f FF       		.byte	-1
+ 908 0370 17       		.byte	23
+ 909 0371 FF       		.byte	-1
+ 910 0372 18       		.byte	24
+ 911 0373 55       		.byte	85
+ 912 0374 19       		.byte	25
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 17
+
+
+ 913 0375 FF       		.byte	-1
+ 914 0376 1A       		.byte	26
+ 915 0377 AA       		.byte	-86
+ 916 0378 21       		.byte	33
+ 917 0379 0F       		.byte	15
+ 918 037a 23       		.byte	35
+ 919 037b F0       		.byte	-16
+ 920 037c 24       		.byte	36
+ 921 037d 33       		.byte	51
+ 922 037e 26       		.byte	38
+ 923 037f CC       		.byte	-52
+ 924 0380 28       		.byte	40
+ 925 0381 96       		.byte	-106
+ 926 0382 29       		.byte	41
+ 927 0383 69       		.byte	105
+ 928 0384 2A       		.byte	42
+ 929 0385 69       		.byte	105
+ 930 0386 2B       		.byte	43
+ 931 0387 96       		.byte	-106
+ 932 0388 33       		.byte	51
+ 933 0389 FF       		.byte	-1
+ 934 038a 34       		.byte	52
+ 935 038b FF       		.byte	-1
+ 936 038c 3E       		.byte	62
+ 937 038d 10       		.byte	16
+ 938 038e 3F       		.byte	63
+ 939 038f 04       		.byte	4
+ 940 0390 58       		.byte	88
+ 941 0391 04       		.byte	4
+ 942 0392 59       		.byte	89
+ 943 0393 04       		.byte	4
+ 944 0394 5F       		.byte	95
+ 945 0395 01       		.byte	1
+ 946 0396 80       		.byte	-128
+ 947 0397 33       		.byte	51
+ 948 0398 81       		.byte	-127
+ 949 0399 55       		.byte	85
+ 950 039a 82       		.byte	-126
+ 951 039b CC       		.byte	-52
+ 952 039c 83       		.byte	-125
+ 953 039d AA       		.byte	-86
+ 954 039e 86       		.byte	-122
+ 955 039f FF       		.byte	-1
+ 956 03a0 8D       		.byte	-115
+ 957 03a1 69       		.byte	105
+ 958 03a2 8F       		.byte	-113
+ 959 03a3 96       		.byte	-106
+ 960 03a4 94       		.byte	-108
+ 961 03a5 55       		.byte	85
+ 962 03a6 96       		.byte	-106
+ 963 03a7 AA       		.byte	-86
+ 964 03a8 97       		.byte	-105
+ 965 03a9 FF       		.byte	-1
+ 966 03aa 98       		.byte	-104
+ 967 03ab 0F       		.byte	15
+ 968 03ac 9A       		.byte	-102
+ 969 03ad F0       		.byte	-16
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 18
+
+
+ 970 03ae 9E       		.byte	-98
+ 971 03af FF       		.byte	-1
+ 972 03b0 A1       		.byte	-95
+ 973 03b1 FF       		.byte	-1
+ 974 03b2 A5       		.byte	-91
+ 975 03b3 0F       		.byte	15
+ 976 03b4 A7       		.byte	-89
+ 977 03b5 F0       		.byte	-16
+ 978 03b6 A9       		.byte	-87
+ 979 03b7 FF       		.byte	-1
+ 980 03b8 AA       		.byte	-86
+ 981 03b9 FF       		.byte	-1
+ 982 03ba AC       		.byte	-84
+ 983 03bb 69       		.byte	105
+ 984 03bc AD       		.byte	-83
+ 985 03bd 33       		.byte	51
+ 986 03be AE       		.byte	-82
+ 987 03bf 96       		.byte	-106
+ 988 03c0 AF       		.byte	-81
+ 989 03c1 CC       		.byte	-52
+ 990 03c2 B0       		.byte	-80
+ 991 03c3 FF       		.byte	-1
+ 992 03c4 B7       		.byte	-73
+ 993 03c5 FF       		.byte	-1
+ 994 03c6 BE       		.byte	-66
+ 995 03c7 01       		.byte	1
+ 996 03c8 BF       		.byte	-65
+ 997 03c9 40       		.byte	64
+ 998 03ca D8       		.byte	-40
+ 999 03cb 04       		.byte	4
+ 1000 03cc D9       		.byte	-39
+ 1001 03cd 04       		.byte	4
+ 1002 03ce DF       		.byte	-33
+ 1003 03cf 01       		.byte	1
+ 1004 03d0 02       		.byte	2
+ 1005 03d1 01       		.byte	1
+ 1006 03d2 03       		.byte	3
+ 1007 03d3 28       		.byte	40
+ 1008 03d4 05       		.byte	5
+ 1009 03d5 08       		.byte	8
+ 1010 03d6 06       		.byte	6
+ 1011 03d7 80       		.byte	-128
+ 1012 03d8 07       		.byte	7
+ 1013 03d9 20       		.byte	32
+ 1014 03da 08       		.byte	8
+ 1015 03db 02       		.byte	2
+ 1016 03dc 0B       		.byte	11
+ 1017 03dd 08       		.byte	8
+ 1018 03de 0C       		.byte	12
+ 1019 03df 90       		.byte	-112
+ 1020 03e0 0F       		.byte	15
+ 1021 03e1 20       		.byte	32
+ 1022 03e2 10       		.byte	16
+ 1023 03e3 04       		.byte	4
+ 1024 03e4 12       		.byte	18
+ 1025 03e5 10       		.byte	16
+ 1026 03e6 15       		.byte	21
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 19
+
+
+ 1027 03e7 70       		.byte	112
+ 1028 03e8 16       		.byte	22
+ 1029 03e9 02       		.byte	2
+ 1030 03ea 1A       		.byte	26
+ 1031 03eb 04       		.byte	4
+ 1032 03ec 1E       		.byte	30
+ 1033 03ed 80       		.byte	-128
+ 1034 03ee 21       		.byte	33
+ 1035 03ef 08       		.byte	8
+ 1036 03f0 27       		.byte	39
+ 1037 03f1 01       		.byte	1
+ 1038 03f2 28       		.byte	40
+ 1039 03f3 04       		.byte	4
+ 1040 03f4 2A       		.byte	42
+ 1041 03f5 01       		.byte	1
+ 1042 03f6 2B       		.byte	43
+ 1043 03f7 04       		.byte	4
+ 1044 03f8 2C       		.byte	44
+ 1045 03f9 90       		.byte	-112
+ 1046 03fa 2D       		.byte	45
+ 1047 03fb 10       		.byte	16
+ 1048 03fc 2E       		.byte	46
+ 1049 03fd 80       		.byte	-128
+ 1050 03fe 30       		.byte	48
+ 1051 03ff 08       		.byte	8
+ 1052 0400 31       		.byte	49
+ 1053 0401 10       		.byte	16
+ 1054 0402 33       		.byte	51
+ 1055 0403 28       		.byte	40
+ 1056 0404 35       		.byte	53
+ 1057 0405 08       		.byte	8
+ 1058 0406 39       		.byte	57
+ 1059 0407 80       		.byte	-128
+ 1060 0408 3A       		.byte	58
+ 1061 0409 18       		.byte	24
+ 1062 040a 3B       		.byte	59
+ 1063 040b 08       		.byte	8
+ 1064 040c 3D       		.byte	61
+ 1065 040d 42       		.byte	66
+ 1066 040e 85       		.byte	-123
+ 1067 040f 10       		.byte	16
+ 1068 0410 8D       		.byte	-115
+ 1069 0411 08       		.byte	8
+ 1070 0412 91       		.byte	-111
+ 1071 0413 40       		.byte	64
+ 1072 0414 99       		.byte	-103
+ 1073 0415 08       		.byte	8
+ 1074 0416 A0       		.byte	-96
+ 1075 0417 80       		.byte	-128
+ 1076 0418 A9       		.byte	-87
+ 1077 0419 08       		.byte	8
+ 1078 041a C0       		.byte	-64
+ 1079 041b 37       		.byte	55
+ 1080 041c C2       		.byte	-62
+ 1081 041d EA       		.byte	-22
+ 1082 041e C4       		.byte	-60
+ 1083 041f C6       		.byte	-58
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 20
+
+
+ 1084 0420 CA       		.byte	-54
+ 1085 0421 F5       		.byte	-11
+ 1086 0422 CC       		.byte	-52
+ 1087 0423 46       		.byte	70
+ 1088 0424 CE       		.byte	-50
+ 1089 0425 9E       		.byte	-98
+ 1090 0426 E2       		.byte	-30
+ 1091 0427 02       		.byte	2
+ 1092 0428 E6       		.byte	-26
+ 1093 0429 10       		.byte	16
+ 1094 042a EE       		.byte	-18
+ 1095 042b 04       		.byte	4
+ 1096 042c 84       		.byte	-124
+ 1097 042d 80       		.byte	-128
+ 1098 042e 8D       		.byte	-115
+ 1099 042f 40       		.byte	64
+ 1100 0430 E2       		.byte	-30
+ 1101 0431 08       		.byte	8
+ 1102 0432 81       		.byte	-127
+ 1103 0433 06       		.byte	6
+ 1104 0434 84       		.byte	-124
+ 1105 0435 10       		.byte	16
+ 1106 0436 86       		.byte	-122
+ 1107 0437 10       		.byte	16
+ 1108 0438 A0       		.byte	-96
+ 1109 0439 10       		.byte	16
+ 1110 043a A1       		.byte	-95
+ 1111 043b 06       		.byte	6
+ 1112 043c A2       		.byte	-94
+ 1113 043d 10       		.byte	16
+ 1114 043e A8       		.byte	-88
+ 1115 043f 08       		.byte	8
+ 1116 0440 A9       		.byte	-87
+ 1117 0441 80       		.byte	-128
+ 1118 0442 AA       		.byte	-86
+ 1119 0443 40       		.byte	64
+ 1120 0444 B0       		.byte	-80
+ 1121 0445 20       		.byte	32
+ 1122 0446 B2       		.byte	-78
+ 1123 0447 21       		.byte	33
+ 1124 0448 B3       		.byte	-77
+ 1125 0449 01       		.byte	1
+ 1126 044a B4       		.byte	-76
+ 1127 044b 90       		.byte	-112
+ 1128 044c B7       		.byte	-73
+ 1129 044d 01       		.byte	1
+ 1130 044e E6       		.byte	-26
+ 1131 044f 01       		.byte	1
+ 1132 0450 E8       		.byte	-24
+ 1133 0451 04       		.byte	4
+ 1134 0452 EA       		.byte	-22
+ 1135 0453 D1       		.byte	-47
+ 1136 0454 EC       		.byte	-20
+ 1137 0455 01       		.byte	1
+ 1138 0456 02       		.byte	2
+ 1139 0457 0B       		.byte	11
+ 1140 0458 04       		.byte	4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 21
+
+
+ 1141 0459 04       		.byte	4
+ 1142 045a 08       		.byte	8
+ 1143 045b 09       		.byte	9
+ 1144 045c 0A       		.byte	10
+ 1145 045d 02       		.byte	2
+ 1146 045e 0C       		.byte	12
+ 1147 045f 02       		.byte	2
+ 1148 0460 0E       		.byte	14
+ 1149 0461 09       		.byte	9
+ 1150 0462 10       		.byte	16
+ 1151 0463 04       		.byte	4
+ 1152 0464 11       		.byte	17
+ 1153 0465 02       		.byte	2
+ 1154 0466 15       		.byte	21
+ 1155 0467 02       		.byte	2
+ 1156 0468 19       		.byte	25
+ 1157 0469 02       		.byte	2
+ 1158 046a 1D       		.byte	29
+ 1159 046b 04       		.byte	4
+ 1160 046c 1F       		.byte	31
+ 1161 046d 09       		.byte	9
+ 1162 046e 20       		.byte	32
+ 1163 046f 01       		.byte	1
+ 1164 0470 21       		.byte	33
+ 1165 0471 0C       		.byte	12
+ 1166 0472 22       		.byte	34
+ 1167 0473 0E       		.byte	14
+ 1168 0474 23       		.byte	35
+ 1169 0475 03       		.byte	3
+ 1170 0476 25       		.byte	37
+ 1171 0477 09       		.byte	9
+ 1172 0478 26       		.byte	38
+ 1173 0479 04       		.byte	4
+ 1174 047a 27       		.byte	39
+ 1175 047b 04       		.byte	4
+ 1176 047c 2D       		.byte	45
+ 1177 047d 0D       		.byte	13
+ 1178 047e 30       		.byte	48
+ 1179 047f 08       		.byte	8
+ 1180 0480 31       		.byte	49
+ 1181 0481 02       		.byte	2
+ 1182 0482 32       		.byte	50
+ 1183 0483 02       		.byte	2
+ 1184 0484 33       		.byte	51
+ 1185 0485 04       		.byte	4
+ 1186 0486 34       		.byte	52
+ 1187 0487 04       		.byte	4
+ 1188 0488 35       		.byte	53
+ 1189 0489 01       		.byte	1
+ 1190 048a 36       		.byte	54
+ 1191 048b 01       		.byte	1
+ 1192 048c 37       		.byte	55
+ 1193 048d 08       		.byte	8
+ 1194 048e 3E       		.byte	62
+ 1195 048f 55       		.byte	85
+ 1196 0490 3F       		.byte	63
+ 1197 0491 55       		.byte	85
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 22
+
+
+ 1198 0492 58       		.byte	88
+ 1199 0493 04       		.byte	4
+ 1200 0494 59       		.byte	89
+ 1201 0495 04       		.byte	4
+ 1202 0496 5F       		.byte	95
+ 1203 0497 01       		.byte	1
+ 1204 0498 84       		.byte	-124
+ 1205 0499 55       		.byte	85
+ 1206 049a 85       		.byte	-123
+ 1207 049b 08       		.byte	8
+ 1208 049c 86       		.byte	-122
+ 1209 049d AA       		.byte	-86
+ 1210 049e 89       		.byte	-119
+ 1211 049f 04       		.byte	4
+ 1212 04a0 8B       		.byte	-117
+ 1213 04a1 03       		.byte	3
+ 1214 04a2 8E       		.byte	-114
+ 1215 04a3 FF       		.byte	-1
+ 1216 04a4 91       		.byte	-111
+ 1217 04a5 06       		.byte	6
+ 1218 04a6 93       		.byte	-109
+ 1219 04a7 01       		.byte	1
+ 1220 04a8 94       		.byte	-108
+ 1221 04a9 69       		.byte	105
+ 1222 04aa 96       		.byte	-106
+ 1223 04ab 96       		.byte	-106
+ 1224 04ac 99       		.byte	-103
+ 1225 04ad 08       		.byte	8
+ 1226 04ae 9D       		.byte	-99
+ 1227 04af 06       		.byte	6
+ 1228 04b0 9E       		.byte	-98
+ 1229 04b1 FF       		.byte	-1
+ 1230 04b2 9F       		.byte	-97
+ 1231 04b3 09       		.byte	9
+ 1232 04b4 A0       		.byte	-96
+ 1233 04b5 0F       		.byte	15
+ 1234 04b6 A2       		.byte	-94
+ 1235 04b7 F0       		.byte	-16
+ 1236 04b8 A3       		.byte	-93
+ 1237 04b9 08       		.byte	8
+ 1238 04ba A6       		.byte	-90
+ 1239 04bb FF       		.byte	-1
+ 1240 04bc A8       		.byte	-88
+ 1241 04bd 33       		.byte	51
+ 1242 04be AA       		.byte	-86
+ 1243 04bf CC       		.byte	-52
+ 1244 04c0 AD       		.byte	-83
+ 1245 04c1 05       		.byte	5
+ 1246 04c2 AF       		.byte	-81
+ 1247 04c3 02       		.byte	2
+ 1248 04c4 B1       		.byte	-79
+ 1249 04c5 02       		.byte	2
+ 1250 04c6 B3       		.byte	-77
+ 1251 04c7 04       		.byte	4
+ 1252 04c8 B4       		.byte	-76
+ 1253 04c9 FF       		.byte	-1
+ 1254 04ca B5       		.byte	-75
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 23
+
+
+ 1255 04cb 08       		.byte	8
+ 1256 04cc B7       		.byte	-73
+ 1257 04cd 01       		.byte	1
+ 1258 04ce BE       		.byte	-66
+ 1259 04cf 10       		.byte	16
+ 1260 04d0 BF       		.byte	-65
+ 1261 04d1 55       		.byte	85
+ 1262 04d2 D8       		.byte	-40
+ 1263 04d3 04       		.byte	4
+ 1264 04d4 D9       		.byte	-39
+ 1265 04d5 04       		.byte	4
+ 1266 04d6 DF       		.byte	-33
+ 1267 04d7 01       		.byte	1
+ 1268 04d8 01       		.byte	1
+ 1269 04d9 40       		.byte	64
+ 1270 04da 02       		.byte	2
+ 1271 04db 20       		.byte	32
+ 1272 04dc 04       		.byte	4
+ 1273 04dd 20       		.byte	32
+ 1274 04de 07       		.byte	7
+ 1275 04df 51       		.byte	81
+ 1276 04e0 08       		.byte	8
+ 1277 04e1 88       		.byte	-120
+ 1278 04e2 0C       		.byte	12
+ 1279 04e3 01       		.byte	1
+ 1280 04e4 10       		.byte	16
+ 1281 04e5 A8       		.byte	-88
+ 1282 04e6 14       		.byte	20
+ 1283 04e7 40       		.byte	64
+ 1284 04e8 15       		.byte	21
+ 1285 04e9 04       		.byte	4
+ 1286 04ea 17       		.byte	23
+ 1287 04eb 08       		.byte	8
+ 1288 04ec 18       		.byte	24
+ 1289 04ed 04       		.byte	4
+ 1290 04ee 1C       		.byte	28
+ 1291 04ef 22       		.byte	34
+ 1292 04f0 1E       		.byte	30
+ 1293 04f1 08       		.byte	8
+ 1294 04f2 1F       		.byte	31
+ 1295 04f3 01       		.byte	1
+ 1296 04f4 20       		.byte	32
+ 1297 04f5 10       		.byte	16
+ 1298 04f6 21       		.byte	33
+ 1299 04f7 12       		.byte	18
+ 1300 04f8 22       		.byte	34
+ 1301 04f9 80       		.byte	-128
+ 1302 04fa 25       		.byte	37
+ 1303 04fb 45       		.byte	69
+ 1304 04fc 26       		.byte	38
+ 1305 04fd 10       		.byte	16
+ 1306 04fe 29       		.byte	41
+ 1307 04ff 81       		.byte	-127
+ 1308 0500 2C       		.byte	44
+ 1309 0501 40       		.byte	64
+ 1310 0502 2F       		.byte	47
+ 1311 0503 12       		.byte	18
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 24
+
+
+ 1312 0504 30       		.byte	48
+ 1313 0505 40       		.byte	64
+ 1314 0506 32       		.byte	50
+ 1315 0507 40       		.byte	64
+ 1316 0508 33       		.byte	51
+ 1317 0509 13       		.byte	19
+ 1318 050a 34       		.byte	52
+ 1319 050b 01       		.byte	1
+ 1320 050c 35       		.byte	53
+ 1321 050d 81       		.byte	-127
+ 1322 050e 37       		.byte	55
+ 1323 050f 58       		.byte	88
+ 1324 0510 38       		.byte	56
+ 1325 0511 20       		.byte	32
+ 1326 0512 39       		.byte	57
+ 1327 0513 04       		.byte	4
+ 1328 0514 3B       		.byte	59
+ 1329 0515 20       		.byte	32
+ 1330 0516 80       		.byte	-128
+ 1331 0517 08       		.byte	8
+ 1332 0518 85       		.byte	-123
+ 1333 0519 40       		.byte	64
+ 1334 051a 86       		.byte	-122
+ 1335 051b 80       		.byte	-128
+ 1336 051c 87       		.byte	-121
+ 1337 051d 02       		.byte	2
+ 1338 051e 88       		.byte	-120
+ 1339 051f 81       		.byte	-127
+ 1340 0520 89       		.byte	-119
+ 1341 0521 10       		.byte	16
+ 1342 0522 8C       		.byte	-116
+ 1343 0523 10       		.byte	16
+ 1344 0524 8D       		.byte	-115
+ 1345 0525 60       		.byte	96
+ 1346 0526 90       		.byte	-112
+ 1347 0527 20       		.byte	32
+ 1348 0528 92       		.byte	-110
+ 1349 0529 80       		.byte	-128
+ 1350 052a 94       		.byte	-108
+ 1351 052b 04       		.byte	4
+ 1352 052c 95       		.byte	-107
+ 1353 052d 40       		.byte	64
+ 1354 052e 96       		.byte	-106
+ 1355 052f 02       		.byte	2
+ 1356 0530 99       		.byte	-103
+ 1357 0531 A1       		.byte	-95
+ 1358 0532 9B       		.byte	-101
+ 1359 0533 18       		.byte	24
+ 1360 0534 9C       		.byte	-100
+ 1361 0535 88       		.byte	-120
+ 1362 0536 A3       		.byte	-93
+ 1363 0537 03       		.byte	3
+ 1364 0538 A4       		.byte	-92
+ 1365 0539 A8       		.byte	-88
+ 1366 053a A5       		.byte	-91
+ 1367 053b 01       		.byte	1
+ 1368 053c A6       		.byte	-90
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 25
+
+
+ 1369 053d 04       		.byte	4
+ 1370 053e AA       		.byte	-86
+ 1371 053f 88       		.byte	-120
+ 1372 0540 AE       		.byte	-82
+ 1373 0541 10       		.byte	16
+ 1374 0542 C0       		.byte	-64
+ 1375 0543 F5       		.byte	-11
+ 1376 0544 C2       		.byte	-62
+ 1377 0545 15       		.byte	21
+ 1378 0546 C4       		.byte	-60
+ 1379 0547 3E       		.byte	62
+ 1380 0548 CA       		.byte	-54
+ 1381 0549 D9       		.byte	-39
+ 1382 054a CC       		.byte	-52
+ 1383 054b FD       		.byte	-3
+ 1384 054c CE       		.byte	-50
+ 1385 054d 06       		.byte	6
+ 1386 054e E0       		.byte	-32
+ 1387 054f 08       		.byte	8
+ 1388 0550 E2       		.byte	-30
+ 1389 0551 80       		.byte	-128
+ 1390 0552 E6       		.byte	-26
+ 1391 0553 24       		.byte	36
+ 1392 0554 EA       		.byte	-22
+ 1393 0555 06       		.byte	6
+ 1394 0556 00       		.byte	0
+ 1395 0557 01       		.byte	1
+ 1396 0558 01       		.byte	1
+ 1397 0559 96       		.byte	-106
+ 1398 055a 03       		.byte	3
+ 1399 055b 69       		.byte	105
+ 1400 055c 04       		.byte	4
+ 1401 055d 01       		.byte	1
+ 1402 055e 08       		.byte	8
+ 1403 055f 01       		.byte	1
+ 1404 0560 09       		.byte	9
+ 1405 0561 55       		.byte	85
+ 1406 0562 0B       		.byte	11
+ 1407 0563 AA       		.byte	-86
+ 1408 0564 0C       		.byte	12
+ 1409 0565 01       		.byte	1
+ 1410 0566 10       		.byte	16
+ 1411 0567 01       		.byte	1
+ 1412 0568 14       		.byte	20
+ 1413 0569 01       		.byte	1
+ 1414 056a 18       		.byte	24
+ 1415 056b 02       		.byte	2
+ 1416 056c 1B       		.byte	27
+ 1417 056d FF       		.byte	-1
+ 1418 056e 1E       		.byte	30
+ 1419 056f 02       		.byte	2
+ 1420 0570 20       		.byte	32
+ 1421 0571 01       		.byte	1
+ 1422 0572 23       		.byte	35
+ 1423 0573 FF       		.byte	-1
+ 1424 0574 24       		.byte	36
+ 1425 0575 01       		.byte	1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 26
+
+
+ 1426 0576 25       		.byte	37
+ 1427 0577 0F       		.byte	15
+ 1428 0578 27       		.byte	39
+ 1429 0579 F0       		.byte	-16
+ 1430 057a 28       		.byte	40
+ 1431 057b 02       		.byte	2
+ 1432 057c 29       		.byte	41
+ 1433 057d FF       		.byte	-1
+ 1434 057e 2D       		.byte	45
+ 1435 057f 33       		.byte	51
+ 1436 0580 2E       		.byte	46
+ 1437 0581 02       		.byte	2
+ 1438 0582 2F       		.byte	47
+ 1439 0583 CC       		.byte	-52
+ 1440 0584 32       		.byte	50
+ 1441 0585 02       		.byte	2
+ 1442 0586 35       		.byte	53
+ 1443 0587 FF       		.byte	-1
+ 1444 0588 36       		.byte	54
+ 1445 0589 01       		.byte	1
+ 1446 058a 38       		.byte	56
+ 1447 058b 80       		.byte	-128
+ 1448 058c 3E       		.byte	62
+ 1449 058d 44       		.byte	68
+ 1450 058e 3F       		.byte	63
+ 1451 058f 10       		.byte	16
+ 1452 0590 58       		.byte	88
+ 1453 0591 04       		.byte	4
+ 1454 0592 59       		.byte	89
+ 1455 0593 04       		.byte	4
+ 1456 0594 5F       		.byte	95
+ 1457 0595 01       		.byte	1
+ 1458 0596 88       		.byte	-120
+ 1459 0597 96       		.byte	-106
+ 1460 0598 8A       		.byte	-118
+ 1461 0599 69       		.byte	105
+ 1462 059a 8B       		.byte	-117
+ 1463 059b FF       		.byte	-1
+ 1464 059c 8D       		.byte	-115
+ 1465 059d FF       		.byte	-1
+ 1466 059e 90       		.byte	-112
+ 1467 059f 33       		.byte	51
+ 1468 05a0 92       		.byte	-110
+ 1469 05a1 CC       		.byte	-52
+ 1470 05a2 98       		.byte	-104
+ 1471 05a3 0F       		.byte	15
+ 1472 05a4 99       		.byte	-103
+ 1473 05a5 0F       		.byte	15
+ 1474 05a6 9A       		.byte	-102
+ 1475 05a7 F0       		.byte	-16
+ 1476 05a8 9B       		.byte	-101
+ 1477 05a9 F0       		.byte	-16
+ 1478 05aa A1       		.byte	-95
+ 1479 05ab 69       		.byte	105
+ 1480 05ac A3       		.byte	-93
+ 1481 05ad 96       		.byte	-106
+ 1482 05ae A4       		.byte	-92
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 27
+
+
+ 1483 05af 55       		.byte	85
+ 1484 05b0 A5       		.byte	-91
+ 1485 05b1 55       		.byte	85
+ 1486 05b2 A6       		.byte	-90
+ 1487 05b3 AA       		.byte	-86
+ 1488 05b4 A7       		.byte	-89
+ 1489 05b5 AA       		.byte	-86
+ 1490 05b6 A9       		.byte	-87
+ 1491 05b7 FF       		.byte	-1
+ 1492 05b8 AD       		.byte	-83
+ 1493 05b9 33       		.byte	51
+ 1494 05ba AF       		.byte	-81
+ 1495 05bb CC       		.byte	-52
+ 1496 05bc B0       		.byte	-80
+ 1497 05bd FF       		.byte	-1
+ 1498 05be B3       		.byte	-77
+ 1499 05bf FF       		.byte	-1
+ 1500 05c0 BE       		.byte	-66
+ 1501 05c1 01       		.byte	1
+ 1502 05c2 BF       		.byte	-65
+ 1503 05c3 04       		.byte	4
+ 1504 05c4 D8       		.byte	-40
+ 1505 05c5 04       		.byte	4
+ 1506 05c6 D9       		.byte	-39
+ 1507 05c7 04       		.byte	4
+ 1508 05c8 DF       		.byte	-33
+ 1509 05c9 01       		.byte	1
+ 1510 05ca 00       		.byte	0
+ 1511 05cb 20       		.byte	32
+ 1512 05cc 04       		.byte	4
+ 1513 05cd 54       		.byte	84
+ 1514 05ce 05       		.byte	5
+ 1515 05cf 01       		.byte	1
+ 1516 05d0 09       		.byte	9
+ 1517 05d1 01       		.byte	1
+ 1518 05d2 0B       		.byte	11
+ 1519 05d3 04       		.byte	4
+ 1520 05d4 0D       		.byte	13
+ 1521 05d5 20       		.byte	32
+ 1522 05d6 0E       		.byte	14
+ 1523 05d7 81       		.byte	-127
+ 1524 05d8 0F       		.byte	15
+ 1525 05d9 10       		.byte	16
+ 1526 05da 12       		.byte	18
+ 1527 05db 20       		.byte	32
+ 1528 05dc 17       		.byte	23
+ 1529 05dd 59       		.byte	89
+ 1530 05de 1A       		.byte	26
+ 1531 05df 80       		.byte	-128
+ 1532 05e0 1D       		.byte	29
+ 1533 05e1 04       		.byte	4
+ 1534 05e2 1F       		.byte	31
+ 1535 05e3 80       		.byte	-128
+ 1536 05e4 23       		.byte	35
+ 1537 05e5 10       		.byte	16
+ 1538 05e6 27       		.byte	39
+ 1539 05e7 08       		.byte	8
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 28
+
+
+ 1540 05e8 29       		.byte	41
+ 1541 05e9 20       		.byte	32
+ 1542 05ea 2A       		.byte	42
+ 1543 05eb 82       		.byte	-126
+ 1544 05ec 2B       		.byte	43
+ 1545 05ed 10       		.byte	16
+ 1546 05ee 2C       		.byte	44
+ 1547 05ef 90       		.byte	-112
+ 1548 05f0 2D       		.byte	45
+ 1549 05f1 10       		.byte	16
+ 1550 05f2 2E       		.byte	46
+ 1551 05f3 80       		.byte	-128
+ 1552 05f4 2F       		.byte	47
+ 1553 05f5 40       		.byte	64
+ 1554 05f6 30       		.byte	48
+ 1555 05f7 10       		.byte	16
+ 1556 05f8 35       		.byte	53
+ 1557 05f9 20       		.byte	32
+ 1558 05fa 37       		.byte	55
+ 1559 05fb 20       		.byte	32
+ 1560 05fc 39       		.byte	57
+ 1561 05fd 10       		.byte	16
+ 1562 05fe 3B       		.byte	59
+ 1563 05ff 80       		.byte	-128
+ 1564 0600 3E       		.byte	62
+ 1565 0601 02       		.byte	2
+ 1566 0602 3F       		.byte	63
+ 1567 0603 20       		.byte	32
+ 1568 0604 82       		.byte	-126
+ 1569 0605 40       		.byte	64
+ 1570 0606 83       		.byte	-125
+ 1571 0607 84       		.byte	-124
+ 1572 0608 86       		.byte	-122
+ 1573 0609 01       		.byte	1
+ 1574 060a 88       		.byte	-120
+ 1575 060b 02       		.byte	2
+ 1576 060c 8B       		.byte	-117
+ 1577 060d 04       		.byte	4
+ 1578 060e 8D       		.byte	-115
+ 1579 060f 30       		.byte	48
+ 1580 0610 8E       		.byte	-114
+ 1581 0611 20       		.byte	32
+ 1582 0612 91       		.byte	-111
+ 1583 0613 10       		.byte	16
+ 1584 0614 98       		.byte	-104
+ 1585 0615 10       		.byte	16
+ 1586 0616 9A       		.byte	-102
+ 1587 0617 82       		.byte	-126
+ 1588 0618 9B       		.byte	-101
+ 1589 0619 21       		.byte	33
+ 1590 061a 9C       		.byte	-100
+ 1591 061b 02       		.byte	2
+ 1592 061c 9D       		.byte	-99
+ 1593 061d 10       		.byte	16
+ 1594 061e 9E       		.byte	-98
+ 1595 061f 09       		.byte	9
+ 1596 0620 9F       		.byte	-97
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 29
+
+
+ 1597 0621 04       		.byte	4
+ 1598 0622 A0       		.byte	-96
+ 1599 0623 80       		.byte	-128
+ 1600 0624 A2       		.byte	-94
+ 1601 0625 40       		.byte	64
+ 1602 0626 A3       		.byte	-93
+ 1603 0627 10       		.byte	16
+ 1604 0628 A4       		.byte	-92
+ 1605 0629 08       		.byte	8
+ 1606 062a A7       		.byte	-89
+ 1607 062b 04       		.byte	4
+ 1608 062c A8       		.byte	-88
+ 1609 062d 10       		.byte	16
+ 1610 062e AC       		.byte	-84
+ 1611 062f 40       		.byte	64
+ 1612 0630 C0       		.byte	-64
+ 1613 0631 F2       		.byte	-14
+ 1614 0632 C2       		.byte	-62
+ 1615 0633 FA       		.byte	-6
+ 1616 0634 C4       		.byte	-60
+ 1617 0635 F4       		.byte	-12
+ 1618 0636 CA       		.byte	-54
+ 1619 0637 FF       		.byte	-1
+ 1620 0638 CC       		.byte	-52
+ 1621 0639 24       		.byte	36
+ 1622 063a CE       		.byte	-50
+ 1623 063b AC       		.byte	-84
+ 1624 063c E0       		.byte	-32
+ 1625 063d 10       		.byte	16
+ 1626 063e E2       		.byte	-30
+ 1627 063f 60       		.byte	96
+ 1628 0640 E4       		.byte	-28
+ 1629 0641 41       		.byte	65
+ 1630 0642 08       		.byte	8
+ 1631 0643 FF       		.byte	-1
+ 1632 0644 0B       		.byte	11
+ 1633 0645 FF       		.byte	-1
+ 1634 0646 0F       		.byte	15
+ 1635 0647 FF       		.byte	-1
+ 1636 0648 10       		.byte	16
+ 1637 0649 FF       		.byte	-1
+ 1638 064a 18       		.byte	24
+ 1639 064b 55       		.byte	85
+ 1640 064c 19       		.byte	25
+ 1641 064d 0F       		.byte	15
+ 1642 064e 1A       		.byte	26
+ 1643 064f AA       		.byte	-86
+ 1644 0650 1B       		.byte	27
+ 1645 0651 F0       		.byte	-16
+ 1646 0652 1C       		.byte	28
+ 1647 0653 33       		.byte	51
+ 1648 0654 1E       		.byte	30
+ 1649 0655 CC       		.byte	-52
+ 1650 0656 20       		.byte	32
+ 1651 0657 96       		.byte	-106
+ 1652 0658 21       		.byte	33
+ 1653 0659 96       		.byte	-106
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 30
+
+
+ 1654 065a 22       		.byte	34
+ 1655 065b 69       		.byte	105
+ 1656 065c 23       		.byte	35
+ 1657 065d 69       		.byte	105
+ 1658 065e 24       		.byte	36
+ 1659 065f 0F       		.byte	15
+ 1660 0660 25       		.byte	37
+ 1661 0661 55       		.byte	85
+ 1662 0662 26       		.byte	38
+ 1663 0663 F0       		.byte	-16
+ 1664 0664 27       		.byte	39
+ 1665 0665 AA       		.byte	-86
+ 1666 0666 28       		.byte	40
+ 1667 0667 FF       		.byte	-1
+ 1668 0668 29       		.byte	41
+ 1669 0669 FF       		.byte	-1
+ 1670 066a 2D       		.byte	45
+ 1671 066b 33       		.byte	51
+ 1672 066c 2F       		.byte	47
+ 1673 066d CC       		.byte	-52
+ 1674 066e 30       		.byte	48
+ 1675 066f FF       		.byte	-1
+ 1676 0670 35       		.byte	53
+ 1677 0671 FF       		.byte	-1
+ 1678 0672 3E       		.byte	62
+ 1679 0673 01       		.byte	1
+ 1680 0674 3F       		.byte	63
+ 1681 0675 10       		.byte	16
+ 1682 0676 58       		.byte	88
+ 1683 0677 04       		.byte	4
+ 1684 0678 59       		.byte	89
+ 1685 0679 04       		.byte	4
+ 1686 067a 5F       		.byte	95
+ 1687 067b 01       		.byte	1
+ 1688 067c 81       		.byte	-127
+ 1689 067d 96       		.byte	-106
+ 1690 067e 83       		.byte	-125
+ 1691 067f 69       		.byte	105
+ 1692 0680 84       		.byte	-124
+ 1693 0681 FF       		.byte	-1
+ 1694 0682 89       		.byte	-119
+ 1695 0683 55       		.byte	85
+ 1696 0684 8B       		.byte	-117
+ 1697 0685 AA       		.byte	-86
+ 1698 0686 92       		.byte	-110
+ 1699 0687 FF       		.byte	-1
+ 1700 0688 94       		.byte	-108
+ 1701 0689 FF       		.byte	-1
+ 1702 068a 98       		.byte	-104
+ 1703 068b 0F       		.byte	15
+ 1704 068c 9A       		.byte	-102
+ 1705 068d F0       		.byte	-16
+ 1706 068e 9B       		.byte	-101
+ 1707 068f FF       		.byte	-1
+ 1708 0690 A0       		.byte	-96
+ 1709 0691 33       		.byte	51
+ 1710 0692 A1       		.byte	-95
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 31
+
+
+ 1711 0693 FF       		.byte	-1
+ 1712 0694 A2       		.byte	-94
+ 1713 0695 CC       		.byte	-52
+ 1714 0696 A5       		.byte	-91
+ 1715 0697 0F       		.byte	15
+ 1716 0698 A7       		.byte	-89
+ 1717 0699 F0       		.byte	-16
+ 1718 069a A8       		.byte	-88
+ 1719 069b 55       		.byte	85
+ 1720 069c AA       		.byte	-86
+ 1721 069d AA       		.byte	-86
+ 1722 069e AB       		.byte	-85
+ 1723 069f FF       		.byte	-1
+ 1724 06a0 AC       		.byte	-84
+ 1725 06a1 69       		.byte	105
+ 1726 06a2 AD       		.byte	-83
+ 1727 06a3 33       		.byte	51
+ 1728 06a4 AE       		.byte	-82
+ 1729 06a5 96       		.byte	-106
+ 1730 06a6 AF       		.byte	-81
+ 1731 06a7 CC       		.byte	-52
+ 1732 06a8 B0       		.byte	-80
+ 1733 06a9 FF       		.byte	-1
+ 1734 06aa B3       		.byte	-77
+ 1735 06ab FF       		.byte	-1
+ 1736 06ac BE       		.byte	-66
+ 1737 06ad 01       		.byte	1
+ 1738 06ae BF       		.byte	-65
+ 1739 06af 04       		.byte	4
+ 1740 06b0 D8       		.byte	-40
+ 1741 06b1 04       		.byte	4
+ 1742 06b2 D9       		.byte	-39
+ 1743 06b3 04       		.byte	4
+ 1744 06b4 DF       		.byte	-33
+ 1745 06b5 01       		.byte	1
+ 1746 06b6 01       		.byte	1
+ 1747 06b7 10       		.byte	16
+ 1748 06b8 07       		.byte	7
+ 1749 06b9 20       		.byte	32
+ 1750 06ba 09       		.byte	9
+ 1751 06bb 10       		.byte	16
+ 1752 06bc 0B       		.byte	11
+ 1753 06bd 82       		.byte	-126
+ 1754 06be 0C       		.byte	12
+ 1755 06bf 14       		.byte	20
+ 1756 06c0 0F       		.byte	15
+ 1757 06c1 40       		.byte	64
+ 1758 06c2 10       		.byte	16
+ 1759 06c3 10       		.byte	16
+ 1760 06c4 13       		.byte	19
+ 1761 06c5 21       		.byte	33
+ 1762 06c6 16       		.byte	22
+ 1763 06c7 86       		.byte	-122
+ 1764 06c8 19       		.byte	25
+ 1765 06c9 01       		.byte	1
+ 1766 06ca 1C       		.byte	28
+ 1767 06cb 40       		.byte	64
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 32
+
+
+ 1768 06cc 20       		.byte	32
+ 1769 06cd 04       		.byte	4
+ 1770 06ce 24       		.byte	36
+ 1771 06cf 10       		.byte	16
+ 1772 06d0 29       		.byte	41
+ 1773 06d1 10       		.byte	16
+ 1774 06d2 2A       		.byte	42
+ 1775 06d3 86       		.byte	-122
+ 1776 06d4 2B       		.byte	43
+ 1777 06d5 10       		.byte	16
+ 1778 06d6 2C       		.byte	44
+ 1779 06d7 94       		.byte	-108
+ 1780 06d8 2D       		.byte	45
+ 1781 06d9 10       		.byte	16
+ 1782 06da 2E       		.byte	46
+ 1783 06db 80       		.byte	-128
+ 1784 06dc 2F       		.byte	47
+ 1785 06dd 41       		.byte	65
+ 1786 06de 30       		.byte	48
+ 1787 06df 10       		.byte	16
+ 1788 06e0 35       		.byte	53
+ 1789 06e1 10       		.byte	16
+ 1790 06e2 37       		.byte	55
+ 1791 06e3 20       		.byte	32
+ 1792 06e4 39       		.byte	57
+ 1793 06e5 10       		.byte	16
+ 1794 06e6 3B       		.byte	59
+ 1795 06e7 C0       		.byte	-64
+ 1796 06e8 3D       		.byte	61
+ 1797 06e9 20       		.byte	32
+ 1798 06ea 3E       		.byte	62
+ 1799 06eb 02       		.byte	2
+ 1800 06ec 3F       		.byte	63
+ 1801 06ed 21       		.byte	33
+ 1802 06ee 81       		.byte	-127
+ 1803 06ef 04       		.byte	4
+ 1804 06f0 91       		.byte	-111
+ 1805 06f1 10       		.byte	16
+ 1806 06f2 94       		.byte	-108
+ 1807 06f3 54       		.byte	84
+ 1808 06f4 98       		.byte	-104
+ 1809 06f5 10       		.byte	16
+ 1810 06f6 99       		.byte	-103
+ 1811 06f7 04       		.byte	4
+ 1812 06f8 9A       		.byte	-102
+ 1813 06f9 82       		.byte	-126
+ 1814 06fa 9B       		.byte	-101
+ 1815 06fb 20       		.byte	32
+ 1816 06fc 9D       		.byte	-99
+ 1817 06fd 01       		.byte	1
+ 1818 06fe A0       		.byte	-96
+ 1819 06ff 80       		.byte	-128
+ 1820 0700 A3       		.byte	-93
+ 1821 0701 10       		.byte	16
+ 1822 0702 AB       		.byte	-85
+ 1823 0703 54       		.byte	84
+ 1824 0704 B0       		.byte	-80
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 33
+
+
+ 1825 0705 18       		.byte	24
+ 1826 0706 B2       		.byte	-78
+ 1827 0707 08       		.byte	8
+ 1828 0708 B5       		.byte	-75
+ 1829 0709 01       		.byte	1
+ 1830 070a B6       		.byte	-74
+ 1831 070b 01       		.byte	1
+ 1832 070c C0       		.byte	-64
+ 1833 070d 22       		.byte	34
+ 1834 070e C2       		.byte	-62
+ 1835 070f 7B       		.byte	123
+ 1836 0710 C4       		.byte	-60
+ 1837 0711 DE       		.byte	-34
+ 1838 0712 CA       		.byte	-54
+ 1839 0713 FF       		.byte	-1
+ 1840 0714 CC       		.byte	-52
+ 1841 0715 24       		.byte	36
+ 1842 0716 CE       		.byte	-50
+ 1843 0717 AC       		.byte	-84
+ 1844 0718 EA       		.byte	-22
+ 1845 0719 21       		.byte	33
+ 1846 071a EE       		.byte	-18
+ 1847 071b 60       		.byte	96
+ 1848 071c 50       		.byte	80
+ 1849 071d 40       		.byte	64
+ 1850 071e 52       		.byte	82
+ 1851 071f 02       		.byte	2
+ 1852 0720 56       		.byte	86
+ 1853 0721 10       		.byte	16
+ 1854 0722 5C       		.byte	92
+ 1855 0723 12       		.byte	18
+ 1856 0724 63       		.byte	99
+ 1857 0725 08       		.byte	8
+ 1858 0726 D4       		.byte	-44
+ 1859 0727 E0       		.byte	-32
+ 1860 0728 D6       		.byte	-42
+ 1861 0729 A0       		.byte	-96
+ 1862 072a D8       		.byte	-40
+ 1863 072b 40       		.byte	64
+ 1864 072c 50       		.byte	80
+ 1865 072d 08       		.byte	8
+ 1866 072e 56       		.byte	86
+ 1867 072f 0A       		.byte	10
+ 1868 0730 58       		.byte	88
+ 1869 0731 10       		.byte	16
+ 1870 0732 5B       		.byte	91
+ 1871 0733 02       		.byte	2
+ 1872 0734 5C       		.byte	92
+ 1873 0735 02       		.byte	2
+ 1874 0736 62       		.byte	98
+ 1875 0737 08       		.byte	8
+ 1876 0738 66       		.byte	102
+ 1877 0739 04       		.byte	4
+ 1878 073a 86       		.byte	-122
+ 1879 073b 02       		.byte	2
+ 1880 073c 94       		.byte	-108
+ 1881 073d 90       		.byte	-112
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 34
+
+
+ 1882 073e 9E       		.byte	-98
+ 1883 073f 10       		.byte	16
+ 1884 0740 A6       		.byte	-90
+ 1885 0741 02       		.byte	2
+ 1886 0742 A7       		.byte	-89
+ 1887 0743 04       		.byte	4
+ 1888 0744 A8       		.byte	-88
+ 1889 0745 02       		.byte	2
+ 1890 0746 D4       		.byte	-44
+ 1891 0747 E0       		.byte	-32
+ 1892 0748 D6       		.byte	-42
+ 1893 0749 E0       		.byte	-32
+ 1894 074a D8       		.byte	-40
+ 1895 074b C0       		.byte	-64
+ 1896 074c E2       		.byte	-30
+ 1897 074d 40       		.byte	64
+ 1898 074e EE       		.byte	-18
+ 1899 074f 80       		.byte	-128
+ 1900 0750 50       		.byte	80
+ 1901 0751 40       		.byte	64
+ 1902 0752 57       		.byte	87
+ 1903 0753 10       		.byte	16
+ 1904 0754 80       		.byte	-128
+ 1905 0755 40       		.byte	64
+ 1906 0756 83       		.byte	-125
+ 1907 0757 10       		.byte	16
+ 1908 0758 84       		.byte	-124
+ 1909 0759 08       		.byte	8
+ 1910 075a 88       		.byte	-120
+ 1911 075b 02       		.byte	2
+ 1912 075c 8C       		.byte	-116
+ 1913 075d 10       		.byte	16
+ 1914 075e 94       		.byte	-108
+ 1915 075f 10       		.byte	16
+ 1916 0760 9C       		.byte	-100
+ 1917 0761 12       		.byte	18
+ 1918 0762 9E       		.byte	-98
+ 1919 0763 1E       		.byte	30
+ 1920 0764 9F       		.byte	-97
+ 1921 0765 02       		.byte	2
+ 1922 0766 A4       		.byte	-92
+ 1923 0767 08       		.byte	8
+ 1924 0768 A7       		.byte	-89
+ 1925 0769 04       		.byte	4
+ 1926 076a A8       		.byte	-88
+ 1927 076b 40       		.byte	64
+ 1928 076c B6       		.byte	-74
+ 1929 076d 08       		.byte	8
+ 1930 076e D4       		.byte	-44
+ 1931 076f 60       		.byte	96
+ 1932 0770 E2       		.byte	-30
+ 1933 0771 C0       		.byte	-64
+ 1934 0772 E6       		.byte	-26
+ 1935 0773 80       		.byte	-128
+ 1936 0774 EA       		.byte	-22
+ 1937 0775 80       		.byte	-128
+ 1938 0776 84       		.byte	-124
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 35
+
+
+ 1939 0777 10       		.byte	16
+ 1940 0778 8E       		.byte	-114
+ 1941 0779 0C       		.byte	12
+ 1942 077a 9B       		.byte	-101
+ 1943 077b 08       		.byte	8
+ 1944 077c 9C       		.byte	-100
+ 1945 077d 10       		.byte	16
+ 1946 077e 9E       		.byte	-98
+ 1947 077f 1C       		.byte	28
+ 1948 0780 A1       		.byte	-95
+ 1949 0781 21       		.byte	33
+ 1950 0782 A7       		.byte	-89
+ 1951 0783 04       		.byte	4
+ 1952 0784 AD       		.byte	-83
+ 1953 0785 20       		.byte	32
+ 1954 0786 B3       		.byte	-77
+ 1955 0787 02       		.byte	2
+ 1956 0788 B5       		.byte	-75
+ 1957 0789 01       		.byte	1
+ 1958 078a B6       		.byte	-74
+ 1959 078b 02       		.byte	2
+ 1960 078c B7       		.byte	-73
+ 1961 078d 08       		.byte	8
+ 1962 078e E6       		.byte	-26
+ 1963 078f 40       		.byte	64
+ 1964 0790 EA       		.byte	-22
+ 1965 0791 10       		.byte	16
+ 1966 0792 00       		.byte	0
+ 1967 0793 40       		.byte	64
+ 1968 0794 03       		.byte	3
+ 1969 0795 40       		.byte	64
+ 1970 0796 07       		.byte	7
+ 1971 0797 88       		.byte	-120
+ 1972 0798 0B       		.byte	11
+ 1973 0799 22       		.byte	34
+ 1974 079a 0C       		.byte	12
+ 1975 079b 10       		.byte	16
+ 1976 079c 0D       		.byte	13
+ 1977 079d 08       		.byte	8
+ 1978 079e 87       		.byte	-121
+ 1979 079f 08       		.byte	8
+ 1980 07a0 8C       		.byte	-116
+ 1981 07a1 40       		.byte	64
+ 1982 07a2 C0       		.byte	-64
+ 1983 07a3 0F       		.byte	15
+ 1984 07a4 C2       		.byte	-62
+ 1985 07a5 0F       		.byte	15
+ 1986 07a6 E2       		.byte	-30
+ 1987 07a7 02       		.byte	2
+ 1988 07a8 85       		.byte	-123
+ 1989 07a9 08       		.byte	8
+ 1990 07aa 93       		.byte	-109
+ 1991 07ab 20       		.byte	32
+ 1992 07ac 98       		.byte	-104
+ 1993 07ad 10       		.byte	16
+ 1994 07ae 9B       		.byte	-101
+ 1995 07af C0       		.byte	-64
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 36
+
+
+ 1996 07b0 A1       		.byte	-95
+ 1997 07b1 08       		.byte	8
+ 1998 07b2 AB       		.byte	-85
+ 1999 07b3 01       		.byte	1
+ 2000 07b4 98       		.byte	-104
+ 2001 07b5 10       		.byte	16
+ 2002 07b6 AF       		.byte	-81
+ 2003 07b7 10       		.byte	16
+ 2004 07b8 B7       		.byte	-73
+ 2005 07b9 C0       		.byte	-64
+ 2006 07ba EA       		.byte	-22
+ 2007 07bb 08       		.byte	8
+ 2008 07bc EE       		.byte	-18
+ 2009 07bd 08       		.byte	8
+ 2010 07be 50       		.byte	80
+ 2011 07bf 01       		.byte	1
+ 2012 07c0 53       		.byte	83
+ 2013 07c1 04       		.byte	4
+ 2014 07c2 55       		.byte	85
+ 2015 07c3 20       		.byte	32
+ 2016 07c4 5D       		.byte	93
+ 2017 07c5 20       		.byte	32
+ 2018 07c6 86       		.byte	-122
+ 2019 07c7 80       		.byte	-128
+ 2020 07c8 87       		.byte	-121
+ 2021 07c9 04       		.byte	4
+ 2022 07ca 8A       		.byte	-118
+ 2023 07cb 90       		.byte	-112
+ 2024 07cc 9B       		.byte	-101
+ 2025 07cd 08       		.byte	8
+ 2026 07ce 9E       		.byte	-98
+ 2027 07cf 10       		.byte	16
+ 2028 07d0 A1       		.byte	-95
+ 2029 07d1 21       		.byte	33
+ 2030 07d2 AB       		.byte	-85
+ 2031 07d3 04       		.byte	4
+ 2032 07d4 D4       		.byte	-44
+ 2033 07d5 E0       		.byte	-32
+ 2034 07d6 D6       		.byte	-42
+ 2035 07d7 20       		.byte	32
+ 2036 07d8 E2       		.byte	-30
+ 2037 07d9 40       		.byte	64
+ 2038 07da E6       		.byte	-26
+ 2039 07db 10       		.byte	16
+ 2040 07dc EE       		.byte	-18
+ 2041 07dd 20       		.byte	32
+ 2042 07de 52       		.byte	82
+ 2043 07df 80       		.byte	-128
+ 2044 07e0 55       		.byte	85
+ 2045 07e1 01       		.byte	1
+ 2046 07e2 56       		.byte	86
+ 2047 07e3 40       		.byte	64
+ 2048 07e4 5A       		.byte	90
+ 2049 07e5 40       		.byte	64
+ 2050 07e6 5B       		.byte	91
+ 2051 07e7 04       		.byte	4
+ 2052 07e8 5F       		.byte	95
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 37
+
+
+ 2053 07e9 08       		.byte	8
+ 2054 07ea 60       		.byte	96
+ 2055 07eb 20       		.byte	32
+ 2056 07ec 64       		.byte	100
+ 2057 07ed 08       		.byte	8
+ 2058 07ee 72       		.byte	114
+ 2059 07ef 80       		.byte	-128
+ 2060 07f0 77       		.byte	119
+ 2061 07f1 40       		.byte	64
+ 2062 07f2 82       		.byte	-126
+ 2063 07f3 40       		.byte	64
+ 2064 07f4 83       		.byte	-125
+ 2065 07f5 44       		.byte	68
+ 2066 07f6 84       		.byte	-124
+ 2067 07f7 08       		.byte	8
+ 2068 07f8 86       		.byte	-122
+ 2069 07f9 40       		.byte	64
+ 2070 07fa 98       		.byte	-104
+ 2071 07fb 20       		.byte	32
+ 2072 07fc 9A       		.byte	-102
+ 2073 07fd 80       		.byte	-128
+ 2074 07fe 9B       		.byte	-101
+ 2075 07ff 08       		.byte	8
+ 2076 0800 A1       		.byte	-95
+ 2077 0801 01       		.byte	1
+ 2078 0802 A2       		.byte	-94
+ 2079 0803 80       		.byte	-128
+ 2080 0804 B0       		.byte	-80
+ 2081 0805 20       		.byte	32
+ 2082 0806 B4       		.byte	-76
+ 2083 0807 01       		.byte	1
+ 2084 0808 B5       		.byte	-75
+ 2085 0809 20       		.byte	32
+ 2086 080a D4       		.byte	-44
+ 2087 080b E0       		.byte	-32
+ 2088 080c D6       		.byte	-42
+ 2089 080d E0       		.byte	-32
+ 2090 080e D8       		.byte	-40
+ 2091 080f C0       		.byte	-64
+ 2092 0810 DC       		.byte	-36
+ 2093 0811 80       		.byte	-128
+ 2094 0812 DE       		.byte	-34
+ 2095 0813 20       		.byte	32
+ 2096 0814 E2       		.byte	-30
+ 2097 0815 B0       		.byte	-80
+ 2098 0816 E6       		.byte	-26
+ 2099 0817 90       		.byte	-112
+ 2100 0818 0A       		.byte	10
+ 2101 0819 04       		.byte	4
+ 2102 081a 0C       		.byte	12
+ 2103 081b 04       		.byte	4
+ 2104 081c 0E       		.byte	14
+ 2105 081d 02       		.byte	2
+ 2106 081e 82       		.byte	-126
+ 2107 081f 20       		.byte	32
+ 2108 0820 8A       		.byte	-118
+ 2109 0821 04       		.byte	4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 38
+
+
+ 2110 0822 8B       		.byte	-117
+ 2111 0823 02       		.byte	2
+ 2112 0824 8C       		.byte	-116
+ 2113 0825 01       		.byte	1
+ 2114 0826 98       		.byte	-104
+ 2115 0827 10       		.byte	16
+ 2116 0828 C2       		.byte	-62
+ 2117 0829 07       		.byte	7
+ 2118 082a E2       		.byte	-30
+ 2119 082b 06       		.byte	6
+ 2120 082c E6       		.byte	-26
+ 2121 082d 04       		.byte	4
+ 2122 082e 02       		.byte	2
+ 2123 082f 02       		.byte	2
+ 2124 0830 03       		.byte	3
+ 2125 0831 10       		.byte	16
+ 2126 0832 04       		.byte	4
+ 2127 0833 02       		.byte	2
+ 2128 0834 07       		.byte	7
+ 2129 0835 02       		.byte	2
+ 2130 0836 09       		.byte	9
+ 2131 0837 10       		.byte	16
+ 2132 0838 62       		.byte	98
+ 2133 0839 20       		.byte	32
+ 2134 083a 94       		.byte	-108
+ 2135 083b 02       		.byte	2
+ 2136 083c 9F       		.byte	-97
+ 2137 083d 12       		.byte	18
+ 2138 083e A2       		.byte	-94
+ 2139 083f 20       		.byte	32
+ 2140 0840 A5       		.byte	-91
+ 2141 0841 10       		.byte	16
+ 2142 0842 A6       		.byte	-90
+ 2143 0843 02       		.byte	2
+ 2144 0844 A9       		.byte	-87
+ 2145 0845 10       		.byte	16
+ 2146 0846 B0       		.byte	-80
+ 2147 0847 14       		.byte	20
+ 2148 0848 B2       		.byte	-78
+ 2149 0849 02       		.byte	2
+ 2150 084a B6       		.byte	-74
+ 2151 084b 01       		.byte	1
+ 2152 084c B7       		.byte	-73
+ 2153 084d 10       		.byte	16
+ 2154 084e C0       		.byte	-64
+ 2155 084f 0F       		.byte	15
+ 2156 0850 C2       		.byte	-62
+ 2157 0851 02       		.byte	2
+ 2158 0852 D8       		.byte	-40
+ 2159 0853 02       		.byte	2
+ 2160 0854 EA       		.byte	-22
+ 2161 0855 0C       		.byte	12
+ 2162 0856 EE       		.byte	-18
+ 2163 0857 07       		.byte	7
+ 2164 0858 00       		.byte	0
+ 2165 0859 01       		.byte	1
+ 2166 085a 0A       		.byte	10
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 39
+
+
+ 2167 085b 01       		.byte	1
+ 2168 085c 00       		.byte	0
+ 2169 085d FF       		.byte	-1
+ 2170 085e FF       		.byte	-1
+ 2171 085f 00       		.byte	0
+ 2172 0860 FF       		.byte	-1
+ 2173 0861 00       		.byte	0
+ 2174 0862 00       		.byte	0
+ 2175 0863 00       		.byte	0
+ 2176 0864 00       		.byte	0
+ 2177 0865 0F       		.byte	15
+ 2178 0866 0F       		.byte	15
+ 2179 0867 00       		.byte	0
+ 2180 0868 0F       		.byte	15
+ 2181 0869 00       		.byte	0
+ 2182 086a 00       		.byte	0
+ 2183 086b 00       		.byte	0
+ 2184 086c 00       		.byte	0
+ 2185 086d 0F       		.byte	15
+ 2186 086e 0F       		.byte	15
+ 2187 086f 00       		.byte	0
+ 2188 0870 0F       		.byte	15
+ 2189 0871 00       		.byte	0
+ 2190 0872 00       		.byte	0
+ 2191 0873 00       		.byte	0
+ 2192 0874 E0       		.byte	-32
+ 2193 0875 00       		.byte	0
+ 2194 0876 00       		.byte	0
+ 2195 0877 E0       		.byte	-32
+ 2196 0878 00       		.byte	0
+ 2197 0879 00       		.byte	0
+ 2198 087a 00       		.byte	0
+ 2199 087b 00       		.byte	0
+ 2200 087c 00       		.byte	0
+ 2201 087d 00       		.byte	0
+ 2202 087e 00       		.byte	0
+ 2203 087f 00       		.byte	0
+ 2204 0880 FF       		.byte	-1
+ 2205 0881 00       		.byte	0
+ 2206 0882 80       		.byte	-128
+ 2207 0883 FF       		.byte	-1
+ 2208 0884 80       		.byte	-128
+ 2209 0885 00       		.byte	0
+ 2210 0886 00       		.byte	0
+ 2211 0887 00       		.byte	0
+ 2212 0888 00       		.byte	0
+ 2213 0889 00       		.byte	0
+ 2214 088a 00       		.byte	0
+ 2215 088b 00       		.byte	0
+ 2216 088c 00       		.byte	0
+ 2217 088d FF       		.byte	-1
+ 2218 088e FF       		.byte	-1
+ 2219 088f 00       		.byte	0
+ 2220 0890 FF       		.byte	-1
+ 2221 0891 00       		.byte	0
+ 2222 0892 00       		.byte	0
+ 2223 0893 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 40
+
+
+ 2224 0894 00       		.byte	0
+ 2225 0895 3F       		.byte	63
+ 2226 0896 3F       		.byte	63
+ 2227 0897 00       		.byte	0
+ 2228 0898 3F       		.byte	63
+ 2229 0899 00       		.byte	0
+ 2230 089a 00       		.byte	0
+ 2231 089b 00       		.byte	0
+ 2232 089c 0D       		.byte	13
+ 2233 089d 00       		.byte	0
+ 2234 089e 42       		.byte	66
+ 2235 089f 1D       		.byte	29
+ 2236 08a0 10       		.byte	16
+ 2237 08a1 00       		.byte	0
+ 2238 08a2 10       		.byte	16
+ 2239 08a3 00       		.byte	0
+ 2240 08a4 00       		.byte	0
+ 2241 08a5 00       		.byte	0
+ 2242 08a6 00       		.byte	0
+ 2243 08a7 00       		.byte	0
+ 2244              		.section	.cywolatch,"a",%progbits
+ 2245              		.align	2
+ 2246              		.type	cy_meta_wonvl, %object
+ 2247              		.size	cy_meta_wonvl, 4
+ 2248              	cy_meta_wonvl:
+ 2249 0000 BC       		.byte	-68
+ 2250 0001 90       		.byte	-112
+ 2251 0002 AC       		.byte	-84
+ 2252 0003 AF       		.byte	-81
+ 2253              		.section	.cycustnvl,"a",%progbits
+ 2254              		.align	2
+ 2255              		.type	cy_meta_custnvl, %object
+ 2256              		.size	cy_meta_custnvl, 4
+ 2257              	cy_meta_custnvl:
+ 2258 0000 00       		.byte	0
+ 2259 0001 00       		.byte	0
+ 2260 0002 40       		.byte	64
+ 2261 0003 05       		.byte	5
+ 2262              		.section	.cymeta,"a",%progbits
+ 2263              		.align	2
+ 2264              		.type	cy_metadata, %object
+ 2265              		.size	cy_metadata, 12
+ 2266              	cy_metadata:
+ 2267 0000 00       		.byte	0
+ 2268 0001 01       		.byte	1
+ 2269 0002 2E       		.byte	46
+ 2270 0003 13       		.byte	19
+ 2271 0004 30       		.byte	48
+ 2272 0005 69       		.byte	105
+ 2273 0006 00       		.byte	0
+ 2274 0007 01       		.byte	1
+ 2275 0008 00       		.byte	0
+ 2276 0009 00       		.byte	0
+ 2277 000a 00       		.byte	0
+ 2278 000b 00       		.byte	0
+ 2279              		.section	.cyflashprotect,"a",%progbits
+ 2280              		.align	2
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 41
+
+
+ 2281              		.type	cy_meta_flashprotect, %object
+ 2282              		.size	cy_meta_flashprotect, 128
+ 2283              	cy_meta_flashprotect:
+ 2284 0000 00000000 		.space	128
+ 2284      00000000 
+ 2284      00000000 
+ 2284      00000000 
+ 2284      00000000 
+ 2285              		.text
+ 2286              	.Letext0:
+ 2287              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ 2288              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 2289              		.section	.debug_info,"",%progbits
+ 2290              	.Ldebug_info0:
+ 2291 0000 3A010000 		.4byte	0x13a
+ 2292 0004 0400     		.2byte	0x4
+ 2293 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2294 000a 04       		.byte	0x4
+ 2295 000b 01       		.uleb128 0x1
+ 2296 000c D7000000 		.4byte	.LASF18
+ 2297 0010 01       		.byte	0x1
+ 2298 0011 00000000 		.4byte	.LASF19
+ 2299 0015 26000000 		.4byte	.LASF20
+ 2300 0019 00000000 		.4byte	.Ldebug_line0
+ 2301 001d 02       		.uleb128 0x2
+ 2302 001e 01       		.byte	0x1
+ 2303 001f 06       		.byte	0x6
+ 2304 0020 E1010000 		.4byte	.LASF0
+ 2305 0024 02       		.uleb128 0x2
+ 2306 0025 01       		.byte	0x1
+ 2307 0026 08       		.byte	0x8
+ 2308 0027 7B000000 		.4byte	.LASF1
+ 2309 002b 02       		.uleb128 0x2
+ 2310 002c 02       		.byte	0x2
+ 2311 002d 05       		.byte	0x5
+ 2312 002e C8010000 		.4byte	.LASF2
+ 2313 0032 02       		.uleb128 0x2
+ 2314 0033 02       		.byte	0x2
+ 2315 0034 07       		.byte	0x7
+ 2316 0035 9B000000 		.4byte	.LASF3
+ 2317 0039 02       		.uleb128 0x2
+ 2318 003a 04       		.byte	0x4
+ 2319 003b 05       		.byte	0x5
+ 2320 003c D8010000 		.4byte	.LASF4
+ 2321 0040 02       		.uleb128 0x2
+ 2322 0041 04       		.byte	0x4
+ 2323 0042 07       		.byte	0x7
+ 2324 0043 89000000 		.4byte	.LASF5
+ 2325 0047 02       		.uleb128 0x2
+ 2326 0048 08       		.byte	0x8
+ 2327 0049 05       		.byte	0x5
+ 2328 004a B5010000 		.4byte	.LASF6
+ 2329 004e 02       		.uleb128 0x2
+ 2330 004f 08       		.byte	0x8
+ 2331 0050 07       		.byte	0x7
+ 2332 0051 72010000 		.4byte	.LASF7
+ 2333 0055 03       		.uleb128 0x3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 42
+
+
+ 2334 0056 04       		.byte	0x4
+ 2335 0057 05       		.byte	0x5
+ 2336 0058 696E7400 		.ascii	"int\000"
+ 2337 005c 02       		.uleb128 0x2
+ 2338 005d 04       		.byte	0x4
+ 2339 005e 07       		.byte	0x7
+ 2340 005f 65010000 		.4byte	.LASF8
+ 2341 0063 04       		.uleb128 0x4
+ 2342 0064 D2010000 		.4byte	.LASF21
+ 2343 0068 02       		.byte	0x2
+ 2344 0069 C2       		.byte	0xc2
+ 2345 006a 24000000 		.4byte	0x24
+ 2346 006e 02       		.uleb128 0x2
+ 2347 006f 04       		.byte	0x4
+ 2348 0070 04       		.byte	0x4
+ 2349 0071 75000000 		.4byte	.LASF9
+ 2350 0075 02       		.uleb128 0x2
+ 2351 0076 08       		.byte	0x8
+ 2352 0077 04       		.byte	0x4
+ 2353 0078 AE000000 		.4byte	.LASF10
+ 2354 007c 02       		.uleb128 0x2
+ 2355 007d 01       		.byte	0x1
+ 2356 007e 08       		.byte	0x8
+ 2357 007f C3010000 		.4byte	.LASF11
+ 2358 0083 05       		.uleb128 0x5
+ 2359 0084 63000000 		.4byte	0x63
+ 2360 0088 94000000 		.4byte	0x94
+ 2361 008c 06       		.uleb128 0x6
+ 2362 008d 94000000 		.4byte	0x94
+ 2363 0091 A708     		.2byte	0x8a7
+ 2364 0093 00       		.byte	0
+ 2365 0094 02       		.uleb128 0x2
+ 2366 0095 04       		.byte	0x4
+ 2367 0096 07       		.byte	0x7
+ 2368 0097 AC010000 		.4byte	.LASF12
+ 2369 009b 07       		.uleb128 0x7
+ 2370 009c C5000000 		.4byte	.LASF13
+ 2371 00a0 01       		.byte	0x1
+ 2372 00a1 1C       		.byte	0x1c
+ 2373 00a2 AC000000 		.4byte	0xac
+ 2374 00a6 05       		.uleb128 0x5
+ 2375 00a7 03       		.byte	0x3
+ 2376 00a8 00000000 		.4byte	cy_meta_configecc
+ 2377 00ac 08       		.uleb128 0x8
+ 2378 00ad 83000000 		.4byte	0x83
+ 2379 00b1 05       		.uleb128 0x5
+ 2380 00b2 63000000 		.4byte	0x63
+ 2381 00b6 C1000000 		.4byte	0xc1
+ 2382 00ba 09       		.uleb128 0x9
+ 2383 00bb 94000000 		.4byte	0x94
+ 2384 00bf 03       		.byte	0x3
+ 2385 00c0 00       		.byte	0
+ 2386 00c1 0A       		.uleb128 0xa
+ 2387 00c2 B5000000 		.4byte	.LASF14
+ 2388 00c6 01       		.byte	0x1
+ 2389 00c7 3B01     		.2byte	0x13b
+ 2390 00c9 D3000000 		.4byte	0xd3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 43
+
+
+ 2391 00cd 05       		.uleb128 0x5
+ 2392 00ce 03       		.byte	0x3
+ 2393 00cf 00000000 		.4byte	cy_meta_custnvl
+ 2394 00d3 08       		.uleb128 0x8
+ 2395 00d4 B1000000 		.4byte	0xb1
+ 2396 00d8 0A       		.uleb128 0xa
+ 2397 00d9 9E010000 		.4byte	.LASF15
+ 2398 00dd 01       		.byte	0x1
+ 2399 00de 4601     		.2byte	0x146
+ 2400 00e0 EA000000 		.4byte	0xea
+ 2401 00e4 05       		.uleb128 0x5
+ 2402 00e5 03       		.byte	0x3
+ 2403 00e6 00000000 		.4byte	cy_meta_wonvl
+ 2404 00ea 08       		.uleb128 0x8
+ 2405 00eb B1000000 		.4byte	0xb1
+ 2406 00ef 05       		.uleb128 0x5
+ 2407 00f0 63000000 		.4byte	0x63
+ 2408 00f4 FF000000 		.4byte	0xff
+ 2409 00f8 09       		.uleb128 0x9
+ 2410 00f9 94000000 		.4byte	0x94
+ 2411 00fd 7F       		.byte	0x7f
+ 2412 00fe 00       		.byte	0
+ 2413 00ff 0A       		.uleb128 0xa
+ 2414 0100 89010000 		.4byte	.LASF16
+ 2415 0104 01       		.byte	0x1
+ 2416 0105 5101     		.2byte	0x151
+ 2417 0107 11010000 		.4byte	0x111
+ 2418 010b 05       		.uleb128 0x5
+ 2419 010c 03       		.byte	0x3
+ 2420 010d 00000000 		.4byte	cy_meta_flashprotect
+ 2421 0111 08       		.uleb128 0x8
+ 2422 0112 EF000000 		.4byte	0xef
+ 2423 0116 05       		.uleb128 0x5
+ 2424 0117 63000000 		.4byte	0x63
+ 2425 011b 26010000 		.4byte	0x126
+ 2426 011f 09       		.uleb128 0x9
+ 2427 0120 94000000 		.4byte	0x94
+ 2428 0124 0B       		.byte	0xb
+ 2429 0125 00       		.byte	0
+ 2430 0126 0A       		.uleb128 0xa
+ 2431 0127 69000000 		.4byte	.LASF17
+ 2432 012b 01       		.byte	0x1
+ 2433 012c 6B01     		.2byte	0x16b
+ 2434 012e 38010000 		.4byte	0x138
+ 2435 0132 05       		.uleb128 0x5
+ 2436 0133 03       		.byte	0x3
+ 2437 0134 00000000 		.4byte	cy_metadata
+ 2438 0138 08       		.uleb128 0x8
+ 2439 0139 16010000 		.4byte	0x116
+ 2440 013d 00       		.byte	0
+ 2441              		.section	.debug_abbrev,"",%progbits
+ 2442              	.Ldebug_abbrev0:
+ 2443 0000 01       		.uleb128 0x1
+ 2444 0001 11       		.uleb128 0x11
+ 2445 0002 01       		.byte	0x1
+ 2446 0003 25       		.uleb128 0x25
+ 2447 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 44
+
+
+ 2448 0005 13       		.uleb128 0x13
+ 2449 0006 0B       		.uleb128 0xb
+ 2450 0007 03       		.uleb128 0x3
+ 2451 0008 0E       		.uleb128 0xe
+ 2452 0009 1B       		.uleb128 0x1b
+ 2453 000a 0E       		.uleb128 0xe
+ 2454 000b 10       		.uleb128 0x10
+ 2455 000c 17       		.uleb128 0x17
+ 2456 000d 00       		.byte	0
+ 2457 000e 00       		.byte	0
+ 2458 000f 02       		.uleb128 0x2
+ 2459 0010 24       		.uleb128 0x24
+ 2460 0011 00       		.byte	0
+ 2461 0012 0B       		.uleb128 0xb
+ 2462 0013 0B       		.uleb128 0xb
+ 2463 0014 3E       		.uleb128 0x3e
+ 2464 0015 0B       		.uleb128 0xb
+ 2465 0016 03       		.uleb128 0x3
+ 2466 0017 0E       		.uleb128 0xe
+ 2467 0018 00       		.byte	0
+ 2468 0019 00       		.byte	0
+ 2469 001a 03       		.uleb128 0x3
+ 2470 001b 24       		.uleb128 0x24
+ 2471 001c 00       		.byte	0
+ 2472 001d 0B       		.uleb128 0xb
+ 2473 001e 0B       		.uleb128 0xb
+ 2474 001f 3E       		.uleb128 0x3e
+ 2475 0020 0B       		.uleb128 0xb
+ 2476 0021 03       		.uleb128 0x3
+ 2477 0022 08       		.uleb128 0x8
+ 2478 0023 00       		.byte	0
+ 2479 0024 00       		.byte	0
+ 2480 0025 04       		.uleb128 0x4
+ 2481 0026 16       		.uleb128 0x16
+ 2482 0027 00       		.byte	0
+ 2483 0028 03       		.uleb128 0x3
+ 2484 0029 0E       		.uleb128 0xe
+ 2485 002a 3A       		.uleb128 0x3a
+ 2486 002b 0B       		.uleb128 0xb
+ 2487 002c 3B       		.uleb128 0x3b
+ 2488 002d 0B       		.uleb128 0xb
+ 2489 002e 49       		.uleb128 0x49
+ 2490 002f 13       		.uleb128 0x13
+ 2491 0030 00       		.byte	0
+ 2492 0031 00       		.byte	0
+ 2493 0032 05       		.uleb128 0x5
+ 2494 0033 01       		.uleb128 0x1
+ 2495 0034 01       		.byte	0x1
+ 2496 0035 49       		.uleb128 0x49
+ 2497 0036 13       		.uleb128 0x13
+ 2498 0037 01       		.uleb128 0x1
+ 2499 0038 13       		.uleb128 0x13
+ 2500 0039 00       		.byte	0
+ 2501 003a 00       		.byte	0
+ 2502 003b 06       		.uleb128 0x6
+ 2503 003c 21       		.uleb128 0x21
+ 2504 003d 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 45
+
+
+ 2505 003e 49       		.uleb128 0x49
+ 2506 003f 13       		.uleb128 0x13
+ 2507 0040 2F       		.uleb128 0x2f
+ 2508 0041 05       		.uleb128 0x5
+ 2509 0042 00       		.byte	0
+ 2510 0043 00       		.byte	0
+ 2511 0044 07       		.uleb128 0x7
+ 2512 0045 34       		.uleb128 0x34
+ 2513 0046 00       		.byte	0
+ 2514 0047 03       		.uleb128 0x3
+ 2515 0048 0E       		.uleb128 0xe
+ 2516 0049 3A       		.uleb128 0x3a
+ 2517 004a 0B       		.uleb128 0xb
+ 2518 004b 3B       		.uleb128 0x3b
+ 2519 004c 0B       		.uleb128 0xb
+ 2520 004d 49       		.uleb128 0x49
+ 2521 004e 13       		.uleb128 0x13
+ 2522 004f 3F       		.uleb128 0x3f
+ 2523 0050 19       		.uleb128 0x19
+ 2524 0051 02       		.uleb128 0x2
+ 2525 0052 18       		.uleb128 0x18
+ 2526 0053 00       		.byte	0
+ 2527 0054 00       		.byte	0
+ 2528 0055 08       		.uleb128 0x8
+ 2529 0056 26       		.uleb128 0x26
+ 2530 0057 00       		.byte	0
+ 2531 0058 49       		.uleb128 0x49
+ 2532 0059 13       		.uleb128 0x13
+ 2533 005a 00       		.byte	0
+ 2534 005b 00       		.byte	0
+ 2535 005c 09       		.uleb128 0x9
+ 2536 005d 21       		.uleb128 0x21
+ 2537 005e 00       		.byte	0
+ 2538 005f 49       		.uleb128 0x49
+ 2539 0060 13       		.uleb128 0x13
+ 2540 0061 2F       		.uleb128 0x2f
+ 2541 0062 0B       		.uleb128 0xb
+ 2542 0063 00       		.byte	0
+ 2543 0064 00       		.byte	0
+ 2544 0065 0A       		.uleb128 0xa
+ 2545 0066 34       		.uleb128 0x34
+ 2546 0067 00       		.byte	0
+ 2547 0068 03       		.uleb128 0x3
+ 2548 0069 0E       		.uleb128 0xe
+ 2549 006a 3A       		.uleb128 0x3a
+ 2550 006b 0B       		.uleb128 0xb
+ 2551 006c 3B       		.uleb128 0x3b
+ 2552 006d 05       		.uleb128 0x5
+ 2553 006e 49       		.uleb128 0x49
+ 2554 006f 13       		.uleb128 0x13
+ 2555 0070 3F       		.uleb128 0x3f
+ 2556 0071 19       		.uleb128 0x19
+ 2557 0072 02       		.uleb128 0x2
+ 2558 0073 18       		.uleb128 0x18
+ 2559 0074 00       		.byte	0
+ 2560 0075 00       		.byte	0
+ 2561 0076 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 46
+
+
+ 2562              		.section	.debug_aranges,"",%progbits
+ 2563 0000 14000000 		.4byte	0x14
+ 2564 0004 0200     		.2byte	0x2
+ 2565 0006 00000000 		.4byte	.Ldebug_info0
+ 2566 000a 04       		.byte	0x4
+ 2567 000b 00       		.byte	0
+ 2568 000c 0000     		.2byte	0
+ 2569 000e 0000     		.2byte	0
+ 2570 0010 00000000 		.4byte	0
+ 2571 0014 00000000 		.4byte	0
+ 2572              		.section	.debug_line,"",%progbits
+ 2573              	.Ldebug_line0:
+ 2574 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 2574      02004900 
+ 2574      00000201 
+ 2574      FB0E0D00 
+ 2574      01010101 
+ 2575              	.LASF19:
+ 2576 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2576      6E657261 
+ 2576      7465645F 
+ 2576      536F7572 
+ 2576      63655C50 
+ 2577              	.LASF20:
+ 2578 0026 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 2578      73657273 
+ 2578      5C444769 
+ 2578      6C6C696C 
+ 2578      616E645C 
+ 2579 0054 5C525050 		.ascii	"\\RPPSOC-Blink6.cydsn\000"
+ 2579      534F432D 
+ 2579      426C696E 
+ 2579      6B362E63 
+ 2579      7964736E 
+ 2580              	.LASF17:
+ 2581 0069 63795F6D 		.ascii	"cy_metadata\000"
+ 2581      65746164 
+ 2581      61746100 
+ 2582              	.LASF9:
+ 2583 0075 666C6F61 		.ascii	"float\000"
+ 2583      7400
+ 2584              	.LASF1:
+ 2585 007b 756E7369 		.ascii	"unsigned char\000"
+ 2585      676E6564 
+ 2585      20636861 
+ 2585      7200
+ 2586              	.LASF5:
+ 2587 0089 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2587      20756E73 
+ 2587      69676E65 
+ 2587      6420696E 
+ 2587      7400
+ 2588              	.LASF3:
+ 2589 009b 73686F72 		.ascii	"short unsigned int\000"
+ 2589      7420756E 
+ 2589      7369676E 
+ 2589      65642069 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 47
+
+
+ 2589      6E7400
+ 2590              	.LASF10:
+ 2591 00ae 646F7562 		.ascii	"double\000"
+ 2591      6C6500
+ 2592              	.LASF14:
+ 2593 00b5 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2593      6574615F 
+ 2593      63757374 
+ 2593      6E766C00 
+ 2594              	.LASF13:
+ 2595 00c5 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2595      6574615F 
+ 2595      636F6E66 
+ 2595      69676563 
+ 2595      6300
+ 2596              	.LASF18:
+ 2597 00d7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2597      4320342E 
+ 2597      392E3320 
+ 2597      32303135 
+ 2597      30333033 
+ 2598 010a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2598      20726576 
+ 2598      6973696F 
+ 2598      6E203232 
+ 2598      31323230 
+ 2599 013d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2599      66756E63 
+ 2599      74696F6E 
+ 2599      2D736563 
+ 2599      74696F6E 
+ 2600              	.LASF8:
+ 2601 0165 756E7369 		.ascii	"unsigned int\000"
+ 2601      676E6564 
+ 2601      20696E74 
+ 2601      00
+ 2602              	.LASF7:
+ 2603 0172 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2603      206C6F6E 
+ 2603      6720756E 
+ 2603      7369676E 
+ 2603      65642069 
+ 2604              	.LASF16:
+ 2605 0189 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2605      6574615F 
+ 2605      666C6173 
+ 2605      6870726F 
+ 2605      74656374 
+ 2606              	.LASF15:
+ 2607 019e 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2607      6574615F 
+ 2607      776F6E76 
+ 2607      6C00
+ 2608              	.LASF12:
+ 2609 01ac 73697A65 		.ascii	"sizetype\000"
+ 2609      74797065 
+ 2609      00
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBLBAK4.s 			page 48
+
+
+ 2610              	.LASF6:
+ 2611 01b5 6C6F6E67 		.ascii	"long long int\000"
+ 2611      206C6F6E 
+ 2611      6720696E 
+ 2611      7400
+ 2612              	.LASF11:
+ 2613 01c3 63686172 		.ascii	"char\000"
+ 2613      00
+ 2614              	.LASF2:
+ 2615 01c8 73686F72 		.ascii	"short int\000"
+ 2615      7420696E 
+ 2615      7400
+ 2616              	.LASF21:
+ 2617 01d2 75696E74 		.ascii	"uint8\000"
+ 2617      3800
+ 2618              	.LASF4:
+ 2619 01d8 6C6F6E67 		.ascii	"long int\000"
+ 2619      20696E74 
+ 2619      00
+ 2620              	.LASF0:
+ 2621 01e1 7369676E 		.ascii	"signed char\000"
+ 2621      65642063 
+ 2621      68617200 
+ 2622              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
