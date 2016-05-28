@@ -1,0 +1,893 @@
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.main,"ax",%progbits
+  19              		.align	2
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      **** *
+   3:.\main.c      **** * Copyright Land Boards, LLC, 2016
+   4:.\main.c      **** * All Rights Reserved
+   5:.\main.c      **** * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      **** *
+   7:.\main.c      **** * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      **** * WHICH IS THE PROPERTY OF Land Boards, LLC.
+   9:.\main.c      **** *
+  10:.\main.c      **** * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** 
+  14:.\main.c      **** int main()
+  15:.\main.c      **** {
+  27              		.loc 1 15 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 24
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 10B5     		push	{r4, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 4, -8
+  34              		.cfi_offset 14, -4
+  35 0002 86B0     		sub	sp, sp, #24
+  36              		.cfi_def_cfa_offset 32
+  16:.\main.c      **** 	uint8 wrBuf[10];
+  17:.\main.c      **** 	uint8 userArray[10];
+  18:.\main.c      **** 	uint8 byteCnt;
+  19:.\main.c      ****     uint8 i;
+  20:.\main.c      **** 	CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 20 0
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 2
+
+
+  38              	@ 20 ".\main.c" 1
+  39 0004 62B6     		CPSIE   i
+  40              	@ 0 "" 2
+  21:.\main.c      **** 	/* Initialize write buffer before call I2C_Start */
+  22:.\main.c      **** 	I2C_1_SlaveInitWriteBuf((uint8 *) wrBuf, 10);
+  41              		.loc 1 22 0
+  42              		.thumb
+  43 0006 03A8     		add	r0, sp, #12
+  44 0008 0A21     		movs	r1, #10
+  45 000a FFF7FEFF 		bl	I2C_1_SlaveInitWriteBuf
+  46              	.LVL0:
+  23:.\main.c      **** 	/* Start I2C Slave operation */
+  24:.\main.c      **** 	I2C_1_Start();
+  47              		.loc 1 24 0
+  48 000e FFF7FEFF 		bl	I2C_1_Start
+  49              	.LVL1:
+  50              	.L2:
+  25:.\main.c      **** 	/* Wait for I2C master to complete a write */
+  26:.\main.c      **** 	for(;;) /* loop forever */
+  27:.\main.c      **** 	{
+  28:.\main.c      **** 		/* Wait for I2C master to complete a write */
+  29:.\main.c      **** 		if(0u != (I2C_1_SlaveStatus() & I2C_1_SSTAT_WR_CMPLT))
+  51              		.loc 1 29 0
+  52 0012 FFF7FEFF 		bl	I2C_1_SlaveStatus
+  53              	.LVL2:
+  54 0016 10F0100F 		tst	r0, #16
+  55 001a FAD0     		beq	.L2
+  30:.\main.c      **** 		{
+  31:.\main.c      **** 			byteCnt = I2C_1_SlaveGetWriteBufSize();
+  56              		.loc 1 31 0
+  57 001c FFF7FEFF 		bl	I2C_1_SlaveGetWriteBufSize
+  58              	.LVL3:
+  59 0020 0446     		mov	r4, r0
+  60              	.LVL4:
+  32:.\main.c      **** 			I2C_1_SlaveClearWriteStatus();
+  61              		.loc 1 32 0
+  62 0022 FFF7FEFF 		bl	I2C_1_SlaveClearWriteStatus
+  63              	.LVL5:
+  33:.\main.c      **** 			for(i=0; i < byteCnt; i++)
+  64              		.loc 1 33 0
+  65 0026 0023     		movs	r3, #0
+  66 0028 07E0     		b	.L3
+  67              	.LVL6:
+  68              	.L4:
+  34:.\main.c      **** 			{
+  35:.\main.c      **** 				userArray[i] = wrBuf[i]; /* Transfer data */
+  69              		.loc 1 35 0 discriminator 3
+  70 002a 06AA     		add	r2, sp, #24
+  71 002c 1A44     		add	r2, r2, r3
+  72 002e 12F80C1C 		ldrb	r1, [r2, #-12]	@ zero_extendqisi2
+  73 0032 02F8181C 		strb	r1, [r2, #-24]
+  33:.\main.c      **** 			for(i=0; i < byteCnt; i++)
+  74              		.loc 1 33 0 discriminator 3
+  75 0036 0133     		adds	r3, r3, #1
+  76              	.LVL7:
+  77 0038 DBB2     		uxtb	r3, r3
+  78              	.LVL8:
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 3
+
+
+  79              	.L3:
+  33:.\main.c      **** 			for(i=0; i < byteCnt; i++)
+  80              		.loc 1 33 0 is_stmt 0 discriminator 1
+  81 003a A342     		cmp	r3, r4
+  82 003c F5D3     		bcc	.L4
+  36:.\main.c      **** 			}
+  37:.\main.c      **** 			I2C_1_SlaveClearWriteBuf();
+  83              		.loc 1 37 0 is_stmt 1
+  84 003e FFF7FEFF 		bl	I2C_1_SlaveClearWriteBuf
+  85              	.LVL9:
+  38:.\main.c      ****             Control_Reg_1_Write(userArray[0]);
+  86              		.loc 1 38 0
+  87 0042 9DF80000 		ldrb	r0, [sp]	@ zero_extendqisi2
+  88 0046 FFF7FEFF 		bl	Control_Reg_1_Write
+  89              	.LVL10:
+  90 004a E2E7     		b	.L2
+  91              		.cfi_endproc
+  92              	.LFE63:
+  93              		.size	main, .-main
+  94              		.text
+  95              	.Letext0:
+  96              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  97              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  98              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+  99              		.file 5 "Generated_Source\\PSoC5/I2C_1.h"
+ 100              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 101              		.file 7 "Generated_Source\\PSoC5/Control_Reg_1.h"
+ 102              		.section	.debug_info,"",%progbits
+ 103              	.Ldebug_info0:
+ 104 0000 C6010000 		.4byte	0x1c6
+ 105 0004 0400     		.2byte	0x4
+ 106 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 107 000a 04       		.byte	0x4
+ 108 000b 01       		.uleb128 0x1
+ 109 000c 30010000 		.4byte	.LASF24
+ 110 0010 01       		.byte	0x1
+ 111 0011 CC000000 		.4byte	.LASF25
+ 112 0015 40000000 		.4byte	.LASF26
+ 113 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 114 001d 00000000 		.4byte	0
+ 115 0021 00000000 		.4byte	.Ldebug_line0
+ 116 0025 02       		.uleb128 0x2
+ 117 0026 01       		.byte	0x1
+ 118 0027 06       		.byte	0x6
+ 119 0028 3F020000 		.4byte	.LASF0
+ 120 002c 02       		.uleb128 0x2
+ 121 002d 01       		.byte	0x1
+ 122 002e 08       		.byte	0x8
+ 123 002f BE000000 		.4byte	.LASF1
+ 124 0033 02       		.uleb128 0x2
+ 125 0034 02       		.byte	0x2
+ 126 0035 05       		.byte	0x5
+ 127 0036 26020000 		.4byte	.LASF2
+ 128 003a 02       		.uleb128 0x2
+ 129 003b 02       		.byte	0x2
+ 130 003c 07       		.byte	0x7
+ 131 003d 2D000000 		.4byte	.LASF3
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 4
+
+
+ 132 0041 03       		.uleb128 0x3
+ 133 0042 23000000 		.4byte	.LASF9
+ 134 0046 02       		.byte	0x2
+ 135 0047 3F       		.byte	0x3f
+ 136 0048 4C000000 		.4byte	0x4c
+ 137 004c 02       		.uleb128 0x2
+ 138 004d 04       		.byte	0x4
+ 139 004e 05       		.byte	0x5
+ 140 004f 36020000 		.4byte	.LASF4
+ 141 0053 02       		.uleb128 0x2
+ 142 0054 04       		.byte	0x4
+ 143 0055 07       		.byte	0x7
+ 144 0056 D5000000 		.4byte	.LASF5
+ 145 005a 02       		.uleb128 0x2
+ 146 005b 08       		.byte	0x8
+ 147 005c 05       		.byte	0x5
+ 148 005d 07020000 		.4byte	.LASF6
+ 149 0061 02       		.uleb128 0x2
+ 150 0062 08       		.byte	0x8
+ 151 0063 07       		.byte	0x7
+ 152 0064 CB010000 		.4byte	.LASF7
+ 153 0068 04       		.uleb128 0x4
+ 154 0069 04       		.byte	0x4
+ 155 006a 05       		.byte	0x5
+ 156 006b 696E7400 		.ascii	"int\000"
+ 157 006f 02       		.uleb128 0x2
+ 158 0070 04       		.byte	0x4
+ 159 0071 07       		.byte	0x7
+ 160 0072 BE010000 		.4byte	.LASF8
+ 161 0076 03       		.uleb128 0x3
+ 162 0077 F6010000 		.4byte	.LASF10
+ 163 007b 03       		.byte	0x3
+ 164 007c 2C       		.byte	0x2c
+ 165 007d 41000000 		.4byte	0x41
+ 166 0081 03       		.uleb128 0x3
+ 167 0082 30020000 		.4byte	.LASF11
+ 168 0086 04       		.byte	0x4
+ 169 0087 C2       		.byte	0xc2
+ 170 0088 2C000000 		.4byte	0x2c
+ 171 008c 02       		.uleb128 0x2
+ 172 008d 04       		.byte	0x4
+ 173 008e 04       		.byte	0x4
+ 174 008f B8000000 		.4byte	.LASF12
+ 175 0093 02       		.uleb128 0x2
+ 176 0094 08       		.byte	0x8
+ 177 0095 04       		.byte	0x4
+ 178 0096 17010000 		.4byte	.LASF13
+ 179 009a 02       		.uleb128 0x2
+ 180 009b 01       		.byte	0x1
+ 181 009c 08       		.byte	0x8
+ 182 009d 15020000 		.4byte	.LASF14
+ 183 00a1 02       		.uleb128 0x2
+ 184 00a2 04       		.byte	0x4
+ 185 00a3 07       		.byte	0x7
+ 186 00a4 FE010000 		.4byte	.LASF15
+ 187 00a8 05       		.uleb128 0x5
+ 188 00a9 1E010000 		.4byte	.LASF27
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 5
+
+
+ 189 00ad 01       		.byte	0x1
+ 190 00ae 0E       		.byte	0xe
+ 191 00af 68000000 		.4byte	0x68
+ 192 00b3 00000000 		.4byte	.LFB63
+ 193 00b7 4C000000 		.4byte	.LFE63-.LFB63
+ 194 00bb 01       		.uleb128 0x1
+ 195 00bc 9C       		.byte	0x9c
+ 196 00bd 50010000 		.4byte	0x150
+ 197 00c1 06       		.uleb128 0x6
+ 198 00c2 11010000 		.4byte	.LASF16
+ 199 00c6 01       		.byte	0x1
+ 200 00c7 10       		.byte	0x10
+ 201 00c8 50010000 		.4byte	0x150
+ 202 00cc 02       		.uleb128 0x2
+ 203 00cd 91       		.byte	0x91
+ 204 00ce 6C       		.sleb128 -20
+ 205 00cf 06       		.uleb128 0x6
+ 206 00d0 00000000 		.4byte	.LASF17
+ 207 00d4 01       		.byte	0x1
+ 208 00d5 11       		.byte	0x11
+ 209 00d6 50010000 		.4byte	0x150
+ 210 00da 02       		.uleb128 0x2
+ 211 00db 91       		.byte	0x91
+ 212 00dc 60       		.sleb128 -32
+ 213 00dd 06       		.uleb128 0x6
+ 214 00de 4B020000 		.4byte	.LASF18
+ 215 00e2 01       		.byte	0x1
+ 216 00e3 12       		.byte	0x12
+ 217 00e4 81000000 		.4byte	0x81
+ 218 00e8 01       		.uleb128 0x1
+ 219 00e9 54       		.byte	0x54
+ 220 00ea 07       		.uleb128 0x7
+ 221 00eb 6900     		.ascii	"i\000"
+ 222 00ed 01       		.byte	0x1
+ 223 00ee 13       		.byte	0x13
+ 224 00ef 81000000 		.4byte	0x81
+ 225 00f3 00000000 		.4byte	.LLST0
+ 226 00f7 08       		.uleb128 0x8
+ 227 00f8 0E000000 		.4byte	.LVL0
+ 228 00fc 71010000 		.4byte	0x171
+ 229 0100 10010000 		.4byte	0x110
+ 230 0104 09       		.uleb128 0x9
+ 231 0105 01       		.uleb128 0x1
+ 232 0106 51       		.byte	0x51
+ 233 0107 01       		.uleb128 0x1
+ 234 0108 3A       		.byte	0x3a
+ 235 0109 09       		.uleb128 0x9
+ 236 010a 01       		.uleb128 0x1
+ 237 010b 50       		.byte	0x50
+ 238 010c 02       		.uleb128 0x2
+ 239 010d 91       		.byte	0x91
+ 240 010e 6C       		.sleb128 -20
+ 241 010f 00       		.byte	0
+ 242 0110 0A       		.uleb128 0xa
+ 243 0111 12000000 		.4byte	.LVL1
+ 244 0115 8D010000 		.4byte	0x18d
+ 245 0119 0A       		.uleb128 0xa
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 6
+
+
+ 246 011a 16000000 		.4byte	.LVL2
+ 247 011e 94010000 		.4byte	0x194
+ 248 0122 0A       		.uleb128 0xa
+ 249 0123 20000000 		.4byte	.LVL3
+ 250 0127 9F010000 		.4byte	0x19f
+ 251 012b 0A       		.uleb128 0xa
+ 252 012c 26000000 		.4byte	.LVL5
+ 253 0130 AA010000 		.4byte	0x1aa
+ 254 0134 0A       		.uleb128 0xa
+ 255 0135 42000000 		.4byte	.LVL9
+ 256 0139 B5010000 		.4byte	0x1b5
+ 257 013d 0B       		.uleb128 0xb
+ 258 013e 4A000000 		.4byte	.LVL10
+ 259 0142 BC010000 		.4byte	0x1bc
+ 260 0146 09       		.uleb128 0x9
+ 261 0147 01       		.uleb128 0x1
+ 262 0148 50       		.byte	0x50
+ 263 0149 04       		.uleb128 0x4
+ 264 014a 7D       		.byte	0x7d
+ 265 014b 00       		.sleb128 0
+ 266 014c 94       		.byte	0x94
+ 267 014d 01       		.byte	0x1
+ 268 014e 00       		.byte	0
+ 269 014f 00       		.byte	0
+ 270 0150 0C       		.uleb128 0xc
+ 271 0151 81000000 		.4byte	0x81
+ 272 0155 60010000 		.4byte	0x160
+ 273 0159 0D       		.uleb128 0xd
+ 274 015a A1000000 		.4byte	0xa1
+ 275 015e 09       		.byte	0x9
+ 276 015f 00       		.byte	0
+ 277 0160 0E       		.uleb128 0xe
+ 278 0161 23010000 		.4byte	.LASF28
+ 279 0165 06       		.byte	0x6
+ 280 0166 2A06     		.2byte	0x62a
+ 281 0168 6C010000 		.4byte	0x16c
+ 282 016c 0F       		.uleb128 0xf
+ 283 016d 76000000 		.4byte	0x76
+ 284 0171 10       		.uleb128 0x10
+ 285 0172 F9000000 		.4byte	.LASF29
+ 286 0176 05       		.byte	0x5
+ 287 0177 C7       		.byte	0xc7
+ 288 0178 87010000 		.4byte	0x187
+ 289 017c 11       		.uleb128 0x11
+ 290 017d 87010000 		.4byte	0x187
+ 291 0181 11       		.uleb128 0x11
+ 292 0182 81000000 		.4byte	0x81
+ 293 0186 00       		.byte	0
+ 294 0187 12       		.uleb128 0x12
+ 295 0188 04       		.byte	0x4
+ 296 0189 81000000 		.4byte	0x81
+ 297 018d 13       		.uleb128 0x13
+ 298 018e 1A020000 		.4byte	.LASF22
+ 299 0192 05       		.byte	0x5
+ 300 0193 93       		.byte	0x93
+ 301 0194 14       		.uleb128 0x14
+ 302 0195 E7000000 		.4byte	.LASF19
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 7
+
+
+ 303 0199 05       		.byte	0x5
+ 304 019a BE       		.byte	0xbe
+ 305 019b 81000000 		.4byte	0x81
+ 306 019f 14       		.uleb128 0x14
+ 307 01a0 9D000000 		.4byte	.LASF20
+ 308 01a4 05       		.byte	0x5
+ 309 01a5 CA       		.byte	0xca
+ 310 01a6 81000000 		.4byte	0x81
+ 311 01aa 14       		.uleb128 0x14
+ 312 01ab 81000000 		.4byte	.LASF21
+ 313 01af 05       		.byte	0x5
+ 314 01b0 C0       		.byte	0xc0
+ 315 01b1 81000000 		.4byte	0x81
+ 316 01b5 13       		.uleb128 0x13
+ 317 01b6 0A000000 		.4byte	.LASF23
+ 318 01ba 05       		.byte	0x5
+ 319 01bb CC       		.byte	0xcc
+ 320 01bc 15       		.uleb128 0x15
+ 321 01bd E2010000 		.4byte	.LASF30
+ 322 01c1 07       		.byte	0x7
+ 323 01c2 27       		.byte	0x27
+ 324 01c3 11       		.uleb128 0x11
+ 325 01c4 81000000 		.4byte	0x81
+ 326 01c8 00       		.byte	0
+ 327 01c9 00       		.byte	0
+ 328              		.section	.debug_abbrev,"",%progbits
+ 329              	.Ldebug_abbrev0:
+ 330 0000 01       		.uleb128 0x1
+ 331 0001 11       		.uleb128 0x11
+ 332 0002 01       		.byte	0x1
+ 333 0003 25       		.uleb128 0x25
+ 334 0004 0E       		.uleb128 0xe
+ 335 0005 13       		.uleb128 0x13
+ 336 0006 0B       		.uleb128 0xb
+ 337 0007 03       		.uleb128 0x3
+ 338 0008 0E       		.uleb128 0xe
+ 339 0009 1B       		.uleb128 0x1b
+ 340 000a 0E       		.uleb128 0xe
+ 341 000b 55       		.uleb128 0x55
+ 342 000c 17       		.uleb128 0x17
+ 343 000d 11       		.uleb128 0x11
+ 344 000e 01       		.uleb128 0x1
+ 345 000f 10       		.uleb128 0x10
+ 346 0010 17       		.uleb128 0x17
+ 347 0011 00       		.byte	0
+ 348 0012 00       		.byte	0
+ 349 0013 02       		.uleb128 0x2
+ 350 0014 24       		.uleb128 0x24
+ 351 0015 00       		.byte	0
+ 352 0016 0B       		.uleb128 0xb
+ 353 0017 0B       		.uleb128 0xb
+ 354 0018 3E       		.uleb128 0x3e
+ 355 0019 0B       		.uleb128 0xb
+ 356 001a 03       		.uleb128 0x3
+ 357 001b 0E       		.uleb128 0xe
+ 358 001c 00       		.byte	0
+ 359 001d 00       		.byte	0
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 8
+
+
+ 360 001e 03       		.uleb128 0x3
+ 361 001f 16       		.uleb128 0x16
+ 362 0020 00       		.byte	0
+ 363 0021 03       		.uleb128 0x3
+ 364 0022 0E       		.uleb128 0xe
+ 365 0023 3A       		.uleb128 0x3a
+ 366 0024 0B       		.uleb128 0xb
+ 367 0025 3B       		.uleb128 0x3b
+ 368 0026 0B       		.uleb128 0xb
+ 369 0027 49       		.uleb128 0x49
+ 370 0028 13       		.uleb128 0x13
+ 371 0029 00       		.byte	0
+ 372 002a 00       		.byte	0
+ 373 002b 04       		.uleb128 0x4
+ 374 002c 24       		.uleb128 0x24
+ 375 002d 00       		.byte	0
+ 376 002e 0B       		.uleb128 0xb
+ 377 002f 0B       		.uleb128 0xb
+ 378 0030 3E       		.uleb128 0x3e
+ 379 0031 0B       		.uleb128 0xb
+ 380 0032 03       		.uleb128 0x3
+ 381 0033 08       		.uleb128 0x8
+ 382 0034 00       		.byte	0
+ 383 0035 00       		.byte	0
+ 384 0036 05       		.uleb128 0x5
+ 385 0037 2E       		.uleb128 0x2e
+ 386 0038 01       		.byte	0x1
+ 387 0039 3F       		.uleb128 0x3f
+ 388 003a 19       		.uleb128 0x19
+ 389 003b 03       		.uleb128 0x3
+ 390 003c 0E       		.uleb128 0xe
+ 391 003d 3A       		.uleb128 0x3a
+ 392 003e 0B       		.uleb128 0xb
+ 393 003f 3B       		.uleb128 0x3b
+ 394 0040 0B       		.uleb128 0xb
+ 395 0041 49       		.uleb128 0x49
+ 396 0042 13       		.uleb128 0x13
+ 397 0043 11       		.uleb128 0x11
+ 398 0044 01       		.uleb128 0x1
+ 399 0045 12       		.uleb128 0x12
+ 400 0046 06       		.uleb128 0x6
+ 401 0047 40       		.uleb128 0x40
+ 402 0048 18       		.uleb128 0x18
+ 403 0049 9742     		.uleb128 0x2117
+ 404 004b 19       		.uleb128 0x19
+ 405 004c 01       		.uleb128 0x1
+ 406 004d 13       		.uleb128 0x13
+ 407 004e 00       		.byte	0
+ 408 004f 00       		.byte	0
+ 409 0050 06       		.uleb128 0x6
+ 410 0051 34       		.uleb128 0x34
+ 411 0052 00       		.byte	0
+ 412 0053 03       		.uleb128 0x3
+ 413 0054 0E       		.uleb128 0xe
+ 414 0055 3A       		.uleb128 0x3a
+ 415 0056 0B       		.uleb128 0xb
+ 416 0057 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 9
+
+
+ 417 0058 0B       		.uleb128 0xb
+ 418 0059 49       		.uleb128 0x49
+ 419 005a 13       		.uleb128 0x13
+ 420 005b 02       		.uleb128 0x2
+ 421 005c 18       		.uleb128 0x18
+ 422 005d 00       		.byte	0
+ 423 005e 00       		.byte	0
+ 424 005f 07       		.uleb128 0x7
+ 425 0060 34       		.uleb128 0x34
+ 426 0061 00       		.byte	0
+ 427 0062 03       		.uleb128 0x3
+ 428 0063 08       		.uleb128 0x8
+ 429 0064 3A       		.uleb128 0x3a
+ 430 0065 0B       		.uleb128 0xb
+ 431 0066 3B       		.uleb128 0x3b
+ 432 0067 0B       		.uleb128 0xb
+ 433 0068 49       		.uleb128 0x49
+ 434 0069 13       		.uleb128 0x13
+ 435 006a 02       		.uleb128 0x2
+ 436 006b 17       		.uleb128 0x17
+ 437 006c 00       		.byte	0
+ 438 006d 00       		.byte	0
+ 439 006e 08       		.uleb128 0x8
+ 440 006f 898201   		.uleb128 0x4109
+ 441 0072 01       		.byte	0x1
+ 442 0073 11       		.uleb128 0x11
+ 443 0074 01       		.uleb128 0x1
+ 444 0075 31       		.uleb128 0x31
+ 445 0076 13       		.uleb128 0x13
+ 446 0077 01       		.uleb128 0x1
+ 447 0078 13       		.uleb128 0x13
+ 448 0079 00       		.byte	0
+ 449 007a 00       		.byte	0
+ 450 007b 09       		.uleb128 0x9
+ 451 007c 8A8201   		.uleb128 0x410a
+ 452 007f 00       		.byte	0
+ 453 0080 02       		.uleb128 0x2
+ 454 0081 18       		.uleb128 0x18
+ 455 0082 9142     		.uleb128 0x2111
+ 456 0084 18       		.uleb128 0x18
+ 457 0085 00       		.byte	0
+ 458 0086 00       		.byte	0
+ 459 0087 0A       		.uleb128 0xa
+ 460 0088 898201   		.uleb128 0x4109
+ 461 008b 00       		.byte	0
+ 462 008c 11       		.uleb128 0x11
+ 463 008d 01       		.uleb128 0x1
+ 464 008e 31       		.uleb128 0x31
+ 465 008f 13       		.uleb128 0x13
+ 466 0090 00       		.byte	0
+ 467 0091 00       		.byte	0
+ 468 0092 0B       		.uleb128 0xb
+ 469 0093 898201   		.uleb128 0x4109
+ 470 0096 01       		.byte	0x1
+ 471 0097 11       		.uleb128 0x11
+ 472 0098 01       		.uleb128 0x1
+ 473 0099 31       		.uleb128 0x31
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 10
+
+
+ 474 009a 13       		.uleb128 0x13
+ 475 009b 00       		.byte	0
+ 476 009c 00       		.byte	0
+ 477 009d 0C       		.uleb128 0xc
+ 478 009e 01       		.uleb128 0x1
+ 479 009f 01       		.byte	0x1
+ 480 00a0 49       		.uleb128 0x49
+ 481 00a1 13       		.uleb128 0x13
+ 482 00a2 01       		.uleb128 0x1
+ 483 00a3 13       		.uleb128 0x13
+ 484 00a4 00       		.byte	0
+ 485 00a5 00       		.byte	0
+ 486 00a6 0D       		.uleb128 0xd
+ 487 00a7 21       		.uleb128 0x21
+ 488 00a8 00       		.byte	0
+ 489 00a9 49       		.uleb128 0x49
+ 490 00aa 13       		.uleb128 0x13
+ 491 00ab 2F       		.uleb128 0x2f
+ 492 00ac 0B       		.uleb128 0xb
+ 493 00ad 00       		.byte	0
+ 494 00ae 00       		.byte	0
+ 495 00af 0E       		.uleb128 0xe
+ 496 00b0 34       		.uleb128 0x34
+ 497 00b1 00       		.byte	0
+ 498 00b2 03       		.uleb128 0x3
+ 499 00b3 0E       		.uleb128 0xe
+ 500 00b4 3A       		.uleb128 0x3a
+ 501 00b5 0B       		.uleb128 0xb
+ 502 00b6 3B       		.uleb128 0x3b
+ 503 00b7 05       		.uleb128 0x5
+ 504 00b8 49       		.uleb128 0x49
+ 505 00b9 13       		.uleb128 0x13
+ 506 00ba 3F       		.uleb128 0x3f
+ 507 00bb 19       		.uleb128 0x19
+ 508 00bc 3C       		.uleb128 0x3c
+ 509 00bd 19       		.uleb128 0x19
+ 510 00be 00       		.byte	0
+ 511 00bf 00       		.byte	0
+ 512 00c0 0F       		.uleb128 0xf
+ 513 00c1 35       		.uleb128 0x35
+ 514 00c2 00       		.byte	0
+ 515 00c3 49       		.uleb128 0x49
+ 516 00c4 13       		.uleb128 0x13
+ 517 00c5 00       		.byte	0
+ 518 00c6 00       		.byte	0
+ 519 00c7 10       		.uleb128 0x10
+ 520 00c8 2E       		.uleb128 0x2e
+ 521 00c9 01       		.byte	0x1
+ 522 00ca 3F       		.uleb128 0x3f
+ 523 00cb 19       		.uleb128 0x19
+ 524 00cc 03       		.uleb128 0x3
+ 525 00cd 0E       		.uleb128 0xe
+ 526 00ce 3A       		.uleb128 0x3a
+ 527 00cf 0B       		.uleb128 0xb
+ 528 00d0 3B       		.uleb128 0x3b
+ 529 00d1 0B       		.uleb128 0xb
+ 530 00d2 27       		.uleb128 0x27
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 11
+
+
+ 531 00d3 19       		.uleb128 0x19
+ 532 00d4 3C       		.uleb128 0x3c
+ 533 00d5 19       		.uleb128 0x19
+ 534 00d6 01       		.uleb128 0x1
+ 535 00d7 13       		.uleb128 0x13
+ 536 00d8 00       		.byte	0
+ 537 00d9 00       		.byte	0
+ 538 00da 11       		.uleb128 0x11
+ 539 00db 05       		.uleb128 0x5
+ 540 00dc 00       		.byte	0
+ 541 00dd 49       		.uleb128 0x49
+ 542 00de 13       		.uleb128 0x13
+ 543 00df 00       		.byte	0
+ 544 00e0 00       		.byte	0
+ 545 00e1 12       		.uleb128 0x12
+ 546 00e2 0F       		.uleb128 0xf
+ 547 00e3 00       		.byte	0
+ 548 00e4 0B       		.uleb128 0xb
+ 549 00e5 0B       		.uleb128 0xb
+ 550 00e6 49       		.uleb128 0x49
+ 551 00e7 13       		.uleb128 0x13
+ 552 00e8 00       		.byte	0
+ 553 00e9 00       		.byte	0
+ 554 00ea 13       		.uleb128 0x13
+ 555 00eb 2E       		.uleb128 0x2e
+ 556 00ec 00       		.byte	0
+ 557 00ed 3F       		.uleb128 0x3f
+ 558 00ee 19       		.uleb128 0x19
+ 559 00ef 03       		.uleb128 0x3
+ 560 00f0 0E       		.uleb128 0xe
+ 561 00f1 3A       		.uleb128 0x3a
+ 562 00f2 0B       		.uleb128 0xb
+ 563 00f3 3B       		.uleb128 0x3b
+ 564 00f4 0B       		.uleb128 0xb
+ 565 00f5 27       		.uleb128 0x27
+ 566 00f6 19       		.uleb128 0x19
+ 567 00f7 3C       		.uleb128 0x3c
+ 568 00f8 19       		.uleb128 0x19
+ 569 00f9 00       		.byte	0
+ 570 00fa 00       		.byte	0
+ 571 00fb 14       		.uleb128 0x14
+ 572 00fc 2E       		.uleb128 0x2e
+ 573 00fd 00       		.byte	0
+ 574 00fe 3F       		.uleb128 0x3f
+ 575 00ff 19       		.uleb128 0x19
+ 576 0100 03       		.uleb128 0x3
+ 577 0101 0E       		.uleb128 0xe
+ 578 0102 3A       		.uleb128 0x3a
+ 579 0103 0B       		.uleb128 0xb
+ 580 0104 3B       		.uleb128 0x3b
+ 581 0105 0B       		.uleb128 0xb
+ 582 0106 27       		.uleb128 0x27
+ 583 0107 19       		.uleb128 0x19
+ 584 0108 49       		.uleb128 0x49
+ 585 0109 13       		.uleb128 0x13
+ 586 010a 3C       		.uleb128 0x3c
+ 587 010b 19       		.uleb128 0x19
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 12
+
+
+ 588 010c 00       		.byte	0
+ 589 010d 00       		.byte	0
+ 590 010e 15       		.uleb128 0x15
+ 591 010f 2E       		.uleb128 0x2e
+ 592 0110 01       		.byte	0x1
+ 593 0111 3F       		.uleb128 0x3f
+ 594 0112 19       		.uleb128 0x19
+ 595 0113 03       		.uleb128 0x3
+ 596 0114 0E       		.uleb128 0xe
+ 597 0115 3A       		.uleb128 0x3a
+ 598 0116 0B       		.uleb128 0xb
+ 599 0117 3B       		.uleb128 0x3b
+ 600 0118 0B       		.uleb128 0xb
+ 601 0119 27       		.uleb128 0x27
+ 602 011a 19       		.uleb128 0x19
+ 603 011b 3C       		.uleb128 0x3c
+ 604 011c 19       		.uleb128 0x19
+ 605 011d 00       		.byte	0
+ 606 011e 00       		.byte	0
+ 607 011f 00       		.byte	0
+ 608              		.section	.debug_loc,"",%progbits
+ 609              	.Ldebug_loc0:
+ 610              	.LLST0:
+ 611 0000 26000000 		.4byte	.LVL5
+ 612 0004 2A000000 		.4byte	.LVL6
+ 613 0008 0200     		.2byte	0x2
+ 614 000a 30       		.byte	0x30
+ 615 000b 9F       		.byte	0x9f
+ 616 000c 2A000000 		.4byte	.LVL6
+ 617 0010 38000000 		.4byte	.LVL7
+ 618 0014 0100     		.2byte	0x1
+ 619 0016 53       		.byte	0x53
+ 620 0017 3A000000 		.4byte	.LVL8
+ 621 001b 41000000 		.4byte	.LVL9-1
+ 622 001f 0100     		.2byte	0x1
+ 623 0021 53       		.byte	0x53
+ 624 0022 00000000 		.4byte	0
+ 625 0026 00000000 		.4byte	0
+ 626              		.section	.debug_aranges,"",%progbits
+ 627 0000 1C000000 		.4byte	0x1c
+ 628 0004 0200     		.2byte	0x2
+ 629 0006 00000000 		.4byte	.Ldebug_info0
+ 630 000a 04       		.byte	0x4
+ 631 000b 00       		.byte	0
+ 632 000c 0000     		.2byte	0
+ 633 000e 0000     		.2byte	0
+ 634 0010 00000000 		.4byte	.LFB63
+ 635 0014 4C000000 		.4byte	.LFE63-.LFB63
+ 636 0018 00000000 		.4byte	0
+ 637 001c 00000000 		.4byte	0
+ 638              		.section	.debug_ranges,"",%progbits
+ 639              	.Ldebug_ranges0:
+ 640 0000 00000000 		.4byte	.LFB63
+ 641 0004 4C000000 		.4byte	.LFE63
+ 642 0008 00000000 		.4byte	0
+ 643 000c 00000000 		.4byte	0
+ 644              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 13
+
+
+ 645              	.Ldebug_line0:
+ 646 0000 96010000 		.section	.debug_str,"MS",%progbits,1
+ 646      02006701 
+ 646      00000201 
+ 646      FB0E0D00 
+ 646      01010101 
+ 647              	.LASF17:
+ 648 0000 75736572 		.ascii	"userArray\000"
+ 648      41727261 
+ 648      7900
+ 649              	.LASF23:
+ 650 000a 4932435F 		.ascii	"I2C_1_SlaveClearWriteBuf\000"
+ 650      315F536C 
+ 650      61766543 
+ 650      6C656172 
+ 650      57726974 
+ 651              	.LASF9:
+ 652 0023 5F5F696E 		.ascii	"__int32_t\000"
+ 652      7433325F 
+ 652      7400
+ 653              	.LASF3:
+ 654 002d 73686F72 		.ascii	"short unsigned int\000"
+ 654      7420756E 
+ 654      7369676E 
+ 654      65642069 
+ 654      6E7400
+ 655              	.LASF26:
+ 656 0040 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
+ 656      73657273 
+ 656      5C646F75 
+ 656      675F3030 
+ 656      305C446F 
+ 657 006d 52505053 		.ascii	"RPPSOC-Blink7.cydsn\000"
+ 657      4F432D42 
+ 657      6C696E6B 
+ 657      372E6379 
+ 657      64736E00 
+ 658              	.LASF21:
+ 659 0081 4932435F 		.ascii	"I2C_1_SlaveClearWriteStatus\000"
+ 659      315F536C 
+ 659      61766543 
+ 659      6C656172 
+ 659      57726974 
+ 660              	.LASF20:
+ 661 009d 4932435F 		.ascii	"I2C_1_SlaveGetWriteBufSize\000"
+ 661      315F536C 
+ 661      61766547 
+ 661      65745772 
+ 661      69746542 
+ 662              	.LASF12:
+ 663 00b8 666C6F61 		.ascii	"float\000"
+ 663      7400
+ 664              	.LASF1:
+ 665 00be 756E7369 		.ascii	"unsigned char\000"
+ 665      676E6564 
+ 665      20636861 
+ 665      7200
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 14
+
+
+ 666              	.LASF25:
+ 667 00cc 2E5C6D61 		.ascii	".\\main.c\000"
+ 667      696E2E63 
+ 667      00
+ 668              	.LASF5:
+ 669 00d5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 669      20756E73 
+ 669      69676E65 
+ 669      6420696E 
+ 669      7400
+ 670              	.LASF19:
+ 671 00e7 4932435F 		.ascii	"I2C_1_SlaveStatus\000"
+ 671      315F536C 
+ 671      61766553 
+ 671      74617475 
+ 671      7300
+ 672              	.LASF29:
+ 673 00f9 4932435F 		.ascii	"I2C_1_SlaveInitWriteBuf\000"
+ 673      315F536C 
+ 673      61766549 
+ 673      6E697457 
+ 673      72697465 
+ 674              	.LASF16:
+ 675 0111 77724275 		.ascii	"wrBuf\000"
+ 675      6600
+ 676              	.LASF13:
+ 677 0117 646F7562 		.ascii	"double\000"
+ 677      6C6500
+ 678              	.LASF27:
+ 679 011e 6D61696E 		.ascii	"main\000"
+ 679      00
+ 680              	.LASF28:
+ 681 0123 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 681      52784275 
+ 681      66666572 
+ 681      00
+ 682              	.LASF24:
+ 683 0130 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 683      4320342E 
+ 683      392E3320 
+ 683      32303135 
+ 683      30333033 
+ 684 0163 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 684      20726576 
+ 684      6973696F 
+ 684      6E203232 
+ 684      31323230 
+ 685 0196 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 685      66756E63 
+ 685      74696F6E 
+ 685      2D736563 
+ 685      74696F6E 
+ 686              	.LASF8:
+ 687 01be 756E7369 		.ascii	"unsigned int\000"
+ 687      676E6564 
+ 687      20696E74 
+ 687      00
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccPtQbSc.s 			page 15
+
+
+ 688              	.LASF7:
+ 689 01cb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 689      206C6F6E 
+ 689      6720756E 
+ 689      7369676E 
+ 689      65642069 
+ 690              	.LASF30:
+ 691 01e2 436F6E74 		.ascii	"Control_Reg_1_Write\000"
+ 691      726F6C5F 
+ 691      5265675F 
+ 691      315F5772 
+ 691      69746500 
+ 692              	.LASF10:
+ 693 01f6 696E7433 		.ascii	"int32_t\000"
+ 693      325F7400 
+ 694              	.LASF15:
+ 695 01fe 73697A65 		.ascii	"sizetype\000"
+ 695      74797065 
+ 695      00
+ 696              	.LASF6:
+ 697 0207 6C6F6E67 		.ascii	"long long int\000"
+ 697      206C6F6E 
+ 697      6720696E 
+ 697      7400
+ 698              	.LASF14:
+ 699 0215 63686172 		.ascii	"char\000"
+ 699      00
+ 700              	.LASF22:
+ 701 021a 4932435F 		.ascii	"I2C_1_Start\000"
+ 701      315F5374 
+ 701      61727400 
+ 702              	.LASF2:
+ 703 0226 73686F72 		.ascii	"short int\000"
+ 703      7420696E 
+ 703      7400
+ 704              	.LASF11:
+ 705 0230 75696E74 		.ascii	"uint8\000"
+ 705      3800
+ 706              	.LASF4:
+ 707 0236 6C6F6E67 		.ascii	"long int\000"
+ 707      20696E74 
+ 707      00
+ 708              	.LASF0:
+ 709 023f 7369676E 		.ascii	"signed char\000"
+ 709      65642063 
+ 709      68617200 
+ 710              	.LASF18:
+ 711 024b 62797465 		.ascii	"byteCnt\000"
+ 711      436E7400 
+ 712              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
