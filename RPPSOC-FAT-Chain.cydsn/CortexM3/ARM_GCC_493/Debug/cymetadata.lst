@@ -1,0 +1,1816 @@
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.global	cy_meta_wonvl
+  21              		.global	cy_meta_custnvl
+  22              		.global	cy_meta_configecc
+  23              		.section	.cyconfigecc,"a",%progbits
+  24              		.align	2
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 1236
+  27              	cy_meta_configecc:
+  28 0000 0D       		.byte	13
+  29 0001 52       		.byte	82
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 03       		.byte	3
+  33 0005 03       		.byte	3
+  34 0006 01       		.byte	1
+  35 0007 40       		.byte	64
+  36 0008 1B       		.byte	27
+  37 0009 04       		.byte	4
+  38 000a 01       		.byte	1
+  39 000b 40       		.byte	64
+  40 000c 1D       		.byte	29
+  41 000d 05       		.byte	5
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 40       		.byte	64
+  45 0011 06       		.byte	6
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 3E       		.byte	62
+  49 0015 07       		.byte	7
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 01       		.byte	1
+  53 0019 0B       		.byte	11
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 0E       		.byte	14
+  57 001d 15       		.byte	21
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 43       		.byte	67
+  61 0021 16       		.byte	22
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 39       		.byte	57
+  65 0025 17       		.byte	23
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 01       		.byte	1
+  69 0029 19       		.byte	25
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 09       		.byte	9
+  73 002d 40       		.byte	64
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 12       		.byte	18
+  77 0031 41       		.byte	65
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 0F       		.byte	15
+  81 0035 42       		.byte	66
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 12       		.byte	18
+  85 0039 43       		.byte	67
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 03       		.byte	3
+  89 003d 44       		.byte	68
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 0D       		.byte	13
+  93 0041 45       		.byte	69
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 08       		.byte	8
+  97 0045 46       		.byte	70
+  98 0046 01       		.byte	1
+  99 0047 40       		.byte	64
+ 100 0048 08       		.byte	8
+ 101 0049 47       		.byte	71
+ 102 004a 01       		.byte	1
+ 103 004b 40       		.byte	64
+ 104 004c 18       		.byte	24
+ 105 004d 48       		.byte	72
+ 106 004e 01       		.byte	1
+ 107 004f 40       		.byte	64
+ 108 0050 1B       		.byte	27
+ 109 0051 49       		.byte	73
+ 110 0052 01       		.byte	1
+ 111 0053 40       		.byte	64
+ 112 0054 14       		.byte	20
+ 113 0055 4C       		.byte	76
+ 114 0056 01       		.byte	1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 3
+
+
+ 115 0057 40       		.byte	64
+ 116 0058 13       		.byte	19
+ 117 0059 4D       		.byte	77
+ 118 005a 01       		.byte	1
+ 119 005b 40       		.byte	64
+ 120 005c 02       		.byte	2
+ 121 005d 50       		.byte	80
+ 122 005e 01       		.byte	1
+ 123 005f 40       		.byte	64
+ 124 0060 01       		.byte	1
+ 125 0061 51       		.byte	81
+ 126 0062 01       		.byte	1
+ 127 0063 40       		.byte	64
+ 128 0064 00       		.byte	0
+ 129 0065 3C       		.byte	60
+ 130 0066 01       		.byte	1
+ 131 0067 99       		.byte	-103
+ 132 0068 0C       		.byte	12
+ 133 0069 E0       		.byte	-32
+ 134 006a 10       		.byte	16
+ 135 006b 39       		.byte	57
+ 136 006c 11       		.byte	17
+ 137 006d AA       		.byte	-86
+ 138 006e 18       		.byte	24
+ 139 006f 36       		.byte	54
+ 140 0070 19       		.byte	25
+ 141 0071 55       		.byte	85
+ 142 0072 20       		.byte	32
+ 143 0073 39       		.byte	57
+ 144 0074 21       		.byte	33
+ 145 0075 25       		.byte	37
+ 146 0076 29       		.byte	41
+ 147 0077 10       		.byte	16
+ 148 0078 2C       		.byte	44
+ 149 0079 4F       		.byte	79
+ 150 007a 78       		.byte	120
+ 151 007b 05       		.byte	5
+ 152 007c 79       		.byte	121
+ 153 007d 09       		.byte	9
+ 154 007e 84       		.byte	-124
+ 155 007f 10       		.byte	16
+ 156 0080 8F       		.byte	-113
+ 157 0081 04       		.byte	4
+ 158 0082 E6       		.byte	-26
+ 159 0083 10       		.byte	16
+ 160 0084 03       		.byte	3
+ 161 0085 05       		.byte	5
+ 162 0086 15       		.byte	21
+ 163 0087 04       		.byte	4
+ 164 0088 17       		.byte	23
+ 165 0089 12       		.byte	18
+ 166 008a 1B       		.byte	27
+ 167 008b 15       		.byte	21
+ 168 008c 1D       		.byte	29
+ 169 008d 08       		.byte	8
+ 170 008e 1F       		.byte	31
+ 171 008f 13       		.byte	19
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 4
+
+
+ 172 0090 31       		.byte	49
+ 173 0091 11       		.byte	17
+ 174 0092 33       		.byte	51
+ 175 0093 0C       		.byte	12
+ 176 0094 35       		.byte	53
+ 177 0095 03       		.byte	3
+ 178 0096 3B       		.byte	59
+ 179 0097 EE       		.byte	-18
+ 180 0098 59       		.byte	89
+ 181 0099 04       		.byte	4
+ 182 009a 5B       		.byte	91
+ 183 009b 04       		.byte	4
+ 184 009c 5F       		.byte	95
+ 185 009d 01       		.byte	1
+ 186 009e 83       		.byte	-125
+ 187 009f 0F       		.byte	15
+ 188 00a0 8D       		.byte	-115
+ 189 00a1 08       		.byte	8
+ 190 00a2 8F       		.byte	-113
+ 191 00a3 04       		.byte	4
+ 192 00a4 93       		.byte	-109
+ 193 00a5 08       		.byte	8
+ 194 00a6 99       		.byte	-103
+ 195 00a7 08       		.byte	8
+ 196 00a8 9B       		.byte	-101
+ 197 00a9 06       		.byte	6
+ 198 00aa B1       		.byte	-79
+ 199 00ab 04       		.byte	4
+ 200 00ac B3       		.byte	-77
+ 201 00ad 01       		.byte	1
+ 202 00ae B5       		.byte	-75
+ 203 00af 08       		.byte	8
+ 204 00b0 B7       		.byte	-73
+ 205 00b1 02       		.byte	2
+ 206 00b2 BB       		.byte	-69
+ 207 00b3 8A       		.byte	-118
+ 208 00b4 BF       		.byte	-65
+ 209 00b5 10       		.byte	16
+ 210 00b6 D9       		.byte	-39
+ 211 00b7 04       		.byte	4
+ 212 00b8 DF       		.byte	-33
+ 213 00b9 01       		.byte	1
+ 214 00ba 20       		.byte	32
+ 215 00bb 02       		.byte	2
+ 216 00bc 21       		.byte	33
+ 217 00bd 89       		.byte	-119
+ 218 00be 22       		.byte	34
+ 219 00bf 10       		.byte	16
+ 220 00c0 23       		.byte	35
+ 221 00c1 58       		.byte	88
+ 222 00c2 24       		.byte	36
+ 223 00c3 82       		.byte	-126
+ 224 00c4 25       		.byte	37
+ 225 00c5 40       		.byte	64
+ 226 00c6 26       		.byte	38
+ 227 00c7 01       		.byte	1
+ 228 00c8 27       		.byte	39
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 5
+
+
+ 229 00c9 14       		.byte	20
+ 230 00ca 30       		.byte	48
+ 231 00cb 40       		.byte	64
+ 232 00cc 31       		.byte	49
+ 233 00cd 88       		.byte	-120
+ 234 00ce 32       		.byte	50
+ 235 00cf 10       		.byte	16
+ 236 00d0 36       		.byte	54
+ 237 00d1 01       		.byte	1
+ 238 00d2 37       		.byte	55
+ 239 00d3 10       		.byte	16
+ 240 00d4 39       		.byte	57
+ 241 00d5 02       		.byte	2
+ 242 00d6 3C       		.byte	60
+ 243 00d7 02       		.byte	2
+ 244 00d8 3D       		.byte	61
+ 245 00d9 80       		.byte	-128
+ 246 00da 6A       		.byte	106
+ 247 00db 40       		.byte	64
+ 248 00dc 82       		.byte	-126
+ 249 00dd 40       		.byte	64
+ 250 00de 8A       		.byte	-118
+ 251 00df 40       		.byte	64
+ 252 00e0 97       		.byte	-105
+ 253 00e1 20       		.byte	32
+ 254 00e2 9F       		.byte	-97
+ 255 00e3 24       		.byte	36
+ 256 00e4 A4       		.byte	-92
+ 257 00e5 10       		.byte	16
+ 258 00e6 B3       		.byte	-77
+ 259 00e7 30       		.byte	48
+ 260 00e8 CC       		.byte	-52
+ 261 00e9 AE       		.byte	-82
+ 262 00ea CE       		.byte	-50
+ 263 00eb 91       		.byte	-111
+ 264 00ec E0       		.byte	-32
+ 265 00ed 04       		.byte	4
+ 266 00ee E2       		.byte	-30
+ 267 00ef 20       		.byte	32
+ 268 00f0 EA       		.byte	-22
+ 269 00f1 20       		.byte	32
+ 270 00f2 EE       		.byte	-18
+ 271 00f3 20       		.byte	32
+ 272 00f4 00       		.byte	0
+ 273 00f5 01       		.byte	1
+ 274 00f6 02       		.byte	2
+ 275 00f7 0C       		.byte	12
+ 276 00f8 04       		.byte	4
+ 277 00f9 05       		.byte	5
+ 278 00fa 06       		.byte	6
+ 279 00fb 08       		.byte	8
+ 280 00fc 0B       		.byte	11
+ 281 00fd 04       		.byte	4
+ 282 00fe 0C       		.byte	12
+ 283 00ff 01       		.byte	1
+ 284 0100 0D       		.byte	13
+ 285 0101 04       		.byte	4
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 6
+
+
+ 286 0102 0E       		.byte	14
+ 287 0103 0C       		.byte	12
+ 288 0104 10       		.byte	16
+ 289 0105 02       		.byte	2
+ 290 0106 11       		.byte	17
+ 291 0107 09       		.byte	9
+ 292 0108 13       		.byte	19
+ 293 0109 02       		.byte	2
+ 294 010a 16       		.byte	22
+ 295 010b 02       		.byte	2
+ 296 010c 17       		.byte	23
+ 297 010d 04       		.byte	4
+ 298 010e 19       		.byte	25
+ 299 010f 03       		.byte	3
+ 300 0110 1B       		.byte	27
+ 301 0111 08       		.byte	8
+ 302 0112 1C       		.byte	28
+ 303 0113 08       		.byte	8
+ 304 0114 1D       		.byte	29
+ 305 0115 05       		.byte	5
+ 306 0116 1E       		.byte	30
+ 307 0117 07       		.byte	7
+ 308 0118 1F       		.byte	31
+ 309 0119 0A       		.byte	10
+ 310 011a 21       		.byte	33
+ 311 011b 0A       		.byte	10
+ 312 011c 23       		.byte	35
+ 313 011d 01       		.byte	1
+ 314 011e 24       		.byte	36
+ 315 011f 02       		.byte	2
+ 316 0120 30       		.byte	48
+ 317 0121 01       		.byte	1
+ 318 0122 31       		.byte	49
+ 319 0123 04       		.byte	4
+ 320 0124 32       		.byte	50
+ 321 0125 08       		.byte	8
+ 322 0126 33       		.byte	51
+ 323 0127 08       		.byte	8
+ 324 0128 34       		.byte	52
+ 325 0129 02       		.byte	2
+ 326 012a 35       		.byte	53
+ 327 012b 01       		.byte	1
+ 328 012c 36       		.byte	54
+ 329 012d 04       		.byte	4
+ 330 012e 37       		.byte	55
+ 331 012f 02       		.byte	2
+ 332 0130 3E       		.byte	62
+ 333 0131 55       		.byte	85
+ 334 0132 3F       		.byte	63
+ 335 0133 55       		.byte	85
+ 336 0134 58       		.byte	88
+ 337 0135 04       		.byte	4
+ 338 0136 59       		.byte	89
+ 339 0137 04       		.byte	4
+ 340 0138 5F       		.byte	95
+ 341 0139 01       		.byte	1
+ 342 013a 80       		.byte	-128
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 7
+
+
+ 343 013b 01       		.byte	1
+ 344 013c 81       		.byte	-127
+ 345 013d 01       		.byte	1
+ 346 013e 82       		.byte	-126
+ 347 013f 06       		.byte	6
+ 348 0140 84       		.byte	-124
+ 349 0141 02       		.byte	2
+ 350 0142 86       		.byte	-122
+ 351 0143 05       		.byte	5
+ 352 0144 89       		.byte	-119
+ 353 0145 02       		.byte	2
+ 354 0146 8E       		.byte	-114
+ 355 0147 07       		.byte	7
+ 356 0148 8F       		.byte	-113
+ 357 0149 02       		.byte	2
+ 358 014a 92       		.byte	-110
+ 359 014b 08       		.byte	8
+ 360 014c 94       		.byte	-108
+ 361 014d 08       		.byte	8
+ 362 014e 97       		.byte	-105
+ 363 014f 02       		.byte	2
+ 364 0150 9B       		.byte	-101
+ 365 0151 01       		.byte	1
+ 366 0152 9C       		.byte	-100
+ 367 0153 02       		.byte	2
+ 368 0154 9D       		.byte	-99
+ 369 0155 01       		.byte	1
+ 370 0156 9E       		.byte	-98
+ 371 0157 0D       		.byte	13
+ 372 0158 9F       		.byte	-97
+ 373 0159 02       		.byte	2
+ 374 015a A3       		.byte	-93
+ 375 015b 01       		.byte	1
+ 376 015c A4       		.byte	-92
+ 377 015d 08       		.byte	8
+ 378 015e B0       		.byte	-80
+ 379 015f 04       		.byte	4
+ 380 0160 B2       		.byte	-78
+ 381 0161 02       		.byte	2
+ 382 0162 B3       		.byte	-77
+ 383 0163 01       		.byte	1
+ 384 0164 B4       		.byte	-76
+ 385 0165 01       		.byte	1
+ 386 0166 B6       		.byte	-74
+ 387 0167 08       		.byte	8
+ 388 0168 B7       		.byte	-73
+ 389 0169 02       		.byte	2
+ 390 016a BE       		.byte	-66
+ 391 016b 55       		.byte	85
+ 392 016c BF       		.byte	-65
+ 393 016d 44       		.byte	68
+ 394 016e D8       		.byte	-40
+ 395 016f 04       		.byte	4
+ 396 0170 D9       		.byte	-39
+ 397 0171 04       		.byte	4
+ 398 0172 DF       		.byte	-33
+ 399 0173 01       		.byte	1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 8
+
+
+ 400 0174 01       		.byte	1
+ 401 0175 01       		.byte	1
+ 402 0176 02       		.byte	2
+ 403 0177 01       		.byte	1
+ 404 0178 03       		.byte	3
+ 405 0179 10       		.byte	16
+ 406 017a 04       		.byte	4
+ 407 017b 82       		.byte	-126
+ 408 017c 05       		.byte	5
+ 409 017d 01       		.byte	1
+ 410 017e 06       		.byte	6
+ 411 017f 03       		.byte	3
+ 412 0180 07       		.byte	7
+ 413 0181 10       		.byte	16
+ 414 0182 08       		.byte	8
+ 415 0183 40       		.byte	64
+ 416 0184 0B       		.byte	11
+ 417 0185 50       		.byte	80
+ 418 0186 0C       		.byte	12
+ 419 0187 40       		.byte	64
+ 420 0188 0F       		.byte	15
+ 421 0189 50       		.byte	80
+ 422 018a 13       		.byte	19
+ 423 018b 08       		.byte	8
+ 424 018c 17       		.byte	23
+ 425 018d 08       		.byte	8
+ 426 018e 18       		.byte	24
+ 427 018f 04       		.byte	4
+ 428 0190 19       		.byte	25
+ 429 0191 0A       		.byte	10
+ 430 0192 1B       		.byte	27
+ 431 0193 80       		.byte	-128
+ 432 0194 1C       		.byte	28
+ 433 0195 28       		.byte	40
+ 434 0196 1D       		.byte	29
+ 435 0197 40       		.byte	64
+ 436 0198 1E       		.byte	30
+ 437 0199 80       		.byte	-128
+ 438 019a 20       		.byte	32
+ 439 019b 02       		.byte	2
+ 440 019c 22       		.byte	34
+ 441 019d 04       		.byte	4
+ 442 019e 25       		.byte	37
+ 443 019f 42       		.byte	66
+ 444 01a0 27       		.byte	39
+ 445 01a1 24       		.byte	36
+ 446 01a2 2A       		.byte	42
+ 447 01a3 02       		.byte	2
+ 448 01a4 2E       		.byte	46
+ 449 01a5 02       		.byte	2
+ 450 01a6 30       		.byte	48
+ 451 01a7 40       		.byte	64
+ 452 01a8 32       		.byte	50
+ 453 01a9 08       		.byte	8
+ 454 01aa 33       		.byte	51
+ 455 01ab 10       		.byte	16
+ 456 01ac 34       		.byte	52
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 9
+
+
+ 457 01ad 40       		.byte	64
+ 458 01ae 35       		.byte	53
+ 459 01af 01       		.byte	1
+ 460 01b0 36       		.byte	54
+ 461 01b1 08       		.byte	8
+ 462 01b2 37       		.byte	55
+ 463 01b3 18       		.byte	24
+ 464 01b4 38       		.byte	56
+ 465 01b5 02       		.byte	2
+ 466 01b6 39       		.byte	57
+ 467 01b7 01       		.byte	1
+ 468 01b8 3B       		.byte	59
+ 469 01b9 50       		.byte	80
+ 470 01ba 3F       		.byte	63
+ 471 01bb 50       		.byte	80
+ 472 01bc 83       		.byte	-125
+ 473 01bd 80       		.byte	-128
+ 474 01be 84       		.byte	-124
+ 475 01bf 04       		.byte	4
+ 476 01c0 85       		.byte	-123
+ 477 01c1 0A       		.byte	10
+ 478 01c2 89       		.byte	-119
+ 479 01c3 40       		.byte	64
+ 480 01c4 8D       		.byte	-115
+ 481 01c5 02       		.byte	2
+ 482 01c6 90       		.byte	-112
+ 483 01c7 82       		.byte	-126
+ 484 01c8 93       		.byte	-109
+ 485 01c9 50       		.byte	80
+ 486 01ca 96       		.byte	-106
+ 487 01cb 08       		.byte	8
+ 488 01cc 97       		.byte	-105
+ 489 01cd 20       		.byte	32
+ 490 01ce 98       		.byte	-104
+ 491 01cf 40       		.byte	64
+ 492 01d0 9B       		.byte	-101
+ 493 01d1 18       		.byte	24
+ 494 01d2 9D       		.byte	-99
+ 495 01d3 40       		.byte	64
+ 496 01d4 9F       		.byte	-97
+ 497 01d5 20       		.byte	32
+ 498 01d6 A4       		.byte	-92
+ 499 01d7 10       		.byte	16
+ 500 01d8 A6       		.byte	-90
+ 501 01d9 40       		.byte	64
+ 502 01da AD       		.byte	-83
+ 503 01db 40       		.byte	64
+ 504 01dc B2       		.byte	-78
+ 505 01dd 04       		.byte	4
+ 506 01de C0       		.byte	-64
+ 507 01df BD       		.byte	-67
+ 508 01e0 C2       		.byte	-62
+ 509 01e1 BD       		.byte	-67
+ 510 01e2 C4       		.byte	-60
+ 511 01e3 24       		.byte	36
+ 512 01e4 CA       		.byte	-54
+ 513 01e5 81       		.byte	-127
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 10
+
+
+ 514 01e6 CC       		.byte	-52
+ 515 01e7 FE       		.byte	-2
+ 516 01e8 CE       		.byte	-50
+ 517 01e9 3D       		.byte	61
+ 518 01ea E2       		.byte	-30
+ 519 01eb 40       		.byte	64
+ 520 01ec E6       		.byte	-26
+ 521 01ed 20       		.byte	32
+ 522 01ee EA       		.byte	-22
+ 523 01ef 80       		.byte	-128
+ 524 01f0 E0       		.byte	-32
+ 525 01f1 04       		.byte	4
+ 526 01f2 84       		.byte	-124
+ 527 01f3 40       		.byte	64
+ 528 01f4 8D       		.byte	-115
+ 529 01f5 08       		.byte	8
+ 530 01f6 8E       		.byte	-114
+ 531 01f7 01       		.byte	1
+ 532 01f8 A0       		.byte	-96
+ 533 01f9 40       		.byte	64
+ 534 01fa A1       		.byte	-95
+ 535 01fb 08       		.byte	8
+ 536 01fc A2       		.byte	-94
+ 537 01fd 01       		.byte	1
+ 538 01fe AB       		.byte	-85
+ 539 01ff 40       		.byte	64
+ 540 0200 B1       		.byte	-79
+ 541 0201 80       		.byte	-128
+ 542 0202 B6       		.byte	-74
+ 543 0203 40       		.byte	64
+ 544 0204 B7       		.byte	-73
+ 545 0205 40       		.byte	64
+ 546 0206 E2       		.byte	-30
+ 547 0207 10       		.byte	16
+ 548 0208 E6       		.byte	-26
+ 549 0209 10       		.byte	16
+ 550 020a EA       		.byte	-22
+ 551 020b 30       		.byte	48
+ 552 020c EE       		.byte	-18
+ 553 020d 40       		.byte	64
+ 554 020e 00       		.byte	0
+ 555 020f 04       		.byte	4
+ 556 0210 02       		.byte	2
+ 557 0211 08       		.byte	8
+ 558 0212 04       		.byte	4
+ 559 0213 04       		.byte	4
+ 560 0214 06       		.byte	6
+ 561 0215 08       		.byte	8
+ 562 0216 09       		.byte	9
+ 563 0217 0B       		.byte	11
+ 564 0218 0C       		.byte	12
+ 565 0219 0C       		.byte	12
+ 566 021a 0D       		.byte	13
+ 567 021b 03       		.byte	3
+ 568 021c 0F       		.byte	15
+ 569 021d 08       		.byte	8
+ 570 021e 10       		.byte	16
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 11
+
+
+ 571 021f 01       		.byte	1
+ 572 0220 11       		.byte	17
+ 573 0221 04       		.byte	4
+ 574 0222 12       		.byte	18
+ 575 0223 02       		.byte	2
+ 576 0224 14       		.byte	20
+ 577 0225 02       		.byte	2
+ 578 0226 15       		.byte	21
+ 579 0227 09       		.byte	9
+ 580 0228 16       		.byte	22
+ 581 0229 01       		.byte	1
+ 582 022a 17       		.byte	23
+ 583 022b 02       		.byte	2
+ 584 022c 1B       		.byte	27
+ 585 022d 04       		.byte	4
+ 586 022e 1C       		.byte	28
+ 587 022f 0E       		.byte	14
+ 588 0230 1D       		.byte	29
+ 589 0231 0D       		.byte	13
+ 590 0232 1E       		.byte	30
+ 591 0233 01       		.byte	1
+ 592 0234 1F       		.byte	31
+ 593 0235 02       		.byte	2
+ 594 0236 21       		.byte	33
+ 595 0237 04       		.byte	4
+ 596 0238 26       		.byte	38
+ 597 0239 03       		.byte	3
+ 598 023a 30       		.byte	48
+ 599 023b 02       		.byte	2
+ 600 023c 31       		.byte	49
+ 601 023d 01       		.byte	1
+ 602 023e 32       		.byte	50
+ 603 023f 01       		.byte	1
+ 604 0240 33       		.byte	51
+ 605 0241 02       		.byte	2
+ 606 0242 34       		.byte	52
+ 607 0243 08       		.byte	8
+ 608 0244 35       		.byte	53
+ 609 0245 08       		.byte	8
+ 610 0246 36       		.byte	54
+ 611 0247 04       		.byte	4
+ 612 0248 37       		.byte	55
+ 613 0249 04       		.byte	4
+ 614 024a 3E       		.byte	62
+ 615 024b 55       		.byte	85
+ 616 024c 3F       		.byte	63
+ 617 024d 55       		.byte	85
+ 618 024e 58       		.byte	88
+ 619 024f 04       		.byte	4
+ 620 0250 59       		.byte	89
+ 621 0251 04       		.byte	4
+ 622 0252 5F       		.byte	95
+ 623 0253 01       		.byte	1
+ 624 0254 82       		.byte	-126
+ 625 0255 08       		.byte	8
+ 626 0256 84       		.byte	-124
+ 627 0257 08       		.byte	8
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 12
+
+
+ 628 0258 8B       		.byte	-117
+ 629 0259 06       		.byte	6
+ 630 025a 8C       		.byte	-116
+ 631 025b 08       		.byte	8
+ 632 025c 8F       		.byte	-113
+ 633 025d 01       		.byte	1
+ 634 025e 90       		.byte	-112
+ 635 025f 03       		.byte	3
+ 636 0260 92       		.byte	-110
+ 637 0261 04       		.byte	4
+ 638 0262 94       		.byte	-108
+ 639 0263 03       		.byte	3
+ 640 0264 95       		.byte	-107
+ 641 0265 06       		.byte	6
+ 642 0266 96       		.byte	-106
+ 643 0267 04       		.byte	4
+ 644 0268 9B       		.byte	-101
+ 645 0269 01       		.byte	1
+ 646 026a 9C       		.byte	-100
+ 647 026b 0E       		.byte	14
+ 648 026c 9D       		.byte	-99
+ 649 026d 04       		.byte	4
+ 650 026e 9E       		.byte	-98
+ 651 026f 01       		.byte	1
+ 652 0270 9F       		.byte	-97
+ 653 0271 03       		.byte	3
+ 654 0272 A1       		.byte	-95
+ 655 0273 01       		.byte	1
+ 656 0274 A4       		.byte	-92
+ 657 0275 05       		.byte	5
+ 658 0276 A6       		.byte	-90
+ 659 0277 02       		.byte	2
+ 660 0278 AD       		.byte	-83
+ 661 0279 04       		.byte	4
+ 662 027a AF       		.byte	-81
+ 663 027b 02       		.byte	2
+ 664 027c B0       		.byte	-80
+ 665 027d 01       		.byte	1
+ 666 027e B2       		.byte	-78
+ 667 027f 04       		.byte	4
+ 668 0280 B3       		.byte	-77
+ 669 0281 04       		.byte	4
+ 670 0282 B4       		.byte	-76
+ 671 0283 08       		.byte	8
+ 672 0284 B5       		.byte	-75
+ 673 0285 01       		.byte	1
+ 674 0286 B6       		.byte	-74
+ 675 0287 02       		.byte	2
+ 676 0288 B7       		.byte	-73
+ 677 0289 02       		.byte	2
+ 678 028a BE       		.byte	-66
+ 679 028b 55       		.byte	85
+ 680 028c BF       		.byte	-65
+ 681 028d 54       		.byte	84
+ 682 028e D8       		.byte	-40
+ 683 028f 04       		.byte	4
+ 684 0290 D9       		.byte	-39
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 13
+
+
+ 685 0291 04       		.byte	4
+ 686 0292 DF       		.byte	-33
+ 687 0293 01       		.byte	1
+ 688 0294 02       		.byte	2
+ 689 0295 41       		.byte	65
+ 690 0296 03       		.byte	3
+ 691 0297 10       		.byte	16
+ 692 0298 04       		.byte	4
+ 693 0299 82       		.byte	-126
+ 694 029a 05       		.byte	5
+ 695 029b 01       		.byte	1
+ 696 029c 06       		.byte	6
+ 697 029d 43       		.byte	67
+ 698 029e 07       		.byte	7
+ 699 029f 10       		.byte	16
+ 700 02a0 08       		.byte	8
+ 701 02a1 40       		.byte	64
+ 702 02a2 0B       		.byte	11
+ 703 02a3 50       		.byte	80
+ 704 02a4 0C       		.byte	12
+ 705 02a5 40       		.byte	64
+ 706 02a6 0F       		.byte	15
+ 707 02a7 50       		.byte	80
+ 708 02a8 13       		.byte	19
+ 709 02a9 08       		.byte	8
+ 710 02aa 17       		.byte	23
+ 711 02ab 08       		.byte	8
+ 712 02ac 19       		.byte	25
+ 713 02ad 08       		.byte	8
+ 714 02ae 1A       		.byte	26
+ 715 02af 40       		.byte	64
+ 716 02b0 1B       		.byte	27
+ 717 02b1 60       		.byte	96
+ 718 02b2 1C       		.byte	28
+ 719 02b3 80       		.byte	-128
+ 720 02b4 1E       		.byte	30
+ 721 02b5 02       		.byte	2
+ 722 02b6 1F       		.byte	31
+ 723 02b7 14       		.byte	20
+ 724 02b8 20       		.byte	32
+ 725 02b9 08       		.byte	8
+ 726 02ba 21       		.byte	33
+ 727 02bb 88       		.byte	-120
+ 728 02bc 24       		.byte	36
+ 729 02bd 04       		.byte	4
+ 730 02be 26       		.byte	38
+ 731 02bf 88       		.byte	-120
+ 732 02c0 27       		.byte	39
+ 733 02c1 40       		.byte	64
+ 734 02c2 2A       		.byte	42
+ 735 02c3 81       		.byte	-127
+ 736 02c4 2E       		.byte	46
+ 737 02c5 02       		.byte	2
+ 738 02c6 30       		.byte	48
+ 739 02c7 44       		.byte	68
+ 740 02c8 33       		.byte	51
+ 741 02c9 10       		.byte	16
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 14
+
+
+ 742 02ca 34       		.byte	52
+ 743 02cb 44       		.byte	68
+ 744 02cc 35       		.byte	53
+ 745 02cd 01       		.byte	1
+ 746 02ce 37       		.byte	55
+ 747 02cf 18       		.byte	24
+ 748 02d0 3A       		.byte	58
+ 749 02d1 40       		.byte	64
+ 750 02d2 3B       		.byte	59
+ 751 02d3 10       		.byte	16
+ 752 02d4 3E       		.byte	62
+ 753 02d5 80       		.byte	-128
+ 754 02d6 3F       		.byte	63
+ 755 02d7 50       		.byte	80
+ 756 02d8 80       		.byte	-128
+ 757 02d9 04       		.byte	4
+ 758 02da 82       		.byte	-126
+ 759 02db 80       		.byte	-128
+ 760 02dc 86       		.byte	-122
+ 761 02dd 08       		.byte	8
+ 762 02de 87       		.byte	-121
+ 763 02df 20       		.byte	32
+ 764 02e0 88       		.byte	-120
+ 765 02e1 04       		.byte	4
+ 766 02e2 8B       		.byte	-117
+ 767 02e3 04       		.byte	4
+ 768 02e4 8D       		.byte	-115
+ 769 02e5 08       		.byte	8
+ 770 02e6 90       		.byte	-112
+ 771 02e7 82       		.byte	-126
+ 772 02e8 93       		.byte	-109
+ 773 02e9 50       		.byte	80
+ 774 02ea 97       		.byte	-105
+ 775 02eb 20       		.byte	32
+ 776 02ec 98       		.byte	-104
+ 777 02ed 40       		.byte	64
+ 778 02ee 9B       		.byte	-101
+ 779 02ef 18       		.byte	24
+ 780 02f0 A8       		.byte	-88
+ 781 02f1 04       		.byte	4
+ 782 02f2 AB       		.byte	-85
+ 783 02f3 04       		.byte	4
+ 784 02f4 B0       		.byte	-80
+ 785 02f5 01       		.byte	1
+ 786 02f6 C0       		.byte	-64
+ 787 02f7 BD       		.byte	-67
+ 788 02f8 C2       		.byte	-62
+ 789 02f9 BD       		.byte	-67
+ 790 02fa C4       		.byte	-60
+ 791 02fb 24       		.byte	36
+ 792 02fc CA       		.byte	-54
+ 793 02fd 89       		.byte	-119
+ 794 02fe CC       		.byte	-52
+ 795 02ff FE       		.byte	-2
+ 796 0300 CE       		.byte	-50
+ 797 0301 3C       		.byte	60
+ 798 0302 E2       		.byte	-30
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 15
+
+
+ 799 0303 E0       		.byte	-32
+ 800 0304 EA       		.byte	-22
+ 801 0305 88       		.byte	-120
+ 802 0306 EA       		.byte	-22
+ 803 0307 08       		.byte	8
+ 804 0308 50       		.byte	80
+ 805 0309 80       		.byte	-128
+ 806 030a 54       		.byte	84
+ 807 030b 08       		.byte	8
+ 808 030c 58       		.byte	88
+ 809 030d 10       		.byte	16
+ 810 030e 5D       		.byte	93
+ 811 030f 04       		.byte	4
+ 812 0310 5F       		.byte	95
+ 813 0311 40       		.byte	64
+ 814 0312 66       		.byte	102
+ 815 0313 04       		.byte	4
+ 816 0314 D4       		.byte	-44
+ 817 0315 E0       		.byte	-32
+ 818 0316 D6       		.byte	-42
+ 819 0317 A0       		.byte	-96
+ 820 0318 D8       		.byte	-40
+ 821 0319 80       		.byte	-128
+ 822 031a 53       		.byte	83
+ 823 031b 20       		.byte	32
+ 824 031c 54       		.byte	84
+ 825 031d 20       		.byte	32
+ 826 031e 5A       		.byte	90
+ 827 031f 20       		.byte	32
+ 828 0320 5B       		.byte	91
+ 829 0321 01       		.byte	1
+ 830 0322 5D       		.byte	93
+ 831 0323 10       		.byte	16
+ 832 0324 60       		.byte	96
+ 833 0325 20       		.byte	32
+ 834 0326 65       		.byte	101
+ 835 0327 88       		.byte	-120
+ 836 0328 84       		.byte	-124
+ 837 0329 80       		.byte	-128
+ 838 032a 8C       		.byte	-116
+ 839 032b 08       		.byte	8
+ 840 032c 95       		.byte	-107
+ 841 032d 04       		.byte	4
+ 842 032e 97       		.byte	-105
+ 843 032f 40       		.byte	64
+ 844 0330 9C       		.byte	-100
+ 845 0331 10       		.byte	16
+ 846 0332 9E       		.byte	-98
+ 847 0333 04       		.byte	4
+ 848 0334 A4       		.byte	-92
+ 849 0335 88       		.byte	-120
+ 850 0336 D4       		.byte	-44
+ 851 0337 E0       		.byte	-32
+ 852 0338 D6       		.byte	-42
+ 853 0339 E0       		.byte	-32
+ 854 033a D8       		.byte	-40
+ 855 033b C0       		.byte	-64
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 16
+
+
+ 856 033c E2       		.byte	-30
+ 857 033d 10       		.byte	16
+ 858 033e 3C       		.byte	60
+ 859 033f 20       		.byte	32
+ 860 0340 51       		.byte	81
+ 861 0341 04       		.byte	4
+ 862 0342 57       		.byte	87
+ 863 0343 04       		.byte	4
+ 864 0344 8B       		.byte	-117
+ 865 0345 40       		.byte	64
+ 866 0346 95       		.byte	-107
+ 867 0347 14       		.byte	20
+ 868 0348 96       		.byte	-106
+ 869 0349 20       		.byte	32
+ 870 034a 97       		.byte	-105
+ 871 034b 40       		.byte	64
+ 872 034c 9C       		.byte	-100
+ 873 034d 20       		.byte	32
+ 874 034e 9D       		.byte	-99
+ 875 034f 88       		.byte	-120
+ 876 0350 9E       		.byte	-98
+ 877 0351 04       		.byte	4
+ 878 0352 9F       		.byte	-97
+ 879 0353 01       		.byte	1
+ 880 0354 A7       		.byte	-89
+ 881 0355 20       		.byte	32
+ 882 0356 B0       		.byte	-80
+ 883 0357 30       		.byte	48
+ 884 0358 CE       		.byte	-50
+ 885 0359 20       		.byte	32
+ 886 035a D4       		.byte	-44
+ 887 035b 60       		.byte	96
+ 888 035c 80       		.byte	-128
+ 889 035d 08       		.byte	8
+ 890 035e 84       		.byte	-124
+ 891 035f 10       		.byte	16
+ 892 0360 85       		.byte	-123
+ 893 0361 10       		.byte	16
+ 894 0362 86       		.byte	-122
+ 895 0363 10       		.byte	16
+ 896 0364 8B       		.byte	-117
+ 897 0365 01       		.byte	1
+ 898 0366 8F       		.byte	-113
+ 899 0367 04       		.byte	4
+ 900 0368 95       		.byte	-107
+ 901 0369 1C       		.byte	28
+ 902 036a 96       		.byte	-106
+ 903 036b 20       		.byte	32
+ 904 036c 9D       		.byte	-99
+ 905 036d 88       		.byte	-120
+ 906 036e 9E       		.byte	-98
+ 907 036f 04       		.byte	4
+ 908 0370 9F       		.byte	-97
+ 909 0371 01       		.byte	1
+ 910 0372 A4       		.byte	-92
+ 911 0373 10       		.byte	16
+ 912 0374 A7       		.byte	-89
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 17
+
+
+ 913 0375 04       		.byte	4
+ 914 0376 AF       		.byte	-81
+ 915 0377 20       		.byte	32
+ 916 0378 B0       		.byte	-80
+ 917 0379 20       		.byte	32
+ 918 037a E2       		.byte	-30
+ 919 037b 40       		.byte	64
+ 920 037c E6       		.byte	-26
+ 921 037d 70       		.byte	112
+ 922 037e EE       		.byte	-18
+ 923 037f 10       		.byte	16
+ 924 0380 10       		.byte	16
+ 925 0381 10       		.byte	16
+ 926 0382 15       		.byte	21
+ 927 0383 01       		.byte	1
+ 928 0384 C4       		.byte	-60
+ 929 0385 0C       		.byte	12
+ 930 0386 52       		.byte	82
+ 931 0387 40       		.byte	64
+ 932 0388 55       		.byte	85
+ 933 0389 10       		.byte	16
+ 934 038a 56       		.byte	86
+ 935 038b 01       		.byte	1
+ 936 038c 5B       		.byte	91
+ 937 038d 80       		.byte	-128
+ 938 038e 61       		.byte	97
+ 939 038f 20       		.byte	32
+ 940 0390 63       		.byte	99
+ 941 0391 01       		.byte	1
+ 942 0392 65       		.byte	101
+ 943 0393 80       		.byte	-128
+ 944 0394 67       		.byte	103
+ 945 0395 40       		.byte	64
+ 946 0396 91       		.byte	-111
+ 947 0397 01       		.byte	1
+ 948 0398 98       		.byte	-104
+ 949 0399 10       		.byte	16
+ 950 039a D4       		.byte	-44
+ 951 039b 07       		.byte	7
+ 952 039c D6       		.byte	-42
+ 953 039d 07       		.byte	7
+ 954 039e D8       		.byte	-40
+ 955 039f 03       		.byte	3
+ 956 03a0 80       		.byte	-128
+ 957 03a1 04       		.byte	4
+ 958 03a2 91       		.byte	-111
+ 959 03a3 01       		.byte	1
+ 960 03a4 97       		.byte	-105
+ 961 03a5 41       		.byte	65
+ 962 03a6 98       		.byte	-104
+ 963 03a7 10       		.byte	16
+ 964 03a8 9D       		.byte	-99
+ 965 03a9 80       		.byte	-128
+ 966 03aa 9E       		.byte	-98
+ 967 03ab 41       		.byte	65
+ 968 03ac 9F       		.byte	-97
+ 969 03ad 80       		.byte	-128
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 18
+
+
+ 970 03ae A5       		.byte	-91
+ 971 03af 30       		.byte	48
+ 972 03b0 90       		.byte	-112
+ 973 03b1 04       		.byte	4
+ 974 03b2 91       		.byte	-111
+ 975 03b3 01       		.byte	1
+ 976 03b4 97       		.byte	-105
+ 977 03b5 41       		.byte	65
+ 978 03b6 98       		.byte	-104
+ 979 03b7 10       		.byte	16
+ 980 03b8 9D       		.byte	-99
+ 981 03b9 80       		.byte	-128
+ 982 03ba 9E       		.byte	-98
+ 983 03bb 41       		.byte	65
+ 984 03bc 9F       		.byte	-97
+ 985 03bd 80       		.byte	-128
+ 986 03be A5       		.byte	-91
+ 987 03bf 30       		.byte	48
+ 988 03c0 52       		.byte	82
+ 989 03c1 80       		.byte	-128
+ 990 03c2 55       		.byte	85
+ 991 03c3 01       		.byte	1
+ 992 03c4 56       		.byte	86
+ 993 03c5 10       		.byte	16
+ 994 03c6 58       		.byte	88
+ 995 03c7 40       		.byte	64
+ 996 03c8 82       		.byte	-126
+ 997 03c9 30       		.byte	48
+ 998 03ca 85       		.byte	-123
+ 999 03cb 0C       		.byte	12
+ 1000 03cc 88       		.byte	-120
+ 1001 03cd 40       		.byte	64
+ 1002 03ce 89       		.byte	-119
+ 1003 03cf 04       		.byte	4
+ 1004 03d0 8D       		.byte	-115
+ 1005 03d1 02       		.byte	2
+ 1006 03d2 95       		.byte	-107
+ 1007 03d3 0C       		.byte	12
+ 1008 03d4 96       		.byte	-106
+ 1009 03d5 20       		.byte	32
+ 1010 03d6 98       		.byte	-104
+ 1011 03d7 18       		.byte	24
+ 1012 03d8 9A       		.byte	-102
+ 1013 03d9 10       		.byte	16
+ 1014 03da 9D       		.byte	-99
+ 1015 03db 08       		.byte	8
+ 1016 03dc A2       		.byte	-94
+ 1017 03dd 80       		.byte	-128
+ 1018 03de A9       		.byte	-87
+ 1019 03df 80       		.byte	-128
+ 1020 03e0 AA       		.byte	-86
+ 1021 03e1 04       		.byte	4
+ 1022 03e2 AC       		.byte	-84
+ 1023 03e3 10       		.byte	16
+ 1024 03e4 B2       		.byte	-78
+ 1025 03e5 80       		.byte	-128
+ 1026 03e6 D4       		.byte	-44
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 19
+
+
+ 1027 03e7 E0       		.byte	-32
+ 1028 03e8 D6       		.byte	-42
+ 1029 03e9 20       		.byte	32
+ 1030 03ea E2       		.byte	-30
+ 1031 03eb 30       		.byte	48
+ 1032 03ec E6       		.byte	-26
+ 1033 03ed 30       		.byte	48
+ 1034 03ee EA       		.byte	-22
+ 1035 03ef B0       		.byte	-80
+ 1036 03f0 53       		.byte	83
+ 1037 03f1 10       		.byte	16
+ 1038 03f2 56       		.byte	86
+ 1039 03f3 10       		.byte	16
+ 1040 03f4 58       		.byte	88
+ 1041 03f5 08       		.byte	8
+ 1042 03f6 59       		.byte	89
+ 1043 03f7 80       		.byte	-128
+ 1044 03f8 5D       		.byte	93
+ 1045 03f9 02       		.byte	2
+ 1046 03fa 5F       		.byte	95
+ 1047 03fb 20       		.byte	32
+ 1048 03fc 61       		.byte	97
+ 1049 03fd 01       		.byte	1
+ 1050 03fe 64       		.byte	100
+ 1051 03ff 10       		.byte	16
+ 1052 0400 72       		.byte	114
+ 1053 0401 20       		.byte	32
+ 1054 0402 7C       		.byte	124
+ 1055 0403 80       		.byte	-128
+ 1056 0404 86       		.byte	-122
+ 1057 0405 10       		.byte	16
+ 1058 0406 8C       		.byte	-116
+ 1059 0407 80       		.byte	-128
+ 1060 0408 8F       		.byte	-113
+ 1061 0409 20       		.byte	32
+ 1062 040a 93       		.byte	-109
+ 1063 040b 20       		.byte	32
+ 1064 040c 98       		.byte	-104
+ 1065 040d 18       		.byte	24
+ 1066 040e 99       		.byte	-103
+ 1067 040f 83       		.byte	-125
+ 1068 0410 9A       		.byte	-102
+ 1069 0411 20       		.byte	32
+ 1070 0412 A9       		.byte	-87
+ 1071 0413 01       		.byte	1
+ 1072 0414 B3       		.byte	-77
+ 1073 0415 10       		.byte	16
+ 1074 0416 B5       		.byte	-75
+ 1075 0417 81       		.byte	-127
+ 1076 0418 D4       		.byte	-44
+ 1077 0419 E0       		.byte	-32
+ 1078 041a D6       		.byte	-42
+ 1079 041b E0       		.byte	-32
+ 1080 041c D8       		.byte	-40
+ 1081 041d C0       		.byte	-64
+ 1082 041e DC       		.byte	-36
+ 1083 041f 80       		.byte	-128
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 20
+
+
+ 1084 0420 DE       		.byte	-34
+ 1085 0421 20       		.byte	32
+ 1086 0422 E2       		.byte	-30
+ 1087 0423 40       		.byte	64
+ 1088 0424 EA       		.byte	-22
+ 1089 0425 20       		.byte	32
+ 1090 0426 0B       		.byte	11
+ 1091 0427 01       		.byte	1
+ 1092 0428 0D       		.byte	13
+ 1093 0429 20       		.byte	32
+ 1094 042a 0F       		.byte	15
+ 1095 042b 40       		.byte	64
+ 1096 042c 10       		.byte	16
+ 1097 042d 40       		.byte	64
+ 1098 042e 13       		.byte	19
+ 1099 042f 10       		.byte	16
+ 1100 0430 14       		.byte	20
+ 1101 0431 80       		.byte	-128
+ 1102 0432 78       		.byte	120
+ 1103 0433 10       		.byte	16
+ 1104 0434 7D       		.byte	125
+ 1105 0435 01       		.byte	1
+ 1106 0436 90       		.byte	-112
+ 1107 0437 04       		.byte	4
+ 1108 0438 91       		.byte	-111
+ 1109 0439 01       		.byte	1
+ 1110 043a 97       		.byte	-105
+ 1111 043b 51       		.byte	81
+ 1112 043c 98       		.byte	-104
+ 1113 043d 10       		.byte	16
+ 1114 043e 9D       		.byte	-99
+ 1115 043f 80       		.byte	-128
+ 1116 0440 9E       		.byte	-98
+ 1117 0441 41       		.byte	65
+ 1118 0442 9F       		.byte	-97
+ 1119 0443 80       		.byte	-128
+ 1120 0444 A5       		.byte	-91
+ 1121 0445 30       		.byte	48
+ 1122 0446 AF       		.byte	-81
+ 1123 0447 10       		.byte	16
+ 1124 0448 C2       		.byte	-62
+ 1125 0449 07       		.byte	7
+ 1126 044a C4       		.byte	-60
+ 1127 044b 0E       		.byte	14
+ 1128 044c DE       		.byte	-34
+ 1129 044d 03       		.byte	3
+ 1130 044e 01       		.byte	1
+ 1131 044f 80       		.byte	-128
+ 1132 0450 02       		.byte	2
+ 1133 0451 40       		.byte	64
+ 1134 0452 06       		.byte	6
+ 1135 0453 01       		.byte	1
+ 1136 0454 07       		.byte	7
+ 1137 0455 80       		.byte	-128
+ 1138 0456 09       		.byte	9
+ 1139 0457 10       		.byte	16
+ 1140 0458 60       		.byte	96
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 21
+
+
+ 1141 0459 04       		.byte	4
+ 1142 045a 78       		.byte	120
+ 1143 045b 40       		.byte	64
+ 1144 045c 7C       		.byte	124
+ 1145 045d 80       		.byte	-128
+ 1146 045e 90       		.byte	-112
+ 1147 045f 04       		.byte	4
+ 1148 0460 98       		.byte	-104
+ 1149 0461 C0       		.byte	-64
+ 1150 0462 9D       		.byte	-99
+ 1151 0463 80       		.byte	-128
+ 1152 0464 9E       		.byte	-98
+ 1153 0465 41       		.byte	65
+ 1154 0466 9F       		.byte	-97
+ 1155 0467 80       		.byte	-128
+ 1156 0468 A5       		.byte	-91
+ 1157 0469 10       		.byte	16
+ 1158 046a C0       		.byte	-64
+ 1159 046b 0F       		.byte	15
+ 1160 046c C2       		.byte	-62
+ 1161 046d 02       		.byte	2
+ 1162 046e D8       		.byte	-40
+ 1163 046f 02       		.byte	2
+ 1164 0470 DC       		.byte	-36
+ 1165 0471 01       		.byte	1
+ 1166 0472 DE       		.byte	-34
+ 1167 0473 04       		.byte	4
+ 1168 0474 00       		.byte	0
+ 1169 0475 01       		.byte	1
+ 1170 0476 0A       		.byte	10
+ 1171 0477 01       		.byte	1
+ 1172 0478 03       		.byte	3
+ 1173 0479 C0       		.byte	-64
+ 1174 047a 00       		.byte	0
+ 1175 047b 00       		.byte	0
+ 1176 047c 2C       		.byte	44
+ 1177 047d 39       		.byte	57
+ 1178 047e 00       		.byte	0
+ 1179 047f 00       		.byte	0
+ 1180 0480 30       		.byte	48
+ 1181 0481 00       		.byte	0
+ 1182 0482 00       		.byte	0
+ 1183 0483 00       		.byte	0
+ 1184 0484 00       		.byte	0
+ 1185 0485 FF       		.byte	-1
+ 1186 0486 FF       		.byte	-1
+ 1187 0487 00       		.byte	0
+ 1188 0488 FF       		.byte	-1
+ 1189 0489 00       		.byte	0
+ 1190 048a 00       		.byte	0
+ 1191 048b 00       		.byte	0
+ 1192 048c 30       		.byte	48
+ 1193 048d 00       		.byte	0
+ 1194 048e 00       		.byte	0
+ 1195 048f 0F       		.byte	15
+ 1196 0490 3F       		.byte	63
+ 1197 0491 00       		.byte	0
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 22
+
+
+ 1198 0492 3F       		.byte	63
+ 1199 0493 00       		.byte	0
+ 1200 0494 00       		.byte	0
+ 1201 0495 00       		.byte	0
+ 1202 0496 00       		.byte	0
+ 1203 0497 00       		.byte	0
+ 1204 0498 00       		.byte	0
+ 1205 0499 0F       		.byte	15
+ 1206 049a 0F       		.byte	15
+ 1207 049b 00       		.byte	0
+ 1208 049c 0F       		.byte	15
+ 1209 049d 00       		.byte	0
+ 1210 049e 00       		.byte	0
+ 1211 049f 00       		.byte	0
+ 1212 04a0 E0       		.byte	-32
+ 1213 04a1 00       		.byte	0
+ 1214 04a2 00       		.byte	0
+ 1215 04a3 E0       		.byte	-32
+ 1216 04a4 00       		.byte	0
+ 1217 04a5 00       		.byte	0
+ 1218 04a6 00       		.byte	0
+ 1219 04a7 00       		.byte	0
+ 1220 04a8 00       		.byte	0
+ 1221 04a9 00       		.byte	0
+ 1222 04aa 00       		.byte	0
+ 1223 04ab 00       		.byte	0
+ 1224 04ac FF       		.byte	-1
+ 1225 04ad 00       		.byte	0
+ 1226 04ae 80       		.byte	-128
+ 1227 04af FF       		.byte	-1
+ 1228 04b0 80       		.byte	-128
+ 1229 04b1 00       		.byte	0
+ 1230 04b2 FF       		.byte	-1
+ 1231 04b3 00       		.byte	0
+ 1232 04b4 00       		.byte	0
+ 1233 04b5 00       		.byte	0
+ 1234 04b6 00       		.byte	0
+ 1235 04b7 00       		.byte	0
+ 1236 04b8 00       		.byte	0
+ 1237 04b9 FF       		.byte	-1
+ 1238 04ba FF       		.byte	-1
+ 1239 04bb 00       		.byte	0
+ 1240 04bc FF       		.byte	-1
+ 1241 04bd 00       		.byte	0
+ 1242 04be 00       		.byte	0
+ 1243 04bf 00       		.byte	0
+ 1244 04c0 00       		.byte	0
+ 1245 04c1 3F       		.byte	63
+ 1246 04c2 3F       		.byte	63
+ 1247 04c3 00       		.byte	0
+ 1248 04c4 3F       		.byte	63
+ 1249 04c5 00       		.byte	0
+ 1250 04c6 00       		.byte	0
+ 1251 04c7 00       		.byte	0
+ 1252 04c8 0D       		.byte	13
+ 1253 04c9 00       		.byte	0
+ 1254 04ca 42       		.byte	66
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 23
+
+
+ 1255 04cb 1D       		.byte	29
+ 1256 04cc 10       		.byte	16
+ 1257 04cd 00       		.byte	0
+ 1258 04ce 10       		.byte	16
+ 1259 04cf 00       		.byte	0
+ 1260 04d0 00       		.byte	0
+ 1261 04d1 00       		.byte	0
+ 1262 04d2 00       		.byte	0
+ 1263 04d3 00       		.byte	0
+ 1264              		.section	.cywolatch,"a",%progbits
+ 1265              		.align	2
+ 1266              		.type	cy_meta_wonvl, %object
+ 1267              		.size	cy_meta_wonvl, 4
+ 1268              	cy_meta_wonvl:
+ 1269 0000 BC       		.byte	-68
+ 1270 0001 90       		.byte	-112
+ 1271 0002 AC       		.byte	-84
+ 1272 0003 AF       		.byte	-81
+ 1273              		.section	.cycustnvl,"a",%progbits
+ 1274              		.align	2
+ 1275              		.type	cy_meta_custnvl, %object
+ 1276              		.size	cy_meta_custnvl, 4
+ 1277              	cy_meta_custnvl:
+ 1278 0000 00       		.byte	0
+ 1279 0001 00       		.byte	0
+ 1280 0002 40       		.byte	64
+ 1281 0003 05       		.byte	5
+ 1282              		.section	.cymeta,"a",%progbits
+ 1283              		.align	2
+ 1284              		.type	cy_metadata, %object
+ 1285              		.size	cy_metadata, 12
+ 1286              	cy_metadata:
+ 1287 0000 00       		.byte	0
+ 1288 0001 01       		.byte	1
+ 1289 0002 2E       		.byte	46
+ 1290 0003 13       		.byte	19
+ 1291 0004 30       		.byte	48
+ 1292 0005 69       		.byte	105
+ 1293 0006 00       		.byte	0
+ 1294 0007 01       		.byte	1
+ 1295 0008 00       		.byte	0
+ 1296 0009 00       		.byte	0
+ 1297 000a 00       		.byte	0
+ 1298 000b 00       		.byte	0
+ 1299              		.section	.cyflashprotect,"a",%progbits
+ 1300              		.align	2
+ 1301              		.type	cy_meta_flashprotect, %object
+ 1302              		.size	cy_meta_flashprotect, 128
+ 1303              	cy_meta_flashprotect:
+ 1304 0000 00000000 		.space	128
+ 1304      00000000 
+ 1304      00000000 
+ 1304      00000000 
+ 1304      00000000 
+ 1305              		.text
+ 1306              	.Letext0:
+ 1307              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 24
+
+
+ 1308              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 1309              		.section	.debug_info,"",%progbits
+ 1310              	.Ldebug_info0:
+ 1311 0000 37010000 		.4byte	0x137
+ 1312 0004 0400     		.2byte	0x4
+ 1313 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1314 000a 04       		.byte	0x4
+ 1315 000b 01       		.uleb128 0x1
+ 1316 000c 94000000 		.4byte	.LASF18
+ 1317 0010 01       		.byte	0x1
+ 1318 0011 00000000 		.4byte	.LASF19
+ 1319 0015 AA010000 		.4byte	.LASF20
+ 1320 0019 00000000 		.4byte	.Ldebug_line0
+ 1321 001d 02       		.uleb128 0x2
+ 1322 001e 01       		.byte	0x1
+ 1323 001f 06       		.byte	0x6
+ 1324 0020 9E010000 		.4byte	.LASF0
+ 1325 0024 02       		.uleb128 0x2
+ 1326 0025 01       		.byte	0x1
+ 1327 0026 08       		.byte	0x8
+ 1328 0027 38000000 		.4byte	.LASF1
+ 1329 002b 02       		.uleb128 0x2
+ 1330 002c 02       		.byte	0x2
+ 1331 002d 05       		.byte	0x5
+ 1332 002e 85010000 		.4byte	.LASF2
+ 1333 0032 02       		.uleb128 0x2
+ 1334 0033 02       		.byte	0x2
+ 1335 0034 07       		.byte	0x7
+ 1336 0035 58000000 		.4byte	.LASF3
+ 1337 0039 02       		.uleb128 0x2
+ 1338 003a 04       		.byte	0x4
+ 1339 003b 05       		.byte	0x5
+ 1340 003c 95010000 		.4byte	.LASF4
+ 1341 0040 02       		.uleb128 0x2
+ 1342 0041 04       		.byte	0x4
+ 1343 0042 07       		.byte	0x7
+ 1344 0043 46000000 		.4byte	.LASF5
+ 1345 0047 02       		.uleb128 0x2
+ 1346 0048 08       		.byte	0x8
+ 1347 0049 05       		.byte	0x5
+ 1348 004a 72010000 		.4byte	.LASF6
+ 1349 004e 02       		.uleb128 0x2
+ 1350 004f 08       		.byte	0x8
+ 1351 0050 07       		.byte	0x7
+ 1352 0051 2F010000 		.4byte	.LASF7
+ 1353 0055 03       		.uleb128 0x3
+ 1354 0056 04       		.byte	0x4
+ 1355 0057 05       		.byte	0x5
+ 1356 0058 696E7400 		.ascii	"int\000"
+ 1357 005c 02       		.uleb128 0x2
+ 1358 005d 04       		.byte	0x4
+ 1359 005e 07       		.byte	0x7
+ 1360 005f 22010000 		.4byte	.LASF8
+ 1361 0063 04       		.uleb128 0x4
+ 1362 0064 8F010000 		.4byte	.LASF21
+ 1363 0068 02       		.byte	0x2
+ 1364 0069 C2       		.byte	0xc2
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 25
+
+
+ 1365 006a 24000000 		.4byte	0x24
+ 1366 006e 02       		.uleb128 0x2
+ 1367 006f 04       		.byte	0x4
+ 1368 0070 04       		.byte	0x4
+ 1369 0071 32000000 		.4byte	.LASF9
+ 1370 0075 02       		.uleb128 0x2
+ 1371 0076 08       		.byte	0x8
+ 1372 0077 04       		.byte	0x4
+ 1373 0078 6B000000 		.4byte	.LASF10
+ 1374 007c 02       		.uleb128 0x2
+ 1375 007d 01       		.byte	0x1
+ 1376 007e 08       		.byte	0x8
+ 1377 007f 80010000 		.4byte	.LASF11
+ 1378 0083 05       		.uleb128 0x5
+ 1379 0084 63000000 		.4byte	0x63
+ 1380 0088 94000000 		.4byte	0x94
+ 1381 008c 06       		.uleb128 0x6
+ 1382 008d 94000000 		.4byte	0x94
+ 1383 0091 D304     		.2byte	0x4d3
+ 1384 0093 00       		.byte	0
+ 1385 0094 02       		.uleb128 0x2
+ 1386 0095 04       		.byte	0x4
+ 1387 0096 07       		.byte	0x7
+ 1388 0097 69010000 		.4byte	.LASF12
+ 1389 009b 07       		.uleb128 0x7
+ 1390 009c 82000000 		.4byte	.LASF13
+ 1391 00a0 01       		.byte	0x1
+ 1392 00a1 1F       		.byte	0x1f
+ 1393 00a2 AC000000 		.4byte	0xac
+ 1394 00a6 05       		.uleb128 0x5
+ 1395 00a7 03       		.byte	0x3
+ 1396 00a8 00000000 		.4byte	cy_meta_configecc
+ 1397 00ac 08       		.uleb128 0x8
+ 1398 00ad 83000000 		.4byte	0x83
+ 1399 00b1 05       		.uleb128 0x5
+ 1400 00b2 63000000 		.4byte	0x63
+ 1401 00b6 C1000000 		.4byte	0xc1
+ 1402 00ba 09       		.uleb128 0x9
+ 1403 00bb 94000000 		.4byte	0x94
+ 1404 00bf 03       		.byte	0x3
+ 1405 00c0 00       		.byte	0
+ 1406 00c1 07       		.uleb128 0x7
+ 1407 00c2 72000000 		.4byte	.LASF14
+ 1408 00c6 01       		.byte	0x1
+ 1409 00c7 C7       		.byte	0xc7
+ 1410 00c8 D2000000 		.4byte	0xd2
+ 1411 00cc 05       		.uleb128 0x5
+ 1412 00cd 03       		.byte	0x3
+ 1413 00ce 00000000 		.4byte	cy_meta_custnvl
+ 1414 00d2 08       		.uleb128 0x8
+ 1415 00d3 B1000000 		.4byte	0xb1
+ 1416 00d7 07       		.uleb128 0x7
+ 1417 00d8 5B010000 		.4byte	.LASF15
+ 1418 00dc 01       		.byte	0x1
+ 1419 00dd D5       		.byte	0xd5
+ 1420 00de E8000000 		.4byte	0xe8
+ 1421 00e2 05       		.uleb128 0x5
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 26
+
+
+ 1422 00e3 03       		.byte	0x3
+ 1423 00e4 00000000 		.4byte	cy_meta_wonvl
+ 1424 00e8 08       		.uleb128 0x8
+ 1425 00e9 B1000000 		.4byte	0xb1
+ 1426 00ed 05       		.uleb128 0x5
+ 1427 00ee 63000000 		.4byte	0x63
+ 1428 00f2 FD000000 		.4byte	0xfd
+ 1429 00f6 09       		.uleb128 0x9
+ 1430 00f7 94000000 		.4byte	0x94
+ 1431 00fb 7F       		.byte	0x7f
+ 1432 00fc 00       		.byte	0
+ 1433 00fd 07       		.uleb128 0x7
+ 1434 00fe 46010000 		.4byte	.LASF16
+ 1435 0102 01       		.byte	0x1
+ 1436 0103 E3       		.byte	0xe3
+ 1437 0104 0E010000 		.4byte	0x10e
+ 1438 0108 05       		.uleb128 0x5
+ 1439 0109 03       		.byte	0x3
+ 1440 010a 00000000 		.4byte	cy_meta_flashprotect
+ 1441 010e 08       		.uleb128 0x8
+ 1442 010f ED000000 		.4byte	0xed
+ 1443 0113 05       		.uleb128 0x5
+ 1444 0114 63000000 		.4byte	0x63
+ 1445 0118 23010000 		.4byte	0x123
+ 1446 011c 09       		.uleb128 0x9
+ 1447 011d 94000000 		.4byte	0x94
+ 1448 0121 0B       		.byte	0xb
+ 1449 0122 00       		.byte	0
+ 1450 0123 0A       		.uleb128 0xa
+ 1451 0124 26000000 		.4byte	.LASF17
+ 1452 0128 01       		.byte	0x1
+ 1453 0129 0001     		.2byte	0x100
+ 1454 012b 35010000 		.4byte	0x135
+ 1455 012f 05       		.uleb128 0x5
+ 1456 0130 03       		.byte	0x3
+ 1457 0131 00000000 		.4byte	cy_metadata
+ 1458 0135 08       		.uleb128 0x8
+ 1459 0136 13010000 		.4byte	0x113
+ 1460 013a 00       		.byte	0
+ 1461              		.section	.debug_abbrev,"",%progbits
+ 1462              	.Ldebug_abbrev0:
+ 1463 0000 01       		.uleb128 0x1
+ 1464 0001 11       		.uleb128 0x11
+ 1465 0002 01       		.byte	0x1
+ 1466 0003 25       		.uleb128 0x25
+ 1467 0004 0E       		.uleb128 0xe
+ 1468 0005 13       		.uleb128 0x13
+ 1469 0006 0B       		.uleb128 0xb
+ 1470 0007 03       		.uleb128 0x3
+ 1471 0008 0E       		.uleb128 0xe
+ 1472 0009 1B       		.uleb128 0x1b
+ 1473 000a 0E       		.uleb128 0xe
+ 1474 000b 10       		.uleb128 0x10
+ 1475 000c 17       		.uleb128 0x17
+ 1476 000d 00       		.byte	0
+ 1477 000e 00       		.byte	0
+ 1478 000f 02       		.uleb128 0x2
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 27
+
+
+ 1479 0010 24       		.uleb128 0x24
+ 1480 0011 00       		.byte	0
+ 1481 0012 0B       		.uleb128 0xb
+ 1482 0013 0B       		.uleb128 0xb
+ 1483 0014 3E       		.uleb128 0x3e
+ 1484 0015 0B       		.uleb128 0xb
+ 1485 0016 03       		.uleb128 0x3
+ 1486 0017 0E       		.uleb128 0xe
+ 1487 0018 00       		.byte	0
+ 1488 0019 00       		.byte	0
+ 1489 001a 03       		.uleb128 0x3
+ 1490 001b 24       		.uleb128 0x24
+ 1491 001c 00       		.byte	0
+ 1492 001d 0B       		.uleb128 0xb
+ 1493 001e 0B       		.uleb128 0xb
+ 1494 001f 3E       		.uleb128 0x3e
+ 1495 0020 0B       		.uleb128 0xb
+ 1496 0021 03       		.uleb128 0x3
+ 1497 0022 08       		.uleb128 0x8
+ 1498 0023 00       		.byte	0
+ 1499 0024 00       		.byte	0
+ 1500 0025 04       		.uleb128 0x4
+ 1501 0026 16       		.uleb128 0x16
+ 1502 0027 00       		.byte	0
+ 1503 0028 03       		.uleb128 0x3
+ 1504 0029 0E       		.uleb128 0xe
+ 1505 002a 3A       		.uleb128 0x3a
+ 1506 002b 0B       		.uleb128 0xb
+ 1507 002c 3B       		.uleb128 0x3b
+ 1508 002d 0B       		.uleb128 0xb
+ 1509 002e 49       		.uleb128 0x49
+ 1510 002f 13       		.uleb128 0x13
+ 1511 0030 00       		.byte	0
+ 1512 0031 00       		.byte	0
+ 1513 0032 05       		.uleb128 0x5
+ 1514 0033 01       		.uleb128 0x1
+ 1515 0034 01       		.byte	0x1
+ 1516 0035 49       		.uleb128 0x49
+ 1517 0036 13       		.uleb128 0x13
+ 1518 0037 01       		.uleb128 0x1
+ 1519 0038 13       		.uleb128 0x13
+ 1520 0039 00       		.byte	0
+ 1521 003a 00       		.byte	0
+ 1522 003b 06       		.uleb128 0x6
+ 1523 003c 21       		.uleb128 0x21
+ 1524 003d 00       		.byte	0
+ 1525 003e 49       		.uleb128 0x49
+ 1526 003f 13       		.uleb128 0x13
+ 1527 0040 2F       		.uleb128 0x2f
+ 1528 0041 05       		.uleb128 0x5
+ 1529 0042 00       		.byte	0
+ 1530 0043 00       		.byte	0
+ 1531 0044 07       		.uleb128 0x7
+ 1532 0045 34       		.uleb128 0x34
+ 1533 0046 00       		.byte	0
+ 1534 0047 03       		.uleb128 0x3
+ 1535 0048 0E       		.uleb128 0xe
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 28
+
+
+ 1536 0049 3A       		.uleb128 0x3a
+ 1537 004a 0B       		.uleb128 0xb
+ 1538 004b 3B       		.uleb128 0x3b
+ 1539 004c 0B       		.uleb128 0xb
+ 1540 004d 49       		.uleb128 0x49
+ 1541 004e 13       		.uleb128 0x13
+ 1542 004f 3F       		.uleb128 0x3f
+ 1543 0050 19       		.uleb128 0x19
+ 1544 0051 02       		.uleb128 0x2
+ 1545 0052 18       		.uleb128 0x18
+ 1546 0053 00       		.byte	0
+ 1547 0054 00       		.byte	0
+ 1548 0055 08       		.uleb128 0x8
+ 1549 0056 26       		.uleb128 0x26
+ 1550 0057 00       		.byte	0
+ 1551 0058 49       		.uleb128 0x49
+ 1552 0059 13       		.uleb128 0x13
+ 1553 005a 00       		.byte	0
+ 1554 005b 00       		.byte	0
+ 1555 005c 09       		.uleb128 0x9
+ 1556 005d 21       		.uleb128 0x21
+ 1557 005e 00       		.byte	0
+ 1558 005f 49       		.uleb128 0x49
+ 1559 0060 13       		.uleb128 0x13
+ 1560 0061 2F       		.uleb128 0x2f
+ 1561 0062 0B       		.uleb128 0xb
+ 1562 0063 00       		.byte	0
+ 1563 0064 00       		.byte	0
+ 1564 0065 0A       		.uleb128 0xa
+ 1565 0066 34       		.uleb128 0x34
+ 1566 0067 00       		.byte	0
+ 1567 0068 03       		.uleb128 0x3
+ 1568 0069 0E       		.uleb128 0xe
+ 1569 006a 3A       		.uleb128 0x3a
+ 1570 006b 0B       		.uleb128 0xb
+ 1571 006c 3B       		.uleb128 0x3b
+ 1572 006d 05       		.uleb128 0x5
+ 1573 006e 49       		.uleb128 0x49
+ 1574 006f 13       		.uleb128 0x13
+ 1575 0070 3F       		.uleb128 0x3f
+ 1576 0071 19       		.uleb128 0x19
+ 1577 0072 02       		.uleb128 0x2
+ 1578 0073 18       		.uleb128 0x18
+ 1579 0074 00       		.byte	0
+ 1580 0075 00       		.byte	0
+ 1581 0076 00       		.byte	0
+ 1582              		.section	.debug_aranges,"",%progbits
+ 1583 0000 14000000 		.4byte	0x14
+ 1584 0004 0200     		.2byte	0x2
+ 1585 0006 00000000 		.4byte	.Ldebug_info0
+ 1586 000a 04       		.byte	0x4
+ 1587 000b 00       		.byte	0
+ 1588 000c 0000     		.2byte	0
+ 1589 000e 0000     		.2byte	0
+ 1590 0010 00000000 		.4byte	0
+ 1591 0014 00000000 		.4byte	0
+ 1592              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 29
+
+
+ 1593              	.Ldebug_line0:
+ 1594 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 1594      02004900 
+ 1594      00000201 
+ 1594      FB0E0D00 
+ 1594      01010101 
+ 1595              	.LASF19:
+ 1596 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1596      6E657261 
+ 1596      7465645F 
+ 1596      536F7572 
+ 1596      63655C50 
+ 1597              	.LASF17:
+ 1598 0026 63795F6D 		.ascii	"cy_metadata\000"
+ 1598      65746164 
+ 1598      61746100 
+ 1599              	.LASF9:
+ 1600 0032 666C6F61 		.ascii	"float\000"
+ 1600      7400
+ 1601              	.LASF1:
+ 1602 0038 756E7369 		.ascii	"unsigned char\000"
+ 1602      676E6564 
+ 1602      20636861 
+ 1602      7200
+ 1603              	.LASF5:
+ 1604 0046 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1604      20756E73 
+ 1604      69676E65 
+ 1604      6420696E 
+ 1604      7400
+ 1605              	.LASF3:
+ 1606 0058 73686F72 		.ascii	"short unsigned int\000"
+ 1606      7420756E 
+ 1606      7369676E 
+ 1606      65642069 
+ 1606      6E7400
+ 1607              	.LASF10:
+ 1608 006b 646F7562 		.ascii	"double\000"
+ 1608      6C6500
+ 1609              	.LASF14:
+ 1610 0072 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1610      6574615F 
+ 1610      63757374 
+ 1610      6E766C00 
+ 1611              	.LASF13:
+ 1612 0082 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1612      6574615F 
+ 1612      636F6E66 
+ 1612      69676563 
+ 1612      6300
+ 1613              	.LASF18:
+ 1614 0094 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1614      4320342E 
+ 1614      392E3320 
+ 1614      32303135 
+ 1614      30333033 
+ 1615 00c7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 30
+
+
+ 1615      20726576 
+ 1615      6973696F 
+ 1615      6E203232 
+ 1615      31323230 
+ 1616 00fa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1616      66756E63 
+ 1616      74696F6E 
+ 1616      2D736563 
+ 1616      74696F6E 
+ 1617              	.LASF8:
+ 1618 0122 756E7369 		.ascii	"unsigned int\000"
+ 1618      676E6564 
+ 1618      20696E74 
+ 1618      00
+ 1619              	.LASF7:
+ 1620 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1620      206C6F6E 
+ 1620      6720756E 
+ 1620      7369676E 
+ 1620      65642069 
+ 1621              	.LASF16:
+ 1622 0146 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1622      6574615F 
+ 1622      666C6173 
+ 1622      6870726F 
+ 1622      74656374 
+ 1623              	.LASF15:
+ 1624 015b 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1624      6574615F 
+ 1624      776F6E76 
+ 1624      6C00
+ 1625              	.LASF12:
+ 1626 0169 73697A65 		.ascii	"sizetype\000"
+ 1626      74797065 
+ 1626      00
+ 1627              	.LASF6:
+ 1628 0172 6C6F6E67 		.ascii	"long long int\000"
+ 1628      206C6F6E 
+ 1628      6720696E 
+ 1628      7400
+ 1629              	.LASF11:
+ 1630 0180 63686172 		.ascii	"char\000"
+ 1630      00
+ 1631              	.LASF2:
+ 1632 0185 73686F72 		.ascii	"short int\000"
+ 1632      7420696E 
+ 1632      7400
+ 1633              	.LASF21:
+ 1634 018f 75696E74 		.ascii	"uint8\000"
+ 1634      3800
+ 1635              	.LASF4:
+ 1636 0195 6C6F6E67 		.ascii	"long int\000"
+ 1636      20696E74 
+ 1636      00
+ 1637              	.LASF0:
+ 1638 019e 7369676E 		.ascii	"signed char\000"
+ 1638      65642063 
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc7cbHAP.s 			page 31
+
+
+ 1638      68617200 
+ 1639              	.LASF20:
+ 1640 01aa 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
+ 1640      73657273 
+ 1640      5C646F75 
+ 1640      675F3030 
+ 1640      305C446F 
+ 1641 01d7 52505053 		.ascii	"RPPSOC-FAT-Chain.cydsn\000"
+ 1641      4F432D46 
+ 1641      41542D43 
+ 1641      6861696E 
+ 1641      2E637964 
+ 1642              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
