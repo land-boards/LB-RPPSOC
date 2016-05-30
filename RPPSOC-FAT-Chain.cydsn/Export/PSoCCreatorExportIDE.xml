@@ -189,15 +189,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_27_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_27.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_27.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_22_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_22.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_22.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_23_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_23.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_23.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_24_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_24.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_24.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_25_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_25.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_25.h</File>
@@ -246,6 +237,30 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Control_Reg_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Control_Reg_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Control_Reg_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_MISO_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_MISO.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_MISO.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_CE0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_CE0.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_CE0.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_SCLK_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_SCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_SCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_MOSI_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_MOSI.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_MOSI.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_CE1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_CE1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_SPI_CE1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_UART_RX_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_UART_RX.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_UART_RX.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_UART_TX_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_UART_TX.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_UART_TX.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_4_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_4.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\RP_GPIO_4.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\doug_000\Documents\GitHub\LB-RPPSOC\RPPSOC-FAT-Chain.cydsn\Export\ARM_GCC_Generic">

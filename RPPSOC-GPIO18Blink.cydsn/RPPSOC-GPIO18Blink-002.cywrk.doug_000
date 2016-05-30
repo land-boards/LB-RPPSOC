@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RPPSOC-GPIO18Blink-002">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\RPPSOC-FAT-Chain.cydwr">
 <ExpandedNodeIds>
 <v>RPPSOC-GPIO18Blink-002</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain</v>
@@ -222,18 +222,6 @@
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_21\RP_GPIO_21.c</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_21\RP_GPIO_21.h</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_21\RP_GPIO_21_aliases.h</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_22</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_22\RP_GPIO_22.c</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_22\RP_GPIO_22.h</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_22\RP_GPIO_22_aliases.h</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_23</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_23\RP_GPIO_23.c</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_23\RP_GPIO_23.h</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_23\RP_GPIO_23_aliases.h</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_24</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_24\RP_GPIO_24.c</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_24\RP_GPIO_24.h</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_24\RP_GPIO_24_aliases.h</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_25</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_25\RP_GPIO_25.c</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_25\RP_GPIO_25.h</v>
@@ -246,6 +234,10 @@
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_27\RP_GPIO_27.c</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_27\RP_GPIO_27.h</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_27\RP_GPIO_27_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_4</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_4\RP_GPIO_4.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_4\RP_GPIO_4.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_4\RP_GPIO_4_aliases.h</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_5</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_5\RP_GPIO_5.c</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_5\RP_GPIO_5.h</v>
@@ -254,6 +246,34 @@
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_6\RP_GPIO_6.c</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_6\RP_GPIO_6.h</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_GPIO_6\RP_GPIO_6_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE0</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE0\RP_SPI_CE0.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE0\RP_SPI_CE0.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE0\RP_SPI_CE0_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE1</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE1\RP_SPI_CE1.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE1\RP_SPI_CE1.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_CE1\RP_SPI_CE1_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MISO</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MISO\RP_SPI_MISO.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MISO\RP_SPI_MISO.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MISO\RP_SPI_MISO_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MOSI</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MOSI\RP_SPI_MOSI.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MOSI\RP_SPI_MOSI.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_MOSI\RP_SPI_MOSI_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_SCLK</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_SCLK\RP_SPI_SCLK.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_SCLK\RP_SPI_SCLK.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_SPI_SCLK\RP_SPI_SCLK_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_RX</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_RX\RP_UART_RX.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_RX\RP_UART_RX.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_RX\RP_UART_RX_aliases.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_TX</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_TX\RP_UART_TX.c</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_TX\RP_UART_TX.h</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\RP_UART_TX\RP_UART_TX_aliases.h</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\SCL_1</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\SCL_1\SCL_1.c</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\Generated_Source\PSoC5\SCL_1\SCL_1.h</v>
@@ -406,14 +426,19 @@
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_19.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_20.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_21.lst</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_22.lst</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_23.lst</v>
-<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_24.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_25.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_26.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_27.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_4.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_5.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_GPIO_6.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_SPI_CE0.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_SPI_CE1.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_SPI_MISO.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_SPI_MOSI.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_SPI_SCLK.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_UART_RX.lst</v>
+<v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\RP_UART_TX.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\SCL_1.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\Listing Files\SDA_1.lst</v>
 <v>RPPSOC-GPIO18Blink-002\RPPSOC-FAT-Chain\CortexM3\ARM_GCC_493\Debug\RPPSOC-FAT-Chain.elf</v>
