@@ -2,7 +2,7 @@
 --	Conversion of RPPSOC-Blink6.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon May 23 16:52:02 2016
+--	Tue Oct 18 14:58:28 2016
 --
 
 USE cypress.cypress.all;

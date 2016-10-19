@@ -3,11 +3,11 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspc" version="5" xml_contents_version="3" name="RPPSOC-Blink6-000" persistent="" platform="NOT_USED">
-<current_project name=".\RPPSOC-Blink6.cyprj" />
+<current_project name="..\RPPSOC-PWM.cydsn\RPPSOC-PWM.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
-<v>.\RPPSOC-Blink6.cyprj</v>
+<v>..\RPPSOC-PWM.cydsn\RPPSOC-PWM.cyprj</v>
 </projects>
 <workspace_id v="8441129f-313f-422c-802e-c6318e1f3d9a" />
 <WriteAppVersionLastSavedWith v="3.3.0.410" />

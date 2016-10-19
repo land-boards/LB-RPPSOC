@@ -1,6 +1,6 @@
 -- ======================================================================
 -- RPPSOC-Blink6.ctl generated from RPPSOC-Blink6
--- 05/23/2016 at 16:52
+-- 10/18/2016 at 14:58
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
