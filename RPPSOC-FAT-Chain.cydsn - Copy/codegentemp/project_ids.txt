@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|15b121f5-83f1-4e54-bfe0-441da0845e63
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|612c7d45-3e98-492c-bdae-fe3383769fda
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|8291c13c-303d-4fc9-8716-e1ef6ea7f16d
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6dc8eb09-76ae-4cdb-a492-ff6da1b4a947
+C:\Users\doug_000\Documents\GitHub\LB-RPPSOC\RPPSOC-FAT-Chain.cydsn\RPPSOC-FAT-Chain.cyprj|ec38f5db-65f5-4264-8518-a7f804eee3dc

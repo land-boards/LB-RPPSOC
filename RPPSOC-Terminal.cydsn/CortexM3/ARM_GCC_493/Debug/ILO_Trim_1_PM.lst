@@ -1,0 +1,947 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"ILO_Trim_1_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.ILO_Trim_1_SaveConfig,"ax",%progbits
+  19              		.align	2
+  20              		.global	ILO_Trim_1_SaveConfig
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	ILO_Trim_1_SaveConfig, %function
+  24              	ILO_Trim_1_SaveConfig:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\ILO_Trim_1_PM.c"
+   1:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * File Name: ILO_Trim_1_PM.c
+   3:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+   5:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  This file provides the power management source code to API for the
+   7:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  ILO Trim component.
+   8:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+   9:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Note:
+  10:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+  11:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  12:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *******************************************************************************
+  13:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** ********************************************************************************/
+  18:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  19:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** #include "ILO_Trim_1.h"
+  20:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** static ILO_Trim_1_backupStruct ILO_Trim_1_backup;
+  21:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  22:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  23:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Function Name: ILO_Trim_1_SaveConfig
+  25:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  27:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Summary:
+  28:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  Save the current user configuration
+  29:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  30:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Parameters:
+  31:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  33:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Return:
+  34:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+  35:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  36:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Global variables:
+  37:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  ILO_Trim_1_backup:  Variables of this global structure are modified to
+  38:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  store the values of non retention configuration registers when Sleep() API is
+  39:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  called.
+  40:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  41:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *******************************************************************************/
+  42:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** void ILO_Trim_1_SaveConfig(void) 
+  43:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** {
+  27              		.loc 1 43 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE0:
+  35              		.size	ILO_Trim_1_SaveConfig, .-ILO_Trim_1_SaveConfig
+  36 0002 00BF     		.section	.text.ILO_Trim_1_RestoreConfig,"ax",%progbits
+  37              		.align	2
+  38              		.global	ILO_Trim_1_RestoreConfig
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	ILO_Trim_1_RestoreConfig, %function
+  42              	ILO_Trim_1_RestoreConfig:
+  43              	.LFB1:
+  44:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     #if (!ILO_Trim_1_USING_FIXED_FUNCTION)
+  45:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		/* Backup non retention registers, interrupt mask and capture counter */
+  46:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         ILO_Trim_1_backup.timerCapture = CY_GET_REG8(ILO_Trim_1_CAPTURE_PTR);
+  47:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		/* Backup the enable state of the Timer component */
+  48:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         ILO_Trim_1_backup.timerControlRegister = (uint8)ILO_Trim_1_CONTROL_REG;
+  49:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     #endif /* Backup non retention registers in UDB implementation. All fixed function registers ar
+  50:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** }
+  51:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  52:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  53:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** /*******************************************************************************
+  54:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Function Name: ILO_Trim_1_RestoreConfig
+  55:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** ********************************************************************************
+  56:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  57:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Summary:
+  58:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  Restores the current user configuration.
+  59:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  60:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Parameters:
+  61:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+  62:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  63:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Return:
+  64:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+  65:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  66:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Global variables:
+  67:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  ILO_Trim_1_backup:  Variables of this global structure are used to
+  68:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  restore the values of non retention registers on wakeup from sleep mode.
+  69:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  70:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *******************************************************************************/
+  71:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** void ILO_Trim_1_RestoreConfig(void) 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 3
+
+
+  72:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** {   
+  44              		.loc 1 72 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49 0000 7047     		bx	lr
+  50              		.cfi_endproc
+  51              	.LFE1:
+  52              		.size	ILO_Trim_1_RestoreConfig, .-ILO_Trim_1_RestoreConfig
+  53 0002 00BF     		.section	.text.ILO_Trim_1_Sleep,"ax",%progbits
+  54              		.align	2
+  55              		.global	ILO_Trim_1_Sleep
+  56              		.thumb
+  57              		.thumb_func
+  58              		.type	ILO_Trim_1_Sleep, %function
+  59              	ILO_Trim_1_Sleep:
+  60              	.LFB2:
+  73:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     #if (!ILO_Trim_1_USING_FIXED_FUNCTION)
+  74:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         /* Restore the UDB non-rentention registers for PSoC5A */
+  75:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         CY_SET_REG8(ILO_Trim_1_CAPTURE_PTR, ILO_Trim_1_backup.timerCapture);
+  76:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		/* Restore the enable state of the Timer component */
+  77:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         ILO_Trim_1_CONTROL_REG |= ILO_Trim_1_backup.timerControlRegister;
+  78:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     #endif /* Restore non retention registers in the UDB implementation only */
+  79:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** }
+  80:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  81:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+  82:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** /*******************************************************************************
+  83:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Function Name: ILO_Trim_1_Sleep
+  84:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** ********************************************************************************
+  85:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  86:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Summary:
+  87:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  Stop and Save the user configuration
+  88:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  89:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Parameters:
+  90:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+  91:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  92:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Return:
+  93:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+  94:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  95:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Global variables:
+  96:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  ILO_Trim_1_backup.TimerEnableState:  Is modified depending on the
+  97:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  enable state of the block before entering sleep mode.
+  98:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+  99:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *******************************************************************************/
+ 100:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** void ILO_Trim_1_Sleep(void) 
+ 101:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** {
+  61              		.loc 1 101 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		.loc 1 101 0
+  66 0000 08B5     		push	{r3, lr}
+  67              		.cfi_def_cfa_offset 8
+  68              		.cfi_offset 3, -8
+  69              		.cfi_offset 14, -4
+ 102:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	uint8 enState;
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 4
+
+
+ 103:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	
+ 104:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	/* Back up enable state from the Timer control register */
+ 105:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	#if (!ILO_Trim_1_USING_FIXED_FUNCTION)
+ 106:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		enState = (uint8)(ILO_Trim_1_CONTROL_REG & ILO_Trim_1_CTRL_ENABLE);
+ 107:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	#else
+ 108:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		#if (CY_PSOC4)
+ 109:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			enState = (uint8)(ILO_Trim_1_TCPWM_BLOCK_CONTROL_REG & ILO_Trim_1_TCPWM_MASK);
+ 110:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		#else
+ 111:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			enState = (uint8)(ILO_Trim_1_CONTROL_REG & ILO_Trim_1_CTRL_ENABLE);
+  70              		.loc 1 111 0
+  71 0002 074B     		ldr	r3, .L7
+  72 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  73              	.LVL0:
+ 112:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		#endif /* End of PSoC 3 and PSOC 5LP code*/
+ 113:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	#endif /* End of Fixed Function code */
+ 114:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     /* Save Counter's enable state */
+ 115:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     if(enState == ILO_Trim_1_CTRL_ENABLE)
+  74              		.loc 1 115 0
+  75 0006 13F0010F 		tst	r3, #1
+  76 000a 03D0     		beq	.L4
+ 116:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     {
+ 117:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         /* Timer is enabled */
+ 118:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         ILO_Trim_1_backup.timerEnableState = 1u;
+  77              		.loc 1 118 0
+  78 000c 0122     		movs	r2, #1
+  79 000e 054B     		ldr	r3, .L7+4
+  80              	.LVL1:
+  81 0010 1A70     		strb	r2, [r3]
+  82 0012 02E0     		b	.L5
+  83              	.LVL2:
+  84              	.L4:
+ 119:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     }
+ 120:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     else
+ 121:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     {
+ 122:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         /* Timer is disabled */
+ 123:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         ILO_Trim_1_backup.timerEnableState = 0u;
+  85              		.loc 1 123 0
+  86 0014 0022     		movs	r2, #0
+  87 0016 034B     		ldr	r3, .L7+4
+  88              	.LVL3:
+  89 0018 1A70     		strb	r2, [r3]
+  90              	.L5:
+ 124:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     }
+ 125:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     ILO_Trim_1_Stop();
+  91              		.loc 1 125 0
+  92 001a FFF7FEFF 		bl	ILO_Trim_1_Stop
+  93              	.LVL4:
+  94 001e 08BD     		pop	{r3, pc}
+  95              	.L8:
+  96              		.align	2
+  97              	.L7:
+  98 0020 004F0040 		.word	1073762048
+  99 0024 00000000 		.word	.LANCHOR0
+ 100              		.cfi_endproc
+ 101              	.LFE2:
+ 102              		.size	ILO_Trim_1_Sleep, .-ILO_Trim_1_Sleep
+ 103              		.section	.text.ILO_Trim_1_Wakeup,"ax",%progbits
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 5
+
+
+ 104              		.align	2
+ 105              		.global	ILO_Trim_1_Wakeup
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.type	ILO_Trim_1_Wakeup, %function
+ 109              	ILO_Trim_1_Wakeup:
+ 110              	.LFB3:
+ 126:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     ILO_Trim_1_SaveConfig();
+ 127:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** }
+ 128:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+ 129:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+ 130:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** /*******************************************************************************
+ 131:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Function Name: ILO_Trim_1_Wakeup
+ 132:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** ********************************************************************************
+ 133:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+ 134:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Summary:
+ 135:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  Restores and enables the user configuration
+ 136:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+ 137:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Parameters:
+ 138:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+ 139:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+ 140:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Return:
+ 141:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  None
+ 142:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+ 143:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** * Global variables:
+ 144:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  ILO_Trim_1_backup.TimerEnableState:  Is used to restore the enable 
+ 145:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *  state of block on wakeup from sleep mode.
+ 146:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *
+ 147:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** *******************************************************************************/
+ 148:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** void ILO_Trim_1_Wakeup(void) 
+ 149:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** {
+ 111              		.loc 1 149 0
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
+ 150:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     ILO_Trim_1_RestoreConfig();
+ 151:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 	
+ 152:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     if(ILO_Trim_1_backup.timerEnableState == 1u)
+ 116              		.loc 1 152 0
+ 117 0000 0E4B     		ldr	r3, .L11
+ 118 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 119 0004 012B     		cmp	r3, #1
+ 120 0006 18D1     		bne	.L9
+ 153:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****     {     /* Enable Timer's operation */
+ 154:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c ****         #if (!ILO_Trim_1_USING_FIXED_FUNCTION)
+ 155:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			/* Enable UDB Timer */
+ 156:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			ILO_Trim_1_CONTROL_REG |= ILO_Trim_1_CTRL_ENABLE;
+ 157:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		#else
+ 158:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			#if (CY_PSOC4)
+ 159:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				ILO_Trim_1_TCPWM_Enable();
+ 160:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			#else
+ 161:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				/* Enable FF Timer */
+ 162:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				/* Clear all bits but the enable bit (if it's already set) for Timer operation */
+ 163:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			    ILO_Trim_1_CONTROL_REG &= ILO_Trim_1_CTRL_ENABLE;
+ 121              		.loc 1 163 0
+ 122 0008 0D4B     		ldr	r3, .L11+4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 6
+
+
+ 123 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 124 000c 02F00102 		and	r2, r2, #1
+ 125 0010 1A70     		strb	r2, [r3]
+ 164:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				
+ 165:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				/* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+ 166:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 			    ILO_Trim_1_CONTROL3_REG &= (uint8)(~ILO_Trim_1_CTRL_MODE_MASK);
+ 126              		.loc 1 166 0
+ 127 0012 0C49     		ldr	r1, .L11+8
+ 128 0014 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
+ 129 0016 02F0FC02 		and	r2, r2, #252
+ 130 001a 0A70     		strb	r2, [r1]
+ 167:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				
+ 168:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				ILO_Trim_1_GLOBAL_ENABLE |= ILO_Trim_1_BLOCK_EN_MASK;
+ 131              		.loc 1 168 0
+ 132 001c A1F65F31 		subw	r1, r1, #2911
+ 133 0020 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
+ 134 0022 42F00102 		orr	r2, r2, #1
+ 135 0026 0A70     		strb	r2, [r1]
+ 169:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 		        ILO_Trim_1_GLOBAL_STBY_ENABLE |= ILO_Trim_1_BLOCK_STBY_EN_MASK;
+ 136              		.loc 1 169 0
+ 137 0028 1031     		adds	r1, r1, #16
+ 138 002a 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
+ 139 002c 42F00102 		orr	r2, r2, #1
+ 140 0030 0A70     		strb	r2, [r1]
+ 170:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 
+ 171:.\Generated_Source\PSoC5/ILO_Trim_1_PM.c **** 				ILO_Trim_1_CONTROL_REG |= ILO_Trim_1_CTRL_ENABLE;
+ 141              		.loc 1 171 0
+ 142 0032 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 143 0034 42F00102 		orr	r2, r2, #1
+ 144 0038 1A70     		strb	r2, [r3]
+ 145              	.L9:
+ 146 003a 7047     		bx	lr
+ 147              	.L12:
+ 148              		.align	2
+ 149              	.L11:
+ 150 003c 00000000 		.word	.LANCHOR0
+ 151 0040 004F0040 		.word	1073762048
+ 152 0044 024F0040 		.word	1073762050
+ 153              		.cfi_endproc
+ 154              	.LFE3:
+ 155              		.size	ILO_Trim_1_Wakeup, .-ILO_Trim_1_Wakeup
+ 156              		.bss
+ 157              		.align	2
+ 158              		.set	.LANCHOR0,. + 0
+ 159              		.type	ILO_Trim_1_backup, %object
+ 160              		.size	ILO_Trim_1_backup, 1
+ 161              	ILO_Trim_1_backup:
+ 162 0000 00       		.space	1
+ 163 0001 000000   		.text
+ 164              	.Letext0:
+ 165              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
+ 166              		.file 3 ".\\Generated_Source\\PSoC5\\ILO_Trim_1.h"
+ 167              		.section	.debug_info,"",%progbits
+ 168              	.Ldebug_info0:
+ 169 0000 32010000 		.4byte	0x132
+ 170 0004 0400     		.2byte	0x4
+ 171 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 7
+
+
+ 172 000a 04       		.byte	0x4
+ 173 000b 01       		.uleb128 0x1
+ 174 000c B2000000 		.4byte	.LASF20
+ 175 0010 01       		.byte	0x1
+ 176 0011 2B000000 		.4byte	.LASF21
+ 177 0015 CF010000 		.4byte	.LASF22
+ 178 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 179 001d 00000000 		.4byte	0
+ 180 0021 00000000 		.4byte	.Ldebug_line0
+ 181 0025 02       		.uleb128 0x2
+ 182 0026 01       		.byte	0x1
+ 183 0027 06       		.byte	0x6
+ 184 0028 B3010000 		.4byte	.LASF0
+ 185 002c 02       		.uleb128 0x2
+ 186 002d 01       		.byte	0x1
+ 187 002e 08       		.byte	0x8
+ 188 002f 5A000000 		.4byte	.LASF1
+ 189 0033 02       		.uleb128 0x2
+ 190 0034 02       		.byte	0x2
+ 191 0035 05       		.byte	0x5
+ 192 0036 88010000 		.4byte	.LASF2
+ 193 003a 02       		.uleb128 0x2
+ 194 003b 02       		.byte	0x2
+ 195 003c 07       		.byte	0x7
+ 196 003d 87000000 		.4byte	.LASF3
+ 197 0041 02       		.uleb128 0x2
+ 198 0042 04       		.byte	0x4
+ 199 0043 05       		.byte	0x5
+ 200 0044 98010000 		.4byte	.LASF4
+ 201 0048 02       		.uleb128 0x2
+ 202 0049 04       		.byte	0x4
+ 203 004a 07       		.byte	0x7
+ 204 004b 75000000 		.4byte	.LASF5
+ 205 004f 02       		.uleb128 0x2
+ 206 0050 08       		.byte	0x8
+ 207 0051 05       		.byte	0x5
+ 208 0052 64010000 		.4byte	.LASF6
+ 209 0056 02       		.uleb128 0x2
+ 210 0057 08       		.byte	0x8
+ 211 0058 07       		.byte	0x7
+ 212 0059 4D010000 		.4byte	.LASF7
+ 213 005d 03       		.uleb128 0x3
+ 214 005e 04       		.byte	0x4
+ 215 005f 05       		.byte	0x5
+ 216 0060 696E7400 		.ascii	"int\000"
+ 217 0064 02       		.uleb128 0x2
+ 218 0065 04       		.byte	0x4
+ 219 0066 07       		.byte	0x7
+ 220 0067 40010000 		.4byte	.LASF8
+ 221 006b 04       		.uleb128 0x4
+ 222 006c 92010000 		.4byte	.LASF12
+ 223 0070 02       		.byte	0x2
+ 224 0071 C2       		.byte	0xc2
+ 225 0072 2C000000 		.4byte	0x2c
+ 226 0076 02       		.uleb128 0x2
+ 227 0077 04       		.byte	0x4
+ 228 0078 04       		.byte	0x4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 8
+
+
+ 229 0079 54000000 		.4byte	.LASF9
+ 230 007d 02       		.uleb128 0x2
+ 231 007e 08       		.byte	0x8
+ 232 007f 04       		.byte	0x4
+ 233 0080 AB000000 		.4byte	.LASF10
+ 234 0084 02       		.uleb128 0x2
+ 235 0085 01       		.byte	0x1
+ 236 0086 08       		.byte	0x8
+ 237 0087 72010000 		.4byte	.LASF11
+ 238 008b 05       		.uleb128 0x5
+ 239 008c 70000000 		.4byte	.LASF13
+ 240 0090 02       		.byte	0x2
+ 241 0091 6C01     		.2byte	0x16c
+ 242 0093 97000000 		.4byte	0x97
+ 243 0097 06       		.uleb128 0x6
+ 244 0098 6B000000 		.4byte	0x6b
+ 245 009c 07       		.uleb128 0x7
+ 246 009d 01       		.byte	0x1
+ 247 009e 03       		.byte	0x3
+ 248 009f 34       		.byte	0x34
+ 249 00a0 B1000000 		.4byte	0xb1
+ 250 00a4 08       		.uleb128 0x8
+ 251 00a5 9A000000 		.4byte	.LASF23
+ 252 00a9 03       		.byte	0x3
+ 253 00aa 36       		.byte	0x36
+ 254 00ab 6B000000 		.4byte	0x6b
+ 255 00af 00       		.byte	0
+ 256 00b0 00       		.byte	0
+ 257 00b1 04       		.uleb128 0x4
+ 258 00b2 14020000 		.4byte	.LASF14
+ 259 00b6 03       		.byte	0x3
+ 260 00b7 3C       		.byte	0x3c
+ 261 00b8 9C000000 		.4byte	0x9c
+ 262 00bc 09       		.uleb128 0x9
+ 263 00bd 2C020000 		.4byte	.LASF15
+ 264 00c1 01       		.byte	0x1
+ 265 00c2 2A       		.byte	0x2a
+ 266 00c3 00000000 		.4byte	.LFB0
+ 267 00c7 02000000 		.4byte	.LFE0-.LFB0
+ 268 00cb 01       		.uleb128 0x1
+ 269 00cc 9C       		.byte	0x9c
+ 270 00cd 09       		.uleb128 0x9
+ 271 00ce 12000000 		.4byte	.LASF16
+ 272 00d2 01       		.byte	0x1
+ 273 00d3 47       		.byte	0x47
+ 274 00d4 00000000 		.4byte	.LFB1
+ 275 00d8 02000000 		.4byte	.LFE1-.LFB1
+ 276 00dc 01       		.uleb128 0x1
+ 277 00dd 9C       		.byte	0x9c
+ 278 00de 0A       		.uleb128 0xa
+ 279 00df 77010000 		.4byte	.LASF24
+ 280 00e3 01       		.byte	0x1
+ 281 00e4 64       		.byte	0x64
+ 282 00e5 00000000 		.4byte	.LFB2
+ 283 00e9 28000000 		.4byte	.LFE2-.LFB2
+ 284 00ed 01       		.uleb128 0x1
+ 285 00ee 9C       		.byte	0x9c
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 9
+
+
+ 286 00ef 0C010000 		.4byte	0x10c
+ 287 00f3 0B       		.uleb128 0xb
+ 288 00f4 68000000 		.4byte	.LASF18
+ 289 00f8 01       		.byte	0x1
+ 290 00f9 66       		.byte	0x66
+ 291 00fa 6B000000 		.4byte	0x6b
+ 292 00fe 00000000 		.4byte	.LLST0
+ 293 0102 0C       		.uleb128 0xc
+ 294 0103 1E000000 		.4byte	.LVL4
+ 295 0107 2E010000 		.4byte	0x12e
+ 296 010b 00       		.byte	0
+ 297 010c 09       		.uleb128 0x9
+ 298 010d 00000000 		.4byte	.LASF17
+ 299 0111 01       		.byte	0x1
+ 300 0112 94       		.byte	0x94
+ 301 0113 00000000 		.4byte	.LFB3
+ 302 0117 48000000 		.4byte	.LFE3-.LFB3
+ 303 011b 01       		.uleb128 0x1
+ 304 011c 9C       		.byte	0x9c
+ 305 011d 0D       		.uleb128 0xd
+ 306 011e A1010000 		.4byte	.LASF19
+ 307 0122 01       		.byte	0x1
+ 308 0123 14       		.byte	0x14
+ 309 0124 B1000000 		.4byte	0xb1
+ 310 0128 05       		.uleb128 0x5
+ 311 0129 03       		.byte	0x3
+ 312 012a 00000000 		.4byte	ILO_Trim_1_backup
+ 313 012e 0E       		.uleb128 0xe
+ 314 012f BF010000 		.4byte	.LASF25
+ 315 0133 03       		.byte	0x3
+ 316 0134 47       		.byte	0x47
+ 317 0135 00       		.byte	0
+ 318              		.section	.debug_abbrev,"",%progbits
+ 319              	.Ldebug_abbrev0:
+ 320 0000 01       		.uleb128 0x1
+ 321 0001 11       		.uleb128 0x11
+ 322 0002 01       		.byte	0x1
+ 323 0003 25       		.uleb128 0x25
+ 324 0004 0E       		.uleb128 0xe
+ 325 0005 13       		.uleb128 0x13
+ 326 0006 0B       		.uleb128 0xb
+ 327 0007 03       		.uleb128 0x3
+ 328 0008 0E       		.uleb128 0xe
+ 329 0009 1B       		.uleb128 0x1b
+ 330 000a 0E       		.uleb128 0xe
+ 331 000b 55       		.uleb128 0x55
+ 332 000c 17       		.uleb128 0x17
+ 333 000d 11       		.uleb128 0x11
+ 334 000e 01       		.uleb128 0x1
+ 335 000f 10       		.uleb128 0x10
+ 336 0010 17       		.uleb128 0x17
+ 337 0011 00       		.byte	0
+ 338 0012 00       		.byte	0
+ 339 0013 02       		.uleb128 0x2
+ 340 0014 24       		.uleb128 0x24
+ 341 0015 00       		.byte	0
+ 342 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 10
+
+
+ 343 0017 0B       		.uleb128 0xb
+ 344 0018 3E       		.uleb128 0x3e
+ 345 0019 0B       		.uleb128 0xb
+ 346 001a 03       		.uleb128 0x3
+ 347 001b 0E       		.uleb128 0xe
+ 348 001c 00       		.byte	0
+ 349 001d 00       		.byte	0
+ 350 001e 03       		.uleb128 0x3
+ 351 001f 24       		.uleb128 0x24
+ 352 0020 00       		.byte	0
+ 353 0021 0B       		.uleb128 0xb
+ 354 0022 0B       		.uleb128 0xb
+ 355 0023 3E       		.uleb128 0x3e
+ 356 0024 0B       		.uleb128 0xb
+ 357 0025 03       		.uleb128 0x3
+ 358 0026 08       		.uleb128 0x8
+ 359 0027 00       		.byte	0
+ 360 0028 00       		.byte	0
+ 361 0029 04       		.uleb128 0x4
+ 362 002a 16       		.uleb128 0x16
+ 363 002b 00       		.byte	0
+ 364 002c 03       		.uleb128 0x3
+ 365 002d 0E       		.uleb128 0xe
+ 366 002e 3A       		.uleb128 0x3a
+ 367 002f 0B       		.uleb128 0xb
+ 368 0030 3B       		.uleb128 0x3b
+ 369 0031 0B       		.uleb128 0xb
+ 370 0032 49       		.uleb128 0x49
+ 371 0033 13       		.uleb128 0x13
+ 372 0034 00       		.byte	0
+ 373 0035 00       		.byte	0
+ 374 0036 05       		.uleb128 0x5
+ 375 0037 16       		.uleb128 0x16
+ 376 0038 00       		.byte	0
+ 377 0039 03       		.uleb128 0x3
+ 378 003a 0E       		.uleb128 0xe
+ 379 003b 3A       		.uleb128 0x3a
+ 380 003c 0B       		.uleb128 0xb
+ 381 003d 3B       		.uleb128 0x3b
+ 382 003e 05       		.uleb128 0x5
+ 383 003f 49       		.uleb128 0x49
+ 384 0040 13       		.uleb128 0x13
+ 385 0041 00       		.byte	0
+ 386 0042 00       		.byte	0
+ 387 0043 06       		.uleb128 0x6
+ 388 0044 35       		.uleb128 0x35
+ 389 0045 00       		.byte	0
+ 390 0046 49       		.uleb128 0x49
+ 391 0047 13       		.uleb128 0x13
+ 392 0048 00       		.byte	0
+ 393 0049 00       		.byte	0
+ 394 004a 07       		.uleb128 0x7
+ 395 004b 13       		.uleb128 0x13
+ 396 004c 01       		.byte	0x1
+ 397 004d 0B       		.uleb128 0xb
+ 398 004e 0B       		.uleb128 0xb
+ 399 004f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 11
+
+
+ 400 0050 0B       		.uleb128 0xb
+ 401 0051 3B       		.uleb128 0x3b
+ 402 0052 0B       		.uleb128 0xb
+ 403 0053 01       		.uleb128 0x1
+ 404 0054 13       		.uleb128 0x13
+ 405 0055 00       		.byte	0
+ 406 0056 00       		.byte	0
+ 407 0057 08       		.uleb128 0x8
+ 408 0058 0D       		.uleb128 0xd
+ 409 0059 00       		.byte	0
+ 410 005a 03       		.uleb128 0x3
+ 411 005b 0E       		.uleb128 0xe
+ 412 005c 3A       		.uleb128 0x3a
+ 413 005d 0B       		.uleb128 0xb
+ 414 005e 3B       		.uleb128 0x3b
+ 415 005f 0B       		.uleb128 0xb
+ 416 0060 49       		.uleb128 0x49
+ 417 0061 13       		.uleb128 0x13
+ 418 0062 38       		.uleb128 0x38
+ 419 0063 0B       		.uleb128 0xb
+ 420 0064 00       		.byte	0
+ 421 0065 00       		.byte	0
+ 422 0066 09       		.uleb128 0x9
+ 423 0067 2E       		.uleb128 0x2e
+ 424 0068 00       		.byte	0
+ 425 0069 3F       		.uleb128 0x3f
+ 426 006a 19       		.uleb128 0x19
+ 427 006b 03       		.uleb128 0x3
+ 428 006c 0E       		.uleb128 0xe
+ 429 006d 3A       		.uleb128 0x3a
+ 430 006e 0B       		.uleb128 0xb
+ 431 006f 3B       		.uleb128 0x3b
+ 432 0070 0B       		.uleb128 0xb
+ 433 0071 27       		.uleb128 0x27
+ 434 0072 19       		.uleb128 0x19
+ 435 0073 11       		.uleb128 0x11
+ 436 0074 01       		.uleb128 0x1
+ 437 0075 12       		.uleb128 0x12
+ 438 0076 06       		.uleb128 0x6
+ 439 0077 40       		.uleb128 0x40
+ 440 0078 18       		.uleb128 0x18
+ 441 0079 9742     		.uleb128 0x2117
+ 442 007b 19       		.uleb128 0x19
+ 443 007c 00       		.byte	0
+ 444 007d 00       		.byte	0
+ 445 007e 0A       		.uleb128 0xa
+ 446 007f 2E       		.uleb128 0x2e
+ 447 0080 01       		.byte	0x1
+ 448 0081 3F       		.uleb128 0x3f
+ 449 0082 19       		.uleb128 0x19
+ 450 0083 03       		.uleb128 0x3
+ 451 0084 0E       		.uleb128 0xe
+ 452 0085 3A       		.uleb128 0x3a
+ 453 0086 0B       		.uleb128 0xb
+ 454 0087 3B       		.uleb128 0x3b
+ 455 0088 0B       		.uleb128 0xb
+ 456 0089 27       		.uleb128 0x27
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 12
+
+
+ 457 008a 19       		.uleb128 0x19
+ 458 008b 11       		.uleb128 0x11
+ 459 008c 01       		.uleb128 0x1
+ 460 008d 12       		.uleb128 0x12
+ 461 008e 06       		.uleb128 0x6
+ 462 008f 40       		.uleb128 0x40
+ 463 0090 18       		.uleb128 0x18
+ 464 0091 9742     		.uleb128 0x2117
+ 465 0093 19       		.uleb128 0x19
+ 466 0094 01       		.uleb128 0x1
+ 467 0095 13       		.uleb128 0x13
+ 468 0096 00       		.byte	0
+ 469 0097 00       		.byte	0
+ 470 0098 0B       		.uleb128 0xb
+ 471 0099 34       		.uleb128 0x34
+ 472 009a 00       		.byte	0
+ 473 009b 03       		.uleb128 0x3
+ 474 009c 0E       		.uleb128 0xe
+ 475 009d 3A       		.uleb128 0x3a
+ 476 009e 0B       		.uleb128 0xb
+ 477 009f 3B       		.uleb128 0x3b
+ 478 00a0 0B       		.uleb128 0xb
+ 479 00a1 49       		.uleb128 0x49
+ 480 00a2 13       		.uleb128 0x13
+ 481 00a3 02       		.uleb128 0x2
+ 482 00a4 17       		.uleb128 0x17
+ 483 00a5 00       		.byte	0
+ 484 00a6 00       		.byte	0
+ 485 00a7 0C       		.uleb128 0xc
+ 486 00a8 898201   		.uleb128 0x4109
+ 487 00ab 00       		.byte	0
+ 488 00ac 11       		.uleb128 0x11
+ 489 00ad 01       		.uleb128 0x1
+ 490 00ae 31       		.uleb128 0x31
+ 491 00af 13       		.uleb128 0x13
+ 492 00b0 00       		.byte	0
+ 493 00b1 00       		.byte	0
+ 494 00b2 0D       		.uleb128 0xd
+ 495 00b3 34       		.uleb128 0x34
+ 496 00b4 00       		.byte	0
+ 497 00b5 03       		.uleb128 0x3
+ 498 00b6 0E       		.uleb128 0xe
+ 499 00b7 3A       		.uleb128 0x3a
+ 500 00b8 0B       		.uleb128 0xb
+ 501 00b9 3B       		.uleb128 0x3b
+ 502 00ba 0B       		.uleb128 0xb
+ 503 00bb 49       		.uleb128 0x49
+ 504 00bc 13       		.uleb128 0x13
+ 505 00bd 02       		.uleb128 0x2
+ 506 00be 18       		.uleb128 0x18
+ 507 00bf 00       		.byte	0
+ 508 00c0 00       		.byte	0
+ 509 00c1 0E       		.uleb128 0xe
+ 510 00c2 2E       		.uleb128 0x2e
+ 511 00c3 00       		.byte	0
+ 512 00c4 3F       		.uleb128 0x3f
+ 513 00c5 19       		.uleb128 0x19
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 13
+
+
+ 514 00c6 03       		.uleb128 0x3
+ 515 00c7 0E       		.uleb128 0xe
+ 516 00c8 3A       		.uleb128 0x3a
+ 517 00c9 0B       		.uleb128 0xb
+ 518 00ca 3B       		.uleb128 0x3b
+ 519 00cb 0B       		.uleb128 0xb
+ 520 00cc 27       		.uleb128 0x27
+ 521 00cd 19       		.uleb128 0x19
+ 522 00ce 3C       		.uleb128 0x3c
+ 523 00cf 19       		.uleb128 0x19
+ 524 00d0 00       		.byte	0
+ 525 00d1 00       		.byte	0
+ 526 00d2 00       		.byte	0
+ 527              		.section	.debug_loc,"",%progbits
+ 528              	.Ldebug_loc0:
+ 529              	.LLST0:
+ 530 0000 06000000 		.4byte	.LVL0
+ 531 0004 10000000 		.4byte	.LVL1
+ 532 0008 0500     		.2byte	0x5
+ 533 000a 73       		.byte	0x73
+ 534 000b 00       		.sleb128 0
+ 535 000c 31       		.byte	0x31
+ 536 000d 1A       		.byte	0x1a
+ 537 000e 9F       		.byte	0x9f
+ 538 000f 14000000 		.4byte	.LVL2
+ 539 0013 18000000 		.4byte	.LVL3
+ 540 0017 0500     		.2byte	0x5
+ 541 0019 73       		.byte	0x73
+ 542 001a 00       		.sleb128 0
+ 543 001b 31       		.byte	0x31
+ 544 001c 1A       		.byte	0x1a
+ 545 001d 9F       		.byte	0x9f
+ 546 001e 00000000 		.4byte	0
+ 547 0022 00000000 		.4byte	0
+ 548              		.section	.debug_aranges,"",%progbits
+ 549 0000 34000000 		.4byte	0x34
+ 550 0004 0200     		.2byte	0x2
+ 551 0006 00000000 		.4byte	.Ldebug_info0
+ 552 000a 04       		.byte	0x4
+ 553 000b 00       		.byte	0
+ 554 000c 0000     		.2byte	0
+ 555 000e 0000     		.2byte	0
+ 556 0010 00000000 		.4byte	.LFB0
+ 557 0014 02000000 		.4byte	.LFE0-.LFB0
+ 558 0018 00000000 		.4byte	.LFB1
+ 559 001c 02000000 		.4byte	.LFE1-.LFB1
+ 560 0020 00000000 		.4byte	.LFB2
+ 561 0024 28000000 		.4byte	.LFE2-.LFB2
+ 562 0028 00000000 		.4byte	.LFB3
+ 563 002c 48000000 		.4byte	.LFE3-.LFB3
+ 564 0030 00000000 		.4byte	0
+ 565 0034 00000000 		.4byte	0
+ 566              		.section	.debug_ranges,"",%progbits
+ 567              	.Ldebug_ranges0:
+ 568 0000 00000000 		.4byte	.LFB0
+ 569 0004 02000000 		.4byte	.LFE0
+ 570 0008 00000000 		.4byte	.LFB1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 14
+
+
+ 571 000c 02000000 		.4byte	.LFE1
+ 572 0010 00000000 		.4byte	.LFB2
+ 573 0014 28000000 		.4byte	.LFE2
+ 574 0018 00000000 		.4byte	.LFB3
+ 575 001c 48000000 		.4byte	.LFE3
+ 576 0020 00000000 		.4byte	0
+ 577 0024 00000000 		.4byte	0
+ 578              		.section	.debug_line,"",%progbits
+ 579              	.Ldebug_line0:
+ 580 0000 C8000000 		.section	.debug_str,"MS",%progbits,1
+ 580      02007300 
+ 580      00000201 
+ 580      FB0E0D00 
+ 580      01010101 
+ 581              	.LASF17:
+ 582 0000 494C4F5F 		.ascii	"ILO_Trim_1_Wakeup\000"
+ 582      5472696D 
+ 582      5F315F57 
+ 582      616B6575 
+ 582      7000
+ 583              	.LASF16:
+ 584 0012 494C4F5F 		.ascii	"ILO_Trim_1_RestoreConfig\000"
+ 584      5472696D 
+ 584      5F315F52 
+ 584      6573746F 
+ 584      7265436F 
+ 585              	.LASF21:
+ 586 002b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ILO_Trim_1_PM.c\000"
+ 586      6E657261 
+ 586      7465645F 
+ 586      536F7572 
+ 586      63655C50 
+ 587              	.LASF9:
+ 588 0054 666C6F61 		.ascii	"float\000"
+ 588      7400
+ 589              	.LASF1:
+ 590 005a 756E7369 		.ascii	"unsigned char\000"
+ 590      676E6564 
+ 590      20636861 
+ 590      7200
+ 591              	.LASF18:
+ 592 0068 656E5374 		.ascii	"enState\000"
+ 592      61746500 
+ 593              	.LASF13:
+ 594 0070 72656738 		.ascii	"reg8\000"
+ 594      00
+ 595              	.LASF5:
+ 596 0075 6C6F6E67 		.ascii	"long unsigned int\000"
+ 596      20756E73 
+ 596      69676E65 
+ 596      6420696E 
+ 596      7400
+ 597              	.LASF3:
+ 598 0087 73686F72 		.ascii	"short unsigned int\000"
+ 598      7420756E 
+ 598      7369676E 
+ 598      65642069 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 15
+
+
+ 598      6E7400
+ 599              	.LASF23:
+ 600 009a 74696D65 		.ascii	"timerEnableState\000"
+ 600      72456E61 
+ 600      626C6553 
+ 600      74617465 
+ 600      00
+ 601              	.LASF10:
+ 602 00ab 646F7562 		.ascii	"double\000"
+ 602      6C6500
+ 603              	.LASF20:
+ 604 00b2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 604      4320342E 
+ 604      392E3320 
+ 604      32303135 
+ 604      30333033 
+ 605 00e5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 605      20726576 
+ 605      6973696F 
+ 605      6E203232 
+ 605      31323230 
+ 606 0118 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 606      66756E63 
+ 606      74696F6E 
+ 606      2D736563 
+ 606      74696F6E 
+ 607              	.LASF8:
+ 608 0140 756E7369 		.ascii	"unsigned int\000"
+ 608      676E6564 
+ 608      20696E74 
+ 608      00
+ 609              	.LASF7:
+ 610 014d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 610      206C6F6E 
+ 610      6720756E 
+ 610      7369676E 
+ 610      65642069 
+ 611              	.LASF6:
+ 612 0164 6C6F6E67 		.ascii	"long long int\000"
+ 612      206C6F6E 
+ 612      6720696E 
+ 612      7400
+ 613              	.LASF11:
+ 614 0172 63686172 		.ascii	"char\000"
+ 614      00
+ 615              	.LASF24:
+ 616 0177 494C4F5F 		.ascii	"ILO_Trim_1_Sleep\000"
+ 616      5472696D 
+ 616      5F315F53 
+ 616      6C656570 
+ 616      00
+ 617              	.LASF2:
+ 618 0188 73686F72 		.ascii	"short int\000"
+ 618      7420696E 
+ 618      7400
+ 619              	.LASF12:
+ 620 0192 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccLnHo3C.s 			page 16
+
+
+ 620      3800
+ 621              	.LASF4:
+ 622 0198 6C6F6E67 		.ascii	"long int\000"
+ 622      20696E74 
+ 622      00
+ 623              	.LASF19:
+ 624 01a1 494C4F5F 		.ascii	"ILO_Trim_1_backup\000"
+ 624      5472696D 
+ 624      5F315F62 
+ 624      61636B75 
+ 624      7000
+ 625              	.LASF0:
+ 626 01b3 7369676E 		.ascii	"signed char\000"
+ 626      65642063 
+ 626      68617200 
+ 627              	.LASF25:
+ 628 01bf 494C4F5F 		.ascii	"ILO_Trim_1_Stop\000"
+ 628      5472696D 
+ 628      5F315F53 
+ 628      746F7000 
+ 629              	.LASF22:
+ 630 01cf 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 630      73657273 
+ 630      5C444769 
+ 630      6C6C696C 
+ 630      616E645C 
+ 631 01fd 5C525050 		.ascii	"\\RPPSOC-Terminal.cydsn\000"
+ 631      534F432D 
+ 631      5465726D 
+ 631      696E616C 
+ 631      2E637964 
+ 632              	.LASF14:
+ 633 0214 494C4F5F 		.ascii	"ILO_Trim_1_backupStruct\000"
+ 633      5472696D 
+ 633      5F315F62 
+ 633      61636B75 
+ 633      70537472 
+ 634              	.LASF15:
+ 635 022c 494C4F5F 		.ascii	"ILO_Trim_1_SaveConfig\000"
+ 635      5472696D 
+ 635      5F315F53 
+ 635      61766543 
+ 635      6F6E6669 
+ 636              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

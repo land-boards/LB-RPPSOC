@@ -1,0 +1,124 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+dont_use_location comparatorcell -1 -1 1
+dont_use_location comparatorcell -1 -1 3
+dont_use_location sccell -1 -1 0
+dont_use_location sccell -1 -1 1
+dont_use_location sccell -1 -1 2
+dont_use_location sccell -1 -1 3
+dont_use_location vidaccell -1 -1 1
+dont_use_location vidaccell -1 -1 2
+dont_use_location vidaccell -1 -1 3
+dont_use_location sarcell -1 -1 1
+dont_use_location abufcell -1 -1 0
+dont_use_location abufcell -1 -1 2
+dont_use_location abufcell -1 -1 1
+dont_use_location abufcell -1 -1 3
+set_location "Net_220_0" macrocell 2 3 0 3
+set_location "Net_134" macrocell 3 1 1 1
+set_location "Net_220_2" macrocell 2 3 0 0
+set_location "Net_220_3" macrocell 2 3 0 2
+set_location "Net_105" macrocell 3 2 0 1
+set_location "Net_72" macrocell 2 1 0 1
+set_location "Net_73" macrocell 3 1 0 0
+set_location "Net_129" macrocell 2 2 0 0
+set_location "Net_74" macrocell 3 1 1 3
+set_location "Net_131" macrocell 3 1 1 2
+set_location "Net_136" macrocell 3 2 0 3
+set_location "Net_207" macrocell 3 1 1 0
+set_location "Net_50_3" macrocell 3 3 1 2
+set_location "Net_130" macrocell 3 2 1 3
+set_location "Net_212" macrocell 3 1 0 1
+set_location "Net_135" macrocell 2 2 0 2
+set_location "Net_50_2" macrocell 3 3 1 1
+set_location "Net_213" macrocell 2 2 1 1
+set_location "Net_132" macrocell 2 1 0 3
+set_location "Net_102" macrocell 3 3 1 3
+set_location "Net_209" macrocell 2 1 0 2
+set_location "Net_50_1" macrocell 3 3 1 0
+set_location "Net_210" macrocell 2 2 0 3
+set_location "Net_104" macrocell 3 2 1 1
+set_location "Net_208" macrocell 3 1 0 3
+set_location "Net_100" macrocell 2 1 1 0
+set_location "Net_103" macrocell 3 2 1 0
+set_location "Net_71" macrocell 3 2 0 2
+set_location "Net_220_1" macrocell 2 3 0 1
+set_location "Net_137" macrocell 3 1 0 2
+set_location "Net_211" macrocell 2 1 1 1
+set_location "Net_133" macrocell 2 2 0 1
+set_location "Net_75" macrocell 2 1 1 2
+set_location "Net_99" macrocell 2 2 1 0
+set_location "Net_93" macrocell 3 2 1 2
+set_location "Net_101" macrocell 3 2 0 0
+set_location "Net_94" macrocell 2 1 0 0
+set_io "P3_14(0)" iocell 0 7
+set_io "P3_12(0)" iocell 0 5
+set_io "P4_10(0)" iocell 3 5
+set_io "RP_GPIO_21(0)" iocell 2 0
+set_location "ClockBlock" clockblockcell -1 -1 0
+# Note: port 12 is the logical name for port 7
+set_io "P4_14(0)" iocell 12 1
+set_io "RP_GPIO_20(0)" iocell 2 2
+set_io "RP_GPIO_4(0)" iocell 5 5
+set_location "\I2C_1:I2C_FF\" i2ccell -1 -1 0
+set_io "LED5_4(0)" iocell 5 4
+set_io "P3_7(0)" iocell 0 0
+set_io "P4_11(0)" iocell 3 6
+set_io "P3_11(0)" iocell 0 4
+set_io "P4_12(0)" iocell 3 7
+set_io "P3_15(0)" iocell 4 2
+set_location "\I2C_1:I2C_IRQ\" interrupt -1 -1 15
+set_io "RP_SPI_MISO(0)" iocell 6 6
+set_io "RP_SPI_MOSI(0)" iocell 6 7
+set_io "RP_GPIO_17(0)" iocell 1 7
+# Note: port 12 is the logical name for port 7
+set_io "P4_13(0)" iocell 12 0
+set_io "P3_8(0)" iocell 0 1
+set_io "P3_6(0)" iocell 4 1
+# Note: port 15 is the logical name for port 8
+set_io "P4_4(0)" iocell 15 1
+set_io "RP_GPIO_6(0)" iocell 2 7
+set_io "P3_17(0)" iocell 4 4
+# Note: port 15 is the logical name for port 8
+set_io "P4_3(0)" iocell 15 0
+set_io "RP_SPI_CE1(0)" iocell 5 7
+set_io "RP_GPIO_19(0)" iocell 2 3
+set_io "RP_SPI_CE0(0)" iocell 6 4
+# Note: port 12 is the logical name for port 7
+set_io "P3_3(0)" iocell 12 2
+# Note: port 15 is the logical name for port 8
+set_io "P4_15(0)" iocell 15 2
+# Note: port 12 is the logical name for port 7
+set_io "RP_UART_TX(0)" iocell 12 7
+set_io "RP_GPIO_18(0)" iocell 1 6
+# Note: port 15 is the logical name for port 8
+set_io "P4_16(0)" iocell 15 3
+set_location "\Control_Reg_1:Sync:ctrl_reg\" controlcell 2 3 6 
+set_io "RP_GPIO_26(0)" iocell 2 1
+set_io "RP_GPIO_12(0)" iocell 2 6
+set_io "P4_6(0)" iocell 3 1
+set_io "RP_SPI_SCLK(0)" iocell 6 5
+# Note: port 12 is the logical name for port 7
+set_io "P3_4(0)" iocell 12 3
+set_io "P4_8(0)" iocell 3 3
+set_io "RP_GPIO_13(0)" iocell 2 5
+# Note: port 12 is the logical name for port 7
+set_io "SCL_1(0)" iocell 12 4
+set_io "P3_10(0)" iocell 0 3
+set_io "P4_5(0)" iocell 3 0
+set_io "P3_18(0)" iocell 4 5
+set_io "P3_16(0)" iocell 4 3
+set_io "P3_13(0)" iocell 0 6
+# Note: port 12 is the logical name for port 7
+set_io "RP_UART_RX(0)" iocell 12 6
+set_io "RP_GPIO_25(0)" iocell 5 0
+# Note: port 12 is the logical name for port 7
+set_io "SDA_1(0)" iocell 12 5
+set_io "P4_9(0)" iocell 3 4
+set_io "RP_GPIO_16(0)" iocell 2 4
+set_io "RP_GPIO_5(0)" iocell 5 6
+set_io "RP_GPIO_27(0)" iocell 1 5
+set_io "P4_7(0)" iocell 3 2
+set_io "P3_5(0)" iocell 4 0
+set_io "P3_9(0)" iocell 0 2
