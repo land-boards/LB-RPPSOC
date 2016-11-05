@@ -2,7 +2,7 @@
 --	Conversion of RPPSOC-Terminal.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Nov 03 15:12:40 2016
+--	Sat Nov 05 13:59:57 2016
 --
 
 USE cypress.cypress.all;

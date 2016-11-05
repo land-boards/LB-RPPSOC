@@ -4,9 +4,9 @@
 
 #Version:            1.1
 
-#Build Date:         Aug 18 2015 10:30:14
+#Build Date:         Apr 25 2016 12:55:34
 
-#File Generated:     Nov 3 2016 15:12:42
+#File Generated:     Nov 5 2016 14:00:01
 
 #Purpose:            
 
@@ -18,7 +18,7 @@ Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\bin/sjp
 
 		Softjin Techologies Placer, Version 1.1
 
-Build Date : Aug 18 2015	10:29:37
+Build Date : Apr 25 2016	12:53:53
 
 D2004: Option and Settings Summary
 =============================================================
@@ -58,7 +58,7 @@ Device Utilization Summary after Packing
     IOs                         :	47/72
 
 
-D2088: Phase 3, elapsed time : 0.0 (sec)
+D2088: Phase 3, elapsed time : 0.1 (sec)
 
 Phase 4
 D2088: Phase 4, elapsed time : 0.0 (sec)
@@ -93,7 +93,7 @@ Clock: PixelClock           | Frequency:  40.7 MHz | Target:  24.0 MHz
                      End of Clock Summary
 ######################################################################
 
-D2088: Phase 6, elapsed time : 0.1 (sec)
+D2088: Phase 6, elapsed time : 0.2 (sec)
 
 Phase 7
 ######################################################################
@@ -112,7 +112,7 @@ Clock: PixelClock           | Frequency:  40.7 MHz | Target:  24.0 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 4.4 (sec)
+D2088: Phase 7, elapsed time : 7.0 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	60
@@ -161,5 +161,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 5.3 sec.
+I2076: Total run-time: 9.6 sec.
 

@@ -1,6 +1,6 @@
 -- Project:   RPPSOC-Terminal
--- Generated: 11/03/2016 15:12:48
--- PSoC Creator  3.3
+-- Generated: 11/05/2016 14:00:11
+-- PSoC Creator  3.3 CP3
 
 ENTITY \RPPSOC-Terminal\ IS
     PORT(
@@ -53,8 +53,8 @@ ENTITY \RPPSOC-Terminal\ IS
         RP_GPIO_21(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
-    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 5e0;

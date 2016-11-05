@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
   29:.\Generated_Source\PSoC5/P4_6.c **** * Summary:
   30:.\Generated_Source\PSoC5/P4_6.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/P4_6.c **** *
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 2
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/P4_6.c **** * Parameters:  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
   53:.\Generated_Source\PSoC5/P4_6.c **** * Parameters:  
   54:.\Generated_Source\PSoC5/P4_6.c **** *  mode:  Change the pins to one of the following drive modes.
   55:.\Generated_Source\PSoC5/P4_6.c **** *
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 3
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 3
 
 
   56:.\Generated_Source\PSoC5/P4_6.c **** *  P4_6_DM_STRONG     Strong Drive 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
   80:.\Generated_Source\PSoC5/P4_6.c **** *  Read the current value on the pins of the Digital Port in right justified 
   81:.\Generated_Source\PSoC5/P4_6.c **** *  form.
   82:.\Generated_Source\PSoC5/P4_6.c **** *
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 4
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 4
 
 
   83:.\Generated_Source\PSoC5/P4_6.c **** * Parameters:  
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  111:.\Generated_Source\PSoC5/P4_6.c **** *  
  112:.\Generated_Source\PSoC5/P4_6.c **** *******************************************************************************/
  113:.\Generated_Source\PSoC5/P4_6.c **** uint8 P4_6_ReadDataReg(void) 
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 5
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 5
 
 
  114:.\Generated_Source\PSoC5/P4_6.c **** {
@@ -275,7 +275,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  144 000c 92000000 		.4byte	.LASF20
  145 0010 01       		.byte	0x1
  146 0011 00000000 		.4byte	.LASF21
- 147 0015 8B010000 		.4byte	.LASF22
+ 147 0015 81010000 		.4byte	.LASF22
  148 0019 00000000 		.4byte	.Ldebug_ranges0+0
  149 001d 00000000 		.4byte	0
  150 0021 00000000 		.4byte	.Ldebug_line0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  167 0041 02       		.uleb128 0x2
  168 0042 04       		.byte	0x4
  169 0043 05       		.byte	0x5
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 6
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 6
 
 
  170 0044 6C010000 		.4byte	.LASF4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  224 00b1 08       		.uleb128 0x8
  225 00b2 31000000 		.4byte	.LASF16
  226 00b6 01       		.byte	0x1
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 7
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 7
 
 
  227 00b7 27       		.byte	0x27
@@ -373,7 +373,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  236 00cc 53       		.byte	0x53
  237 00cd 00       		.byte	0
  238 00ce 07       		.uleb128 0x7
- 239 00cf D0010000 		.4byte	.LASF15
+ 239 00cf CE010000 		.4byte	.LASF15
  240 00d3 01       		.byte	0x1
  241 00d4 45       		.byte	0x45
  242 00d5 00000000 		.4byte	.LFB1
@@ -389,7 +389,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  252 00ee 21000000 		.4byte	.LLST1
  253 00f2 00       		.byte	0
  254 00f3 0A       		.uleb128 0xa
- 255 00f4 81010000 		.4byte	.LASF18
+ 255 00f4 C4010000 		.4byte	.LASF18
  256 00f8 01       		.byte	0x1
  257 00f9 5D       		.byte	0x5d
  258 00fa 6B000000 		.4byte	0x6b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  281 0006 0B       		.uleb128 0xb
  282 0007 03       		.uleb128 0x3
  283 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 8
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 8
 
 
  284 0009 1B       		.uleb128 0x1b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  338 003f 49       		.uleb128 0x49
  339 0040 13       		.uleb128 0x13
  340 0041 00       		.byte	0
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 9
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 9
 
 
  341 0042 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  395 0079 0B       		.uleb128 0xb
  396 007a 3B       		.uleb128 0x3b
  397 007b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 10
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 10
 
 
  398 007c 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  452 0030 18000000 		.4byte	.LFE1
  453 0034 0400     		.2byte	0x4
  454 0036 F3       		.byte	0xf3
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 11
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 11
 
 
  455 0037 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  497              	.LASF16:
  498 0031 76616C75 		.ascii	"value\000"
  498      6500
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 12
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 12
 
 
  499              	.LASF23:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  520      00
  521              	.LASF7:
  522 012d 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 13
+ARM GAS  C:\Users\doug_000\AppData\Local\Temp\ccwLmuWE.s 			page 13
 
 
  522      206C6F6E 
@@ -751,23 +751,23 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccI83ZRk.s 			page 1
  536 0175 7369676E 		.ascii	"signed char\000"
  536      65642063 
  536      68617200 
- 537              	.LASF18:
- 538 0181 50345F36 		.ascii	"P4_6_Read\000"
- 538      5F526561 
- 538      6400
- 539              	.LASF22:
- 540 018b 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
- 540      73657273 
- 540      5C444769 
- 540      6C6C696C 
- 540      616E645C 
- 541 01b9 5C525050 		.ascii	"\\RPPSOC-Terminal.cydsn\000"
- 541      534F432D 
- 541      5465726D 
- 541      696E616C 
- 541      2E637964 
+ 537              	.LASF22:
+ 538 0181 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
+ 538      73657273 
+ 538      5C646F75 
+ 538      675F3030 
+ 538      305C446F 
+ 539 01ae 52505053 		.ascii	"RPPSOC-Terminal.cydsn\000"
+ 539      4F432D54 
+ 539      65726D69 
+ 539      6E616C2E 
+ 539      63796473 
+ 540              	.LASF18:
+ 541 01c4 50345F36 		.ascii	"P4_6_Read\000"
+ 541      5F526561 
+ 541      6400
  542              	.LASF15:
- 543 01d0 50345F36 		.ascii	"P4_6_SetDriveMode\000"
+ 543 01ce 50345F36 		.ascii	"P4_6_SetDriveMode\000"
  543      5F536574 
  543      44726976 
  543      654D6F64 
