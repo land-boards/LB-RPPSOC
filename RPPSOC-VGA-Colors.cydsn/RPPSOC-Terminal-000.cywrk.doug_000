@@ -262,48 +262,7 @@
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cymetadata.c</v>
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>RPPSOC-Terminal-000</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\TopDesign</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\RPPSOC-VGA-Colors.cydwr</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Header Files</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Header Files\cyapicallbacks.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Source Files</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Source Files\main.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLANK</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLANK\BLANK.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLANK\BLANK.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLANK\BLANK_aliases.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLUE</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLUE\BLUE.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLUE\BLUE.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\BLUE\BLUE_aliases.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\COMP_SYNC</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\COMP_SYNC\COMP_SYNC.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\COMP_SYNC\COMP_SYNC.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\COMP_SYNC\COMP_SYNC_aliases.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -312,12 +271,7 @@
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\TopDesign</v>
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>RPPSOC-Terminal-000</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\TopDesign</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\TopDesign\TopDesign.cysch</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -393,48 +347,7 @@
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\RPPSOC-VGA-Colors.rpt</v>
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\RPPSOC-VGA-Colors_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>RPPSOC-Terminal-000</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\BLANK.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\BLUE.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\COMP_SYNC.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\GRN.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\HSYNC.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\LED5_4.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_10.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_12.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_14.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_16.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_4.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_6.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P3_8.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_10.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_11.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_12.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_13.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_14.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_15.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_16.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_17.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_18.lst</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CortexM3\ARM_GCC_493\Debug\Listing Files\P4_3.lst</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -468,32 +381,7 @@
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\xnor_v1_0\xnor_v1_0.pdf</v>
 <v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\xor_v1_0.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>RPPSOC-Terminal-000</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\PSoC 5 Architecture TRM</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\CY8C52LP Family Datasheet</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\System Reference Guides</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\System Reference Guides\cy_boot_v5_20</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\and_v1_0</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\and_v1_0\and_v1_0.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\BasicCounter_v1_0</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\BasicCounter_v1_0\BasicCounter_v1_0.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cy_clock_v2_20.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cy_constant_v1_0</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cy_pins_v2_10</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cydff_v1_30</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\cydff_v1_30\cydff_v1_30.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\demux_v1_10.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\DigitalComp_v1_0</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\DigitalComp_v1_0\DigitalComp_v1_0.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\nor_v1_0.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\xnor_v1_0</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\xnor_v1_0\xnor_v1_0.pdf</v>
-<v>RPPSOC-Terminal-000\RPPSOC-VGA-Colors\xor_v1_0.pdf</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -506,7 +394,11 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v="..\RPPSOC-Terminal.cydsn\RPPSOC-Terminal.rpt" />
+<name v=".\RPPSOC-VGA-Colors.cydwr" />
+</OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
