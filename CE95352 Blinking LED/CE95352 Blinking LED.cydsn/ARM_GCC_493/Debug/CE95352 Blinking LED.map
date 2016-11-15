@@ -65,17 +65,19 @@ Discarded input sections
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .text.PWM_1_Stop
-                0x00000000       0x48 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
- .text.PWM_1_ReadStatusRegister
-                0x00000000       0x18 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000000       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .text.PWM_1_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .text.PWM_1_ReadControlRegister
                 0x00000000       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .text.PWM_1_WriteControlRegister
                 0x00000000       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .text.PWM_1_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .text.PWM_1_ReadCompare
-                0x00000000       0x1c .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000000       0x18 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .text.PWM_1_ReadPeriod
-                0x00000000       0x1c .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000000       0x18 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
@@ -429,7 +431,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000      0x96a
+.text           0x00000000      0x822
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -443,60 +445,60 @@ END GROUP
                 0x00000010                Reset
                 0x00000001                ASSERT ((. != __cy_reset), No reset code)
  *(.dma_init)
- .dma_init      0x00000028      0x1c8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+ .dma_init      0x00000028      0x118 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x0), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x000001f0       0x5c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .text.main     0x0000024c        0xc .\ARM_GCC_493\Debug\main.o
-                0x0000024c                main
+ .text          0x00000140       0x5c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .text.main     0x0000019c        0xc .\ARM_GCC_493\Debug\main.o
+                0x0000019c                main
  .text.IntDefaultHandler
-                0x00000258        0x8 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000258                IntDefaultHandler
- .text.Start_c  0x00000260       0x98 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000260                Start_c
+                0x000001a8        0x8 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x000001a8                IntDefaultHandler
+ .text.Start_c  0x000001b0       0x98 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x000001b0                Start_c
  .text.initialize_psoc
-                0x000002f8       0x8c .\ARM_GCC_493\Debug\Cm3Start.o
-                0x000002f8                initialize_psoc
+                0x00000248       0x8c .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000248                initialize_psoc
  .text.CYCONFIGCPY
-                0x00000384       0x1c .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x000002d4       0x1c .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
  .text.CyClockStartupError
-                0x000003a0        0xc .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x000002f0        0xc .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
  .text.cfg_dma_init
-                0x000003ac      0x174 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x000002fc      0x170 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x00000520      0x100 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x0000046c      0x100 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000620       0x44 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x0000056c       0x44 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x00000664       0xc8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
-                0x00000664                cyfitter_cfg
+                0x000005b0       0xc8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x000005b0                cyfitter_cfg
  .text.PWM_1_Start
-                0x0000072c       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                0x0000072c                PWM_1_Start
+                0x00000678       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000678                PWM_1_Start
  .text.PWM_1_Init
-                0x0000074c       0xbc .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                0x0000074c                PWM_1_Init
+                0x00000698       0x50 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000698                PWM_1_Init
  .text.PWM_1_Enable
-                0x00000808       0x48 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                0x00000808                PWM_1_Enable
+                0x000006e8       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x000006e8                PWM_1_Enable
+ .text.PWM_1_WriteCounter
+                0x00000708       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000708                PWM_1_WriteCounter
  .text.PWM_1_WritePeriod
-                0x00000850       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                0x00000850                PWM_1_WritePeriod
+                0x00000728       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000728                PWM_1_WritePeriod
  .text.PWM_1_WriteCompare
-                0x00000870       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                0x00000870                PWM_1_WriteCompare
- .text.PWM_1_SetInterruptMode
-                0x00000890       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                0x00000890                PWM_1_SetInterruptMode
- .text          0x000008b0       0x58 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
-                0x000008b0                CyDelayCycles
-                0x000008ee                CyEnterCriticalSection
-                0x000008f6                CyExitCriticalSection
+                0x00000748       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x00000748                PWM_1_WriteCompare
+ .text          0x00000768       0x58 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
+                0x00000768                CyDelayCycles
+                0x000007a6                CyEnterCriticalSection
+                0x000007ae                CyExitCriticalSection
  .text.__libc_init_array
-                0x00000908       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x00000908                __libc_init_array
- .text.memcpy   0x00000954       0x16 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x00000954                memcpy
+                0x000007c0       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x000007c0                __libc_init_array
+ .text.memcpy   0x0000080c       0x16 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x0000080c                memcpy
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -509,78 +511,78 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x0000096c        0x0
+.v4_bx          0x00000824        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x0000096c        0x0
+.iplt           0x00000824        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x0000096c        0x4
+.eh_frame       0x00000824        0x4
  *(.eh_frame)
- .eh_frame      0x0000096c        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x0000096c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x00000970                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00000824        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00000824        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00000828                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000970                __exidx_end = .
+                0x00000828                __exidx_end = .
 
-.rodata         0x00000970      0x108
+.rodata         0x00000828       0xb0
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00000970       0xd0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
-                0x00000a40                . = ALIGN (0x4)
+ .rodata        0x00000828       0x78 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                0x000008a0                . = ALIGN (0x4)
  *(.init)
- .init          0x00000a40        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00000a40                _init
- .init          0x00000a44        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00000a4c                . = ALIGN (0x4)
-                0x00000a4c                __preinit_array_start = .
+ .init          0x000008a0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x000008a0                _init
+ .init          0x000008a4        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x000008ac                . = ALIGN (0x4)
+                0x000008ac                __preinit_array_start = .
  *(.preinit_array)
-                0x00000a4c                __preinit_array_end = .
-                0x00000a4c                . = ALIGN (0x4)
-                0x00000a4c                __init_array_start = .
+                0x000008ac                __preinit_array_end = .
+                0x000008ac                . = ALIGN (0x4)
+                0x000008ac                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00000a4c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x00000a50        0x4 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000a54                __init_array_end = .
-                0x00000a54                . = ALIGN (0x4)
+ .init_array    0x000008ac        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x000008b0        0x4 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x000008b4                __init_array_end = .
+                0x000008b4                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00000a54        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00000a54                _fini
- .fini          0x00000a58        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00000a60                . = ALIGN (0x4)
-                0x00000a60                __fini_array_start = .
+ .fini          0x000008b4        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x000008b4                _fini
+ .fini          0x000008b8        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x000008c0                . = ALIGN (0x4)
+                0x000008c0                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00000a60        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x000008c0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00000a64                __fini_array_end = .
-                0x00000a64                . = ALIGN (0x4)
+                0x000008c4                __fini_array_end = .
+                0x000008c4                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00000a64                . = ALIGN (0x4)
+                0x000008c4                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00000a64                . = ALIGN (0x4)
-                0x00000a64                __cy_regions = .
-                0x00000a64        0x4 LONG 0xa78 __cy_region_init_ram
-                0x00000a68        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x00000a6c        0x4 LONG 0x8 __cy_region_init_size_ram
-                0x00000a70        0x4 LONG 0x30 __cy_region_zero_size_ram
-                0x00000a74                __cy_regions_end = .
-                0x00000a78                . = ALIGN (0x8)
- *fill*         0x00000a74        0x4 
-                0x00000a78                _etext = .
+                0x000008c4                . = ALIGN (0x4)
+                0x000008c4                __cy_regions = .
+                0x000008c4        0x4 LONG 0x8d8 __cy_region_init_ram
+                0x000008c8        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x000008cc        0x4 LONG 0x8 __cy_region_init_size_ram
+                0x000008d0        0x4 LONG 0x30 __cy_region_zero_size_ram
+                0x000008d4                __cy_regions_end = .
+                0x000008d8                . = ALIGN (0x8)
+ *fill*         0x000008d4        0x4 
+                0x000008d8                _etext = .
 
 .cy_checksum_exclude
-                0x00000a78        0x0
+                0x000008d8        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -595,7 +597,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108        0x8 load address 0x00000a78
+.data           0x1fff8108        0x8 load address 0x000008d8
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -609,10 +611,10 @@ END GROUP
  *(.ram)
                 0x1fff8110                _edata = .
 
-.igot.plt       0x1fff8110        0x0 load address 0x00000a80
+.igot.plt       0x1fff8110        0x0 load address 0x000008e0
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8110       0x30 load address 0x00000a80
+.bss            0x1fff8110       0x30 load address 0x000008e0
                 0x1fff8110                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -629,11 +631,11 @@ END GROUP
                 0x1fff8140                __end = .
                 0x1fff8140                PROVIDE (end, .)
                 0x1fff8140                PROVIDE (__bss_end__, .)
-                0x00000a78                __cy_region_init_ram = LOADADDR (.data)
+                0x000008d8                __cy_region_init_ram = LOADADDR (.data)
                 0x00000008                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000030                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8140       0x80 load address 0x00000a80
+.heap           0x1fff8140       0x80 load address 0x000008e0
                 0x1fff8140                . = _end
                 0x1fff81c0                . = (. + 0x80)
  *fill*         0x1fff8140       0x80 
@@ -653,9 +655,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0xa20
+.cyconfigecc    0x80000000      0x3a4
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0xa20 .\ARM_GCC_493\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0x3a4 .\ARM_GCC_493\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -684,7 +686,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\ARM_GCC_493\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00000a80        0x0 load address 0x9050000c
+.rel.dyn        0x000008e0        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab
@@ -705,7 +707,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x5a0
+.debug_aranges  0x00000000      0x5a8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 .\ARM_GCC_493\Debug\main.o
@@ -716,96 +718,96 @@ END GROUP
  .debug_aranges
                 0x00000080       0x60 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
  .debug_aranges
-                0x000000e0       0x78 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                0x000000e0       0x80 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
  .debug_aranges
-                0x00000158       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
+                0x00000160       0x20 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000178      0x298 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+                0x00000180      0x298 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
  .debug_aranges
-                0x00000410       0x98 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+                0x00000418       0x98 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
  .debug_aranges
-                0x000004a8       0x80 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+                0x000004b0       0x80 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
  .debug_aranges
-                0x00000528       0x78 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+                0x00000530       0x78 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x26e5
+.debug_info     0x00000000     0x26dd
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0xc0 .\ARM_GCC_493\Debug\main.o
- .debug_info    0x000000c0      0x13e .\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x000001fe      0x317 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_info    0x00000515      0x3a9 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
- .debug_info    0x000008be      0x22c .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
- .debug_info    0x00000aea       0xab .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
- .debug_info    0x00000b95      0xe31 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
- .debug_info    0x000019c6      0x55f .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
- .debug_info    0x00001f25      0x36a .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
- .debug_info    0x0000228f      0x456 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+ .debug_info    0x000000c0      0x13a .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x000001fa      0x317 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_info    0x00000511      0x3a7 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+ .debug_info    0x000008b8      0x226 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .debug_info    0x00000ade       0xaf .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
+ .debug_info    0x00000b8d      0xe31 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+ .debug_info    0x000019be      0x55f .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+ .debug_info    0x00001f1d      0x36a .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+ .debug_info    0x00002287      0x456 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
 
-.debug_abbrev   0x00000000      0xb86
+.debug_abbrev   0x00000000      0xb75
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x65 .\ARM_GCC_493\Debug\main.o
- .debug_abbrev  0x00000065       0x77 .\ARM_GCC_493\Debug\cymetadata.o
- .debug_abbrev  0x000000dc      0x1b6 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_abbrev  0x00000292      0x192 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
- .debug_abbrev  0x00000424      0x123 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
- .debug_abbrev  0x00000547       0x14 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
- .debug_abbrev  0x0000055b      0x217 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
- .debug_abbrev  0x00000772      0x16e .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
- .debug_abbrev  0x000008e0      0x12d .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
- .debug_abbrev  0x00000a0d      0x179 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+ .debug_abbrev  0x00000065       0x66 .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x000000cb      0x1b6 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_abbrev  0x00000281      0x192 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+ .debug_abbrev  0x00000413      0x123 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .debug_abbrev  0x00000536       0x14 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x0000054a      0x217 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+ .debug_abbrev  0x00000761      0x16e .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+ .debug_abbrev  0x000008cf      0x12d .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+ .debug_abbrev  0x000009fc      0x179 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
 
-.debug_line     0x00000000     0x176d
+.debug_line     0x00000000     0x1774
  *(.debug_line)
  .debug_line    0x00000000      0x15b .\ARM_GCC_493\Debug\main.o
  .debug_line    0x0000015b       0x53 .\ARM_GCC_493\Debug\cymetadata.o
  .debug_line    0x000001ae      0x1d6 .\ARM_GCC_493\Debug\Cm3Start.o
  .debug_line    0x00000384      0x217 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
- .debug_line    0x0000059b      0x142 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
- .debug_line    0x000006dd       0x7f .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
- .debug_line    0x0000075c      0x872 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
- .debug_line    0x00000fce      0x381 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
- .debug_line    0x0000134f      0x207 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
- .debug_line    0x00001556      0x217 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+ .debug_line    0x0000059b      0x149 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .debug_line    0x000006e4       0x7f .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyBootAsmGnu.o)
+ .debug_line    0x00000763      0x872 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+ .debug_line    0x00000fd5      0x381 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+ .debug_line    0x00001356      0x207 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+ .debug_line    0x0000155d      0x217 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
 
-.debug_frame    0x00000000     0x1714
+.debug_frame    0x00000000     0x1738
  *(.debug_frame)
  .debug_frame   0x00000000       0x2c .\ARM_GCC_493\Debug\main.o
  .debug_frame   0x0000002c       0xd8 .\ARM_GCC_493\Debug\Cm3Start.o
  .debug_frame   0x00000104      0x160 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
- .debug_frame   0x00000264      0x1d0 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
- .debug_frame   0x00000434      0xbe8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
- .debug_frame   0x0000101c      0x234 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
- .debug_frame   0x00001250      0x210 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
- .debug_frame   0x00001460      0x1f8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
- .debug_frame   0x00001658       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00001678       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x000016a0       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x000016cc       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x000016f4       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000264      0x1f4 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .debug_frame   0x00000458      0xbe8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+ .debug_frame   0x00001040      0x234 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+ .debug_frame   0x00001274      0x210 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+ .debug_frame   0x00001484      0x1f8 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+ .debug_frame   0x0000167c       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000169c       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000016c4       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000016f0       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00001718       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x13c0
+.debug_str      0x00000000     0x13c5
  *(.debug_str)
- .debug_str     0x00000000      0x174 .\ARM_GCC_493\Debug\main.o
-                                0x1b5 (size before relaxing)
- .debug_str     0x00000174       0x7d .\ARM_GCC_493\Debug\cymetadata.o
-                                0x205 (size before relaxing)
- .debug_str     0x000001f1      0x139 .\ARM_GCC_493\Debug\Cm3Start.o
-                                0x2e6 (size before relaxing)
- .debug_str     0x0000032a      0x188 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
-                                0x32e (size before relaxing)
- .debug_str     0x000004b2      0x13c .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
-                                0x2dc (size before relaxing)
- .debug_str     0x000005ee      0x7fc .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
-                                0x9e1 (size before relaxing)
- .debug_str     0x00000dea      0x367 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
-                                0x546 (size before relaxing)
- .debug_str     0x00001151      0x147 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
-                                0x305 (size before relaxing)
- .debug_str     0x00001298      0x128 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
-                                0x302 (size before relaxing)
+ .debug_str     0x00000000      0x178 .\ARM_GCC_493\Debug\main.o
+                                0x1b9 (size before relaxing)
+ .debug_str     0x00000178       0x7d .\ARM_GCC_493\Debug\cymetadata.o
+                                0x209 (size before relaxing)
+ .debug_str     0x000001f5      0x139 .\ARM_GCC_493\Debug\Cm3Start.o
+                                0x2ea (size before relaxing)
+ .debug_str     0x0000032e      0x188 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
+                                0x332 (size before relaxing)
+ .debug_str     0x000004b6      0x13d .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+                                0x2d4 (size before relaxing)
+ .debug_str     0x000005f3      0x7fc .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+                                0x9e5 (size before relaxing)
+ .debug_str     0x00000def      0x367 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+                                0x54a (size before relaxing)
+ .debug_str     0x00001156      0x147 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+                                0x309 (size before relaxing)
+ .debug_str     0x0000129d      0x128 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+                                0x306 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -813,16 +815,16 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x4e8
+.debug_ranges   0x00000000      0x4f0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 .\ARM_GCC_493\Debug\main.o
  .debug_ranges  0x00000010       0x38 .\ARM_GCC_493\Debug\Cm3Start.o
  .debug_ranges  0x00000048       0x50 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyfitter_cfg.o)
- .debug_ranges  0x00000098       0x68 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
- .debug_ranges  0x00000100      0x288 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
- .debug_ranges  0x00000388       0x88 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
- .debug_ranges  0x00000410       0x70 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
- .debug_ranges  0x00000480       0x68 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
+ .debug_ranges  0x00000098       0x70 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(PWM_1.o)
+ .debug_ranges  0x00000108      0x288 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyLib.o)
+ .debug_ranges  0x00000390       0x88 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(cyPm.o)
+ .debug_ranges  0x00000418       0x70 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CyFlash.o)
+ .debug_ranges  0x00000488       0x68 .\ARM_GCC_493\Debug\CE95352 Blinking LED.a(CySpc.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\ARM_GCC_493\Debug\main.o

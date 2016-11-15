@@ -4,9 +4,9 @@
 
 #Version:            1.1
 
-#Build Date:         Apr 25 2016 12:55:34
+#Build Date:         Aug 18 2015 10:30:14
 
-#File Generated:     Nov 6 2016 10:40:25
+#File Generated:     Nov 8 2016 16:15:09
 
 #Purpose:            
 
@@ -18,7 +18,7 @@ Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\bin/sjp
 
 		Softjin Techologies Placer, Version 1.1
 
-Build Date : Apr 25 2016	12:53:53
+Build Date : Aug 18 2015	10:29:37
 
 D2004: Option and Settings Summary
 =============================================================
@@ -44,7 +44,7 @@ Phase 2
 Phase 3
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	56
+    Number of Combinational MCs 	:	58
     Number of Sequential MCs    	:	24
     Number of DPs               	:	0
     Number of Controls          	:	0
@@ -53,7 +53,7 @@ Design Statistics after Packing
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	80/192
+    Macrocells                  :	82/192
     UDBS                        :	24/24
     IOs                         :	47/72
 
@@ -85,13 +85,13 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: PixelClock           | Frequency:  40.0 MHz | Target:  24.0 MHz
+Clock: PixelClock           | Frequency:  31.2 MHz | Target:  24.0 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
 
-D2088: Phase 6, elapsed time : 0.2 (sec)
+D2088: Phase 6, elapsed time : 0.1 (sec)
 
 Phase 7
 ######################################################################
@@ -103,15 +103,15 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: PixelClock           | Frequency:  43.2 MHz | Target:  24.0 MHz
+Clock: PixelClock           | Frequency:  34.8 MHz | Target:  24.0 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 5.7 (sec)
+D2088: Phase 7, elapsed time : 3.6 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	56
+    Number of Combinational MCs 	:	58
     Number of Sequential MCs    	:	24
     Number of DPs               	:	0
     Number of Controls          	:	0
@@ -121,7 +121,7 @@ Final Design Statistics
     Number of IOs       	:	47
 
 Device Utilization Summary
-    Macrocells                  :	80/192
+    Macrocells                  :	82/192
     IOs                         :	47/72
 
 
@@ -144,7 +144,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: PixelClock           | Frequency:  45.4 MHz | Target:  26.3 MHz
+Clock: PixelClock           | Frequency:  35.2 MHz | Target:  26.3 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -155,5 +155,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 7.1 sec.
+I2076: Total run-time: 4.5 sec.
 

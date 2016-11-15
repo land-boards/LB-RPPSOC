@@ -1,6 +1,6 @@
 -- Project:   RPPSOC-VGA-Colors
--- Generated: 11/06/2016 10:40:32
--- PSoC Creator  3.3 CP3
+-- Generated: 11/08/2016 16:15:14
+-- PSoC Creator  3.3
 
 ENTITY \RPPSOC-VGA-Colors\ IS
     PORT(
@@ -53,8 +53,8 @@ ENTITY \RPPSOC-VGA-Colors\ IS
         RP_GPIO_21(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
-    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 5e0;
@@ -66,7 +66,7 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     SIGNAL BLUE(0)__PA : bit;
     SIGNAL COMP_SYNC(0)__PA : bit;
     SIGNAL CharClk : bit;
-    ATTRIBUTE placement_force OF CharClk : SIGNAL IS "U(3,2,B)2";
+    ATTRIBUTE placement_force OF CharClk : SIGNAL IS "U(3,0,B)2";
     ATTRIBUTE soft OF CharClk : SIGNAL IS 1;
     SIGNAL ClockBlock_100k : bit;
     SIGNAL ClockBlock_1k : bit;
@@ -80,49 +80,25 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
+    SIGNAL ColCount_0 : bit;
+    ATTRIBUTE placement_force OF ColCount_0 : SIGNAL IS "U(3,0,B)3";
+    SIGNAL ColCount_1 : bit;
+    ATTRIBUTE placement_force OF ColCount_1 : SIGNAL IS "U(3,0,A)0";
+    SIGNAL ColCount_2 : bit;
+    ATTRIBUTE placement_force OF ColCount_2 : SIGNAL IS "U(3,0,B)1";
+    SIGNAL ColCount_3 : bit;
+    ATTRIBUTE placement_force OF ColCount_3 : SIGNAL IS "U(2,1,B)1";
+    SIGNAL ColCount_4 : bit;
+    ATTRIBUTE placement_force OF ColCount_4 : SIGNAL IS "U(2,1,B)0";
+    SIGNAL ColCount_5 : bit;
+    ATTRIBUTE placement_force OF ColCount_5 : SIGNAL IS "U(2,1,B)3";
+    SIGNAL ColCount_6 : bit;
+    ATTRIBUTE placement_force OF ColCount_6 : SIGNAL IS "U(3,1,A)0";
     SIGNAL GRN(0)__PA : bit;
     SIGNAL HSYNC(0)__PA : bit;
+    SIGNAL HorSync : bit;
+    ATTRIBUTE placement_force OF HorSync : SIGNAL IS "U(2,2,A)3";
     SIGNAL LED5_4(0)__PA : bit;
-    SIGNAL Net_445 : bit;
-    ATTRIBUTE global_signal OF Net_445 : SIGNAL IS true;
-    SIGNAL Net_445_local : bit;
-    SIGNAL Net_529_0 : bit;
-    ATTRIBUTE placement_force OF Net_529_0 : SIGNAL IS "U(3,3,B)2";
-    SIGNAL Net_529_1 : bit;
-    ATTRIBUTE placement_force OF Net_529_1 : SIGNAL IS "U(3,3,B)1";
-    SIGNAL Net_529_2 : bit;
-    ATTRIBUTE placement_force OF Net_529_2 : SIGNAL IS "U(3,3,B)0";
-    SIGNAL Net_529_3 : bit;
-    ATTRIBUTE placement_force OF Net_529_3 : SIGNAL IS "U(3,2,B)1";
-    SIGNAL Net_529_4 : bit;
-    ATTRIBUTE placement_force OF Net_529_4 : SIGNAL IS "U(3,2,B)0";
-    SIGNAL Net_529_5 : bit;
-    ATTRIBUTE placement_force OF Net_529_5 : SIGNAL IS "U(3,2,A)2";
-    SIGNAL Net_529_6 : bit;
-    ATTRIBUTE placement_force OF Net_529_6 : SIGNAL IS "U(3,3,B)3";
-    SIGNAL Net_538_0 : bit;
-    ATTRIBUTE placement_force OF Net_538_0 : SIGNAL IS "U(2,1,A)0";
-    SIGNAL Net_538_1 : bit;
-    ATTRIBUTE placement_force OF Net_538_1 : SIGNAL IS "U(2,1,B)3";
-    SIGNAL Net_538_2 : bit;
-    ATTRIBUTE placement_force OF Net_538_2 : SIGNAL IS "U(2,1,B)2";
-    SIGNAL Net_538_3 : bit;
-    ATTRIBUTE placement_force OF Net_538_3 : SIGNAL IS "U(2,1,B)1";
-    SIGNAL Net_538_4 : bit;
-    ATTRIBUTE placement_force OF Net_538_4 : SIGNAL IS "U(2,1,A)3";
-    SIGNAL Net_538_5 : bit;
-    ATTRIBUTE placement_force OF Net_538_5 : SIGNAL IS "U(3,1,A)0";
-    SIGNAL Net_538_6 : bit;
-    ATTRIBUTE placement_force OF Net_538_6 : SIGNAL IS "U(3,1,A)2";
-    SIGNAL Net_538_7 : bit;
-    ATTRIBUTE placement_force OF Net_538_7 : SIGNAL IS "U(3,1,A)3";
-    SIGNAL Net_538_8 : bit;
-    ATTRIBUTE placement_force OF Net_538_8 : SIGNAL IS "U(2,1,A)1";
-    SIGNAL Net_538_9 : bit;
-    ATTRIBUTE placement_force OF Net_538_9 : SIGNAL IS "U(2,1,A)2";
-    SIGNAL Net_586 : bit;
-    ATTRIBUTE placement_force OF Net_586 : SIGNAL IS "U(3,1,B)1";
-    ATTRIBUTE soft OF Net_586 : SIGNAL IS 1;
     SIGNAL Net_600 : bit;
     SIGNAL Net_601 : bit;
     SIGNAL Net_602 : bit;
@@ -132,44 +108,44 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     SIGNAL Net_606 : bit;
     SIGNAL Net_607 : bit;
     SIGNAL Net_608 : bit;
-    ATTRIBUTE placement_force OF Net_608 : SIGNAL IS "U(3,4,A)0";
+    ATTRIBUTE placement_force OF Net_608 : SIGNAL IS "U(2,3,B)0";
     ATTRIBUTE soft OF Net_608 : SIGNAL IS 1;
     SIGNAL Net_608_split : bit;
-    ATTRIBUTE placement_force OF Net_608_split : SIGNAL IS "U(3,4,B)0";
+    ATTRIBUTE placement_force OF Net_608_split : SIGNAL IS "U(1,1,A)0";
     SIGNAL Net_608_split_1 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_1 : SIGNAL IS "U(2,4,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_1 : SIGNAL IS "U(2,3,A)0";
     SIGNAL Net_608_split_10 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_10 : SIGNAL IS "U(1,4,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_10 : SIGNAL IS "U(1,0,A)0";
     SIGNAL Net_608_split_11 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_11 : SIGNAL IS "U(1,2,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_11 : SIGNAL IS "U(0,2,B)0";
     SIGNAL Net_608_split_12 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_12 : SIGNAL IS "U(1,4,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_12 : SIGNAL IS "U(0,1,A)0";
     SIGNAL Net_608_split_13 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_13 : SIGNAL IS "U(1,3,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_13 : SIGNAL IS "U(0,2,A)0";
     SIGNAL Net_608_split_14 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_14 : SIGNAL IS "U(0,3,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_14 : SIGNAL IS "U(0,1,B)0";
     SIGNAL Net_608_split_15 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_15 : SIGNAL IS "U(1,3,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_15 : SIGNAL IS "U(1,2,B)0";
     SIGNAL Net_608_split_16 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_16 : SIGNAL IS "U(0,3,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_16 : SIGNAL IS "U(0,3,B)1";
     SIGNAL Net_608_split_17 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_17 : SIGNAL IS "U(1,5,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_17 : SIGNAL IS "U(2,0,B)3";
     SIGNAL Net_608_split_2 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_2 : SIGNAL IS "U(3,5,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_2 : SIGNAL IS "U(1,2,A)0";
     SIGNAL Net_608_split_3 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_3 : SIGNAL IS "U(3,5,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_3 : SIGNAL IS "U(2,2,B)0";
     SIGNAL Net_608_split_4 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_4 : SIGNAL IS "U(0,5,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_4 : SIGNAL IS "U(0,0,B)0";
     SIGNAL Net_608_split_5 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_5 : SIGNAL IS "U(1,5,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_5 : SIGNAL IS "U(2,1,A)0";
     SIGNAL Net_608_split_6 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_6 : SIGNAL IS "U(0,5,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_6 : SIGNAL IS "U(1,1,B)0";
     SIGNAL Net_608_split_7 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_7 : SIGNAL IS "U(2,5,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_7 : SIGNAL IS "U(2,0,A)0";
     SIGNAL Net_608_split_8 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_8 : SIGNAL IS "U(2,4,B)0";
+    ATTRIBUTE placement_force OF Net_608_split_8 : SIGNAL IS "U(0,0,A)0";
     SIGNAL Net_608_split_9 : bit;
-    ATTRIBUTE placement_force OF Net_608_split_9 : SIGNAL IS "U(2,5,A)0";
+    ATTRIBUTE placement_force OF Net_608_split_9 : SIGNAL IS "U(1,0,B)0";
     SIGNAL Net_609 : bit;
     SIGNAL Net_610 : bit;
     SIGNAL Net_611 : bit;
@@ -179,66 +155,88 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     SIGNAL Net_615 : bit;
     SIGNAL Net_616 : bit;
     SIGNAL Net_619 : bit;
-    ATTRIBUTE placement_force OF Net_619 : SIGNAL IS "U(0,3,A)1";
+    ATTRIBUTE placement_force OF Net_619 : SIGNAL IS "U(2,4,B)2";
     ATTRIBUTE soft OF Net_619 : SIGNAL IS 1;
     SIGNAL Net_619_split : bit;
-    ATTRIBUTE placement_force OF Net_619_split : SIGNAL IS "U(0,4,A)0";
+    ATTRIBUTE placement_force OF Net_619_split : SIGNAL IS "U(3,4,A)0";
     SIGNAL Net_619_split_1 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_1 : SIGNAL IS "U(0,2,B)0";
+    ATTRIBUTE placement_force OF Net_619_split_1 : SIGNAL IS "U(1,4,A)0";
     SIGNAL Net_619_split_10 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_10 : SIGNAL IS "U(1,0,A)1";
+    ATTRIBUTE placement_force OF Net_619_split_10 : SIGNAL IS "U(1,5,B)0";
     SIGNAL Net_619_split_11 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_11 : SIGNAL IS "U(2,3,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_11 : SIGNAL IS "U(1,3,B)0";
     SIGNAL Net_619_split_12 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_12 : SIGNAL IS "U(2,0,B)3";
+    ATTRIBUTE placement_force OF Net_619_split_12 : SIGNAL IS "U(0,4,B)0";
     SIGNAL Net_619_split_13 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_13 : SIGNAL IS "U(2,3,B)0";
+    ATTRIBUTE placement_force OF Net_619_split_13 : SIGNAL IS "U(0,3,A)0";
     SIGNAL Net_619_split_14 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_14 : SIGNAL IS "U(1,2,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_14 : SIGNAL IS "U(0,4,A)0";
     SIGNAL Net_619_split_15 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_15 : SIGNAL IS "U(2,0,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_15 : SIGNAL IS "U(1,3,A)0";
     SIGNAL Net_619_split_16 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_16 : SIGNAL IS "U(2,2,B)0";
+    ATTRIBUTE placement_force OF Net_619_split_16 : SIGNAL IS "U(0,3,B)0";
     SIGNAL Net_619_split_17 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_17 : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_17 : SIGNAL IS "U(2,5,A)0";
     SIGNAL Net_619_split_2 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_2 : SIGNAL IS "U(0,2,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_2 : SIGNAL IS "U(2,4,A)0";
     SIGNAL Net_619_split_3 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_3 : SIGNAL IS "U(0,4,B)0";
+    ATTRIBUTE placement_force OF Net_619_split_3 : SIGNAL IS "U(1,4,B)0";
     SIGNAL Net_619_split_4 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_4 : SIGNAL IS "U(0,0,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_4 : SIGNAL IS "U(1,5,A)0";
     SIGNAL Net_619_split_5 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_5 : SIGNAL IS "U(1,0,B)0";
+    ATTRIBUTE placement_force OF Net_619_split_5 : SIGNAL IS "U(3,5,B)0";
     SIGNAL Net_619_split_6 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_6 : SIGNAL IS "U(0,0,B)0";
+    ATTRIBUTE placement_force OF Net_619_split_6 : SIGNAL IS "U(0,5,A)0";
     SIGNAL Net_619_split_7 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_7 : SIGNAL IS "U(0,1,B)3";
+    ATTRIBUTE placement_force OF Net_619_split_7 : SIGNAL IS "U(2,5,B)0";
     SIGNAL Net_619_split_8 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_8 : SIGNAL IS "U(0,1,A)0";
+    ATTRIBUTE placement_force OF Net_619_split_8 : SIGNAL IS "U(3,5,A)0";
     SIGNAL Net_619_split_9 : bit;
-    ATTRIBUTE placement_force OF Net_619_split_9 : SIGNAL IS "U(1,1,B)1";
+    ATTRIBUTE placement_force OF Net_619_split_9 : SIGNAL IS "U(0,5,B)0";
     SIGNAL Net_620 : bit;
-    ATTRIBUTE placement_force OF Net_620 : SIGNAL IS "U(0,3,A)2";
+    ATTRIBUTE placement_force OF Net_620 : SIGNAL IS "U(2,0,B)2";
     SIGNAL Net_655_0 : bit;
-    ATTRIBUTE placement_force OF Net_655_0 : SIGNAL IS "U(3,4,B)1";
+    ATTRIBUTE placement_force OF Net_655_0 : SIGNAL IS "U(3,1,B)2";
     SIGNAL Net_655_1 : bit;
-    ATTRIBUTE placement_force OF Net_655_1 : SIGNAL IS "U(3,1,B)3";
+    ATTRIBUTE placement_force OF Net_655_1 : SIGNAL IS "U(3,0,A)3";
     SIGNAL Net_655_2 : bit;
-    ATTRIBUTE placement_force OF Net_655_2 : SIGNAL IS "U(3,4,A)3";
-    SIGNAL Net_715 : bit;
-    ATTRIBUTE placement_force OF Net_715 : SIGNAL IS "U(3,3,A)0";
-    ATTRIBUTE soft OF Net_715 : SIGNAL IS 1;
+    ATTRIBUTE placement_force OF Net_655_2 : SIGNAL IS "U(3,0,A)2";
     SIGNAL Net_722 : bit;
-    ATTRIBUTE placement_force OF Net_722 : SIGNAL IS "U(3,1,B)2";
+    ATTRIBUTE placement_force OF Net_722 : SIGNAL IS "U(3,2,A)1";
     ATTRIBUTE soft OF Net_722 : SIGNAL IS 1;
     SIGNAL Net_749 : bit;
-    ATTRIBUTE placement_force OF Net_749 : SIGNAL IS "U(3,2,A)1";
+    ATTRIBUTE placement_force OF Net_749 : SIGNAL IS "U(2,3,B)2";
     SIGNAL Net_755 : bit;
-    ATTRIBUTE placement_force OF Net_755 : SIGNAL IS "U(3,0,A)2";
+    ATTRIBUTE placement_force OF Net_755 : SIGNAL IS "U(3,1,A)3";
     SIGNAL Net_758 : bit;
-    ATTRIBUTE placement_force OF Net_758 : SIGNAL IS "U(3,0,A)3";
+    ATTRIBUTE placement_force OF Net_758 : SIGNAL IS "U(2,3,B)1";
     SIGNAL Net_765 : bit;
-    ATTRIBUTE placement_force OF Net_765 : SIGNAL IS "U(2,2,A)0";
+    ATTRIBUTE placement_force OF Net_765 : SIGNAL IS "U(3,0,A)1";
+    SIGNAL Net_765_split : bit;
+    ATTRIBUTE placement_force OF Net_765_split : SIGNAL IS "U(3,1,B)0";
+    SIGNAL Net_787_0 : bit;
+    ATTRIBUTE placement_force OF Net_787_0 : SIGNAL IS "U(2,5,A)1";
+    SIGNAL Net_787_1 : bit;
+    ATTRIBUTE placement_force OF Net_787_1 : SIGNAL IS "U(3,4,B)2";
+    SIGNAL Net_787_2 : bit;
+    ATTRIBUTE placement_force OF Net_787_2 : SIGNAL IS "U(3,4,B)0";
+    SIGNAL Net_787_3 : bit;
+    ATTRIBUTE placement_force OF Net_787_3 : SIGNAL IS "U(3,3,A)2";
+    SIGNAL Net_787_4 : bit;
+    ATTRIBUTE placement_force OF Net_787_4 : SIGNAL IS "U(3,3,B)0";
+    SIGNAL Net_787_5 : bit;
+    ATTRIBUTE placement_force OF Net_787_5 : SIGNAL IS "U(3,3,B)2";
+    SIGNAL Net_787_6 : bit;
+    ATTRIBUTE placement_force OF Net_787_6 : SIGNAL IS "U(3,3,A)1";
+    SIGNAL Net_787_7 : bit;
+    ATTRIBUTE placement_force OF Net_787_7 : SIGNAL IS "U(3,3,A)0";
+    SIGNAL Net_787_8 : bit;
+    ATTRIBUTE placement_force OF Net_787_8 : SIGNAL IS "U(3,2,A)0";
+    SIGNAL Net_787_9 : bit;
+    ATTRIBUTE placement_force OF Net_787_9 : SIGNAL IS "U(3,3,B)1";
+    SIGNAL Net_788 : bit;
+    ATTRIBUTE placement_force OF Net_788 : SIGNAL IS "U(2,4,B)1";
+    ATTRIBUTE soft OF Net_788 : SIGNAL IS 1;
     SIGNAL P3_10(0)__PA : bit;
     SIGNAL P3_12(0)__PA : bit;
     SIGNAL P3_14(0)__PA : bit;
@@ -262,6 +260,9 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     SIGNAL P4_7(0)__PA : bit;
     SIGNAL P4_8(0)__PA : bit;
     SIGNAL P4_9(0)__PA : bit;
+    SIGNAL PixClk : bit;
+    ATTRIBUTE global_signal OF PixClk : SIGNAL IS true;
+    SIGNAL PixClk_local : bit;
     SIGNAL RED(0)__PA : bit;
     SIGNAL RP_GPIO_12(0)__PA : bit;
     SIGNAL RP_GPIO_13(0)__PA : bit;
@@ -280,43 +281,46 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     SIGNAL RP_GPIO_5(0)__PA : bit;
     SIGNAL RP_GPIO_6(0)__PA : bit;
     SIGNAL VSYNC(0)__PA : bit;
-    SIGNAL \MODULE_4:g1:a0:gx:u0:gt_2\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:gt_2\ : SIGNAL IS "U(2,1,B)0";
+    SIGNAL VertSync : bit;
+    ATTRIBUTE placement_force OF VertSync : SIGNAL IS "U(3,2,B)0";
+    ATTRIBUTE soft OF VertSync : SIGNAL IS 1;
+    SIGNAL \MODULE_10:g1:a0:gx:u0:gt_5\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_10:g1:a0:gx:u0:gt_5\ : SIGNAL IS "U(2,1,B)2";
+    SIGNAL \MODULE_10:g1:a0:gx:u0:lt_5\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_10:g1:a0:gx:u0:lt_5\ : SIGNAL IS "U(3,1,A)2";
+    SIGNAL \MODULE_11:g1:a0:gx:u0:gt_2\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_11:g1:a0:gx:u0:gt_2\ : SIGNAL IS "U(3,0,B)0";
+    SIGNAL \MODULE_11:g1:a0:gx:u0:lt_2\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_11:g1:a0:gx:u0:lt_2\ : SIGNAL IS "U(2,0,B)1";
+    SIGNAL \MODULE_12:g1:a0:gx:u0:lt_5\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_12:g1:a0:gx:u0:lt_5\ : SIGNAL IS "U(3,1,A)1";
     SIGNAL \MODULE_4:g1:a0:gx:u0:gt_5\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:gt_5\ : SIGNAL IS "U(2,2,A)3";
+    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:gt_5\ : SIGNAL IS "U(3,3,A)3";
+    SIGNAL \MODULE_4:g1:a0:gx:u0:lt_2\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:lt_2\ : SIGNAL IS "U(3,2,B)1";
     SIGNAL \MODULE_4:g1:a0:gx:u0:lt_5\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:lt_5\ : SIGNAL IS "U(2,2,B)1";
+    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:lt_5\ : SIGNAL IS "U(3,3,B)3";
     SIGNAL \MODULE_4:g1:a0:gx:u0:lt_8\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:lt_8\ : SIGNAL IS "U(3,0,B)3";
-    SIGNAL \MODULE_5:g1:a0:gx:u0:lt_2\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_5:g1:a0:gx:u0:lt_2\ : SIGNAL IS "U(3,0,A)0";
-    SIGNAL \MODULE_6:g1:a0:gx:u0:eq_7\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_6:g1:a0:gx:u0:eq_7\ : SIGNAL IS "U(3,1,A)1";
-    SIGNAL \MODULE_8:g1:a0:gx:u0:gt_2\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_8:g1:a0:gx:u0:gt_2\ : SIGNAL IS "U(3,3,A)2";
-    SIGNAL \MODULE_8:g1:a0:gx:u0:lt_2\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_8:g1:a0:gx:u0:lt_2\ : SIGNAL IS "U(3,3,A)1";
-    SIGNAL \MODULE_8:g1:a0:gx:u0:lt_5\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_8:g1:a0:gx:u0:lt_5\ : SIGNAL IS "U(3,2,A)0";
-    SIGNAL \MODULE_9:g1:a0:gx:u0:gt_5\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_9:g1:a0:gx:u0:gt_5\ : SIGNAL IS "U(3,2,A)3";
-    SIGNAL \MODULE_9:g1:a0:gx:u0:lt_5\ : bit;
-    ATTRIBUTE placement_force OF \MODULE_9:g1:a0:gx:u0:lt_5\ : SIGNAL IS "U(3,2,B)3";
-    SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
-    ATTRIBUTE placement_force OF \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ : SIGNAL IS "U(3,0,B)2";
+    ATTRIBUTE placement_force OF \MODULE_4:g1:a0:gx:u0:lt_8\ : SIGNAL IS "U(3,2,A)2";
+    SIGNAL \MODULE_6:g1:a0:gx:u0:gt_2\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_6:g1:a0:gx:u0:gt_2\ : SIGNAL IS "U(3,2,B)2";
+    SIGNAL \MODULE_7:g1:a0:gx:u0:eq_7\ : bit;
+    ATTRIBUTE placement_force OF \MODULE_7:g1:a0:gx:u0:eq_7\ : SIGNAL IS "U(3,4,B)1";
+    SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
+    ATTRIBUTE placement_force OF \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : SIGNAL IS "U(3,4,B)3";
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
-    SIGNAL lineClk : bit;
-    ATTRIBUTE placement_force OF lineClk : SIGNAL IS "U(3,0,A)1";
-    ATTRIBUTE soft OF lineClk : SIGNAL IS 1;
+    SIGNAL lineClear : bit;
+    ATTRIBUTE placement_force OF lineClear : SIGNAL IS "U(2,2,A)1";
+    ATTRIBUTE soft OF lineClear : SIGNAL IS 1;
     SIGNAL tmpOE__LED5_4_net_0 : bit;
     ATTRIBUTE POWER OF tmpOE__LED5_4_net_0 : SIGNAL IS true;
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE lib_model OF Net_608_split : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_608_split : LABEL IS "U(3,4)";
+    ATTRIBUTE Location OF Net_608_split : LABEL IS "U(1,1)";
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF LED5_4(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF LED5_4(0) : LABEL IS "P5[4]";
@@ -412,164 +416,168 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-VGA-Colors\ IS
     ATTRIBUTE Location OF RP_GPIO_20(0) : LABEL IS "P2[2]";
     ATTRIBUTE lib_model OF RP_GPIO_21(0) : LABEL IS "iocell47";
     ATTRIBUTE Location OF RP_GPIO_21(0) : LABEL IS "P2[0]";
-    ATTRIBUTE lib_model OF Net_586 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_586 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_715 : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF Net_715 : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF CharClk : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF CharClk : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF lineClk : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF lineClk : LABEL IS "U(3,0)";
-    ATTRIBUTE lib_model OF Net_619_split_7 : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF Net_619_split_7 : LABEL IS "U(0,1)";
-    ATTRIBUTE lib_model OF Net_619_split_6 : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF Net_619_split_6 : LABEL IS "U(0,0)";
-    ATTRIBUTE lib_model OF Net_619_split_5 : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF Net_619_split_5 : LABEL IS "U(1,0)";
-    ATTRIBUTE lib_model OF Net_619_split_4 : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF Net_619_split_4 : LABEL IS "U(0,0)";
-    ATTRIBUTE lib_model OF Net_619_split_3 : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF Net_619_split_3 : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF Net_619_split_2 : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF Net_619_split_2 : LABEL IS "U(0,2)";
-    ATTRIBUTE lib_model OF Net_619_split_1 : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF Net_619_split_1 : LABEL IS "U(0,2)";
-    ATTRIBUTE lib_model OF Net_619_split : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF Net_619_split : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF Net_608_split_17 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_608_split_17 : LABEL IS "U(1,5)";
-    ATTRIBUTE lib_model OF Net_608_split_16 : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF Net_619_split_7 : LABEL IS "macrocell2";
+    ATTRIBUTE Location OF Net_619_split_7 : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF Net_619_split_6 : LABEL IS "macrocell3";
+    ATTRIBUTE Location OF Net_619_split_6 : LABEL IS "U(0,5)";
+    ATTRIBUTE lib_model OF Net_619_split_5 : LABEL IS "macrocell4";
+    ATTRIBUTE Location OF Net_619_split_5 : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF Net_619_split_4 : LABEL IS "macrocell5";
+    ATTRIBUTE Location OF Net_619_split_4 : LABEL IS "U(1,5)";
+    ATTRIBUTE lib_model OF Net_619_split_3 : LABEL IS "macrocell6";
+    ATTRIBUTE Location OF Net_619_split_3 : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF Net_619_split_2 : LABEL IS "macrocell7";
+    ATTRIBUTE Location OF Net_619_split_2 : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF Net_619_split_1 : LABEL IS "macrocell8";
+    ATTRIBUTE Location OF Net_619_split_1 : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF Net_619_split : LABEL IS "macrocell9";
+    ATTRIBUTE Location OF Net_619_split : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_608_split_17 : LABEL IS "macrocell10";
+    ATTRIBUTE Location OF Net_608_split_17 : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF Net_608_split_16 : LABEL IS "macrocell11";
     ATTRIBUTE Location OF Net_608_split_16 : LABEL IS "U(0,3)";
-    ATTRIBUTE lib_model OF Net_608_split_15 : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF Net_608_split_15 : LABEL IS "U(1,3)";
-    ATTRIBUTE lib_model OF Net_608_split_14 : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF Net_608_split_14 : LABEL IS "U(0,3)";
-    ATTRIBUTE lib_model OF Net_608_split_13 : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF Net_608_split_13 : LABEL IS "U(1,3)";
-    ATTRIBUTE lib_model OF Net_608_split_12 : LABEL IS "macrocell19";
-    ATTRIBUTE Location OF Net_608_split_12 : LABEL IS "U(1,4)";
-    ATTRIBUTE lib_model OF Net_608_split_11 : LABEL IS "macrocell20";
-    ATTRIBUTE Location OF Net_608_split_11 : LABEL IS "U(1,2)";
-    ATTRIBUTE lib_model OF Net_608_split_10 : LABEL IS "macrocell21";
-    ATTRIBUTE Location OF Net_608_split_10 : LABEL IS "U(1,4)";
-    ATTRIBUTE lib_model OF Net_608_split_9 : LABEL IS "macrocell22";
-    ATTRIBUTE Location OF Net_608_split_9 : LABEL IS "U(2,5)";
-    ATTRIBUTE lib_model OF Net_608_split_8 : LABEL IS "macrocell23";
-    ATTRIBUTE Location OF Net_608_split_8 : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF Net_608_split_7 : LABEL IS "macrocell24";
-    ATTRIBUTE Location OF Net_608_split_7 : LABEL IS "U(2,5)";
-    ATTRIBUTE lib_model OF Net_608_split_6 : LABEL IS "macrocell25";
-    ATTRIBUTE Location OF Net_608_split_6 : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ : LABEL IS "macrocell26";
-    ATTRIBUTE Location OF \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ : LABEL IS "U(3,0)";
-    ATTRIBUTE lib_model OF Net_608 : LABEL IS "macrocell27";
-    ATTRIBUTE Location OF Net_608 : LABEL IS "U(3,4)";
-    ATTRIBUTE lib_model OF Net_619 : LABEL IS "macrocell28";
-    ATTRIBUTE Location OF Net_619 : LABEL IS "U(0,3)";
-    ATTRIBUTE lib_model OF Net_620 : LABEL IS "macrocell29";
-    ATTRIBUTE Location OF Net_620 : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : LABEL IS "macrocell12";
+    ATTRIBUTE Location OF \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF CharClk : LABEL IS "macrocell13";
+    ATTRIBUTE Location OF CharClk : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF Net_608_split_15 : LABEL IS "macrocell14";
+    ATTRIBUTE Location OF Net_608_split_15 : LABEL IS "U(1,2)";
+    ATTRIBUTE lib_model OF Net_608_split_14 : LABEL IS "macrocell15";
+    ATTRIBUTE Location OF Net_608_split_14 : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF Net_608_split_13 : LABEL IS "macrocell16";
+    ATTRIBUTE Location OF Net_608_split_13 : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF Net_608_split_12 : LABEL IS "macrocell17";
+    ATTRIBUTE Location OF Net_608_split_12 : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF VertSync : LABEL IS "macrocell18";
+    ATTRIBUTE Location OF VertSync : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF Net_788 : LABEL IS "macrocell19";
+    ATTRIBUTE Location OF Net_788 : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF Net_608 : LABEL IS "macrocell20";
+    ATTRIBUTE Location OF Net_608 : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF Net_619 : LABEL IS "macrocell21";
+    ATTRIBUTE Location OF Net_619 : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF Net_620 : LABEL IS "macrocell22";
+    ATTRIBUTE Location OF Net_620 : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF Net_608_split_11 : LABEL IS "macrocell23";
+    ATTRIBUTE Location OF Net_608_split_11 : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF Net_608_split_10 : LABEL IS "macrocell24";
+    ATTRIBUTE Location OF Net_608_split_10 : LABEL IS "U(1,0)";
+    ATTRIBUTE lib_model OF Net_608_split_9 : LABEL IS "macrocell25";
+    ATTRIBUTE Location OF Net_608_split_9 : LABEL IS "U(1,0)";
+    ATTRIBUTE lib_model OF Net_722 : LABEL IS "macrocell26";
+    ATTRIBUTE Location OF Net_722 : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF Net_608_split_8 : LABEL IS "macrocell27";
+    ATTRIBUTE Location OF Net_608_split_8 : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF Net_608_split_7 : LABEL IS "macrocell28";
+    ATTRIBUTE Location OF Net_608_split_7 : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF Net_608_split_6 : LABEL IS "macrocell29";
+    ATTRIBUTE Location OF Net_608_split_6 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_608_split_5 : LABEL IS "macrocell30";
-    ATTRIBUTE Location OF Net_608_split_5 : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF Net_608_split_5 : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF Net_608_split_4 : LABEL IS "macrocell31";
-    ATTRIBUTE Location OF Net_608_split_4 : LABEL IS "U(0,5)";
+    ATTRIBUTE Location OF Net_608_split_4 : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF Net_608_split_3 : LABEL IS "macrocell32";
-    ATTRIBUTE Location OF Net_608_split_3 : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF Net_608_split_3 : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_608_split_2 : LABEL IS "macrocell33";
-    ATTRIBUTE Location OF Net_608_split_2 : LABEL IS "U(3,5)";
-    ATTRIBUTE lib_model OF Net_722 : LABEL IS "macrocell34";
-    ATTRIBUTE Location OF Net_722 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:lt_8\ : LABEL IS "macrocell35";
-    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:lt_8\ : LABEL IS "U(3,0)";
-    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell36";
-    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:lt_5\ : LABEL IS "U(2,2)";
-    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell37";
-    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:gt_5\ : LABEL IS "U(2,2)";
-    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:gt_2\ : LABEL IS "macrocell38";
-    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:gt_2\ : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF \MODULE_5:g1:a0:gx:u0:lt_2\ : LABEL IS "macrocell39";
-    ATTRIBUTE Location OF \MODULE_5:g1:a0:gx:u0:lt_2\ : LABEL IS "U(3,0)";
-    ATTRIBUTE lib_model OF \MODULE_6:g1:a0:gx:u0:eq_7\ : LABEL IS "macrocell40";
-    ATTRIBUTE Location OF \MODULE_6:g1:a0:gx:u0:eq_7\ : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_619_split_17 : LABEL IS "macrocell41";
-    ATTRIBUTE Location OF Net_619_split_17 : LABEL IS "U(1,1)";
-    ATTRIBUTE lib_model OF Net_619_split_16 : LABEL IS "macrocell42";
-    ATTRIBUTE Location OF Net_619_split_16 : LABEL IS "U(2,2)";
-    ATTRIBUTE lib_model OF Net_619_split_15 : LABEL IS "macrocell43";
-    ATTRIBUTE Location OF Net_619_split_15 : LABEL IS "U(2,0)";
-    ATTRIBUTE lib_model OF Net_608_split_1 : LABEL IS "macrocell44";
-    ATTRIBUTE Location OF Net_608_split_1 : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF Net_619_split_14 : LABEL IS "macrocell45";
-    ATTRIBUTE Location OF Net_619_split_14 : LABEL IS "U(1,2)";
-    ATTRIBUTE lib_model OF Net_619_split_13 : LABEL IS "macrocell46";
-    ATTRIBUTE Location OF Net_619_split_13 : LABEL IS "U(2,3)";
-    ATTRIBUTE lib_model OF \MODULE_8:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell47";
-    ATTRIBUTE Location OF \MODULE_8:g1:a0:gx:u0:lt_5\ : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF \MODULE_8:g1:a0:gx:u0:lt_2\ : LABEL IS "macrocell48";
-    ATTRIBUTE Location OF \MODULE_8:g1:a0:gx:u0:lt_2\ : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF \MODULE_8:g1:a0:gx:u0:gt_2\ : LABEL IS "macrocell49";
-    ATTRIBUTE Location OF \MODULE_8:g1:a0:gx:u0:gt_2\ : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell50";
-    ATTRIBUTE Location OF \MODULE_9:g1:a0:gx:u0:lt_5\ : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF \MODULE_9:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell51";
-    ATTRIBUTE Location OF \MODULE_9:g1:a0:gx:u0:gt_5\ : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF Net_619_split_12 : LABEL IS "macrocell52";
-    ATTRIBUTE Location OF Net_619_split_12 : LABEL IS "U(2,0)";
-    ATTRIBUTE lib_model OF Net_619_split_11 : LABEL IS "macrocell53";
-    ATTRIBUTE Location OF Net_619_split_11 : LABEL IS "U(2,3)";
-    ATTRIBUTE lib_model OF Net_619_split_10 : LABEL IS "macrocell54";
-    ATTRIBUTE Location OF Net_619_split_10 : LABEL IS "U(1,0)";
-    ATTRIBUTE lib_model OF Net_619_split_9 : LABEL IS "macrocell55";
-    ATTRIBUTE Location OF Net_619_split_9 : LABEL IS "U(1,1)";
-    ATTRIBUTE lib_model OF Net_619_split_8 : LABEL IS "macrocell56";
-    ATTRIBUTE Location OF Net_619_split_8 : LABEL IS "U(0,1)";
-    ATTRIBUTE lib_model OF Net_655_2 : LABEL IS "macrocell57";
-    ATTRIBUTE Location OF Net_655_2 : LABEL IS "U(3,4)";
-    ATTRIBUTE lib_model OF Net_655_1 : LABEL IS "macrocell58";
-    ATTRIBUTE Location OF Net_655_1 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_655_0 : LABEL IS "macrocell59";
-    ATTRIBUTE Location OF Net_655_0 : LABEL IS "U(3,4)";
-    ATTRIBUTE lib_model OF Net_529_6 : LABEL IS "macrocell60";
-    ATTRIBUTE Location OF Net_529_6 : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF Net_529_5 : LABEL IS "macrocell61";
-    ATTRIBUTE Location OF Net_529_5 : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF Net_529_4 : LABEL IS "macrocell62";
-    ATTRIBUTE Location OF Net_529_4 : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF Net_529_3 : LABEL IS "macrocell63";
-    ATTRIBUTE Location OF Net_529_3 : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF Net_529_2 : LABEL IS "macrocell64";
-    ATTRIBUTE Location OF Net_529_2 : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF Net_529_1 : LABEL IS "macrocell65";
-    ATTRIBUTE Location OF Net_529_1 : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF Net_529_0 : LABEL IS "macrocell66";
-    ATTRIBUTE Location OF Net_529_0 : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF Net_538_9 : LABEL IS "macrocell67";
-    ATTRIBUTE Location OF Net_538_9 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_538_8 : LABEL IS "macrocell68";
-    ATTRIBUTE Location OF Net_538_8 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_538_7 : LABEL IS "macrocell69";
-    ATTRIBUTE Location OF Net_538_7 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_538_6 : LABEL IS "macrocell70";
-    ATTRIBUTE Location OF Net_538_6 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_538_5 : LABEL IS "macrocell71";
-    ATTRIBUTE Location OF Net_538_5 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_538_4 : LABEL IS "macrocell72";
-    ATTRIBUTE Location OF Net_538_4 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_538_3 : LABEL IS "macrocell73";
-    ATTRIBUTE Location OF Net_538_3 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_538_2 : LABEL IS "macrocell74";
-    ATTRIBUTE Location OF Net_538_2 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_538_1 : LABEL IS "macrocell75";
-    ATTRIBUTE Location OF Net_538_1 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_538_0 : LABEL IS "macrocell76";
-    ATTRIBUTE Location OF Net_538_0 : LABEL IS "U(2,1)";
-    ATTRIBUTE lib_model OF Net_758 : LABEL IS "macrocell77";
-    ATTRIBUTE Location OF Net_758 : LABEL IS "U(3,0)";
-    ATTRIBUTE lib_model OF Net_749 : LABEL IS "macrocell78";
-    ATTRIBUTE Location OF Net_749 : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF Net_755 : LABEL IS "macrocell79";
-    ATTRIBUTE Location OF Net_755 : LABEL IS "U(3,0)";
-    ATTRIBUTE lib_model OF Net_765 : LABEL IS "macrocell80";
-    ATTRIBUTE Location OF Net_765 : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_608_split_2 : LABEL IS "U(1,2)";
+    ATTRIBUTE lib_model OF lineClear : LABEL IS "macrocell34";
+    ATTRIBUTE Location OF lineClear : LABEL IS "U(2,2)";
+    ATTRIBUTE lib_model OF HorSync : LABEL IS "macrocell35";
+    ATTRIBUTE Location OF HorSync : LABEL IS "U(2,2)";
+    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:lt_8\ : LABEL IS "macrocell36";
+    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:lt_8\ : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell37";
+    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:lt_5\ : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell38";
+    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:gt_5\ : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF \MODULE_4:g1:a0:gx:u0:lt_2\ : LABEL IS "macrocell39";
+    ATTRIBUTE Location OF \MODULE_4:g1:a0:gx:u0:lt_2\ : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF \MODULE_6:g1:a0:gx:u0:gt_2\ : LABEL IS "macrocell40";
+    ATTRIBUTE Location OF \MODULE_6:g1:a0:gx:u0:gt_2\ : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF \MODULE_7:g1:a0:gx:u0:eq_7\ : LABEL IS "macrocell41";
+    ATTRIBUTE Location OF \MODULE_7:g1:a0:gx:u0:eq_7\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_765_split : LABEL IS "macrocell42";
+    ATTRIBUTE Location OF Net_765_split : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF Net_619_split_17 : LABEL IS "macrocell43";
+    ATTRIBUTE Location OF Net_619_split_17 : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF Net_619_split_16 : LABEL IS "macrocell44";
+    ATTRIBUTE Location OF Net_619_split_16 : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF Net_619_split_15 : LABEL IS "macrocell45";
+    ATTRIBUTE Location OF Net_619_split_15 : LABEL IS "U(1,3)";
+    ATTRIBUTE lib_model OF Net_608_split_1 : LABEL IS "macrocell46";
+    ATTRIBUTE Location OF Net_608_split_1 : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF Net_619_split_14 : LABEL IS "macrocell47";
+    ATTRIBUTE Location OF Net_619_split_14 : LABEL IS "U(0,4)";
+    ATTRIBUTE lib_model OF Net_619_split_13 : LABEL IS "macrocell48";
+    ATTRIBUTE Location OF Net_619_split_13 : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF Net_619_split_12 : LABEL IS "macrocell49";
+    ATTRIBUTE Location OF Net_619_split_12 : LABEL IS "U(0,4)";
+    ATTRIBUTE lib_model OF Net_619_split_11 : LABEL IS "macrocell50";
+    ATTRIBUTE Location OF Net_619_split_11 : LABEL IS "U(1,3)";
+    ATTRIBUTE lib_model OF Net_619_split_10 : LABEL IS "macrocell51";
+    ATTRIBUTE Location OF Net_619_split_10 : LABEL IS "U(1,5)";
+    ATTRIBUTE lib_model OF Net_619_split_9 : LABEL IS "macrocell52";
+    ATTRIBUTE Location OF Net_619_split_9 : LABEL IS "U(0,5)";
+    ATTRIBUTE lib_model OF \MODULE_10:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell53";
+    ATTRIBUTE Location OF \MODULE_10:g1:a0:gx:u0:lt_5\ : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF \MODULE_10:g1:a0:gx:u0:gt_5\ : LABEL IS "macrocell54";
+    ATTRIBUTE Location OF \MODULE_10:g1:a0:gx:u0:gt_5\ : LABEL IS "U(2,1)";
+    ATTRIBUTE lib_model OF Net_619_split_8 : LABEL IS "macrocell55";
+    ATTRIBUTE Location OF Net_619_split_8 : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF \MODULE_11:g1:a0:gx:u0:lt_2\ : LABEL IS "macrocell56";
+    ATTRIBUTE Location OF \MODULE_11:g1:a0:gx:u0:lt_2\ : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \MODULE_11:g1:a0:gx:u0:gt_2\ : LABEL IS "macrocell57";
+    ATTRIBUTE Location OF \MODULE_11:g1:a0:gx:u0:gt_2\ : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF \MODULE_12:g1:a0:gx:u0:lt_5\ : LABEL IS "macrocell58";
+    ATTRIBUTE Location OF \MODULE_12:g1:a0:gx:u0:lt_5\ : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF Net_787_9 : LABEL IS "macrocell59";
+    ATTRIBUTE Location OF Net_787_9 : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_787_8 : LABEL IS "macrocell60";
+    ATTRIBUTE Location OF Net_787_8 : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF Net_787_7 : LABEL IS "macrocell61";
+    ATTRIBUTE Location OF Net_787_7 : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_787_6 : LABEL IS "macrocell62";
+    ATTRIBUTE Location OF Net_787_6 : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_787_5 : LABEL IS "macrocell63";
+    ATTRIBUTE Location OF Net_787_5 : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_787_4 : LABEL IS "macrocell64";
+    ATTRIBUTE Location OF Net_787_4 : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_787_3 : LABEL IS "macrocell65";
+    ATTRIBUTE Location OF Net_787_3 : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_787_2 : LABEL IS "macrocell66";
+    ATTRIBUTE Location OF Net_787_2 : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_787_1 : LABEL IS "macrocell67";
+    ATTRIBUTE Location OF Net_787_1 : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_787_0 : LABEL IS "macrocell68";
+    ATTRIBUTE Location OF Net_787_0 : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF Net_655_2 : LABEL IS "macrocell69";
+    ATTRIBUTE Location OF Net_655_2 : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF Net_655_1 : LABEL IS "macrocell70";
+    ATTRIBUTE Location OF Net_655_1 : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF Net_655_0 : LABEL IS "macrocell71";
+    ATTRIBUTE Location OF Net_655_0 : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF Net_758 : LABEL IS "macrocell72";
+    ATTRIBUTE Location OF Net_758 : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF ColCount_5 : LABEL IS "macrocell73";
+    ATTRIBUTE Location OF ColCount_5 : LABEL IS "U(2,1)";
+    ATTRIBUTE lib_model OF ColCount_4 : LABEL IS "macrocell74";
+    ATTRIBUTE Location OF ColCount_4 : LABEL IS "U(2,1)";
+    ATTRIBUTE lib_model OF Net_749 : LABEL IS "macrocell75";
+    ATTRIBUTE Location OF Net_749 : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF Net_755 : LABEL IS "macrocell76";
+    ATTRIBUTE Location OF Net_755 : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF Net_765 : LABEL IS "macrocell77";
+    ATTRIBUTE Location OF Net_765 : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF ColCount_6 : LABEL IS "macrocell78";
+    ATTRIBUTE Location OF ColCount_6 : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF ColCount_3 : LABEL IS "macrocell79";
+    ATTRIBUTE Location OF ColCount_3 : LABEL IS "U(2,1)";
+    ATTRIBUTE lib_model OF ColCount_2 : LABEL IS "macrocell80";
+    ATTRIBUTE Location OF ColCount_2 : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF ColCount_1 : LABEL IS "macrocell81";
+    ATTRIBUTE Location OF ColCount_1 : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF ColCount_0 : LABEL IS "macrocell82";
+    ATTRIBUTE Location OF ColCount_0 : LABEL IS "U(3,0)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -757,8 +765,8 @@ BEGIN
             clk_bus => ClockBlock_BUS_CLK_local,
             dsi_clkin_div => open,
             dsi_glb_div => open,
-            dclk_glb_0 => Net_445,
-            dclk_0 => Net_445_local);
+            dclk_glb_0 => PixClk,
+            dclk_0 => PixClk_local);
 
     LED5_4:logicalport
         GENERIC MAP(
@@ -1390,7 +1398,7 @@ BEGIN
         PORT MAP(
             pa_out => HSYNC(0)__PA,
             oe => open,
-            pin_input => Net_715,
+            pin_input => HorSync,
             pad_out => HSYNC(0)_PAD,
             pad_in => HSYNC(0)_PAD,
             in_clock => open,
@@ -1478,10 +1486,12 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "VSYNC",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
             pa_out => VSYNC(0)__PA,
             oe => open,
+            pin_input => VertSync,
+            pad_out => VSYNC(0)_PAD,
             pad_in => VSYNC(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -5034,58 +5044,6 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Net_586:macrocell
-        GENERIC MAP(
-            soft => 1,
-            eqn_main => "(main_0 * !main_1 * main_2)",
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_586,
-            main_0 => Net_538_9,
-            main_1 => Net_538_8,
-            main_2 => \MODULE_6:g1:a0:gx:u0:eq_7\);
-
-    Net_715:macrocell
-        GENERIC MAP(
-            soft => 1,
-            eqn_main => "(main_0 * !main_1 * main_2 * !main_3 * !main_5) + (main_0 * !main_1 * main_2 * !main_5 * main_6) + (main_0 * !main_1 * !main_3 * !main_4 * !main_5) + (main_0 * !main_1 * !main_4 * !main_5 * main_6)",
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_715,
-            main_0 => Net_529_6,
-            main_1 => Net_529_5,
-            main_2 => \MODULE_8:g1:a0:gx:u0:lt_5\,
-            main_3 => \MODULE_8:g1:a0:gx:u0:lt_2\,
-            main_4 => \MODULE_8:g1:a0:gx:u0:gt_2\,
-            main_5 => \MODULE_9:g1:a0:gx:u0:lt_5\,
-            main_6 => \MODULE_9:g1:a0:gx:u0:gt_5\);
-
-    CharClk:macrocell
-        GENERIC MAP(
-            soft => 1,
-            eqn_main => "(main_0 * main_1 * main_2)",
-            clken_mode => 1)
-        PORT MAP(
-            q => CharClk,
-            main_0 => Net_655_2,
-            main_1 => Net_655_1,
-            main_2 => Net_655_0);
-
-    lineClk:macrocell
-        GENERIC MAP(
-            soft => 1,
-            eqn_main => "(main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6)",
-            clken_mode => 1)
-        PORT MAP(
-            q => lineClk,
-            main_0 => Net_529_6,
-            main_1 => Net_529_5,
-            main_2 => Net_529_4,
-            main_3 => Net_529_3,
-            main_4 => Net_529_2,
-            main_5 => Net_529_1,
-            main_6 => Net_529_0);
-
     Net_619_split_7:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * main_7) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6 * !main_7) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6 * !main_7) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6 * main_7) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6 * main_7) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6 * main_7) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6 * !main_7)",
@@ -5233,6 +5191,32 @@ BEGIN
             main_3 => Net_608_split_14,
             main_4 => Net_608_split_15);
 
+    \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6 * main_7)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\,
+            main_0 => Net_787_7,
+            main_1 => Net_787_6,
+            main_2 => Net_787_5,
+            main_3 => Net_787_4,
+            main_4 => Net_787_3,
+            main_5 => Net_787_2,
+            main_6 => Net_787_1,
+            main_7 => Net_787_0);
+
+    CharClk:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(main_0 * main_1 * main_2)",
+            clken_mode => 1)
+        PORT MAP(
+            q => CharClk,
+            main_0 => Net_655_2,
+            main_1 => Net_655_1,
+            main_2 => Net_655_0);
+
     Net_608_split_15:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * !main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6 * main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6 * main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6 * !main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6 * main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6 * !main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6 * !main_7) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6 * main_7)",
@@ -5293,6 +5277,66 @@ BEGIN
             main_6 => Net_606,
             main_7 => Net_607);
 
+    VertSync:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5)",
+            clken_mode => 1)
+        PORT MAP(
+            q => VertSync,
+            main_0 => Net_787_9,
+            main_1 => \MODULE_4:g1:a0:gx:u0:lt_8\,
+            main_2 => \MODULE_4:g1:a0:gx:u0:lt_5\,
+            main_3 => \MODULE_4:g1:a0:gx:u0:gt_5\,
+            main_4 => \MODULE_4:g1:a0:gx:u0:lt_2\,
+            main_5 => \MODULE_6:g1:a0:gx:u0:gt_2\);
+
+    Net_788:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(main_0 * !main_1 * main_2)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_788,
+            main_0 => Net_787_9,
+            main_1 => Net_787_8,
+            main_2 => \MODULE_7:g1:a0:gx:u0:eq_7\);
+
+    Net_608:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_608,
+            main_0 => Net_608_split,
+            main_1 => Net_608_split_1,
+            main_2 => Net_608_split_2,
+            main_3 => Net_608_split_3,
+            main_4 => Net_608_split_17);
+
+    Net_619:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_619,
+            main_0 => Net_619_split,
+            main_1 => Net_619_split_1,
+            main_2 => Net_619_split_2,
+            main_3 => Net_619_split_3,
+            main_4 => Net_619_split_17);
+
+    Net_620:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_620,
+            main_0 => Net_608,
+            main_1 => Net_619);
+
     Net_608_split_11:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * main_7) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6 * !main_7) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6 * !main_7) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6 * main_7) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6 * main_7) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6 * main_7) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6 * !main_7)",
@@ -5338,6 +5382,19 @@ BEGIN
             main_6 => Net_606,
             main_7 => Net_607);
 
+    Net_722:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(main_0) + (main_1 * !main_3) + (main_2 * !main_4)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_722,
+            main_0 => Net_787_9,
+            main_1 => Net_787_5,
+            main_2 => ColCount_6,
+            main_3 => \MODULE_4:g1:a0:gx:u0:lt_8\,
+            main_4 => \MODULE_10:g1:a0:gx:u0:lt_5\);
+
     Net_608_split_8:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6 * !main_7) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6 * !main_7) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6 * !main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * !main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6 * !main_7)",
@@ -5382,56 +5439,6 @@ BEGIN
             main_5 => Net_605,
             main_6 => Net_606,
             main_7 => Net_607);
-
-    \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6 * main_7)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\,
-            main_0 => Net_538_7,
-            main_1 => Net_538_6,
-            main_2 => Net_538_5,
-            main_3 => Net_538_4,
-            main_4 => Net_538_3,
-            main_5 => Net_538_2,
-            main_6 => Net_538_1,
-            main_7 => Net_538_0);
-
-    Net_608:macrocell
-        GENERIC MAP(
-            soft => 1,
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4)",
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_608,
-            main_0 => Net_608_split,
-            main_1 => Net_608_split_1,
-            main_2 => Net_608_split_2,
-            main_3 => Net_608_split_3,
-            main_4 => Net_608_split_17);
-
-    Net_619:macrocell
-        GENERIC MAP(
-            soft => 1,
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4)",
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_619,
-            main_0 => Net_619_split,
-            main_1 => Net_619_split_1,
-            main_2 => Net_619_split_2,
-            main_3 => Net_619_split_3,
-            main_4 => Net_619_split_17);
-
-    Net_620:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1) + (main_0 * main_1)",
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_620,
-            main_0 => Net_608,
-            main_1 => Net_619);
 
     Net_608_split_5:macrocell
         GENERIC MAP(
@@ -5493,18 +5500,34 @@ BEGIN
             main_6 => Net_606,
             main_7 => Net_607);
 
-    Net_722:macrocell
+    lineClear:macrocell
         GENERIC MAP(
             soft => 1,
-            eqn_main => "(main_0 * !main_4) + (main_1) + (main_2 * !main_3)",
+            eqn_main => "(main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6)",
             clken_mode => 1)
         PORT MAP(
-            q => Net_722,
-            main_0 => Net_529_6,
-            main_1 => Net_538_9,
-            main_2 => Net_538_5,
-            main_3 => \MODULE_4:g1:a0:gx:u0:lt_8\,
-            main_4 => \MODULE_9:g1:a0:gx:u0:lt_5\);
+            q => lineClear,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4,
+            main_2 => ColCount_6,
+            main_3 => ColCount_3,
+            main_4 => ColCount_2,
+            main_5 => ColCount_1,
+            main_6 => ColCount_0);
+
+    HorSync:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * !main_2 * main_3 * !main_5) + (!main_0 * main_1 * !main_2 * main_3 * main_6) + (!main_0 * main_1 * !main_2 * !main_4 * !main_5) + (!main_0 * main_1 * !main_2 * !main_4 * main_6)",
+            clken_mode => 1)
+        PORT MAP(
+            q => HorSync,
+            main_0 => ColCount_5,
+            main_1 => ColCount_6,
+            main_2 => \MODULE_10:g1:a0:gx:u0:lt_5\,
+            main_3 => \MODULE_10:g1:a0:gx:u0:gt_5\,
+            main_4 => \MODULE_11:g1:a0:gx:u0:lt_2\,
+            main_5 => \MODULE_11:g1:a0:gx:u0:gt_2\,
+            main_6 => \MODULE_12:g1:a0:gx:u0:lt_5\);
 
     \MODULE_4:g1:a0:gx:u0:lt_8\:macrocell
         GENERIC MAP(
@@ -5512,9 +5535,9 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \MODULE_4:g1:a0:gx:u0:lt_8\,
-            main_0 => Net_538_8,
-            main_1 => Net_538_7,
-            main_2 => Net_538_6);
+            main_0 => Net_787_8,
+            main_1 => Net_787_7,
+            main_2 => Net_787_6);
 
     \MODULE_4:g1:a0:gx:u0:lt_5\:macrocell
         GENERIC MAP(
@@ -5522,9 +5545,9 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \MODULE_4:g1:a0:gx:u0:lt_5\,
-            main_0 => Net_538_5,
-            main_1 => Net_538_4,
-            main_2 => Net_538_3);
+            main_0 => Net_787_5,
+            main_1 => Net_787_4,
+            main_2 => Net_787_3);
 
     \MODULE_4:g1:a0:gx:u0:gt_5\:macrocell
         GENERIC MAP(
@@ -5532,42 +5555,57 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \MODULE_4:g1:a0:gx:u0:gt_5\,
-            main_0 => Net_538_5,
-            main_1 => Net_538_4);
+            main_0 => Net_787_5,
+            main_1 => Net_787_4);
 
-    \MODULE_4:g1:a0:gx:u0:gt_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \MODULE_4:g1:a0:gx:u0:gt_2\,
-            main_0 => Net_538_2,
-            main_1 => Net_538_1,
-            main_2 => Net_538_0);
-
-    \MODULE_5:g1:a0:gx:u0:lt_2\:macrocell
+    \MODULE_4:g1:a0:gx:u0:lt_2\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1)",
             clken_mode => 1)
         PORT MAP(
-            q => \MODULE_5:g1:a0:gx:u0:lt_2\,
-            main_0 => Net_538_2,
-            main_1 => Net_538_1);
+            q => \MODULE_4:g1:a0:gx:u0:lt_2\,
+            main_0 => Net_787_2,
+            main_1 => Net_787_1);
 
-    \MODULE_6:g1:a0:gx:u0:eq_7\:macrocell
+    \MODULE_6:g1:a0:gx:u0:gt_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \MODULE_6:g1:a0:gx:u0:gt_2\,
+            main_0 => Net_787_2,
+            main_1 => Net_787_1,
+            main_2 => Net_787_0);
+
+    \MODULE_7:g1:a0:gx:u0:eq_7\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6 * main_7)",
             clken_mode => 1)
         PORT MAP(
-            q => \MODULE_6:g1:a0:gx:u0:eq_7\,
-            main_0 => Net_538_7,
-            main_1 => Net_538_6,
-            main_2 => Net_538_5,
-            main_3 => Net_538_4,
-            main_4 => Net_538_3,
-            main_5 => Net_538_2,
-            main_6 => Net_538_1,
-            main_7 => Net_538_0);
+            q => \MODULE_7:g1:a0:gx:u0:eq_7\,
+            main_0 => Net_787_7,
+            main_1 => Net_787_6,
+            main_2 => Net_787_5,
+            main_3 => Net_787_4,
+            main_4 => Net_787_3,
+            main_5 => Net_787_2,
+            main_6 => Net_787_1,
+            main_7 => Net_787_0);
+
+    Net_765_split:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * main_7) + (!main_0 * !main_1 * main_2 * !main_3 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * !main_3 * !main_5 * main_7) + (main_0 * !main_2) + (main_0 * main_3) + (main_0 * !main_4 * main_5) + (main_0 * main_6 * !main_7)",
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_765_split,
+            main_0 => VertSync,
+            main_1 => ColCount_5,
+            main_2 => ColCount_6,
+            main_3 => \MODULE_10:g1:a0:gx:u0:lt_5\,
+            main_4 => \MODULE_10:g1:a0:gx:u0:gt_5\,
+            main_5 => \MODULE_11:g1:a0:gx:u0:lt_2\,
+            main_6 => \MODULE_11:g1:a0:gx:u0:gt_2\,
+            main_7 => \MODULE_12:g1:a0:gx:u0:lt_5\);
 
     Net_619_split_17:macrocell
         GENERIC MAP(
@@ -5656,54 +5694,6 @@ BEGIN
             main_6 => Net_615,
             main_7 => Net_616);
 
-    \MODULE_8:g1:a0:gx:u0:lt_5\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1) + (!main_0 * !main_2)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \MODULE_8:g1:a0:gx:u0:lt_5\,
-            main_0 => Net_529_5,
-            main_1 => Net_529_4,
-            main_2 => Net_529_3);
-
-    \MODULE_8:g1:a0:gx:u0:lt_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \MODULE_8:g1:a0:gx:u0:lt_2\,
-            main_0 => Net_529_2,
-            main_1 => Net_529_1);
-
-    \MODULE_8:g1:a0:gx:u0:gt_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0) + (main_1 * main_2)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \MODULE_8:g1:a0:gx:u0:gt_2\,
-            main_0 => Net_529_2,
-            main_1 => Net_529_1,
-            main_2 => Net_529_0);
-
-    \MODULE_9:g1:a0:gx:u0:lt_5\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \MODULE_9:g1:a0:gx:u0:lt_5\,
-            main_0 => Net_529_5,
-            main_1 => Net_529_4);
-
-    \MODULE_9:g1:a0:gx:u0:gt_5\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0) + (main_1 * main_2)",
-            clken_mode => 1)
-        PORT MAP(
-            q => \MODULE_9:g1:a0:gx:u0:gt_5\,
-            main_0 => Net_529_5,
-            main_1 => Net_529_4,
-            main_2 => Net_529_3);
-
     Net_619_split_12:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6 * !main_7) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6 * main_7) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6 * main_7) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * main_6 * !main_7) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6 * main_7) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * main_6 * !main_7) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * !main_6 * !main_7) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * main_6 * main_7)",
@@ -5764,6 +5754,25 @@ BEGIN
             main_6 => Net_615,
             main_7 => Net_616);
 
+    \MODULE_10:g1:a0:gx:u0:lt_5\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \MODULE_10:g1:a0:gx:u0:lt_5\,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4);
+
+    \MODULE_10:g1:a0:gx:u0:gt_5\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0) + (main_1 * main_2)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \MODULE_10:g1:a0:gx:u0:gt_5\,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4,
+            main_2 => ColCount_3);
+
     Net_619_split_8:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6 * !main_7) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6 * !main_7) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6 * !main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * !main_6 * main_7) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6 * !main_7)",
@@ -5779,6 +5788,186 @@ BEGIN
             main_6 => Net_615,
             main_7 => Net_616);
 
+    \MODULE_11:g1:a0:gx:u0:lt_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \MODULE_11:g1:a0:gx:u0:lt_2\,
+            main_0 => ColCount_2,
+            main_1 => ColCount_1);
+
+    \MODULE_11:g1:a0:gx:u0:gt_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0) + (main_1 * main_2)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \MODULE_11:g1:a0:gx:u0:gt_2\,
+            main_0 => ColCount_2,
+            main_1 => ColCount_1,
+            main_2 => ColCount_0);
+
+    \MODULE_12:g1:a0:gx:u0:lt_5\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (!main_0 * !main_2)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \MODULE_12:g1:a0:gx:u0:lt_5\,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4,
+            main_2 => ColCount_3);
+
+    Net_787_9:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1) + (!main_1 * main_2 * main_3 * main_4)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_9,
+            clock_0 => PixClk,
+            main_0 => Net_787_9,
+            main_1 => Net_788,
+            main_2 => lineClear,
+            main_3 => Net_787_8,
+            main_4 => \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\);
+
+    Net_787_8:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_8,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_8,
+            main_3 => \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\);
+
+    Net_787_7:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7 * main_8 * main_9) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_7,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_7,
+            main_3 => Net_787_6,
+            main_4 => Net_787_5,
+            main_5 => Net_787_4,
+            main_6 => Net_787_3,
+            main_7 => Net_787_2,
+            main_8 => Net_787_1,
+            main_9 => Net_787_0);
+
+    Net_787_6:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7 * main_8) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_6,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_6,
+            main_3 => Net_787_5,
+            main_4 => Net_787_4,
+            main_5 => Net_787_3,
+            main_6 => Net_787_2,
+            main_7 => Net_787_1,
+            main_8 => Net_787_0);
+
+    Net_787_5:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_5,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_5,
+            main_3 => Net_787_4,
+            main_4 => Net_787_3,
+            main_5 => Net_787_2,
+            main_6 => Net_787_1,
+            main_7 => Net_787_0);
+
+    Net_787_4:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_4,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_4,
+            main_3 => Net_787_3,
+            main_4 => Net_787_2,
+            main_5 => Net_787_1,
+            main_6 => Net_787_0);
+
+    Net_787_3:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_3,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_3,
+            main_3 => Net_787_2,
+            main_4 => Net_787_1,
+            main_5 => Net_787_0);
+
+    Net_787_2:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_2,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_2,
+            main_3 => Net_787_1,
+            main_4 => Net_787_0);
+
+    Net_787_1:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_1,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_1,
+            main_3 => Net_787_0);
+
+    Net_787_0:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * main_1 * !main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_787_0,
+            clock_0 => PixClk,
+            main_0 => Net_788,
+            main_1 => lineClear,
+            main_2 => Net_787_0);
+
     Net_655_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -5786,7 +5975,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_655_2,
-            clock_0 => Net_445,
+            clock_0 => PixClk,
             main_0 => Net_655_1,
             main_1 => Net_655_0);
 
@@ -5797,7 +5986,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_655_1,
-            clock_0 => Net_445,
+            clock_0 => PixClk,
             main_0 => Net_655_0);
 
     Net_655_0:macrocell
@@ -5807,263 +5996,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_655_0,
-            clock_0 => Net_445);
-
-    Net_529_6:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * main_4 * main_5 * main_6 * main_7 * main_8) + (main_1 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_6,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_6,
-            main_3 => Net_529_5,
-            main_4 => Net_529_4,
-            main_5 => Net_529_3,
-            main_6 => Net_529_2,
-            main_7 => Net_529_1,
-            main_8 => Net_529_0);
-
-    Net_529_5:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * main_4 * main_5 * main_6 * main_7) + (main_1 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_5,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_5,
-            main_3 => Net_529_4,
-            main_4 => Net_529_3,
-            main_5 => Net_529_2,
-            main_6 => Net_529_1,
-            main_7 => Net_529_0);
-
-    Net_529_4:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * main_4 * main_5 * main_6) + (main_1 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_4,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_4,
-            main_3 => Net_529_3,
-            main_4 => Net_529_2,
-            main_5 => Net_529_1,
-            main_6 => Net_529_0);
-
-    Net_529_3:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * main_4 * main_5) + (main_1 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_3,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_3,
-            main_3 => Net_529_2,
-            main_4 => Net_529_1,
-            main_5 => Net_529_0);
-
-    Net_529_2:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * main_4) + (main_1 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_2,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_2,
-            main_3 => Net_529_1,
-            main_4 => Net_529_0);
-
-    Net_529_1:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3) + (main_1 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_1,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_1,
-            main_3 => Net_529_0);
-
-    Net_529_0:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2) + (main_0 * !main_1 * !main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_529_0,
-            clock_0 => Net_445,
-            main_0 => CharClk,
-            main_1 => lineClk,
-            main_2 => Net_529_0);
-
-    Net_538_9:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_9,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_9,
-            main_3 => Net_538_8,
-            main_4 => \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\);
-
-    Net_538_8:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_8,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_8,
-            main_3 => \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\);
-
-    Net_538_7:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7 * main_8 * main_9) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_7,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_7,
-            main_3 => Net_538_6,
-            main_4 => Net_538_5,
-            main_5 => Net_538_4,
-            main_6 => Net_538_3,
-            main_7 => Net_538_2,
-            main_8 => Net_538_1,
-            main_9 => Net_538_0);
-
-    Net_538_6:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7 * main_8) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_6,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_6,
-            main_3 => Net_538_5,
-            main_4 => Net_538_4,
-            main_5 => Net_538_3,
-            main_6 => Net_538_2,
-            main_7 => Net_538_1,
-            main_8 => Net_538_0);
-
-    Net_538_5:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_5,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_5,
-            main_3 => Net_538_4,
-            main_4 => Net_538_3,
-            main_5 => Net_538_2,
-            main_6 => Net_538_1,
-            main_7 => Net_538_0);
-
-    Net_538_4:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_4,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_4,
-            main_3 => Net_538_3,
-            main_4 => Net_538_2,
-            main_5 => Net_538_1,
-            main_6 => Net_538_0);
-
-    Net_538_3:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_3,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_3,
-            main_3 => Net_538_2,
-            main_4 => Net_538_1,
-            main_5 => Net_538_0);
-
-    Net_538_2:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3 * main_4) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_2,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_2,
-            main_3 => Net_538_1,
-            main_4 => Net_538_0);
-
-    Net_538_1:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_3) + (main_0 * main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_1,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_1,
-            main_3 => Net_538_0);
-
-    Net_538_0:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * main_1 * !main_2)",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_538_0,
-            clock_0 => Net_445,
-            main_0 => Net_586,
-            main_1 => lineClk,
-            main_2 => Net_538_0);
+            clock_0 => PixClk);
 
     Net_758:macrocell
         GENERIC MAP(
@@ -6072,10 +6005,43 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_758,
-            clock_0 => Net_445,
-            main_0 => Net_529_5,
-            main_1 => Net_529_4,
+            clock_0 => PixClk,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4,
             main_2 => Net_722);
+
+    ColCount_5:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6 * main_7) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_5,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_5,
+            main_3 => ColCount_4,
+            main_4 => ColCount_3,
+            main_5 => ColCount_2,
+            main_6 => ColCount_1,
+            main_7 => ColCount_0);
+
+    ColCount_4:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5 * main_6) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_4,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_4,
+            main_3 => ColCount_3,
+            main_4 => ColCount_2,
+            main_5 => ColCount_1,
+            main_6 => ColCount_0);
 
     Net_749:macrocell
         GENERIC MAP(
@@ -6084,9 +6050,9 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_749,
-            clock_0 => Net_445,
-            main_0 => Net_529_5,
-            main_1 => Net_529_4,
+            clock_0 => PixClk,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4,
             main_2 => Net_722);
 
     Net_755:macrocell
@@ -6096,25 +6062,93 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_755,
-            clock_0 => Net_445,
-            main_0 => Net_529_5,
-            main_1 => Net_529_4,
+            clock_0 => PixClk,
+            main_0 => ColCount_5,
+            main_1 => ColCount_4,
             main_2 => Net_722);
 
     Net_765:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2) + (main_0 * !main_1 * main_3) + (main_0 * !main_1 * !main_4 * main_6) + (main_0 * main_1) + (main_0 * !main_2 * !main_3 * main_5) + (main_0 * !main_2 * main_4)",
+            eqn_main => "(main_0 * main_1) + (main_2)",
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => Net_765,
-            clock_0 => Net_445,
-            main_0 => Net_715,
-            main_1 => Net_538_9,
-            main_2 => \MODULE_4:g1:a0:gx:u0:lt_8\,
-            main_3 => \MODULE_4:g1:a0:gx:u0:lt_5\,
-            main_4 => \MODULE_4:g1:a0:gx:u0:gt_5\,
-            main_5 => \MODULE_4:g1:a0:gx:u0:gt_2\,
-            main_6 => \MODULE_5:g1:a0:gx:u0:lt_2\);
+            clock_0 => PixClk,
+            main_0 => VertSync,
+            main_1 => ColCount_5,
+            main_2 => Net_765_split);
+
+    ColCount_6:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_2 * main_3 * main_5 * main_6 * main_7 * main_8) + (main_0 * main_4)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_6,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_5,
+            main_3 => ColCount_4,
+            main_4 => ColCount_6,
+            main_5 => ColCount_3,
+            main_6 => ColCount_2,
+            main_7 => ColCount_1,
+            main_8 => ColCount_0);
+
+    ColCount_3:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4 * main_5) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_3,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_3,
+            main_3 => ColCount_2,
+            main_4 => ColCount_1,
+            main_5 => ColCount_0);
+
+    ColCount_2:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3 * main_4) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_2,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_2,
+            main_3 => ColCount_1,
+            main_4 => ColCount_0);
+
+    ColCount_1:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_3) + (main_0 * main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_1,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_1,
+            main_3 => ColCount_0);
+
+    ColCount_0:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * main_1 * !main_2)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => ColCount_0,
+            clock_0 => PixClk,
+            main_0 => lineClear,
+            main_1 => CharClk,
+            main_2 => ColCount_0);
 
 END __DEFAULT__;

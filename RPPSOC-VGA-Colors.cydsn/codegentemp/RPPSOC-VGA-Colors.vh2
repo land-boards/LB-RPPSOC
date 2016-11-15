@@ -2,7 +2,7 @@
 --	Conversion of RPPSOC-VGA-Colors.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Nov 06 10:40:23 2016
+--	Tue Nov 08 16:15:08 2016
 --
 
 USE cypress.cypress.all;
@@ -31,37 +31,12 @@ SIGNAL tmpFB_0__COMP_SYNC_net_0 : bit;
 SIGNAL tmpIO_0__COMP_SYNC_net_0 : bit;
 TERMINAL tmpSIOVREF__COMP_SYNC_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__COMP_SYNC_net_0 : bit;
-SIGNAL Net_595 : bit;
-SIGNAL cmp_vv_vv_MODGEN_1 : bit;
-SIGNAL Net_596 : bit;
-SIGNAL Net_589 : bit;
-SIGNAL Net_590_9 : bit;
-SIGNAL Net_590_8 : bit;
-SIGNAL Net_590_7 : bit;
-SIGNAL Net_590_6 : bit;
-SIGNAL Net_590_5 : bit;
-SIGNAL Net_590_4 : bit;
-SIGNAL Net_590_3 : bit;
-SIGNAL Net_590_2 : bit;
-SIGNAL Net_590_1 : bit;
-SIGNAL Net_590_0 : bit;
 SIGNAL tmpOE__P3_16_net_0 : bit;
 SIGNAL Net_238 : bit;
 SIGNAL tmpFB_0__P3_16_net_0 : bit;
 SIGNAL tmpIO_0__P3_16_net_0 : bit;
 TERMINAL tmpSIOVREF__P3_16_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P3_16_net_0 : bit;
-SIGNAL cmp_vv_vv_MODGEN_2 : bit;
-SIGNAL Net_585_9 : bit;
-SIGNAL Net_585_8 : bit;
-SIGNAL Net_585_7 : bit;
-SIGNAL Net_585_6 : bit;
-SIGNAL Net_585_5 : bit;
-SIGNAL Net_585_4 : bit;
-SIGNAL Net_585_3 : bit;
-SIGNAL Net_585_2 : bit;
-SIGNAL Net_585_1 : bit;
-SIGNAL Net_585_0 : bit;
 SIGNAL tmpOE__BLANK_net_0 : bit;
 SIGNAL Net_760 : bit;
 SIGNAL tmpFB_0__BLANK_net_0 : bit;
@@ -75,14 +50,14 @@ SIGNAL tmpIO_0__GRN_net_0 : bit;
 TERMINAL tmpSIOVREF__GRN_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__GRN_net_0 : bit;
 SIGNAL tmpOE__HSYNC_net_0 : bit;
-SIGNAL Net_715 : bit;
-ATTRIBUTE soft of Net_715:SIGNAL IS '1';
+SIGNAL HorSync : bit;
 SIGNAL tmpFB_0__HSYNC_net_0 : bit;
 SIGNAL tmpIO_0__HSYNC_net_0 : bit;
 TERMINAL tmpSIOVREF__HSYNC_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__HSYNC_net_0 : bit;
 SIGNAL tmpOE__VSYNC_net_0 : bit;
-SIGNAL Net_761 : bit;
+SIGNAL VertSync : bit;
+ATTRIBUTE soft of VertSync:SIGNAL IS '1';
 SIGNAL tmpFB_0__VSYNC_net_0 : bit;
 SIGNAL tmpIO_0__VSYNC_net_0 : bit;
 TERMINAL tmpSIOVREF__VSYNC_net_0 : bit;
@@ -135,19 +110,6 @@ SIGNAL tmpFB_0__P3_14_net_0 : bit;
 SIGNAL tmpIO_0__P3_14_net_0 : bit;
 TERMINAL tmpSIOVREF__P3_14_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P3_14_net_0 : bit;
-SIGNAL Net_586 : bit;
-ATTRIBUTE soft of Net_586:SIGNAL IS '1';
-SIGNAL cmp_vv_vv_MODGEN_3 : bit;
-SIGNAL Net_577_9 : bit;
-SIGNAL Net_577_8 : bit;
-SIGNAL Net_577_7 : bit;
-SIGNAL Net_577_6 : bit;
-SIGNAL Net_577_5 : bit;
-SIGNAL Net_577_4 : bit;
-SIGNAL Net_577_3 : bit;
-SIGNAL Net_577_2 : bit;
-SIGNAL Net_577_1 : bit;
-SIGNAL Net_577_0 : bit;
 SIGNAL tmpOE__P4_3_net_0 : bit;
 SIGNAL Net_99 : bit;
 SIGNAL tmpFB_0__P4_3_net_0 : bit;
@@ -232,8 +194,6 @@ SIGNAL tmpFB_0__P4_16_net_0 : bit;
 SIGNAL tmpIO_0__P4_16_net_0 : bit;
 TERMINAL tmpSIOVREF__P4_16_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P4_16_net_0 : bit;
-SIGNAL Net_711 : bit;
-SIGNAL cmp_vv_vv_MODGEN_4 : bit;
 SIGNAL tmpOE__P4_18_net_0 : bit;
 SIGNAL Net_129 : bit;
 SIGNAL tmpFB_0__P4_18_net_0 : bit;
@@ -246,15 +206,244 @@ SIGNAL tmpFB_0__P4_17_net_0 : bit;
 SIGNAL tmpIO_0__P4_17_net_0 : bit;
 TERMINAL tmpSIOVREF__P4_17_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P4_17_net_0 : bit;
-SIGNAL Net_567 : bit;
-SIGNAL cmp_vv_vv_MODGEN_5 : bit;
-SIGNAL Net_575 : bit;
+SIGNAL Net_791_9 : bit;
+SIGNAL Net_791_8 : bit;
+SIGNAL Net_791_7 : bit;
+SIGNAL Net_791_6 : bit;
+SIGNAL Net_791_5 : bit;
+SIGNAL Net_791_4 : bit;
+SIGNAL Net_791_3 : bit;
+SIGNAL Net_791_2 : bit;
+SIGNAL Net_791_1 : bit;
+SIGNAL Net_791_0 : bit;
+SIGNAL PixClk : bit;
+SIGNAL Net_787_9 : bit;
+SIGNAL Net_788 : bit;
+ATTRIBUTE soft of Net_788:SIGNAL IS '1';
+SIGNAL lineClear : bit;
+ATTRIBUTE soft of lineClear:SIGNAL IS '1';
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_9\ : bit;
+SIGNAL Net_787_8 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_8\ : bit;
+SIGNAL Net_787_7 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_7\ : bit;
+SIGNAL Net_787_6 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_6\ : bit;
+SIGNAL Net_787_5 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_5\ : bit;
+SIGNAL Net_787_4 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_4\ : bit;
+SIGNAL Net_787_3 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_3\ : bit;
+SIGNAL Net_787_2 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_2\ : bit;
+SIGNAL Net_787_1 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_1\ : bit;
+SIGNAL Net_787_0 : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_0\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_31\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_30\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_29\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_28\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_27\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_26\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_25\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_24\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_23\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_22\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_21\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_20\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_19\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_18\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_17\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_16\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_15\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_14\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_13\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_12\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_11\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_10\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_9\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_8\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_7\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_6\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_5\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_4\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_3\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_2\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_1\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:b_0\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_31\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_30\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_29\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_28\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_27\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_26\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_25\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_24\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_23\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_22\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_21\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_20\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_19\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_18\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_17\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_16\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_15\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_14\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_13\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_12\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_11\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_10\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_9\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_9\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_8\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_8\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_7\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_7\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_6\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_6\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_5\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_5\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_4\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_4\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_3\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_3\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_2\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_2\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_1\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_1\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:a_0\ : bit;
+SIGNAL \VerticalCounter_1:MODIN1_0\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_31\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_30\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_29\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_28\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_27\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_26\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_25\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_24\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_23\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_22\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_21\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_20\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_19\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_18\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_17\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_16\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_15\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_14\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_13\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_12\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_11\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_10\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_9\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_8\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_7\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_6\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_5\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_4\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_3\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_2\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_1\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:b_0\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_31\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_31\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_30\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_30\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_29\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_29\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_28\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_28\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_27\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_27\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_26\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_26\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_25\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_25\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_24\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_24\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_23\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_23\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_22\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_22\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_21\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_21\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_20\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_20\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_19\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_19\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_18\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_18\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_17\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_17\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_16\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_16\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_15\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_15\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_14\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_14\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_13\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_13\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_12\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_12\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_11\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_11\ : bit;
+SIGNAL \VerticalCounter_1:add_vi_vv_MODGEN_1_10\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_10\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_9\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_8\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_7\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_6\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_5\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_4\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_3\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_2\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_1\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:s_0\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL tmpOE__RP_GPIO_17_net_0 : bit;
 SIGNAL Net_601 : bit;
 SIGNAL tmpIO_0__RP_GPIO_17_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_17_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_17_net_0 : bit;
-SIGNAL cmp_vv_vv_MODGEN_6 : bit;
+SIGNAL Net_792 : bit;
+SIGNAL cmp_vv_vv_MODGEN_2 : bit;
 SIGNAL tmpOE__RP_GPIO_27_net_0 : bit;
 SIGNAL Net_602 : bit;
 SIGNAL tmpIO_0__RP_GPIO_27_net_0 : bit;
@@ -270,27 +459,29 @@ TERMINAL tmpSIOVREF__RP_GPIO_22_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_22_net_0 : bit;
 SIGNAL CharClk : bit;
 ATTRIBUTE soft of CharClk:SIGNAL IS '1';
-SIGNAL cmp_vv_vv_MODGEN_7 : bit;
+SIGNAL cmp_vv_vv_MODGEN_3 : bit;
 SIGNAL tmpOE__RP_GPIO_23_net_0 : bit;
 SIGNAL Net_604 : bit;
 SIGNAL tmpIO_0__RP_GPIO_23_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_23_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_23_net_0 : bit;
-SIGNAL Net_561_6 : bit;
-SIGNAL Net_561_5 : bit;
-SIGNAL Net_561_4 : bit;
-SIGNAL Net_561_3 : bit;
-SIGNAL Net_561_2 : bit;
-SIGNAL Net_561_1 : bit;
-SIGNAL Net_561_0 : bit;
+SIGNAL Net_794 : bit;
+SIGNAL cmp_vv_vv_MODGEN_4 : bit;
 SIGNAL tmpOE__RP_GPIO_24_net_0 : bit;
 SIGNAL Net_605 : bit;
 SIGNAL tmpIO_0__RP_GPIO_24_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_24_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_24_net_0 : bit;
-SIGNAL lineClk : bit;
-ATTRIBUTE soft of lineClk:SIGNAL IS '1';
-SIGNAL cmp_vv_vv_MODGEN_8 : bit;
+SIGNAL Net_795_9 : bit;
+SIGNAL Net_795_8 : bit;
+SIGNAL Net_795_7 : bit;
+SIGNAL Net_795_6 : bit;
+SIGNAL Net_795_5 : bit;
+SIGNAL Net_795_4 : bit;
+SIGNAL Net_795_3 : bit;
+SIGNAL Net_795_2 : bit;
+SIGNAL Net_795_1 : bit;
+SIGNAL Net_795_0 : bit;
 SIGNAL tmpOE__RP_GPIO_25_net_0 : bit;
 SIGNAL Net_606 : bit;
 SIGNAL tmpIO_0__RP_GPIO_25_net_0 : bit;
@@ -301,661 +492,236 @@ SIGNAL Net_607 : bit;
 SIGNAL tmpIO_0__RP_GPIO_5_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_5_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_5_net_0 : bit;
-SIGNAL Net_445 : bit;
 SIGNAL Net_655_2 : bit;
 SIGNAL Net_444 : bit;
 SIGNAL Net_442 : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_2\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_2\ : bit;
 SIGNAL Net_655_1 : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_1\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_1\ : bit;
 SIGNAL Net_655_0 : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_0\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_31\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_30\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_29\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_28\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_27\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_26\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_25\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_24\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_23\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_22\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_21\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_20\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_19\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_18\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_17\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_16\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_15\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_14\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_13\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_12\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_11\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_10\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_9\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_8\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_7\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_6\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_5\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_4\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_3\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_2\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_1\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:b_0\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_31\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_30\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_29\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_28\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_27\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_26\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_25\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_24\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_23\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_22\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_21\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_20\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_19\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_18\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_17\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_16\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_15\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_14\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_13\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_12\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_11\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_10\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_9\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_8\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_7\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_6\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_5\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_4\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_3\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_2\ : bit;
-SIGNAL \CharacterCounter:MODIN1_2\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_1\ : bit;
-SIGNAL \CharacterCounter:MODIN1_1\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:a_0\ : bit;
-SIGNAL \CharacterCounter:MODIN1_0\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_31\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_30\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_29\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_28\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_27\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_26\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_25\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_24\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_23\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_22\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_21\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_20\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_19\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_18\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_17\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_16\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_15\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_14\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_13\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_12\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_11\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_10\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_9\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_8\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_7\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_6\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_5\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_4\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_3\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_2\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_1\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:b_0\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_31\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_31\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_30\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_30\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_29\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_29\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_28\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_28\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_27\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_27\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_26\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_26\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_25\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_25\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_24\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_24\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_23\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_23\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_22\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_22\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_21\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_21\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_20\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_20\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_19\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_19\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_18\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_18\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_17\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_17\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_16\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_16\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_15\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_15\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_14\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_14\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_13\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_13\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_12\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_12\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_11\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_11\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_10\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_10\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_9\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_9\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_8\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_8\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_7\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_7\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_6\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_6\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_5\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_5\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_4\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_4\ : bit;
-SIGNAL \CharacterCounter:add_vi_vv_MODGEN_9_3\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_3\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_2\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_1\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:s_0\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_0\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_31\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_30\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_29\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_28\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_27\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_26\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_25\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_24\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_23\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_22\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_21\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_20\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_19\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_18\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_17\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_16\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_15\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_14\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_13\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_12\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_11\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_10\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_9\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_8\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_7\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_6\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_5\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_4\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_3\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_2\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_1\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:b_0\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_31\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_30\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_29\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_28\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_27\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_26\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_25\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_24\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_23\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_22\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_21\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_20\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_19\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_18\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_17\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_16\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_15\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_14\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_13\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_12\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_11\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_10\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_9\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_8\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_7\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_6\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_5\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_4\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_3\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_2\ : bit;
+SIGNAL \CharacterCounter:MODIN2_2\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_1\ : bit;
+SIGNAL \CharacterCounter:MODIN2_1\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:a_0\ : bit;
+SIGNAL \CharacterCounter:MODIN2_0\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_31\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_30\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_29\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_28\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_27\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_26\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_25\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_24\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_23\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_22\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_21\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_20\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_19\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_18\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_17\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_16\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_15\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_14\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_13\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_12\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_11\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_10\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_9\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_8\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_7\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_6\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_5\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_4\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_3\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_2\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_1\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:b_0\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_31\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_31\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_30\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_30\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_29\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_29\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_28\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_28\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_27\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_27\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_26\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_26\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_25\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_25\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_24\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_24\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_23\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_23\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_22\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_22\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_21\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_21\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_20\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_20\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_19\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_19\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_18\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_18\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_17\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_17\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_16\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_16\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_15\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_15\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_14\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_14\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_13\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_13\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_12\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_12\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_11\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_11\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_10\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_10\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_9\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_9\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_8\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_8\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_7\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_7\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_6\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_6\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_5\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_5\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_4\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_4\ : bit;
+SIGNAL \CharacterCounter:add_vi_vv_MODGEN_5_3\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_3\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_2\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_1\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:s_0\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL tmpOE__RP_GPIO_6_net_0 : bit;
 SIGNAL Net_609 : bit;
 SIGNAL tmpIO_0__RP_GPIO_6_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_6_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_6_net_0 : bit;
-SIGNAL Net_529_6 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_6\ : bit;
-SIGNAL Net_529_5 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_5\ : bit;
-SIGNAL Net_529_4 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_4\ : bit;
-SIGNAL Net_529_3 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_3\ : bit;
-SIGNAL Net_529_2 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_2\ : bit;
-SIGNAL Net_529_1 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_1\ : bit;
-SIGNAL Net_529_0 : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_0\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_31\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_30\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_29\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_28\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_27\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_26\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_25\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_24\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_23\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_22\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_21\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_20\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_19\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_18\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_17\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_16\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_15\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_14\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_13\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_12\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_11\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_10\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_9\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_8\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_7\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_6\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_5\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_4\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_3\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_2\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_1\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:b_0\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_31\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_30\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_29\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_28\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_27\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_26\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_25\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_24\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_23\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_22\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_21\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_20\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_19\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_18\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_17\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_16\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_15\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_14\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_13\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_12\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_11\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_10\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_9\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_8\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_7\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_6\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_6\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_5\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_5\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_4\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_4\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_3\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_3\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_2\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_2\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_1\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_1\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:a_0\ : bit;
-SIGNAL \HorizontalCounter:MODIN2_0\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_31\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_30\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_29\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_28\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_27\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_26\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_25\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_24\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_23\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_22\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_21\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_20\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_19\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_18\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_17\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_16\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_15\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_14\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_13\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_12\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_11\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_10\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_9\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_8\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_7\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_6\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_5\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_4\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_3\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_2\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_1\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:b_0\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_31\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_31\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_30\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_30\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_29\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_29\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_28\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_28\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_27\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_27\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_26\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_26\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_25\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_25\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_24\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_24\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_23\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_23\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_22\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_22\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_21\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_21\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_20\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_20\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_19\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_19\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_18\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_18\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_17\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_17\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_16\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_16\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_15\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_15\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_14\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_14\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_13\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_13\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_12\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_12\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_11\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_11\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_10\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_10\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_9\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_9\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_8\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_8\ : bit;
-SIGNAL \HorizontalCounter:add_vi_vv_MODGEN_10_7\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_7\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_6\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_5\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_4\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_3\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_2\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_1\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:s_0\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL Net_810 : bit;
 SIGNAL tmpOE__RP_GPIO_12_net_0 : bit;
 SIGNAL Net_610 : bit;
 SIGNAL tmpIO_0__RP_GPIO_12_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_12_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_12_net_0 : bit;
-SIGNAL Net_552_6 : bit;
-SIGNAL Net_552_5 : bit;
-SIGNAL Net_552_4 : bit;
-SIGNAL Net_552_3 : bit;
-SIGNAL Net_552_2 : bit;
-SIGNAL Net_552_1 : bit;
-SIGNAL Net_552_0 : bit;
-SIGNAL Net_562 : bit;
-SIGNAL cmp_vv_vv_MODGEN_11 : bit;
+SIGNAL Net_793_9 : bit;
+SIGNAL Net_793_8 : bit;
+SIGNAL Net_793_7 : bit;
+SIGNAL Net_793_6 : bit;
+SIGNAL Net_793_5 : bit;
+SIGNAL Net_793_4 : bit;
+SIGNAL Net_793_3 : bit;
+SIGNAL Net_793_2 : bit;
+SIGNAL Net_793_1 : bit;
+SIGNAL Net_793_0 : bit;
 SIGNAL tmpOE__RP_GPIO_13_net_0 : bit;
 SIGNAL Net_611 : bit;
 SIGNAL tmpIO_0__RP_GPIO_13_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_13_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_13_net_0 : bit;
-SIGNAL Net_538_9 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_9\ : bit;
-SIGNAL Net_538_8 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_8\ : bit;
-SIGNAL Net_538_7 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_7\ : bit;
-SIGNAL Net_538_6 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_6\ : bit;
-SIGNAL Net_538_5 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_5\ : bit;
-SIGNAL Net_538_4 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_4\ : bit;
-SIGNAL Net_538_3 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_3\ : bit;
-SIGNAL Net_538_2 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_2\ : bit;
-SIGNAL Net_538_1 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_1\ : bit;
-SIGNAL Net_538_0 : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_0\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_31\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_30\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_29\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_28\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_27\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_26\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_25\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_24\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_23\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_22\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_21\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_20\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_19\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_18\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_17\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_16\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_15\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_14\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_13\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_12\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_11\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_10\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_9\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_8\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_7\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_6\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_5\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_4\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_3\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_2\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_1\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:b_0\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_31\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_30\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_29\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_28\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_27\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_26\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_25\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_24\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_23\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_22\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_21\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_20\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_19\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_18\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_17\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_16\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_15\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_14\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_13\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_12\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_11\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_10\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_9\ : bit;
-SIGNAL \VerticalCounter:MODIN3_9\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_8\ : bit;
-SIGNAL \VerticalCounter:MODIN3_8\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_7\ : bit;
-SIGNAL \VerticalCounter:MODIN3_7\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_6\ : bit;
-SIGNAL \VerticalCounter:MODIN3_6\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_5\ : bit;
-SIGNAL \VerticalCounter:MODIN3_5\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_4\ : bit;
-SIGNAL \VerticalCounter:MODIN3_4\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_3\ : bit;
-SIGNAL \VerticalCounter:MODIN3_3\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_2\ : bit;
-SIGNAL \VerticalCounter:MODIN3_2\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_1\ : bit;
-SIGNAL \VerticalCounter:MODIN3_1\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:a_0\ : bit;
-SIGNAL \VerticalCounter:MODIN3_0\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_31\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_30\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_29\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_28\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_27\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_26\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_25\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_24\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_23\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_22\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_21\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_20\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_19\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_18\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_17\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_16\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_15\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_14\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_13\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_12\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_11\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_10\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_9\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_8\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_7\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_6\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_5\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_4\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_3\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_2\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_1\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:b_0\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_31\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_31\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_30\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_30\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_29\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_29\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_28\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_28\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_27\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_27\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_26\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_26\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_25\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_25\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_24\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_24\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_23\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_23\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_22\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_22\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_21\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_21\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_20\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_20\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_19\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_19\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_18\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_18\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_17\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_17\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_16\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_16\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_15\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_15\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_14\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_14\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_13\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_13\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_12\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_12\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_11\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_11\ : bit;
-SIGNAL \VerticalCounter:add_vi_vv_MODGEN_12_10\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_10\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_9\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_8\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_7\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_6\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_5\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_4\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_3\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_2\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_1\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:s_0\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL tmpOE__RP_GPIO_19_net_0 : bit;
 SIGNAL Net_612 : bit;
 SIGNAL tmpIO_0__RP_GPIO_19_net_0 : bit;
@@ -981,51 +747,284 @@ SIGNAL Net_616 : bit;
 SIGNAL tmpIO_0__RP_GPIO_21_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_21_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_21_net_0 : bit;
-SIGNAL Net_574_6 : bit;
-SIGNAL Net_574_5 : bit;
-SIGNAL Net_574_4 : bit;
-SIGNAL Net_574_3 : bit;
-SIGNAL Net_574_2 : bit;
-SIGNAL Net_574_1 : bit;
-SIGNAL Net_574_0 : bit;
-SIGNAL Net_565_6 : bit;
-SIGNAL Net_565_5 : bit;
-SIGNAL Net_565_4 : bit;
-SIGNAL Net_565_3 : bit;
-SIGNAL Net_565_2 : bit;
-SIGNAL Net_565_1 : bit;
-SIGNAL Net_565_0 : bit;
-SIGNAL Net_593_9 : bit;
-SIGNAL Net_593_8 : bit;
-SIGNAL Net_593_7 : bit;
-SIGNAL Net_593_6 : bit;
-SIGNAL Net_593_5 : bit;
-SIGNAL Net_593_4 : bit;
-SIGNAL Net_593_3 : bit;
-SIGNAL Net_593_2 : bit;
-SIGNAL Net_593_1 : bit;
-SIGNAL Net_593_0 : bit;
+SIGNAL Net_790_9 : bit;
+SIGNAL Net_790_8 : bit;
+SIGNAL Net_790_7 : bit;
+SIGNAL Net_790_6 : bit;
+SIGNAL Net_790_5 : bit;
+SIGNAL Net_790_4 : bit;
+SIGNAL Net_790_3 : bit;
+SIGNAL Net_790_2 : bit;
+SIGNAL Net_790_1 : bit;
+SIGNAL Net_790_0 : bit;
+SIGNAL cmp_vv_vv_MODGEN_6 : bit;
 SIGNAL Net_608 : bit;
 ATTRIBUTE soft of Net_608:SIGNAL IS '1';
 SIGNAL CUBEtmp0 : bit;
 SIGNAL Net_619 : bit;
 ATTRIBUTE soft of Net_619:SIGNAL IS '1';
 SIGNAL CUBEtmp1 : bit;
-SIGNAL Net_281 : bit;
 SIGNAL cydff_3 : bit;
 SIGNAL Net_757 : bit;
 SIGNAL \demux_1:tmp__demux_1_0_reg\ : bit;
+SIGNAL ColCount_5 : bit;
+SIGNAL ColCount_4 : bit;
 SIGNAL Net_722 : bit;
 ATTRIBUTE soft of Net_722:SIGNAL IS '1';
 SIGNAL \demux_1:tmp__demux_1_1_reg\ : bit;
 SIGNAL \demux_1:tmp__demux_1_2_reg\ : bit;
 SIGNAL \demux_1:tmp__demux_1_3_reg\ : bit;
-SIGNAL Net_747 : bit;
+SIGNAL Net_804 : bit;
 SIGNAL Net_748 : bit;
-SIGNAL Net_754 : bit;
+SIGNAL Net_780 : bit;
+SIGNAL VBlank : bit;
+SIGNAL HorBlank : bit;
 SIGNAL cydff_1 : bit;
 SIGNAL cydff_2 : bit;
 SIGNAL cydff_4 : bit;
+SIGNAL cmp_vv_vv_MODGEN_7 : bit;
+SIGNAL ColCount_6 : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_6\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_5\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_4\ : bit;
+SIGNAL ColCount_3 : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_3\ : bit;
+SIGNAL ColCount_2 : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_2\ : bit;
+SIGNAL ColCount_1 : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_1\ : bit;
+SIGNAL ColCount_0 : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_0\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_31\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_30\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_29\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_28\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_27\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_26\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_25\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_24\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_23\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_22\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_21\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_20\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_19\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_18\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_17\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_16\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_15\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_14\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_13\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_12\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_11\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_10\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_9\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_8\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_7\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_6\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_5\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_4\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_3\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_2\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_1\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:b_0\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_31\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_30\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_29\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_28\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_27\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_26\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_25\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_24\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_23\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_22\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_21\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_20\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_19\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_18\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_17\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_16\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_15\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_14\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_13\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_12\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_11\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_10\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_9\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_8\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_7\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_6\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_6\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_5\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_5\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_4\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_4\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_3\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_3\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_2\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_2\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_1\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_1\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:a_0\ : bit;
+SIGNAL \HorizontalCounter_1:MODIN3_0\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_31\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_30\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_29\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_28\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_27\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_26\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_25\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_24\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_23\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_22\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_21\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_20\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_19\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_18\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_17\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_16\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_15\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_14\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_13\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_12\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_11\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_10\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_9\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_8\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_7\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_6\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_5\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_4\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_3\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_2\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_1\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:b_0\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_31\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_31\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_30\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_30\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_29\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_29\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_28\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_28\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_27\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_27\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_26\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_26\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_25\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_25\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_24\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_24\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_23\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_23\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_22\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_22\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_21\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_21\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_20\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_20\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_19\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_19\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_18\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_18\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_17\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_17\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_16\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_16\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_15\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_15\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_14\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_14\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_13\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_13\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_12\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_12\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_11\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_11\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_10\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_10\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_9\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_9\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_8\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_8\ : bit;
+SIGNAL \HorizontalCounter_1:add_vi_vv_MODGEN_8_7\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_7\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_6\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_5\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_4\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_3\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_2\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_1\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:s_0\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL cmp_vv_vv_MODGEN_9 : bit;
+SIGNAL Net_770_6 : bit;
+SIGNAL Net_770_5 : bit;
+SIGNAL Net_770_4 : bit;
+SIGNAL Net_770_3 : bit;
+SIGNAL Net_770_2 : bit;
+SIGNAL Net_770_1 : bit;
+SIGNAL Net_770_0 : bit;
+SIGNAL cmp_vv_vv_MODGEN_10 : bit;
+SIGNAL Net_772_6 : bit;
+SIGNAL Net_772_5 : bit;
+SIGNAL Net_772_4 : bit;
+SIGNAL Net_772_3 : bit;
+SIGNAL Net_772_2 : bit;
+SIGNAL Net_772_1 : bit;
+SIGNAL Net_772_0 : bit;
+SIGNAL Net_773 : bit;
+SIGNAL cmp_vv_vv_MODGEN_11 : bit;
+SIGNAL Net_775 : bit;
+SIGNAL cmp_vv_vv_MODGEN_12 : bit;
+SIGNAL Net_774_6 : bit;
+SIGNAL Net_774_5 : bit;
+SIGNAL Net_774_4 : bit;
+SIGNAL Net_774_3 : bit;
+SIGNAL Net_774_2 : bit;
+SIGNAL Net_774_1 : bit;
+SIGNAL Net_774_0 : bit;
+SIGNAL Net_776_6 : bit;
+SIGNAL Net_776_5 : bit;
+SIGNAL Net_776_4 : bit;
+SIGNAL Net_776_3 : bit;
+SIGNAL Net_776_2 : bit;
+SIGNAL Net_776_1 : bit;
+SIGNAL Net_776_0 : bit;
 SIGNAL \MODULE_4:g1:a0:newa_9\ : bit;
 SIGNAL MODIN4_9 : bit;
 SIGNAL \MODULE_4:g1:a0:newa_8\ : bit;
@@ -1181,97 +1180,34 @@ SIGNAL \MODULE_4:eq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_4:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_4:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_4:gt\:SIGNAL IS 2;
-SIGNAL \MODULE_4:gte\ : bit;
-ATTRIBUTE port_state_att of \MODULE_4:gte\:SIGNAL IS 2;
+SIGNAL \MODULE_4:lte\ : bit;
+ATTRIBUTE port_state_att of \MODULE_4:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_4:neq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_4:neq\:SIGNAL IS 2;
-SIGNAL \MODULE_5:g1:a0:newa_9\ : bit;
-SIGNAL MODIN6_9 : bit;
-SIGNAL \MODULE_5:g1:a0:newa_8\ : bit;
-SIGNAL MODIN6_8 : bit;
-SIGNAL \MODULE_5:g1:a0:newa_7\ : bit;
-SIGNAL MODIN6_7 : bit;
-SIGNAL \MODULE_5:g1:a0:newa_6\ : bit;
-SIGNAL MODIN6_6 : bit;
-SIGNAL \MODULE_5:g1:a0:newa_5\ : bit;
-SIGNAL MODIN6_5 : bit;
-SIGNAL \MODULE_5:g1:a0:newa_4\ : bit;
-SIGNAL MODIN6_4 : bit;
-SIGNAL \MODULE_5:g1:a0:newa_3\ : bit;
-SIGNAL MODIN6_3 : bit;
 SIGNAL \MODULE_5:g1:a0:newa_2\ : bit;
 SIGNAL MODIN6_2 : bit;
 SIGNAL \MODULE_5:g1:a0:newa_1\ : bit;
 SIGNAL MODIN6_1 : bit;
 SIGNAL \MODULE_5:g1:a0:newa_0\ : bit;
 SIGNAL MODIN6_0 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_9\ : bit;
-SIGNAL MODIN7_9 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_8\ : bit;
-SIGNAL MODIN7_8 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_7\ : bit;
-SIGNAL MODIN7_7 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_6\ : bit;
-SIGNAL MODIN7_6 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_5\ : bit;
-SIGNAL MODIN7_5 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_4\ : bit;
-SIGNAL MODIN7_4 : bit;
-SIGNAL \MODULE_5:g1:a0:newb_3\ : bit;
-SIGNAL MODIN7_3 : bit;
 SIGNAL \MODULE_5:g1:a0:newb_2\ : bit;
 SIGNAL MODIN7_2 : bit;
 SIGNAL \MODULE_5:g1:a0:newb_1\ : bit;
 SIGNAL MODIN7_1 : bit;
 SIGNAL \MODULE_5:g1:a0:newb_0\ : bit;
 SIGNAL MODIN7_0 : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:dataa_3\ : bit;
 SIGNAL \MODULE_5:g1:a0:dataa_2\ : bit;
 SIGNAL \MODULE_5:g1:a0:dataa_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:dataa_0\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:datab_3\ : bit;
 SIGNAL \MODULE_5:g1:a0:datab_2\ : bit;
 SIGNAL \MODULE_5:g1:a0:datab_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:datab_0\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:a_3\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:a_2\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:a_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:a_0\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:b_3\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:b_2\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:b_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:b_0\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_3\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_2\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:xnor_array_0\ : bit;
@@ -1279,43 +1215,8 @@ SIGNAL \MODULE_5:g1:a0:gx:u0:aeqb_0\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:eq_0\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:eq_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:eq_2\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_7\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:eqi_0\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:aeqb_1\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eq_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:eqi_1\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:aeqb_2\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:albi_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:agbi_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_9\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lti_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gti_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:albi_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:agbi_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_6\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_7\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_8\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lti_2\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gti_2\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:albi_2\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:agbi_2\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_3\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_4\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lt_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gt_5\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:lti_1\ : bit;
-SIGNAL \MODULE_5:g1:a0:gx:u0:gti_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:albi_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:agbi_1\ : bit;
 SIGNAL \MODULE_5:g1:a0:gx:u0:lt_0\ : bit;
@@ -1336,10 +1237,10 @@ SIGNAL \MODULE_5:g1:a0:xgt\ : bit;
 SIGNAL \MODULE_5:g1:a0:xgte\ : bit;
 SIGNAL \MODULE_5:lt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_5:lt\:SIGNAL IS 2;
-SIGNAL \MODULE_5:eq\ : bit;
-ATTRIBUTE port_state_att of \MODULE_5:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_5:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_5:gt\:SIGNAL IS 2;
+SIGNAL \MODULE_5:gte\ : bit;
+ATTRIBUTE port_state_att of \MODULE_5:gte\:SIGNAL IS 2;
 SIGNAL \MODULE_5:lte\ : bit;
 ATTRIBUTE port_state_att of \MODULE_5:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_5:neq\ : bit;
@@ -1495,12 +1396,12 @@ SIGNAL \MODULE_6:g1:a0:xgt\ : bit;
 SIGNAL \MODULE_6:g1:a0:xgte\ : bit;
 SIGNAL \MODULE_6:lt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_6:lt\:SIGNAL IS 2;
+SIGNAL \MODULE_6:eq\ : bit;
+ATTRIBUTE port_state_att of \MODULE_6:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_6:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_6:gt\:SIGNAL IS 2;
 SIGNAL \MODULE_6:gte\ : bit;
 ATTRIBUTE port_state_att of \MODULE_6:gte\:SIGNAL IS 2;
-SIGNAL \MODULE_6:lte\ : bit;
-ATTRIBUTE port_state_att of \MODULE_6:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_6:neq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_6:neq\:SIGNAL IS 2;
 SIGNAL \MODULE_7:g1:a0:newa_9\ : bit;
@@ -1654,14 +1555,20 @@ SIGNAL \MODULE_7:g1:a0:xgt\ : bit;
 SIGNAL \MODULE_7:g1:a0:xgte\ : bit;
 SIGNAL \MODULE_7:lt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_7:lt\:SIGNAL IS 2;
-SIGNAL \MODULE_7:eq\ : bit;
-ATTRIBUTE port_state_att of \MODULE_7:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_7:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_7:gt\:SIGNAL IS 2;
+SIGNAL \MODULE_7:gte\ : bit;
+ATTRIBUTE port_state_att of \MODULE_7:gte\:SIGNAL IS 2;
 SIGNAL \MODULE_7:lte\ : bit;
 ATTRIBUTE port_state_att of \MODULE_7:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_7:neq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_7:neq\:SIGNAL IS 2;
+SIGNAL \MODULE_8:g1:a0:newa_9\ : bit;
+SIGNAL MODIN12_9 : bit;
+SIGNAL \MODULE_8:g1:a0:newa_8\ : bit;
+SIGNAL MODIN12_8 : bit;
+SIGNAL \MODULE_8:g1:a0:newa_7\ : bit;
+SIGNAL MODIN12_7 : bit;
 SIGNAL \MODULE_8:g1:a0:newa_6\ : bit;
 SIGNAL MODIN12_6 : bit;
 SIGNAL \MODULE_8:g1:a0:newa_5\ : bit;
@@ -1676,6 +1583,12 @@ SIGNAL \MODULE_8:g1:a0:newa_1\ : bit;
 SIGNAL MODIN12_1 : bit;
 SIGNAL \MODULE_8:g1:a0:newa_0\ : bit;
 SIGNAL MODIN12_0 : bit;
+SIGNAL \MODULE_8:g1:a0:newb_9\ : bit;
+SIGNAL MODIN13_9 : bit;
+SIGNAL \MODULE_8:g1:a0:newb_8\ : bit;
+SIGNAL MODIN13_8 : bit;
+SIGNAL \MODULE_8:g1:a0:newb_7\ : bit;
+SIGNAL MODIN13_7 : bit;
 SIGNAL \MODULE_8:g1:a0:newb_6\ : bit;
 SIGNAL MODIN13_6 : bit;
 SIGNAL \MODULE_8:g1:a0:newb_5\ : bit;
@@ -1690,6 +1603,9 @@ SIGNAL \MODULE_8:g1:a0:newb_1\ : bit;
 SIGNAL MODIN13_1 : bit;
 SIGNAL \MODULE_8:g1:a0:newb_0\ : bit;
 SIGNAL MODIN13_0 : bit;
+SIGNAL \MODULE_8:g1:a0:dataa_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:dataa_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:dataa_7\ : bit;
 SIGNAL \MODULE_8:g1:a0:dataa_6\ : bit;
 SIGNAL \MODULE_8:g1:a0:dataa_5\ : bit;
 SIGNAL \MODULE_8:g1:a0:dataa_4\ : bit;
@@ -1697,6 +1613,9 @@ SIGNAL \MODULE_8:g1:a0:dataa_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:dataa_2\ : bit;
 SIGNAL \MODULE_8:g1:a0:dataa_1\ : bit;
 SIGNAL \MODULE_8:g1:a0:dataa_0\ : bit;
+SIGNAL \MODULE_8:g1:a0:datab_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:datab_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:datab_7\ : bit;
 SIGNAL \MODULE_8:g1:a0:datab_6\ : bit;
 SIGNAL \MODULE_8:g1:a0:datab_5\ : bit;
 SIGNAL \MODULE_8:g1:a0:datab_4\ : bit;
@@ -1704,6 +1623,9 @@ SIGNAL \MODULE_8:g1:a0:datab_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:datab_2\ : bit;
 SIGNAL \MODULE_8:g1:a0:datab_1\ : bit;
 SIGNAL \MODULE_8:g1:a0:datab_0\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:a_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:a_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:a_7\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:a_6\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:a_5\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:a_4\ : bit;
@@ -1711,6 +1633,9 @@ SIGNAL \MODULE_8:g1:a0:gx:u0:a_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:a_2\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:a_1\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:b_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:b_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:b_7\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:b_6\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:b_5\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:b_4\ : bit;
@@ -1718,6 +1643,9 @@ SIGNAL \MODULE_8:g1:a0:gx:u0:b_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:b_2\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:b_1\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:xnor_array_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:xnor_array_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:xnor_array_7\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:xnor_array_6\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:xnor_array_5\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:xnor_array_4\ : bit;
@@ -1733,12 +1661,27 @@ SIGNAL \MODULE_8:g1:a0:gx:u0:eq_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:eq_4\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:eq_5\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:eq_6\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:eq_7\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:eqi_0\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:eq_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:eq_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:eqi_1\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:aeqb_2\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:albi_4\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:agbi_4\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:lt_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:gt_9\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:lti_3\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:gti_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:albi_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:agbi_3\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:lt_6\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:gt_6\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:lt_7\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:gt_7\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:lt_8\ : bit;
+SIGNAL \MODULE_8:g1:a0:gx:u0:gt_8\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:lti_2\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:gti_2\ : bit;
 SIGNAL \MODULE_8:g1:a0:gx:u0:albi_2\ : bit;
@@ -1775,8 +1718,8 @@ SIGNAL \MODULE_8:eq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_8:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_8:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_8:gt\:SIGNAL IS 2;
-SIGNAL \MODULE_8:gte\ : bit;
-ATTRIBUTE port_state_att of \MODULE_8:gte\:SIGNAL IS 2;
+SIGNAL \MODULE_8:lte\ : bit;
+ATTRIBUTE port_state_att of \MODULE_8:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_8:neq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_8:neq\:SIGNAL IS 2;
 SIGNAL \MODULE_9:g1:a0:newa_6\ : bit;
@@ -1888,38 +1831,74 @@ SIGNAL \MODULE_9:g1:a0:xgt\ : bit;
 SIGNAL \MODULE_9:g1:a0:xgte\ : bit;
 SIGNAL \MODULE_9:lt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_9:lt\:SIGNAL IS 2;
-SIGNAL \MODULE_9:eq\ : bit;
-ATTRIBUTE port_state_att of \MODULE_9:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_9:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_9:gt\:SIGNAL IS 2;
+SIGNAL \MODULE_9:gte\ : bit;
+ATTRIBUTE port_state_att of \MODULE_9:gte\:SIGNAL IS 2;
 SIGNAL \MODULE_9:lte\ : bit;
 ATTRIBUTE port_state_att of \MODULE_9:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_9:neq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_9:neq\:SIGNAL IS 2;
+SIGNAL \MODULE_10:g1:a0:newa_6\ : bit;
+SIGNAL MODIN16_6 : bit;
+SIGNAL \MODULE_10:g1:a0:newa_5\ : bit;
+SIGNAL MODIN16_5 : bit;
+SIGNAL \MODULE_10:g1:a0:newa_4\ : bit;
+SIGNAL MODIN16_4 : bit;
+SIGNAL \MODULE_10:g1:a0:newa_3\ : bit;
+SIGNAL MODIN16_3 : bit;
 SIGNAL \MODULE_10:g1:a0:newa_2\ : bit;
 SIGNAL MODIN16_2 : bit;
 SIGNAL \MODULE_10:g1:a0:newa_1\ : bit;
 SIGNAL MODIN16_1 : bit;
 SIGNAL \MODULE_10:g1:a0:newa_0\ : bit;
 SIGNAL MODIN16_0 : bit;
+SIGNAL \MODULE_10:g1:a0:newb_6\ : bit;
+SIGNAL MODIN17_6 : bit;
+SIGNAL \MODULE_10:g1:a0:newb_5\ : bit;
+SIGNAL MODIN17_5 : bit;
+SIGNAL \MODULE_10:g1:a0:newb_4\ : bit;
+SIGNAL MODIN17_4 : bit;
+SIGNAL \MODULE_10:g1:a0:newb_3\ : bit;
+SIGNAL MODIN17_3 : bit;
 SIGNAL \MODULE_10:g1:a0:newb_2\ : bit;
 SIGNAL MODIN17_2 : bit;
 SIGNAL \MODULE_10:g1:a0:newb_1\ : bit;
 SIGNAL MODIN17_1 : bit;
 SIGNAL \MODULE_10:g1:a0:newb_0\ : bit;
 SIGNAL MODIN17_0 : bit;
+SIGNAL \MODULE_10:g1:a0:dataa_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:dataa_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:dataa_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:dataa_3\ : bit;
 SIGNAL \MODULE_10:g1:a0:dataa_2\ : bit;
 SIGNAL \MODULE_10:g1:a0:dataa_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:dataa_0\ : bit;
+SIGNAL \MODULE_10:g1:a0:datab_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:datab_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:datab_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:datab_3\ : bit;
 SIGNAL \MODULE_10:g1:a0:datab_2\ : bit;
 SIGNAL \MODULE_10:g1:a0:datab_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:datab_0\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:a_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:a_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:a_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:a_3\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:a_2\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:a_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:b_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:b_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:b_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:b_3\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:b_2\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:b_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_3\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_2\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:xnor_array_0\ : bit;
@@ -1927,8 +1906,28 @@ SIGNAL \MODULE_10:g1:a0:gx:u0:aeqb_0\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:eq_0\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:eq_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:eq_2\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:eq_3\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:eq_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:eq_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:eq_6\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:eqi_0\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:albi_3\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:agbi_3\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:lt_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:gt_6\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:lti_2\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:gti_2\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:albi_2\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:agbi_2\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:lt_3\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:gt_3\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:lt_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:gt_4\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:lt_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:gt_5\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:lti_1\ : bit;
+SIGNAL \MODULE_10:g1:a0:gx:u0:gti_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:albi_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:agbi_1\ : bit;
 SIGNAL \MODULE_10:g1:a0:gx:u0:lt_0\ : bit;
@@ -1949,10 +1948,10 @@ SIGNAL \MODULE_10:g1:a0:xgt\ : bit;
 SIGNAL \MODULE_10:g1:a0:xgte\ : bit;
 SIGNAL \MODULE_10:lt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_10:lt\:SIGNAL IS 2;
+SIGNAL \MODULE_10:eq\ : bit;
+ATTRIBUTE port_state_att of \MODULE_10:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_10:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_10:gt\:SIGNAL IS 2;
-SIGNAL \MODULE_10:gte\ : bit;
-ATTRIBUTE port_state_att of \MODULE_10:gte\:SIGNAL IS 2;
 SIGNAL \MODULE_10:lte\ : bit;
 ATTRIBUTE port_state_att of \MODULE_10:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_10:neq\ : bit;
@@ -2066,10 +2065,10 @@ SIGNAL \MODULE_11:g1:a0:xgt\ : bit;
 SIGNAL \MODULE_11:g1:a0:xgte\ : bit;
 SIGNAL \MODULE_11:lt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_11:lt\:SIGNAL IS 2;
+SIGNAL \MODULE_11:eq\ : bit;
+ATTRIBUTE port_state_att of \MODULE_11:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_11:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_11:gt\:SIGNAL IS 2;
-SIGNAL \MODULE_11:gte\ : bit;
-ATTRIBUTE port_state_att of \MODULE_11:gte\:SIGNAL IS 2;
 SIGNAL \MODULE_11:lte\ : bit;
 ATTRIBUTE port_state_att of \MODULE_11:lte\:SIGNAL IS 2;
 SIGNAL \MODULE_11:neq\ : bit;
@@ -2187,50 +2186,104 @@ SIGNAL \MODULE_12:eq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_12:eq\:SIGNAL IS 2;
 SIGNAL \MODULE_12:gt\ : bit;
 ATTRIBUTE port_state_att of \MODULE_12:gt\:SIGNAL IS 2;
-SIGNAL \MODULE_12:lte\ : bit;
-ATTRIBUTE port_state_att of \MODULE_12:lte\:SIGNAL IS 2;
+SIGNAL \MODULE_12:gte\ : bit;
+ATTRIBUTE port_state_att of \MODULE_12:gte\:SIGNAL IS 2;
 SIGNAL \MODULE_12:neq\ : bit;
 ATTRIBUTE port_state_att of \MODULE_12:neq\:SIGNAL IS 2;
+SIGNAL Net_787_9D : bit;
+SIGNAL Net_787_8D : bit;
+SIGNAL Net_787_7D : bit;
+SIGNAL Net_787_6D : bit;
+SIGNAL Net_787_5D : bit;
+SIGNAL Net_787_4D : bit;
+SIGNAL Net_787_3D : bit;
+SIGNAL Net_787_2D : bit;
+SIGNAL Net_787_1D : bit;
+SIGNAL Net_787_0D : bit;
 SIGNAL Net_655_2D : bit;
 SIGNAL Net_655_1D : bit;
 SIGNAL Net_655_0D : bit;
-SIGNAL Net_529_6D : bit;
-SIGNAL Net_529_5D : bit;
-SIGNAL Net_529_4D : bit;
-SIGNAL Net_529_3D : bit;
-SIGNAL Net_529_2D : bit;
-SIGNAL Net_529_1D : bit;
-SIGNAL Net_529_0D : bit;
-SIGNAL Net_538_9D : bit;
-SIGNAL Net_538_8D : bit;
-SIGNAL Net_538_7D : bit;
-SIGNAL Net_538_6D : bit;
-SIGNAL Net_538_5D : bit;
-SIGNAL Net_538_4D : bit;
-SIGNAL Net_538_3D : bit;
-SIGNAL Net_538_2D : bit;
-SIGNAL Net_538_1D : bit;
-SIGNAL Net_538_0D : bit;
 SIGNAL cydff_3D : bit;
+SIGNAL ColCount_5D : bit;
+SIGNAL ColCount_4D : bit;
 SIGNAL cydff_1D : bit;
 SIGNAL cydff_2D : bit;
 SIGNAL cydff_4D : bit;
+SIGNAL ColCount_6D : bit;
+SIGNAL ColCount_3D : bit;
+SIGNAL ColCount_2D : bit;
+SIGNAL ColCount_1D : bit;
+SIGNAL ColCount_0D : bit;
 BEGIN
 
 zero <=  ('0') ;
 
 tmpOE__LED5_4_net_0 <=  ('1') ;
 
-Net_586 <= ((not Net_538_8 and Net_538_9 and \MODULE_6:g1:a0:gx:u0:eqi_0\));
+Net_787_9D <= ((not Net_787_9 and not Net_788 and lineClear and Net_787_8 and \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\)
+	OR (not Net_788 and not \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and Net_787_9)
+	OR (not Net_788 and not Net_787_8 and Net_787_9)
+	OR (not Net_788 and not lineClear and Net_787_9));
 
-Net_715 <= ((not \MODULE_8:g1:a0:gx:u0:gti_1\ and not \MODULE_8:g1:a0:gx:u0:gti_0\ and not \MODULE_9:g1:a0:gx:u0:lti_1\ and not \MODULE_9:g1:a0:gx:u0:lti_0\ and Net_529_6)
-	OR (not \MODULE_8:g1:a0:gx:u0:gti_1\ and not \MODULE_9:g1:a0:gx:u0:lti_1\ and not \MODULE_9:g1:a0:gx:u0:lti_0\ and Net_529_6 and \MODULE_8:g1:a0:gx:u0:lti_1\)
-	OR (not \MODULE_8:g1:a0:gx:u0:gti_1\ and not \MODULE_8:g1:a0:gx:u0:gti_0\ and not \MODULE_9:g1:a0:gx:u0:lti_1\ and Net_529_6 and \MODULE_9:g1:a0:gx:u0:gti_1\)
-	OR (not \MODULE_8:g1:a0:gx:u0:gti_1\ and not \MODULE_9:g1:a0:gx:u0:lti_1\ and Net_529_6 and \MODULE_8:g1:a0:gx:u0:lti_1\ and \MODULE_9:g1:a0:gx:u0:gti_1\));
+Net_787_8D <= ((not Net_788 and not Net_787_8 and lineClear and \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\)
+	OR (not Net_788 and not \VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ and Net_787_8)
+	OR (not Net_788 and not lineClear and Net_787_8));
+
+Net_787_7D <= ((not Net_788 and not Net_787_7 and lineClear and Net_787_6 and Net_787_5 and Net_787_4 and Net_787_3 and Net_787_2 and Net_787_1 and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_7)
+	OR (not Net_788 and not Net_787_1 and Net_787_7)
+	OR (not Net_788 and not Net_787_2 and Net_787_7)
+	OR (not Net_788 and not Net_787_3 and Net_787_7)
+	OR (not Net_788 and not Net_787_4 and Net_787_7)
+	OR (not Net_788 and not Net_787_5 and Net_787_7)
+	OR (not Net_788 and not Net_787_6 and Net_787_7)
+	OR (not Net_788 and not lineClear and Net_787_7));
+
+Net_787_6D <= ((not Net_788 and not Net_787_6 and lineClear and Net_787_5 and Net_787_4 and Net_787_3 and Net_787_2 and Net_787_1 and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_6)
+	OR (not Net_788 and not Net_787_1 and Net_787_6)
+	OR (not Net_788 and not Net_787_2 and Net_787_6)
+	OR (not Net_788 and not Net_787_3 and Net_787_6)
+	OR (not Net_788 and not Net_787_4 and Net_787_6)
+	OR (not Net_788 and not Net_787_5 and Net_787_6)
+	OR (not Net_788 and not lineClear and Net_787_6));
+
+Net_787_5D <= ((not Net_788 and not Net_787_5 and lineClear and Net_787_4 and Net_787_3 and Net_787_2 and Net_787_1 and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_5)
+	OR (not Net_788 and not Net_787_1 and Net_787_5)
+	OR (not Net_788 and not Net_787_2 and Net_787_5)
+	OR (not Net_788 and not Net_787_3 and Net_787_5)
+	OR (not Net_788 and not Net_787_4 and Net_787_5)
+	OR (not Net_788 and not lineClear and Net_787_5));
+
+Net_787_4D <= ((not Net_788 and not Net_787_4 and lineClear and Net_787_3 and Net_787_2 and Net_787_1 and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_4)
+	OR (not Net_788 and not Net_787_1 and Net_787_4)
+	OR (not Net_788 and not Net_787_2 and Net_787_4)
+	OR (not Net_788 and not Net_787_3 and Net_787_4)
+	OR (not Net_788 and not lineClear and Net_787_4));
+
+Net_787_3D <= ((not Net_788 and not Net_787_3 and lineClear and Net_787_2 and Net_787_1 and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_3)
+	OR (not Net_788 and not Net_787_1 and Net_787_3)
+	OR (not Net_788 and not Net_787_2 and Net_787_3)
+	OR (not Net_788 and not lineClear and Net_787_3));
+
+Net_787_2D <= ((not Net_788 and not Net_787_2 and lineClear and Net_787_1 and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_2)
+	OR (not Net_788 and not Net_787_1 and Net_787_2)
+	OR (not Net_788 and not lineClear and Net_787_2));
+
+Net_787_1D <= ((not Net_788 and not Net_787_1 and lineClear and Net_787_0)
+	OR (not Net_788 and not Net_787_0 and Net_787_1)
+	OR (not Net_788 and not lineClear and Net_787_1));
+
+Net_787_0D <= ((not Net_788 and not Net_787_0 and lineClear)
+	OR (not Net_788 and not lineClear and Net_787_0));
+
+\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ <= ((Net_787_7 and Net_787_6 and Net_787_5 and Net_787_4 and Net_787_3 and Net_787_2 and Net_787_1 and Net_787_0));
 
 CharClk <= ((Net_655_2 and Net_655_1 and Net_655_0));
-
-lineClk <= ((not Net_529_4 and not Net_529_3 and not Net_529_1 and not Net_529_0 and Net_529_6 and Net_529_5 and Net_529_2));
 
 Net_655_2D <= ((not Net_655_2 and Net_655_1 and Net_655_0)
 	OR (not Net_655_0 and Net_655_2)
@@ -2241,110 +2294,34 @@ Net_655_1D <= ((not Net_655_0 and Net_655_1)
 
 Net_655_0D <= (not Net_655_0);
 
-Net_529_6D <= ((not lineClk and not Net_529_6 and CharClk and Net_529_5 and Net_529_4 and Net_529_3 and Net_529_2 and Net_529_1 and Net_529_0)
-	OR (not lineClk and not Net_529_0 and Net_529_6)
-	OR (not lineClk and not Net_529_1 and Net_529_6)
-	OR (not lineClk and not Net_529_2 and Net_529_6)
-	OR (not lineClk and not Net_529_3 and Net_529_6)
-	OR (not lineClk and not Net_529_4 and Net_529_6)
-	OR (not lineClk and not Net_529_5 and Net_529_6)
-	OR (not CharClk and not lineClk and Net_529_6));
+Net_810 <= ((not VertSync and not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_11:g1:a0:gx:u0:lti_0\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_0\ and ColCount_6)
+	OR (not VertSync and not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_0\ and ColCount_6 and \MODULE_11:g1:a0:gx:u0:gti_1\)
+	OR (not VertSync and not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_11:g1:a0:gx:u0:lti_0\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and ColCount_6 and \MODULE_12:g1:a0:gx:u0:lti_1\)
+	OR (not VertSync and not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and ColCount_6 and \MODULE_11:g1:a0:gx:u0:gti_1\ and \MODULE_12:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_12:g1:a0:gx:u0:lti_1\ and VertSync and \MODULE_12:g1:a0:gx:u0:gti_0\)
+	OR (not \MODULE_11:g1:a0:gx:u0:gti_1\ and VertSync and \MODULE_11:g1:a0:gx:u0:lti_0\)
+	OR (VertSync and \MODULE_12:g1:a0:gx:u0:gti_1\)
+	OR (VertSync and \MODULE_11:g1:a0:gx:u0:lti_1\)
+	OR (not ColCount_6 and VertSync));
 
-Net_529_5D <= ((not lineClk and not Net_529_5 and CharClk and Net_529_4 and Net_529_3 and Net_529_2 and Net_529_1 and Net_529_0)
-	OR (not lineClk and not Net_529_0 and Net_529_5)
-	OR (not lineClk and not Net_529_1 and Net_529_5)
-	OR (not lineClk and not Net_529_2 and Net_529_5)
-	OR (not lineClk and not Net_529_3 and Net_529_5)
-	OR (not lineClk and not Net_529_4 and Net_529_5)
-	OR (not CharClk and not lineClk and Net_529_5));
+VertSync <= ((not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_4:g1:a0:gx:u0:lti_0\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_0\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_0\ and \MODULE_4:g1:a0:gx:u0:gti_1\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_4:g1:a0:gx:u0:lti_0\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and \MODULE_6:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and \MODULE_4:g1:a0:gx:u0:gti_1\ and \MODULE_6:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_0\ and \MODULE_4:g1:a0:gx:u0:gti_2\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and \MODULE_4:g1:a0:gx:u0:gti_2\ and \MODULE_6:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_4:g1:a0:gx:u0:lti_0\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and \MODULE_6:g1:a0:gx:u0:lti_2\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and \MODULE_4:g1:a0:gx:u0:gti_1\ and \MODULE_6:g1:a0:gx:u0:lti_2\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_0\ and \MODULE_4:g1:a0:gx:u0:gti_3\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_1\ and \MODULE_4:g1:a0:gx:u0:gti_3\ and \MODULE_6:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_4:g1:a0:gx:u0:lti_0\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and \MODULE_6:g1:a0:gx:u0:lti_3\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and \MODULE_4:g1:a0:gx:u0:gti_1\ and \MODULE_6:g1:a0:gx:u0:lti_3\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and \MODULE_4:g1:a0:gx:u0:gti_2\ and \MODULE_6:g1:a0:gx:u0:lti_2\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_2\ and \MODULE_4:g1:a0:gx:u0:gti_3\ and \MODULE_6:g1:a0:gx:u0:lti_2\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and \MODULE_4:g1:a0:gx:u0:gti_2\ and \MODULE_6:g1:a0:gx:u0:lti_3\)
+	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_6:g1:a0:gx:u0:gti_3\ and \MODULE_4:g1:a0:gx:u0:gti_3\ and \MODULE_6:g1:a0:gx:u0:lti_3\));
 
-Net_529_4D <= ((not lineClk and not Net_529_4 and CharClk and Net_529_3 and Net_529_2 and Net_529_1 and Net_529_0)
-	OR (not lineClk and not Net_529_0 and Net_529_4)
-	OR (not lineClk and not Net_529_1 and Net_529_4)
-	OR (not lineClk and not Net_529_2 and Net_529_4)
-	OR (not lineClk and not Net_529_3 and Net_529_4)
-	OR (not CharClk and not lineClk and Net_529_4));
-
-Net_529_3D <= ((not lineClk and not Net_529_3 and CharClk and Net_529_2 and Net_529_1 and Net_529_0)
-	OR (not lineClk and not Net_529_0 and Net_529_3)
-	OR (not lineClk and not Net_529_1 and Net_529_3)
-	OR (not lineClk and not Net_529_2 and Net_529_3)
-	OR (not CharClk and not lineClk and Net_529_3));
-
-Net_529_2D <= ((not lineClk and not Net_529_2 and CharClk and Net_529_1 and Net_529_0)
-	OR (not lineClk and not Net_529_0 and Net_529_2)
-	OR (not lineClk and not Net_529_1 and Net_529_2)
-	OR (not CharClk and not lineClk and Net_529_2));
-
-Net_529_1D <= ((not lineClk and not Net_529_1 and CharClk and Net_529_0)
-	OR (not lineClk and not Net_529_0 and Net_529_1)
-	OR (not CharClk and not lineClk and Net_529_1));
-
-Net_529_0D <= ((not lineClk and not Net_529_0 and CharClk)
-	OR (not CharClk and not lineClk and Net_529_0));
-
-Net_538_9D <= ((not Net_586 and not Net_538_9 and lineClk and Net_538_8 and \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\)
-	OR (not Net_586 and not \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\ and Net_538_9)
-	OR (not Net_586 and not Net_538_8 and Net_538_9)
-	OR (not Net_586 and not lineClk and Net_538_9));
-
-Net_538_8D <= ((not Net_586 and not Net_538_8 and lineClk and \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\)
-	OR (not Net_586 and not \VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\ and Net_538_8)
-	OR (not Net_586 and not lineClk and Net_538_8));
-
-Net_538_7D <= ((not Net_586 and not Net_538_7 and lineClk and Net_538_6 and Net_538_5 and Net_538_4 and Net_538_3 and Net_538_2 and Net_538_1 and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_7)
-	OR (not Net_586 and not Net_538_1 and Net_538_7)
-	OR (not Net_586 and not Net_538_2 and Net_538_7)
-	OR (not Net_586 and not Net_538_3 and Net_538_7)
-	OR (not Net_586 and not Net_538_4 and Net_538_7)
-	OR (not Net_586 and not Net_538_5 and Net_538_7)
-	OR (not Net_586 and not Net_538_6 and Net_538_7)
-	OR (not Net_586 and not lineClk and Net_538_7));
-
-Net_538_6D <= ((not Net_586 and not Net_538_6 and lineClk and Net_538_5 and Net_538_4 and Net_538_3 and Net_538_2 and Net_538_1 and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_6)
-	OR (not Net_586 and not Net_538_1 and Net_538_6)
-	OR (not Net_586 and not Net_538_2 and Net_538_6)
-	OR (not Net_586 and not Net_538_3 and Net_538_6)
-	OR (not Net_586 and not Net_538_4 and Net_538_6)
-	OR (not Net_586 and not Net_538_5 and Net_538_6)
-	OR (not Net_586 and not lineClk and Net_538_6));
-
-Net_538_5D <= ((not Net_586 and not Net_538_5 and lineClk and Net_538_4 and Net_538_3 and Net_538_2 and Net_538_1 and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_5)
-	OR (not Net_586 and not Net_538_1 and Net_538_5)
-	OR (not Net_586 and not Net_538_2 and Net_538_5)
-	OR (not Net_586 and not Net_538_3 and Net_538_5)
-	OR (not Net_586 and not Net_538_4 and Net_538_5)
-	OR (not Net_586 and not lineClk and Net_538_5));
-
-Net_538_4D <= ((not Net_586 and not Net_538_4 and lineClk and Net_538_3 and Net_538_2 and Net_538_1 and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_4)
-	OR (not Net_586 and not Net_538_1 and Net_538_4)
-	OR (not Net_586 and not Net_538_2 and Net_538_4)
-	OR (not Net_586 and not Net_538_3 and Net_538_4)
-	OR (not Net_586 and not lineClk and Net_538_4));
-
-Net_538_3D <= ((not Net_586 and not Net_538_3 and lineClk and Net_538_2 and Net_538_1 and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_3)
-	OR (not Net_586 and not Net_538_1 and Net_538_3)
-	OR (not Net_586 and not Net_538_2 and Net_538_3)
-	OR (not Net_586 and not lineClk and Net_538_3));
-
-Net_538_2D <= ((not Net_586 and not Net_538_2 and lineClk and Net_538_1 and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_2)
-	OR (not Net_586 and not Net_538_1 and Net_538_2)
-	OR (not Net_586 and not lineClk and Net_538_2));
-
-Net_538_1D <= ((not Net_586 and not Net_538_1 and lineClk and Net_538_0)
-	OR (not Net_586 and not Net_538_0 and Net_538_1)
-	OR (not Net_586 and not lineClk and Net_538_1));
-
-Net_538_0D <= ((not Net_586 and not Net_538_0 and lineClk)
-	OR (not Net_586 and not lineClk and Net_538_0));
-
-\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ <= ((Net_538_7 and Net_538_6 and Net_538_5 and Net_538_4 and Net_538_3 and Net_538_2 and Net_538_1 and Net_538_0));
+Net_788 <= ((not Net_787_8 and Net_787_9 and \MODULE_7:g1:a0:gx:u0:eqi_0\));
 
 Net_608 <= ((not Net_600 and not Net_601 and not Net_602 and not Net_603 and not Net_604 and not Net_605 and not Net_606 and not Net_607)
 	OR (not Net_602 and not Net_603 and not Net_604 and not Net_605 and not Net_606 and not Net_607 and Net_600 and Net_601)
@@ -2607,128 +2584,152 @@ Net_619 <= ((not Net_609 and not Net_610 and not Net_611 and not Net_612 and not
 Net_620 <= ((not Net_608 and not Net_619)
 	OR (Net_608 and Net_619));
 
-Net_281 <= ((not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_4:g1:a0:gx:u0:gti_0\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_0\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_0\ and \MODULE_4:g1:a0:gx:u0:lti_1\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_4:g1:a0:gx:u0:gti_0\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and \MODULE_5:g1:a0:gx:u0:gti_1\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and \MODULE_4:g1:a0:gx:u0:lti_1\ and \MODULE_5:g1:a0:gx:u0:gti_1\)
-	OR (not \MODULE_5:g1:a0:gx:u0:gti_3\ and not \MODULE_5:g1:a0:gx:u0:gti_2\ and not \MODULE_5:g1:a0:gx:u0:gti_1\ and Net_715 and \MODULE_5:g1:a0:gx:u0:lti_0\)
-	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and not \MODULE_4:g1:a0:gx:u0:lti_1\ and Net_715 and \MODULE_4:g1:a0:gx:u0:gti_0\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_0\ and \MODULE_4:g1:a0:gx:u0:lti_2\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and \MODULE_4:g1:a0:gx:u0:lti_2\ and \MODULE_5:g1:a0:gx:u0:gti_1\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_4:g1:a0:gx:u0:gti_0\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and \MODULE_5:g1:a0:gx:u0:gti_2\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and \MODULE_4:g1:a0:gx:u0:lti_1\ and \MODULE_5:g1:a0:gx:u0:gti_2\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_0\ and \MODULE_4:g1:a0:gx:u0:lti_3\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_1\ and \MODULE_4:g1:a0:gx:u0:lti_3\ and \MODULE_5:g1:a0:gx:u0:gti_1\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_4:g1:a0:gx:u0:gti_0\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and \MODULE_5:g1:a0:gx:u0:gti_3\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_4:g1:a0:gx:u0:gti_1\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and \MODULE_4:g1:a0:gx:u0:lti_1\ and \MODULE_5:g1:a0:gx:u0:gti_3\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and \MODULE_4:g1:a0:gx:u0:lti_2\ and \MODULE_5:g1:a0:gx:u0:gti_2\)
-	OR (not \MODULE_5:g1:a0:gx:u0:gti_3\ and not \MODULE_5:g1:a0:gx:u0:gti_2\ and Net_715 and \MODULE_5:g1:a0:gx:u0:lti_1\)
-	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and not \MODULE_4:g1:a0:gx:u0:lti_2\ and Net_715 and \MODULE_4:g1:a0:gx:u0:gti_1\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_2\ and \MODULE_4:g1:a0:gx:u0:lti_3\ and \MODULE_5:g1:a0:gx:u0:gti_2\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_4:g1:a0:gx:u0:gti_2\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and \MODULE_4:g1:a0:gx:u0:lti_2\ and \MODULE_5:g1:a0:gx:u0:gti_3\)
-	OR (not Net_715 and not \MODULE_4:g1:a0:gx:u0:gti_3\ and not \MODULE_5:g1:a0:gx:u0:lti_3\ and \MODULE_4:g1:a0:gx:u0:lti_3\ and \MODULE_5:g1:a0:gx:u0:gti_3\)
-	OR (not \MODULE_5:g1:a0:gx:u0:gti_3\ and Net_715 and \MODULE_5:g1:a0:gx:u0:lti_2\)
-	OR (not \MODULE_4:g1:a0:gx:u0:lti_3\ and Net_715 and \MODULE_4:g1:a0:gx:u0:gti_2\)
-	OR (Net_715 and \MODULE_5:g1:a0:gx:u0:lti_3\)
-	OR (Net_715 and \MODULE_4:g1:a0:gx:u0:gti_3\));
+Net_748 <= ((not ColCount_5 and ColCount_4 and Net_722));
 
-Net_748 <= ((not Net_529_5 and Net_529_4 and Net_722));
+Net_780 <= ((not ColCount_4 and ColCount_5 and Net_722));
 
-Net_754 <= ((not Net_529_4 and Net_529_5 and Net_722));
+Net_757 <= ((ColCount_5 and ColCount_4 and Net_722));
 
-Net_757 <= ((Net_529_5 and Net_529_4 and Net_722));
+Net_722 <= ((not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_8:g1:a0:gx:u0:gti_2\ and not \MODULE_8:g1:a0:gx:u0:gti_1\ and not \MODULE_10:g1:a0:gx:u0:gti_1\ and \MODULE_8:g1:a0:gx:u0:lti_0\ and \MODULE_10:g1:a0:gx:u0:lti_0\)
+	OR (not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_8:g1:a0:gx:u0:gti_2\ and not \MODULE_8:g1:a0:gx:u0:gti_1\ and \MODULE_8:g1:a0:gx:u0:lti_0\ and \MODULE_10:g1:a0:gx:u0:lti_1\)
+	OR (not ColCount_6 and not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_8:g1:a0:gx:u0:gti_2\ and not \MODULE_8:g1:a0:gx:u0:gti_1\ and \MODULE_8:g1:a0:gx:u0:lti_0\)
+	OR (not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_8:g1:a0:gx:u0:gti_2\ and not \MODULE_10:g1:a0:gx:u0:gti_1\ and \MODULE_8:g1:a0:gx:u0:lti_1\ and \MODULE_10:g1:a0:gx:u0:lti_0\)
+	OR (not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_10:g1:a0:gx:u0:gti_1\ and \MODULE_8:g1:a0:gx:u0:lti_2\ and \MODULE_10:g1:a0:gx:u0:lti_0\)
+	OR (not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_8:g1:a0:gx:u0:gti_2\ and \MODULE_8:g1:a0:gx:u0:lti_1\ and \MODULE_10:g1:a0:gx:u0:lti_1\)
+	OR (not ColCount_6 and not \MODULE_8:g1:a0:gx:u0:gti_3\ and not \MODULE_8:g1:a0:gx:u0:gti_2\ and \MODULE_8:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_10:g1:a0:gx:u0:gti_1\ and \MODULE_8:g1:a0:gx:u0:lti_3\ and \MODULE_10:g1:a0:gx:u0:lti_0\)
+	OR (not \MODULE_8:g1:a0:gx:u0:gti_3\ and \MODULE_8:g1:a0:gx:u0:lti_2\ and \MODULE_10:g1:a0:gx:u0:lti_1\)
+	OR (not ColCount_6 and not \MODULE_8:g1:a0:gx:u0:gti_3\ and \MODULE_8:g1:a0:gx:u0:lti_2\)
+	OR (\MODULE_8:g1:a0:gx:u0:lti_3\ and \MODULE_10:g1:a0:gx:u0:lti_1\)
+	OR (not ColCount_6 and \MODULE_8:g1:a0:gx:u0:lti_3\));
 
-Net_722 <= ((not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_7:g1:a0:gx:u0:gti_2\ and not \MODULE_7:g1:a0:gx:u0:gti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and \MODULE_7:g1:a0:gx:u0:lti_0\ and \MODULE_12:g1:a0:gx:u0:lti_0\)
-	OR (not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_7:g1:a0:gx:u0:gti_2\ and not \MODULE_7:g1:a0:gx:u0:gti_1\ and \MODULE_7:g1:a0:gx:u0:lti_0\ and \MODULE_12:g1:a0:gx:u0:lti_1\)
-	OR (not Net_529_6 and not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_7:g1:a0:gx:u0:gti_2\ and not \MODULE_7:g1:a0:gx:u0:gti_1\ and \MODULE_7:g1:a0:gx:u0:lti_0\)
-	OR (not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_7:g1:a0:gx:u0:gti_2\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and \MODULE_7:g1:a0:gx:u0:lti_1\ and \MODULE_12:g1:a0:gx:u0:lti_0\)
-	OR (not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and \MODULE_7:g1:a0:gx:u0:lti_2\ and \MODULE_12:g1:a0:gx:u0:lti_0\)
-	OR (not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_7:g1:a0:gx:u0:gti_2\ and \MODULE_7:g1:a0:gx:u0:lti_1\ and \MODULE_12:g1:a0:gx:u0:lti_1\)
-	OR (not Net_529_6 and not \MODULE_7:g1:a0:gx:u0:gti_3\ and not \MODULE_7:g1:a0:gx:u0:gti_2\ and \MODULE_7:g1:a0:gx:u0:lti_1\)
-	OR (not \MODULE_12:g1:a0:gx:u0:gti_1\ and \MODULE_7:g1:a0:gx:u0:lti_3\ and \MODULE_12:g1:a0:gx:u0:lti_0\)
-	OR (not \MODULE_7:g1:a0:gx:u0:gti_3\ and \MODULE_7:g1:a0:gx:u0:lti_2\ and \MODULE_12:g1:a0:gx:u0:lti_1\)
-	OR (not Net_529_6 and not \MODULE_7:g1:a0:gx:u0:gti_3\ and \MODULE_7:g1:a0:gx:u0:lti_2\)
-	OR (\MODULE_7:g1:a0:gx:u0:lti_3\ and \MODULE_12:g1:a0:gx:u0:lti_1\)
-	OR (not Net_529_6 and \MODULE_7:g1:a0:gx:u0:lti_3\));
+ColCount_6D <= ((not lineClear and not ColCount_6 and CharClk and ColCount_5 and ColCount_4 and ColCount_3 and ColCount_2 and ColCount_1 and ColCount_0)
+	OR (not lineClear and not ColCount_0 and ColCount_6)
+	OR (not lineClear and not ColCount_1 and ColCount_6)
+	OR (not lineClear and not ColCount_2 and ColCount_6)
+	OR (not lineClear and not ColCount_3 and ColCount_6)
+	OR (not lineClear and not ColCount_4 and ColCount_6)
+	OR (not lineClear and not ColCount_5 and ColCount_6)
+	OR (not lineClear and not CharClk and ColCount_6));
 
-\MODULE_4:g1:a0:gx:u0:eq_7\ <= ((not Net_538_4 and not Net_538_1 and not Net_538_0 and Net_538_7 and Net_538_6 and Net_538_5 and Net_538_3 and Net_538_2));
+ColCount_5D <= ((not lineClear and not ColCount_5 and CharClk and ColCount_4 and ColCount_3 and ColCount_2 and ColCount_1 and ColCount_0)
+	OR (not lineClear and not ColCount_0 and ColCount_5)
+	OR (not lineClear and not ColCount_1 and ColCount_5)
+	OR (not lineClear and not ColCount_2 and ColCount_5)
+	OR (not lineClear and not ColCount_3 and ColCount_5)
+	OR (not lineClear and not ColCount_4 and ColCount_5)
+	OR (not lineClear and not CharClk and ColCount_5));
 
-\MODULE_4:g1:a0:gx:u0:lt_8\ <= (not Net_538_6
-	OR not Net_538_7
-	OR not Net_538_8);
+ColCount_4D <= ((not lineClear and not ColCount_4 and CharClk and ColCount_3 and ColCount_2 and ColCount_1 and ColCount_0)
+	OR (not lineClear and not ColCount_0 and ColCount_4)
+	OR (not lineClear and not ColCount_1 and ColCount_4)
+	OR (not lineClear and not ColCount_2 and ColCount_4)
+	OR (not lineClear and not ColCount_3 and ColCount_4)
+	OR (not lineClear and not CharClk and ColCount_4));
 
-\MODULE_4:g1:a0:gx:u0:lt_5\ <= ((not Net_538_4 and not Net_538_3)
-	OR not Net_538_5);
+ColCount_3D <= ((not lineClear and not ColCount_3 and CharClk and ColCount_2 and ColCount_1 and ColCount_0)
+	OR (not lineClear and not ColCount_0 and ColCount_3)
+	OR (not lineClear and not ColCount_1 and ColCount_3)
+	OR (not lineClear and not ColCount_2 and ColCount_3)
+	OR (not lineClear and not CharClk and ColCount_3));
 
-\MODULE_4:g1:a0:gx:u0:gt_5\ <= ((Net_538_5 and Net_538_4));
+ColCount_2D <= ((not lineClear and not ColCount_2 and CharClk and ColCount_1 and ColCount_0)
+	OR (not lineClear and not ColCount_0 and ColCount_2)
+	OR (not lineClear and not ColCount_1 and ColCount_2)
+	OR (not lineClear and not CharClk and ColCount_2));
 
-\MODULE_4:g1:a0:gx:u0:lt_2\ <= (not Net_538_2);
+ColCount_1D <= ((not lineClear and not ColCount_1 and CharClk and ColCount_0)
+	OR (not lineClear and not ColCount_0 and ColCount_1)
+	OR (not lineClear and not CharClk and ColCount_1));
 
-\MODULE_4:g1:a0:gx:u0:gt_2\ <= ((Net_538_2 and Net_538_0)
-	OR (Net_538_2 and Net_538_1));
+ColCount_0D <= ((not lineClear and not ColCount_0 and CharClk)
+	OR (not lineClear and not CharClk and ColCount_0));
 
-\MODULE_5:g1:a0:gx:u0:eq_7\ <= ((not Net_538_4 and not Net_538_2 and not Net_538_0 and Net_538_7 and Net_538_6 and Net_538_5 and Net_538_3 and Net_538_1));
+lineClear <= ((not ColCount_4 and not ColCount_3 and not ColCount_1 and not ColCount_0 and ColCount_5 and ColCount_6 and ColCount_2));
 
-\MODULE_5:g1:a0:gx:u0:lt_2\ <= ((not Net_538_2 and not Net_538_1));
+HorSync <= ((not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_11:g1:a0:gx:u0:lti_0\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_0\ and ColCount_6)
+	OR (not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_0\ and ColCount_6 and \MODULE_11:g1:a0:gx:u0:gti_1\)
+	OR (not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_11:g1:a0:gx:u0:lti_0\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and ColCount_6 and \MODULE_12:g1:a0:gx:u0:lti_1\)
+	OR (not \MODULE_11:g1:a0:gx:u0:lti_1\ and not \MODULE_12:g1:a0:gx:u0:gti_1\ and ColCount_6 and \MODULE_11:g1:a0:gx:u0:gti_1\ and \MODULE_12:g1:a0:gx:u0:lti_1\));
 
-\MODULE_5:g1:a0:gx:u0:gt_2\ <= ((Net_538_1 and Net_538_0)
-	OR Net_538_2);
+\MODULE_4:g1:a0:gx:u0:eq_7\ <= ((not Net_787_4 and not Net_787_2 and not Net_787_0 and Net_787_7 and Net_787_6 and Net_787_5 and Net_787_3 and Net_787_1));
 
-\MODULE_6:g1:a0:gx:u0:eq_7\ <= ((not Net_538_7 and not Net_538_6 and not Net_538_5 and not Net_538_4 and not Net_538_1 and Net_538_3 and Net_538_2 and Net_538_0));
+\MODULE_4:g1:a0:gx:u0:lt_8\ <= (not Net_787_6
+	OR not Net_787_7
+	OR not Net_787_8);
 
-\MODULE_6:g1:a0:gx:u0:lt_9\ <= (not Net_538_9);
+\MODULE_4:g1:a0:gx:u0:lt_5\ <= ((not Net_787_4 and not Net_787_3)
+	OR not Net_787_5);
 
-\MODULE_6:g1:a0:gx:u0:gt_8\ <= (Net_538_6
-	OR Net_538_7
-	OR Net_538_8);
+\MODULE_4:g1:a0:gx:u0:gt_5\ <= ((Net_787_5 and Net_787_4));
 
-\MODULE_6:g1:a0:gx:u0:lt_5\ <= ((not Net_538_5 and not Net_538_4 and not Net_538_3));
+\MODULE_4:g1:a0:gx:u0:lt_2\ <= ((not Net_787_2 and not Net_787_1));
 
-\MODULE_6:g1:a0:gx:u0:gt_5\ <= (Net_538_4
-	OR Net_538_5);
+\MODULE_4:g1:a0:gx:u0:gt_2\ <= ((Net_787_1 and Net_787_0)
+	OR Net_787_2);
 
-\MODULE_6:g1:a0:gx:u0:lt_2\ <= ((not Net_538_1 and not Net_538_0)
-	OR not Net_538_2);
+\MODULE_6:g1:a0:gx:u0:eq_7\ <= ((not Net_787_4 and not Net_787_1 and not Net_787_0 and Net_787_7 and Net_787_6 and Net_787_5 and Net_787_3 and Net_787_2));
 
-\MODULE_6:g1:a0:gx:u0:gt_2\ <= ((Net_538_2 and Net_538_1));
+\MODULE_6:g1:a0:gx:u0:lt_2\ <= (not Net_787_2);
 
-\MODULE_7:g1:a0:gx:u0:eq_7\ <= ((not Net_538_4 and not Net_538_3 and not Net_538_2 and not Net_538_1 and not Net_538_0 and Net_538_7 and Net_538_6 and Net_538_5));
+\MODULE_6:g1:a0:gx:u0:gt_2\ <= ((Net_787_2 and Net_787_0)
+	OR (Net_787_2 and Net_787_1));
 
-\MODULE_7:g1:a0:gx:u0:lt_5\ <= (not Net_538_5);
+\MODULE_7:g1:a0:gx:u0:eq_7\ <= ((not Net_787_7 and not Net_787_6 and not Net_787_5 and not Net_787_4 and not Net_787_1 and Net_787_3 and Net_787_2 and Net_787_0));
 
-\MODULE_7:g1:a0:gx:u0:gt_5\ <= ((Net_538_5 and Net_538_3)
-	OR (Net_538_5 and Net_538_4));
+\MODULE_7:g1:a0:gx:u0:lt_9\ <= (not Net_787_9);
 
-\MODULE_7:g1:a0:gx:u0:gt_2\ <= (Net_538_0
-	OR Net_538_1
-	OR Net_538_2);
+\MODULE_7:g1:a0:gx:u0:gt_8\ <= (Net_787_6
+	OR Net_787_7
+	OR Net_787_8);
 
-\MODULE_8:g1:a0:gx:u0:lt_5\ <= ((not Net_529_5 and not Net_529_3)
-	OR (not Net_529_5 and not Net_529_4));
+\MODULE_7:g1:a0:gx:u0:lt_5\ <= ((not Net_787_5 and not Net_787_4 and not Net_787_3));
 
-\MODULE_8:g1:a0:gx:u0:lt_2\ <= ((not Net_529_2 and not Net_529_1));
+\MODULE_7:g1:a0:gx:u0:gt_5\ <= (Net_787_4
+	OR Net_787_5);
 
-\MODULE_8:g1:a0:gx:u0:gt_2\ <= ((Net_529_1 and Net_529_0)
-	OR Net_529_2);
+\MODULE_7:g1:a0:gx:u0:lt_2\ <= ((not Net_787_1 and not Net_787_0)
+	OR not Net_787_2);
 
-\MODULE_9:g1:a0:gx:u0:lt_5\ <= ((not Net_529_5 and not Net_529_4));
+\MODULE_7:g1:a0:gx:u0:gt_2\ <= ((Net_787_2 and Net_787_1));
 
-\MODULE_9:g1:a0:gx:u0:gt_5\ <= ((Net_529_4 and Net_529_3)
-	OR Net_529_5);
+\MODULE_8:g1:a0:gx:u0:eq_7\ <= ((not Net_787_4 and not Net_787_3 and not Net_787_2 and not Net_787_1 and not Net_787_0 and Net_787_7 and Net_787_6 and Net_787_5));
 
-\MODULE_11:g1:a0:gx:u0:lt_5\ <= (not Net_529_5);
+\MODULE_8:g1:a0:gx:u0:lt_5\ <= (not Net_787_5);
 
-\MODULE_11:g1:a0:gx:u0:gt_5\ <= ((Net_529_5 and Net_529_3)
-	OR (Net_529_5 and Net_529_4));
+\MODULE_8:g1:a0:gx:u0:gt_5\ <= ((Net_787_5 and Net_787_3)
+	OR (Net_787_5 and Net_787_4));
 
-\MODULE_11:g1:a0:gx:u0:lt_2\ <= (not Net_529_2);
+\MODULE_8:g1:a0:gx:u0:gt_2\ <= (Net_787_0
+	OR Net_787_1
+	OR Net_787_2);
 
-\MODULE_11:g1:a0:gx:u0:gt_2\ <= ((Net_529_2 and Net_529_0)
-	OR (Net_529_2 and Net_529_1));
+\MODULE_9:g1:a0:gx:u0:lt_5\ <= (not ColCount_5);
 
-\MODULE_12:g1:a0:gx:u0:gt_2\ <= (Net_529_0
-	OR Net_529_1
-	OR Net_529_2);
+\MODULE_9:g1:a0:gx:u0:gt_5\ <= ((ColCount_5 and ColCount_3)
+	OR (ColCount_5 and ColCount_4));
+
+\MODULE_9:g1:a0:gx:u0:lt_2\ <= (not ColCount_2);
+
+\MODULE_9:g1:a0:gx:u0:gt_2\ <= ((ColCount_2 and ColCount_0)
+	OR (ColCount_2 and ColCount_1));
+
+\MODULE_10:g1:a0:gx:u0:lt_5\ <= ((not ColCount_5 and not ColCount_4));
+
+\MODULE_10:g1:a0:gx:u0:gt_5\ <= ((ColCount_4 and ColCount_3)
+	OR ColCount_5);
+
+\MODULE_10:g1:a0:gx:u0:gt_2\ <= (ColCount_0
+	OR ColCount_1
+	OR ColCount_2);
+
+\MODULE_11:g1:a0:gx:u0:lt_2\ <= ((not ColCount_2 and not ColCount_1));
+
+\MODULE_11:g1:a0:gx:u0:gt_2\ <= ((ColCount_1 and ColCount_0)
+	OR ColCount_2);
+
+\MODULE_12:g1:a0:gx:u0:lt_5\ <= ((not ColCount_5 and not ColCount_3)
+	OR (not ColCount_5 and not ColCount_4));
 
 LED5_4:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
@@ -3207,7 +3208,7 @@ HSYNC:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__LED5_4_net_0),
-		y=>Net_715,
+		y=>HorSync,
 		fb=>(tmpFB_0__HSYNC_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__HSYNC_net_0),
@@ -3277,7 +3278,7 @@ VSYNC:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__LED5_4_net_0),
-		y=>zero,
+		y=>VertSync,
 		fb=>(tmpFB_0__VSYNC_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__VSYNC_net_0),
@@ -4970,6 +4971,15 @@ P4_17:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__LED5_4_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__P4_17_net_0);
+\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\);
+\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\);
+\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
+	PORT MAP(x=>\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\,
+		y=>\VerticalCounter_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\);
 RP_GPIO_17:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"57293c04-da7a-4312-8aca-765287d073f9",
 		drive_mode=>"010",
@@ -5460,15 +5470,15 @@ RP_GPIO_5:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__LED5_4_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__RP_GPIO_5_net_0);
-\CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
+\CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
-		y=>\CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\);
-\CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
+		y=>\CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\);
+\CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
-		y=>\CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\);
-\CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
+		y=>\CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\);
+\CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
-		y=>\CharacterCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\);
+		y=>\CharacterCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\);
 RP_GPIO_6:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"5ccfa861-47e2-4de9-aa0a-b5f54010b13c",
 		drive_mode=>"111",
@@ -5539,15 +5549,6 @@ RP_GPIO_6:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__LED5_4_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__RP_GPIO_6_net_0);
-\HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\);
-\HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\);
-\HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\HorizontalCounter:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\);
 RP_GPIO_12:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"af5db3c9-f1ce-4082-9d22-7652d364245e",
 		drive_mode=>"010",
@@ -5696,17 +5697,8 @@ PixelClock:cy_clock_v1_0
 		period=>"39721946.3753724",
 		is_direct=>'0',
 		is_digital=>'1')
-	PORT MAP(clock_out=>Net_445,
+	PORT MAP(clock_out=>PixClk,
 		dig_domain_out=>open);
-\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_24\);
-\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_16\);
-\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
-	PORT MAP(x=>\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\,
-		y=>\VerticalCounter:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\);
 RP_GPIO_19:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"0d7c5bdd-e10d-4799-88e1-ff7b7e68ce37",
 		drive_mode=>"010",
@@ -6057,6 +6049,15 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__LED5_4_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__RP_GPIO_21_net_0);
+\HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_24\);
+\HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_16\);
+\HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\HorizontalCounter_1:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\);
 \MODULE_4:g1:a0:gx:u0:geq(0):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:eq_7\,
 		y=>\MODULE_4:g1:a0:gx:u0:eqi_0\);
@@ -6064,7 +6065,7 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>zero,
 		y=>\MODULE_4:g1:a0:gx:u0:lti_3\);
 \MODULE_4:g1:a0:gx:u0:gne(3):c4:c6:u2\:cy_buf
-	PORT MAP(x=>Net_538_9,
+	PORT MAP(x=>Net_787_9,
 		y=>\MODULE_4:g1:a0:gx:u0:gti_3\);
 \MODULE_4:g1:a0:gx:u0:gne(2):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_8\,
@@ -6084,53 +6085,26 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 \MODULE_4:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
 	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:gt_2\,
 		y=>\MODULE_4:g1:a0:gx:u0:gti_0\);
-\MODULE_5:g1:a0:gx:u0:geq(0):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_5:g1:a0:gx:u0:eq_7\,
-		y=>\MODULE_5:g1:a0:gx:u0:eqi_0\);
-\MODULE_5:g1:a0:gx:u0:gne(3):c4:c6:u1\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\MODULE_5:g1:a0:gx:u0:lti_3\);
-\MODULE_5:g1:a0:gx:u0:gne(3):c4:c6:u2\:cy_buf
-	PORT MAP(x=>Net_538_9,
-		y=>\MODULE_5:g1:a0:gx:u0:gti_3\);
-\MODULE_5:g1:a0:gx:u0:gne(2):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_8\,
-		y=>\MODULE_5:g1:a0:gx:u0:lti_2\);
-\MODULE_5:g1:a0:gx:u0:gne(2):c3:u2\:cy_buf
-	PORT MAP(x=>zero,
-		y=>\MODULE_5:g1:a0:gx:u0:gti_2\);
-\MODULE_5:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_5\,
-		y=>\MODULE_5:g1:a0:gx:u0:lti_1\);
-\MODULE_5:g1:a0:gx:u0:gne(1):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:gt_5\,
-		y=>\MODULE_5:g1:a0:gx:u0:gti_1\);
-\MODULE_5:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_5:g1:a0:gx:u0:lt_2\,
-		y=>\MODULE_5:g1:a0:gx:u0:lti_0\);
-\MODULE_5:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_5:g1:a0:gx:u0:gt_2\,
-		y=>\MODULE_5:g1:a0:gx:u0:gti_0\);
 \MODULE_6:g1:a0:gx:u0:geq(0):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_6:g1:a0:gx:u0:eq_7\,
 		y=>\MODULE_6:g1:a0:gx:u0:eqi_0\);
 \MODULE_6:g1:a0:gx:u0:gne(3):c4:c6:u1\:cy_buf
-	PORT MAP(x=>\MODULE_6:g1:a0:gx:u0:lt_9\,
+	PORT MAP(x=>zero,
 		y=>\MODULE_6:g1:a0:gx:u0:lti_3\);
 \MODULE_6:g1:a0:gx:u0:gne(3):c4:c6:u2\:cy_buf
-	PORT MAP(x=>zero,
+	PORT MAP(x=>Net_787_9,
 		y=>\MODULE_6:g1:a0:gx:u0:gti_3\);
 \MODULE_6:g1:a0:gx:u0:gne(2):c3:u1\:cy_buf
-	PORT MAP(x=>zero,
+	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_8\,
 		y=>\MODULE_6:g1:a0:gx:u0:lti_2\);
 \MODULE_6:g1:a0:gx:u0:gne(2):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_6:g1:a0:gx:u0:gt_8\,
+	PORT MAP(x=>zero,
 		y=>\MODULE_6:g1:a0:gx:u0:gti_2\);
 \MODULE_6:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_6:g1:a0:gx:u0:lt_5\,
+	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_5\,
 		y=>\MODULE_6:g1:a0:gx:u0:lti_1\);
 \MODULE_6:g1:a0:gx:u0:gne(1):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_6:g1:a0:gx:u0:gt_5\,
+	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:gt_5\,
 		y=>\MODULE_6:g1:a0:gx:u0:gti_1\);
 \MODULE_6:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_6:g1:a0:gx:u0:lt_2\,
@@ -6142,16 +6116,16 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:eq_7\,
 		y=>\MODULE_7:g1:a0:gx:u0:eqi_0\);
 \MODULE_7:g1:a0:gx:u0:gne(3):c4:c6:u1\:cy_buf
-	PORT MAP(x=>zero,
+	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:lt_9\,
 		y=>\MODULE_7:g1:a0:gx:u0:lti_3\);
 \MODULE_7:g1:a0:gx:u0:gne(3):c4:c6:u2\:cy_buf
-	PORT MAP(x=>Net_538_9,
+	PORT MAP(x=>zero,
 		y=>\MODULE_7:g1:a0:gx:u0:gti_3\);
 \MODULE_7:g1:a0:gx:u0:gne(2):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_8\,
+	PORT MAP(x=>zero,
 		y=>\MODULE_7:g1:a0:gx:u0:lti_2\);
 \MODULE_7:g1:a0:gx:u0:gne(2):c3:u2\:cy_buf
-	PORT MAP(x=>zero,
+	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:gt_8\,
 		y=>\MODULE_7:g1:a0:gx:u0:gti_2\);
 \MODULE_7:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:lt_5\,
@@ -6160,19 +6134,34 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:gt_5\,
 		y=>\MODULE_7:g1:a0:gx:u0:gti_1\);
 \MODULE_7:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
-	PORT MAP(x=>zero,
+	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:lt_2\,
 		y=>\MODULE_7:g1:a0:gx:u0:lti_0\);
 \MODULE_7:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
 	PORT MAP(x=>\MODULE_7:g1:a0:gx:u0:gt_2\,
 		y=>\MODULE_7:g1:a0:gx:u0:gti_0\);
+\MODULE_8:g1:a0:gx:u0:geq(0):c3:u1\:cy_buf
+	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:eq_7\,
+		y=>\MODULE_8:g1:a0:gx:u0:eqi_0\);
+\MODULE_8:g1:a0:gx:u0:gne(3):c4:c6:u1\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\MODULE_8:g1:a0:gx:u0:lti_3\);
+\MODULE_8:g1:a0:gx:u0:gne(3):c4:c6:u2\:cy_buf
+	PORT MAP(x=>Net_787_9,
+		y=>\MODULE_8:g1:a0:gx:u0:gti_3\);
+\MODULE_8:g1:a0:gx:u0:gne(2):c3:u1\:cy_buf
+	PORT MAP(x=>\MODULE_4:g1:a0:gx:u0:lt_8\,
+		y=>\MODULE_8:g1:a0:gx:u0:lti_2\);
+\MODULE_8:g1:a0:gx:u0:gne(2):c3:u2\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\MODULE_8:g1:a0:gx:u0:gti_2\);
 \MODULE_8:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:lt_5\,
 		y=>\MODULE_8:g1:a0:gx:u0:lti_1\);
 \MODULE_8:g1:a0:gx:u0:gne(1):c3:u2\:cy_buf
-	PORT MAP(x=>Net_529_5,
+	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:gt_5\,
 		y=>\MODULE_8:g1:a0:gx:u0:gti_1\);
 \MODULE_8:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:lt_2\,
+	PORT MAP(x=>zero,
 		y=>\MODULE_8:g1:a0:gx:u0:lti_0\);
 \MODULE_8:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
 	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:gt_2\,
@@ -6184,16 +6173,28 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>\MODULE_9:g1:a0:gx:u0:gt_5\,
 		y=>\MODULE_9:g1:a0:gx:u0:gti_1\);
 \MODULE_9:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:lt_2\,
+	PORT MAP(x=>\MODULE_9:g1:a0:gx:u0:lt_2\,
 		y=>\MODULE_9:g1:a0:gx:u0:lti_0\);
 \MODULE_9:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_8:g1:a0:gx:u0:gt_2\,
+	PORT MAP(x=>\MODULE_9:g1:a0:gx:u0:gt_2\,
 		y=>\MODULE_9:g1:a0:gx:u0:gti_0\);
+\MODULE_10:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
+	PORT MAP(x=>\MODULE_10:g1:a0:gx:u0:lt_5\,
+		y=>\MODULE_10:g1:a0:gx:u0:lti_1\);
+\MODULE_10:g1:a0:gx:u0:gne(1):c3:u2\:cy_buf
+	PORT MAP(x=>\MODULE_10:g1:a0:gx:u0:gt_5\,
+		y=>\MODULE_10:g1:a0:gx:u0:gti_1\);
+\MODULE_10:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
+	PORT MAP(x=>zero,
+		y=>\MODULE_10:g1:a0:gx:u0:lti_0\);
+\MODULE_10:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
+	PORT MAP(x=>\MODULE_10:g1:a0:gx:u0:gt_2\,
+		y=>\MODULE_10:g1:a0:gx:u0:gti_0\);
 \MODULE_11:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_11:g1:a0:gx:u0:lt_5\,
+	PORT MAP(x=>\MODULE_10:g1:a0:gx:u0:lt_5\,
 		y=>\MODULE_11:g1:a0:gx:u0:lti_1\);
 \MODULE_11:g1:a0:gx:u0:gne(1):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_11:g1:a0:gx:u0:gt_5\,
+	PORT MAP(x=>\MODULE_10:g1:a0:gx:u0:gt_5\,
 		y=>\MODULE_11:g1:a0:gx:u0:gti_1\);
 \MODULE_11:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
 	PORT MAP(x=>\MODULE_11:g1:a0:gx:u0:lt_2\,
@@ -6202,112 +6203,112 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>\MODULE_11:g1:a0:gx:u0:gt_2\,
 		y=>\MODULE_11:g1:a0:gx:u0:gti_0\);
 \MODULE_12:g1:a0:gx:u0:gne(1):c3:u1\:cy_buf
-	PORT MAP(x=>\MODULE_9:g1:a0:gx:u0:lt_5\,
+	PORT MAP(x=>\MODULE_12:g1:a0:gx:u0:lt_5\,
 		y=>\MODULE_12:g1:a0:gx:u0:lti_1\);
 \MODULE_12:g1:a0:gx:u0:gne(1):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_9:g1:a0:gx:u0:gt_5\,
+	PORT MAP(x=>ColCount_5,
 		y=>\MODULE_12:g1:a0:gx:u0:gti_1\);
 \MODULE_12:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
-	PORT MAP(x=>zero,
+	PORT MAP(x=>\MODULE_11:g1:a0:gx:u0:lt_2\,
 		y=>\MODULE_12:g1:a0:gx:u0:lti_0\);
 \MODULE_12:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
-	PORT MAP(x=>\MODULE_12:g1:a0:gx:u0:gt_2\,
+	PORT MAP(x=>\MODULE_11:g1:a0:gx:u0:gt_2\,
 		y=>\MODULE_12:g1:a0:gx:u0:gti_0\);
+Net_787_9:cy_dff
+	PORT MAP(d=>Net_787_9D,
+		clk=>PixClk,
+		q=>Net_787_9);
+Net_787_8:cy_dff
+	PORT MAP(d=>Net_787_8D,
+		clk=>PixClk,
+		q=>Net_787_8);
+Net_787_7:cy_dff
+	PORT MAP(d=>Net_787_7D,
+		clk=>PixClk,
+		q=>Net_787_7);
+Net_787_6:cy_dff
+	PORT MAP(d=>Net_787_6D,
+		clk=>PixClk,
+		q=>Net_787_6);
+Net_787_5:cy_dff
+	PORT MAP(d=>Net_787_5D,
+		clk=>PixClk,
+		q=>Net_787_5);
+Net_787_4:cy_dff
+	PORT MAP(d=>Net_787_4D,
+		clk=>PixClk,
+		q=>Net_787_4);
+Net_787_3:cy_dff
+	PORT MAP(d=>Net_787_3D,
+		clk=>PixClk,
+		q=>Net_787_3);
+Net_787_2:cy_dff
+	PORT MAP(d=>Net_787_2D,
+		clk=>PixClk,
+		q=>Net_787_2);
+Net_787_1:cy_dff
+	PORT MAP(d=>Net_787_1D,
+		clk=>PixClk,
+		q=>Net_787_1);
+Net_787_0:cy_dff
+	PORT MAP(d=>Net_787_0D,
+		clk=>PixClk,
+		q=>Net_787_0);
 Net_655_2:cy_dff
 	PORT MAP(d=>Net_655_2D,
-		clk=>Net_445,
+		clk=>PixClk,
 		q=>Net_655_2);
 Net_655_1:cy_dff
 	PORT MAP(d=>Net_655_1D,
-		clk=>Net_445,
+		clk=>PixClk,
 		q=>Net_655_1);
 Net_655_0:cy_dff
 	PORT MAP(d=>Net_655_0D,
-		clk=>Net_445,
+		clk=>PixClk,
 		q=>Net_655_0);
-Net_529_6:cy_dff
-	PORT MAP(d=>Net_529_6D,
-		clk=>Net_445,
-		q=>Net_529_6);
-Net_529_5:cy_dff
-	PORT MAP(d=>Net_529_5D,
-		clk=>Net_445,
-		q=>Net_529_5);
-Net_529_4:cy_dff
-	PORT MAP(d=>Net_529_4D,
-		clk=>Net_445,
-		q=>Net_529_4);
-Net_529_3:cy_dff
-	PORT MAP(d=>Net_529_3D,
-		clk=>Net_445,
-		q=>Net_529_3);
-Net_529_2:cy_dff
-	PORT MAP(d=>Net_529_2D,
-		clk=>Net_445,
-		q=>Net_529_2);
-Net_529_1:cy_dff
-	PORT MAP(d=>Net_529_1D,
-		clk=>Net_445,
-		q=>Net_529_1);
-Net_529_0:cy_dff
-	PORT MAP(d=>Net_529_0D,
-		clk=>Net_445,
-		q=>Net_529_0);
-Net_538_9:cy_dff
-	PORT MAP(d=>Net_538_9D,
-		clk=>Net_445,
-		q=>Net_538_9);
-Net_538_8:cy_dff
-	PORT MAP(d=>Net_538_8D,
-		clk=>Net_445,
-		q=>Net_538_8);
-Net_538_7:cy_dff
-	PORT MAP(d=>Net_538_7D,
-		clk=>Net_445,
-		q=>Net_538_7);
-Net_538_6:cy_dff
-	PORT MAP(d=>Net_538_6D,
-		clk=>Net_445,
-		q=>Net_538_6);
-Net_538_5:cy_dff
-	PORT MAP(d=>Net_538_5D,
-		clk=>Net_445,
-		q=>Net_538_5);
-Net_538_4:cy_dff
-	PORT MAP(d=>Net_538_4D,
-		clk=>Net_445,
-		q=>Net_538_4);
-Net_538_3:cy_dff
-	PORT MAP(d=>Net_538_3D,
-		clk=>Net_445,
-		q=>Net_538_3);
-Net_538_2:cy_dff
-	PORT MAP(d=>Net_538_2D,
-		clk=>Net_445,
-		q=>Net_538_2);
-Net_538_1:cy_dff
-	PORT MAP(d=>Net_538_1D,
-		clk=>Net_445,
-		q=>Net_538_1);
-Net_538_0:cy_dff
-	PORT MAP(d=>Net_538_0D,
-		clk=>Net_445,
-		q=>Net_538_0);
 cydff_3:cy_dff
 	PORT MAP(d=>Net_757,
-		clk=>Net_445,
+		clk=>PixClk,
 		q=>Net_758);
+ColCount_5:cy_dff
+	PORT MAP(d=>ColCount_5D,
+		clk=>PixClk,
+		q=>ColCount_5);
+ColCount_4:cy_dff
+	PORT MAP(d=>ColCount_4D,
+		clk=>PixClk,
+		q=>ColCount_4);
 cydff_1:cy_dff
 	PORT MAP(d=>Net_748,
-		clk=>Net_445,
+		clk=>PixClk,
 		q=>Net_749);
 cydff_2:cy_dff
-	PORT MAP(d=>Net_754,
-		clk=>Net_445,
+	PORT MAP(d=>Net_780,
+		clk=>PixClk,
 		q=>Net_755);
 cydff_4:cy_dff
-	PORT MAP(d=>Net_281,
-		clk=>Net_445,
+	PORT MAP(d=>Net_810,
+		clk=>PixClk,
 		q=>Net_765);
+ColCount_6:cy_dff
+	PORT MAP(d=>ColCount_6D,
+		clk=>PixClk,
+		q=>ColCount_6);
+ColCount_3:cy_dff
+	PORT MAP(d=>ColCount_3D,
+		clk=>PixClk,
+		q=>ColCount_3);
+ColCount_2:cy_dff
+	PORT MAP(d=>ColCount_2D,
+		clk=>PixClk,
+		q=>ColCount_2);
+ColCount_1:cy_dff
+	PORT MAP(d=>ColCount_1D,
+		clk=>PixClk,
+		q=>ColCount_1);
+ColCount_0:cy_dff
+	PORT MAP(d=>ColCount_0D,
+		clk=>PixClk,
+		q=>ColCount_0);
 
 END R_T_L;

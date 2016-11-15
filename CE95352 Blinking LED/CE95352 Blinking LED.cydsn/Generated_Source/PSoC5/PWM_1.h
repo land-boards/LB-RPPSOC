@@ -29,10 +29,10 @@ extern uint8 PWM_1_initVar;
 * Conditional Compilation Parameters
 ***************************************/
 #define PWM_1_Resolution                     (8u)
-#define PWM_1_UsingFixedFunction             (1u)
+#define PWM_1_UsingFixedFunction             (0u)
 #define PWM_1_DeadBandMode                   (0u)
 #define PWM_1_KillModeMinTime                (0u)
-#define PWM_1_KillMode                       (1u)
+#define PWM_1_KillMode                       (0u)
 #define PWM_1_PWMMode                        (0u)
 #define PWM_1_PWMModeIsCenterAligned         (0u)
 #define PWM_1_DeadBandUsed                   (0u)
@@ -227,7 +227,7 @@ void PWM_1_RestoreConfig(void) ;
 *         Initialization Values
 **************************************/
 #define PWM_1_INIT_PERIOD_VALUE          (100u)
-#define PWM_1_INIT_COMPARE_VALUE1        (96u)
+#define PWM_1_INIT_COMPARE_VALUE1        (22u)
 #define PWM_1_INIT_COMPARE_VALUE2        (125u)
 #define PWM_1_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
                                                     PWM_1_STATUS_TC_INT_EN_MASK_SHIFT)) | \

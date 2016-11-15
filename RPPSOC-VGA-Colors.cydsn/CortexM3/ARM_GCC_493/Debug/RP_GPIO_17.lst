@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
   29:.\Generated_Source\PSoC5/RP_GPIO_17.c **** * Summary:
   30:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 2
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/RP_GPIO_17.c **** * Parameters:  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
   52:.\Generated_Source\PSoC5/RP_GPIO_17.c **** * 
   53:.\Generated_Source\PSoC5/RP_GPIO_17.c **** * Parameters:  
   54:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *  mode:  Change the pins to one of the following drive modes.
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 3
 
 
   55:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
   79:.\Generated_Source\PSoC5/RP_GPIO_17.c **** * Summary:
   80:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *  Read the current value on the pins of the Digital Port in right justified 
   81:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *  form.
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 4
 
 
   82:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  110:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *  Returns the current value assigned to the Digital Port's data output register
  111:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *  
  112:.\Generated_Source\PSoC5/RP_GPIO_17.c **** *******************************************************************************/
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 5
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 5
 
 
  113:.\Generated_Source\PSoC5/RP_GPIO_17.c **** uint8 RP_GPIO_17_ReadDataReg(void) 
@@ -273,17 +273,17 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c 8F000000 		.4byte	.LASF20
+ 145 000c D6000000 		.4byte	.LASF20
  146 0010 01       		.byte	0x1
  147 0011 3D000000 		.4byte	.LASF21
- 148 0015 BB010000 		.4byte	.LASF22
+ 148 0015 88000000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 AF010000 		.4byte	.LASF0
+ 155 0028 F6010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -291,18 +291,18 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 75010000 		.4byte	.LASF2
+ 163 0036 BC010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
  167 003d 75000000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 6
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 6
 
 
  170 0043 05       		.byte	0x5
- 171 0044 96010000 		.4byte	.LASF4
+ 171 0044 DD010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -310,11 +310,11 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 62010000 		.4byte	.LASF6
+ 179 0052 A9010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 2A010000 		.4byte	.LASF7
+ 183 0059 71010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -322,9 +322,9 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 1D010000 		.4byte	.LASF8
+ 191 0067 64010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c 7F010000 		.4byte	.LASF12
+ 193 006c C6010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 C2       		.byte	0xc2
  196 0072 2C000000 		.4byte	0x2c
@@ -335,20 +335,20 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  201 007d 02       		.uleb128 0x2
  202 007e 08       		.byte	0x8
  203 007f 04       		.byte	0x4
- 204 0080 88000000 		.4byte	.LASF10
+ 204 0080 CF000000 		.4byte	.LASF10
  205 0084 02       		.uleb128 0x2
  206 0085 01       		.byte	0x1
  207 0086 08       		.byte	0x8
- 208 0087 70010000 		.4byte	.LASF11
+ 208 0087 B7010000 		.4byte	.LASF11
  209 008b 05       		.uleb128 0x5
- 210 008c 46010000 		.4byte	.LASF13
+ 210 008c 8D010000 		.4byte	.LASF13
  211 0090 02       		.byte	0x2
  212 0091 6C01     		.2byte	0x16c
  213 0093 97000000 		.4byte	0x97
  214 0097 06       		.uleb128 0x6
  215 0098 6B000000 		.4byte	0x6b
  216 009c 07       		.uleb128 0x7
- 217 009d 85010000 		.4byte	.LASF14
+ 217 009d CC010000 		.4byte	.LASF14
  218 00a1 01       		.byte	0x1
  219 00a2 27       		.byte	0x27
  220 00a3 00000000 		.4byte	.LFB0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  224 00ad D0000000 		.4byte	0xd0
  225 00b1 08       		.uleb128 0x8
  226 00b2 00000000 		.4byte	.LASF16
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 7
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 7
 
 
  227 00b6 01       		.byte	0x1
@@ -382,14 +382,14 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  245 00e0 9C       		.byte	0x9c
  246 00e1 F5000000 		.4byte	0xf5
  247 00e5 08       		.uleb128 0x8
- 248 00e6 41010000 		.4byte	.LASF17
+ 248 00e6 88010000 		.4byte	.LASF17
  249 00ea 01       		.byte	0x1
  250 00eb 45       		.byte	0x45
  251 00ec 6B000000 		.4byte	0x6b
  252 00f0 34000000 		.4byte	.LLST2
  253 00f4 00       		.byte	0
  254 00f5 0A       		.uleb128 0xa
- 255 00f6 9F010000 		.4byte	.LASF18
+ 255 00f6 E6010000 		.4byte	.LASF18
  256 00fa 01       		.byte	0x1
  257 00fb 5D       		.byte	0x5d
  258 00fc 6B000000 		.4byte	0x6b
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  261 0108 01       		.uleb128 0x1
  262 0109 9C       		.byte	0x9c
  263 010a 0A       		.uleb128 0xa
- 264 010b 4B010000 		.4byte	.LASF19
+ 264 010b 92010000 		.4byte	.LASF19
  265 010f 01       		.byte	0x1
  266 0110 71       		.byte	0x71
  267 0111 6B000000 		.4byte	0x6b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  281 0006 0B       		.uleb128 0xb
  282 0007 03       		.uleb128 0x3
  283 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 8
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 8
 
 
  284 0009 1B       		.uleb128 0x1b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  338 003f 49       		.uleb128 0x49
  339 0040 13       		.uleb128 0x13
  340 0041 00       		.byte	0
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 9
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 9
 
 
  341 0042 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  395 0079 0B       		.uleb128 0xb
  396 007a 3B       		.uleb128 0x3b
  397 007b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 10
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 10
 
 
  398 007c 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  452 0030 00000000 		.4byte	0
  453              	.LLST2:
  454 0034 00000000 		.4byte	.LVL4
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 11
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 11
 
 
  455 0038 0C000000 		.4byte	.LVL5
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  503      69634269 
  503      747300
  504              	.LASF9:
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 12
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 12
 
 
  505 0011 666C6F61 		.ascii	"float\000"
@@ -692,97 +692,97 @@ ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 1
  515      7369676E 
  515      65642069 
  515      6E7400
- 516              	.LASF10:
- 517 0088 646F7562 		.ascii	"double\000"
- 517      6C6500
- 518              	.LASF20:
- 519 008f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 519      4320342E 
- 519      392E3320 
- 519      32303135 
- 519      30333033 
- 520 00c2 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 520      20726576 
- 520      6973696F 
- 520      6E203232 
- 520      31323230 
- 521 00f5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 521      66756E63 
- 521      74696F6E 
- 521      2D736563 
- 521      74696F6E 
- 522              	.LASF8:
- 523 011d 756E7369 		.ascii	"unsigned int\000"
- 523      676E6564 
- 523      20696E74 
- 523      00
- 524              	.LASF7:
- 525 012a 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 13
+ 516              	.LASF22:
+ 517 0088 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 517      73657273 
+ 517      5C444769 
+ 517      6C6C696C 
+ 517      616E645C 
+ 518 00b6 5C525050 		.ascii	"\\RPPSOC-VGA-Colors.cydsn\000"
+ 518      534F432D 
+ 518      5647412D 
+ 518      436F6C6F 
+ 518      72732E63 
+ 519              	.LASF10:
+ 520 00cf 646F7562 		.ascii	"double\000"
+ 520      6C6500
+ 521              	.LASF20:
+ 522 00d6 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 522      4320342E 
+ 522      392E3320 
+ 522      32303135 
+ 522      30333033 
+ 523 0109 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 523      20726576 
+ 523      6973696F 
+ 523      6E203232 
+ 523      31323230 
+ 524 013c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 13
 
 
- 525      206C6F6E 
- 525      6720756E 
- 525      7369676E 
- 525      65642069 
- 526              	.LASF17:
- 527 0141 6D6F6465 		.ascii	"mode\000"
- 527      00
- 528              	.LASF13:
- 529 0146 72656738 		.ascii	"reg8\000"
- 529      00
- 530              	.LASF19:
- 531 014b 52505F47 		.ascii	"RP_GPIO_17_ReadDataReg\000"
- 531      50494F5F 
- 531      31375F52 
- 531      65616444 
- 531      61746152 
- 532              	.LASF6:
- 533 0162 6C6F6E67 		.ascii	"long long int\000"
- 533      206C6F6E 
- 533      6720696E 
- 533      7400
- 534              	.LASF11:
- 535 0170 63686172 		.ascii	"char\000"
- 535      00
- 536              	.LASF2:
- 537 0175 73686F72 		.ascii	"short int\000"
- 537      7420696E 
- 537      7400
- 538              	.LASF12:
- 539 017f 75696E74 		.ascii	"uint8\000"
- 539      3800
- 540              	.LASF14:
- 541 0185 52505F47 		.ascii	"RP_GPIO_17_Write\000"
- 541      50494F5F 
- 541      31375F57 
- 541      72697465 
- 541      00
- 542              	.LASF4:
- 543 0196 6C6F6E67 		.ascii	"long int\000"
- 543      20696E74 
- 543      00
- 544              	.LASF18:
- 545 019f 52505F47 		.ascii	"RP_GPIO_17_Read\000"
- 545      50494F5F 
- 545      31375F52 
- 545      65616400 
- 546              	.LASF0:
- 547 01af 7369676E 		.ascii	"signed char\000"
- 547      65642063 
- 547      68617200 
- 548              	.LASF22:
- 549 01bb 433A5C55 		.ascii	"C:\\Users\\doug_000\\Documents\\GitHub\\LB-RPPSOC\\"
- 549      73657273 
- 549      5C646F75 
- 549      675F3030 
- 549      305C446F 
- 550 01e8 52505053 		.ascii	"RPPSOC-VGA-Colors.cydsn\000"
-ARM GAS  C:\Users\doug_000\AppData\Local\Temp\cc6Qfrnc.s 			page 14
+ 524      66756E63 
+ 524      74696F6E 
+ 524      2D736563 
+ 524      74696F6E 
+ 525              	.LASF8:
+ 526 0164 756E7369 		.ascii	"unsigned int\000"
+ 526      676E6564 
+ 526      20696E74 
+ 526      00
+ 527              	.LASF7:
+ 528 0171 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 528      206C6F6E 
+ 528      6720756E 
+ 528      7369676E 
+ 528      65642069 
+ 529              	.LASF17:
+ 530 0188 6D6F6465 		.ascii	"mode\000"
+ 530      00
+ 531              	.LASF13:
+ 532 018d 72656738 		.ascii	"reg8\000"
+ 532      00
+ 533              	.LASF19:
+ 534 0192 52505F47 		.ascii	"RP_GPIO_17_ReadDataReg\000"
+ 534      50494F5F 
+ 534      31375F52 
+ 534      65616444 
+ 534      61746152 
+ 535              	.LASF6:
+ 536 01a9 6C6F6E67 		.ascii	"long long int\000"
+ 536      206C6F6E 
+ 536      6720696E 
+ 536      7400
+ 537              	.LASF11:
+ 538 01b7 63686172 		.ascii	"char\000"
+ 538      00
+ 539              	.LASF2:
+ 540 01bc 73686F72 		.ascii	"short int\000"
+ 540      7420696E 
+ 540      7400
+ 541              	.LASF12:
+ 542 01c6 75696E74 		.ascii	"uint8\000"
+ 542      3800
+ 543              	.LASF14:
+ 544 01cc 52505F47 		.ascii	"RP_GPIO_17_Write\000"
+ 544      50494F5F 
+ 544      31375F57 
+ 544      72697465 
+ 544      00
+ 545              	.LASF4:
+ 546 01dd 6C6F6E67 		.ascii	"long int\000"
+ 546      20696E74 
+ 546      00
+ 547              	.LASF18:
+ 548 01e6 52505F47 		.ascii	"RP_GPIO_17_Read\000"
+ 548      50494F5F 
+ 548      31375F52 
+ 548      65616400 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\cc73S88z.s 			page 14
 
 
- 550      4F432D56 
- 550      47412D43 
- 550      6F6C6F72 
- 550      732E6379 
+ 549              	.LASF0:
+ 550 01f6 7369676E 		.ascii	"signed char\000"
+ 550      65642063 
+ 550      68617200 
  551              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

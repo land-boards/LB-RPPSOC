@@ -1,6 +1,6 @@
 // ======================================================================
 // RPPSOC-VGA-Colors.v generated from TopDesign.cysch
-// 11/06/2016 at 10:40
+// 11/08/2016 at 16:15
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -45,74 +45,46 @@
 `define CYDEV_CHIP_REVISION_4U_PRODUCTION 0
 `define CYDEV_CHIP_MEMBER_4E 4
 `define CYDEV_CHIP_REVISION_4E_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4O 5
-`define CYDEV_CHIP_REVISION_4O_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4N 6
+`define CYDEV_CHIP_MEMBER_4N 5
 `define CYDEV_CHIP_REVISION_4N_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4D 7
+`define CYDEV_CHIP_MEMBER_4D 6
 `define CYDEV_CHIP_REVISION_4D_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4J 8
+`define CYDEV_CHIP_MEMBER_4J 7
 `define CYDEV_CHIP_REVISION_4J_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4K 9
+`define CYDEV_CHIP_MEMBER_4K 8
 `define CYDEV_CHIP_REVISION_4K_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4H 10
+`define CYDEV_CHIP_MEMBER_4H 9
 `define CYDEV_CHIP_REVISION_4H_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4A 11
+`define CYDEV_CHIP_MEMBER_4A 10
 `define CYDEV_CHIP_REVISION_4A_PRODUCTION 17
 `define CYDEV_CHIP_REVISION_4A_ES0 17
+`define CYDEV_CHIP_MEMBER_4F 11
+`define CYDEV_CHIP_REVISION_4F_PRODUCTION 0
+`define CYDEV_CHIP_REVISION_4F_PRODUCTION_256K 0
+`define CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA 0
 `define CYDEV_CHIP_MEMBER_4F 12
 `define CYDEV_CHIP_REVISION_4F_PRODUCTION 0
 `define CYDEV_CHIP_REVISION_4F_PRODUCTION_256K 0
 `define CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA 0
-`define CYDEV_CHIP_MEMBER_4F 13
-`define CYDEV_CHIP_REVISION_4F_PRODUCTION 0
-`define CYDEV_CHIP_REVISION_4F_PRODUCTION_256K 0
-`define CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA 0
-`define CYDEV_CHIP_MEMBER_4M 14
+`define CYDEV_CHIP_MEMBER_4M 13
 `define CYDEV_CHIP_REVISION_4M_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4L 15
+`define CYDEV_CHIP_MEMBER_4L 14
 `define CYDEV_CHIP_REVISION_4L_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4I 16
+`define CYDEV_CHIP_MEMBER_4I 15
 `define CYDEV_CHIP_REVISION_4I_PRODUCTION 0
-`define CYDEV_CHIP_MEMBER_4C 17
+`define CYDEV_CHIP_MEMBER_4C 16
 `define CYDEV_CHIP_REVISION_4C_PRODUCTION 0
 `define CYDEV_CHIP_FAMILY_PSOC5 3
-`define CYDEV_CHIP_MEMBER_5B 18
+`define CYDEV_CHIP_MEMBER_5B 17
 `define CYDEV_CHIP_REVISION_5B_PRODUCTION 0
 `define CYDEV_CHIP_REVISION_5B_ES0 0
-`define CYDEV_CHIP_MEMBER_5A 19
+`define CYDEV_CHIP_MEMBER_5A 18
 `define CYDEV_CHIP_REVISION_5A_PRODUCTION 1
 `define CYDEV_CHIP_REVISION_5A_ES1 1
 `define CYDEV_CHIP_REVISION_5A_ES0 0
 `define CYDEV_CHIP_FAMILY_USED 3
-`define CYDEV_CHIP_MEMBER_USED 18
+`define CYDEV_CHIP_MEMBER_USED 17
 `define CYDEV_CHIP_REVISION_USED 0
-// Component: DigitalComp_v1_0
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0\DigitalComp_v1_0.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0\DigitalComp_v1_0.v"
-`endif
-
-// Component: and_v1_0
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v"
-`endif
-
 // Component: cy_constant_v1_0
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -139,17 +111,17 @@
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BasicCounter_v1_0\BasicCounter_v1_0.v"
 `endif
 
-// Component: xnor_v1_0
+// Component: DigitalComp_v1_0
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
 `endif
 
 `ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0\xnor_v1_0.v"
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0\DigitalComp_v1_0.v"
 `else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0\xnor_v1_0.v"
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\DigitalComp_v1_0\DigitalComp_v1_0.v"
 `endif
 
 // Component: xor_v1_0
@@ -163,6 +135,32 @@
 `else
 `define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xor_v1_0"
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xor_v1_0\xor_v1_0.v"
+`endif
+
+// Component: and_v1_0
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v"
+`endif
+
+// Component: xnor_v1_0
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0\xnor_v1_0.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xnor_v1_0\xnor_v1_0.v"
 `endif
 
 // Component: cydff_v1_30
@@ -207,13 +205,13 @@
 // top
 module top ;
 
-          wire  Net_747;
+          wire  Net_804;
           wire  Net_616;
           wire  Net_615;
           wire  Net_614;
           wire  Net_613;
           wire  Net_612;
-          wire  Net_356;
+          wire  Net_803;
           wire  Net_611;
           wire  Net_610;
           wire  Net_609;
@@ -246,48 +244,47 @@ module top ;
           wire  Net_242;
           wire  Net_243;
           wire  Net_235;
-          wire  Net_761;
           wire  Net_760;
           wire  Net_238;
+          wire  VertSync;
           wire  Net_600;
-          wire  Net_758;
-          wire  Net_757;
-          wire  Net_722;
-          wire  Net_765;
-          wire  Net_281;
-          wire  Net_754;
-          wire  Net_748;
-          wire  Net_755;
-          wire  Net_749;
-          wire  Net_562;
-          wire  Net_711;
-          wire  Net_567;
-          wire  Net_575;
-          wire  Net_715;
-          wire  Net_596;
-          wire  lineClk;
-          wire  Net_442;
-          wire  CharClk;
+          wire  Net_810;
           wire  Net_444;
+          wire  Net_442;
           wire [2:0] Net_655;
           wire [2:0] Net_657;
+          wire  Net_755;
+          wire  Net_758;
+          wire  Net_757;
+          wire  Net_780;
+          wire  Net_748;
+          wire  Net_749;
+          wire  lineClear;
+          wire  Net_722;
+          wire  CharClk;
+          wire  Net_765;
           wire  Net_620;
-          wire  Net_619;
           wire  Net_608;
-          wire [9:0] Net_593;
-          wire [9:0] Net_590;
-          wire  Net_595;
-          wire  Net_589;
-          wire  Net_586;
-          wire [9:0] Net_538;
-          wire [9:0] Net_585;
-          wire [9:0] Net_577;
-          wire [6:0] Net_574;
-          wire [6:0] Net_565;
-          wire [6:0] Net_561;
-          wire [6:0] Net_529;
-          wire [6:0] Net_552;
-          wire  Net_445;
+          wire  Net_619;
+          wire [9:0] Net_795;
+          wire [9:0] Net_793;
+          wire  Net_794;
+          wire  HorBlank;
+          wire  HorSync;
+          wire  Net_792;
+          wire  Net_788;
+          wire [9:0] Net_791;
+          wire [9:0] Net_790;
+          wire [9:0] Net_787;
+          wire  Net_775;
+          wire [6:0] ColCount;
+          wire  Net_773;
+          wire [6:0] Net_776;
+          wire [6:0] Net_774;
+          wire [6:0] Net_772;
+          wire [6:0] Net_770;
+          wire  PixClk;
+          wire  VBlank;
 
 	wire [0:0] tmpOE__LED5_4_net;
 	wire [0:0] tmpFB_0__LED5_4_net;
@@ -507,13 +504,6 @@ module top ;
 
 	assign tmpOE__COMP_SYNC_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_595 = (Net_538[9:0] <= Net_593[9:0]);
-
-
-    assign Net_596 = Net_595 & Net_589;
-
-    assign Net_590[9:0] = 10'h1EA;
-
 	wire [0:0] tmpOE__P3_16_net;
 	wire [0:0] tmpFB_0__P3_16_net;
 	wire [0:0] tmpIO_0__P3_16_net;
@@ -586,10 +576,6 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__P3_16_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-    assign Net_589 = (Net_538[9:0] >= Net_590[9:0]);
-
-    assign Net_585[9:0] = 10'h20D;
 
 	wire [0:0] tmpOE__BLANK_net;
 	wire [0:0] tmpFB_0__BLANK_net;
@@ -796,7 +782,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		HSYNC
 		 (.oe(tmpOE__HSYNC_net),
-		  .y({Net_715}),
+		  .y({HorSync}),
 		  .fb({tmpFB_0__HSYNC_net[0:0]}),
 		  .io({tmpIO_0__HSYNC_net[0:0]}),
 		  .siovref(tmpSIOVREF__HSYNC_net),
@@ -869,7 +855,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		VSYNC
 		 (.oe(tmpOE__VSYNC_net),
-		  .y({Net_761}),
+		  .y({VertSync}),
 		  .fb({tmpFB_0__VSYNC_net[0:0]}),
 		  .io({tmpIO_0__VSYNC_net[0:0]}),
 		  .siovref(tmpSIOVREF__VSYNC_net),
@@ -1466,10 +1452,6 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__P3_14_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-    assign Net_586 = (Net_538[9:0] == Net_585[9:0]);
-
-    assign Net_577[9:0] = 10'h1E0;
 
 	wire [0:0] tmpOE__P4_3_net;
 	wire [0:0] tmpFB_0__P4_3_net;
@@ -2493,8 +2475,6 @@ module top ;
 
 	assign tmpOE__P4_16_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_711 = (Net_538[9:0] >= Net_577[9:0]);
-
 	wire [0:0] tmpOE__P4_18_net;
 	wire [0:0] tmpFB_0__P4_18_net;
 	wire [0:0] tmpIO_0__P4_18_net;
@@ -2641,10 +2621,14 @@ module top ;
 
 	assign tmpOE__P4_17_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_567 = (Net_529[6:0] <= Net_574[6:0]);
+    assign Net_791[9:0] = 10'h20D;
 
-
-    assign Net_715 = Net_567 & Net_575;
+    BasicCounter_v1_0 VerticalCounter_1 (
+        .en(lineClear),
+        .cnt(Net_787[9:0]),
+        .reset(Net_788),
+        .clock(PixClk));
+    defparam VerticalCounter_1.Width = 10;
 
 	wire [0:0] tmpOE__RP_GPIO_17_net;
 	wire [0:0] tmpIO_0__RP_GPIO_17_net;
@@ -2718,7 +2702,7 @@ module top ;
 
 	assign tmpOE__RP_GPIO_17_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_575 = (Net_529[6:0] >= Net_565[6:0]);
+    assign Net_792 = (Net_787[9:0] >= Net_793[9:0]);
 
 	wire [0:0] tmpOE__RP_GPIO_27_net;
 	wire [0:0] tmpIO_0__RP_GPIO_27_net;
@@ -2940,7 +2924,7 @@ module top ;
 
 	assign tmpOE__RP_GPIO_23_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_561[6:0] = 7'h50;
+    assign Net_794 = (Net_787[9:0] <= Net_795[9:0]);
 
 	wire [0:0] tmpOE__RP_GPIO_24_net;
 	wire [0:0] tmpIO_0__RP_GPIO_24_net;
@@ -3014,7 +2998,7 @@ module top ;
 
 	assign tmpOE__RP_GPIO_24_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign lineClk = (Net_529[6:0] == Net_552[6:0]);
+    assign Net_795[9:0] = 10'h1EC;
 
 	wire [0:0] tmpOE__RP_GPIO_25_net;
 	wire [0:0] tmpIO_0__RP_GPIO_25_net;
@@ -3164,7 +3148,7 @@ module top ;
         .en(Net_442),
         .cnt(Net_655[2:0]),
         .reset(Net_444),
-        .clock(Net_445));
+        .clock(PixClk));
     defparam CharacterCounter.Width = 3;
 
 	wire [0:0] tmpOE__RP_GPIO_6_net;
@@ -3239,12 +3223,8 @@ module top ;
 
 	assign tmpOE__RP_GPIO_6_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    BasicCounter_v1_0 HorizontalCounter (
-        .en(CharClk),
-        .cnt(Net_529[6:0]),
-        .reset(lineClk),
-        .clock(Net_445));
-    defparam HorizontalCounter.Width = 7;
+
+    assign Net_810 = VertSync ^ HorSync;
 
 	wire [0:0] tmpOE__RP_GPIO_12_net;
 	wire [0:0] tmpIO_0__RP_GPIO_12_net;
@@ -3318,9 +3298,10 @@ module top ;
 
 	assign tmpOE__RP_GPIO_12_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_552[6:0] = 7'h64;
+    assign Net_793[9:0] = 10'h1EA;
 
-    assign Net_562 = (Net_529[6:0] >= Net_561[6:0]);
+
+    assign VertSync = Net_794 & Net_792;
 
 	wire [0:0] tmpOE__RP_GPIO_13_net;
 	wire [0:0] tmpIO_0__RP_GPIO_13_net;
@@ -3403,15 +3384,8 @@ module top ;
 		  .is_direct(0),
 		  .is_digital(1))
 		PixelClock
-		 (.clock_out(Net_445));
+		 (.clock_out(PixClk));
 
-
-    BasicCounter_v1_0 VerticalCounter (
-        .en(lineClk),
-        .cnt(Net_538[9:0]),
-        .reset(Net_586),
-        .clock(Net_445));
-    defparam VerticalCounter.Width = 10;
 
 	wire [0:0] tmpOE__RP_GPIO_19_net;
 	wire [0:0] tmpIO_0__RP_GPIO_19_net;
@@ -3777,11 +3751,9 @@ module top ;
 
 	assign tmpOE__RP_GPIO_21_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    assign Net_574[6:0] = 7'h5A;
+    assign Net_790[9:0] = 10'h1E0;
 
-    assign Net_565[6:0] = 7'h52;
-
-    assign Net_593[9:0] = 10'h1EC;
+    assign Net_788 = (Net_787[9:0] == Net_791[9:0]);
 
 
     assign Net_608 = ~(Net_602 ^ Net_601 ^ Net_600 ^ Net_603 ^ Net_604 ^ Net_605 ^ Net_606 ^ Net_607);
@@ -3792,12 +3764,9 @@ module top ;
 
     assign Net_620 = ~(Net_619 ^ Net_608);
 
-
-    assign Net_281 = Net_596 ^ Net_715;
-
     // -- DFF Start --
     reg  cydff_3;
-    always @(posedge Net_445)
+    always @(posedge PixClk)
     begin
         cydff_3 <= Net_757;
     end
@@ -3811,9 +3780,9 @@ module top ;
         reg  tmp__demux_1_1_reg;
         reg  tmp__demux_1_2_reg;
         reg  tmp__demux_1_3_reg;
-        always @(Net_722 or Net_529)
+        always @(Net_722 or ColCount)
         begin
-            case (Net_529[5:4])
+            case (ColCount[5:4])
                 2'b00:
                 begin
                     tmp__demux_1_0_reg = Net_722;
@@ -3844,9 +3813,9 @@ module top ;
                 end
             endcase
         end
-        assign Net_747 = tmp__demux_1_0_reg;
+        assign Net_804 = tmp__demux_1_0_reg;
         assign Net_748 = tmp__demux_1_1_reg;
-        assign Net_754 = tmp__demux_1_2_reg;
+        assign Net_780 = tmp__demux_1_2_reg;
         assign Net_757 = tmp__demux_1_3_reg;
     end
     // -- De Mux end --
@@ -3898,11 +3867,11 @@ module top ;
     assign Net_135 = 1'h0;
 
 
-    assign Net_722 = ~(Net_711 | Net_562);
+    assign Net_722 = ~(VBlank | HorBlank);
 
     // -- DFF Start --
     reg  cydff_1;
-    always @(posedge Net_445)
+    always @(posedge PixClk)
     begin
         cydff_1 <= Net_748;
     end
@@ -3911,25 +3880,51 @@ module top ;
 
     // -- DFF Start --
     reg  cydff_2;
-    always @(posedge Net_445)
+    always @(posedge PixClk)
     begin
-        cydff_2 <= Net_754;
+        cydff_2 <= Net_780;
     end
     assign Net_755 = cydff_2;
     // -- DFF End --
 
     assign Net_760 = 1'h0;
 
-    assign Net_761 = 1'h0;
-
     // -- DFF Start --
     reg  cydff_4;
-    always @(posedge Net_445)
+    always @(posedge PixClk)
     begin
-        cydff_4 <= Net_281;
+        cydff_4 <= Net_810;
     end
     assign Net_765 = cydff_4;
     // -- DFF End --
+
+    assign VBlank = (Net_787[9:0] >= Net_790[9:0]);
+
+    BasicCounter_v1_0 HorizontalCounter_1 (
+        .en(CharClk),
+        .cnt(ColCount[6:0]),
+        .reset(lineClear),
+        .clock(PixClk));
+    defparam HorizontalCounter_1.Width = 7;
+
+    assign lineClear = (ColCount[6:0] == Net_770[6:0]);
+
+    assign Net_770[6:0] = 7'h64;
+
+    assign HorBlank = (ColCount[6:0] >= Net_772[6:0]);
+
+    assign Net_772[6:0] = 7'h50;
+
+    assign Net_773 = (ColCount[6:0] >= Net_774[6:0]);
+
+
+    assign HorSync = Net_775 & Net_773;
+
+    assign Net_775 = (ColCount[6:0] <= Net_776[6:0]);
+
+    assign Net_774[6:0] = 7'h52;
+
+    assign Net_776[6:0] = 7'h5A;
 
 
 
