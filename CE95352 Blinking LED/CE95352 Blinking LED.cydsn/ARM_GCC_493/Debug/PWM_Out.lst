@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 1
 
 
    1              		.syntax unified
@@ -26,50 +26,50 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
   23              		.type	PWM_Out_Write, %function
   24              	PWM_Out_Write:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\PWM_Out.c"
-   1:.\Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/PWM_Out.c **** * File Name: PWM_Out.c  
-   3:.\Generated_Source\PSoC5/PWM_Out.c **** * Version 2.10
-   4:.\Generated_Source\PSoC5/PWM_Out.c **** *
-   5:.\Generated_Source\PSoC5/PWM_Out.c **** * Description:
-   6:.\Generated_Source\PSoC5/PWM_Out.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC5/PWM_Out.c **** *
-   8:.\Generated_Source\PSoC5/PWM_Out.c **** * Note:
-   9:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  10:.\Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/PWM_Out.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/PWM_Out.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:.\Generated_Source\PSoC5/PWM_Out.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:.\Generated_Source\PSoC5/PWM_Out.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  17:.\Generated_Source\PSoC5/PWM_Out.c **** #include "cytypes.h"
-  18:.\Generated_Source\PSoC5/PWM_Out.c **** #include "PWM_Out.h"
-  19:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  20:.\Generated_Source\PSoC5/PWM_Out.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:.\Generated_Source\PSoC5/PWM_Out.c **** #if !(CY_PSOC5A &&\
-  22:.\Generated_Source\PSoC5/PWM_Out.c **** 	 PWM_Out__PORT == 15 && ((PWM_Out__MASK & 0xC0) != 0))
-  23:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  24:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  25:.\Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
-  26:.\Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_Write
-  27:.\Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
-  28:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  29:.\Generated_Source\PSoC5/PWM_Out.c **** * Summary:
-  30:.\Generated_Source\PSoC5/PWM_Out.c **** *  Assign a new value to the digital port's data output register.  
-  31:.\Generated_Source\PSoC5/PWM_Out.c **** *
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\PWM_Out.c"
+   1:Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/PWM_Out.c **** * File Name: PWM_Out.c  
+   3:Generated_Source\PSoC5/PWM_Out.c **** * Version 2.10
+   4:Generated_Source\PSoC5/PWM_Out.c **** *
+   5:Generated_Source\PSoC5/PWM_Out.c **** * Description:
+   6:Generated_Source\PSoC5/PWM_Out.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/PWM_Out.c **** *
+   8:Generated_Source\PSoC5/PWM_Out.c **** * Note:
+   9:Generated_Source\PSoC5/PWM_Out.c **** *
+  10:Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/PWM_Out.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/PWM_Out.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/PWM_Out.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/PWM_Out.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/PWM_Out.c **** 
+  17:Generated_Source\PSoC5/PWM_Out.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/PWM_Out.c **** #include "PWM_Out.h"
+  19:Generated_Source\PSoC5/PWM_Out.c **** 
+  20:Generated_Source\PSoC5/PWM_Out.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/PWM_Out.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/PWM_Out.c **** 	 PWM_Out__PORT == 15 && ((PWM_Out__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/PWM_Out.c **** 
+  24:Generated_Source\PSoC5/PWM_Out.c **** 
+  25:Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_Write
+  27:Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
+  28:Generated_Source\PSoC5/PWM_Out.c **** *
+  29:Generated_Source\PSoC5/PWM_Out.c **** * Summary:
+  30:Generated_Source\PSoC5/PWM_Out.c **** *  Assign a new value to the digital port's data output register.  
+  31:Generated_Source\PSoC5/PWM_Out.c **** *
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
-  33:.\Generated_Source\PSoC5/PWM_Out.c **** *  prtValue:  The value to be assigned to the Digital Port. 
-  34:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  35:.\Generated_Source\PSoC5/PWM_Out.c **** * Return: 
-  36:.\Generated_Source\PSoC5/PWM_Out.c **** *  None
-  37:.\Generated_Source\PSoC5/PWM_Out.c **** *  
-  38:.\Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
-  39:.\Generated_Source\PSoC5/PWM_Out.c **** void PWM_Out_Write(uint8 value) 
-  40:.\Generated_Source\PSoC5/PWM_Out.c **** {
+  32:Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
+  33:Generated_Source\PSoC5/PWM_Out.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  34:Generated_Source\PSoC5/PWM_Out.c **** *
+  35:Generated_Source\PSoC5/PWM_Out.c **** * Return: 
+  36:Generated_Source\PSoC5/PWM_Out.c **** *  None
+  37:Generated_Source\PSoC5/PWM_Out.c **** *  
+  38:Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
+  39:Generated_Source\PSoC5/PWM_Out.c **** void PWM_Out_Write(uint8 value) 
+  40:Generated_Source\PSoC5/PWM_Out.c **** {
   27              		.loc 1 40 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 16
@@ -84,14 +84,14 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
   38              		.cfi_def_cfa_register 7
   39 0006 0346     		mov	r3, r0
   40 0008 FB71     		strb	r3, [r7, #7]
-  41:.\Generated_Source\PSoC5/PWM_Out.c ****     uint8 staticBits = (PWM_Out_DR & (uint8)(~PWM_Out_MASK));
+  41:Generated_Source\PSoC5/PWM_Out.c ****     uint8 staticBits = (PWM_Out_DR & (uint8)(~PWM_Out_MASK));
   41              		.loc 1 41 0
   42 000a 0B4B     		ldr	r3, .L2
   43 000c 1B78     		ldrb	r3, [r3]
   44 000e DBB2     		uxtb	r3, r3
   45 0010 23F00203 		bic	r3, r3, #2
   46 0014 FB73     		strb	r3, [r7, #15]
-  42:.\Generated_Source\PSoC5/PWM_Out.c ****     PWM_Out_DR = staticBits | ((uint8)(value << PWM_Out_SHIFT) & PWM_Out_MASK);
+  42:Generated_Source\PSoC5/PWM_Out.c ****     PWM_Out_DR = staticBits | ((uint8)(value << PWM_Out_SHIFT) & PWM_Out_MASK);
   47              		.loc 1 42 0
   48 0016 0849     		ldr	r1, .L2
   49 0018 FB79     		ldrb	r3, [r7, #7]
@@ -103,7 +103,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
   55 0026 1343     		orrs	r3, r3, r2
   56 0028 DBB2     		uxtb	r3, r3
   57 002a 0B70     		strb	r3, [r1]
-  43:.\Generated_Source\PSoC5/PWM_Out.c **** }
+  43:Generated_Source\PSoC5/PWM_Out.c **** }
   58              		.loc 1 43 0
   59 002c 1437     		adds	r7, r7, #20
   60              		.cfi_def_cfa_offset 4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
   69 0036 00BF     		.align	2
   70              	.L2:
   71 0038 20510040 		.word	1073762592
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 3
 
 
   72              		.cfi_endproc
@@ -132,33 +132,33 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
   80              		.type	PWM_Out_SetDriveMode, %function
   81              	PWM_Out_SetDriveMode:
   82              	.LFB1:
-  44:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  45:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  46:.\Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
-  47:.\Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_SetDriveMode
-  48:.\Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
-  49:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  50:.\Generated_Source\PSoC5/PWM_Out.c **** * Summary:
-  51:.\Generated_Source\PSoC5/PWM_Out.c **** *  Change the drive mode on the pins of the port.
-  52:.\Generated_Source\PSoC5/PWM_Out.c **** * 
-  53:.\Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
-  54:.\Generated_Source\PSoC5/PWM_Out.c **** *  mode:  Change the pins to one of the following drive modes.
-  55:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  56:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_STRONG     Strong Drive 
-  57:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_OD_HI      Open Drain, Drives High 
-  58:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_OD_LO      Open Drain, Drives Low 
-  59:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_RES_UP     Resistive Pull Up 
-  60:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_RES_DWN    Resistive Pull Down 
-  61:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_RES_UPDWN  Resistive Pull Up/Down 
-  62:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_DIG_HIZ    High Impedance Digital 
-  63:.\Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_ALG_HIZ    High Impedance Analog 
-  64:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  65:.\Generated_Source\PSoC5/PWM_Out.c **** * Return: 
-  66:.\Generated_Source\PSoC5/PWM_Out.c **** *  None
-  67:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  68:.\Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
-  69:.\Generated_Source\PSoC5/PWM_Out.c **** void PWM_Out_SetDriveMode(uint8 mode) 
-  70:.\Generated_Source\PSoC5/PWM_Out.c **** {
+  44:Generated_Source\PSoC5/PWM_Out.c **** 
+  45:Generated_Source\PSoC5/PWM_Out.c **** 
+  46:Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
+  47:Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_SetDriveMode
+  48:Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
+  49:Generated_Source\PSoC5/PWM_Out.c **** *
+  50:Generated_Source\PSoC5/PWM_Out.c **** * Summary:
+  51:Generated_Source\PSoC5/PWM_Out.c **** *  Change the drive mode on the pins of the port.
+  52:Generated_Source\PSoC5/PWM_Out.c **** * 
+  53:Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
+  54:Generated_Source\PSoC5/PWM_Out.c **** *  mode:  Change the pins to one of the following drive modes.
+  55:Generated_Source\PSoC5/PWM_Out.c **** *
+  56:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_STRONG     Strong Drive 
+  57:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_OD_HI      Open Drain, Drives High 
+  58:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_OD_LO      Open Drain, Drives Low 
+  59:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_RES_UP     Resistive Pull Up 
+  60:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_RES_DWN    Resistive Pull Down 
+  61:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_RES_UPDWN  Resistive Pull Up/Down 
+  62:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_DIG_HIZ    High Impedance Digital 
+  63:Generated_Source\PSoC5/PWM_Out.c **** *  PWM_Out_DM_ALG_HIZ    High Impedance Analog 
+  64:Generated_Source\PSoC5/PWM_Out.c **** *
+  65:Generated_Source\PSoC5/PWM_Out.c **** * Return: 
+  66:Generated_Source\PSoC5/PWM_Out.c **** *  None
+  67:Generated_Source\PSoC5/PWM_Out.c **** *
+  68:Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
+  69:Generated_Source\PSoC5/PWM_Out.c **** void PWM_Out_SetDriveMode(uint8 mode) 
+  70:Generated_Source\PSoC5/PWM_Out.c **** {
   83              		.loc 1 70 0
   84              		.cfi_startproc
   85              		@ args = 0, pretend = 0, frame = 8
@@ -173,12 +173,12 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
   94              		.cfi_def_cfa_register 7
   95 0006 0346     		mov	r3, r0
   96 0008 FB71     		strb	r3, [r7, #7]
-  71:.\Generated_Source\PSoC5/PWM_Out.c **** 	CyPins_SetPinDriveMode(PWM_Out_0, mode);
+  71:Generated_Source\PSoC5/PWM_Out.c **** 	CyPins_SetPinDriveMode(PWM_Out_0, mode);
   97              		.loc 1 71 0
   98 000a 0A4B     		ldr	r3, .L5
   99 000c 094A     		ldr	r2, .L5
  100 000e 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 4
 
 
  101 0010 D2B2     		uxtb	r2, r2
@@ -192,7 +192,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  109 0024 D2B2     		uxtb	r2, r2
  110 0026 D2B2     		uxtb	r2, r2
  111 0028 1A70     		strb	r2, [r3]
-  72:.\Generated_Source\PSoC5/PWM_Out.c **** }
+  72:Generated_Source\PSoC5/PWM_Out.c **** }
  112              		.loc 1 72 0
  113 002a 0C37     		adds	r7, r7, #12
  114              		.cfi_def_cfa_offset 4
@@ -218,31 +218,31 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  134              		.type	PWM_Out_Read, %function
  135              	PWM_Out_Read:
  136              	.LFB2:
-  73:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  74:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  75:.\Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
-  76:.\Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_Read
-  77:.\Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
-  78:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  79:.\Generated_Source\PSoC5/PWM_Out.c **** * Summary:
-  80:.\Generated_Source\PSoC5/PWM_Out.c **** *  Read the current value on the pins of the Digital Port in right justified 
-  81:.\Generated_Source\PSoC5/PWM_Out.c **** *  form.
-  82:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  83:.\Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
-  84:.\Generated_Source\PSoC5/PWM_Out.c **** *  None
-  85:.\Generated_Source\PSoC5/PWM_Out.c **** *
-  86:.\Generated_Source\PSoC5/PWM_Out.c **** * Return: 
-  87:.\Generated_Source\PSoC5/PWM_Out.c **** *  Returns the current value of the Digital Port as a right justified number
-  88:.\Generated_Source\PSoC5/PWM_Out.c **** *  
-  89:.\Generated_Source\PSoC5/PWM_Out.c **** * Note:
-  90:.\Generated_Source\PSoC5/PWM_Out.c **** *  Macro PWM_Out_ReadPS calls this function. 
-  91:.\Generated_Source\PSoC5/PWM_Out.c **** *  
-  92:.\Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 5
+  73:Generated_Source\PSoC5/PWM_Out.c **** 
+  74:Generated_Source\PSoC5/PWM_Out.c **** 
+  75:Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
+  76:Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_Read
+  77:Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
+  78:Generated_Source\PSoC5/PWM_Out.c **** *
+  79:Generated_Source\PSoC5/PWM_Out.c **** * Summary:
+  80:Generated_Source\PSoC5/PWM_Out.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  81:Generated_Source\PSoC5/PWM_Out.c **** *  form.
+  82:Generated_Source\PSoC5/PWM_Out.c **** *
+  83:Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
+  84:Generated_Source\PSoC5/PWM_Out.c **** *  None
+  85:Generated_Source\PSoC5/PWM_Out.c **** *
+  86:Generated_Source\PSoC5/PWM_Out.c **** * Return: 
+  87:Generated_Source\PSoC5/PWM_Out.c **** *  Returns the current value of the Digital Port as a right justified number
+  88:Generated_Source\PSoC5/PWM_Out.c **** *  
+  89:Generated_Source\PSoC5/PWM_Out.c **** * Note:
+  90:Generated_Source\PSoC5/PWM_Out.c **** *  Macro PWM_Out_ReadPS calls this function. 
+  91:Generated_Source\PSoC5/PWM_Out.c **** *  
+  92:Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 5
 
 
-  93:.\Generated_Source\PSoC5/PWM_Out.c **** uint8 PWM_Out_Read(void) 
-  94:.\Generated_Source\PSoC5/PWM_Out.c **** {
+  93:Generated_Source\PSoC5/PWM_Out.c **** uint8 PWM_Out_Read(void) 
+  94:Generated_Source\PSoC5/PWM_Out.c **** {
  137              		.loc 1 94 0
  138              		.cfi_startproc
  139              		@ args = 0, pretend = 0, frame = 0
@@ -253,7 +253,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  144              		.cfi_offset 7, -4
  145 0002 00AF     		add	r7, sp, #0
  146              		.cfi_def_cfa_register 7
-  95:.\Generated_Source\PSoC5/PWM_Out.c ****     return (PWM_Out_PS & PWM_Out_MASK) >> PWM_Out_SHIFT;
+  95:Generated_Source\PSoC5/PWM_Out.c ****     return (PWM_Out_PS & PWM_Out_MASK) >> PWM_Out_SHIFT;
  147              		.loc 1 95 0
  148 0004 054B     		ldr	r3, .L9
  149 0006 1B78     		ldrb	r3, [r3]
@@ -261,7 +261,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  151 000a 03F00203 		and	r3, r3, #2
  152 000e 5B08     		lsrs	r3, r3, #1
  153 0010 DBB2     		uxtb	r3, r3
-  96:.\Generated_Source\PSoC5/PWM_Out.c **** }
+  96:Generated_Source\PSoC5/PWM_Out.c **** }
  154              		.loc 1 96 0
  155 0012 1846     		mov	r0, r3
  156 0014 BD46     		mov	sp, r7
@@ -286,27 +286,27 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  175              		.type	PWM_Out_ReadDataReg, %function
  176              	PWM_Out_ReadDataReg:
  177              	.LFB3:
-  97:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  98:.\Generated_Source\PSoC5/PWM_Out.c **** 
-  99:.\Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
- 100:.\Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_ReadDataReg
- 101:.\Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
- 102:.\Generated_Source\PSoC5/PWM_Out.c **** *
- 103:.\Generated_Source\PSoC5/PWM_Out.c **** * Summary:
- 104:.\Generated_Source\PSoC5/PWM_Out.c **** *  Read the current value assigned to a Digital Port's data output register
- 105:.\Generated_Source\PSoC5/PWM_Out.c **** *
- 106:.\Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
- 107:.\Generated_Source\PSoC5/PWM_Out.c **** *  None 
- 108:.\Generated_Source\PSoC5/PWM_Out.c **** *
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 6
+  97:Generated_Source\PSoC5/PWM_Out.c **** 
+  98:Generated_Source\PSoC5/PWM_Out.c **** 
+  99:Generated_Source\PSoC5/PWM_Out.c **** /*******************************************************************************
+ 100:Generated_Source\PSoC5/PWM_Out.c **** * Function Name: PWM_Out_ReadDataReg
+ 101:Generated_Source\PSoC5/PWM_Out.c **** ********************************************************************************
+ 102:Generated_Source\PSoC5/PWM_Out.c **** *
+ 103:Generated_Source\PSoC5/PWM_Out.c **** * Summary:
+ 104:Generated_Source\PSoC5/PWM_Out.c **** *  Read the current value assigned to a Digital Port's data output register
+ 105:Generated_Source\PSoC5/PWM_Out.c **** *
+ 106:Generated_Source\PSoC5/PWM_Out.c **** * Parameters:  
+ 107:Generated_Source\PSoC5/PWM_Out.c **** *  None 
+ 108:Generated_Source\PSoC5/PWM_Out.c **** *
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 6
 
 
- 109:.\Generated_Source\PSoC5/PWM_Out.c **** * Return: 
- 110:.\Generated_Source\PSoC5/PWM_Out.c **** *  Returns the current value assigned to the Digital Port's data output register
- 111:.\Generated_Source\PSoC5/PWM_Out.c **** *  
- 112:.\Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
- 113:.\Generated_Source\PSoC5/PWM_Out.c **** uint8 PWM_Out_ReadDataReg(void) 
- 114:.\Generated_Source\PSoC5/PWM_Out.c **** {
+ 109:Generated_Source\PSoC5/PWM_Out.c **** * Return: 
+ 110:Generated_Source\PSoC5/PWM_Out.c **** *  Returns the current value assigned to the Digital Port's data output register
+ 111:Generated_Source\PSoC5/PWM_Out.c **** *  
+ 112:Generated_Source\PSoC5/PWM_Out.c **** *******************************************************************************/
+ 113:Generated_Source\PSoC5/PWM_Out.c **** uint8 PWM_Out_ReadDataReg(void) 
+ 114:Generated_Source\PSoC5/PWM_Out.c **** {
  178              		.loc 1 114 0
  179              		.cfi_startproc
  180              		@ args = 0, pretend = 0, frame = 0
@@ -317,7 +317,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  185              		.cfi_offset 7, -4
  186 0002 00AF     		add	r7, sp, #0
  187              		.cfi_def_cfa_register 7
- 115:.\Generated_Source\PSoC5/PWM_Out.c ****     return (PWM_Out_DR & PWM_Out_MASK) >> PWM_Out_SHIFT;
+ 115:Generated_Source\PSoC5/PWM_Out.c ****     return (PWM_Out_DR & PWM_Out_MASK) >> PWM_Out_SHIFT;
  188              		.loc 1 115 0
  189 0004 054B     		ldr	r3, .L13
  190 0006 1B78     		ldrb	r3, [r3]
@@ -325,7 +325,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  192 000a 03F00203 		and	r3, r3, #2
  193 000e 5B08     		lsrs	r3, r3, #1
  194 0010 DBB2     		uxtb	r3, r3
- 116:.\Generated_Source\PSoC5/PWM_Out.c **** }
+ 116:Generated_Source\PSoC5/PWM_Out.c **** }
  195              		.loc 1 116 0
  196 0012 1846     		mov	r0, r3
  197 0014 BD46     		mov	sp, r7
@@ -344,7 +344,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  210              		.size	PWM_Out_ReadDataReg, .-PWM_Out_ReadDataReg
  211              		.text
  212              	.Letext0:
- 213              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 213              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  214              		.section	.debug_info,"",%progbits
  215              	.Ldebug_info0:
  216 0000 19010000 		.4byte	0x119
@@ -352,48 +352,48 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  218 0006 00000000 		.4byte	.Ldebug_abbrev0
  219 000a 04       		.byte	0x4
  220 000b 01       		.uleb128 0x1
- 221 000c 42000000 		.4byte	.LASF20
+ 221 000c 1F000000 		.4byte	.LASF20
  222 0010 01       		.byte	0x1
- 223 0011 00000000 		.4byte	.LASF21
- 224 0015 87010000 		.4byte	.LASF22
+ 223 0011 C1000000 		.4byte	.LASF21
+ 224 0015 85010000 		.4byte	.LASF22
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 7
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 7
 
 
  227 0021 00000000 		.4byte	.Ldebug_line0
  228 0025 02       		.uleb128 0x2
  229 0026 01       		.byte	0x1
  230 0027 06       		.byte	0x6
- 231 0028 FF010000 		.4byte	.LASF0
+ 231 0028 FD010000 		.4byte	.LASF0
  232 002c 02       		.uleb128 0x2
  233 002d 01       		.byte	0x1
  234 002e 08       		.byte	0x8
- 235 002f D6000000 		.4byte	.LASF1
+ 235 002f B3000000 		.4byte	.LASF1
  236 0033 02       		.uleb128 0x2
  237 0034 02       		.byte	0x2
  238 0035 05       		.byte	0x5
- 239 0036 E6010000 		.4byte	.LASF2
+ 239 0036 E4010000 		.4byte	.LASF2
  240 003a 02       		.uleb128 0x2
  241 003b 02       		.byte	0x2
  242 003c 07       		.byte	0x7
- 243 003d FB000000 		.4byte	.LASF3
+ 243 003d F4000000 		.4byte	.LASF3
  244 0041 02       		.uleb128 0x2
  245 0042 04       		.byte	0x4
  246 0043 05       		.byte	0x5
- 247 0044 F6010000 		.4byte	.LASF4
+ 247 0044 F4010000 		.4byte	.LASF4
  248 0048 02       		.uleb128 0x2
  249 0049 04       		.byte	0x4
  250 004a 07       		.byte	0x7
- 251 004b E9000000 		.4byte	.LASF5
+ 251 004b E2000000 		.4byte	.LASF5
  252 004f 02       		.uleb128 0x2
  253 0050 08       		.byte	0x8
  254 0051 05       		.byte	0x5
- 255 0052 74010000 		.4byte	.LASF6
+ 255 0052 72010000 		.4byte	.LASF6
  256 0056 02       		.uleb128 0x2
  257 0057 08       		.byte	0x8
  258 0058 07       		.byte	0x7
- 259 0059 43010000 		.4byte	.LASF7
+ 259 0059 3C010000 		.4byte	.LASF7
  260 005d 03       		.uleb128 0x3
  261 005e 04       		.byte	0x4
  262 005f 05       		.byte	0x5
@@ -401,36 +401,36 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  264 0064 02       		.uleb128 0x2
  265 0065 04       		.byte	0x4
  266 0066 07       		.byte	0x7
- 267 0067 36010000 		.4byte	.LASF8
+ 267 0067 2F010000 		.4byte	.LASF8
  268 006b 04       		.uleb128 0x4
- 269 006c F0010000 		.4byte	.LASF12
+ 269 006c EE010000 		.4byte	.LASF12
  270 0070 02       		.byte	0x2
  271 0071 C2       		.byte	0xc2
  272 0072 2C000000 		.4byte	0x2c
  273 0076 02       		.uleb128 0x2
  274 0077 04       		.byte	0x4
  275 0078 04       		.byte	0x4
- 276 0079 D0000000 		.4byte	.LASF9
+ 276 0079 AD000000 		.4byte	.LASF9
  277 007d 02       		.uleb128 0x2
  278 007e 08       		.byte	0x8
  279 007f 04       		.byte	0x4
- 280 0080 0E010000 		.4byte	.LASF10
+ 280 0080 07010000 		.4byte	.LASF10
  281 0084 02       		.uleb128 0x2
  282 0085 01       		.byte	0x1
  283 0086 08       		.byte	0x8
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 8
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 8
 
 
- 284 0087 82010000 		.4byte	.LASF11
+ 284 0087 80010000 		.4byte	.LASF11
  285 008b 05       		.uleb128 0x5
- 286 008c E4000000 		.4byte	.LASF13
+ 286 008c 6D010000 		.4byte	.LASF13
  287 0090 02       		.byte	0x2
  288 0091 6C01     		.2byte	0x16c
  289 0093 97000000 		.4byte	0x97
  290 0097 06       		.uleb128 0x6
  291 0098 6B000000 		.4byte	0x6b
  292 009c 07       		.uleb128 0x7
- 293 009d 23000000 		.4byte	.LASF14
+ 293 009d 00000000 		.4byte	.LASF14
  294 00a1 01       		.byte	0x1
  295 00a2 27       		.byte	0x27
  296 00a3 00000000 		.4byte	.LFB0
@@ -439,7 +439,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  299 00ac 9C       		.byte	0x9c
  300 00ad CE000000 		.4byte	0xce
  301 00b1 08       		.uleb128 0x8
- 302 00b2 31000000 		.4byte	.LASF16
+ 302 00b2 0E000000 		.4byte	.LASF16
  303 00b6 01       		.byte	0x1
  304 00b7 27       		.byte	0x27
  305 00b8 6B000000 		.4byte	0x6b
@@ -447,7 +447,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  307 00bd 91       		.byte	0x91
  308 00be 6F       		.sleb128 -17
  309 00bf 09       		.uleb128 0x9
- 310 00c0 37000000 		.4byte	.LASF23
+ 310 00c0 14000000 		.4byte	.LASF23
  311 00c4 01       		.byte	0x1
  312 00c5 29       		.byte	0x29
  313 00c6 6B000000 		.4byte	0x6b
@@ -456,7 +456,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  316 00cc 77       		.sleb128 -9
  317 00cd 00       		.byte	0
  318 00ce 07       		.uleb128 0x7
- 319 00cf 5F010000 		.4byte	.LASF15
+ 319 00cf 58010000 		.4byte	.LASF15
  320 00d3 01       		.byte	0x1
  321 00d4 45       		.byte	0x45
  322 00d5 00000000 		.4byte	.LFB1
@@ -465,7 +465,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  325 00de 9C       		.byte	0x9c
  326 00df F2000000 		.4byte	0xf2
  327 00e3 08       		.uleb128 0x8
- 328 00e4 5A010000 		.4byte	.LASF17
+ 328 00e4 53010000 		.4byte	.LASF17
  329 00e8 01       		.byte	0x1
  330 00e9 45       		.byte	0x45
  331 00ea 6B000000 		.4byte	0x6b
@@ -474,11 +474,11 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  334 00f0 77       		.sleb128 -9
  335 00f1 00       		.byte	0
  336 00f2 0A       		.uleb128 0xa
- 337 00f3 15010000 		.4byte	.LASF18
+ 337 00f3 0E010000 		.4byte	.LASF18
  338 00f7 01       		.byte	0x1
  339 00f8 5D       		.byte	0x5d
  340 00f9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 9
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 9
 
 
  341 00fd 00000000 		.4byte	.LFB2
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  343 0105 01       		.uleb128 0x1
  344 0106 9C       		.byte	0x9c
  345 0107 0A       		.uleb128 0xa
- 346 0108 22010000 		.4byte	.LASF19
+ 346 0108 1B010000 		.4byte	.LASF19
  347 010c 01       		.byte	0x1
  348 010d 71       		.byte	0x71
  349 010e 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  395 0026 08       		.uleb128 0x8
  396 0027 00       		.byte	0
  397 0028 00       		.byte	0
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 10
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 10
 
 
  398 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  452 0060 01       		.uleb128 0x1
  453 0061 13       		.uleb128 0x13
  454 0062 00       		.byte	0
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 11
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 11
 
 
  455 0063 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  509 009a 00       		.byte	0
  510 009b 00       		.byte	0
  511 009c 00       		.byte	0
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 12
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 12
 
 
  512              		.section	.debug_aranges,"",%progbits
@@ -693,140 +693,140 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 1
  541 0024 00000000 		.4byte	0
  542              		.section	.debug_line,"",%progbits
  543              	.Ldebug_line0:
- 544 0000 94000000 		.section	.debug_str,"MS",%progbits,1
- 544      02004600 
+ 544 0000 92000000 		.section	.debug_str,"MS",%progbits,1
+ 544      02004400 
  544      00000201 
  544      FB0E0D00 
  544      01010101 
- 545              	.LASF21:
- 546 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PWM_Out.c\000"
- 546      6E657261 
- 546      7465645F 
- 546      536F7572 
- 546      63655C50 
- 547              	.LASF14:
- 548 0023 50574D5F 		.ascii	"PWM_Out_Write\000"
- 548      4F75745F 
- 548      57726974 
+ 545              	.LASF14:
+ 546 0000 50574D5F 		.ascii	"PWM_Out_Write\000"
+ 546      4F75745F 
+ 546      57726974 
+ 546      6500
+ 547              	.LASF16:
+ 548 000e 76616C75 		.ascii	"value\000"
  548      6500
- 549              	.LASF16:
- 550 0031 76616C75 		.ascii	"value\000"
- 550      6500
- 551              	.LASF23:
- 552 0037 73746174 		.ascii	"staticBits\000"
- 552      69634269 
- 552      747300
- 553              	.LASF20:
- 554 0042 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 13
+ 549              	.LASF23:
+ 550 0014 73746174 		.ascii	"staticBits\000"
+ 550      69634269 
+ 550      747300
+ 551              	.LASF20:
+ 552 001f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 552      4320342E 
+ 552      392E3320 
+ 552      32303135 
+ 552      30333033 
+ 553 0052 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 553      20726576 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 13
 
 
- 554      4320342E 
- 554      392E3320 
- 554      32303135 
- 554      30333033 
- 555 0075 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 555      20726576 
- 555      6973696F 
- 555      6E203232 
- 555      31323230 
- 556 00a8 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 556      66756E63 
- 556      74696F6E 
- 556      2D736563 
- 556      74696F6E 
- 557              	.LASF9:
- 558 00d0 666C6F61 		.ascii	"float\000"
- 558      7400
- 559              	.LASF1:
- 560 00d6 756E7369 		.ascii	"unsigned char\000"
- 560      676E6564 
- 560      20636861 
- 560      7200
- 561              	.LASF13:
- 562 00e4 72656738 		.ascii	"reg8\000"
- 562      00
- 563              	.LASF5:
- 564 00e9 6C6F6E67 		.ascii	"long unsigned int\000"
- 564      20756E73 
- 564      69676E65 
- 564      6420696E 
- 564      7400
- 565              	.LASF3:
- 566 00fb 73686F72 		.ascii	"short unsigned int\000"
- 566      7420756E 
- 566      7369676E 
- 566      65642069 
- 566      6E7400
- 567              	.LASF10:
- 568 010e 646F7562 		.ascii	"double\000"
- 568      6C6500
- 569              	.LASF18:
- 570 0115 50574D5F 		.ascii	"PWM_Out_Read\000"
+ 553      6973696F 
+ 553      6E203232 
+ 553      31323230 
+ 554 0085 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 554      66756E63 
+ 554      74696F6E 
+ 554      2D736563 
+ 554      74696F6E 
+ 555              	.LASF9:
+ 556 00ad 666C6F61 		.ascii	"float\000"
+ 556      7400
+ 557              	.LASF1:
+ 558 00b3 756E7369 		.ascii	"unsigned char\000"
+ 558      676E6564 
+ 558      20636861 
+ 558      7200
+ 559              	.LASF21:
+ 560 00c1 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_Out.c\000"
+ 560      72617465 
+ 560      645F536F 
+ 560      75726365 
+ 560      5C50536F 
+ 561              	.LASF5:
+ 562 00e2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 562      20756E73 
+ 562      69676E65 
+ 562      6420696E 
+ 562      7400
+ 563              	.LASF3:
+ 564 00f4 73686F72 		.ascii	"short unsigned int\000"
+ 564      7420756E 
+ 564      7369676E 
+ 564      65642069 
+ 564      6E7400
+ 565              	.LASF10:
+ 566 0107 646F7562 		.ascii	"double\000"
+ 566      6C6500
+ 567              	.LASF18:
+ 568 010e 50574D5F 		.ascii	"PWM_Out_Read\000"
+ 568      4F75745F 
+ 568      52656164 
+ 568      00
+ 569              	.LASF19:
+ 570 011b 50574D5F 		.ascii	"PWM_Out_ReadDataReg\000"
  570      4F75745F 
  570      52656164 
- 570      00
- 571              	.LASF19:
- 572 0122 50574D5F 		.ascii	"PWM_Out_ReadDataReg\000"
- 572      4F75745F 
- 572      52656164 
- 572      44617461 
- 572      52656700 
- 573              	.LASF8:
- 574 0136 756E7369 		.ascii	"unsigned int\000"
- 574      676E6564 
- 574      20696E74 
- 574      00
- 575              	.LASF7:
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccBFv7RA.s 			page 14
+ 570      44617461 
+ 570      52656700 
+ 571              	.LASF8:
+ 572 012f 756E7369 		.ascii	"unsigned int\000"
+ 572      676E6564 
+ 572      20696E74 
+ 572      00
+ 573              	.LASF7:
+ 574 013c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 574      206C6F6E 
+ 574      6720756E 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZMKtWI.s 			page 14
 
 
- 576 0143 6C6F6E67 		.ascii	"long long unsigned int\000"
- 576      206C6F6E 
- 576      6720756E 
- 576      7369676E 
- 576      65642069 
- 577              	.LASF17:
- 578 015a 6D6F6465 		.ascii	"mode\000"
- 578      00
- 579              	.LASF15:
- 580 015f 50574D5F 		.ascii	"PWM_Out_SetDriveMode\000"
- 580      4F75745F 
- 580      53657444 
- 580      72697665 
- 580      4D6F6465 
+ 574      7369676E 
+ 574      65642069 
+ 575              	.LASF17:
+ 576 0153 6D6F6465 		.ascii	"mode\000"
+ 576      00
+ 577              	.LASF15:
+ 578 0158 50574D5F 		.ascii	"PWM_Out_SetDriveMode\000"
+ 578      4F75745F 
+ 578      53657444 
+ 578      72697665 
+ 578      4D6F6465 
+ 579              	.LASF13:
+ 580 016d 72656738 		.ascii	"reg8\000"
+ 580      00
  581              	.LASF6:
- 582 0174 6C6F6E67 		.ascii	"long long int\000"
+ 582 0172 6C6F6E67 		.ascii	"long long int\000"
  582      206C6F6E 
  582      6720696E 
  582      7400
  583              	.LASF11:
- 584 0182 63686172 		.ascii	"char\000"
+ 584 0180 63686172 		.ascii	"char\000"
  584      00
  585              	.LASF22:
- 586 0187 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 586 0185 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
  586      73657273 
  586      5C444769 
  586      6C6C696C 
  586      616E645C 
- 587 01b5 5C434539 		.ascii	"\\CE95352 Blinking LED\\CE95352 Blinking LED.cydsn\000"
+ 587 01b3 5C434539 		.ascii	"\\CE95352 Blinking LED\\CE95352 Blinking LED.cydsn\000"
  587      35333532 
  587      20426C69 
  587      6E6B696E 
  587      67204C45 
  588              	.LASF2:
- 589 01e6 73686F72 		.ascii	"short int\000"
+ 589 01e4 73686F72 		.ascii	"short int\000"
  589      7420696E 
  589      7400
  590              	.LASF12:
- 591 01f0 75696E74 		.ascii	"uint8\000"
+ 591 01ee 75696E74 		.ascii	"uint8\000"
  591      3800
  592              	.LASF4:
- 593 01f6 6C6F6E67 		.ascii	"long int\000"
+ 593 01f4 6C6F6E67 		.ascii	"long int\000"
  593      20696E74 
  593      00
  594              	.LASF0:
- 595 01ff 7369676E 		.ascii	"signed char\000"
+ 595 01fd 7369676E 		.ascii	"signed char\000"
  595      65642063 
  595      68617200 
  596              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 1
 
 
    1              		.syntax unified
@@ -26,71 +26,71 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
   23              		.type	main, %function
   24              	main:
   25              	.LFB63:
-  26              		.file 1 ".\\main.c"
-   1:.\main.c      **** /******************************************************************************
-   2:.\main.c      **** * Project Name		: CE95352 Blinking LED
-   3:.\main.c      **** * File Name			: main.c
-   4:.\main.c      **** * Version 			: **
-   5:.\main.c      **** * Device Used		: CY8C5888LTI-LP097
-   6:.\main.c      **** * Software Used		: PSoC Creator 3.1 SP2
-   7:.\main.c      **** * Compiler    		: ARM GCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
-   8:.\main.c      **** * Related Hardware	: CY8CKIT059 PSoC 5 LP Prototyping Kit 
-   9:.\main.c      **** * Owner				: KLMZ
-  10:.\main.c      **** *
-  11:.\main.c      **** ********************************************************************************
-  12:.\main.c      **** * Copyright (2015), Cypress Semiconductor Corporation. All Rights Reserved.
-  13:.\main.c      **** ********************************************************************************
-  14:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
-  15:.\main.c      **** * and is protected by and subject to worldwide patent protection (United
-  16:.\main.c      **** * States and foreign), United States copyright laws and international treaty
-  17:.\main.c      **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
-  18:.\main.c      **** * non-transferable license to copy, use, modify, create derivative works of,
-  19:.\main.c      **** * and compile the Cypress Source Code and derivative works for the sole
-  20:.\main.c      **** * purpose of creating custom software in support of licensee product to be
-  21:.\main.c      **** * used only in conjunction with a Cypress integrated circuit as specified in
-  22:.\main.c      **** * the applicable agreement. Any reproduction, modification, translation,
-  23:.\main.c      **** * compilation, or representation of this software except as specified above 
-  24:.\main.c      **** * is prohibited without the express written permission of Cypress.
-  25:.\main.c      **** *
-  26:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
-  27:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
-  28:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-  29:.\main.c      **** * Cypress reserves the right to make changes without further notice to the 
-  30:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out 
-  31:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress 
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 2
+  26              		.file 1 "main.c"
+   1:main.c        **** /******************************************************************************
+   2:main.c        **** * Project Name		: CE95352 Blinking LED
+   3:main.c        **** * File Name			: main.c
+   4:main.c        **** * Version 			: **
+   5:main.c        **** * Device Used		: CY8C5888LTI-LP097
+   6:main.c        **** * Software Used		: PSoC Creator 3.1 SP2
+   7:main.c        **** * Compiler    		: ARM GCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
+   8:main.c        **** * Related Hardware	: CY8CKIT059 PSoC 5 LP Prototyping Kit 
+   9:main.c        **** * Owner				: KLMZ
+  10:main.c        **** *
+  11:main.c        **** ********************************************************************************
+  12:main.c        **** * Copyright (2015), Cypress Semiconductor Corporation. All Rights Reserved.
+  13:main.c        **** ********************************************************************************
+  14:main.c        **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  15:main.c        **** * and is protected by and subject to worldwide patent protection (United
+  16:main.c        **** * States and foreign), United States copyright laws and international treaty
+  17:main.c        **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  18:main.c        **** * non-transferable license to copy, use, modify, create derivative works of,
+  19:main.c        **** * and compile the Cypress Source Code and derivative works for the sole
+  20:main.c        **** * purpose of creating custom software in support of licensee product to be
+  21:main.c        **** * used only in conjunction with a Cypress integrated circuit as specified in
+  22:main.c        **** * the applicable agreement. Any reproduction, modification, translation,
+  23:main.c        **** * compilation, or representation of this software except as specified above 
+  24:main.c        **** * is prohibited without the express written permission of Cypress.
+  25:main.c        **** *
+  26:main.c        **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+  27:main.c        **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  28:main.c        **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  29:main.c        **** * Cypress reserves the right to make changes without further notice to the 
+  30:main.c        **** * materials described herein. Cypress does not assume any liability arising out 
+  31:main.c        **** * of the application or use of any product or circuit described herein. Cypress 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 2
 
 
-  32:.\main.c      **** * does not authorize its products for use as critical components in life-support 
-  33:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in 
-  34:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
-  35:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of 
-  36:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. 
-  37:.\main.c      **** *
-  38:.\main.c      **** * Use of this Software may be limited by and subject to the applicable Cypress
-  39:.\main.c      **** * software license agreement. 
-  40:.\main.c      **** *******************************************************************************/
-  41:.\main.c      **** 
-  42:.\main.c      **** #include <device.h>
-  43:.\main.c      **** 
-  44:.\main.c      **** /*******************************************************************************
-  45:.\main.c      **** * Function Name: main
-  46:.\main.c      **** ********************************************************************************
-  47:.\main.c      **** *
-  48:.\main.c      **** * Summary:
-  49:.\main.c      **** *  The PWM is configured and started in the PWM_1_Start() function.
-  50:.\main.c      **** *  The firmware then enters an idle loop, leaving control of the project
-  51:.\main.c      **** *  to the fixed function PWM peripheral.
-  52:.\main.c      **** *
-  53:.\main.c      **** * Parameters:
-  54:.\main.c      **** *  None.
-  55:.\main.c      **** *
-  56:.\main.c      **** * Return:
-  57:.\main.c      **** *  None.
-  58:.\main.c      **** *
-  59:.\main.c      **** *******************************************************************************/
-  60:.\main.c      **** void main()
-  61:.\main.c      **** {
+  32:main.c        **** * does not authorize its products for use as critical components in life-support 
+  33:main.c        **** * systems where a malfunction or failure may reasonably be expected to result in 
+  34:main.c        **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  35:main.c        **** * support systems application implies that the manufacturer assumes all risk of 
+  36:main.c        **** * such use and in doing so indemnifies Cypress against all charges. 
+  37:main.c        **** *
+  38:main.c        **** * Use of this Software may be limited by and subject to the applicable Cypress
+  39:main.c        **** * software license agreement. 
+  40:main.c        **** *******************************************************************************/
+  41:main.c        **** 
+  42:main.c        **** #include <device.h>
+  43:main.c        **** 
+  44:main.c        **** /*******************************************************************************
+  45:main.c        **** * Function Name: main
+  46:main.c        **** ********************************************************************************
+  47:main.c        **** *
+  48:main.c        **** * Summary:
+  49:main.c        **** *  The PWM is configured and started in the PWM_1_Start() function.
+  50:main.c        **** *  The firmware then enters an idle loop, leaving control of the project
+  51:main.c        **** *  to the fixed function PWM peripheral.
+  52:main.c        **** *
+  53:main.c        **** * Parameters:
+  54:main.c        **** *  None.
+  55:main.c        **** *
+  56:main.c        **** * Return:
+  57:main.c        **** *  None.
+  58:main.c        **** *
+  59:main.c        **** *******************************************************************************/
+  60:main.c        **** void main()
+  61:main.c        **** {
   27              		.loc 1 61 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -101,14 +101,14 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  62:.\main.c      ****     /* Prepare components */
-  63:.\main.c      ****     PWM_1_Start();    
+  62:main.c        ****     /* Prepare components */
+  63:main.c        ****     PWM_1_Start();    
   37              		.loc 1 63 0
   38 0004 FFF7FEFF 		bl	PWM_1_Start
   39              	.L2:
-  64:.\main.c      ****     
-  65:.\main.c      ****     for (;;)
-  66:.\main.c      ****     {}
+  64:main.c        ****     
+  65:main.c        ****     for (;;)
+  66:main.c        ****     {}
   40              		.loc 1 66 0 discriminator 1
   41 0008 FEE7     		b	.L2
   42              		.cfi_endproc
@@ -116,9 +116,9 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
   44              		.size	main, .-main
   45 000a 00BF     		.text
   46              	.Letext0:
-  47              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
-  48              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 3
+  47              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+  48              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 3
 
 
   49              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
@@ -129,42 +129,42 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
   54 0006 00000000 		.4byte	.Ldebug_abbrev0
   55 000a 04       		.byte	0x4
   56 000b 01       		.uleb128 0x1
-  57 000c D7000000 		.4byte	.LASF15
+  57 000c DE000000 		.4byte	.LASF15
   58 0010 01       		.byte	0x1
-  59 0011 65010000 		.4byte	.LASF16
-  60 0015 5C000000 		.4byte	.LASF17
+  59 0011 2E000000 		.4byte	.LASF16
+  60 0015 63000000 		.4byte	.LASF17
   61 0019 00000000 		.4byte	.Ldebug_ranges0+0
   62 001d 00000000 		.4byte	0
   63 0021 00000000 		.4byte	.Ldebug_line0
   64 0025 02       		.uleb128 0x2
   65 0026 01       		.byte	0x1
   66 0027 06       		.byte	0x6
-  67 0028 82010000 		.4byte	.LASF0
+  67 0028 80010000 		.4byte	.LASF0
   68 002c 02       		.uleb128 0x2
   69 002d 01       		.byte	0x1
   70 002e 08       		.byte	0x8
-  71 002f BB000000 		.4byte	.LASF1
+  71 002f C2000000 		.4byte	.LASF1
   72 0033 02       		.uleb128 0x2
   73 0034 02       		.byte	0x2
   74 0035 05       		.byte	0x5
-  75 0036 9E010000 		.4byte	.LASF2
+  75 0036 9C010000 		.4byte	.LASF2
   76 003a 02       		.uleb128 0x2
   77 003b 02       		.byte	0x2
   78 003c 07       		.byte	0x7
   79 003d 0E000000 		.4byte	.LASF3
   80 0041 03       		.uleb128 0x3
-  81 0042 8E010000 		.4byte	.LASF9
+  81 0042 8C010000 		.4byte	.LASF9
   82 0046 02       		.byte	0x2
   83 0047 3F       		.byte	0x3f
   84 0048 4C000000 		.4byte	0x4c
   85 004c 02       		.uleb128 0x2
   86 004d 04       		.byte	0x4
   87 004e 05       		.byte	0x5
-  88 004f CE000000 		.4byte	.LASF4
+  88 004f D5000000 		.4byte	.LASF4
   89 0053 02       		.uleb128 0x2
   90 0054 04       		.byte	0x4
   91 0055 07       		.byte	0x7
-  92 0056 33000000 		.4byte	.LASF5
+  92 0056 3A000000 		.4byte	.LASF5
   93 005a 02       		.uleb128 0x2
   94 005b 08       		.byte	0x8
   95 005c 05       		.byte	0x5
@@ -172,41 +172,41 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
   97 0061 02       		.uleb128 0x2
   98 0062 08       		.byte	0x8
   99 0063 07       		.byte	0x7
- 100 0064 45000000 		.4byte	.LASF7
+ 100 0064 4C000000 		.4byte	.LASF7
  101 0068 04       		.uleb128 0x4
  102 0069 04       		.byte	0x4
  103 006a 05       		.byte	0x5
  104 006b 696E7400 		.ascii	"int\000"
  105 006f 02       		.uleb128 0x2
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 4
 
 
  106 0070 04       		.byte	0x4
  107 0071 07       		.byte	0x7
  108 0072 21000000 		.4byte	.LASF8
  109 0076 03       		.uleb128 0x3
- 110 0077 A8010000 		.4byte	.LASF10
+ 110 0077 A6010000 		.4byte	.LASF10
  111 007b 03       		.byte	0x3
  112 007c 2C       		.byte	0x2c
  113 007d 41000000 		.4byte	0x41
  114 0081 02       		.uleb128 0x2
  115 0082 04       		.byte	0x4
  116 0083 04       		.byte	0x4
- 117 0084 98010000 		.4byte	.LASF11
+ 117 0084 96010000 		.4byte	.LASF11
  118 0088 02       		.uleb128 0x2
  119 0089 08       		.byte	0x8
  120 008a 04       		.byte	0x4
- 121 008b 6E010000 		.4byte	.LASF12
+ 121 008b 6C010000 		.4byte	.LASF12
  122 008f 02       		.uleb128 0x2
  123 0090 01       		.byte	0x1
  124 0091 08       		.byte	0x8
- 125 0092 C9000000 		.4byte	.LASF13
+ 125 0092 D0000000 		.4byte	.LASF13
  126 0096 02       		.uleb128 0x2
  127 0097 04       		.byte	0x4
  128 0098 07       		.byte	0x7
- 129 0099 B0010000 		.4byte	.LASF14
+ 129 0099 AE010000 		.4byte	.LASF14
  130 009d 05       		.uleb128 0x5
- 131 009e 2E000000 		.4byte	.LASF18
+ 131 009e 35000000 		.4byte	.LASF18
  132 00a2 01       		.byte	0x1
  133 00a3 3C       		.byte	0x3c
  134 00a4 00000000 		.4byte	.LFB63
@@ -214,7 +214,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
  136 00ac 01       		.uleb128 0x1
  137 00ad 9C       		.byte	0x9c
  138 00ae 06       		.uleb128 0x6
- 139 00af 75010000 		.4byte	.LASF19
+ 139 00af 73010000 		.4byte	.LASF19
  140 00b3 04       		.byte	0x4
  141 00b4 2A06     		.2byte	0x62a
  142 00b6 BA000000 		.4byte	0xba
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
  160 000c 17       		.uleb128 0x17
  161 000d 11       		.uleb128 0x11
  162 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 5
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 5
 
 
  163 000f 10       		.uleb128 0x10
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
  217 0045 40       		.uleb128 0x40
  218 0046 18       		.uleb128 0x18
  219 0047 9642     		.uleb128 0x2116
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 6
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 6
 
 
  220 0049 19       		.uleb128 0x19
@@ -349,8 +349,8 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
  265 000c 00000000 		.4byte	0
  266              		.section	.debug_line,"",%progbits
  267              	.Ldebug_line0:
- 268 0000 57010000 		.section	.debug_str,"MS",%progbits,1
- 268      02003C01 
+ 268 0000 55010000 		.section	.debug_str,"MS",%progbits,1
+ 268      02003A01 
  268      00000201 
  268      FB0E0D00 
  268      01010101 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
  270 0000 6C6F6E67 		.ascii	"long long int\000"
  270      206C6F6E 
  270      6720696E 
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 7
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 7
 
 
  270      7400
@@ -373,95 +373,94 @@ ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 1
  274      676E6564 
  274      20696E74 
  274      00
- 275              	.LASF18:
- 276 002e 6D61696E 		.ascii	"main\000"
- 276      00
- 277              	.LASF5:
- 278 0033 6C6F6E67 		.ascii	"long unsigned int\000"
- 278      20756E73 
- 278      69676E65 
- 278      6420696E 
- 278      7400
- 279              	.LASF7:
- 280 0045 6C6F6E67 		.ascii	"long long unsigned int\000"
- 280      206C6F6E 
- 280      6720756E 
- 280      7369676E 
- 280      65642069 
- 281              	.LASF17:
- 282 005c 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
- 282      73657273 
- 282      5C444769 
- 282      6C6C696C 
- 282      616E645C 
- 283 008a 5C434539 		.ascii	"\\CE95352 Blinking LED\\CE95352 Blinking LED.cydsn\000"
- 283      35333532 
- 283      20426C69 
- 283      6E6B696E 
- 283      67204C45 
- 284              	.LASF1:
- 285 00bb 756E7369 		.ascii	"unsigned char\000"
- 285      676E6564 
- 285      20636861 
- 285      7200
- 286              	.LASF13:
- 287 00c9 63686172 		.ascii	"char\000"
- 287      00
- 288              	.LASF4:
- 289 00ce 6C6F6E67 		.ascii	"long int\000"
- 289      20696E74 
+ 275              	.LASF16:
+ 276 002e 6D61696E 		.ascii	"main.c\000"
+ 276      2E6300
+ 277              	.LASF18:
+ 278 0035 6D61696E 		.ascii	"main\000"
+ 278      00
+ 279              	.LASF5:
+ 280 003a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 280      20756E73 
+ 280      69676E65 
+ 280      6420696E 
+ 280      7400
+ 281              	.LASF7:
+ 282 004c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 282      206C6F6E 
+ 282      6720756E 
+ 282      7369676E 
+ 282      65642069 
+ 283              	.LASF17:
+ 284 0063 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\LB-RPPSOC"
+ 284      73657273 
+ 284      5C444769 
+ 284      6C6C696C 
+ 284      616E645C 
+ 285 0091 5C434539 		.ascii	"\\CE95352 Blinking LED\\CE95352 Blinking LED.cydsn\000"
+ 285      35333532 
+ 285      20426C69 
+ 285      6E6B696E 
+ 285      67204C45 
+ 286              	.LASF1:
+ 287 00c2 756E7369 		.ascii	"unsigned char\000"
+ 287      676E6564 
+ 287      20636861 
+ 287      7200
+ 288              	.LASF13:
+ 289 00d0 63686172 		.ascii	"char\000"
  289      00
- 290              	.LASF15:
- 291 00d7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 291      4320342E 
- 291      392E3320 
- 291      32303135 
- 291      30333033 
- 292 010a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
-ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccq81bkg.s 			page 8
+ 290              	.LASF4:
+ 291 00d5 6C6F6E67 		.ascii	"long int\000"
+ 291      20696E74 
+ 291      00
+ 292              	.LASF15:
+ 293 00de 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 293      4320342E 
+ 293      392E3320 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccKGWkU6.s 			page 8
 
 
- 292      20726576 
- 292      6973696F 
- 292      6E203232 
- 292      31323230 
- 293 013d 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 293      66756E63 
- 293      74696F6E 
- 293      2D736563 
- 293      74696F6E 
- 294              	.LASF16:
- 295 0165 2E5C6D61 		.ascii	".\\main.c\000"
- 295      696E2E63 
- 295      00
+ 293      32303135 
+ 293      30333033 
+ 294 0111 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 294      20726576 
+ 294      6973696F 
+ 294      6E203232 
+ 294      31323230 
+ 295 0144 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 295      66756E63 
+ 295      74696F6E 
+ 295      2D736563 
+ 295      74696F6E 
  296              	.LASF12:
- 297 016e 646F7562 		.ascii	"double\000"
+ 297 016c 646F7562 		.ascii	"double\000"
  297      6C6500
  298              	.LASF19:
- 299 0175 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 299 0173 49544D5F 		.ascii	"ITM_RxBuffer\000"
  299      52784275 
  299      66666572 
  299      00
  300              	.LASF0:
- 301 0182 7369676E 		.ascii	"signed char\000"
+ 301 0180 7369676E 		.ascii	"signed char\000"
  301      65642063 
  301      68617200 
  302              	.LASF9:
- 303 018e 5F5F696E 		.ascii	"__int32_t\000"
+ 303 018c 5F5F696E 		.ascii	"__int32_t\000"
  303      7433325F 
  303      7400
  304              	.LASF11:
- 305 0198 666C6F61 		.ascii	"float\000"
+ 305 0196 666C6F61 		.ascii	"float\000"
  305      7400
  306              	.LASF2:
- 307 019e 73686F72 		.ascii	"short int\000"
+ 307 019c 73686F72 		.ascii	"short int\000"
  307      7420696E 
  307      7400
  308              	.LASF10:
- 309 01a8 696E7433 		.ascii	"int32_t\000"
+ 309 01a6 696E7433 		.ascii	"int32_t\000"
  309      325F7400 
  310              	.LASF14:
- 311 01b0 73697A65 		.ascii	"sizetype\000"
+ 311 01ae 73697A65 		.ascii	"sizetype\000"
  311      74797065 
  311      00
  312              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -60,6 +60,12 @@
 	cell (carrycell) {
 	}
 
+	cell (armcell) {
+		pin (nmi) {
+			direction : input;
+		}
+	}
+
 	cell (interrupt) {
 		pin (clock) {
 			direction : input;
