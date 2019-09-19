@@ -1,6 +1,0 @@
-C:\Users\HPz420\Documents\GitHub\LB-RPPSOC\RPPSOC-Blink1.cydsn\RPPSOC-Blink1.cyprj|e7d0b5c9-bdab-4c2c-8be8-1006ecc6b4a5
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b3b6e1fc-05c6-4cfe-9bda-524d499337a4
-C:\Users\HPz420\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|9d244a94-23af-4028-8ea9-3b7436f17603
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|952b6ff5-6f73-4eca-b2da-dbd45c0bce31
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6e4ca8c4-881c-4efd-8f26-e67934d2cfb9
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4f315ddc-fed3-4d78-beab-9419179dba2e
