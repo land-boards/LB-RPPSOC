@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LB-SPI8\LBSPI8\LBSPI8.cydwr\Pins">
+<ExpandedNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\TopDesign</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Pins</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Analog</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\DMA</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Clocks</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Interrupts</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\System</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Directives</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Flash Security</v>
+<v>LB-SPI8\LBSPI8\Header Files</v>
+<v>LB-SPI8\LBSPI8\Header Files\cyapicallbacks.h</v>
+<v>LB-SPI8\LBSPI8\Source Files</v>
+<v>LB-SPI8\LBSPI8\Source Files\main.c</v>
+<v>LB-SPI8\LBSPI8\Generated_Source</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\TopDesign</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Pins</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Analog</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\DMA</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Clocks</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Interrupts</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\System</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Directives</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.cydwr\Flash Security</v>
+<v>LB-SPI8\LBSPI8\Header Files</v>
+<v>LB-SPI8\LBSPI8\Header Files\cyapicallbacks.h</v>
+<v>LB-SPI8\LBSPI8\Source Files</v>
+<v>LB-SPI8\LBSPI8\Source Files\main.c</v>
+<v>LB-SPI8\LBSPI8\Generated_Source</v>
+<v>LB-SPI8\LBSPI8\Generated_Source\PSoC4</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\TopDesign</v>
+<v>LB-SPI8\LBSPI8\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\TopDesign</v>
+<v>LB-SPI8\LBSPI8\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LB-SPI8">
+<ExpandedNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\CortexM0</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_0_Int.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_1_Int.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_0.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_0_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_1.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_1_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_0.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_0_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_1.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_1_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_BOOT.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_miso_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_miso_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_mosi_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_mosi_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SCBCLK.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_sclk_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_sclk_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SPI.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SPI_BOOT.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SPI_UART.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_ss_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_ss_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\LBSPI8.elf</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\LBSPI8.hex</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\LBSPI8.map</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.gpdsc</v>
+<v>LB-SPI8\LBSPI8\LBSPI8.rpt</v>
+<v>LB-SPI8\LBSPI8\LBSPI8_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\CortexM0</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_0_Int.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_1_Int.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_0.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_0_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_1.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_1_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_0.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_0_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_1.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_1_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_BOOT.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_miso_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_miso_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_mosi_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_mosi_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SCBCLK.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_sclk_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_sclk_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SPI.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SPI_BOOT.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_SPI_UART.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_ss_s.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\Listing Files\SPI_ss_s_PM.lst</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\LBSPI8.elf</v>
+<v>LB-SPI8\LBSPI8\CortexM0\ARM_GCC_541\Debug\LBSPI8.hex</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LB-SPI8">
+<ExpandedNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\PSoC 4 Architecture TRM</v>
+<v>LB-SPI8\LBSPI8\PSoC 4100M Family Datasheet</v>
+<v>LB-SPI8\LBSPI8\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LB-SPI8</v>
+<v>LB-SPI8\LBSPI8</v>
+<v>LB-SPI8\LBSPI8\PSoC 4 Architecture TRM</v>
+<v>LB-SPI8\LBSPI8\PSoC 4100M Family Datasheet</v>
+<v>LB-SPI8\LBSPI8\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\LBSPI8.cydsn\LBSPI8.cydwr" />
+<name v=".\LBSPI8.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1065, 705" SelectedTabbedMdiWindow="95a4c6a5-f66e-43f4-bb3b-54dbc6222442"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f908feb5-a8cc-41c1-8fbb-99f34fbc4db2" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\LBSPI8.cydwr" Guid="3d67c967-a3de-4d52-a795-e175810833d4" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\TopDesign\TopDesign.cysch" Guid="95a4c6a5-f66e-43f4-bb3b-54dbc6222442" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

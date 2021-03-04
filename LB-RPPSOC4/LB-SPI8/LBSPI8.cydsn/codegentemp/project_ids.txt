@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3ae85e0d-3f68-4083-b79e-7c417ccb7b02
+C:\Users\HPz420\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|8d13d985-632f-4625-96e0-4fce9fbe199c
+C:\Users\HPz420\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|4a56b0cc-a3ab-42de-8fd5-0ca78cdea05e
+C:\Users\HPz420\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|c045eff0-d717-487f-82b4-db34ca744714
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|fa2d3e00-e54e-4edf-b09d-3a7b496bf54c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|35be9e6d-a695-4588-b985-f73637f5d3da
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|10a2b641-b30f-4e46-a52d-d8dece8324e3
+C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\LBSPI8.cyprj|bb7b29f8-0ace-494d-82e4-20e9ca8dd2e3
