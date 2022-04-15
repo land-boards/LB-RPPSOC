@@ -198,6 +198,7 @@
 <OpenDocs>
 <name v=".\LBSPI8.cydsn\LBSPI8.cydwr" />
 <name v=".\LBSPI8.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\LBSPI8.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -205,7 +206,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1065, 705" SelectedTabbedMdiWindow="95a4c6a5-f66e-43f4-bb3b-54dbc6222442"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f908feb5-a8cc-41c1-8fbb-99f34fbc4db2" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\LBSPI8.cydwr" Guid="3d67c967-a3de-4d52-a795-e175810833d4" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\TopDesign\TopDesign.cysch" Guid="95a4c6a5-f66e-43f4-bb3b-54dbc6222442" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="884, 552" SelectedTabbedMdiWindow="95a4c6a5-f66e-43f4-bb3b-54dbc6222442"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f908feb5-a8cc-41c1-8fbb-99f34fbc4db2" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\LBSPI8.cydwr" Guid="3d67c967-a3de-4d52-a795-e175810833d4" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\TopDesign\TopDesign.cysch" Guid="95a4c6a5-f66e-43f4-bb3b-54dbc6222442" /><DocumentWindow Key="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\LB-RPPSOC4\LB-SPI8\LBSPI8.cydsn\main.c" Guid="5949c9f2-e4cc-460f-b040-20cdccb73809" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
