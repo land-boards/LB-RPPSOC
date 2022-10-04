@@ -1,0 +1,1 @@
+'''There are not enough resources to run in the card logic'''
