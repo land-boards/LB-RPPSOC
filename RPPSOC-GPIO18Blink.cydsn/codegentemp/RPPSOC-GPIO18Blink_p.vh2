@@ -1,6 +1,6 @@
 -- Project:   RPPSOC-GPIO18Blink
--- Generated: 05/28/2016 12:51:08
--- PSoC Creator  3.3 SP2
+-- Generated: 10/04/2022 08:45:29
+-- PSoC Creator  4.4
 
 ENTITY \RPPSOC-GPIO18Blink\ IS
     PORT(
@@ -466,11 +466,11 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     END COMPONENT;
     COMPONENT iocell
         PORT (
-            pin_input : IN std_ulogic;
             oe : IN std_ulogic;
             fb : OUT std_ulogic;
-            pad_in : IN std_ulogic;
             pa_out : OUT std_ulogic;
+            pin_input : IN std_ulogic;
+            pad_in : IN std_ulogic;
             pad_out : OUT std_ulogic;
             oe_reg : OUT std_ulogic;
             oe_internal : IN std_ulogic;
@@ -551,6 +551,7 @@ BEGIN
     Net_161_split:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split,
@@ -5096,6 +5097,7 @@ BEGIN
     Net_93:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_93,
@@ -5107,6 +5109,7 @@ BEGIN
     Net_94:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_94,
@@ -5118,6 +5121,7 @@ BEGIN
     Net_71:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_71,
@@ -5129,6 +5133,7 @@ BEGIN
     Net_72:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_72,
@@ -5140,6 +5145,7 @@ BEGIN
     Net_73:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_73,
@@ -5151,6 +5157,7 @@ BEGIN
     Net_74:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_74,
@@ -5162,6 +5169,7 @@ BEGIN
     Net_75:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_75,
@@ -5173,6 +5181,7 @@ BEGIN
     Net_207:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_207,
@@ -5184,6 +5193,7 @@ BEGIN
     Net_208:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_208,
@@ -5195,6 +5205,7 @@ BEGIN
     Net_209:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_209,
@@ -5206,6 +5217,7 @@ BEGIN
     Net_210:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_210,
@@ -5217,6 +5229,7 @@ BEGIN
     Net_211:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_211,
@@ -5228,6 +5241,7 @@ BEGIN
     Net_212:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_212,
@@ -5239,6 +5253,7 @@ BEGIN
     Net_213:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_213,
@@ -5250,6 +5265,7 @@ BEGIN
     Net_188_split:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split,
@@ -5258,12 +5274,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_161_split_7:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_7,
@@ -5278,6 +5295,7 @@ BEGIN
     Net_161_split_6:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_6,
@@ -5292,6 +5310,7 @@ BEGIN
     Net_161_split_5:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_5,
@@ -5306,6 +5325,7 @@ BEGIN
     Net_99:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_99,
@@ -5317,6 +5337,7 @@ BEGIN
     Net_100:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_100,
@@ -5328,6 +5349,7 @@ BEGIN
     Net_101:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_101,
@@ -5339,6 +5361,7 @@ BEGIN
     Net_102:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_102,
@@ -5350,6 +5373,7 @@ BEGIN
     Net_103:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_103,
@@ -5361,6 +5385,7 @@ BEGIN
     Net_104:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_104,
@@ -5372,6 +5397,7 @@ BEGIN
     Net_105:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_105,
@@ -5383,6 +5409,7 @@ BEGIN
     Net_137:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_137,
@@ -5394,6 +5421,7 @@ BEGIN
     Net_129:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_129,
@@ -5405,6 +5433,7 @@ BEGIN
     Net_130:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_130,
@@ -5416,6 +5445,7 @@ BEGIN
     Net_131:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_131,
@@ -5427,6 +5457,7 @@ BEGIN
     Net_132:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_132,
@@ -5438,6 +5469,7 @@ BEGIN
     Net_133:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_133,
@@ -5449,6 +5481,7 @@ BEGIN
     Net_134:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_134,
@@ -5460,6 +5493,7 @@ BEGIN
     Net_136:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_136,
@@ -5471,6 +5505,7 @@ BEGIN
     Net_135:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_135,
@@ -5482,18 +5517,20 @@ BEGIN
     Net_156:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (!main_0 * !main_1 * main_2 * !main_3) + (!main_0 * main_1 * !main_2 * !main_3) + (!main_0 * main_1 * main_2 * main_3) + (main_0 * !main_1 * !main_2 * !main_3) + (main_0 * !main_1 * main_2 * main_3) + (main_0 * main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_156,
             main_0 => Net_92,
             main_1 => Net_157,
-            main_2 => Net_161,
-            main_3 => Net_160);
+            main_2 => Net_160,
+            main_3 => Net_161);
 
     Net_161:macrocell
         GENERIC MAP(
             soft => 1,
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * !main_7)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161,
@@ -5510,6 +5547,7 @@ BEGIN
         GENERIC MAP(
             soft => 1,
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * !main_7)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188,
@@ -5525,6 +5563,7 @@ BEGIN
     Net_161_split_4:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_4,
@@ -5539,6 +5578,7 @@ BEGIN
     Net_161_split_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_3,
@@ -5553,6 +5593,7 @@ BEGIN
     Net_161_split_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_2,
@@ -5567,6 +5608,7 @@ BEGIN
     Net_161_split_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_1,
@@ -5581,6 +5623,7 @@ BEGIN
     Net_188_split_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_1,
@@ -5589,12 +5632,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     \I2C_1:I2C_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "00")
+            int_type => "00",
+            is_nmi => 0)
         PORT MAP(
             interrupt => \I2C_1:Net_697\,
             clock => ClockBlock_BUS_CLK);
@@ -5614,6 +5658,7 @@ BEGIN
     Net_188_split_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_2,
@@ -5622,12 +5667,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_220_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_3) + (main_1 * main_2 * main_3)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5641,6 +5687,7 @@ BEGIN
     Net_220_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_3) + (main_2 * main_3)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5654,6 +5701,7 @@ BEGIN
     Net_220_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2) + (!main_3)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5667,6 +5715,7 @@ BEGIN
     Net_220_0:macrocell
         GENERIC MAP(
             eqn_main => "1'b0",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5676,6 +5725,7 @@ BEGIN
     Net_50_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5688,6 +5738,7 @@ BEGIN
     Net_50_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5699,6 +5750,7 @@ BEGIN
     Net_50_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5709,6 +5761,7 @@ BEGIN
     Net_188_split_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_3,
@@ -5717,12 +5770,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_4:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_4,
@@ -5731,12 +5785,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_5:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_5,
@@ -5745,12 +5800,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_6:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_6,
@@ -5759,12 +5815,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_7:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_7,
@@ -5773,7 +5830,7 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
 END __DEFAULT__;

@@ -1,6 +1,6 @@
--- Project:   C:\Users\doug_000\Documents\GitHub\LB-RPPSOC\RPPSOC-GPIO18Blink.cydsn\RPPSOC-GPIO18Blink.cyprj
--- Generated: 05/28/2016 12:51:19
--- PSoC Creator  3.3 SP2
+-- Project:   C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\RPPSOC-GPIO18Blink.cydsn\RPPSOC-GPIO18Blink.cyprj
+-- Generated: 10/04/2022 08:45:36
+-- PSoC Creator  4.4
 
 ENTITY \RPPSOC-GPIO18Blink\ IS
     PORT(
@@ -78,58 +78,58 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL LED5_4(0)__PA : bit;
     SIGNAL Net_100 : bit;
-    ATTRIBUTE placement_force OF Net_100 : SIGNAL IS "U(2,3,B)3";
+    ATTRIBUTE placement_force OF Net_100 : SIGNAL IS "U(2,3,B)1";
     SIGNAL Net_101 : bit;
-    ATTRIBUTE placement_force OF Net_101 : SIGNAL IS "U(3,2,A)2";
+    ATTRIBUTE placement_force OF Net_101 : SIGNAL IS "U(3,3,B)3";
     SIGNAL Net_102 : bit;
-    ATTRIBUTE placement_force OF Net_102 : SIGNAL IS "U(3,2,B)1";
+    ATTRIBUTE placement_force OF Net_102 : SIGNAL IS "U(3,3,A)3";
     SIGNAL Net_103 : bit;
     ATTRIBUTE placement_force OF Net_103 : SIGNAL IS "U(3,3,A)1";
     SIGNAL Net_104 : bit;
-    ATTRIBUTE placement_force OF Net_104 : SIGNAL IS "U(3,2,A)3";
+    ATTRIBUTE placement_force OF Net_104 : SIGNAL IS "U(3,1,A)3";
     SIGNAL Net_105 : bit;
-    ATTRIBUTE placement_force OF Net_105 : SIGNAL IS "U(2,3,B)0";
+    ATTRIBUTE placement_force OF Net_105 : SIGNAL IS "U(2,3,B)3";
     SIGNAL Net_129 : bit;
-    ATTRIBUTE placement_force OF Net_129 : SIGNAL IS "U(3,3,A)3";
+    ATTRIBUTE placement_force OF Net_129 : SIGNAL IS "U(3,3,B)2";
     SIGNAL Net_130 : bit;
-    ATTRIBUTE placement_force OF Net_130 : SIGNAL IS "U(3,2,A)1";
+    ATTRIBUTE placement_force OF Net_130 : SIGNAL IS "U(2,3,B)0";
     SIGNAL Net_131 : bit;
-    ATTRIBUTE placement_force OF Net_131 : SIGNAL IS "U(3,1,A)3";
+    ATTRIBUTE placement_force OF Net_131 : SIGNAL IS "U(1,3,B)3";
     SIGNAL Net_132 : bit;
-    ATTRIBUTE placement_force OF Net_132 : SIGNAL IS "U(3,3,A)2";
+    ATTRIBUTE placement_force OF Net_132 : SIGNAL IS "U(3,3,A)0";
     SIGNAL Net_133 : bit;
-    ATTRIBUTE placement_force OF Net_133 : SIGNAL IS "U(2,3,B)1";
+    ATTRIBUTE placement_force OF Net_133 : SIGNAL IS "U(3,0,B)2";
     SIGNAL Net_134 : bit;
-    ATTRIBUTE placement_force OF Net_134 : SIGNAL IS "U(2,3,A)3";
+    ATTRIBUTE placement_force OF Net_134 : SIGNAL IS "U(1,3,B)2";
     SIGNAL Net_135 : bit;
-    ATTRIBUTE placement_force OF Net_135 : SIGNAL IS "U(3,1,B)2";
+    ATTRIBUTE placement_force OF Net_135 : SIGNAL IS "U(3,0,A)1";
     SIGNAL Net_136 : bit;
-    ATTRIBUTE placement_force OF Net_136 : SIGNAL IS "U(1,2,B)2";
+    ATTRIBUTE placement_force OF Net_136 : SIGNAL IS "U(3,1,B)2";
     SIGNAL Net_137 : bit;
-    ATTRIBUTE placement_force OF Net_137 : SIGNAL IS "U(2,3,A)1";
+    ATTRIBUTE placement_force OF Net_137 : SIGNAL IS "U(3,1,A)0";
     SIGNAL Net_156 : bit;
     ATTRIBUTE placement_force OF Net_156 : SIGNAL IS "U(0,1,A)0";
     SIGNAL Net_157 : bit;
     SIGNAL Net_160 : bit;
     SIGNAL Net_161 : bit;
-    ATTRIBUTE placement_force OF Net_161 : SIGNAL IS "U(1,2,B)0";
+    ATTRIBUTE placement_force OF Net_161 : SIGNAL IS "U(2,1,A)0";
     ATTRIBUTE soft OF Net_161 : SIGNAL IS 1;
     SIGNAL Net_161_split : bit;
-    ATTRIBUTE placement_force OF Net_161_split : SIGNAL IS "U(0,2,B)0";
+    ATTRIBUTE placement_force OF Net_161_split : SIGNAL IS "U(2,2,A)0";
     SIGNAL Net_161_split_1 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_1 : SIGNAL IS "U(0,3,B)0";
+    ATTRIBUTE placement_force OF Net_161_split_1 : SIGNAL IS "U(2,0,A)0";
     SIGNAL Net_161_split_2 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_2 : SIGNAL IS "U(1,2,A)0";
+    ATTRIBUTE placement_force OF Net_161_split_2 : SIGNAL IS "U(1,1,A)0";
     SIGNAL Net_161_split_3 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_3 : SIGNAL IS "U(0,2,A)0";
+    ATTRIBUTE placement_force OF Net_161_split_3 : SIGNAL IS "U(2,0,B)0";
     SIGNAL Net_161_split_4 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_4 : SIGNAL IS "U(1,3,B)0";
+    ATTRIBUTE placement_force OF Net_161_split_4 : SIGNAL IS "U(1,1,B)0";
     SIGNAL Net_161_split_5 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_5 : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF Net_161_split_5 : SIGNAL IS "U(2,3,A)0";
     SIGNAL Net_161_split_6 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_6 : SIGNAL IS "U(1,3,A)0";
+    ATTRIBUTE placement_force OF Net_161_split_6 : SIGNAL IS "U(2,1,B)2";
     SIGNAL Net_161_split_7 : bit;
-    ATTRIBUTE placement_force OF Net_161_split_7 : SIGNAL IS "U(0,3,A)0";
+    ATTRIBUTE placement_force OF Net_161_split_7 : SIGNAL IS "U(2,2,B)0";
     SIGNAL Net_164 : bit;
     SIGNAL Net_167 : bit;
     SIGNAL Net_170 : bit;
@@ -138,24 +138,24 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     SIGNAL Net_183 : bit;
     SIGNAL Net_186 : bit;
     SIGNAL Net_188 : bit;
-    ATTRIBUTE placement_force OF Net_188 : SIGNAL IS "U(1,1,B)2";
+    ATTRIBUTE placement_force OF Net_188 : SIGNAL IS "U(1,3,B)0";
     ATTRIBUTE soft OF Net_188 : SIGNAL IS 1;
     SIGNAL Net_188_split : bit;
-    ATTRIBUTE placement_force OF Net_188_split : SIGNAL IS "U(2,2,A)0";
+    ATTRIBUTE placement_force OF Net_188_split : SIGNAL IS "U(0,2,B)0";
     SIGNAL Net_188_split_1 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_1 : SIGNAL IS "U(0,1,B)0";
+    ATTRIBUTE placement_force OF Net_188_split_1 : SIGNAL IS "U(0,3,A)0";
     SIGNAL Net_188_split_2 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_2 : SIGNAL IS "U(2,1,B)0";
+    ATTRIBUTE placement_force OF Net_188_split_2 : SIGNAL IS "U(1,2,A)0";
     SIGNAL Net_188_split_3 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_3 : SIGNAL IS "U(2,1,A)0";
+    ATTRIBUTE placement_force OF Net_188_split_3 : SIGNAL IS "U(0,1,B)0";
     SIGNAL Net_188_split_4 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_4 : SIGNAL IS "U(0,0,B)0";
+    ATTRIBUTE placement_force OF Net_188_split_4 : SIGNAL IS "U(0,2,A)0";
     SIGNAL Net_188_split_5 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_5 : SIGNAL IS "U(1,0,A)0";
+    ATTRIBUTE placement_force OF Net_188_split_5 : SIGNAL IS "U(1,3,A)0";
     SIGNAL Net_188_split_6 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_6 : SIGNAL IS "U(1,0,B)0";
+    ATTRIBUTE placement_force OF Net_188_split_6 : SIGNAL IS "U(1,2,B)0";
     SIGNAL Net_188_split_7 : bit;
-    ATTRIBUTE placement_force OF Net_188_split_7 : SIGNAL IS "U(0,0,A)0";
+    ATTRIBUTE placement_force OF Net_188_split_7 : SIGNAL IS "U(0,3,B)0";
     SIGNAL Net_190 : bit;
     SIGNAL Net_193 : bit;
     SIGNAL Net_196 : bit;
@@ -165,51 +165,51 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     SIGNAL Net_207 : bit;
     ATTRIBUTE placement_force OF Net_207 : SIGNAL IS "U(3,1,B)0";
     SIGNAL Net_208 : bit;
-    ATTRIBUTE placement_force OF Net_208 : SIGNAL IS "U(3,1,A)1";
+    ATTRIBUTE placement_force OF Net_208 : SIGNAL IS "U(3,1,B)1";
     SIGNAL Net_209 : bit;
-    ATTRIBUTE placement_force OF Net_209 : SIGNAL IS "U(2,3,A)2";
+    ATTRIBUTE placement_force OF Net_209 : SIGNAL IS "U(3,0,A)2";
     SIGNAL Net_210 : bit;
-    ATTRIBUTE placement_force OF Net_210 : SIGNAL IS "U(3,3,B)0";
+    ATTRIBUTE placement_force OF Net_210 : SIGNAL IS "U(3,3,A)2";
     SIGNAL Net_211 : bit;
-    ATTRIBUTE placement_force OF Net_211 : SIGNAL IS "U(3,1,A)0";
+    ATTRIBUTE placement_force OF Net_211 : SIGNAL IS "U(3,3,B)1";
     SIGNAL Net_212 : bit;
-    ATTRIBUTE placement_force OF Net_212 : SIGNAL IS "U(3,2,B)0";
+    ATTRIBUTE placement_force OF Net_212 : SIGNAL IS "U(3,0,B)3";
     SIGNAL Net_213 : bit;
-    ATTRIBUTE placement_force OF Net_213 : SIGNAL IS "U(3,3,B)3";
+    ATTRIBUTE placement_force OF Net_213 : SIGNAL IS "U(2,3,B)2";
     SIGNAL Net_220_0 : bit;
-    ATTRIBUTE placement_force OF Net_220_0 : SIGNAL IS "U(2,2,B)1";
+    ATTRIBUTE placement_force OF Net_220_0 : SIGNAL IS "U(2,2,A)1";
     SIGNAL Net_220_1 : bit;
-    ATTRIBUTE placement_force OF Net_220_1 : SIGNAL IS "U(2,2,B)0";
+    ATTRIBUTE placement_force OF Net_220_1 : SIGNAL IS "U(3,2,A)0";
     SIGNAL Net_220_2 : bit;
-    ATTRIBUTE placement_force OF Net_220_2 : SIGNAL IS "U(2,2,B)2";
+    ATTRIBUTE placement_force OF Net_220_2 : SIGNAL IS "U(3,2,A)1";
     SIGNAL Net_220_3 : bit;
-    ATTRIBUTE placement_force OF Net_220_3 : SIGNAL IS "U(2,2,B)3";
+    ATTRIBUTE placement_force OF Net_220_3 : SIGNAL IS "U(3,2,A)2";
     SIGNAL Net_50_1 : bit;
     ATTRIBUTE placement_force OF Net_50_1 : SIGNAL IS "U(3,2,B)2";
     SIGNAL Net_50_2 : bit;
     ATTRIBUTE placement_force OF Net_50_2 : SIGNAL IS "U(3,2,B)3";
     SIGNAL Net_50_3 : bit;
-    ATTRIBUTE placement_force OF Net_50_3 : SIGNAL IS "U(3,2,A)0";
+    ATTRIBUTE placement_force OF Net_50_3 : SIGNAL IS "U(3,2,B)1";
     SIGNAL Net_52 : bit;
     ATTRIBUTE global_signal OF Net_52 : SIGNAL IS true;
     SIGNAL Net_52_local : bit;
     SIGNAL Net_71 : bit;
-    ATTRIBUTE placement_force OF Net_71 : SIGNAL IS "U(1,1,B)3";
+    ATTRIBUTE placement_force OF Net_71 : SIGNAL IS "U(3,0,B)1";
     SIGNAL Net_72 : bit;
-    ATTRIBUTE placement_force OF Net_72 : SIGNAL IS "U(3,3,B)2";
+    ATTRIBUTE placement_force OF Net_72 : SIGNAL IS "U(2,1,A)2";
     SIGNAL Net_73 : bit;
-    ATTRIBUTE placement_force OF Net_73 : SIGNAL IS "U(3,1,A)2";
+    ATTRIBUTE placement_force OF Net_73 : SIGNAL IS "U(3,0,A)3";
     SIGNAL Net_74 : bit;
-    ATTRIBUTE placement_force OF Net_74 : SIGNAL IS "U(2,3,B)2";
+    ATTRIBUTE placement_force OF Net_74 : SIGNAL IS "U(3,0,A)0";
     SIGNAL Net_75 : bit;
-    ATTRIBUTE placement_force OF Net_75 : SIGNAL IS "U(3,1,B)1";
+    ATTRIBUTE placement_force OF Net_75 : SIGNAL IS "U(3,1,A)1";
     SIGNAL Net_92 : bit;
     SIGNAL Net_93 : bit;
-    ATTRIBUTE placement_force OF Net_93 : SIGNAL IS "U(3,1,B)3";
+    ATTRIBUTE placement_force OF Net_93 : SIGNAL IS "U(3,2,B)0";
     SIGNAL Net_94 : bit;
-    ATTRIBUTE placement_force OF Net_94 : SIGNAL IS "U(3,3,A)0";
+    ATTRIBUTE placement_force OF Net_94 : SIGNAL IS "U(3,0,B)0";
     SIGNAL Net_99 : bit;
-    ATTRIBUTE placement_force OF Net_99 : SIGNAL IS "U(3,3,B)1";
+    ATTRIBUTE placement_force OF Net_99 : SIGNAL IS "U(3,3,B)0";
     SIGNAL P3_10(0)__PA : bit;
     SIGNAL P3_11(0)__PA : bit;
     SIGNAL P3_12(0)__PA : bit;
@@ -273,7 +273,7 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     SIGNAL \ClockBlock.clk_bus_glb_ff__sig\ : bit;
     ATTRIBUTE lib_model OF Net_161_split : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_161_split : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF Net_161_split : LABEL IS "U(2,2)";
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF LED5_4(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF LED5_4(0) : LABEL IS "P5[4]";
@@ -374,17 +374,17 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     ATTRIBUTE lib_model OF SDA_1(0) : LABEL IS "iocell49";
     ATTRIBUTE Location OF SDA_1(0) : LABEL IS "P12[5]";
     ATTRIBUTE lib_model OF Net_93 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_93 : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF Net_93 : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF Net_94 : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF Net_94 : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF Net_94 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_71 : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF Net_71 : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF Net_71 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_72 : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF Net_72 : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF Net_72 : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF Net_73 : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF Net_73 : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF Net_73 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_74 : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF Net_74 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_74 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_75 : LABEL IS "macrocell8";
     ATTRIBUTE Location OF Net_75 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_207 : LABEL IS "macrocell9";
@@ -392,81 +392,81 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     ATTRIBUTE lib_model OF Net_208 : LABEL IS "macrocell10";
     ATTRIBUTE Location OF Net_208 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_209 : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF Net_209 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_209 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_210 : LABEL IS "macrocell12";
     ATTRIBUTE Location OF Net_210 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_211 : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF Net_211 : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF Net_211 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_212 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_212 : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF Net_212 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_213 : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF Net_213 : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF Net_213 : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF Net_188_split : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF Net_188_split : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_188_split : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF Net_161_split_7 : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF Net_161_split_7 : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF Net_161_split_7 : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_161_split_6 : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF Net_161_split_6 : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF Net_161_split_6 : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF Net_161_split_5 : LABEL IS "macrocell19";
-    ATTRIBUTE Location OF Net_161_split_5 : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF Net_161_split_5 : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF Net_99 : LABEL IS "macrocell20";
     ATTRIBUTE Location OF Net_99 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_100 : LABEL IS "macrocell21";
     ATTRIBUTE Location OF Net_100 : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF Net_101 : LABEL IS "macrocell22";
-    ATTRIBUTE Location OF Net_101 : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF Net_101 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_102 : LABEL IS "macrocell23";
-    ATTRIBUTE Location OF Net_102 : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF Net_102 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_103 : LABEL IS "macrocell24";
     ATTRIBUTE Location OF Net_103 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_104 : LABEL IS "macrocell25";
-    ATTRIBUTE Location OF Net_104 : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF Net_104 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_105 : LABEL IS "macrocell26";
     ATTRIBUTE Location OF Net_105 : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF Net_137 : LABEL IS "macrocell27";
-    ATTRIBUTE Location OF Net_137 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_137 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_129 : LABEL IS "macrocell28";
     ATTRIBUTE Location OF Net_129 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_130 : LABEL IS "macrocell29";
-    ATTRIBUTE Location OF Net_130 : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF Net_130 : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF Net_131 : LABEL IS "macrocell30";
-    ATTRIBUTE Location OF Net_131 : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF Net_131 : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF Net_132 : LABEL IS "macrocell31";
     ATTRIBUTE Location OF Net_132 : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF Net_133 : LABEL IS "macrocell32";
-    ATTRIBUTE Location OF Net_133 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_133 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_134 : LABEL IS "macrocell33";
-    ATTRIBUTE Location OF Net_134 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_134 : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF Net_136 : LABEL IS "macrocell34";
-    ATTRIBUTE Location OF Net_136 : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF Net_136 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_135 : LABEL IS "macrocell35";
-    ATTRIBUTE Location OF Net_135 : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF Net_135 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_156 : LABEL IS "macrocell36";
     ATTRIBUTE Location OF Net_156 : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF Net_161 : LABEL IS "macrocell37";
-    ATTRIBUTE Location OF Net_161 : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF Net_161 : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF Net_188 : LABEL IS "macrocell38";
-    ATTRIBUTE Location OF Net_188 : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF Net_188 : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF Net_161_split_4 : LABEL IS "macrocell39";
-    ATTRIBUTE Location OF Net_161_split_4 : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF Net_161_split_4 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_161_split_3 : LABEL IS "macrocell40";
-    ATTRIBUTE Location OF Net_161_split_3 : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF Net_161_split_3 : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF Net_161_split_2 : LABEL IS "macrocell41";
-    ATTRIBUTE Location OF Net_161_split_2 : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF Net_161_split_2 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_161_split_1 : LABEL IS "macrocell42";
-    ATTRIBUTE Location OF Net_161_split_1 : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF Net_161_split_1 : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF Net_188_split_1 : LABEL IS "macrocell43";
-    ATTRIBUTE Location OF Net_188_split_1 : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF Net_188_split_1 : LABEL IS "U(0,3)";
     ATTRIBUTE Location OF \I2C_1:I2C_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(15)]";
     ATTRIBUTE Location OF \I2C_1:I2C_FF\ : LABEL IS "F(I2C,0)";
     ATTRIBUTE lib_model OF Net_188_split_2 : LABEL IS "macrocell44";
-    ATTRIBUTE Location OF Net_188_split_2 : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF Net_188_split_2 : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF Net_220_3 : LABEL IS "macrocell45";
-    ATTRIBUTE Location OF Net_220_3 : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_220_3 : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF Net_220_2 : LABEL IS "macrocell46";
-    ATTRIBUTE Location OF Net_220_2 : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_220_2 : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF Net_220_1 : LABEL IS "macrocell47";
-    ATTRIBUTE Location OF Net_220_1 : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_220_1 : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF Net_220_0 : LABEL IS "macrocell48";
     ATTRIBUTE Location OF Net_220_0 : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_50_3 : LABEL IS "macrocell49";
@@ -476,15 +476,15 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     ATTRIBUTE lib_model OF Net_50_1 : LABEL IS "macrocell51";
     ATTRIBUTE Location OF Net_50_1 : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF Net_188_split_3 : LABEL IS "macrocell52";
-    ATTRIBUTE Location OF Net_188_split_3 : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF Net_188_split_3 : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF Net_188_split_4 : LABEL IS "macrocell53";
-    ATTRIBUTE Location OF Net_188_split_4 : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF Net_188_split_4 : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF Net_188_split_5 : LABEL IS "macrocell54";
-    ATTRIBUTE Location OF Net_188_split_5 : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF Net_188_split_5 : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF Net_188_split_6 : LABEL IS "macrocell55";
-    ATTRIBUTE Location OF Net_188_split_6 : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF Net_188_split_6 : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF Net_188_split_7 : LABEL IS "macrocell56";
-    ATTRIBUTE Location OF Net_188_split_7 : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF Net_188_split_7 : LABEL IS "U(0,3)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -581,11 +581,11 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-GPIO18Blink\ IS
     END COMPONENT;
     COMPONENT iocell
         PORT (
-            pin_input : IN std_ulogic;
             oe : IN std_ulogic;
             fb : OUT std_ulogic;
-            pad_in : IN std_ulogic;
             pa_out : OUT std_ulogic;
+            pin_input : IN std_ulogic;
+            pad_in : IN std_ulogic;
             pad_out : OUT std_ulogic;
             oe_reg : OUT std_ulogic;
             oe_internal : IN std_ulogic;
@@ -659,6 +659,7 @@ BEGIN
     Net_161_split:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split,
@@ -5204,6 +5205,7 @@ BEGIN
     Net_93:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_93,
@@ -5215,6 +5217,7 @@ BEGIN
     Net_94:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_94,
@@ -5226,6 +5229,7 @@ BEGIN
     Net_71:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_71,
@@ -5237,6 +5241,7 @@ BEGIN
     Net_72:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_72,
@@ -5248,6 +5253,7 @@ BEGIN
     Net_73:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_73,
@@ -5259,6 +5265,7 @@ BEGIN
     Net_74:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_74,
@@ -5270,6 +5277,7 @@ BEGIN
     Net_75:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_75,
@@ -5281,6 +5289,7 @@ BEGIN
     Net_207:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_207,
@@ -5292,6 +5301,7 @@ BEGIN
     Net_208:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_208,
@@ -5303,6 +5313,7 @@ BEGIN
     Net_209:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_209,
@@ -5314,6 +5325,7 @@ BEGIN
     Net_210:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_210,
@@ -5325,6 +5337,7 @@ BEGIN
     Net_211:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_211,
@@ -5336,6 +5349,7 @@ BEGIN
     Net_212:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_212,
@@ -5347,6 +5361,7 @@ BEGIN
     Net_213:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_213,
@@ -5358,6 +5373,7 @@ BEGIN
     Net_188_split:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split,
@@ -5366,12 +5382,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_161_split_7:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_7,
@@ -5386,6 +5403,7 @@ BEGIN
     Net_161_split_6:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_6,
@@ -5400,6 +5418,7 @@ BEGIN
     Net_161_split_5:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_5,
@@ -5414,6 +5433,7 @@ BEGIN
     Net_99:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_99,
@@ -5425,6 +5445,7 @@ BEGIN
     Net_100:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_100,
@@ -5436,6 +5457,7 @@ BEGIN
     Net_101:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_101,
@@ -5447,6 +5469,7 @@ BEGIN
     Net_102:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_102,
@@ -5458,6 +5481,7 @@ BEGIN
     Net_103:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_103,
@@ -5469,6 +5493,7 @@ BEGIN
     Net_104:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_104,
@@ -5480,6 +5505,7 @@ BEGIN
     Net_105:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_105,
@@ -5491,6 +5517,7 @@ BEGIN
     Net_137:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_137,
@@ -5502,6 +5529,7 @@ BEGIN
     Net_129:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_129,
@@ -5513,6 +5541,7 @@ BEGIN
     Net_130:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_130,
@@ -5524,6 +5553,7 @@ BEGIN
     Net_131:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_131,
@@ -5535,6 +5565,7 @@ BEGIN
     Net_132:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_132,
@@ -5546,6 +5577,7 @@ BEGIN
     Net_133:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_133,
@@ -5557,6 +5589,7 @@ BEGIN
     Net_134:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_134,
@@ -5568,6 +5601,7 @@ BEGIN
     Net_136:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_136,
@@ -5579,6 +5613,7 @@ BEGIN
     Net_135:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2 * main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_135,
@@ -5590,18 +5625,20 @@ BEGIN
     Net_156:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (!main_0 * !main_1 * main_2 * !main_3) + (!main_0 * main_1 * !main_2 * !main_3) + (!main_0 * main_1 * main_2 * main_3) + (main_0 * !main_1 * !main_2 * !main_3) + (main_0 * !main_1 * main_2 * main_3) + (main_0 * main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_156,
             main_0 => Net_92,
             main_1 => Net_157,
-            main_2 => Net_161,
-            main_3 => Net_160);
+            main_2 => Net_160,
+            main_3 => Net_161);
 
     Net_161:macrocell
         GENERIC MAP(
             soft => 1,
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * !main_7)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161,
@@ -5618,6 +5655,7 @@ BEGIN
         GENERIC MAP(
             soft => 1,
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6 * !main_7)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188,
@@ -5633,6 +5671,7 @@ BEGIN
     Net_161_split_4:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_4,
@@ -5647,6 +5686,7 @@ BEGIN
     Net_161_split_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_3,
@@ -5661,6 +5701,7 @@ BEGIN
     Net_161_split_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_2,
@@ -5675,6 +5716,7 @@ BEGIN
     Net_161_split_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_161_split_1,
@@ -5689,6 +5731,7 @@ BEGIN
     Net_188_split_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_1,
@@ -5697,12 +5740,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     \I2C_1:I2C_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "00")
+            int_type => "00",
+            is_nmi => 0)
         PORT MAP(
             interrupt => \I2C_1:Net_697\,
             clock => ClockBlock_BUS_CLK);
@@ -5722,6 +5766,7 @@ BEGIN
     Net_188_split_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_2,
@@ -5730,12 +5775,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_220_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_3) + (main_1 * main_2 * main_3)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5749,6 +5795,7 @@ BEGIN
     Net_220_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_3) + (main_2 * main_3)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5762,6 +5809,7 @@ BEGIN
     Net_220_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * !main_2) + (!main_3)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5775,6 +5823,7 @@ BEGIN
     Net_220_0:macrocell
         GENERIC MAP(
             eqn_main => "1'b0",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5784,6 +5833,7 @@ BEGIN
     Net_50_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5796,6 +5846,7 @@ BEGIN
     Net_50_2:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5807,6 +5858,7 @@ BEGIN
     Net_50_1:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
+            regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
@@ -5817,6 +5869,7 @@ BEGIN
     Net_188_split_3:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_3,
@@ -5825,12 +5878,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_4:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_4,
@@ -5839,12 +5893,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_5:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * !main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_5,
@@ -5853,12 +5908,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_6:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_6,
@@ -5867,12 +5923,13 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
     Net_188_split_7:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * !main_2 * main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5 * main_6) + (!main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => Net_188_split_7,
@@ -5881,7 +5938,7 @@ BEGIN
             main_2 => Net_193,
             main_3 => Net_196,
             main_4 => Net_201,
-            main_5 => Net_205,
-            main_6 => Net_204);
+            main_5 => Net_204,
+            main_6 => Net_205);
 
 END __DEFAULT__;

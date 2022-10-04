@@ -2,7 +2,7 @@
 --	Conversion of RPPSOC-GPIO18Blink.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat May 28 12:51:07 2016
+--	Tue Oct 04 08:45:28 2022
 --
 
 USE cypress.cypress.all;
@@ -453,39 +453,39 @@ SIGNAL tmpIO_0__P3_17_net_0 : bit;
 TERMINAL tmpSIOVREF__P3_17_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P3_17_net_0 : bit;
 SIGNAL Net_159 : bit;
-SIGNAL Net_162 : bit;
 SIGNAL Net_157 : bit;
+SIGNAL Net_162 : bit;
 SIGNAL tmpOE__RP_GPIO_17_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_17_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_17_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_17_net_0 : bit;
+SIGNAL Net_160 : bit;
 SIGNAL Net_161 : bit;
 ATTRIBUTE soft of Net_161:SIGNAL IS '1';
-SIGNAL Net_160 : bit;
 SIGNAL tmpOE__RP_GPIO_27_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_27_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_27_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_27_net_0 : bit;
-SIGNAL Net_169 : bit;
 SIGNAL Net_164 : bit;
+SIGNAL Net_169 : bit;
 SIGNAL tmpOE__RP_GPIO_22_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_22_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_22_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_22_net_0 : bit;
-SIGNAL Net_168 : bit;
 SIGNAL Net_167 : bit;
+SIGNAL Net_168 : bit;
 SIGNAL tmpOE__RP_GPIO_23_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_23_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_23_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_23_net_0 : bit;
-SIGNAL Net_171 : bit;
 SIGNAL Net_170 : bit;
+SIGNAL Net_171 : bit;
 SIGNAL tmpOE__RP_GPIO_24_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_24_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_24_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_24_net_0 : bit;
-SIGNAL Net_199 : bit;
 SIGNAL Net_173 : bit;
+SIGNAL Net_199 : bit;
 SIGNAL tmpOE__RP_GPIO_25_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_25_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_25_net_0 : bit;
@@ -509,16 +509,16 @@ SIGNAL tmpIO_0__RP_GPIO_12_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_12_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_12_net_0 : bit;
 SIGNAL Net_192 : bit;
-SIGNAL Net_191 : bit;
 SIGNAL Net_190 : bit;
+SIGNAL Net_191 : bit;
 SIGNAL tmpOE__RP_GPIO_13_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_13_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_13_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_13_net_0 : bit;
-SIGNAL Net_198 : bit;
 SIGNAL Net_193 : bit;
-SIGNAL Net_197 : bit;
+SIGNAL Net_198 : bit;
 SIGNAL Net_196 : bit;
+SIGNAL Net_197 : bit;
 SIGNAL tmpOE__RP_GPIO_19_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_19_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_19_net_0 : bit;
@@ -527,14 +527,14 @@ SIGNAL tmpOE__RP_GPIO_16_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_16_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_16_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_16_net_0 : bit;
-SIGNAL Net_202 : bit;
 SIGNAL Net_201 : bit;
+SIGNAL Net_202 : bit;
 SIGNAL tmpOE__RP_GPIO_26_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_26_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_26_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RP_GPIO_26_net_0 : bit;
-SIGNAL Net_205 : bit;
 SIGNAL Net_204 : bit;
+SIGNAL Net_205 : bit;
 SIGNAL tmpOE__RP_GPIO_20_net_0 : bit;
 SIGNAL tmpIO_0__RP_GPIO_20_net_0 : bit;
 TERMINAL tmpSIOVREF__RP_GPIO_20_net_0 : bit;
@@ -769,8 +769,8 @@ SIGNAL Net_240 : bit;
 SIGNAL \I2C_1:timeout_clk\ : bit;
 SIGNAL Net_268 : bit;
 SIGNAL \I2C_1:Net_975\ : bit;
-SIGNAL Net_267 : bit;
 SIGNAL Net_266 : bit;
+SIGNAL Net_267 : bit;
 SIGNAL tmpOE__SCL_1_net_0 : bit;
 SIGNAL tmpFB_0__SCL_1_net_0 : bit;
 TERMINAL tmpSIOVREF__SCL_1_net_0 : bit;
@@ -867,14 +867,14 @@ Net_136 <= ((not Net_50_0 and Net_50_3 and Net_50_2 and Net_50_1));
 
 Net_135 <= ((Net_50_3 and Net_50_2 and Net_50_1 and Net_50_0));
 
-Net_156 <= ((not Net_157 and not Net_161 and not Net_160 and Net_92)
-	OR (not Net_92 and not Net_161 and not Net_160 and Net_157)
-	OR (not Net_92 and not Net_157 and not Net_160 and Net_161)
-	OR (not Net_160 and Net_92 and Net_157 and Net_161)
+Net_156 <= ((not Net_157 and not Net_160 and not Net_161 and Net_92)
+	OR (not Net_92 and not Net_160 and not Net_161 and Net_157)
 	OR (not Net_92 and not Net_157 and not Net_161 and Net_160)
 	OR (not Net_161 and Net_92 and Net_157 and Net_160)
-	OR (not Net_157 and Net_92 and Net_161 and Net_160)
-	OR (not Net_92 and Net_157 and Net_161 and Net_160));
+	OR (not Net_92 and not Net_157 and not Net_160 and Net_161)
+	OR (not Net_160 and Net_92 and Net_157 and Net_161)
+	OR (not Net_157 and Net_92 and Net_160 and Net_161)
+	OR (not Net_92 and Net_157 and Net_160 and Net_161));
 
 Net_161 <= ((not Net_167 and not Net_170 and not Net_173 and not Net_176 and not Net_183 and not Net_188 and Net_164)
 	OR (not Net_164 and not Net_170 and not Net_173 and not Net_176 and not Net_183 and not Net_188 and Net_167)
@@ -941,38 +941,22 @@ Net_161 <= ((not Net_167 and not Net_170 and not Net_173 and not Net_176 and not
 	OR (not Net_164 and not Net_167 and Net_170 and Net_173 and Net_176 and Net_183 and Net_188)
 	OR (Net_164 and Net_167 and Net_170 and Net_173 and Net_176 and Net_183 and Net_188));
 
-Net_188 <= ((not Net_190 and not Net_193 and not Net_196 and not Net_201 and not Net_205 and not Net_204 and Net_186)
-	OR (not Net_186 and not Net_193 and not Net_196 and not Net_201 and not Net_205 and not Net_204 and Net_190)
-	OR (not Net_186 and not Net_190 and not Net_196 and not Net_201 and not Net_205 and not Net_204 and Net_193)
-	OR (not Net_196 and not Net_201 and not Net_205 and not Net_204 and Net_186 and Net_190 and Net_193)
-	OR (not Net_186 and not Net_190 and not Net_193 and not Net_201 and not Net_205 and not Net_204 and Net_196)
-	OR (not Net_193 and not Net_201 and not Net_205 and not Net_204 and Net_186 and Net_190 and Net_196)
-	OR (not Net_190 and not Net_201 and not Net_205 and not Net_204 and Net_186 and Net_193 and Net_196)
-	OR (not Net_186 and not Net_201 and not Net_205 and not Net_204 and Net_190 and Net_193 and Net_196)
-	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and not Net_205 and not Net_204 and Net_201)
-	OR (not Net_193 and not Net_196 and not Net_205 and not Net_204 and Net_186 and Net_190 and Net_201)
-	OR (not Net_190 and not Net_196 and not Net_205 and not Net_204 and Net_186 and Net_193 and Net_201)
-	OR (not Net_186 and not Net_196 and not Net_205 and not Net_204 and Net_190 and Net_193 and Net_201)
-	OR (not Net_190 and not Net_193 and not Net_205 and not Net_204 and Net_186 and Net_196 and Net_201)
-	OR (not Net_186 and not Net_193 and not Net_205 and not Net_204 and Net_190 and Net_196 and Net_201)
-	OR (not Net_186 and not Net_190 and not Net_205 and not Net_204 and Net_193 and Net_196 and Net_201)
-	OR (not Net_205 and not Net_204 and Net_186 and Net_190 and Net_193 and Net_196 and Net_201)
-	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and not Net_201 and not Net_204 and Net_205)
-	OR (not Net_193 and not Net_196 and not Net_201 and not Net_204 and Net_186 and Net_190 and Net_205)
-	OR (not Net_190 and not Net_196 and not Net_201 and not Net_204 and Net_186 and Net_193 and Net_205)
-	OR (not Net_186 and not Net_196 and not Net_201 and not Net_204 and Net_190 and Net_193 and Net_205)
-	OR (not Net_190 and not Net_193 and not Net_201 and not Net_204 and Net_186 and Net_196 and Net_205)
-	OR (not Net_186 and not Net_193 and not Net_201 and not Net_204 and Net_190 and Net_196 and Net_205)
-	OR (not Net_186 and not Net_190 and not Net_201 and not Net_204 and Net_193 and Net_196 and Net_205)
-	OR (not Net_201 and not Net_204 and Net_186 and Net_190 and Net_193 and Net_196 and Net_205)
-	OR (not Net_190 and not Net_193 and not Net_196 and not Net_204 and Net_186 and Net_201 and Net_205)
-	OR (not Net_186 and not Net_193 and not Net_196 and not Net_204 and Net_190 and Net_201 and Net_205)
-	OR (not Net_186 and not Net_190 and not Net_196 and not Net_204 and Net_193 and Net_201 and Net_205)
-	OR (not Net_196 and not Net_204 and Net_186 and Net_190 and Net_193 and Net_201 and Net_205)
-	OR (not Net_186 and not Net_190 and not Net_193 and not Net_204 and Net_196 and Net_201 and Net_205)
-	OR (not Net_193 and not Net_204 and Net_186 and Net_190 and Net_196 and Net_201 and Net_205)
-	OR (not Net_190 and not Net_204 and Net_186 and Net_193 and Net_196 and Net_201 and Net_205)
-	OR (not Net_186 and not Net_204 and Net_190 and Net_193 and Net_196 and Net_201 and Net_205)
+Net_188 <= ((not Net_190 and not Net_193 and not Net_196 and not Net_201 and not Net_204 and not Net_205 and Net_186)
+	OR (not Net_186 and not Net_193 and not Net_196 and not Net_201 and not Net_204 and not Net_205 and Net_190)
+	OR (not Net_186 and not Net_190 and not Net_196 and not Net_201 and not Net_204 and not Net_205 and Net_193)
+	OR (not Net_196 and not Net_201 and not Net_204 and not Net_205 and Net_186 and Net_190 and Net_193)
+	OR (not Net_186 and not Net_190 and not Net_193 and not Net_201 and not Net_204 and not Net_205 and Net_196)
+	OR (not Net_193 and not Net_201 and not Net_204 and not Net_205 and Net_186 and Net_190 and Net_196)
+	OR (not Net_190 and not Net_201 and not Net_204 and not Net_205 and Net_186 and Net_193 and Net_196)
+	OR (not Net_186 and not Net_201 and not Net_204 and not Net_205 and Net_190 and Net_193 and Net_196)
+	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and not Net_204 and not Net_205 and Net_201)
+	OR (not Net_193 and not Net_196 and not Net_204 and not Net_205 and Net_186 and Net_190 and Net_201)
+	OR (not Net_190 and not Net_196 and not Net_204 and not Net_205 and Net_186 and Net_193 and Net_201)
+	OR (not Net_186 and not Net_196 and not Net_204 and not Net_205 and Net_190 and Net_193 and Net_201)
+	OR (not Net_190 and not Net_193 and not Net_204 and not Net_205 and Net_186 and Net_196 and Net_201)
+	OR (not Net_186 and not Net_193 and not Net_204 and not Net_205 and Net_190 and Net_196 and Net_201)
+	OR (not Net_186 and not Net_190 and not Net_204 and not Net_205 and Net_193 and Net_196 and Net_201)
+	OR (not Net_204 and not Net_205 and Net_186 and Net_190 and Net_193 and Net_196 and Net_201)
 	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and not Net_201 and not Net_205 and Net_204)
 	OR (not Net_193 and not Net_196 and not Net_201 and not Net_205 and Net_186 and Net_190 and Net_204)
 	OR (not Net_190 and not Net_196 and not Net_201 and not Net_205 and Net_186 and Net_193 and Net_204)
@@ -989,22 +973,38 @@ Net_188 <= ((not Net_190 and not Net_193 and not Net_196 and not Net_201 and not
 	OR (not Net_193 and not Net_205 and Net_186 and Net_190 and Net_196 and Net_201 and Net_204)
 	OR (not Net_190 and not Net_205 and Net_186 and Net_193 and Net_196 and Net_201 and Net_204)
 	OR (not Net_186 and not Net_205 and Net_190 and Net_193 and Net_196 and Net_201 and Net_204)
-	OR (not Net_190 and not Net_193 and not Net_196 and not Net_201 and Net_186 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_193 and not Net_196 and not Net_201 and Net_190 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_190 and not Net_196 and not Net_201 and Net_193 and Net_205 and Net_204)
-	OR (not Net_196 and not Net_201 and Net_186 and Net_190 and Net_193 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_190 and not Net_193 and not Net_201 and Net_196 and Net_205 and Net_204)
-	OR (not Net_193 and not Net_201 and Net_186 and Net_190 and Net_196 and Net_205 and Net_204)
-	OR (not Net_190 and not Net_201 and Net_186 and Net_193 and Net_196 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_201 and Net_190 and Net_193 and Net_196 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and Net_201 and Net_205 and Net_204)
-	OR (not Net_193 and not Net_196 and Net_186 and Net_190 and Net_201 and Net_205 and Net_204)
-	OR (not Net_190 and not Net_196 and Net_186 and Net_193 and Net_201 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_196 and Net_190 and Net_193 and Net_201 and Net_205 and Net_204)
-	OR (not Net_190 and not Net_193 and Net_186 and Net_196 and Net_201 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_193 and Net_190 and Net_196 and Net_201 and Net_205 and Net_204)
-	OR (not Net_186 and not Net_190 and Net_193 and Net_196 and Net_201 and Net_205 and Net_204)
-	OR (Net_186 and Net_190 and Net_193 and Net_196 and Net_201 and Net_205 and Net_204));
+	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and not Net_201 and not Net_204 and Net_205)
+	OR (not Net_193 and not Net_196 and not Net_201 and not Net_204 and Net_186 and Net_190 and Net_205)
+	OR (not Net_190 and not Net_196 and not Net_201 and not Net_204 and Net_186 and Net_193 and Net_205)
+	OR (not Net_186 and not Net_196 and not Net_201 and not Net_204 and Net_190 and Net_193 and Net_205)
+	OR (not Net_190 and not Net_193 and not Net_201 and not Net_204 and Net_186 and Net_196 and Net_205)
+	OR (not Net_186 and not Net_193 and not Net_201 and not Net_204 and Net_190 and Net_196 and Net_205)
+	OR (not Net_186 and not Net_190 and not Net_201 and not Net_204 and Net_193 and Net_196 and Net_205)
+	OR (not Net_201 and not Net_204 and Net_186 and Net_190 and Net_193 and Net_196 and Net_205)
+	OR (not Net_190 and not Net_193 and not Net_196 and not Net_204 and Net_186 and Net_201 and Net_205)
+	OR (not Net_186 and not Net_193 and not Net_196 and not Net_204 and Net_190 and Net_201 and Net_205)
+	OR (not Net_186 and not Net_190 and not Net_196 and not Net_204 and Net_193 and Net_201 and Net_205)
+	OR (not Net_196 and not Net_204 and Net_186 and Net_190 and Net_193 and Net_201 and Net_205)
+	OR (not Net_186 and not Net_190 and not Net_193 and not Net_204 and Net_196 and Net_201 and Net_205)
+	OR (not Net_193 and not Net_204 and Net_186 and Net_190 and Net_196 and Net_201 and Net_205)
+	OR (not Net_190 and not Net_204 and Net_186 and Net_193 and Net_196 and Net_201 and Net_205)
+	OR (not Net_186 and not Net_204 and Net_190 and Net_193 and Net_196 and Net_201 and Net_205)
+	OR (not Net_190 and not Net_193 and not Net_196 and not Net_201 and Net_186 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_193 and not Net_196 and not Net_201 and Net_190 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_190 and not Net_196 and not Net_201 and Net_193 and Net_204 and Net_205)
+	OR (not Net_196 and not Net_201 and Net_186 and Net_190 and Net_193 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_190 and not Net_193 and not Net_201 and Net_196 and Net_204 and Net_205)
+	OR (not Net_193 and not Net_201 and Net_186 and Net_190 and Net_196 and Net_204 and Net_205)
+	OR (not Net_190 and not Net_201 and Net_186 and Net_193 and Net_196 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_201 and Net_190 and Net_193 and Net_196 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_190 and not Net_193 and not Net_196 and Net_201 and Net_204 and Net_205)
+	OR (not Net_193 and not Net_196 and Net_186 and Net_190 and Net_201 and Net_204 and Net_205)
+	OR (not Net_190 and not Net_196 and Net_186 and Net_193 and Net_201 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_196 and Net_190 and Net_193 and Net_201 and Net_204 and Net_205)
+	OR (not Net_190 and not Net_193 and Net_186 and Net_196 and Net_201 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_193 and Net_190 and Net_196 and Net_201 and Net_204 and Net_205)
+	OR (not Net_186 and not Net_190 and Net_193 and Net_196 and Net_201 and Net_204 and Net_205)
+	OR (Net_186 and Net_190 and Net_193 and Net_196 and Net_201 and Net_204 and Net_205));
 
 Net_220_3D <= ((not Net_220_3 and Net_220_2 and Net_220_1 and Net_220_0)
 	OR (not Net_220_0 and Net_220_3)
@@ -4339,7 +4339,8 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>zero,
 		y=>\BasicCounter_2:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\);
 \I2C_1:I2C_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"00")
+	GENERIC MAP(int_type=>"00",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>\I2C_1:Net_697\);
 \I2C_1:I2C_FF\:cy_psoc3_i2c_v1_0
 	GENERIC MAP(cy_registers=>"",

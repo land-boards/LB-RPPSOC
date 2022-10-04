@@ -1,6 +1,6 @@
 /* ========================================
 *
-* Copyright YOUR COMPANY, THE YEAR
+* Copyright Land Boards LLC, 2022
 * All Rights Reserved
 * UNPUBLISHED, LICENSED SOFTWARE.
 *
@@ -37,7 +37,6 @@ int main()
 			I2C_1_SlaveClearWriteBuf();
 		}
 	}
-
 }
 
 /* [] END OF FILE */

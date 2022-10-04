@@ -1,0 +1,790 @@
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        **** *
+   3:main.c        **** * Copyright Land Boards LLC, 2022
+   4:main.c        **** * All Rights Reserved
+   5:main.c        **** * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        **** *
+   7:main.c        **** * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        **** * WHICH IS THE PROPERTY OF your company.
+   9:main.c        **** *
+  10:main.c        **** * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include <project.h>
+  13:main.c        **** 
+  14:main.c        **** int main()
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 16
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 84B0     		sub	sp, sp, #16
+  37              		.cfi_def_cfa_offset 24
+  16:main.c        **** 	uint8 wrBuf[10];
+  17:main.c        **** 	uint8 userArray[10];
+  18:main.c        **** 	uint8 byteCnt;
+  19:main.c        ****     uint32 i;
+  20:main.c        **** 	CyGlobalIntEnable; /* Enable global interrupts. */
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 2
+
+
+  38              		.loc 1 20 0
+  39              		.syntax unified
+  40              	@ 20 "main.c" 1
+  41 0004 62B6     		CPSIE   i
+  42              	@ 0 "" 2
+  21:main.c        **** 	/* Initialize write buffer before call I2C_Start */
+  22:main.c        **** 	I2C_1_SlaveInitWriteBuf((uint8 *) wrBuf, 10);
+  43              		.loc 1 22 0
+  44              		.thumb
+  45              		.syntax unified
+  46 0006 0A21     		movs	r1, #10
+  47 0008 01A8     		add	r0, sp, #4
+  48 000a FFF7FEFF 		bl	I2C_1_SlaveInitWriteBuf
+  49              	.LVL0:
+  23:main.c        **** 	/* Start I2C Slave operation */
+  24:main.c        **** 	I2C_1_Start();
+  50              		.loc 1 24 0
+  51 000e FFF7FEFF 		bl	I2C_1_Start
+  52              	.LVL1:
+  53              	.L2:
+  25:main.c        **** 	/* Wait for I2C master to complete a write */
+  26:main.c        **** 	for(;;) /* loop forever */
+  27:main.c        **** 	{
+  28:main.c        **** 		/* Wait for I2C master to complete a write */
+  29:main.c        **** 		if(0u != (I2C_1_SlaveStatus() & I2C_1_SSTAT_WR_CMPLT))
+  54              		.loc 1 29 0
+  55 0012 FFF7FEFF 		bl	I2C_1_SlaveStatus
+  56              	.LVL2:
+  57 0016 10F0100F 		tst	r0, #16
+  58 001a FAD0     		beq	.L2
+  30:main.c        **** 		{
+  31:main.c        **** 			byteCnt = I2C_1_SlaveGetWriteBufSize();
+  59              		.loc 1 31 0
+  60 001c FFF7FEFF 		bl	I2C_1_SlaveGetWriteBufSize
+  61              	.LVL3:
+  62 0020 0446     		mov	r4, r0
+  63              	.LVL4:
+  32:main.c        **** 			I2C_1_SlaveClearWriteStatus();
+  64              		.loc 1 32 0
+  65 0022 FFF7FEFF 		bl	I2C_1_SlaveClearWriteStatus
+  66              	.LVL5:
+  33:main.c        **** 			for(i=0; i < byteCnt; i++)
+  67              		.loc 1 33 0
+  68 0026 0023     		movs	r3, #0
+  69 0028 00E0     		b	.L3
+  70              	.LVL6:
+  71              	.L4:
+  72              		.loc 1 33 0 is_stmt 0 discriminator 3
+  73 002a 0133     		adds	r3, r3, #1
+  74              	.LVL7:
+  75              	.L3:
+  76              		.loc 1 33 0 discriminator 1
+  77 002c A342     		cmp	r3, r4
+  78 002e FCD3     		bcc	.L4
+  34:main.c        **** 			{
+  35:main.c        **** 				userArray[i] = wrBuf[i]; /* Transfer data */
+  36:main.c        **** 			}
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 3
+
+
+  37:main.c        **** 			I2C_1_SlaveClearWriteBuf();
+  79              		.loc 1 37 0 is_stmt 1
+  80 0030 FFF7FEFF 		bl	I2C_1_SlaveClearWriteBuf
+  81              	.LVL8:
+  82 0034 EDE7     		b	.L2
+  83              		.cfi_endproc
+  84              	.LFE63:
+  85              		.size	main, .-main
+  86 0036 00BF     		.text
+  87              	.Letext0:
+  88              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  89              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  90              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+  91              		.file 5 "Generated_Source\\PSoC5/I2C_1.h"
+  92              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+  93              		.section	.debug_info,"",%progbits
+  94              	.Ldebug_info0:
+  95 0000 AD010000 		.4byte	0x1ad
+  96 0004 0400     		.2byte	0x4
+  97 0006 00000000 		.4byte	.Ldebug_abbrev0
+  98 000a 04       		.byte	0x4
+  99 000b 01       		.uleb128 0x1
+ 100 000c 8B000000 		.4byte	.LASF26
+ 101 0010 0C       		.byte	0xc
+ 102 0011 06020000 		.4byte	.LASF27
+ 103 0015 9F010000 		.4byte	.LASF28
+ 104 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 105 001d 00000000 		.4byte	0
+ 106 0021 00000000 		.4byte	.Ldebug_line0
+ 107 0025 02       		.uleb128 0x2
+ 108 0026 01       		.byte	0x1
+ 109 0027 06       		.byte	0x6
+ 110 0028 4B020000 		.4byte	.LASF0
+ 111 002c 02       		.uleb128 0x2
+ 112 002d 01       		.byte	0x1
+ 113 002e 08       		.byte	0x8
+ 114 002f 7D000000 		.4byte	.LASF1
+ 115 0033 02       		.uleb128 0x2
+ 116 0034 02       		.byte	0x2
+ 117 0035 05       		.byte	0x5
+ 118 0036 26020000 		.4byte	.LASF2
+ 119 003a 02       		.uleb128 0x2
+ 120 003b 02       		.byte	0x2
+ 121 003c 07       		.byte	0x7
+ 122 003d 2D000000 		.4byte	.LASF3
+ 123 0041 03       		.uleb128 0x3
+ 124 0042 23000000 		.4byte	.LASF9
+ 125 0046 02       		.byte	0x2
+ 126 0047 3F       		.byte	0x3f
+ 127 0048 4C000000 		.4byte	0x4c
+ 128 004c 02       		.uleb128 0x2
+ 129 004d 04       		.byte	0x4
+ 130 004e 05       		.byte	0x5
+ 131 004f 36020000 		.4byte	.LASF4
+ 132 0053 02       		.uleb128 0x2
+ 133 0054 04       		.byte	0x4
+ 134 0055 07       		.byte	0x7
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 4
+
+
+ 135 0056 19010000 		.4byte	.LASF5
+ 136 005a 02       		.uleb128 0x2
+ 137 005b 08       		.byte	0x8
+ 138 005c 05       		.byte	0x5
+ 139 005d F8010000 		.4byte	.LASF6
+ 140 0061 02       		.uleb128 0x2
+ 141 0062 08       		.byte	0x8
+ 142 0063 07       		.byte	0x7
+ 143 0064 7B010000 		.4byte	.LASF7
+ 144 0068 04       		.uleb128 0x4
+ 145 0069 04       		.byte	0x4
+ 146 006a 05       		.byte	0x5
+ 147 006b 696E7400 		.ascii	"int\000"
+ 148 006f 02       		.uleb128 0x2
+ 149 0070 04       		.byte	0x4
+ 150 0071 07       		.byte	0x7
+ 151 0072 6E010000 		.4byte	.LASF8
+ 152 0076 03       		.uleb128 0x3
+ 153 0077 12020000 		.4byte	.LASF10
+ 154 007b 03       		.byte	0x3
+ 155 007c 2C       		.byte	0x2c
+ 156 007d 41000000 		.4byte	0x41
+ 157 0081 03       		.uleb128 0x3
+ 158 0082 30020000 		.4byte	.LASF11
+ 159 0086 04       		.byte	0x4
+ 160 0087 C2       		.byte	0xc2
+ 161 0088 2C000000 		.4byte	0x2c
+ 162 008c 03       		.uleb128 0x3
+ 163 008d 67010000 		.4byte	.LASF12
+ 164 0091 04       		.byte	0x4
+ 165 0092 C4       		.byte	0xc4
+ 166 0093 53000000 		.4byte	0x53
+ 167 0097 02       		.uleb128 0x2
+ 168 0098 04       		.byte	0x4
+ 169 0099 04       		.byte	0x4
+ 170 009a 77000000 		.4byte	.LASF13
+ 171 009e 02       		.uleb128 0x2
+ 172 009f 08       		.byte	0x8
+ 173 00a0 04       		.byte	0x4
+ 174 00a1 5B010000 		.4byte	.LASF14
+ 175 00a5 02       		.uleb128 0x2
+ 176 00a6 01       		.byte	0x1
+ 177 00a7 08       		.byte	0x8
+ 178 00a8 0D020000 		.4byte	.LASF15
+ 179 00ac 02       		.uleb128 0x2
+ 180 00ad 08       		.byte	0x8
+ 181 00ae 04       		.byte	0x4
+ 182 00af 3F020000 		.4byte	.LASF16
+ 183 00b3 02       		.uleb128 0x2
+ 184 00b4 04       		.byte	0x4
+ 185 00b5 07       		.byte	0x7
+ 186 00b6 EF010000 		.4byte	.LASF17
+ 187 00ba 05       		.uleb128 0x5
+ 188 00bb 62010000 		.4byte	.LASF29
+ 189 00bf 01       		.byte	0x1
+ 190 00c0 0E       		.byte	0xe
+ 191 00c1 68000000 		.4byte	0x68
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 5
+
+
+ 192 00c5 00000000 		.4byte	.LFB63
+ 193 00c9 36000000 		.4byte	.LFE63-.LFB63
+ 194 00cd 01       		.uleb128 0x1
+ 195 00ce 9C       		.byte	0x9c
+ 196 00cf 4D010000 		.4byte	0x14d
+ 197 00d3 06       		.uleb128 0x6
+ 198 00d4 55010000 		.4byte	.LASF18
+ 199 00d8 01       		.byte	0x1
+ 200 00d9 10       		.byte	0x10
+ 201 00da 4D010000 		.4byte	0x14d
+ 202 00de 02       		.uleb128 0x2
+ 203 00df 91       		.byte	0x91
+ 204 00e0 6C       		.sleb128 -20
+ 205 00e1 07       		.uleb128 0x7
+ 206 00e2 00000000 		.4byte	.LASF30
+ 207 00e6 01       		.byte	0x1
+ 208 00e7 11       		.byte	0x11
+ 209 00e8 4D010000 		.4byte	0x14d
+ 210 00ec 06       		.uleb128 0x6
+ 211 00ed 57020000 		.4byte	.LASF19
+ 212 00f1 01       		.byte	0x1
+ 213 00f2 12       		.byte	0x12
+ 214 00f3 81000000 		.4byte	0x81
+ 215 00f7 01       		.uleb128 0x1
+ 216 00f8 54       		.byte	0x54
+ 217 00f9 08       		.uleb128 0x8
+ 218 00fa 6900     		.ascii	"i\000"
+ 219 00fc 01       		.byte	0x1
+ 220 00fd 13       		.byte	0x13
+ 221 00fe 8C000000 		.4byte	0x8c
+ 222 0102 00000000 		.4byte	.LLST0
+ 223 0106 09       		.uleb128 0x9
+ 224 0107 0E000000 		.4byte	.LVL0
+ 225 010b 6E010000 		.4byte	0x16e
+ 226 010f 1F010000 		.4byte	0x11f
+ 227 0113 0A       		.uleb128 0xa
+ 228 0114 01       		.uleb128 0x1
+ 229 0115 50       		.byte	0x50
+ 230 0116 02       		.uleb128 0x2
+ 231 0117 91       		.byte	0x91
+ 232 0118 6C       		.sleb128 -20
+ 233 0119 0A       		.uleb128 0xa
+ 234 011a 01       		.uleb128 0x1
+ 235 011b 51       		.byte	0x51
+ 236 011c 01       		.uleb128 0x1
+ 237 011d 3A       		.byte	0x3a
+ 238 011e 00       		.byte	0
+ 239 011f 0B       		.uleb128 0xb
+ 240 0120 12000000 		.4byte	.LVL1
+ 241 0124 79010000 		.4byte	0x179
+ 242 0128 0B       		.uleb128 0xb
+ 243 0129 16000000 		.4byte	.LVL2
+ 244 012d 84010000 		.4byte	0x184
+ 245 0131 0B       		.uleb128 0xb
+ 246 0132 20000000 		.4byte	.LVL3
+ 247 0136 8F010000 		.4byte	0x18f
+ 248 013a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 6
+
+
+ 249 013b 26000000 		.4byte	.LVL5
+ 250 013f 9A010000 		.4byte	0x19a
+ 251 0143 0B       		.uleb128 0xb
+ 252 0144 34000000 		.4byte	.LVL8
+ 253 0148 A5010000 		.4byte	0x1a5
+ 254 014c 00       		.byte	0
+ 255 014d 0C       		.uleb128 0xc
+ 256 014e 81000000 		.4byte	0x81
+ 257 0152 5D010000 		.4byte	0x15d
+ 258 0156 0D       		.uleb128 0xd
+ 259 0157 B3000000 		.4byte	0xb3
+ 260 015b 09       		.byte	0x9
+ 261 015c 00       		.byte	0
+ 262 015d 0E       		.uleb128 0xe
+ 263 015e 92010000 		.4byte	.LASF31
+ 264 0162 06       		.byte	0x6
+ 265 0163 2A06     		.2byte	0x62a
+ 266 0165 69010000 		.4byte	0x169
+ 267 0169 0F       		.uleb128 0xf
+ 268 016a 76000000 		.4byte	0x76
+ 269 016e 10       		.uleb128 0x10
+ 270 016f 3D010000 		.4byte	.LASF20
+ 271 0173 3D010000 		.4byte	.LASF20
+ 272 0177 05       		.byte	0x5
+ 273 0178 C7       		.byte	0xc7
+ 274 0179 10       		.uleb128 0x10
+ 275 017a 1A020000 		.4byte	.LASF21
+ 276 017e 1A020000 		.4byte	.LASF21
+ 277 0182 05       		.byte	0x5
+ 278 0183 93       		.byte	0x93
+ 279 0184 10       		.uleb128 0x10
+ 280 0185 2B010000 		.4byte	.LASF22
+ 281 0189 2B010000 		.4byte	.LASF22
+ 282 018d 05       		.byte	0x5
+ 283 018e BE       		.byte	0xbe
+ 284 018f 10       		.uleb128 0x10
+ 285 0190 5C000000 		.4byte	.LASF23
+ 286 0194 5C000000 		.4byte	.LASF23
+ 287 0198 05       		.byte	0x5
+ 288 0199 CA       		.byte	0xca
+ 289 019a 10       		.uleb128 0x10
+ 290 019b 40000000 		.4byte	.LASF24
+ 291 019f 40000000 		.4byte	.LASF24
+ 292 01a3 05       		.byte	0x5
+ 293 01a4 C0       		.byte	0xc0
+ 294 01a5 10       		.uleb128 0x10
+ 295 01a6 0A000000 		.4byte	.LASF25
+ 296 01aa 0A000000 		.4byte	.LASF25
+ 297 01ae 05       		.byte	0x5
+ 298 01af CC       		.byte	0xcc
+ 299 01b0 00       		.byte	0
+ 300              		.section	.debug_abbrev,"",%progbits
+ 301              	.Ldebug_abbrev0:
+ 302 0000 01       		.uleb128 0x1
+ 303 0001 11       		.uleb128 0x11
+ 304 0002 01       		.byte	0x1
+ 305 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 7
+
+
+ 306 0004 0E       		.uleb128 0xe
+ 307 0005 13       		.uleb128 0x13
+ 308 0006 0B       		.uleb128 0xb
+ 309 0007 03       		.uleb128 0x3
+ 310 0008 0E       		.uleb128 0xe
+ 311 0009 1B       		.uleb128 0x1b
+ 312 000a 0E       		.uleb128 0xe
+ 313 000b 55       		.uleb128 0x55
+ 314 000c 17       		.uleb128 0x17
+ 315 000d 11       		.uleb128 0x11
+ 316 000e 01       		.uleb128 0x1
+ 317 000f 10       		.uleb128 0x10
+ 318 0010 17       		.uleb128 0x17
+ 319 0011 00       		.byte	0
+ 320 0012 00       		.byte	0
+ 321 0013 02       		.uleb128 0x2
+ 322 0014 24       		.uleb128 0x24
+ 323 0015 00       		.byte	0
+ 324 0016 0B       		.uleb128 0xb
+ 325 0017 0B       		.uleb128 0xb
+ 326 0018 3E       		.uleb128 0x3e
+ 327 0019 0B       		.uleb128 0xb
+ 328 001a 03       		.uleb128 0x3
+ 329 001b 0E       		.uleb128 0xe
+ 330 001c 00       		.byte	0
+ 331 001d 00       		.byte	0
+ 332 001e 03       		.uleb128 0x3
+ 333 001f 16       		.uleb128 0x16
+ 334 0020 00       		.byte	0
+ 335 0021 03       		.uleb128 0x3
+ 336 0022 0E       		.uleb128 0xe
+ 337 0023 3A       		.uleb128 0x3a
+ 338 0024 0B       		.uleb128 0xb
+ 339 0025 3B       		.uleb128 0x3b
+ 340 0026 0B       		.uleb128 0xb
+ 341 0027 49       		.uleb128 0x49
+ 342 0028 13       		.uleb128 0x13
+ 343 0029 00       		.byte	0
+ 344 002a 00       		.byte	0
+ 345 002b 04       		.uleb128 0x4
+ 346 002c 24       		.uleb128 0x24
+ 347 002d 00       		.byte	0
+ 348 002e 0B       		.uleb128 0xb
+ 349 002f 0B       		.uleb128 0xb
+ 350 0030 3E       		.uleb128 0x3e
+ 351 0031 0B       		.uleb128 0xb
+ 352 0032 03       		.uleb128 0x3
+ 353 0033 08       		.uleb128 0x8
+ 354 0034 00       		.byte	0
+ 355 0035 00       		.byte	0
+ 356 0036 05       		.uleb128 0x5
+ 357 0037 2E       		.uleb128 0x2e
+ 358 0038 01       		.byte	0x1
+ 359 0039 3F       		.uleb128 0x3f
+ 360 003a 19       		.uleb128 0x19
+ 361 003b 03       		.uleb128 0x3
+ 362 003c 0E       		.uleb128 0xe
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 8
+
+
+ 363 003d 3A       		.uleb128 0x3a
+ 364 003e 0B       		.uleb128 0xb
+ 365 003f 3B       		.uleb128 0x3b
+ 366 0040 0B       		.uleb128 0xb
+ 367 0041 49       		.uleb128 0x49
+ 368 0042 13       		.uleb128 0x13
+ 369 0043 8701     		.uleb128 0x87
+ 370 0045 19       		.uleb128 0x19
+ 371 0046 11       		.uleb128 0x11
+ 372 0047 01       		.uleb128 0x1
+ 373 0048 12       		.uleb128 0x12
+ 374 0049 06       		.uleb128 0x6
+ 375 004a 40       		.uleb128 0x40
+ 376 004b 18       		.uleb128 0x18
+ 377 004c 9742     		.uleb128 0x2117
+ 378 004e 19       		.uleb128 0x19
+ 379 004f 01       		.uleb128 0x1
+ 380 0050 13       		.uleb128 0x13
+ 381 0051 00       		.byte	0
+ 382 0052 00       		.byte	0
+ 383 0053 06       		.uleb128 0x6
+ 384 0054 34       		.uleb128 0x34
+ 385 0055 00       		.byte	0
+ 386 0056 03       		.uleb128 0x3
+ 387 0057 0E       		.uleb128 0xe
+ 388 0058 3A       		.uleb128 0x3a
+ 389 0059 0B       		.uleb128 0xb
+ 390 005a 3B       		.uleb128 0x3b
+ 391 005b 0B       		.uleb128 0xb
+ 392 005c 49       		.uleb128 0x49
+ 393 005d 13       		.uleb128 0x13
+ 394 005e 02       		.uleb128 0x2
+ 395 005f 18       		.uleb128 0x18
+ 396 0060 00       		.byte	0
+ 397 0061 00       		.byte	0
+ 398 0062 07       		.uleb128 0x7
+ 399 0063 34       		.uleb128 0x34
+ 400 0064 00       		.byte	0
+ 401 0065 03       		.uleb128 0x3
+ 402 0066 0E       		.uleb128 0xe
+ 403 0067 3A       		.uleb128 0x3a
+ 404 0068 0B       		.uleb128 0xb
+ 405 0069 3B       		.uleb128 0x3b
+ 406 006a 0B       		.uleb128 0xb
+ 407 006b 49       		.uleb128 0x49
+ 408 006c 13       		.uleb128 0x13
+ 409 006d 00       		.byte	0
+ 410 006e 00       		.byte	0
+ 411 006f 08       		.uleb128 0x8
+ 412 0070 34       		.uleb128 0x34
+ 413 0071 00       		.byte	0
+ 414 0072 03       		.uleb128 0x3
+ 415 0073 08       		.uleb128 0x8
+ 416 0074 3A       		.uleb128 0x3a
+ 417 0075 0B       		.uleb128 0xb
+ 418 0076 3B       		.uleb128 0x3b
+ 419 0077 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 9
+
+
+ 420 0078 49       		.uleb128 0x49
+ 421 0079 13       		.uleb128 0x13
+ 422 007a 02       		.uleb128 0x2
+ 423 007b 17       		.uleb128 0x17
+ 424 007c 00       		.byte	0
+ 425 007d 00       		.byte	0
+ 426 007e 09       		.uleb128 0x9
+ 427 007f 898201   		.uleb128 0x4109
+ 428 0082 01       		.byte	0x1
+ 429 0083 11       		.uleb128 0x11
+ 430 0084 01       		.uleb128 0x1
+ 431 0085 31       		.uleb128 0x31
+ 432 0086 13       		.uleb128 0x13
+ 433 0087 01       		.uleb128 0x1
+ 434 0088 13       		.uleb128 0x13
+ 435 0089 00       		.byte	0
+ 436 008a 00       		.byte	0
+ 437 008b 0A       		.uleb128 0xa
+ 438 008c 8A8201   		.uleb128 0x410a
+ 439 008f 00       		.byte	0
+ 440 0090 02       		.uleb128 0x2
+ 441 0091 18       		.uleb128 0x18
+ 442 0092 9142     		.uleb128 0x2111
+ 443 0094 18       		.uleb128 0x18
+ 444 0095 00       		.byte	0
+ 445 0096 00       		.byte	0
+ 446 0097 0B       		.uleb128 0xb
+ 447 0098 898201   		.uleb128 0x4109
+ 448 009b 00       		.byte	0
+ 449 009c 11       		.uleb128 0x11
+ 450 009d 01       		.uleb128 0x1
+ 451 009e 31       		.uleb128 0x31
+ 452 009f 13       		.uleb128 0x13
+ 453 00a0 00       		.byte	0
+ 454 00a1 00       		.byte	0
+ 455 00a2 0C       		.uleb128 0xc
+ 456 00a3 01       		.uleb128 0x1
+ 457 00a4 01       		.byte	0x1
+ 458 00a5 49       		.uleb128 0x49
+ 459 00a6 13       		.uleb128 0x13
+ 460 00a7 01       		.uleb128 0x1
+ 461 00a8 13       		.uleb128 0x13
+ 462 00a9 00       		.byte	0
+ 463 00aa 00       		.byte	0
+ 464 00ab 0D       		.uleb128 0xd
+ 465 00ac 21       		.uleb128 0x21
+ 466 00ad 00       		.byte	0
+ 467 00ae 49       		.uleb128 0x49
+ 468 00af 13       		.uleb128 0x13
+ 469 00b0 2F       		.uleb128 0x2f
+ 470 00b1 0B       		.uleb128 0xb
+ 471 00b2 00       		.byte	0
+ 472 00b3 00       		.byte	0
+ 473 00b4 0E       		.uleb128 0xe
+ 474 00b5 34       		.uleb128 0x34
+ 475 00b6 00       		.byte	0
+ 476 00b7 03       		.uleb128 0x3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 10
+
+
+ 477 00b8 0E       		.uleb128 0xe
+ 478 00b9 3A       		.uleb128 0x3a
+ 479 00ba 0B       		.uleb128 0xb
+ 480 00bb 3B       		.uleb128 0x3b
+ 481 00bc 05       		.uleb128 0x5
+ 482 00bd 49       		.uleb128 0x49
+ 483 00be 13       		.uleb128 0x13
+ 484 00bf 3F       		.uleb128 0x3f
+ 485 00c0 19       		.uleb128 0x19
+ 486 00c1 3C       		.uleb128 0x3c
+ 487 00c2 19       		.uleb128 0x19
+ 488 00c3 00       		.byte	0
+ 489 00c4 00       		.byte	0
+ 490 00c5 0F       		.uleb128 0xf
+ 491 00c6 35       		.uleb128 0x35
+ 492 00c7 00       		.byte	0
+ 493 00c8 49       		.uleb128 0x49
+ 494 00c9 13       		.uleb128 0x13
+ 495 00ca 00       		.byte	0
+ 496 00cb 00       		.byte	0
+ 497 00cc 10       		.uleb128 0x10
+ 498 00cd 2E       		.uleb128 0x2e
+ 499 00ce 00       		.byte	0
+ 500 00cf 3F       		.uleb128 0x3f
+ 501 00d0 19       		.uleb128 0x19
+ 502 00d1 3C       		.uleb128 0x3c
+ 503 00d2 19       		.uleb128 0x19
+ 504 00d3 6E       		.uleb128 0x6e
+ 505 00d4 0E       		.uleb128 0xe
+ 506 00d5 03       		.uleb128 0x3
+ 507 00d6 0E       		.uleb128 0xe
+ 508 00d7 3A       		.uleb128 0x3a
+ 509 00d8 0B       		.uleb128 0xb
+ 510 00d9 3B       		.uleb128 0x3b
+ 511 00da 0B       		.uleb128 0xb
+ 512 00db 00       		.byte	0
+ 513 00dc 00       		.byte	0
+ 514 00dd 00       		.byte	0
+ 515              		.section	.debug_loc,"",%progbits
+ 516              	.Ldebug_loc0:
+ 517              	.LLST0:
+ 518 0000 26000000 		.4byte	.LVL5
+ 519 0004 2A000000 		.4byte	.LVL6
+ 520 0008 0200     		.2byte	0x2
+ 521 000a 30       		.byte	0x30
+ 522 000b 9F       		.byte	0x9f
+ 523 000c 2A000000 		.4byte	.LVL6
+ 524 0010 33000000 		.4byte	.LVL8-1
+ 525 0014 0100     		.2byte	0x1
+ 526 0016 53       		.byte	0x53
+ 527 0017 00000000 		.4byte	0
+ 528 001b 00000000 		.4byte	0
+ 529              		.section	.debug_aranges,"",%progbits
+ 530 0000 1C000000 		.4byte	0x1c
+ 531 0004 0200     		.2byte	0x2
+ 532 0006 00000000 		.4byte	.Ldebug_info0
+ 533 000a 04       		.byte	0x4
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 11
+
+
+ 534 000b 00       		.byte	0
+ 535 000c 0000     		.2byte	0
+ 536 000e 0000     		.2byte	0
+ 537 0010 00000000 		.4byte	.LFB63
+ 538 0014 36000000 		.4byte	.LFE63-.LFB63
+ 539 0018 00000000 		.4byte	0
+ 540 001c 00000000 		.4byte	0
+ 541              		.section	.debug_ranges,"",%progbits
+ 542              	.Ldebug_ranges0:
+ 543 0000 00000000 		.4byte	.LFB63
+ 544 0004 36000000 		.4byte	.LFE63
+ 545 0008 00000000 		.4byte	0
+ 546 000c 00000000 		.4byte	0
+ 547              		.section	.debug_line,"",%progbits
+ 548              	.Ldebug_line0:
+ 549 0000 80010000 		.section	.debug_str,"MS",%progbits,1
+ 549      02005701 
+ 549      00000201 
+ 549      FB0E0D00 
+ 549      01010101 
+ 550              	.LASF30:
+ 551 0000 75736572 		.ascii	"userArray\000"
+ 551      41727261 
+ 551      7900
+ 552              	.LASF25:
+ 553 000a 4932435F 		.ascii	"I2C_1_SlaveClearWriteBuf\000"
+ 553      315F536C 
+ 553      61766543 
+ 553      6C656172 
+ 553      57726974 
+ 554              	.LASF9:
+ 555 0023 5F5F696E 		.ascii	"__int32_t\000"
+ 555      7433325F 
+ 555      7400
+ 556              	.LASF3:
+ 557 002d 73686F72 		.ascii	"short unsigned int\000"
+ 557      7420756E 
+ 557      7369676E 
+ 557      65642069 
+ 557      6E7400
+ 558              	.LASF24:
+ 559 0040 4932435F 		.ascii	"I2C_1_SlaveClearWriteStatus\000"
+ 559      315F536C 
+ 559      61766543 
+ 559      6C656172 
+ 559      57726974 
+ 560              	.LASF23:
+ 561 005c 4932435F 		.ascii	"I2C_1_SlaveGetWriteBufSize\000"
+ 561      315F536C 
+ 561      61766547 
+ 561      65745772 
+ 561      69746542 
+ 562              	.LASF13:
+ 563 0077 666C6F61 		.ascii	"float\000"
+ 563      7400
+ 564              	.LASF1:
+ 565 007d 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 12
+
+
+ 565      676E6564 
+ 565      20636861 
+ 565      7200
+ 566              	.LASF26:
+ 567 008b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 567      43313120 
+ 567      352E342E 
+ 567      31203230 
+ 567      31363036 
+ 568 00be 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 568      20726576 
+ 568      6973696F 
+ 568      6E203233 
+ 568      37373135 
+ 569 00f1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 569      66756E63 
+ 569      74696F6E 
+ 569      2D736563 
+ 569      74696F6E 
+ 570              	.LASF5:
+ 571 0119 6C6F6E67 		.ascii	"long unsigned int\000"
+ 571      20756E73 
+ 571      69676E65 
+ 571      6420696E 
+ 571      7400
+ 572              	.LASF22:
+ 573 012b 4932435F 		.ascii	"I2C_1_SlaveStatus\000"
+ 573      315F536C 
+ 573      61766553 
+ 573      74617475 
+ 573      7300
+ 574              	.LASF20:
+ 575 013d 4932435F 		.ascii	"I2C_1_SlaveInitWriteBuf\000"
+ 575      315F536C 
+ 575      61766549 
+ 575      6E697457 
+ 575      72697465 
+ 576              	.LASF18:
+ 577 0155 77724275 		.ascii	"wrBuf\000"
+ 577      6600
+ 578              	.LASF14:
+ 579 015b 646F7562 		.ascii	"double\000"
+ 579      6C6500
+ 580              	.LASF29:
+ 581 0162 6D61696E 		.ascii	"main\000"
+ 581      00
+ 582              	.LASF12:
+ 583 0167 75696E74 		.ascii	"uint32\000"
+ 583      333200
+ 584              	.LASF8:
+ 585 016e 756E7369 		.ascii	"unsigned int\000"
+ 585      676E6564 
+ 585      20696E74 
+ 585      00
+ 586              	.LASF7:
+ 587 017b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 587      206C6F6E 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 13
+
+
+ 587      6720756E 
+ 587      7369676E 
+ 587      65642069 
+ 588              	.LASF31:
+ 589 0192 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 589      52784275 
+ 589      66666572 
+ 589      00
+ 590              	.LASF28:
+ 591 019f 433A5C55 		.ascii	"C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\"
+ 591      73657273 
+ 591      5C48507A 
+ 591      3432305C 
+ 591      446F6375 
+ 592 01cc 4C422D52 		.ascii	"LB-RPPSOC\\RPPSOC-GPIO18Blink.cydsn\000"
+ 592      5050534F 
+ 592      435C5250 
+ 592      50534F43 
+ 592      2D475049 
+ 593              	.LASF17:
+ 594 01ef 73697A65 		.ascii	"sizetype\000"
+ 594      74797065 
+ 594      00
+ 595              	.LASF6:
+ 596 01f8 6C6F6E67 		.ascii	"long long int\000"
+ 596      206C6F6E 
+ 596      6720696E 
+ 596      7400
+ 597              	.LASF27:
+ 598 0206 6D61696E 		.ascii	"main.c\000"
+ 598      2E6300
+ 599              	.LASF15:
+ 600 020d 63686172 		.ascii	"char\000"
+ 600      00
+ 601              	.LASF10:
+ 602 0212 696E7433 		.ascii	"int32_t\000"
+ 602      325F7400 
+ 603              	.LASF21:
+ 604 021a 4932435F 		.ascii	"I2C_1_Start\000"
+ 604      315F5374 
+ 604      61727400 
+ 605              	.LASF2:
+ 606 0226 73686F72 		.ascii	"short int\000"
+ 606      7420696E 
+ 606      7400
+ 607              	.LASF11:
+ 608 0230 75696E74 		.ascii	"uint8\000"
+ 608      3800
+ 609              	.LASF4:
+ 610 0236 6C6F6E67 		.ascii	"long int\000"
+ 610      20696E74 
+ 610      00
+ 611              	.LASF16:
+ 612 023f 6C6F6E67 		.ascii	"long double\000"
+ 612      20646F75 
+ 612      626C6500 
+ 613              	.LASF0:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccYupZ5g.s 			page 14
+
+
+ 614 024b 7369676E 		.ascii	"signed char\000"
+ 614      65642063 
+ 614      68617200 
+ 615              	.LASF19:
+ 616 0257 62797465 		.ascii	"byteCnt\000"
+ 616      436E7400 
+ 617              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
