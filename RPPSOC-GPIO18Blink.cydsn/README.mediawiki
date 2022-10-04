@@ -1,0 +1,5 @@
+= RPPSOC-GPIO18Blink =
+
+* Functions
+** Exclusive-OR all connections from Raspberry and output on the On-board LED
+** Bounce Lines (to LEDs) on output pins
