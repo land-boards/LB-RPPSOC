@@ -1,1 +1,4 @@
 = RPPSOC-001 =
+
+* EX-OR all lines from Raspberry Pi and send to LEDs
+* Cycle through LEDs on P2 and P4
