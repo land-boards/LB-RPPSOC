@@ -1,6 +1,8 @@
 = RPPSOC Test Code =
 
 * RPPSOC Test Code
+* [http://land-boards.com/blwiki/index.php?title=RPPSOC RPPSOC Wiki Page]
+* [http://land-boards.com/blwiki/index.php?title=RPPSOC#Factory_Test_Procedure RPPSOC Test Procedure]
 
 == fastTests-RPPSOC.py ==
 
