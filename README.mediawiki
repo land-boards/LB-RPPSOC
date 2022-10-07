@@ -22,6 +22,12 @@
 
 * Code for programming the EEPROM on the RPPSOC Hat
 
+== Factory Test Code ==
+
+* [https://github.com/land-boards/LB-RPPSOC/tree/master/RPPSOC-FAT-Chain.cydsn RPPSOC-FAT-Chain]
+
+<img src="http://land-boards.com/blwiki/images/0/05/RPPSOC_PSoC_FAT_SCHEMATIC.PNG"></img>
+
 == Ownership ==
 
 * Some of these files (particularly libraries) were created by others.
