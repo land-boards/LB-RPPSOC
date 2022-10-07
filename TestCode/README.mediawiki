@@ -1,0 +1,7 @@
+= RPPSOC Test Code =
+
+* Test Code
+
+== fastTests-RPPSOC.py ==
+
+* Used along with [https://github.com/land-boards/LB-RPPSOC/tree/master/RPPSOC-FAT-Chain.cydsn RPPSOC-FAT-Chain] for Factory Acceptance Test
