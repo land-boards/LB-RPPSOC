@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-'''fastTests-RPP-UIO-16.py
+'''fastTests-RPPSOC.py
 
 Code to daisy chain test the 3.3V I/O and 
 blink the 5V lines as LEDs on the RPP-UIO-16 card for a Raspberry Pi Model B Plus.
