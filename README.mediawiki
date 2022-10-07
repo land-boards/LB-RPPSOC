@@ -16,11 +16,20 @@
 
 == TestCodePi ==
 
-* Code that goes along with the [http://land-boards.com/blwiki/index.php?title=RPPSOC_Example_Projects RPPSOC Example Projects]
+* Code in the RPPSOC that goes along with the [http://land-boards.com/blwiki/index.php?title=RPPSOC_Example_Projects RPPSOC Example Projects]
 
 == eeprom ==
 
 * Code for programming the EEPROM on the RPPSOC Hat
+
+== Factory Test Code ==
+
+* [https://github.com/land-boards/LB-RPPSOC/tree/master/RPPSOC-FAT-Chain.cydsn RPPSOC-FAT-Chain]
+* Logic inside PSoC
+** Blinks LEDs attached to J3, J4
+** Loops back pins to Raspberry Pi
+
+<img src="http://land-boards.com/blwiki/images/0/05/RPPSOC_PSoC_FAT_SCHEMATIC.PNG"></img>
 
 == Ownership ==
 
