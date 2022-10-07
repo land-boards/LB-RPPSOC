@@ -7,7 +7,7 @@
 * These are the [http://land-boards.com/blwiki/index.php?title=RPPSOC RPPSOC Card System-on-a-Chip Hat for the Raspberry Pi] code files.
 * Three folders are included
 ** HSSP Host Sourced Serial Programming
-** TestCodePi
+** TestCode
 ** eeprom
 
 == HSSP - Host Sourced Serial Programming ==
