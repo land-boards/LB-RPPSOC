@@ -1,0 +1,4 @@
+= RPPSOC-Blink2 =
+
+* Program PSoC prior to shipment
+* Blinks on-board LED under CPU control
