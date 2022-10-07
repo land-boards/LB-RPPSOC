@@ -1,0 +1,7 @@
+= Factory Acceptance Test - PSoC Design =
+
+* Downloaded to the [http://land-boards.com/blwiki/index.php?title=RPPSOC RPPSOC] for card testing
+* Runs with [https://github.com/land-boards/LB-RPPSOC/blob/master/TestCode/fastTests-RPPSOC.py fastTests-RPPSOC.py]
+* PSoC internal logic
+
+<img src="http://land-boards.com/blwiki/images/0/05/RPPSOC_PSoC_FAT_SCHEMATIC.PNG"></img>
