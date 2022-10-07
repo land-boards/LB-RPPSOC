@@ -13,6 +13,7 @@
 == HSSP - Host Sourced Serial Programming ==
 
 * This code allows the Raspberry Pi to program the PSOC on the RPPSOC hat
+* Tested on Raspberry Pi Model B, 2, 3
 
 == TestCode ==
 
