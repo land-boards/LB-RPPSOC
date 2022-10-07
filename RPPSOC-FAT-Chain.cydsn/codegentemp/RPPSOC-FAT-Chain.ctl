@@ -1,11 +1,11 @@
 -- ======================================================================
 -- RPPSOC-FAT-Chain.ctl generated from RPPSOC-FAT-Chain
--- 05/30/2016 at 15:00
+-- 10/06/2022 at 19:50
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
 -- I2C_1
 
--- PSoC3/5 Clock Editor
+-- PSoC Clock Editor
 -- Directives Editor
 -- Analog Device Editor

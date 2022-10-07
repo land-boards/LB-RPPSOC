@@ -1,6 +1,6 @@
 // ======================================================================
 // RPPSOC-GPIO18Blink.v generated from TopDesign.cysch
-// 10/04/2022 at 08:45
+// 10/06/2022 at 18:31
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1136,7 +1136,7 @@ module top ;
 		#(.id("8c235a73-0a7b-4faa-b1f9-c20116bee202"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("250000000000000"),
+		  .period("500000000000000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		Clock_1

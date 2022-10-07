@@ -1,6 +1,6 @@
 -- ======================================================================
 -- RPPSOC-GPIO18Blink.ctl generated from RPPSOC-GPIO18Blink
--- 10/04/2022 at 08:45
+-- 10/06/2022 at 18:31
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

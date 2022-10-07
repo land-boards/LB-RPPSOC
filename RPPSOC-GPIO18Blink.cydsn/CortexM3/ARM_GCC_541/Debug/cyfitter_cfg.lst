@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
   29:Generated_Source\PSoC5/cyfitter_cfg.c **** 
   30:Generated_Source\PSoC5/cyfitter_cfg.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
   31:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED 
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 2
 
 
   32:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
   86:Generated_Source\PSoC5/cyfitter_cfg.c **** 	(void)memcpy(dest, src, n);
   87:Generated_Source\PSoC5/cyfitter_cfg.c **** }
   88:Generated_Source\PSoC5/cyfitter_cfg.c **** CY_CFG_UNUSED
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 3
 
 
   89:Generated_Source\PSoC5/cyfitter_cfg.c **** static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
   41              		.thumb
   42              		.thumb_func
   43              		.type	cfg_write_bytes32, %function
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 4
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 4
 
 
   44              	cfg_write_bytes32:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  181:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_3 Address: CYREG_PRT3_DM0 Size (bytes): 8 */
  182:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x480008E8u)
  183:Generated_Source\PSoC5/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 5
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 5
 
 
  184:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_4 Address: CYREG_PRT4_DM0 Size (bytes): 8 */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  213:Generated_Source\PSoC5/cyfitter_cfg.c **** 		uint8 count = (uint8)baseAddr;
   71              		.loc 1 213 0
   72 000c F3B2     		uxtb	r3, r6
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 6
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 6
 
 
   73              	.LVL5:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  115              	.LFE4:
  116              		.size	cfg_write_bytes32, .-cfg_write_bytes32
  117              		.section	.text.AnalogSetDefault,"ax",%progbits
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 7
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 7
 
 
  118              		.align	2
@@ -392,7 +392,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  245:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  246:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  247:Generated_Source\PSoC5/cyfitter_cfg.c **** 	/* Configure Digital Clocks based on settings from Clock DWR */
- 248:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0), 0x00F9u);
+ 248:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0), 0x01F3u);
  249:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0 + 0x2u), 0x1Bu);
  250:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  251:Generated_Source\PSoC5/cyfitter_cfg.c **** 	/* Configure ILO based on settings from Clock DWR */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  271:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{
  272:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CyClockStartupError(CYCLOCKSTART_PLL_ERROR);
  273:Generated_Source\PSoC5/cyfitter_cfg.c **** 	}
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 8
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 8
 
 
  274:Generated_Source\PSoC5/cyfitter_cfg.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  141 0010 0132     		adds	r2, r2, #1
  142 0012 1370     		strb	r3, [r2]
  311:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)CYREG_PUMP_CR0, 0x44u);
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 9
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 9
 
 
  143              		.loc 1 311 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  194 0000 38B5     		push	{r3, r4, r5, lr}
  195              		.cfi_def_cfa_offset 16
  196              		.cfi_offset 3, -16
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 10
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 10
 
 
  197              		.cfi_offset 4, -12
@@ -546,134 +546,134 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  199              		.cfi_offset 14, -4
  248:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0 + 0x2u), 0x1Bu);
  200              		.loc 1 248 0
- 201 0002 F922     		movs	r2, #249
- 202 0004 244B     		ldr	r3, .L20
- 203 0006 1A80     		strh	r2, [r3]	@ movhi
+ 201 0002 40F2F312 		movw	r2, #499
+ 202 0006 244B     		ldr	r3, .L20
+ 203 0008 1A80     		strh	r2, [r3]	@ movhi
  249:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  204              		.loc 1 249 0
- 205 0008 1B22     		movs	r2, #27
- 206 000a 0233     		adds	r3, r3, #2
- 207 000c 1A70     		strb	r2, [r3]
+ 205 000a 1B22     		movs	r2, #27
+ 206 000c 0233     		adds	r3, r3, #2
+ 207 000e 1A70     		strb	r2, [r3]
  252:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_CR), 0x08u);
  208              		.loc 1 252 0
- 209 000e 0222     		movs	r2, #2
- 210 0010 03F27E23 		addw	r3, r3, #638
- 211 0014 1A70     		strb	r2, [r3]
+ 209 0010 0222     		movs	r2, #2
+ 210 0012 03F27E23 		addw	r3, r3, #638
+ 211 0016 1A70     		strb	r2, [r3]
  253:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  212              		.loc 1 253 0
- 213 0016 0822     		movs	r2, #8
- 214 0018 4FF04023 		mov	r3, #1073758208
- 215 001c 1A70     		strb	r2, [r3]
+ 213 0018 0822     		movs	r2, #8
+ 214 001a 4FF04023 		mov	r3, #1073758208
+ 215 001e 1A70     		strb	r2, [r3]
  256:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_IMO_TR1), (CY_GET_XTND_REG8((void CYFAR *)CYREG_FLSHID_CUST_
  216              		.loc 1 256 0
- 217 001e 0321     		movs	r1, #3
- 218 0020 03F50073 		add	r3, r3, #512
- 219 0024 1970     		strb	r1, [r3]
+ 217 0020 0321     		movs	r1, #3
+ 218 0022 03F50073 		add	r3, r3, #512
+ 219 0026 1970     		strb	r1, [r3]
  257:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  220              		.loc 1 257 0
- 221 0026 1D4B     		ldr	r3, .L20+4
- 222 0028 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 223 002a DBB2     		uxtb	r3, r3
- 224 002c 1C49     		ldr	r1, .L20+8
- 225 002e 0B70     		strb	r3, [r1]
+ 221 0028 1C4B     		ldr	r3, .L20+4
+ 222 002a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 223 002c DBB2     		uxtb	r3, r3
+ 224 002e 1C49     		ldr	r1, .L20+8
+ 225 0030 0B70     		strb	r3, [r1]
  260:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_FASTCLK_PLL_CFG0), 0x1251u);
  226              		.loc 1 260 0
- 227 0030 1C4B     		ldr	r3, .L20+12
- 228 0032 1A80     		strh	r2, [r3]	@ movhi
+ 227 0032 1C4B     		ldr	r3, .L20+12
+ 228 0034 1A80     		strh	r2, [r3]	@ movhi
  261:Generated_Source\PSoC5/cyfitter_cfg.c **** 	/* Wait up to 250us for the PLL to lock */
  229              		.loc 1 261 0
- 230 0034 41F25122 		movw	r2, #4689
- 231 0038 023B     		subs	r3, r3, #2
- 232 003a 1A80     		strh	r2, [r3]	@ movhi
+ 230 0036 41F25122 		movw	r2, #4689
+ 231 003a 023B     		subs	r3, r3, #2
+ 232 003c 1A80     		strh	r2, [r3]	@ movhi
  233              	.LVL17:
  263:Generated_Source\PSoC5/cyfitter_cfg.c **** 	for (timeout = 250u / 10u; (timeout > 0u) && (pllLock != 0x03u); timeout--)
  234              		.loc 1 263 0
- 235 003c 0024     		movs	r4, #0
+ 235 003e 0024     		movs	r4, #0
  264:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{ 
  236              		.loc 1 264 0
- 237 003e 1925     		movs	r5, #25
- 238 0040 0CE0     		b	.L15
+ 237 0040 1925     		movs	r5, #25
+ 238 0042 0CE0     		b	.L15
  239              	.LVL18:
  240              	.L17:
  266:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CyDelayCycles(10u * 48u); /* Delay 10us based on 48MHz clock */
  241              		.loc 1 266 0 discriminator 4
- 242 0042 194B     		ldr	r3, .L20+16
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 11
+ 242 0044 184B     		ldr	r3, .L20+16
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 11
 
 
- 243 0044 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 244 0046 03F00103 		and	r3, r3, #1
- 245 004a 43EA4404 		orr	r4, r3, r4, lsl #1
+ 243 0046 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 244 0048 03F00103 		and	r3, r3, #1
+ 245 004c 43EA4404 		orr	r4, r3, r4, lsl #1
  246              	.LVL19:
- 247 004e 04F00304 		and	r4, r4, #3
+ 247 0050 04F00304 		and	r4, r4, #3
  248              	.LVL20:
  267:Generated_Source\PSoC5/cyfitter_cfg.c **** 	}
  249              		.loc 1 267 0 discriminator 4
- 250 0052 4FF4F070 		mov	r0, #480
- 251 0056 FFF7FEFF 		bl	CyDelayCycles
+ 250 0054 4FF4F070 		mov	r0, #480
+ 251 0058 FFF7FEFF 		bl	CyDelayCycles
  252              	.LVL21:
  264:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{ 
  253              		.loc 1 264 0 discriminator 4
- 254 005a 013D     		subs	r5, r5, #1
+ 254 005c 013D     		subs	r5, r5, #1
  255              	.LVL22:
  256              	.L15:
  264:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{ 
  257              		.loc 1 264 0 is_stmt 0 discriminator 1
- 258 005c 0DB1     		cbz	r5, .L16
+ 258 005e 0DB1     		cbz	r5, .L16
  264:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{ 
  259              		.loc 1 264 0 discriminator 3
- 260 005e 032C     		cmp	r4, #3
- 261 0060 EFD1     		bne	.L17
+ 260 0060 032C     		cmp	r4, #3
+ 261 0062 EFD1     		bne	.L17
  262              	.L16:
  270:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{
  263              		.loc 1 270 0 is_stmt 1
- 264 0062 15B9     		cbnz	r5, .L18
+ 264 0064 15B9     		cbnz	r5, .L18
  272:Generated_Source\PSoC5/cyfitter_cfg.c **** 	}
  265              		.loc 1 272 0
- 266 0064 0320     		movs	r0, #3
- 267 0066 FFF7FEFF 		bl	CyClockStartupError
+ 266 0066 0320     		movs	r0, #3
+ 267 0068 FFF7FEFF 		bl	CyClockStartupError
  268              	.LVL23:
  269              	.L18:
  276:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_MSTR0), 0x07u);
  270              		.loc 1 276 0
- 271 006a 104B     		ldr	r3, .L20+20
- 272 006c 4FF48072 		mov	r2, #256
- 273 0070 1A80     		strh	r2, [r3]	@ movhi
+ 271 006c 0F4B     		ldr	r3, .L20+20
+ 272 006e 4FF48072 		mov	r2, #256
+ 273 0072 1A80     		strh	r2, [r3]	@ movhi
  277:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_BCFG0), 0x00u);
  274              		.loc 1 277 0
- 275 0072 0722     		movs	r2, #7
- 276 0074 1A70     		strb	r2, [r3]
+ 275 0074 0722     		movs	r2, #7
+ 276 0076 1A70     		strb	r2, [r3]
  278:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_BCFG2), 0x48u);
  277              		.loc 1 278 0
- 278 0076 0022     		movs	r2, #0
- 279 0078 0D49     		ldr	r1, .L20+24
- 280 007a 0A70     		strb	r2, [r1]
+ 278 0078 0022     		movs	r2, #0
+ 279 007a 0D49     		ldr	r1, .L20+24
+ 280 007c 0A70     		strb	r2, [r1]
  279:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_MSTR0), 0x00u);
  281              		.loc 1 279 0
- 282 007c 4820     		movs	r0, #72
- 283 007e 0231     		adds	r1, r1, #2
- 284 0080 0870     		strb	r0, [r1]
+ 282 007e 4820     		movs	r0, #72
+ 283 0080 0231     		adds	r1, r1, #2
+ 284 0082 0870     		strb	r0, [r1]
  280:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_LD), 0x02u);
  285              		.loc 1 280 0
- 286 0082 1A70     		strb	r2, [r3]
+ 286 0084 1A70     		strb	r2, [r3]
  281:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  287              		.loc 1 281 0
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 12
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 12
 
 
- 288 0084 0222     		movs	r2, #2
- 289 0086 033B     		subs	r3, r3, #3
- 290 0088 1A70     		strb	r2, [r3]
+ 288 0086 0222     		movs	r2, #2
+ 289 0088 033B     		subs	r3, r3, #3
+ 290 008a 1A70     		strb	r2, [r3]
  283:Generated_Source\PSoC5/cyfitter_cfg.c **** }
  291              		.loc 1 283 0
- 292 008a 0A4A     		ldr	r2, .L20+28
- 293 008c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 294 008e 43F00103 		orr	r3, r3, #1
- 295 0092 1370     		strb	r3, [r2]
- 296 0094 38BD     		pop	{r3, r4, r5, pc}
+ 292 008c 094A     		ldr	r2, .L20+28
+ 293 008e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 294 0090 43F00103 		orr	r3, r3, #1
+ 295 0094 1370     		strb	r3, [r2]
+ 296 0096 38BD     		pop	{r3, r4, r5, pc}
  297              	.LVL24:
  298              	.L21:
- 299 0096 00BF     		.align	2
+ 299              		.align	2
  300              	.L20:
  301 0098 80400040 		.word	1073758336
  302 009c 08010049 		.word	1224737032
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  339              		.thumb_func
  340              		.type	SetAnalogRoutingPumps, %function
  341              	SetAnalogRoutingPumps:
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 13
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 13
 
 
  342              	.LFB7:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  364              		.section	.text.cyfitter_cfg,"ax",%progbits
  365              		.align	2
  366              		.global	cyfitter_cfg
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 14
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 14
 
 
  367              		.thumb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  390 0004 3F4A     		ldr	r2, .L33
  391 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  392 0008 43F00403 		orr	r3, r3, #4
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 15
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 15
 
 
  393 000c 1370     		strb	r3, [r2]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  409 001e 0846     		mov	r0, r1
  410 0020 9188     		ldrh	r1, [r2, #4]
  411 0022 2858     		ldr	r0, [r5, r0]	@ unaligned
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 16
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 16
 
 
  412 0024 FFF7FEFF 		bl	CYMEMZERO
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  452              		.loc 1 416 0 is_stmt 0 discriminator 1
  453 004c 002C     		cmp	r4, #0
  454 004e F1D0     		beq	.L31
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 17
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 17
 
 
  423:Generated_Source\PSoC5/cyfitter_cfg.c **** 		}
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  492 0094 2348     		ldr	r0, .L33+32
  493 0096 FFF7FEFF 		bl	CYCONFIGCPY
  494              	.LVL45:
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 18
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 18
 
 
  440:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT15_DM0), (const void CYFAR *)(BS_IOPINS0_8_VAL), 8u);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  538 00e2 6123     		movs	r3, #97
  539 00e4 2B70     		strb	r3, [r5]
  451:Generated_Source\PSoC5/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 19
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 19
 
 
  452:Generated_Source\PSoC5/cyfitter_cfg.c **** 	ClockSetup();
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  584 0158 22430040 		.word	1073759010
  585 015c 00480040 		.word	1073760256
  586 0160 04000840 		.word	1074266116
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 20
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 20
 
 
  587 0164 B0430040 		.word	1073759152
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  641 002c 03       		.uleb128 0x3
  642 002d 16000000 		.4byte	.LASF12
  643 0031 02       		.byte	0x2
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 21
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 21
 
 
  644 0032 D8       		.byte	0xd8
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  698 0092 03       		.byte	0x3
  699 0093 C2       		.byte	0xc2
  700 0094 53000000 		.4byte	0x53
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 22
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 22
 
 
  701 0098 03       		.uleb128 0x3
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  755 0106 DE000000 		.4byte	0xde
  756 010a 0A       		.uleb128 0xa
  757 010b 1D000000 		.4byte	.LASF55
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 23
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 23
 
 
  758 010f 01       		.byte	0x1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  812 0180 0D000000 		.4byte	.LASF26
  813 0184 01       		.byte	0x1
  814 0185 D4       		.byte	0xd4
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 24
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 24
 
 
  815 0186 A3000000 		.4byte	0xa3
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  869 0202 4D       		.byte	0x4d
  870 0203 2C000000 		.4byte	0x2c
  871 0207 A3000000 		.4byte	.LLST6
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 25
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 25
 
 
  872 020b 15       		.uleb128 0x15
@@ -1487,7 +1487,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  915 0254 8D000000 		.4byte	0x8d
  916 0258 EE000000 		.4byte	.LLST8
  917 025c 17       		.uleb128 0x17
- 918 025d 5A000000 		.4byte	.LVL21
+ 918 025d 5C000000 		.4byte	.LVL21
  919 0261 35060000 		.4byte	0x635
  920 0265 71020000 		.4byte	0x271
  921 0269 16       		.uleb128 0x16
@@ -1498,10 +1498,10 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  926 026e E001     		.2byte	0x1e0
  927 0270 00       		.byte	0
  928 0271 15       		.uleb128 0x15
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 26
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 26
 
 
- 929 0272 6A000000 		.4byte	.LVL23
+ 929 0272 6C000000 		.4byte	.LVL23
  930 0276 0A010000 		.4byte	0x10a
  931 027a 16       		.uleb128 0x16
  932 027b 01       		.uleb128 0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  983 02d9 01       		.uleb128 0x1
  984 02da 52       		.byte	0x52
  985 02db 03       		.uleb128 0x3
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 27
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 27
 
 
  986 02dc F3       		.byte	0xf3
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1040 034d 7B01     		.2byte	0x17b
  1041 034f 84000000 		.4byte	0x84
  1042 0353 00       		.byte	0
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 28
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 28
 
 
  1043 0354 1F       		.uleb128 0x1f
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1097 03c8 D2030000 		.4byte	0x3d2
  1098 03cc 05       		.uleb128 0x5
  1099 03cd 03       		.byte	0x3
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 29
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 29
 
 
  1100 03ce 00000000 		.4byte	cfg_memset_list.5007
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1154 0446 22       		.byte	0x22
  1155 0447 31       		.byte	0x31
  1156 0448 24       		.byte	0x24
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 30
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 30
 
 
  1157 0449 75       		.byte	0x75
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1211 04b9 5A000000 		.4byte	.LVL42
  1212 04bd 2D010000 		.4byte	0x12d
  1213 04c1 16       		.uleb128 0x16
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 31
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 31
 
 
  1214 04c2 01       		.uleb128 0x1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1268 0519 52       		.byte	0x52
  1269 051a 01       		.uleb128 0x1
  1270 051b 3A       		.byte	0x3a
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 32
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 32
 
 
  1271 051c 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1325 0579 20510040 		.4byte	0x40005120
  1326 057d 16       		.uleb128 0x16
  1327 057e 01       		.uleb128 0x1
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 33
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 33
 
 
  1328 057f 51       		.byte	0x51
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1382 05d6 17       		.uleb128 0x17
  1383 05d7 D6000000 		.4byte	.LVL51
  1384 05db 81020000 		.4byte	0x281
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 34
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 34
 
 
  1385 05df FB050000 		.4byte	0x5fb
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1439 063f 7A       		.byte	0x7a
  1440 0640 25       		.uleb128 0x25
  1441 0641 BF000000 		.4byte	.LASF51
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 35
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 35
 
 
  1442 0645 BF000000 		.4byte	.LASF51
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1496 0032 03       		.uleb128 0x3
  1497 0033 0E       		.uleb128 0xe
  1498 0034 00       		.byte	0
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 36
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 36
 
 
  1499 0035 00       		.byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1553 006b 00       		.byte	0
  1554 006c 00       		.byte	0
  1555 006d 0A       		.uleb128 0xa
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 37
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 37
 
 
  1556 006e 2E       		.uleb128 0x2e
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1610 00a6 40       		.uleb128 0x40
  1611 00a7 18       		.uleb128 0x18
  1612 00a8 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 38
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 38
 
 
  1613 00aa 19       		.uleb128 0x19
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1667 00e0 26       		.uleb128 0x26
  1668 00e1 00       		.byte	0
  1669 00e2 49       		.uleb128 0x49
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 39
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 39
 
 
  1670 00e3 13       		.uleb128 0x13
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1724 011a 00       		.byte	0
  1725 011b 00       		.byte	0
  1726 011c 15       		.uleb128 0x15
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 40
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 40
 
 
  1727 011d 898201   		.uleb128 0x4109
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1781 015a 0E       		.uleb128 0xe
  1782 015b 3A       		.uleb128 0x3a
  1783 015c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 41
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 41
 
 
  1784 015d 3B       		.uleb128 0x3b
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1838 0194 13       		.uleb128 0x13
  1839 0195 00       		.byte	0
  1840 0196 00       		.byte	0
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 42
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 42
 
 
  1841 0197 1E       		.uleb128 0x1e
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1895 01cd 00       		.byte	0
  1896 01ce 49       		.uleb128 0x49
  1897 01cf 13       		.uleb128 0x13
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 43
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 43
 
 
  1898 01d0 2F       		.uleb128 0x2f
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  1952 0208 3B       		.uleb128 0x3b
  1953 0209 0B       		.uleb128 0xb
  1954 020a 00       		.byte	0
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 44
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 44
 
 
  1955 020b 00       		.byte	0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2009 0082 00000000 		.4byte	.LVL14
  2010 0086 09000000 		.4byte	.LVL16-1
  2011 008a 0100     		.2byte	0x1
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 45
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 45
 
 
  2012 008c 50       		.byte	0x50
@@ -2670,35 +2670,35 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2038 00c7 00000000 		.4byte	0
  2039 00cb 00000000 		.4byte	0
  2040              	.LLST7:
- 2041 00cf 3C000000 		.4byte	.LVL17
- 2042 00d3 42000000 		.4byte	.LVL18
+ 2041 00cf 3E000000 		.4byte	.LVL17
+ 2042 00d3 44000000 		.4byte	.LVL18
  2043 00d7 0200     		.2byte	0x2
  2044 00d9 49       		.byte	0x49
  2045 00da 9F       		.byte	0x9f
- 2046 00db 42000000 		.4byte	.LVL18
- 2047 00df 96000000 		.4byte	.LVL24
+ 2046 00db 44000000 		.4byte	.LVL18
+ 2047 00df 98000000 		.4byte	.LVL24
  2048 00e3 0100     		.2byte	0x1
  2049 00e5 55       		.byte	0x55
  2050 00e6 00000000 		.4byte	0
  2051 00ea 00000000 		.4byte	0
  2052              	.LLST8:
- 2053 00ee 3C000000 		.4byte	.LVL17
- 2054 00f2 42000000 		.4byte	.LVL18
+ 2053 00ee 3E000000 		.4byte	.LVL17
+ 2054 00f2 44000000 		.4byte	.LVL18
  2055 00f6 0200     		.2byte	0x2
  2056 00f8 30       		.byte	0x30
  2057 00f9 9F       		.byte	0x9f
- 2058 00fa 42000000 		.4byte	.LVL18
- 2059 00fe 4E000000 		.4byte	.LVL19
+ 2058 00fa 44000000 		.4byte	.LVL18
+ 2059 00fe 50000000 		.4byte	.LVL19
  2060 0102 0100     		.2byte	0x1
  2061 0104 54       		.byte	0x54
- 2062 0105 52000000 		.4byte	.LVL20
- 2063 0109 96000000 		.4byte	.LVL24
+ 2062 0105 54000000 		.4byte	.LVL20
+ 2063 0109 98000000 		.4byte	.LVL24
  2064 010d 0100     		.2byte	0x1
  2065 010f 54       		.byte	0x54
  2066 0110 00000000 		.4byte	0
  2067 0114 00000000 		.4byte	0
  2068              	.LLST9:
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 46
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 46
 
 
  2069 0118 00000000 		.4byte	.LVL25
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2123 019c 54       		.byte	0x54
  2124 019d 34000000 		.4byte	.LVL35
  2125 01a1 4A000000 		.4byte	.LVL40
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 47
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 47
 
 
  2126 01a5 0100     		.2byte	0x1
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2180 0215 22       		.byte	0x22
  2181 0216 9F       		.byte	0x9f
  2182 0217 00000000 		.4byte	0
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 48
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 48
 
 
  2183 021b 00000000 		.4byte	0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2237 000c 34000000 		.4byte	.LFE4
  2238 0010 00000000 		.4byte	.LFB6
  2239 0014 28000000 		.4byte	.LFE6
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 49
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 49
 
 
  2240 0018 00000000 		.4byte	.LFB0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2272      6F675365 
  2272      74446566 
  2272      61756C74 
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 50
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 50
 
 
  2272      00
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2301              	.LASF0:
  2302 00f3 756E7369 		.ascii	"unsigned int\000"
  2302      676E6564 
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 51
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 51
 
 
  2302      20696E74 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2326 018c 64657374 		.ascii	"dest\000"
  2326      00
  2327              	.LASF16:
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 52
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 52
 
 
  2328 0191 666C6F61 		.ascii	"float\000"
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 1
  2352 027f 53657441 		.ascii	"SetAnalogRoutingPumps\000"
  2352      6E616C6F 
  2352      67526F75 
-ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjS8pjB.s 			page 53
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccjARm0T.s 			page 53
 
 
  2352      74696E67 

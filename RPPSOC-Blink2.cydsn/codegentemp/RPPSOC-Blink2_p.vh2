@@ -1,14 +1,14 @@
 -- Project:   RPPSOC-Blink2
--- Generated: 05/23/2016 15:11:04
--- PSoC Creator  3.3
+-- Generated: 10/06/2022 20:21:25
+-- PSoC Creator  4.4
 
 ENTITY \RPPSOC-Blink2\ IS
     PORT(
         LED5_4(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
-    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 5e0;
@@ -148,11 +148,11 @@ ARCHITECTURE __DEFAULT__ OF \RPPSOC-Blink2\ IS
     ATTRIBUTE udb_reset OF controlcell : COMPONENT IS "reset";
     COMPONENT iocell
         PORT (
-            pin_input : IN std_ulogic;
             oe : IN std_ulogic;
             fb : OUT std_ulogic;
-            pad_in : IN std_ulogic;
             pa_out : OUT std_ulogic;
+            pin_input : IN std_ulogic;
+            pad_in : IN std_ulogic;
             pad_out : OUT std_ulogic;
             oe_reg : OUT std_ulogic;
             oe_internal : IN std_ulogic;

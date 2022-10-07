@@ -1,5 +1,5 @@
 -- Project:   RPPSOC-GPIO18Blink
--- Generated: 10/04/2022 08:45:29
+-- Generated: 10/06/2022 18:31:50
 -- PSoC Creator  4.4
 
 ENTITY \RPPSOC-GPIO18Blink\ IS

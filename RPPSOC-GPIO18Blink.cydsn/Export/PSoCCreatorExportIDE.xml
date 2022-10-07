@@ -27,7 +27,7 @@
   </Toolchains>
   <Project Name="RPPSOC-GPIO18Blink" Path="C:\Users\HPz420\Documents\GitHub\land-boards\LB-RPPSOC\RPPSOC-GPIO18Blink.cydsn" Version="5.20" Type="Normal">
     <CMSIS_SVD_File>RPPSOC-GPIO18Blink.svd</CMSIS_SVD_File>
-    <Datasheet />
+    <Datasheet>RPPSOC-GPIO18Blink_datasheet.pdf</Datasheet>
     <LinkerFiles>
       <LinkerFile Toolchain="ARM GCC Generic">.\Generated_Source\PSoC5\cm3gcc.ld</LinkerFile>
       <LinkerFile Toolchain="ARM MDK Generic">.\Generated_Source\PSoC5\Cm3RealView.scat</LinkerFile>

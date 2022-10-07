@@ -2,7 +2,7 @@
 --	Conversion of RPPSOC-GPIO18Blink.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Oct 04 08:45:28 2022
+--	Thu Oct 06 18:31:49 2022
 --
 
 USE cypress.cypress.all;
@@ -1314,7 +1314,7 @@ Clock_1:cy_clock_v1_0
 		id=>"8c235a73-0a7b-4faa-b1f9-c20116bee202",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"250000000000000",
+		period=>"500000000000000",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_52,

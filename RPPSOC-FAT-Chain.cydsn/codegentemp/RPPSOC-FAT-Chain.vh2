@@ -2,7 +2,7 @@
 --	Conversion of RPPSOC-FAT-Chain.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon May 30 15:00:31 2016
+--	Thu Oct 06 19:50:34 2022
 --
 
 USE cypress.cypress.all;
@@ -803,8 +803,8 @@ SIGNAL Net_240 : bit;
 SIGNAL \I2C_1:timeout_clk\ : bit;
 SIGNAL Net_268 : bit;
 SIGNAL \I2C_1:Net_975\ : bit;
-SIGNAL Net_267 : bit;
 SIGNAL Net_266 : bit;
+SIGNAL Net_267 : bit;
 SIGNAL tmpOE__SCL_1_net_0 : bit;
 SIGNAL tmpFB_0__SCL_1_net_0 : bit;
 TERMINAL tmpSIOVREF__SCL_1_net_0 : bit;
@@ -4594,7 +4594,8 @@ RP_GPIO_21:cy_psoc3_pins_v1_10
 	PORT MAP(x=>zero,
 		y=>\BasicCounter_2:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\);
 \I2C_1:I2C_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"00")
+	GENERIC MAP(int_type=>"00",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>\I2C_1:Net_697\);
 \I2C_1:I2C_FF\:cy_psoc3_i2c_v1_0
 	GENERIC MAP(cy_registers=>"",

@@ -419,7 +419,7 @@
     <peripheral>
       <name>Control_Reg_1</name>
       <description>No description available</description>
-      <baseAddress>0x40006474</baseAddress>
+      <baseAddress>0x0</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -429,7 +429,7 @@
         <register>
           <name>Control_Reg_1_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x40006577</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

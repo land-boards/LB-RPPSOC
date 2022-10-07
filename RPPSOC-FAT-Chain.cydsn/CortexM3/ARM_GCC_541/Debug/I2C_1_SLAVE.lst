@@ -1,0 +1,1796 @@
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"I2C_1_SLAVE.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.I2C_1_SlaveStatus,"ax",%progbits
+  20              		.align	2
+  21              		.global	I2C_1_SlaveStatus
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	I2C_1_SlaveStatus, %function
+  25              	I2C_1_SlaveStatus:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\I2C_1_SLAVE.c"
+   1:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * File Name: I2C_1_SLAVE.c
+   3:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Version 3.50
+   4:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+   5:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Description:
+   6:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  This file provides the source code of APIs for the I2C component Slave mode.
+   7:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+   8:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Note:
+   9:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  10:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************
+  11:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Copyright 2012-2015, Cypress Semiconductor Corporation. All rights reserved.
+  12:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  17:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #include "I2C_1_PVT.h"
+  18:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  19:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #if (I2C_1_MODE_SLAVE_ENABLED)
+  20:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  21:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /**********************************
+  22:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *      System variables
+  23:Generated_Source\PSoC5/I2C_1_SLAVE.c **** **********************************/
+  24:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  25:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8 I2C_1_slStatus;   /* Slave Status  */
+  26:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  27:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /* Transmit buffer variables */
+  28:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8 * I2C_1_slRdBufPtr;   /* Pointer to Transmit buffer  */
+  29:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slRdBufSize;  /* Slave Transmit buffer size  */
+  30:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slRdBufIndex; /* Slave Transmit buffer Index */
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 2
+
+
+  31:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  32:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /* Receive buffer variables */
+  33:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8 * I2C_1_slWrBufPtr;   /* Pointer to Receive buffer  */
+  34:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slWrBufSize;  /* Slave Receive buffer size  */
+  35:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slWrBufIndex; /* Slave Receive buffer Index */
+  36:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  37:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #if (I2C_1_SW_ADRR_DECODE)
+  38:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     volatile uint8 I2C_1_slAddress;  /* Software address variable */
+  39:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #endif /* (I2C_1_SW_ADRR_DECODE) */
+  40:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  41:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  42:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+  43:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveStatus
+  44:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+  45:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  46:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+  47:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Returns I2C slave's communication status.
+  48:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  49:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+  50:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+  51:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  52:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+  53:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Current status of I2C slave.
+  54:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  55:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+  56:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slStatus - The global variable used to store a current
+  57:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              status of the I2C slave.
+  58:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  59:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+  60:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveStatus(void) 
+  61:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+  28              		.loc 1 61 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  62:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (I2C_1_slStatus);
+  33              		.loc 1 62 0
+  34 0000 014B     		ldr	r3, .L2
+  35 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  63:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+  36              		.loc 1 63 0
+  37 0004 7047     		bx	lr
+  38              	.L3:
+  39 0006 00BF     		.align	2
+  40              	.L2:
+  41 0008 00000000 		.word	I2C_1_slStatus
+  42              		.cfi_endproc
+  43              	.LFE0:
+  44              		.size	I2C_1_SlaveStatus, .-I2C_1_SlaveStatus
+  45              		.section	.text.I2C_1_SlaveClearReadStatus,"ax",%progbits
+  46              		.align	2
+  47              		.global	I2C_1_SlaveClearReadStatus
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	I2C_1_SlaveClearReadStatus, %function
+  51              	I2C_1_SlaveClearReadStatus:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 3
+
+
+  52              	.LFB1:
+  64:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  65:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  66:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+  67:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearReadStatus
+  68:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+  69:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  70:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+  71:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Clears the read status flags and returns they values.
+  72:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The I2C_1_SSTAT_RD_BUSY flag is not effected by clear.
+  73:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  74:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+  75:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+  76:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  77:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+  78:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Current read status of I2C slave.
+  79:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  80:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+  81:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slStatus - The global variable used to store a current
+  82:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              status of the I2C slave.
+  83:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  84:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+  85:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+  86:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  87:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+  88:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveClearReadStatus(void) 
+  89:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+  53              		.loc 1 89 0
+  54              		.cfi_startproc
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              		@ link register save eliminated.
+  90:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     uint8 status;
+  91:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  92:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_DisableInt(); /* Lock from interrupt */
+  58              		.loc 1 92 0
+  59 0000 4FF40041 		mov	r1, #32768
+  60 0004 064B     		ldr	r3, .L5
+  61 0006 1960     		str	r1, [r3]
+  93:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  94:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     /* Mask of transfer complete flag and Error status */
+  95:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     status = (I2C_1_slStatus & I2C_1_SSTAT_RD_MASK);
+  62              		.loc 1 95 0
+  63 0008 064B     		ldr	r3, .L5+4
+  64 000a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  65              	.LVL0:
+  96:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slStatus &= (uint8) ~I2C_1_SSTAT_RD_CLEAR;
+  66              		.loc 1 96 0
+  67 000c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  68 000e 02F0F202 		and	r2, r2, #242
+  69 0012 1A70     		strb	r2, [r3]
+  97:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  98:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_EnableInt(); /* Release lock */
+  70              		.loc 1 98 0
+  71 0014 044B     		ldr	r3, .L5+8
+  72 0016 1960     		str	r1, [r3]
+  99:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 4
+
+
+ 100:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (status);
+ 101:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+  73              		.loc 1 101 0
+  74 0018 00F00F00 		and	r0, r0, #15
+  75              	.LVL1:
+  76 001c 7047     		bx	lr
+  77              	.L6:
+  78 001e 00BF     		.align	2
+  79              	.L5:
+  80 0020 80E100E0 		.word	-536813184
+  81 0024 00000000 		.word	I2C_1_slStatus
+  82 0028 00E100E0 		.word	-536813312
+  83              		.cfi_endproc
+  84              	.LFE1:
+  85              		.size	I2C_1_SlaveClearReadStatus, .-I2C_1_SlaveClearReadStatus
+  86              		.section	.text.I2C_1_SlaveClearWriteStatus,"ax",%progbits
+  87              		.align	2
+  88              		.global	I2C_1_SlaveClearWriteStatus
+  89              		.thumb
+  90              		.thumb_func
+  91              		.type	I2C_1_SlaveClearWriteStatus, %function
+  92              	I2C_1_SlaveClearWriteStatus:
+  93              	.LFB2:
+ 102:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 103:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 104:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 105:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearWriteStatus
+ 106:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 107:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 108:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 109:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Clears the write status flags and returns they values.
+ 110:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The I2C_1_SSTAT_WR_BUSY flag is not effected by clear.
+ 111:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 112:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 113:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 114:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 115:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 116:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Current write status of I2C slave.
+ 117:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 118:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 119:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slStatus - The global variable used to store a current
+ 120:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              status of the I2C slave.
+ 121:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 122:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 123:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 124:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 125:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 126:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveClearWriteStatus(void) 
+ 127:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+  94              		.loc 1 127 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98              		@ link register save eliminated.
+ 128:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     uint8 status;
+ 129:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 130:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_DisableInt(); /* Lock from interrupt */
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 5
+
+
+  99              		.loc 1 130 0
+ 100 0000 4FF40041 		mov	r1, #32768
+ 101 0004 064B     		ldr	r3, .L8
+ 102 0006 1960     		str	r1, [r3]
+ 131:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 132:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     /* Mask of transfer complete flag and Error status */
+ 133:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     status = (I2C_1_slStatus & I2C_1_SSTAT_WR_MASK);
+ 103              		.loc 1 133 0
+ 104 0008 064B     		ldr	r3, .L8+4
+ 105 000a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 106              	.LVL2:
+ 134:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slStatus &= (uint8) ~I2C_1_SSTAT_WR_CLEAR;
+ 107              		.loc 1 134 0
+ 108 000c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 109 000e 02F02F02 		and	r2, r2, #47
+ 110 0012 1A70     		strb	r2, [r3]
+ 135:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 136:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_EnableInt(); /* Release lock */
+ 111              		.loc 1 136 0
+ 112 0014 044B     		ldr	r3, .L8+8
+ 113 0016 1960     		str	r1, [r3]
+ 137:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 138:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (status);
+ 139:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 114              		.loc 1 139 0
+ 115 0018 00F0F000 		and	r0, r0, #240
+ 116              	.LVL3:
+ 117 001c 7047     		bx	lr
+ 118              	.L9:
+ 119 001e 00BF     		.align	2
+ 120              	.L8:
+ 121 0020 80E100E0 		.word	-536813184
+ 122 0024 00000000 		.word	I2C_1_slStatus
+ 123 0028 00E100E0 		.word	-536813312
+ 124              		.cfi_endproc
+ 125              	.LFE2:
+ 126              		.size	I2C_1_SlaveClearWriteStatus, .-I2C_1_SlaveClearWriteStatus
+ 127              		.section	.text.I2C_1_SlaveSetAddress,"ax",%progbits
+ 128              		.align	2
+ 129              		.global	I2C_1_SlaveSetAddress
+ 130              		.thumb
+ 131              		.thumb_func
+ 132              		.type	I2C_1_SlaveSetAddress, %function
+ 133              	I2C_1_SlaveSetAddress:
+ 134              	.LFB3:
+ 140:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 141:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 142:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 143:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveSetAddress
+ 144:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 145:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 146:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 147:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Sets the I2C slave address.
+ 148:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 149:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 150:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  address: I2C slave address for the primary device. This value may be any
+ 151:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  address between 0 and 127.
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 6
+
+
+ 152:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 153:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 154:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 155:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 156:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 157:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_Address  - The global variable used to store an I2C slave
+ 158:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              address for the primary device when the software
+ 159:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              address detect feature is used.
+ 160:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 161:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 162:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 163:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 164:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 165:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveSetAddress(uint8 address) 
+ 166:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 135              		.loc 1 166 0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 140              	.LVL4:
+ 167:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #if (I2C_1_SW_ADRR_DECODE)
+ 168:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slAddress = (address & I2C_1_SLAVE_ADDR_MASK);
+ 169:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #else
+ 170:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_ADDR_REG  = (address & I2C_1_SLAVE_ADDR_MASK);
+ 141              		.loc 1 170 0
+ 142 0000 00F07F00 		and	r0, r0, #127
+ 143              	.LVL5:
+ 144 0004 014B     		ldr	r3, .L11
+ 145 0006 1870     		strb	r0, [r3]
+ 146 0008 7047     		bx	lr
+ 147              	.L12:
+ 148 000a 00BF     		.align	2
+ 149              	.L11:
+ 150 000c CA490040 		.word	1073760714
+ 151              		.cfi_endproc
+ 152              	.LFE3:
+ 153              		.size	I2C_1_SlaveSetAddress, .-I2C_1_SlaveSetAddress
+ 154              		.section	.text.I2C_1_SlaveInitReadBuf,"ax",%progbits
+ 155              		.align	2
+ 156              		.global	I2C_1_SlaveInitReadBuf
+ 157              		.thumb
+ 158              		.thumb_func
+ 159              		.type	I2C_1_SlaveInitReadBuf, %function
+ 160              	I2C_1_SlaveInitReadBuf:
+ 161              	.LFB4:
+ 171:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #endif /* (I2C_1_SW_ADRR_DECODE) */
+ 172:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 173:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 174:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 175:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 176:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveInitReadBuf
+ 177:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 178:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 179:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 180:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Sets the buffer pointer and size of the read buffer. This function also
+ 181:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  resets the transfer count returned with the I2C_SlaveGetReadBufSize function.
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 7
+
+
+ 182:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 183:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 184:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  readBuf:  Pointer to the data buffer to be read by the master.
+ 185:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  bufSize:  Size of the read buffer exposed to the I2C master.
+ 186:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 187:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 188:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 189:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 190:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 191:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufPtr   - The global variable used to store a pointer
+ 192:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  to the slave read buffer.
+ 193:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufSize  - The global variable used to store a slave
+ 194:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  read buffer size.
+ 195:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufIndex - The global variable used to store a current
+ 196:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave read buffer.
+ 197:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 198:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Side Effects:
+ 199:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  If this function is called during a bus transaction, data from the previous
+ 200:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  buffer location and the beginning of the current buffer may be transmitted.
+ 201:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 202:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 203:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 204:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 205:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 206:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveInitReadBuf(uint8 * rdBuf, uint8 bufSize)
+ 207:Generated_Source\PSoC5/I2C_1_SLAVE.c ****      
+ 208:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 162              		.loc 1 208 0
+ 163              		.cfi_startproc
+ 164              		@ args = 0, pretend = 0, frame = 0
+ 165              		@ frame_needed = 0, uses_anonymous_args = 0
+ 166              		@ link register save eliminated.
+ 167              	.LVL6:
+ 209:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     if (NULL != rdBuf)
+ 168              		.loc 1 209 0
+ 169 0000 0246     		mov	r2, r0
+ 170 0002 60B1     		cbz	r0, .L13
+ 210:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     {
+ 211:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_DisableInt(); /* Lock from interrupt */
+ 171              		.loc 1 211 0
+ 172 0004 4FF40043 		mov	r3, #32768
+ 173 0008 0548     		ldr	r0, .L15
+ 174              	.LVL7:
+ 175 000a 0360     		str	r3, [r0]
+ 212:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 213:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         /* Set buffer pointer */
+ 214:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slRdBufPtr   = (volatile uint8 *) rdBuf;
+ 176              		.loc 1 214 0
+ 177 000c 0548     		ldr	r0, .L15+4
+ 178 000e 0260     		str	r2, [r0]
+ 215:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slRdBufSize  = bufSize;    /* Set buffer size     */
+ 179              		.loc 1 215 0
+ 180 0010 054A     		ldr	r2, .L15+8
+ 181              	.LVL8:
+ 182 0012 1170     		strb	r1, [r2]
+ 216:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slRdBufIndex = 0u;         /* Clears buffer index */
+ 183              		.loc 1 216 0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 8
+
+
+ 184 0014 0021     		movs	r1, #0
+ 185              	.LVL9:
+ 186 0016 054A     		ldr	r2, .L15+12
+ 187 0018 1170     		strb	r1, [r2]
+ 188              	.LVL10:
+ 217:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 218:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_EnableInt(); /* Release lock */
+ 189              		.loc 1 218 0
+ 190 001a 054A     		ldr	r2, .L15+16
+ 191 001c 1360     		str	r3, [r2]
+ 192              	.LVL11:
+ 193              	.L13:
+ 194 001e 7047     		bx	lr
+ 195              	.L16:
+ 196              		.align	2
+ 197              	.L15:
+ 198 0020 80E100E0 		.word	-536813184
+ 199 0024 00000000 		.word	I2C_1_slRdBufPtr
+ 200 0028 00000000 		.word	I2C_1_slRdBufSize
+ 201 002c 00000000 		.word	I2C_1_slRdBufIndex
+ 202 0030 00E100E0 		.word	-536813312
+ 203              		.cfi_endproc
+ 204              	.LFE4:
+ 205              		.size	I2C_1_SlaveInitReadBuf, .-I2C_1_SlaveInitReadBuf
+ 206              		.section	.text.I2C_1_SlaveInitWriteBuf,"ax",%progbits
+ 207              		.align	2
+ 208              		.global	I2C_1_SlaveInitWriteBuf
+ 209              		.thumb
+ 210              		.thumb_func
+ 211              		.type	I2C_1_SlaveInitWriteBuf, %function
+ 212              	I2C_1_SlaveInitWriteBuf:
+ 213              	.LFB5:
+ 219:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     }
+ 220:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 221:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 222:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 223:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 224:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveInitWriteBuf
+ 225:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 226:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 227:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 228:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Sets the buffer pointer and size of the read buffer. This function also
+ 229:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  resets the transfer count returned with the I2C_SlaveGetReadBufSize function.
+ 230:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 231:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 232:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  writeBuf:  Pointer to the data buffer to be read by the master.
+ 233:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  bufSize:  Size of the buffer exposed to the I2C master.
+ 234:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 235:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 236:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 237:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 238:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 239:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufPtr   - The global variable used to store a pointer
+ 240:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  to the slave write buffer.
+ 241:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufSize  - The global variable used to store a slave
+ 242:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  write buffer size.
+ 243:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufIndex - The global variable used to store a current
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 9
+
+
+ 244:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave write buffer.
+ 245:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 246:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Side Effects:
+ 247:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  If this function is called during a bus transaction, data from the previous
+ 248:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  buffer location and the beginning of the current buffer may be transmitted.
+ 249:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 250:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 251:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 252:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 253:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 254:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveInitWriteBuf(uint8 * wrBuf, uint8 bufSize)
+ 255:Generated_Source\PSoC5/I2C_1_SLAVE.c ****      
+ 256:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 214              		.loc 1 256 0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 0
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218              		@ link register save eliminated.
+ 219              	.LVL12:
+ 257:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     if (NULL != wrBuf)
+ 220              		.loc 1 257 0
+ 221 0000 0246     		mov	r2, r0
+ 222 0002 60B1     		cbz	r0, .L17
+ 258:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     {
+ 259:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_DisableInt(); /* Lock from interrupt */
+ 223              		.loc 1 259 0
+ 224 0004 4FF40043 		mov	r3, #32768
+ 225 0008 0548     		ldr	r0, .L19
+ 226              	.LVL13:
+ 227 000a 0360     		str	r3, [r0]
+ 260:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 261:Generated_Source\PSoC5/I2C_1_SLAVE.c ****          /* Set buffer pointer */
+ 262:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slWrBufPtr   = (volatile uint8 *) wrBuf;
+ 228              		.loc 1 262 0
+ 229 000c 0548     		ldr	r0, .L19+4
+ 230 000e 0260     		str	r2, [r0]
+ 263:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slWrBufSize  = bufSize;    /* Set buffer size     */
+ 231              		.loc 1 263 0
+ 232 0010 054A     		ldr	r2, .L19+8
+ 233              	.LVL14:
+ 234 0012 1170     		strb	r1, [r2]
+ 264:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slWrBufIndex = 0u;         /* Clears buffer index */
+ 235              		.loc 1 264 0
+ 236 0014 0021     		movs	r1, #0
+ 237              	.LVL15:
+ 238 0016 054A     		ldr	r2, .L19+12
+ 239 0018 1170     		strb	r1, [r2]
+ 240              	.LVL16:
+ 265:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 266:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_EnableInt(); /* Release lock */
+ 241              		.loc 1 266 0
+ 242 001a 054A     		ldr	r2, .L19+16
+ 243 001c 1360     		str	r3, [r2]
+ 244              	.LVL17:
+ 245              	.L17:
+ 246 001e 7047     		bx	lr
+ 247              	.L20:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 10
+
+
+ 248              		.align	2
+ 249              	.L19:
+ 250 0020 80E100E0 		.word	-536813184
+ 251 0024 00000000 		.word	I2C_1_slWrBufPtr
+ 252 0028 00000000 		.word	I2C_1_slWrBufSize
+ 253 002c 00000000 		.word	I2C_1_slWrBufIndex
+ 254 0030 00E100E0 		.word	-536813312
+ 255              		.cfi_endproc
+ 256              	.LFE5:
+ 257              		.size	I2C_1_SlaveInitWriteBuf, .-I2C_1_SlaveInitWriteBuf
+ 258              		.section	.text.I2C_1_SlaveGetReadBufSize,"ax",%progbits
+ 259              		.align	2
+ 260              		.global	I2C_1_SlaveGetReadBufSize
+ 261              		.thumb
+ 262              		.thumb_func
+ 263              		.type	I2C_1_SlaveGetReadBufSize, %function
+ 264              	I2C_1_SlaveGetReadBufSize:
+ 265              	.LFB6:
+ 267:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     }
+ 268:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 269:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 270:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 271:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 272:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveGetReadBufSize
+ 273:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 274:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 275:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 276:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Returns the number of bytes read by the I2C master since an
+ 277:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_SlaveInitReadBuf or I2C_SlaveClearReadBuf function was executed.
+ 278:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The maximum return value will be the size of the read buffer.
+ 279:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 280:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 281:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 282:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 283:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 284:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Bytes read by master.
+ 285:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 286:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 287:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufIndex - The global variable used to store a current
+ 288:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave read buffer.
+ 289:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 290:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 291:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveGetReadBufSize(void) 
+ 292:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 266              		.loc 1 292 0
+ 267              		.cfi_startproc
+ 268              		@ args = 0, pretend = 0, frame = 0
+ 269              		@ frame_needed = 0, uses_anonymous_args = 0
+ 270              		@ link register save eliminated.
+ 293:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (I2C_1_slRdBufIndex);
+ 271              		.loc 1 293 0
+ 272 0000 014B     		ldr	r3, .L22
+ 273 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 294:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 274              		.loc 1 294 0
+ 275 0004 7047     		bx	lr
+ 276              	.L23:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 11
+
+
+ 277 0006 00BF     		.align	2
+ 278              	.L22:
+ 279 0008 00000000 		.word	I2C_1_slRdBufIndex
+ 280              		.cfi_endproc
+ 281              	.LFE6:
+ 282              		.size	I2C_1_SlaveGetReadBufSize, .-I2C_1_SlaveGetReadBufSize
+ 283              		.section	.text.I2C_1_SlaveGetWriteBufSize,"ax",%progbits
+ 284              		.align	2
+ 285              		.global	I2C_1_SlaveGetWriteBufSize
+ 286              		.thumb
+ 287              		.thumb_func
+ 288              		.type	I2C_1_SlaveGetWriteBufSize, %function
+ 289              	I2C_1_SlaveGetWriteBufSize:
+ 290              	.LFB7:
+ 295:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 296:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 297:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 298:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveGetWriteBufSize
+ 299:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 300:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 301:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 302:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Returns the number of bytes written by the I2C master since an
+ 303:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_SlaveInitWriteBuf or I2C_SlaveClearWriteBuf function was executed.
+ 304:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The maximum return value will be the size of the write buffer.
+ 305:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 306:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 307:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 308:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 309:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 310:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Bytes written by master.
+ 311:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 312:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 313:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufIndex - The global variable used to store a current
+ 314:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave write buffer.
+ 315:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 316:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 317:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveGetWriteBufSize(void) 
+ 318:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 291              		.loc 1 318 0
+ 292              		.cfi_startproc
+ 293              		@ args = 0, pretend = 0, frame = 0
+ 294              		@ frame_needed = 0, uses_anonymous_args = 0
+ 295              		@ link register save eliminated.
+ 319:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (I2C_1_slWrBufIndex);
+ 296              		.loc 1 319 0
+ 297 0000 014B     		ldr	r3, .L25
+ 298 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 320:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 299              		.loc 1 320 0
+ 300 0004 7047     		bx	lr
+ 301              	.L26:
+ 302 0006 00BF     		.align	2
+ 303              	.L25:
+ 304 0008 00000000 		.word	I2C_1_slWrBufIndex
+ 305              		.cfi_endproc
+ 306              	.LFE7:
+ 307              		.size	I2C_1_SlaveGetWriteBufSize, .-I2C_1_SlaveGetWriteBufSize
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 12
+
+
+ 308              		.section	.text.I2C_1_SlaveClearReadBuf,"ax",%progbits
+ 309              		.align	2
+ 310              		.global	I2C_1_SlaveClearReadBuf
+ 311              		.thumb
+ 312              		.thumb_func
+ 313              		.type	I2C_1_SlaveClearReadBuf, %function
+ 314              	I2C_1_SlaveClearReadBuf:
+ 315              	.LFB8:
+ 321:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 322:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 323:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 324:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearReadBuf
+ 325:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 326:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 327:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 328:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Resets the read pointer to the first byte in the read buffer. The next byte
+ 329:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  read by the master will be the first byte in the read buffer.
+ 330:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 331:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 332:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 333:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 334:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 335:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 336:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 337:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 338:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufIndex - The global variable used to store a current
+ 339:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index the within slave read buffer.
+ 340:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 341:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 342:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 343:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 344:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 345:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveClearReadBuf(void) 
+ 346:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 316              		.loc 1 346 0
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320              		@ link register save eliminated.
+ 347:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slRdBufIndex = 0u;
+ 321              		.loc 1 347 0
+ 322 0000 0022     		movs	r2, #0
+ 323 0002 014B     		ldr	r3, .L28
+ 324 0004 1A70     		strb	r2, [r3]
+ 325 0006 7047     		bx	lr
+ 326              	.L29:
+ 327              		.align	2
+ 328              	.L28:
+ 329 0008 00000000 		.word	I2C_1_slRdBufIndex
+ 330              		.cfi_endproc
+ 331              	.LFE8:
+ 332              		.size	I2C_1_SlaveClearReadBuf, .-I2C_1_SlaveClearReadBuf
+ 333              		.section	.text.I2C_1_SlaveClearWriteBuf,"ax",%progbits
+ 334              		.align	2
+ 335              		.global	I2C_1_SlaveClearWriteBuf
+ 336              		.thumb
+ 337              		.thumb_func
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 13
+
+
+ 338              		.type	I2C_1_SlaveClearWriteBuf, %function
+ 339              	I2C_1_SlaveClearWriteBuf:
+ 340              	.LFB9:
+ 348:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 349:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 350:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 351:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 352:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearRxBuf
+ 353:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 354:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 355:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 356:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Resets the write pointer to the first byte in the write buffer. The next byte
+ 357:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  written by the master will be the first byte in the write buffer.
+ 358:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 359:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 360:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 361:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 362:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 363:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 364:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 365:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 366:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufIndex - The global variable used to store a current
+ 367:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave write buffer.
+ 368:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 369:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 370:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 371:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 372:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 373:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveClearWriteBuf(void) 
+ 374:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 341              		.loc 1 374 0
+ 342              		.cfi_startproc
+ 343              		@ args = 0, pretend = 0, frame = 0
+ 344              		@ frame_needed = 0, uses_anonymous_args = 0
+ 345              		@ link register save eliminated.
+ 375:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slWrBufIndex = 0u;
+ 346              		.loc 1 375 0
+ 347 0000 0022     		movs	r2, #0
+ 348 0002 014B     		ldr	r3, .L31
+ 349 0004 1A70     		strb	r2, [r3]
+ 350 0006 7047     		bx	lr
+ 351              	.L32:
+ 352              		.align	2
+ 353              	.L31:
+ 354 0008 00000000 		.word	I2C_1_slWrBufIndex
+ 355              		.cfi_endproc
+ 356              	.LFE9:
+ 357              		.size	I2C_1_SlaveClearWriteBuf, .-I2C_1_SlaveClearWriteBuf
+ 358              		.comm	I2C_1_slWrBufIndex,1,1
+ 359              		.comm	I2C_1_slWrBufSize,1,1
+ 360              		.comm	I2C_1_slWrBufPtr,4,4
+ 361              		.comm	I2C_1_slRdBufIndex,1,1
+ 362              		.comm	I2C_1_slRdBufSize,1,1
+ 363              		.comm	I2C_1_slRdBufPtr,4,4
+ 364              		.comm	I2C_1_slStatus,1,1
+ 365              		.text
+ 366              	.Letext0:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 14
+
+
+ 367              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 368              		.section	.debug_info,"",%progbits
+ 369              	.Ldebug_info0:
+ 370 0000 8A020000 		.4byte	0x28a
+ 371 0004 0400     		.2byte	0x4
+ 372 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 373 000a 04       		.byte	0x4
+ 374 000b 01       		.uleb128 0x1
+ 375 000c 52010000 		.4byte	.LASF40
+ 376 0010 0C       		.byte	0xc
+ 377 0011 00000000 		.4byte	.LASF41
+ 378 0015 DF000000 		.4byte	.LASF42
+ 379 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 380 001d 00000000 		.4byte	0
+ 381 0021 00000000 		.4byte	.Ldebug_line0
+ 382 0025 02       		.uleb128 0x2
+ 383 0026 01       		.byte	0x1
+ 384 0027 06       		.byte	0x6
+ 385 0028 33030000 		.4byte	.LASF0
+ 386 002c 02       		.uleb128 0x2
+ 387 002d 01       		.byte	0x1
+ 388 002e 08       		.byte	0x8
+ 389 002f 44010000 		.4byte	.LASF1
+ 390 0033 02       		.uleb128 0x2
+ 391 0034 02       		.byte	0x2
+ 392 0035 05       		.byte	0x5
+ 393 0036 F7020000 		.4byte	.LASF2
+ 394 003a 02       		.uleb128 0x2
+ 395 003b 02       		.byte	0x2
+ 396 003c 07       		.byte	0x7
+ 397 003d 6E000000 		.4byte	.LASF3
+ 398 0041 02       		.uleb128 0x2
+ 399 0042 04       		.byte	0x4
+ 400 0043 05       		.byte	0x5
+ 401 0044 65000000 		.4byte	.LASF4
+ 402 0048 02       		.uleb128 0x2
+ 403 0049 04       		.byte	0x4
+ 404 004a 07       		.byte	0x7
+ 405 004b E5010000 		.4byte	.LASF5
+ 406 004f 02       		.uleb128 0x2
+ 407 0050 08       		.byte	0x8
+ 408 0051 05       		.byte	0x5
+ 409 0052 BB020000 		.4byte	.LASF6
+ 410 0056 02       		.uleb128 0x2
+ 411 0057 08       		.byte	0x8
+ 412 0058 07       		.byte	0x7
+ 413 0059 9B020000 		.4byte	.LASF7
+ 414 005d 03       		.uleb128 0x3
+ 415 005e 04       		.byte	0x4
+ 416 005f 05       		.byte	0x5
+ 417 0060 696E7400 		.ascii	"int\000"
+ 418 0064 02       		.uleb128 0x2
+ 419 0065 04       		.byte	0x4
+ 420 0066 07       		.byte	0x7
+ 421 0067 86020000 		.4byte	.LASF8
+ 422 006b 04       		.uleb128 0x4
+ 423 006c 09030000 		.4byte	.LASF9
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 15
+
+
+ 424 0070 02       		.byte	0x2
+ 425 0071 C2       		.byte	0xc2
+ 426 0072 2C000000 		.4byte	0x2c
+ 427 0076 04       		.uleb128 0x4
+ 428 0077 7F020000 		.4byte	.LASF10
+ 429 007b 02       		.byte	0x2
+ 430 007c C4       		.byte	0xc4
+ 431 007d 48000000 		.4byte	0x48
+ 432 0081 02       		.uleb128 0x2
+ 433 0082 04       		.byte	0x4
+ 434 0083 04       		.byte	0x4
+ 435 0084 3E010000 		.4byte	.LASF11
+ 436 0088 02       		.uleb128 0x2
+ 437 0089 08       		.byte	0x8
+ 438 008a 04       		.byte	0x4
+ 439 008b 54020000 		.4byte	.LASF12
+ 440 008f 02       		.uleb128 0x2
+ 441 0090 01       		.byte	0x1
+ 442 0091 08       		.byte	0x8
+ 443 0092 22030000 		.4byte	.LASF13
+ 444 0096 05       		.uleb128 0x5
+ 445 0097 E0010000 		.4byte	.LASF14
+ 446 009b 02       		.byte	0x2
+ 447 009c 6C01     		.2byte	0x16c
+ 448 009e A2000000 		.4byte	0xa2
+ 449 00a2 06       		.uleb128 0x6
+ 450 00a3 6B000000 		.4byte	0x6b
+ 451 00a7 05       		.uleb128 0x5
+ 452 00a8 25000000 		.4byte	.LASF15
+ 453 00ac 02       		.byte	0x2
+ 454 00ad 6E01     		.2byte	0x16e
+ 455 00af B3000000 		.4byte	0xb3
+ 456 00b3 06       		.uleb128 0x6
+ 457 00b4 76000000 		.4byte	0x76
+ 458 00b8 02       		.uleb128 0x2
+ 459 00b9 08       		.byte	0x8
+ 460 00ba 04       		.byte	0x4
+ 461 00bb 27030000 		.4byte	.LASF16
+ 462 00bf 02       		.uleb128 0x2
+ 463 00c0 04       		.byte	0x4
+ 464 00c1 07       		.byte	0x7
+ 465 00c2 B2020000 		.4byte	.LASF17
+ 466 00c6 07       		.uleb128 0x7
+ 467 00c7 12020000 		.4byte	.LASF28
+ 468 00cb 01       		.byte	0x1
+ 469 00cc 3C       		.byte	0x3c
+ 470 00cd 6B000000 		.4byte	0x6b
+ 471 00d1 00000000 		.4byte	.LFB0
+ 472 00d5 0C000000 		.4byte	.LFE0-.LFB0
+ 473 00d9 01       		.uleb128 0x1
+ 474 00da 9C       		.byte	0x9c
+ 475 00db 08       		.uleb128 0x8
+ 476 00dc F7010000 		.4byte	.LASF18
+ 477 00e0 01       		.byte	0x1
+ 478 00e1 58       		.byte	0x58
+ 479 00e2 6B000000 		.4byte	0x6b
+ 480 00e6 00000000 		.4byte	.LFB1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 16
+
+
+ 481 00ea 2C000000 		.4byte	.LFE1-.LFB1
+ 482 00ee 01       		.uleb128 0x1
+ 483 00ef 9C       		.byte	0x9c
+ 484 00f0 04010000 		.4byte	0x104
+ 485 00f4 09       		.uleb128 0x9
+ 486 00f5 9B000000 		.4byte	.LASF20
+ 487 00f9 01       		.byte	0x1
+ 488 00fa 5A       		.byte	0x5a
+ 489 00fb 6B000000 		.4byte	0x6b
+ 490 00ff 00000000 		.4byte	.LLST0
+ 491 0103 00       		.byte	0
+ 492 0104 08       		.uleb128 0x8
+ 493 0105 A2000000 		.4byte	.LASF19
+ 494 0109 01       		.byte	0x1
+ 495 010a 7E       		.byte	0x7e
+ 496 010b 6B000000 		.4byte	0x6b
+ 497 010f 00000000 		.4byte	.LFB2
+ 498 0113 2C000000 		.4byte	.LFE2-.LFB2
+ 499 0117 01       		.uleb128 0x1
+ 500 0118 9C       		.byte	0x9c
+ 501 0119 2D010000 		.4byte	0x12d
+ 502 011d 09       		.uleb128 0x9
+ 503 011e 9B000000 		.4byte	.LASF20
+ 504 0122 01       		.byte	0x1
+ 505 0123 80       		.byte	0x80
+ 506 0124 6B000000 		.4byte	0x6b
+ 507 0128 17000000 		.4byte	.LLST1
+ 508 012c 00       		.byte	0
+ 509 012d 0A       		.uleb128 0xa
+ 510 012e E1020000 		.4byte	.LASF21
+ 511 0132 01       		.byte	0x1
+ 512 0133 A5       		.byte	0xa5
+ 513 0134 00000000 		.4byte	.LFB3
+ 514 0138 10000000 		.4byte	.LFE3-.LFB3
+ 515 013c 01       		.uleb128 0x1
+ 516 013d 9C       		.byte	0x9c
+ 517 013e 52010000 		.4byte	0x152
+ 518 0142 0B       		.uleb128 0xb
+ 519 0143 93020000 		.4byte	.LASF23
+ 520 0147 01       		.byte	0x1
+ 521 0148 A5       		.byte	0xa5
+ 522 0149 6B000000 		.4byte	0x6b
+ 523 014d 2F000000 		.4byte	.LLST2
+ 524 0151 00       		.byte	0
+ 525 0152 0A       		.uleb128 0xa
+ 526 0153 3F030000 		.4byte	.LASF22
+ 527 0157 01       		.byte	0x1
+ 528 0158 CE       		.byte	0xce
+ 529 0159 00000000 		.4byte	.LFB4
+ 530 015d 34000000 		.4byte	.LFE4-.LFB4
+ 531 0161 01       		.uleb128 0x1
+ 532 0162 9C       		.byte	0x9c
+ 533 0163 86010000 		.4byte	0x186
+ 534 0167 0B       		.uleb128 0xb
+ 535 0168 BE000000 		.4byte	.LASF24
+ 536 016c 01       		.byte	0x1
+ 537 016d CE       		.byte	0xce
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 17
+
+
+ 538 016e 86010000 		.4byte	0x186
+ 539 0172 50000000 		.4byte	.LLST3
+ 540 0176 0B       		.uleb128 0xb
+ 541 0177 01030000 		.4byte	.LASF25
+ 542 017b 01       		.byte	0x1
+ 543 017c CE       		.byte	0xce
+ 544 017d 6B000000 		.4byte	0x6b
+ 545 0181 8B000000 		.4byte	.LLST4
+ 546 0185 00       		.byte	0
+ 547 0186 0C       		.uleb128 0xc
+ 548 0187 04       		.byte	0x4
+ 549 0188 6B000000 		.4byte	0x6b
+ 550 018c 0A       		.uleb128 0xa
+ 551 018d 24020000 		.4byte	.LASF26
+ 552 0191 01       		.byte	0x1
+ 553 0192 FE       		.byte	0xfe
+ 554 0193 00000000 		.4byte	.LFB5
+ 555 0197 34000000 		.4byte	.LFE5-.LFB5
+ 556 019b 01       		.uleb128 0x1
+ 557 019c 9C       		.byte	0x9c
+ 558 019d C0010000 		.4byte	0x1c0
+ 559 01a1 0B       		.uleb128 0xb
+ 560 01a2 3C020000 		.4byte	.LASF27
+ 561 01a6 01       		.byte	0x1
+ 562 01a7 FE       		.byte	0xfe
+ 563 01a8 86010000 		.4byte	0x186
+ 564 01ac BB000000 		.4byte	.LLST5
+ 565 01b0 0B       		.uleb128 0xb
+ 566 01b1 01030000 		.4byte	.LASF25
+ 567 01b5 01       		.byte	0x1
+ 568 01b6 FE       		.byte	0xfe
+ 569 01b7 6B000000 		.4byte	0x6b
+ 570 01bb F6000000 		.4byte	.LLST6
+ 571 01bf 00       		.byte	0
+ 572 01c0 0D       		.uleb128 0xd
+ 573 01c1 81000000 		.4byte	.LASF29
+ 574 01c5 01       		.byte	0x1
+ 575 01c6 2301     		.2byte	0x123
+ 576 01c8 6B000000 		.4byte	0x6b
+ 577 01cc 00000000 		.4byte	.LFB6
+ 578 01d0 0C000000 		.4byte	.LFE6-.LFB6
+ 579 01d4 01       		.uleb128 0x1
+ 580 01d5 9C       		.byte	0x9c
+ 581 01d6 0D       		.uleb128 0xd
+ 582 01d7 C4000000 		.4byte	.LASF30
+ 583 01db 01       		.byte	0x1
+ 584 01dc 3D01     		.2byte	0x13d
+ 585 01de 6B000000 		.4byte	0x6b
+ 586 01e2 00000000 		.4byte	.LFB7
+ 587 01e6 0C000000 		.4byte	.LFE7-.LFB7
+ 588 01ea 01       		.uleb128 0x1
+ 589 01eb 9C       		.byte	0x9c
+ 590 01ec 0E       		.uleb128 0xe
+ 591 01ed C9020000 		.4byte	.LASF31
+ 592 01f1 01       		.byte	0x1
+ 593 01f2 5901     		.2byte	0x159
+ 594 01f4 00000000 		.4byte	.LFB8
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 18
+
+
+ 595 01f8 0C000000 		.4byte	.LFE8-.LFB8
+ 596 01fc 01       		.uleb128 0x1
+ 597 01fd 9C       		.byte	0x9c
+ 598 01fe 0E       		.uleb128 0xe
+ 599 01ff 4C000000 		.4byte	.LASF32
+ 600 0203 01       		.byte	0x1
+ 601 0204 7501     		.2byte	0x175
+ 602 0206 00000000 		.4byte	.LFB9
+ 603 020a 0C000000 		.4byte	.LFE9-.LFB9
+ 604 020e 01       		.uleb128 0x1
+ 605 020f 9C       		.byte	0x9c
+ 606 0210 0F       		.uleb128 0xf
+ 607 0211 3D000000 		.4byte	.LASF33
+ 608 0215 01       		.byte	0x1
+ 609 0216 19       		.byte	0x19
+ 610 0217 A2000000 		.4byte	0xa2
+ 611 021b 05       		.uleb128 0x5
+ 612 021c 03       		.byte	0x3
+ 613 021d 00000000 		.4byte	I2C_1_slStatus
+ 614 0221 0F       		.uleb128 0xf
+ 615 0222 2D010000 		.4byte	.LASF34
+ 616 0226 01       		.byte	0x1
+ 617 0227 1C       		.byte	0x1c
+ 618 0228 32020000 		.4byte	0x232
+ 619 022c 05       		.uleb128 0x5
+ 620 022d 03       		.byte	0x3
+ 621 022e 00000000 		.4byte	I2C_1_slRdBufPtr
+ 622 0232 0C       		.uleb128 0xc
+ 623 0233 04       		.byte	0x4
+ 624 0234 A2000000 		.4byte	0xa2
+ 625 0238 0F       		.uleb128 0xf
+ 626 0239 2B000000 		.4byte	.LASF35
+ 627 023d 01       		.byte	0x1
+ 628 023e 1D       		.byte	0x1d
+ 629 023f A2000000 		.4byte	0xa2
+ 630 0243 05       		.uleb128 0x5
+ 631 0244 03       		.byte	0x3
+ 632 0245 00000000 		.4byte	I2C_1_slRdBufSize
+ 633 0249 0F       		.uleb128 0xf
+ 634 024a 0F030000 		.4byte	.LASF36
+ 635 024e 01       		.byte	0x1
+ 636 024f 1E       		.byte	0x1e
+ 637 0250 A2000000 		.4byte	0xa2
+ 638 0254 05       		.uleb128 0x5
+ 639 0255 03       		.byte	0x3
+ 640 0256 00000000 		.4byte	I2C_1_slRdBufIndex
+ 641 025a 0F       		.uleb128 0xf
+ 642 025b 5B020000 		.4byte	.LASF37
+ 643 025f 01       		.byte	0x1
+ 644 0260 21       		.byte	0x21
+ 645 0261 32020000 		.4byte	0x232
+ 646 0265 05       		.uleb128 0x5
+ 647 0266 03       		.byte	0x3
+ 648 0267 00000000 		.4byte	I2C_1_slWrBufPtr
+ 649 026b 0F       		.uleb128 0xf
+ 650 026c 42020000 		.4byte	.LASF38
+ 651 0270 01       		.byte	0x1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 19
+
+
+ 652 0271 22       		.byte	0x22
+ 653 0272 A2000000 		.4byte	0xa2
+ 654 0276 05       		.uleb128 0x5
+ 655 0277 03       		.byte	0x3
+ 656 0278 00000000 		.4byte	I2C_1_slWrBufSize
+ 657 027c 0F       		.uleb128 0xf
+ 658 027d 6C020000 		.4byte	.LASF39
+ 659 0281 01       		.byte	0x1
+ 660 0282 23       		.byte	0x23
+ 661 0283 A2000000 		.4byte	0xa2
+ 662 0287 05       		.uleb128 0x5
+ 663 0288 03       		.byte	0x3
+ 664 0289 00000000 		.4byte	I2C_1_slWrBufIndex
+ 665 028d 00       		.byte	0
+ 666              		.section	.debug_abbrev,"",%progbits
+ 667              	.Ldebug_abbrev0:
+ 668 0000 01       		.uleb128 0x1
+ 669 0001 11       		.uleb128 0x11
+ 670 0002 01       		.byte	0x1
+ 671 0003 25       		.uleb128 0x25
+ 672 0004 0E       		.uleb128 0xe
+ 673 0005 13       		.uleb128 0x13
+ 674 0006 0B       		.uleb128 0xb
+ 675 0007 03       		.uleb128 0x3
+ 676 0008 0E       		.uleb128 0xe
+ 677 0009 1B       		.uleb128 0x1b
+ 678 000a 0E       		.uleb128 0xe
+ 679 000b 55       		.uleb128 0x55
+ 680 000c 17       		.uleb128 0x17
+ 681 000d 11       		.uleb128 0x11
+ 682 000e 01       		.uleb128 0x1
+ 683 000f 10       		.uleb128 0x10
+ 684 0010 17       		.uleb128 0x17
+ 685 0011 00       		.byte	0
+ 686 0012 00       		.byte	0
+ 687 0013 02       		.uleb128 0x2
+ 688 0014 24       		.uleb128 0x24
+ 689 0015 00       		.byte	0
+ 690 0016 0B       		.uleb128 0xb
+ 691 0017 0B       		.uleb128 0xb
+ 692 0018 3E       		.uleb128 0x3e
+ 693 0019 0B       		.uleb128 0xb
+ 694 001a 03       		.uleb128 0x3
+ 695 001b 0E       		.uleb128 0xe
+ 696 001c 00       		.byte	0
+ 697 001d 00       		.byte	0
+ 698 001e 03       		.uleb128 0x3
+ 699 001f 24       		.uleb128 0x24
+ 700 0020 00       		.byte	0
+ 701 0021 0B       		.uleb128 0xb
+ 702 0022 0B       		.uleb128 0xb
+ 703 0023 3E       		.uleb128 0x3e
+ 704 0024 0B       		.uleb128 0xb
+ 705 0025 03       		.uleb128 0x3
+ 706 0026 08       		.uleb128 0x8
+ 707 0027 00       		.byte	0
+ 708 0028 00       		.byte	0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 20
+
+
+ 709 0029 04       		.uleb128 0x4
+ 710 002a 16       		.uleb128 0x16
+ 711 002b 00       		.byte	0
+ 712 002c 03       		.uleb128 0x3
+ 713 002d 0E       		.uleb128 0xe
+ 714 002e 3A       		.uleb128 0x3a
+ 715 002f 0B       		.uleb128 0xb
+ 716 0030 3B       		.uleb128 0x3b
+ 717 0031 0B       		.uleb128 0xb
+ 718 0032 49       		.uleb128 0x49
+ 719 0033 13       		.uleb128 0x13
+ 720 0034 00       		.byte	0
+ 721 0035 00       		.byte	0
+ 722 0036 05       		.uleb128 0x5
+ 723 0037 16       		.uleb128 0x16
+ 724 0038 00       		.byte	0
+ 725 0039 03       		.uleb128 0x3
+ 726 003a 0E       		.uleb128 0xe
+ 727 003b 3A       		.uleb128 0x3a
+ 728 003c 0B       		.uleb128 0xb
+ 729 003d 3B       		.uleb128 0x3b
+ 730 003e 05       		.uleb128 0x5
+ 731 003f 49       		.uleb128 0x49
+ 732 0040 13       		.uleb128 0x13
+ 733 0041 00       		.byte	0
+ 734 0042 00       		.byte	0
+ 735 0043 06       		.uleb128 0x6
+ 736 0044 35       		.uleb128 0x35
+ 737 0045 00       		.byte	0
+ 738 0046 49       		.uleb128 0x49
+ 739 0047 13       		.uleb128 0x13
+ 740 0048 00       		.byte	0
+ 741 0049 00       		.byte	0
+ 742 004a 07       		.uleb128 0x7
+ 743 004b 2E       		.uleb128 0x2e
+ 744 004c 00       		.byte	0
+ 745 004d 3F       		.uleb128 0x3f
+ 746 004e 19       		.uleb128 0x19
+ 747 004f 03       		.uleb128 0x3
+ 748 0050 0E       		.uleb128 0xe
+ 749 0051 3A       		.uleb128 0x3a
+ 750 0052 0B       		.uleb128 0xb
+ 751 0053 3B       		.uleb128 0x3b
+ 752 0054 0B       		.uleb128 0xb
+ 753 0055 27       		.uleb128 0x27
+ 754 0056 19       		.uleb128 0x19
+ 755 0057 49       		.uleb128 0x49
+ 756 0058 13       		.uleb128 0x13
+ 757 0059 11       		.uleb128 0x11
+ 758 005a 01       		.uleb128 0x1
+ 759 005b 12       		.uleb128 0x12
+ 760 005c 06       		.uleb128 0x6
+ 761 005d 40       		.uleb128 0x40
+ 762 005e 18       		.uleb128 0x18
+ 763 005f 9742     		.uleb128 0x2117
+ 764 0061 19       		.uleb128 0x19
+ 765 0062 00       		.byte	0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 21
+
+
+ 766 0063 00       		.byte	0
+ 767 0064 08       		.uleb128 0x8
+ 768 0065 2E       		.uleb128 0x2e
+ 769 0066 01       		.byte	0x1
+ 770 0067 3F       		.uleb128 0x3f
+ 771 0068 19       		.uleb128 0x19
+ 772 0069 03       		.uleb128 0x3
+ 773 006a 0E       		.uleb128 0xe
+ 774 006b 3A       		.uleb128 0x3a
+ 775 006c 0B       		.uleb128 0xb
+ 776 006d 3B       		.uleb128 0x3b
+ 777 006e 0B       		.uleb128 0xb
+ 778 006f 27       		.uleb128 0x27
+ 779 0070 19       		.uleb128 0x19
+ 780 0071 49       		.uleb128 0x49
+ 781 0072 13       		.uleb128 0x13
+ 782 0073 11       		.uleb128 0x11
+ 783 0074 01       		.uleb128 0x1
+ 784 0075 12       		.uleb128 0x12
+ 785 0076 06       		.uleb128 0x6
+ 786 0077 40       		.uleb128 0x40
+ 787 0078 18       		.uleb128 0x18
+ 788 0079 9742     		.uleb128 0x2117
+ 789 007b 19       		.uleb128 0x19
+ 790 007c 01       		.uleb128 0x1
+ 791 007d 13       		.uleb128 0x13
+ 792 007e 00       		.byte	0
+ 793 007f 00       		.byte	0
+ 794 0080 09       		.uleb128 0x9
+ 795 0081 34       		.uleb128 0x34
+ 796 0082 00       		.byte	0
+ 797 0083 03       		.uleb128 0x3
+ 798 0084 0E       		.uleb128 0xe
+ 799 0085 3A       		.uleb128 0x3a
+ 800 0086 0B       		.uleb128 0xb
+ 801 0087 3B       		.uleb128 0x3b
+ 802 0088 0B       		.uleb128 0xb
+ 803 0089 49       		.uleb128 0x49
+ 804 008a 13       		.uleb128 0x13
+ 805 008b 02       		.uleb128 0x2
+ 806 008c 17       		.uleb128 0x17
+ 807 008d 00       		.byte	0
+ 808 008e 00       		.byte	0
+ 809 008f 0A       		.uleb128 0xa
+ 810 0090 2E       		.uleb128 0x2e
+ 811 0091 01       		.byte	0x1
+ 812 0092 3F       		.uleb128 0x3f
+ 813 0093 19       		.uleb128 0x19
+ 814 0094 03       		.uleb128 0x3
+ 815 0095 0E       		.uleb128 0xe
+ 816 0096 3A       		.uleb128 0x3a
+ 817 0097 0B       		.uleb128 0xb
+ 818 0098 3B       		.uleb128 0x3b
+ 819 0099 0B       		.uleb128 0xb
+ 820 009a 27       		.uleb128 0x27
+ 821 009b 19       		.uleb128 0x19
+ 822 009c 11       		.uleb128 0x11
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 22
+
+
+ 823 009d 01       		.uleb128 0x1
+ 824 009e 12       		.uleb128 0x12
+ 825 009f 06       		.uleb128 0x6
+ 826 00a0 40       		.uleb128 0x40
+ 827 00a1 18       		.uleb128 0x18
+ 828 00a2 9742     		.uleb128 0x2117
+ 829 00a4 19       		.uleb128 0x19
+ 830 00a5 01       		.uleb128 0x1
+ 831 00a6 13       		.uleb128 0x13
+ 832 00a7 00       		.byte	0
+ 833 00a8 00       		.byte	0
+ 834 00a9 0B       		.uleb128 0xb
+ 835 00aa 05       		.uleb128 0x5
+ 836 00ab 00       		.byte	0
+ 837 00ac 03       		.uleb128 0x3
+ 838 00ad 0E       		.uleb128 0xe
+ 839 00ae 3A       		.uleb128 0x3a
+ 840 00af 0B       		.uleb128 0xb
+ 841 00b0 3B       		.uleb128 0x3b
+ 842 00b1 0B       		.uleb128 0xb
+ 843 00b2 49       		.uleb128 0x49
+ 844 00b3 13       		.uleb128 0x13
+ 845 00b4 02       		.uleb128 0x2
+ 846 00b5 17       		.uleb128 0x17
+ 847 00b6 00       		.byte	0
+ 848 00b7 00       		.byte	0
+ 849 00b8 0C       		.uleb128 0xc
+ 850 00b9 0F       		.uleb128 0xf
+ 851 00ba 00       		.byte	0
+ 852 00bb 0B       		.uleb128 0xb
+ 853 00bc 0B       		.uleb128 0xb
+ 854 00bd 49       		.uleb128 0x49
+ 855 00be 13       		.uleb128 0x13
+ 856 00bf 00       		.byte	0
+ 857 00c0 00       		.byte	0
+ 858 00c1 0D       		.uleb128 0xd
+ 859 00c2 2E       		.uleb128 0x2e
+ 860 00c3 00       		.byte	0
+ 861 00c4 3F       		.uleb128 0x3f
+ 862 00c5 19       		.uleb128 0x19
+ 863 00c6 03       		.uleb128 0x3
+ 864 00c7 0E       		.uleb128 0xe
+ 865 00c8 3A       		.uleb128 0x3a
+ 866 00c9 0B       		.uleb128 0xb
+ 867 00ca 3B       		.uleb128 0x3b
+ 868 00cb 05       		.uleb128 0x5
+ 869 00cc 27       		.uleb128 0x27
+ 870 00cd 19       		.uleb128 0x19
+ 871 00ce 49       		.uleb128 0x49
+ 872 00cf 13       		.uleb128 0x13
+ 873 00d0 11       		.uleb128 0x11
+ 874 00d1 01       		.uleb128 0x1
+ 875 00d2 12       		.uleb128 0x12
+ 876 00d3 06       		.uleb128 0x6
+ 877 00d4 40       		.uleb128 0x40
+ 878 00d5 18       		.uleb128 0x18
+ 879 00d6 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 23
+
+
+ 880 00d8 19       		.uleb128 0x19
+ 881 00d9 00       		.byte	0
+ 882 00da 00       		.byte	0
+ 883 00db 0E       		.uleb128 0xe
+ 884 00dc 2E       		.uleb128 0x2e
+ 885 00dd 00       		.byte	0
+ 886 00de 3F       		.uleb128 0x3f
+ 887 00df 19       		.uleb128 0x19
+ 888 00e0 03       		.uleb128 0x3
+ 889 00e1 0E       		.uleb128 0xe
+ 890 00e2 3A       		.uleb128 0x3a
+ 891 00e3 0B       		.uleb128 0xb
+ 892 00e4 3B       		.uleb128 0x3b
+ 893 00e5 05       		.uleb128 0x5
+ 894 00e6 27       		.uleb128 0x27
+ 895 00e7 19       		.uleb128 0x19
+ 896 00e8 11       		.uleb128 0x11
+ 897 00e9 01       		.uleb128 0x1
+ 898 00ea 12       		.uleb128 0x12
+ 899 00eb 06       		.uleb128 0x6
+ 900 00ec 40       		.uleb128 0x40
+ 901 00ed 18       		.uleb128 0x18
+ 902 00ee 9742     		.uleb128 0x2117
+ 903 00f0 19       		.uleb128 0x19
+ 904 00f1 00       		.byte	0
+ 905 00f2 00       		.byte	0
+ 906 00f3 0F       		.uleb128 0xf
+ 907 00f4 34       		.uleb128 0x34
+ 908 00f5 00       		.byte	0
+ 909 00f6 03       		.uleb128 0x3
+ 910 00f7 0E       		.uleb128 0xe
+ 911 00f8 3A       		.uleb128 0x3a
+ 912 00f9 0B       		.uleb128 0xb
+ 913 00fa 3B       		.uleb128 0x3b
+ 914 00fb 0B       		.uleb128 0xb
+ 915 00fc 49       		.uleb128 0x49
+ 916 00fd 13       		.uleb128 0x13
+ 917 00fe 3F       		.uleb128 0x3f
+ 918 00ff 19       		.uleb128 0x19
+ 919 0100 02       		.uleb128 0x2
+ 920 0101 18       		.uleb128 0x18
+ 921 0102 00       		.byte	0
+ 922 0103 00       		.byte	0
+ 923 0104 00       		.byte	0
+ 924              		.section	.debug_loc,"",%progbits
+ 925              	.Ldebug_loc0:
+ 926              	.LLST0:
+ 927 0000 0C000000 		.4byte	.LVL0
+ 928 0004 1C000000 		.4byte	.LVL1
+ 929 0008 0500     		.2byte	0x5
+ 930 000a 70       		.byte	0x70
+ 931 000b 00       		.sleb128 0
+ 932 000c 3F       		.byte	0x3f
+ 933 000d 1A       		.byte	0x1a
+ 934 000e 9F       		.byte	0x9f
+ 935 000f 00000000 		.4byte	0
+ 936 0013 00000000 		.4byte	0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 24
+
+
+ 937              	.LLST1:
+ 938 0017 0C000000 		.4byte	.LVL2
+ 939 001b 1C000000 		.4byte	.LVL3
+ 940 001f 0600     		.2byte	0x6
+ 941 0021 70       		.byte	0x70
+ 942 0022 00       		.sleb128 0
+ 943 0023 08       		.byte	0x8
+ 944 0024 F0       		.byte	0xf0
+ 945 0025 1A       		.byte	0x1a
+ 946 0026 9F       		.byte	0x9f
+ 947 0027 00000000 		.4byte	0
+ 948 002b 00000000 		.4byte	0
+ 949              	.LLST2:
+ 950 002f 00000000 		.4byte	.LVL4
+ 951 0033 04000000 		.4byte	.LVL5
+ 952 0037 0100     		.2byte	0x1
+ 953 0039 50       		.byte	0x50
+ 954 003a 04000000 		.4byte	.LVL5
+ 955 003e 10000000 		.4byte	.LFE3
+ 956 0042 0400     		.2byte	0x4
+ 957 0044 F3       		.byte	0xf3
+ 958 0045 01       		.uleb128 0x1
+ 959 0046 50       		.byte	0x50
+ 960 0047 9F       		.byte	0x9f
+ 961 0048 00000000 		.4byte	0
+ 962 004c 00000000 		.4byte	0
+ 963              	.LLST3:
+ 964 0050 00000000 		.4byte	.LVL6
+ 965 0054 0A000000 		.4byte	.LVL7
+ 966 0058 0100     		.2byte	0x1
+ 967 005a 50       		.byte	0x50
+ 968 005b 0A000000 		.4byte	.LVL7
+ 969 005f 12000000 		.4byte	.LVL8
+ 970 0063 0100     		.2byte	0x1
+ 971 0065 52       		.byte	0x52
+ 972 0066 12000000 		.4byte	.LVL8
+ 973 006a 1E000000 		.4byte	.LVL11
+ 974 006e 0500     		.2byte	0x5
+ 975 0070 03       		.byte	0x3
+ 976 0071 00000000 		.4byte	I2C_1_slRdBufPtr
+ 977 0075 1E000000 		.4byte	.LVL11
+ 978 0079 34000000 		.4byte	.LFE4
+ 979 007d 0400     		.2byte	0x4
+ 980 007f F3       		.byte	0xf3
+ 981 0080 01       		.uleb128 0x1
+ 982 0081 50       		.byte	0x50
+ 983 0082 9F       		.byte	0x9f
+ 984 0083 00000000 		.4byte	0
+ 985 0087 00000000 		.4byte	0
+ 986              	.LLST4:
+ 987 008b 00000000 		.4byte	.LVL6
+ 988 008f 16000000 		.4byte	.LVL9
+ 989 0093 0100     		.2byte	0x1
+ 990 0095 51       		.byte	0x51
+ 991 0096 16000000 		.4byte	.LVL9
+ 992 009a 1A000000 		.4byte	.LVL10
+ 993 009e 0500     		.2byte	0x5
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 25
+
+
+ 994 00a0 03       		.byte	0x3
+ 995 00a1 00000000 		.4byte	I2C_1_slRdBufSize
+ 996 00a5 1A000000 		.4byte	.LVL10
+ 997 00a9 34000000 		.4byte	.LFE4
+ 998 00ad 0400     		.2byte	0x4
+ 999 00af F3       		.byte	0xf3
+ 1000 00b0 01       		.uleb128 0x1
+ 1001 00b1 51       		.byte	0x51
+ 1002 00b2 9F       		.byte	0x9f
+ 1003 00b3 00000000 		.4byte	0
+ 1004 00b7 00000000 		.4byte	0
+ 1005              	.LLST5:
+ 1006 00bb 00000000 		.4byte	.LVL12
+ 1007 00bf 0A000000 		.4byte	.LVL13
+ 1008 00c3 0100     		.2byte	0x1
+ 1009 00c5 50       		.byte	0x50
+ 1010 00c6 0A000000 		.4byte	.LVL13
+ 1011 00ca 12000000 		.4byte	.LVL14
+ 1012 00ce 0100     		.2byte	0x1
+ 1013 00d0 52       		.byte	0x52
+ 1014 00d1 12000000 		.4byte	.LVL14
+ 1015 00d5 1E000000 		.4byte	.LVL17
+ 1016 00d9 0500     		.2byte	0x5
+ 1017 00db 03       		.byte	0x3
+ 1018 00dc 00000000 		.4byte	I2C_1_slWrBufPtr
+ 1019 00e0 1E000000 		.4byte	.LVL17
+ 1020 00e4 34000000 		.4byte	.LFE5
+ 1021 00e8 0400     		.2byte	0x4
+ 1022 00ea F3       		.byte	0xf3
+ 1023 00eb 01       		.uleb128 0x1
+ 1024 00ec 50       		.byte	0x50
+ 1025 00ed 9F       		.byte	0x9f
+ 1026 00ee 00000000 		.4byte	0
+ 1027 00f2 00000000 		.4byte	0
+ 1028              	.LLST6:
+ 1029 00f6 00000000 		.4byte	.LVL12
+ 1030 00fa 16000000 		.4byte	.LVL15
+ 1031 00fe 0100     		.2byte	0x1
+ 1032 0100 51       		.byte	0x51
+ 1033 0101 16000000 		.4byte	.LVL15
+ 1034 0105 1A000000 		.4byte	.LVL16
+ 1035 0109 0500     		.2byte	0x5
+ 1036 010b 03       		.byte	0x3
+ 1037 010c 00000000 		.4byte	I2C_1_slWrBufSize
+ 1038 0110 1A000000 		.4byte	.LVL16
+ 1039 0114 34000000 		.4byte	.LFE5
+ 1040 0118 0400     		.2byte	0x4
+ 1041 011a F3       		.byte	0xf3
+ 1042 011b 01       		.uleb128 0x1
+ 1043 011c 51       		.byte	0x51
+ 1044 011d 9F       		.byte	0x9f
+ 1045 011e 00000000 		.4byte	0
+ 1046 0122 00000000 		.4byte	0
+ 1047              		.section	.debug_aranges,"",%progbits
+ 1048 0000 64000000 		.4byte	0x64
+ 1049 0004 0200     		.2byte	0x2
+ 1050 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 26
+
+
+ 1051 000a 04       		.byte	0x4
+ 1052 000b 00       		.byte	0
+ 1053 000c 0000     		.2byte	0
+ 1054 000e 0000     		.2byte	0
+ 1055 0010 00000000 		.4byte	.LFB0
+ 1056 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 1057 0018 00000000 		.4byte	.LFB1
+ 1058 001c 2C000000 		.4byte	.LFE1-.LFB1
+ 1059 0020 00000000 		.4byte	.LFB2
+ 1060 0024 2C000000 		.4byte	.LFE2-.LFB2
+ 1061 0028 00000000 		.4byte	.LFB3
+ 1062 002c 10000000 		.4byte	.LFE3-.LFB3
+ 1063 0030 00000000 		.4byte	.LFB4
+ 1064 0034 34000000 		.4byte	.LFE4-.LFB4
+ 1065 0038 00000000 		.4byte	.LFB5
+ 1066 003c 34000000 		.4byte	.LFE5-.LFB5
+ 1067 0040 00000000 		.4byte	.LFB6
+ 1068 0044 0C000000 		.4byte	.LFE6-.LFB6
+ 1069 0048 00000000 		.4byte	.LFB7
+ 1070 004c 0C000000 		.4byte	.LFE7-.LFB7
+ 1071 0050 00000000 		.4byte	.LFB8
+ 1072 0054 0C000000 		.4byte	.LFE8-.LFB8
+ 1073 0058 00000000 		.4byte	.LFB9
+ 1074 005c 0C000000 		.4byte	.LFE9-.LFB9
+ 1075 0060 00000000 		.4byte	0
+ 1076 0064 00000000 		.4byte	0
+ 1077              		.section	.debug_ranges,"",%progbits
+ 1078              	.Ldebug_ranges0:
+ 1079 0000 00000000 		.4byte	.LFB0
+ 1080 0004 0C000000 		.4byte	.LFE0
+ 1081 0008 00000000 		.4byte	.LFB1
+ 1082 000c 2C000000 		.4byte	.LFE1
+ 1083 0010 00000000 		.4byte	.LFB2
+ 1084 0014 2C000000 		.4byte	.LFE2
+ 1085 0018 00000000 		.4byte	.LFB3
+ 1086 001c 10000000 		.4byte	.LFE3
+ 1087 0020 00000000 		.4byte	.LFB4
+ 1088 0024 34000000 		.4byte	.LFE4
+ 1089 0028 00000000 		.4byte	.LFB5
+ 1090 002c 34000000 		.4byte	.LFE5
+ 1091 0030 00000000 		.4byte	.LFB6
+ 1092 0034 0C000000 		.4byte	.LFE6
+ 1093 0038 00000000 		.4byte	.LFB7
+ 1094 003c 0C000000 		.4byte	.LFE7
+ 1095 0040 00000000 		.4byte	.LFB8
+ 1096 0044 0C000000 		.4byte	.LFE8
+ 1097 0048 00000000 		.4byte	.LFB9
+ 1098 004c 0C000000 		.4byte	.LFE9
+ 1099 0050 00000000 		.4byte	0
+ 1100 0054 00000000 		.4byte	0
+ 1101              		.section	.debug_line,"",%progbits
+ 1102              	.Ldebug_line0:
+ 1103 0000 0C010000 		.section	.debug_str,"MS",%progbits,1
+ 1103      02004800 
+ 1103      00000201 
+ 1103      FB0E0D00 
+ 1103      01010101 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 27
+
+
+ 1104              	.LASF41:
+ 1105 0000 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2C_1_SLAVE.c\000"
+ 1105      72617465 
+ 1105      645F536F 
+ 1105      75726365 
+ 1105      5C50536F 
+ 1106              	.LASF15:
+ 1107 0025 72656733 		.ascii	"reg32\000"
+ 1107      3200
+ 1108              	.LASF35:
+ 1109 002b 4932435F 		.ascii	"I2C_1_slRdBufSize\000"
+ 1109      315F736C 
+ 1109      52644275 
+ 1109      6653697A 
+ 1109      6500
+ 1110              	.LASF33:
+ 1111 003d 4932435F 		.ascii	"I2C_1_slStatus\000"
+ 1111      315F736C 
+ 1111      53746174 
+ 1111      757300
+ 1112              	.LASF32:
+ 1113 004c 4932435F 		.ascii	"I2C_1_SlaveClearWriteBuf\000"
+ 1113      315F536C 
+ 1113      61766543 
+ 1113      6C656172 
+ 1113      57726974 
+ 1114              	.LASF4:
+ 1115 0065 6C6F6E67 		.ascii	"long int\000"
+ 1115      20696E74 
+ 1115      00
+ 1116              	.LASF3:
+ 1117 006e 73686F72 		.ascii	"short unsigned int\000"
+ 1117      7420756E 
+ 1117      7369676E 
+ 1117      65642069 
+ 1117      6E7400
+ 1118              	.LASF29:
+ 1119 0081 4932435F 		.ascii	"I2C_1_SlaveGetReadBufSize\000"
+ 1119      315F536C 
+ 1119      61766547 
+ 1119      65745265 
+ 1119      61644275 
+ 1120              	.LASF20:
+ 1121 009b 73746174 		.ascii	"status\000"
+ 1121      757300
+ 1122              	.LASF19:
+ 1123 00a2 4932435F 		.ascii	"I2C_1_SlaveClearWriteStatus\000"
+ 1123      315F536C 
+ 1123      61766543 
+ 1123      6C656172 
+ 1123      57726974 
+ 1124              	.LASF24:
+ 1125 00be 72644275 		.ascii	"rdBuf\000"
+ 1125      6600
+ 1126              	.LASF30:
+ 1127 00c4 4932435F 		.ascii	"I2C_1_SlaveGetWriteBufSize\000"
+ 1127      315F536C 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 28
+
+
+ 1127      61766547 
+ 1127      65745772 
+ 1127      69746542 
+ 1128              	.LASF42:
+ 1129 00df 433A5C55 		.ascii	"C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\"
+ 1129      73657273 
+ 1129      5C48507A 
+ 1129      3432305C 
+ 1129      446F6375 
+ 1130 010c 4C422D52 		.ascii	"LB-RPPSOC\\RPPSOC-FAT-Chain.cydsn\000"
+ 1130      5050534F 
+ 1130      435C5250 
+ 1130      50534F43 
+ 1130      2D464154 
+ 1131              	.LASF34:
+ 1132 012d 4932435F 		.ascii	"I2C_1_slRdBufPtr\000"
+ 1132      315F736C 
+ 1132      52644275 
+ 1132      66507472 
+ 1132      00
+ 1133              	.LASF11:
+ 1134 013e 666C6F61 		.ascii	"float\000"
+ 1134      7400
+ 1135              	.LASF1:
+ 1136 0144 756E7369 		.ascii	"unsigned char\000"
+ 1136      676E6564 
+ 1136      20636861 
+ 1136      7200
+ 1137              	.LASF40:
+ 1138 0152 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1138      43313120 
+ 1138      352E342E 
+ 1138      31203230 
+ 1138      31363036 
+ 1139 0185 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1139      20726576 
+ 1139      6973696F 
+ 1139      6E203233 
+ 1139      37373135 
+ 1140 01b8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1140      66756E63 
+ 1140      74696F6E 
+ 1140      2D736563 
+ 1140      74696F6E 
+ 1141              	.LASF14:
+ 1142 01e0 72656738 		.ascii	"reg8\000"
+ 1142      00
+ 1143              	.LASF5:
+ 1144 01e5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1144      20756E73 
+ 1144      69676E65 
+ 1144      6420696E 
+ 1144      7400
+ 1145              	.LASF18:
+ 1146 01f7 4932435F 		.ascii	"I2C_1_SlaveClearReadStatus\000"
+ 1146      315F536C 
+ 1146      61766543 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 29
+
+
+ 1146      6C656172 
+ 1146      52656164 
+ 1147              	.LASF28:
+ 1148 0212 4932435F 		.ascii	"I2C_1_SlaveStatus\000"
+ 1148      315F536C 
+ 1148      61766553 
+ 1148      74617475 
+ 1148      7300
+ 1149              	.LASF26:
+ 1150 0224 4932435F 		.ascii	"I2C_1_SlaveInitWriteBuf\000"
+ 1150      315F536C 
+ 1150      61766549 
+ 1150      6E697457 
+ 1150      72697465 
+ 1151              	.LASF27:
+ 1152 023c 77724275 		.ascii	"wrBuf\000"
+ 1152      6600
+ 1153              	.LASF38:
+ 1154 0242 4932435F 		.ascii	"I2C_1_slWrBufSize\000"
+ 1154      315F736C 
+ 1154      57724275 
+ 1154      6653697A 
+ 1154      6500
+ 1155              	.LASF12:
+ 1156 0254 646F7562 		.ascii	"double\000"
+ 1156      6C6500
+ 1157              	.LASF37:
+ 1158 025b 4932435F 		.ascii	"I2C_1_slWrBufPtr\000"
+ 1158      315F736C 
+ 1158      57724275 
+ 1158      66507472 
+ 1158      00
+ 1159              	.LASF39:
+ 1160 026c 4932435F 		.ascii	"I2C_1_slWrBufIndex\000"
+ 1160      315F736C 
+ 1160      57724275 
+ 1160      66496E64 
+ 1160      657800
+ 1161              	.LASF10:
+ 1162 027f 75696E74 		.ascii	"uint32\000"
+ 1162      333200
+ 1163              	.LASF8:
+ 1164 0286 756E7369 		.ascii	"unsigned int\000"
+ 1164      676E6564 
+ 1164      20696E74 
+ 1164      00
+ 1165              	.LASF23:
+ 1166 0293 61646472 		.ascii	"address\000"
+ 1166      65737300 
+ 1167              	.LASF7:
+ 1168 029b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1168      206C6F6E 
+ 1168      6720756E 
+ 1168      7369676E 
+ 1168      65642069 
+ 1169              	.LASF17:
+ 1170 02b2 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\cc5mvafg.s 			page 30
+
+
+ 1170      74797065 
+ 1170      00
+ 1171              	.LASF6:
+ 1172 02bb 6C6F6E67 		.ascii	"long long int\000"
+ 1172      206C6F6E 
+ 1172      6720696E 
+ 1172      7400
+ 1173              	.LASF31:
+ 1174 02c9 4932435F 		.ascii	"I2C_1_SlaveClearReadBuf\000"
+ 1174      315F536C 
+ 1174      61766543 
+ 1174      6C656172 
+ 1174      52656164 
+ 1175              	.LASF21:
+ 1176 02e1 4932435F 		.ascii	"I2C_1_SlaveSetAddress\000"
+ 1176      315F536C 
+ 1176      61766553 
+ 1176      65744164 
+ 1176      64726573 
+ 1177              	.LASF2:
+ 1178 02f7 73686F72 		.ascii	"short int\000"
+ 1178      7420696E 
+ 1178      7400
+ 1179              	.LASF25:
+ 1180 0301 62756653 		.ascii	"bufSize\000"
+ 1180      697A6500 
+ 1181              	.LASF9:
+ 1182 0309 75696E74 		.ascii	"uint8\000"
+ 1182      3800
+ 1183              	.LASF36:
+ 1184 030f 4932435F 		.ascii	"I2C_1_slRdBufIndex\000"
+ 1184      315F736C 
+ 1184      52644275 
+ 1184      66496E64 
+ 1184      657800
+ 1185              	.LASF13:
+ 1186 0322 63686172 		.ascii	"char\000"
+ 1186      00
+ 1187              	.LASF16:
+ 1188 0327 6C6F6E67 		.ascii	"long double\000"
+ 1188      20646F75 
+ 1188      626C6500 
+ 1189              	.LASF0:
+ 1190 0333 7369676E 		.ascii	"signed char\000"
+ 1190      65642063 
+ 1190      68617200 
+ 1191              	.LASF22:
+ 1192 033f 4932435F 		.ascii	"I2C_1_SlaveInitReadBuf\000"
+ 1192      315F536C 
+ 1192      61766549 
+ 1192      6E697452 
+ 1192      65616442 
+ 1193              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
